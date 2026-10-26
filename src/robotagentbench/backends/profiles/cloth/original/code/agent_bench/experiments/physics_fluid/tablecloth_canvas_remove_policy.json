@@ -1,0 +1,197 @@
+{
+  "R_approach": {
+    "orientations_xyzw": {
+      "R": [
+        -0.6261714202520651,
+        0.6282496515018731,
+        -0.3259641569381852,
+        0.3270460154762092
+      ]
+    },
+    "grips": {
+      "R": 0.9
+    }
+  },
+  "reference_fold_handoff": {
+    "left_pickup_quaternion_xyzw": [
+      -0.17533081806820808,
+      0.8452688639110885,
+      -0.43961558750613533,
+      0.2480277951351947
+    ],
+    "left_lift_quaternion_xyzw": [
+      -0.14852335829483804,
+      0.7502863671660986,
+      -0.613893712309056,
+      0.19530921451105995
+    ],
+    "right_handoff_quaternion_xyzw": [
+      0.5773042882754369,
+      0.4745010838785232,
+      0.5060325665973048,
+      -0.43069655406079393
+    ],
+    "handoff_material_uv": [
+      0.152,
+      0.51
+    ],
+    "reference": {
+      "episode_uuid": "0084e4c7-d658-4752-a3f5-1090c247f796",
+      "role": "optional action-order and wrist-pose reference; runtime uses live cloth",
+      "source_frames": {
+        "fold": [
+          326,
+          430
+        ],
+        "lift": [
+          458,
+          537
+        ],
+        "transfer": [
+          537,
+          580
+        ],
+        "deposit": [
+          580,
+          686
+        ]
+      }
+    },
+    "left_material_uv": [
+      0.0,
+      0.51
+    ],
+    "folded_material_uv": [
+      0.0,
+      0.28333333
+    ],
+    "folded_ridge_selection": {
+      "v_fraction_range": [
+        0.35,
+        0.7
+      ],
+      "world_direction_xy": [
+        0.0,
+        1.0
+      ]
+    },
+    "right_approach_seconds": 2.0,
+    "right_approach_distance_m": 0.12
+  },
+  "left_grasp": {
+    "approach_seconds": 1.5,
+    "close_seconds": 0.4,
+    "prediction_fraction": 0.0
+  },
+  "cloth_initialization": {
+    "size_m": [
+      0.342,
+      0.51
+    ],
+    "origin_xy_m": [
+      -2.33,
+      -0.68
+    ],
+    "basis": "User-required supported old cloth entirely within tablecloth half; friction must expose the hem",
+    "require_on_table": true,
+    "table_margin_m": 0.005
+  },
+  "L_fold_raise": {
+    "destinations": {
+      "L": [
+        -2.36,
+        -0.17,
+        0.68
+      ]
+    },
+    "orientations_xyzw": {
+      "L": [
+        0.00923417490939592,
+        0.7841665870957748,
+        -0.5196150962658383,
+        0.3391130275128796
+      ]
+    }
+  },
+  "L_fold_across_table": {
+    "destinations": {
+      "L": [
+        -2.3,
+        -0.5,
+        0.73
+      ]
+    },
+    "orientations_xyzw": {
+      "L": [
+        0.19927945256088592,
+        0.6705551272222919,
+        -0.6549264903938433,
+        0.2858580300137336
+      ]
+    }
+  },
+  "friction_extract": {
+    "quaternion_xyzw": [
+      -0.40315613290876395,
+      0.5809174917020336,
+      -0.5775283272755173,
+      0.40799636214923773
+    ],
+    "contact_inset_xy_m": [
+      0.045,
+      -0.018888889
+    ],
+    "edge_height_above_table_m": 0.001,
+    "stroke_m": 0.15,
+    "seconds": 3.0,
+    "required_overhang_m": 0.03,
+    "reference_adaptation": "Expose a broad open-jaw lower edge to the table; retain friction-only extraction",
+    "contact_surface": "finger_side",
+    "side_tilt_degrees": 10.0,
+    "track_lateral_cloth_motion": true,
+    "max_strokes": 3,
+    "stroke_target_overhang_m": 0.045
+  },
+  "quality_guard": {
+    "max_particle_speed_m_s": 5.0,
+    "max_edge_strain": 1.15
+  },
+  "basket_place": {
+    "lower_seconds": 10.0,
+    "support_wait_seconds": 4.0,
+    "lower_mouth_z_m": 0.49,
+    "release_mouth_max_z_m": 0.58
+  },
+  "deep_grasp": {
+    "minimum_depth_m": 0.02,
+    "target_depth_m": 0.022,
+    "open_fraction": 0.3,
+    "insert_seconds": 1.5,
+    "close_seconds": 1.2,
+    "contact_distance_tolerance_m": 0.0,
+    "maximum_close_fraction": 0.98,
+    "attempt_depths_m": [
+      0.022,
+      0.026,
+      0.03
+    ]
+  },
+  "L_fold_retract": {
+    "destinations": {
+      "L": [
+        -2.49,
+        -0.48,
+        0.7
+      ]
+    },
+    "clear_orientations": [
+      "L"
+    ]
+  },
+  "release_basket": {
+    "grips": {
+      "R": 0.3
+    },
+    "seconds": 1.0
+  }
+}

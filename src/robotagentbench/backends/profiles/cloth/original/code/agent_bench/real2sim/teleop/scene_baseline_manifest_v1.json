@@ -1,0 +1,3422 @@
+{
+ "schema": "real2sim.scene_baseline.v1",
+ "baseline": "arena_scene/v1_2/demo_sim/scene_room_baseline.usda",
+ "built_from": "arena_scene/v1_2/demo_sim/scene_room_baseline.usda",
+ "policy": "the baseline is read-only; sessions copy it and activate what they need",
+ "session_objects_inactive": [
+  "/World/Assets/BaseballCap",
+  "/World/Assets/Book",
+  "/World/Assets/CoffeeBeans",
+  "/World/Assets/CushionOnBook",
+  "/World/Assets/GlassesCase",
+  "/World/Assets/MicrowaveBeefbox",
+  "/World/Assets/MicrowaveFoodbox",
+  "/World/Assets/MicrowaveSaladbox",
+  "/World/Assets/MicrowaveTakePlate",
+  "/World/Assets/Note",
+  "/World/Assets/PaperBall",
+  "/World/Assets/PaperCup",
+  "/World/Assets/PaperPlate",
+  "/World/Assets/PowerBank",
+  "/World/Assets/Remote",
+  "/World/Assets/ShelfItems/cacao",
+  "/World/Assets/ShelfItems/cayman_jacked",
+  "/World/Assets/ShelfItems/coke_c3",
+  "/World/Assets/ShelfItems/coke_usa",
+  "/World/Assets/ShelfItems/diet_coke",
+  "/World/Assets/ShelfItems/gatorade_m",
+  "/World/Assets/ShelfItems/gatorade_t",
+  "/World/Assets/ShelfItems/good2grow",
+  "/World/Assets/ShelfItems/grapefruit_can",
+  "/World/Assets/ShelfItems/honeymaid_t",
+  "/World/Assets/ShelfItems/lindt",
+  "/World/Assets/ShelfItems/pring_g",
+  "/World/Assets/ShelfItems/rb_box",
+  "/World/Assets/ShelfItems/red_bull_pink",
+  "/World/Assets/ShelfItems/skittles_sh",
+  "/World/Assets/ShelfItems/sprite_box",
+  "/World/Assets/ShelfItems/sprite_c1",
+  "/World/Assets/ShelfItems/sprite_c2",
+  "/World/Assets/ShelfItems/starbucks",
+  "/World/Assets/Task108Beefbox",
+  "/World/Assets/Task108Foodbox",
+  "/World/Assets/Task108Placemat",
+  "/World/Assets/Task108Plate",
+  "/World/Assets/Task108Saladbox",
+  "/World/Assets/Tier2Items/chomps_r",
+  "/World/Assets/Tier2Items/honeymaid",
+  "/World/Assets/Tier2Items/oreo_gf",
+  "/World/Assets/Tier2Items/pring_bbq",
+  "/World/Assets/Tier2Items/skit_littles",
+  "/World/Assets/Tier2Items/smores_k",
+  "/World/Assets/Tier2Items/zbar_t",
+  "/World/Assets/Tray",
+  "/World/Assets/Umbrella",
+  "/World/Assets/Wallet",
+  "/World/Task73",
+  "/World/Task75"
+ ],
+ "structure_poses_applied": [],
+ "coat_rack": {
+  "path": "/World/Assets/CoatRack",
+  "asset_id": "agent_bench.coat_rack.photo_dimensioned.v1",
+  "reference": "./usdz/coat_rack/coat_rack.usda",
+  "translate_xyz_m": [
+   0.0,
+   2.02,
+   0.0
+  ],
+  "yaw_deg": 205.0,
+  "active": true,
+  "global_furniture": true
+ },
+ "livingroom_textures": {
+  "source": "real2sim/assets/textures/livingroom",
+  "runtime": "arena_scene/v1_2/demo_sim/livingroom_decor/textures",
+  "copied": [],
+  "files": {
+   "pantry_wood": {
+    "source": "real2sim/assets/textures/livingroom/barn_pine_albedo_v1.png",
+    "runtime": "arena_scene/v1_2/demo_sim/livingroom_decor/textures/barn_pine_albedo_v1.png"
+   },
+   "wallpaper": {
+    "source": "real2sim/assets/textures/livingroom/linen_pinstripe_wallpaper_v1.png",
+    "runtime": "arena_scene/v1_2/demo_sim/livingroom_decor/textures/linen_pinstripe_wallpaper_v1.png"
+   },
+   "rug": {
+    "source": "real2sim/assets/textures/livingroom/oatmeal_low_pile_rug_v1.png",
+    "runtime": "arena_scene/v1_2/demo_sim/livingroom_decor/textures/oatmeal_low_pile_rug_v1.png"
+   }
+  },
+  "comparison": "direct_file_contents"
+ },
+ "livingroom_decor": {
+  "schema": "real2sim.livingroom_decor.v6",
+  "house_entry_door": {
+   "path": "/World/Assets/HouseEntryDoor",
+   "width_multiplier": 1.5,
+   "scale_xyz": [
+    0.0104708544,
+    0.0079650935,
+    0.007
+   ],
+   "world_min_m": [
+    -0.792746604489803,
+    2.4481512465188766,
+    1.0623521417480219e-21
+   ],
+   "world_max_m": [
+    0.41000000000000003,
+    2.6216557380522283,
+    1.7959546104864939
+   ],
+   "bottom_m": 1.0623521417480219e-21,
+   "right_jamb_x_m": 0.41000000000000003
+  },
+  "pantry_sliding_door": {
+   "path": "/World/Assets/PantrySlidingDoor",
+   "center_xyz_m": [
+    1.575,
+    1.704,
+    1.06
+   ],
+   "dimensions_xyz_m": [
+    1.18,
+    0.03,
+    2.12
+   ],
+   "wood_slab_y_range_m": [
+    1.689,
+    1.7189999999999999
+   ],
+   "diagonal_brace_shape": "mitered_hexagonal_band_flush_to_inner_frame",
+   "fridge_left_x_m": 2.7,
+   "render_only": true,
+   "articulated": false
+  },
+  "wallpaper": {
+   "path": "/World/Assets/LivingRoomWallpaper",
+   "wall": "living north",
+   "render_only": true
+  },
+  "rug": {
+   "path": "/World/Assets/LivingRoomRug",
+   "world_aabb_m": {
+    "min": [
+     -2.7,
+     -0.97,
+     0.007
+    ],
+    "max": [
+     -1.2,
+     0.87,
+     0.012
+    ]
+   },
+   "render_only": true
+  },
+  "window_trim_paths": [
+   "/World/Assets/WestWindowTrim",
+   "/World/Assets/EastWindowTrim"
+  ],
+  "fireplace_artwork": {
+   "path": "/World/Assets/FireplaceArtwork",
+   "variant_set": "artworkAsset",
+   "default_variant": "wall_frame_16a",
+   "variants": [
+    "modern_canvas",
+    "wall_frame_16a",
+    "wall_frame_16b",
+    "wall_frame_16c",
+    "wall_frame_16d",
+    "wall_frame_16e",
+    "wall_frame_16f",
+    "wall_frame_16g",
+    "wall_frame_16h",
+    "wall_frame_16i",
+    "wall_frame_16j"
+   ],
+   "source_policy": "user-provided assets only; no generated paintings",
+   "center_z_m": 1.72,
+   "world_min_m": [
+    -2.173730570619366,
+    -2.234867975138003,
+    1.3499999872396857
+   ],
+   "world_max_m": [
+    -1.536269429380635,
+    -2.17,
+    2.0900000127603153
+   ],
+   "render_only": true
+  },
+  "plant_stands": {
+   "path": "/World/Assets/LivingRoomPlantStands",
+   "plant_source": "./livingroom_user_decor/plants/plants_collection_for_archviz_20_models.usdz",
+   "render_only": true,
+   "fixed_stand_transforms": true,
+   "shared_tv_window_corner_slot": "TvSouthWestWindowLeft",
+   "slots": {
+    "TvSouthWestWindowLeft": {
+     "path": "/World/Assets/LivingRoomPlantStands/TvSouthWestWindowLeft/Plant",
+     "variant_set": "plantAsset",
+     "default_variant": "costa_white_ficus",
+     "stand_top_z_m": 0.62,
+     "stand_center_xy_m": [
+      -3.71,
+      -1.48
+     ],
+     "stand_size_xy_m": [
+      0.28,
+      0.25
+     ],
+     "world_min_m": [
+      -3.8630140697521904,
+      -1.6260933629528487,
+      1.0728836041806744e-08
+     ],
+     "world_max_m": [
+      -3.5569859302478095,
+      -1.3339066370471513,
+      1.1720000200541594
+     ],
+     "variant_bounds": {
+      "costa_white_ficus": {
+       "source_model": "PLANTER_COSTA_GLAZED_WHITE",
+       "color_materials": [
+        "Ficus_Lyrata_Mat",
+        "PLANTER_COSTA_GLAZED_WHITE_Mat"
+       ],
+       "scale": 0.3768697839651372,
+       "world_min_m": [
+        -3.8630140697521904,
+        -1.6260933629528487,
+        0.6219999999999998
+       ],
+       "world_max_m": [
+        -3.5569859302478095,
+        -1.3339066370471513,
+        1.1720000200541594
+       ]
+      },
+      "volume_small_rubber": {
+       "source_model": "PLANTER_VOLUME_SMALL",
+       "color_materials": [
+        "FICUS_ELASTICA_Mat",
+        "PLANTER_VOLUME_SMALL_Mat"
+       ],
+       "scale": 0.28025475962744223,
+       "world_min_m": [
+        -3.8399479288275344,
+        -1.5835905575365428,
+        0.622
+       ],
+       "world_max_m": [
+        -3.580052071172471,
+        -1.3764094424634588,
+        1.1719999839397246
+       ]
+      },
+      "volume_tall_audrey": {
+       "source_model": "PLANTER_VOLUME_TALL",
+       "color_materials": [
+        "FICUS_AUDREY_Mat",
+        "PLANTER_VOLUME_TALL_Mat"
+       ],
+       "scale": 0.22433215145998409,
+       "world_min_m": [
+        -3.860482270584915,
+        -1.630000001562749,
+        0.622
+       ],
+       "world_max_m": [
+        -3.559517729415083,
+        -1.329999998437251,
+        1.0239401857795545
+       ]
+      },
+      "dark_rhodea": {
+       "source_model": "POT_SIMPLE_DARK_PLASTIC_02",
+       "color_materials": [
+        "POT_SIMPLE_DARK_PLASTIC_Mat",
+        "RHODEA_JAPONICA_Mat"
+       ],
+       "scale": 0.3925850561960684,
+       "world_min_m": [
+        -3.8600887265278754,
+        -1.6300000048696621,
+        0.6219999999999996
+       ],
+       "world_max_m": [
+        -3.55991127347212,
+        -1.329999995130335,
+        0.8665047595290526
+       ]
+      },
+      "eda_boston_fern": {
+       "source_model": "Eda_Planter_Small",
+       "color_materials": [
+        "BOSTON_FERN_Mat",
+        "Eda_Planter_Small_Mat"
+       ],
+       "scale": 0.28206971575298606,
+       "world_min_m": [
+        -3.8597960044649806,
+        -1.6299999984707436,
+        0.6219999999999998
+       ],
+       "world_max_m": [
+        -3.560203995535017,
+        -1.3300000015292561,
+        0.907611934313763
+       ]
+      },
+      "sand_strelitzia": {
+       "source_model": "POT_STRIPES_SAND_MEDIUM",
+       "color_materials": [
+        "POT_STRIPES_SAND_MEDIUM_Mat",
+        "STRELITZIA_Mat"
+       ],
+       "scale": 0.22010452170079658,
+       "world_min_m": [
+        -3.842430124100724,
+        -1.6299999958099858,
+        0.6220000000000002
+       ],
+       "world_max_m": [
+        -3.5775698758992784,
+        -1.3300000041900168,
+        1.0326149437944758
+       ]
+      },
+      "sand_cactus": {
+       "source_model": "POT_STRIPES_SAND_TALL",
+       "color_materials": [
+        "CACTUS_Opuntia_Mat",
+        "POT_STRIPES_SAND_TALL_Mat"
+       ],
+       "scale": 0.4552691429336157,
+       "world_min_m": [
+        -3.8448042241812463,
+        -1.580505828891382,
+        0.622
+       ],
+       "world_max_m": [
+        -3.575195775818756,
+        -1.379494171108619,
+        1.1719999820607474
+       ]
+      },
+      "bishop_cereus": {
+       "source_model": "BISHOP_CERAMIC_POT",
+       "color_materials": [
+        "BISHOP_CERAMIC_POT_Mat",
+        "CEREUS_PERUVIANUS_Mat"
+       ],
+       "scale": 0.3909497126523488,
+       "world_min_m": [
+        -3.7984861351348824,
+        -1.5684861339994418,
+        0.622
+       ],
+       "world_max_m": [
+        -3.6215138648651197,
+        -1.391513866000559,
+        1.17200001892523
+       ]
+      },
+      "costa_dark_areca": {
+       "source_model": "PLANTER_COSTA_GLAZED_DARK",
+       "color_materials": [
+        "DYPSIS_LUTESCENS_Mat",
+        "PLANTER_COSTA_GLAZED_DARK_Mat"
+       ],
+       "scale": 0.1717187252169201,
+       "world_min_m": [
+        -3.8597166074410056,
+        -1.6300000055081114,
+        0.622
+       ],
+       "world_max_m": [
+        -3.5602833925589943,
+        -1.329999994491887,
+        0.9874052703408831
+       ]
+      },
+      "dark_majesty_palm": {
+       "source_model": "DARK_PLASTIC_POT",
+       "color_materials": [
+        "DARK_PLASTIC_POT_Mat",
+        "MAJESTYPALM_Mat"
+       ],
+       "scale": 0.18254207987244703,
+       "world_min_m": [
+        -3.8672569440134934,
+        -1.630000004745592,
+        0.6219999999999998
+       ],
+       "world_max_m": [
+        -3.552743055986509,
+        -1.3299999952544057,
+        0.9433590874007406
+       ]
+      },
+      "dark_base_livistona": {
+       "source_model": "DARK_PLASTIC_BASE_POT_03",
+       "color_materials": [
+        "DARK_PLASTIC_BASE_POT_Mat",
+        "LIVISTONA_CHINENSIS_MAT"
+       ],
+       "scale": 0.22529981639132293,
+       "world_min_m": [
+        -3.867272878625327,
+        -1.630000002604926,
+        0.6220000000000002
+       ],
+       "world_max_m": [
+        -3.5527271213746734,
+        -1.329999997395076,
+        0.9582726519184684
+       ]
+      },
+      "metal_dracaena": {
+       "source_model": "METAL_POT_03",
+       "color_materials": [
+        "DRACAENA_VARIEGATA_Mat",
+        "METAL_POT_SIMPLE_Mat"
+       ],
+       "scale": 0.24405148954992137,
+       "world_min_m": [
+        -3.869999997839026,
+        -1.6062108674353166,
+        0.622
+       ],
+       "world_max_m": [
+        -3.5500000021609766,
+        -1.3537891325646838,
+        1.1539572897009065
+       ]
+      },
+      "glazed_schefflera": {
+       "source_model": "CERAMIC_GLAZED_MEDIUM_02",
+       "color_materials": [
+        "CERAMIC_GLAZED_MEDIUM_Mat",
+        "SCHEFFLERA_Mat"
+       ],
+       "scale": 0.3820755317614491,
+       "world_min_m": [
+        -3.8580120181169604,
+        -1.6299999947424872,
+        0.622
+       ],
+       "world_max_m": [
+        -3.56198798188304,
+        -1.3300000052575085,
+        1.1298281982353342
+       ]
+      },
+      "bright_calathea": {
+       "source_model": "CERAMIC_GLAZED_MEDIUM_BRIGHT",
+       "color_materials": [
+        "CALATHEA_ORBIFOLIA_Mat",
+        "CERAMIC_GLAZED_MEDIUM_BRIGHT_Mat"
+       ],
+       "scale": 0.3301012406263918,
+       "world_min_m": [
+        -3.859177314125491,
+        -1.6300000049874621,
+        0.6220000000000002
+       ],
+       "world_max_m": [
+        -3.560822685874512,
+        -1.3299999950125396,
+        0.9124197450729367
+       ]
+      },
+      "bamboo_monstera": {
+       "source_model": "BASE_BAMBOO_M",
+       "color_materials": [
+        "MONSTERA_Mat",
+        "SIMPLE_POT_GREY_Mat",
+        "WOOD_BAMBOO_BASE_Mat"
+       ],
+       "scale": 0.22167116035429796,
+       "world_min_m": [
+        -3.858346791996591,
+        -1.6300000024911871,
+        0.622
+       ],
+       "world_max_m": [
+        -3.561653208003407,
+        -1.3299999975088082,
+        0.9575674887988493
+       ]
+      },
+      "hanging_pothos": {
+       "source_model": "HANGING_POT_02",
+       "color_materials": [
+        "HANGING_POT_TERRA_03",
+        "POTHOS_Mat"
+       ],
+       "scale": 0.43086502174701624,
+       "world_min_m": [
+        -3.869999999187807,
+        -1.6298893089673616,
+        0.622
+       ],
+       "world_max_m": [
+        -3.55000000081219,
+        -1.3301106910326383,
+        1.160481424558398
+       ]
+      },
+      "cross_alocasia": {
+       "source_model": "PLANTER_BOTTOM_CROSS",
+       "color_materials": [
+        "Alocasia_Polly_Mat",
+        "PLANTER_BOTTOM_CROSS_Mat"
+       ],
+       "scale": 0.45482013240725927,
+       "world_min_m": [
+        -3.865322062630027,
+        -1.6299999979842021,
+        0.6220000000000002
+       ],
+       "world_max_m": [
+        -3.5546779373699704,
+        -1.3300000020157978,
+        1.0725142731297344
+       ]
+      },
+      "cecilia_spider": {
+       "source_model": "CECILIA_PLANTER_GREEN_STAND",
+       "color_materials": [
+        "CECILIA_PLANTER_Mat",
+        "CHLOROPHYTUM_Mat"
+       ],
+       "scale": 0.3347403842963121,
+       "world_min_m": [
+        -3.8617664938908898,
+        -1.6299999938231375,
+        0.6220000000000002
+       ],
+       "world_max_m": [
+        -3.558233506109118,
+        -1.330000006176863,
+        0.9505023433243427
+       ]
+      },
+      "dark_cross_palm": {
+       "source_model": "PLANTER_BOTTOM_CROSS_DARK_02",
+       "color_materials": [
+        "CHAMAEDOREA_ELEGANS_Mat",
+        "PLANTER_BOTTOM_CROSS_DARK_Mat"
+       ],
+       "scale": 0.23130833625888486,
+       "world_min_m": [
+        -3.8612582967454925,
+        -1.6300000030916022,
+        0.622
+       ],
+       "world_max_m": [
+        -3.558741703254507,
+        -1.3299999969083993,
+        0.9344019047348318
+       ]
+      },
+      "bishop_dracaena": {
+       "source_model": "BISHOP_CERAMIC_POT_02",
+       "color_materials": [
+        "BISHOP_CERAMIC_POT_Mat",
+        "DRACAENA_FRAGANS_Mat"
+       ],
+       "scale": 0.31695860822114824,
+       "world_min_m": [
+        -3.858910781634793,
+        -1.6299999990639094,
+        0.622
+       ],
+       "world_max_m": [
+        -3.561089218365209,
+        -1.330000000936092,
+        1.072673906732098
+       ]
+      }
+     }
+    },
+    "TvNorth": {
+     "path": "/World/Assets/LivingRoomPlantStands/TvNorth/Plant",
+     "variant_set": "plantAsset",
+     "default_variant": "volume_small_rubber",
+     "stand_top_z_m": 0.7,
+     "stand_center_xy_m": [
+      -3.71,
+      0.84
+     ],
+     "stand_size_xy_m": [
+      0.28,
+      0.25
+     ],
+     "world_min_m": [
+      -3.8500000005960464,
+      0.7072808824913864,
+      -1.0728836097317895e-08
+     ],
+     "world_max_m": [
+      -3.569999933242798,
+      0.9727191175086096,
+      1.2519999839397244
+     ],
+     "variant_bounds": {
+      "costa_white_ficus": {
+       "source_model": "PLANTER_COSTA_GLAZED_WHITE",
+       "color_materials": [
+        "Ficus_Lyrata_Mat",
+        "PLANTER_COSTA_GLAZED_WHITE_Mat"
+       ],
+       "scale": 0.2799108629824704,
+       "world_min_m": [
+        -3.862003696219855,
+        0.6900000002875748,
+        0.702
+       ],
+       "world_max_m": [
+        -3.5579963037801425,
+        0.989999999712421,
+        1.1104991179856665
+       ]
+      },
+      "volume_small_rubber": {
+       "source_model": "PLANTER_VOLUME_SMALL",
+       "color_materials": [
+        "FICUS_ELASTICA_Mat",
+        "PLANTER_VOLUME_SMALL_Mat"
+       ],
+       "scale": 0.28025475962744223,
+       "world_min_m": [
+        -3.8417392933981636,
+        0.7072808824913864,
+        0.702
+       ],
+       "world_max_m": [
+        -3.578260706601842,
+        0.9727191175086096,
+        1.2519999839397244
+       ]
+      },
+      "volume_tall_audrey": {
+       "source_model": "PLANTER_VOLUME_TALL",
+       "color_materials": [
+        "FICUS_AUDREY_Mat",
+        "PLANTER_VOLUME_TALL_Mat"
+       ],
+       "scale": 0.2305529034849914,
+       "world_min_m": [
+        -3.8591972981273917,
+        0.6900000043120659,
+        0.7019999999999997
+       ],
+       "world_max_m": [
+        -3.560802701872604,
+        0.9899999956879326,
+        1.1150860094118151
+       ]
+      },
+      "dark_rhodea": {
+       "source_model": "POT_SIMPLE_DARK_PLASTIC_02",
+       "color_materials": [
+        "POT_SIMPLE_DARK_PLASTIC_Mat",
+        "RHODEA_JAPONICA_Mat"
+       ],
+       "scale": 0.47743188700445155,
+       "world_min_m": [
+        -3.8605920596950987,
+        0.6899999980067605,
+        0.702
+       ],
+       "world_max_m": [
+        -3.559407940304904,
+        0.9900000019932408,
+        0.9993479622889885
+       ]
+      },
+      "eda_boston_fern": {
+       "source_model": "Eda_Planter_Small",
+       "color_materials": [
+        "BOSTON_FERN_Mat",
+        "Eda_Planter_Small_Mat"
+       ],
+       "scale": 0.33013386077562507,
+       "world_min_m": [
+        -3.8603761942305104,
+        0.6900000024684344,
+        0.7019999999999995
+       ],
+       "world_max_m": [
+        -3.559623805769487,
+        0.9899999975315641,
+        1.036279664573419
+       ]
+      },
+      "sand_strelitzia": {
+       "source_model": "POT_STRIPES_SAND_MEDIUM",
+       "color_materials": [
+        "POT_STRIPES_SAND_MEDIUM_Mat",
+        "STRELITZIA_Mat"
+       ],
+       "scale": 0.1974605518611529,
+       "world_min_m": [
+        -3.868787826214926,
+        0.6900000036247048,
+        0.7019999999999995
+       ],
+       "world_max_m": [
+        -3.551212173785072,
+        0.9899999963752927,
+        1.0703715949274355
+       ]
+      },
+      "sand_cactus": {
+       "source_model": "POT_STRIPES_SAND_TALL",
+       "color_materials": [
+        "CACTUS_Opuntia_Mat",
+        "POT_STRIPES_SAND_TALL_Mat"
+       ],
+       "scale": 0.4552691429336157,
+       "world_min_m": [
+        -3.8521422425645793,
+        0.702250639613683,
+        0.7019999999999995
+       ],
+       "world_max_m": [
+        -3.5678577574354207,
+        0.9777493603863183,
+        1.2519999820607461
+       ]
+      },
+      "bishop_cereus": {
+       "source_model": "BISHOP_CERAMIC_POT",
+       "color_materials": [
+        "BISHOP_CERAMIC_POT_Mat",
+        "CEREUS_PERUVIANUS_Mat"
+       ],
+       "scale": 0.3909497126523488,
+       "world_min_m": [
+        -3.7996927866674888,
+        0.7503072124058631,
+        0.702
+       ],
+       "world_max_m": [
+        -3.620307213332509,
+        0.9296927875941357,
+        1.2520000189252296
+       ]
+      },
+      "costa_dark_areca": {
+       "source_model": "PLANTER_COSTA_GLAZED_DARK",
+       "color_materials": [
+        "DYPSIS_LUTESCENS_Mat",
+        "PLANTER_COSTA_GLAZED_DARK_Mat"
+       ],
+       "scale": 0.19242284741722673,
+       "world_min_m": [
+        -3.850901906879661,
+        0.6899999964898398,
+        0.7020000000000002
+       ],
+       "world_max_m": [
+        -3.5690980931203438,
+        0.9900000035101616,
+        1.111462168758221
+       ]
+      },
+      "dark_majesty_palm": {
+       "source_model": "DARK_PLASTIC_POT",
+       "color_materials": [
+        "DARK_PLASTIC_POT_Mat",
+        "MAJESTYPALM_Mat"
+       ],
+       "scale": 0.21705896226536672,
+       "world_min_m": [
+        -3.84095551440599,
+        0.6900000038991403,
+        0.702
+       ],
+       "world_max_m": [
+        -3.579044485594013,
+        0.9899999961008592,
+        1.08412485611245
+       ]
+      },
+      "dark_base_livistona": {
+       "source_model": "DARK_PLASTIC_BASE_POT_03",
+       "color_materials": [
+        "DARK_PLASTIC_BASE_POT_Mat",
+        "LIVISTONA_CHINENSIS_MAT"
+       ],
+       "scale": 0.19722431084331918,
+       "world_min_m": [
+        -3.855134170461178,
+        0.6900000051438708,
+        0.7019999999999997
+       ],
+       "world_max_m": [
+        -3.564865829538817,
+        0.9899999948561284,
+        0.996368365080343
+       ]
+      },
+      "metal_dracaena": {
+       "source_model": "METAL_POT_03",
+       "color_materials": [
+        "DRACAENA_VARIEGATA_Mat",
+        "METAL_POT_SIMPLE_Mat"
+       ],
+       "scale": 0.20909762246979272,
+       "world_min_m": [
+        -3.86735588914517,
+        0.6899999990277652,
+        0.702
+       ],
+       "world_max_m": [
+        -3.552644110854833,
+        0.9900000009722356,
+        1.1577686042413182
+       ]
+      },
+      "glazed_schefflera": {
+       "source_model": "CERAMIC_GLAZED_MEDIUM_02",
+       "color_materials": [
+        "CERAMIC_GLAZED_MEDIUM_Mat",
+        "SCHEFFLERA_Mat"
+       ],
+       "scale": 0.36349432989087643,
+       "world_min_m": [
+        -3.860734492713744,
+        0.6899999972293137,
+        0.7019999999999997
+       ],
+       "world_max_m": [
+        -3.559265507286253,
+        0.9900000027706896,
+        1.1851313841163205
+       ]
+      },
+      "bright_calathea": {
+       "source_model": "CERAMIC_GLAZED_MEDIUM_BRIGHT",
+       "color_materials": [
+        "CALATHEA_ORBIFOLIA_Mat",
+        "CERAMIC_GLAZED_MEDIUM_BRIGHT_Mat"
+       ],
+       "scale": 0.3711441120688485,
+       "world_min_m": [
+        -3.8656039718338002,
+        0.6899999984415791,
+        0.7020000000000002
+       ],
+       "world_max_m": [
+        -3.554396028166197,
+        0.9900000015584169,
+        1.0285288423144574
+       ]
+      },
+      "bamboo_monstera": {
+       "source_model": "BASE_BAMBOO_M",
+       "color_materials": [
+        "MONSTERA_Mat",
+        "SIMPLE_POT_GREY_Mat",
+        "WOOD_BAMBOO_BASE_Mat"
+       ],
+       "scale": 0.28607103263995537,
+       "world_min_m": [
+        -3.853653771433409,
+        0.6900000001857572,
+        0.7019999999999997
+       ],
+       "world_max_m": [
+        -3.566346228566588,
+        0.9899999998142427,
+        1.1350564976268247
+       ]
+      },
+      "hanging_pothos": {
+       "source_model": "HANGING_POT_02",
+       "color_materials": [
+        "HANGING_POT_TERRA_03",
+        "POTHOS_Mat"
+       ],
+       "scale": 0.4075858878030509,
+       "world_min_m": [
+        -3.8501479179887625,
+        0.6899999995223187,
+        0.7020000000000002
+       ],
+       "world_max_m": [
+        -3.569852082011233,
+        0.9900000004776837,
+        1.2113879062571034
+       ]
+      },
+      "cross_alocasia": {
+       "source_model": "PLANTER_BOTTOM_CROSS",
+       "color_materials": [
+        "Alocasia_Polly_Mat",
+        "PLANTER_BOTTOM_CROSS_Mat"
+       ],
+       "scale": 0.33841910462636154,
+       "world_min_m": [
+        -3.8614047138847356,
+        0.6899999978030763,
+        0.702
+       ],
+       "world_max_m": [
+        -3.558595286115262,
+        0.9900000021969235,
+        1.0372152430212245
+       ]
+      },
+      "cecilia_spider": {
+       "source_model": "CECILIA_PLANTER_GREEN_STAND",
+       "color_materials": [
+        "CECILIA_PLANTER_Mat",
+        "CHLOROPHYTUM_Mat"
+       ],
+       "scale": 0.29932364876656775,
+       "world_min_m": [
+        -3.8598114157429153,
+        0.6900000002767386,
+        0.7019999999999997
+       ],
+       "world_max_m": [
+        -3.5601885842570766,
+        0.9899999997232632,
+        0.9957456264997296
+       ]
+      },
+      "dark_cross_palm": {
+       "source_model": "PLANTER_BOTTOM_CROSS_DARK_02",
+       "color_materials": [
+        "CHAMAEDOREA_ELEGANS_Mat",
+        "PLANTER_BOTTOM_CROSS_DARK_Mat"
+       ],
+       "scale": 0.2398054276578725,
+       "world_min_m": [
+        -3.85714787385867,
+        0.6899999984262226,
+        0.702
+       ],
+       "world_max_m": [
+        -3.56285212614133,
+        0.9900000015737762,
+        1.0258779579658732
+       ]
+      },
+      "bishop_dracaena": {
+       "source_model": "BISHOP_CERAMIC_POT_02",
+       "color_materials": [
+        "BISHOP_CERAMIC_POT_Mat",
+        "DRACAENA_FRAGANS_Mat"
+       ],
+       "scale": 0.3868145699798676,
+       "world_min_m": [
+        -3.8542242750914992,
+        0.6900276479724534,
+        0.702
+       ],
+       "world_max_m": [
+        -3.5657757249085007,
+        0.9899723520275466,
+        1.251999992160675
+       ]
+      }
+     }
+    },
+    "WestWindowRight": {
+     "path": "/World/Assets/LivingRoomPlantStands/WestWindowRight/Plant",
+     "variant_set": "plantAsset",
+     "default_variant": "volume_tall_audrey",
+     "stand_top_z_m": 0.54,
+     "stand_center_xy_m": [
+      -2.71,
+      -1.99
+     ],
+     "stand_size_xy_m": [
+      0.18,
+      0.22
+     ],
+     "world_min_m": [
+      -2.810000002717698,
+      -2.0999999994039538,
+      2.384185793236071e-09
+     ],
+     "world_max_m": [
+      -2.609999997282304,
+      -1.8799999952316284,
+      0.898336707459187
+     ],
+     "variant_bounds": {
+      "costa_white_ficus": {
+       "source_model": "PLANTER_COSTA_GLAZED_WHITE",
+       "color_materials": [
+        "Ficus_Lyrata_Mat",
+        "PLANTER_COSTA_GLAZED_WHITE_Mat"
+       ],
+       "scale": 0.1838574894212773,
+       "world_min_m": [
+        -2.809999997949876,
+        -2.091074094850449,
+        0.5420000000000003
+       ],
+       "world_max_m": [
+        -2.610000002050125,
+        -1.8889259051495513,
+        0.8103197789025668
+       ]
+      },
+      "volume_small_rubber": {
+       "source_model": "PLANTER_VOLUME_SMALL",
+       "color_materials": [
+        "FICUS_ELASTICA_Mat",
+        "PLANTER_VOLUME_SMALL_Mat"
+       ],
+       "scale": 0.21910826661781846,
+       "world_min_m": [
+        -2.7885693181122955,
+        -2.0905159859443554,
+        0.5419999999999998
+       ],
+       "world_max_m": [
+        -2.6314306818877076,
+        -1.8894840140556441,
+        0.9720000039265018
+       ]
+      },
+      "volume_tall_audrey": {
+       "source_model": "PLANTER_VOLUME_TALL",
+       "color_materials": [
+        "FICUS_AUDREY_Mat",
+        "PLANTER_VOLUME_TALL_Mat"
+       ],
+       "scale": 0.1988797878813731,
+       "world_min_m": [
+        -2.810000002717698,
+        -2.0884718280863055,
+        0.542
+       ],
+       "world_max_m": [
+        -2.609999997282304,
+        -1.891528171913695,
+        0.898336707459187
+       ]
+      },
+      "dark_rhodea": {
+       "source_model": "POT_SIMPLE_DARK_PLASTIC_02",
+       "color_materials": [
+        "POT_SIMPLE_DARK_PLASTIC_Mat",
+        "RHODEA_JAPONICA_Mat"
+       ],
+       "scale": 0.28991086529758653,
+       "world_min_m": [
+        -2.8099999957267907,
+        -2.0902747647320847,
+        0.5420000000000003
+       ],
+       "world_max_m": [
+        -2.610000004273209,
+        -1.8897252352679181,
+        0.7225585310887904
+       ]
+      },
+      "eda_boston_fern": {
+       "source_model": "Eda_Planter_Small",
+       "color_materials": [
+        "BOSTON_FERN_Mat",
+        "Eda_Planter_Small_Mat"
+       ],
+       "scale": 0.17533011545982882,
+       "world_min_m": [
+        -2.810000001075132,
+        -2.089949235197004,
+        0.542
+       ],
+       "world_max_m": [
+        -2.609999998924871,
+        -1.8900507648029987,
+        0.7195319067315512
+       ]
+      },
+      "sand_strelitzia": {
+       "source_model": "POT_STRIPES_SAND_MEDIUM",
+       "color_materials": [
+        "POT_STRIPES_SAND_MEDIUM_Mat",
+        "STRELITZIA_Mat"
+       ],
+       "scale": 0.12184227427580734,
+       "world_min_m": [
+        -2.8099999986079234,
+        -2.0921058389243488,
+        0.542
+       ],
+       "world_max_m": [
+        -2.610000001392076,
+        -1.8878941610756557,
+        0.7693022785629958
+       ]
+      },
+      "sand_cactus": {
+       "source_model": "POT_STRIPES_SAND_TALL",
+       "color_materials": [
+        "CACTUS_Opuntia_Mat",
+        "POT_STRIPES_SAND_TALL_Mat"
+       ],
+       "scale": 0.35593769356628135,
+       "world_min_m": [
+        -2.798999516891519,
+        -2.0998069770364167,
+        0.5419999999999998
+       ],
+       "world_max_m": [
+        -2.621000483108478,
+        -1.8801930229635804,
+        0.9719999951392899
+       ]
+      },
+      "bishop_cereus": {
+       "source_model": "BISHOP_CERAMIC_POT",
+       "color_materials": [
+        "BISHOP_CERAMIC_POT_Mat",
+        "CEREUS_PERUVIANUS_Mat"
+       ],
+       "scale": 0.3056515935282,
+       "world_min_m": [
+        -2.7634826359470233,
+        -2.0434826381020006,
+        0.5419999999999998
+       ],
+       "world_max_m": [
+        -2.6565173640529727,
+        -1.936517361897996,
+        0.9720000163207
+       ]
+      },
+      "costa_dark_areca": {
+       "source_model": "PLANTER_COSTA_GLAZED_DARK",
+       "color_materials": [
+        "DYPSIS_LUTESCENS_Mat",
+        "PLANTER_COSTA_GLAZED_DARK_Mat"
+       ],
+       "scale": 0.12944772247118191,
+       "world_min_m": [
+        -2.8100000045765823,
+        -2.083695402750695,
+        0.5420000000000005
+       ],
+       "world_max_m": [
+        -2.6099999954234203,
+        -1.8963045972493073,
+        0.8174555765114238
+       ]
+      },
+      "dark_majesty_palm": {
+       "source_model": "DARK_PLASTIC_POT",
+       "color_materials": [
+        "DARK_PLASTIC_POT_Mat",
+        "MAJESTYPALM_Mat"
+       ],
+       "scale": 0.11861420950181066,
+       "world_min_m": [
+        -2.810000001835103,
+        -2.0936916475877836,
+        0.5419999999999998
+       ],
+       "world_max_m": [
+        -2.609999998164894,
+        -1.886308352412212,
+        0.7508162556187343
+       ]
+      },
+      "dark_base_livistona": {
+       "source_model": "DARK_PLASTIC_BASE_POT_03",
+       "color_materials": [
+        "DARK_PLASTIC_BASE_POT_Mat",
+        "LIVISTONA_CHINENSIS_MAT"
+       ],
+       "scale": 0.12007650319141236,
+       "world_min_m": [
+        -2.8099999972417153,
+        -2.0896463158413883,
+        0.542
+       ],
+       "world_max_m": [
+        -2.6100000027582855,
+        -1.8903536841586144,
+        0.7212209287741631
+       ]
+      },
+      "metal_dracaena": {
+       "source_model": "METAL_POT_03",
+       "color_materials": [
+        "DRACAENA_VARIEGATA_Mat",
+        "METAL_POT_SIMPLE_Mat"
+       ],
+       "scale": 0.1513348455821654,
+       "world_min_m": [
+        -2.8100000042277413,
+        -2.101639769444914,
+        0.5420000000000003
+       ],
+       "world_max_m": [
+        -2.6099999957722613,
+        -1.8783602305550835,
+        0.8718635010687095
+       ]
+      },
+      "glazed_schefflera": {
+       "source_model": "CERAMIC_GLAZED_MEDIUM_02",
+       "color_materials": [
+        "CERAMIC_GLAZED_MEDIUM_Mat",
+        "SCHEFFLERA_Mat"
+       ],
+       "scale": 0.29586818594335496,
+       "world_min_m": [
+        -2.81000000074338,
+        -2.0874148004418767,
+        0.5420000000000003
+       ],
+       "world_max_m": [
+        -2.6099999992566225,
+        -1.8925851995581262,
+        0.9352474122938328
+       ]
+      },
+      "bright_calathea": {
+       "source_model": "CERAMIC_GLAZED_MEDIUM_BRIGHT",
+       "color_materials": [
+        "CALATHEA_ORBIFOLIA_Mat",
+        "CERAMIC_GLAZED_MEDIUM_BRIGHT_Mat"
+       ],
+       "scale": 0.28010481721384106,
+       "world_min_m": [
+        -2.809999999552342,
+        -2.0958822599372082,
+        0.5419999999999998
+       ],
+       "world_max_m": [
+        -2.6100000004476573,
+        -1.8841177400627918,
+        0.7884333862715017
+       ]
+      },
+      "bamboo_monstera": {
+       "source_model": "BASE_BAMBOO_M",
+       "color_materials": [
+        "MONSTERA_Mat",
+        "SIMPLE_POT_GREY_Mat",
+        "WOOD_BAMBOO_BASE_Mat"
+       ],
+       "scale": 0.15187882527206004,
+       "world_min_m": [
+        -2.809999995784488,
+        -2.088360651966227,
+        0.5419999999999996
+       ],
+       "world_max_m": [
+        -2.610000004215511,
+        -1.8916393480337694,
+        0.7719153075299107
+       ]
+      },
+      "hanging_pothos": {
+       "source_model": "HANGING_POT_02",
+       "color_materials": [
+        "HANGING_POT_TERRA_03",
+        "POTHOS_Mat"
+       ],
+       "scale": 0.2414447703660488,
+       "world_min_m": [
+        -2.8099999984076707,
+        -2.090395462014879,
+        0.5419999999999996
+       ],
+       "world_max_m": [
+        -2.610000001592329,
+        -1.8896045379851225,
+        0.84375000505136
+       ]
+      },
+      "cross_alocasia": {
+       "source_model": "PLANTER_BOTTOM_CROSS",
+       "color_materials": [
+        "Alocasia_Polly_Mat",
+        "PLANTER_BOTTOM_CROSS_Mat"
+       ],
+       "scale": 0.2267127031266611,
+       "world_min_m": [
+        -2.810000000255023,
+        -2.091006767847982,
+        0.5419999999999998
+       ],
+       "world_max_m": [
+        -2.609999999744974,
+        -1.8889932321520129,
+        0.7665663791329075
+       ]
+      },
+      "cecilia_spider": {
+       "source_model": "CECILIA_PLANTER_GREEN_STAND",
+       "color_materials": [
+        "CECILIA_PLANTER_Mat",
+        "CHLOROPHYTUM_Mat"
+       ],
+       "scale": 0.23690606746648712,
+       "world_min_m": [
+        -2.8099999996076135,
+        -2.091511295472875,
+        0.5419999999999998
+       ],
+       "world_max_m": [
+        -2.6100000003923833,
+        -1.8884887045271226,
+        0.7744912226334923
+       ]
+      },
+      "dark_cross_palm": {
+       "source_model": "PLANTER_BOTTOM_CROSS_DARK_02",
+       "color_materials": [
+        "CHAMAEDOREA_ELEGANS_Mat",
+        "PLANTER_BOTTOM_CROSS_DARK_Mat"
+       ],
+       "scale": 0.19646215093718328,
+       "world_min_m": [
+        -2.810000001756697,
+        -2.0855179167389326,
+        0.5419999999999998
+       ],
+       "world_max_m": [
+        -2.6099999982433033,
+        -1.8944820832610652,
+        0.8073391181957995
+       ]
+      },
+      "bishop_dracaena": {
+       "source_model": "BISHOP_CERAMIC_POT_02",
+       "color_materials": [
+        "BISHOP_CERAMIC_POT_Mat",
+        "DRACAENA_FRAGANS_Mat"
+       ],
+       "scale": 0.22726304989518256,
+       "world_min_m": [
+        -2.8099999992942206,
+        -2.0877175619883532,
+        0.5420000000000003
+       ],
+       "world_max_m": [
+        -2.6100000007057798,
+        -1.8922824380116485,
+        0.8651384913103692
+       ]
+      }
+     }
+    },
+    "EastWindowLeft": {
+     "path": "/World/Assets/LivingRoomPlantStands/EastWindowLeft/Plant",
+     "variant_set": "plantAsset",
+     "default_variant": "dark_rhodea",
+     "stand_top_z_m": 0.56,
+     "stand_center_xy_m": [
+      0.6,
+      -1.99
+     ],
+     "stand_size_xy_m": [
+      0.2,
+      0.22
+     ],
+     "world_min_m": [
+      0.49000000071737837,
+      -2.0999999994039538,
+      1.1920928966180355e-08
+     ],
+     "world_max_m": [
+      0.7099999992826219,
+      -1.8799999952316284,
+      0.7404868527731366
+     ],
+     "variant_bounds": {
+      "costa_white_ficus": {
+       "source_model": "PLANTER_COSTA_GLAZED_WHITE",
+       "color_materials": [
+        "Ficus_Lyrata_Mat",
+        "PLANTER_COSTA_GLAZED_WHITE_Mat"
+       ],
+       "scale": 0.26936537806679006,
+       "world_min_m": [
+        0.49000000318248765,
+        -2.1046808688760117,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        0.7099999968175124,
+        -1.8753191311239856,
+        0.9551091319971123
+       ]
+      },
+      "volume_small_rubber": {
+       "source_model": "PLANTER_VOLUME_SMALL",
+       "color_materials": [
+        "FICUS_ELASTICA_Mat",
+        "PLANTER_VOLUME_SMALL_Mat"
+       ],
+       "scale": 0.22420380770195375,
+       "world_min_m": [
+        0.4977459046662225,
+        -2.0691216180775474,
+        0.5620000000000003
+       ],
+       "world_max_m": [
+        0.7022540953337787,
+        -1.9108783819224562,
+        1.002000004697899
+       ]
+      },
+      "volume_tall_audrey": {
+       "source_model": "PLANTER_VOLUME_TALL",
+       "color_materials": [
+        "FICUS_AUDREY_Mat",
+        "PLANTER_VOLUME_TALL_Mat"
+       ],
+       "scale": 0.16582295684487314,
+       "world_min_m": [
+        0.4900000025599712,
+        -2.099548017856937,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        0.7099999974400281,
+        -1.8804519821430628,
+        0.8591081380954445
+       ]
+      },
+      "dark_rhodea": {
+       "source_model": "POT_SIMPLE_DARK_PLASTIC_02",
+       "color_materials": [
+        "POT_SIMPLE_DARK_PLASTIC_Mat",
+        "RHODEA_JAPONICA_Mat"
+       ],
+       "scale": 0.2865844983671031,
+       "world_min_m": [
+        0.49000000071737837,
+        -2.099967571730765,
+        0.562
+       ],
+       "world_max_m": [
+        0.7099999992826219,
+        -1.880032428269235,
+        0.7404868527731366
+       ]
+      },
+      "eda_boston_fern": {
+       "source_model": "Eda_Planter_Small",
+       "color_materials": [
+        "BOSTON_FERN_Mat",
+        "Eda_Planter_Small_Mat"
+       ],
+       "scale": 0.20288364062704312,
+       "world_min_m": [
+        0.48999999714535314,
+        -2.1001284373440066,
+        0.562
+       ],
+       "world_max_m": [
+        0.7100000028546456,
+        -1.8798715626559936,
+        0.7674314515117601
+       ]
+      },
+      "sand_strelitzia": {
+       "source_model": "POT_STRIPES_SAND_MEDIUM",
+       "color_materials": [
+        "POT_STRIPES_SAND_MEDIUM_Mat",
+        "STRELITZIA_Mat"
+       ],
+       "scale": 0.16991243065895964,
+       "world_min_m": [
+        0.492698732752186,
+        -2.109999997884681,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        0.7073012672478133,
+        -1.8700000021153165,
+        0.8789793302968711
+       ]
+      },
+      "sand_cactus": {
+       "source_model": "POT_STRIPES_SAND_TALL",
+       "color_materials": [
+        "CACTUS_Opuntia_Mat",
+        "POT_STRIPES_SAND_TALL_Mat"
+       ],
+       "scale": 0.3642153143468925,
+       "world_min_m": [
+        0.4943977932308734,
+        -2.065989798854996,
+        0.562
+       ],
+       "world_max_m": [
+        0.7056022067691261,
+        -1.9140102011450018,
+        1.0020000000499936
+       ]
+      },
+      "bishop_cereus": {
+       "source_model": "BISHOP_CERAMIC_POT",
+       "color_materials": [
+        "BISHOP_CERAMIC_POT_Mat",
+        "CEREUS_PERUVIANUS_Mat"
+       ],
+       "scale": 0.31275977012187905,
+       "world_min_m": [
+        0.5303704466440478,
+        -2.059629552283056,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        0.6696295533559526,
+        -1.920370447716944,
+        1.0019999815987295
+       ]
+      },
+      "costa_dark_areca": {
+       "source_model": "PLANTER_COSTA_GLAZED_DARK",
+       "color_materials": [
+        "DYPSIS_LUTESCENS_Mat",
+        "PLANTER_COSTA_GLAZED_DARK_Mat"
+       ],
+       "scale": 0.125865659538396,
+       "world_min_m": [
+        0.4900000055768022,
+        -2.099584609918815,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        0.7099999944231992,
+        -1.880415390081186,
+        0.8298331746965449
+       ]
+      },
+      "dark_majesty_palm": {
+       "source_model": "DARK_PLASTIC_POT",
+       "color_materials": [
+        "DARK_PLASTIC_POT_Mat",
+        "MAJESTYPALM_Mat"
+       ],
+       "scale": 0.12623185776408505,
+       "world_min_m": [
+        0.48999999448339443,
+        -2.0957968704869643,
+        0.5620000000000003
+       ],
+       "world_max_m": [
+        0.7100000055166061,
+        -1.8842031295130364,
+        0.7842268716962881
+       ]
+      },
+      "dark_base_livistona": {
+       "source_model": "DARK_PLASTIC_BASE_POT_03",
+       "color_materials": [
+        "DARK_PLASTIC_BASE_POT_Mat",
+        "LIVISTONA_CHINENSIS_MAT"
+       ],
+       "scale": 0.15258979961423125,
+       "world_min_m": [
+        0.49000000118268555,
+        -2.09544918316252,
+        0.562
+       ],
+       "world_max_m": [
+        0.7099999988173136,
+        -1.8845508168374794,
+        0.7897488546199463
+       ]
+      },
+      "metal_dracaena": {
+       "source_model": "METAL_POT_03",
+       "color_materials": [
+        "DRACAENA_VARIEGATA_Mat",
+        "METAL_POT_SIMPLE_Mat"
+       ],
+       "scale": 0.1731297456139189,
+       "world_min_m": [
+        0.4899999957656903,
+        -2.0744572218206647,
+        0.562
+       ],
+       "world_max_m": [
+        0.71000000423431,
+        -1.9055427781793355,
+        0.9393696903153274
+       ]
+      },
+      "glazed_schefflera": {
+       "source_model": "CERAMIC_GLAZED_MEDIUM_02",
+       "color_materials": [
+        "CERAMIC_GLAZED_MEDIUM_Mat",
+        "SCHEFFLERA_Mat"
+       ],
+       "scale": 0.2904912005728903,
+       "world_min_m": [
+        0.4900000026658091,
+        -2.1017154517088223,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        0.7099999973341907,
+        -1.8782845482911779,
+        0.9481006851329712
+       ]
+      },
+      "bright_calathea": {
+       "source_model": "CERAMIC_GLAZED_MEDIUM_BRIGHT",
+       "color_materials": [
+        "CALATHEA_ORBIFOLIA_Mat",
+        "CERAMIC_GLAZED_MEDIUM_BRIGHT_Mat"
+       ],
+       "scale": 0.24515080021422073,
+       "world_min_m": [
+        0.48999999806813677,
+        -2.101067415645342,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        0.7100000019318613,
+        -1.8789325843546552,
+        0.7776812002604178
+       ]
+      },
+      "bamboo_monstera": {
+       "source_model": "BASE_BAMBOO_M",
+       "color_materials": [
+        "MONSTERA_Mat",
+        "SIMPLE_POT_GREY_Mat",
+        "WOOD_BAMBOO_BASE_Mat"
+       ],
+       "scale": 0.16241453083201784,
+       "world_min_m": [
+        0.48999999658104615,
+        -2.1009350344929274,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        0.7100000034189541,
+        -1.8790649655070728,
+        0.8078643558208171
+       ]
+      },
+      "hanging_pothos": {
+       "source_model": "HANGING_POT_02",
+       "color_materials": [
+        "HANGING_POT_TERRA_03",
+        "POTHOS_Mat"
+       ],
+       "scale": 0.2889872523235152,
+       "world_min_m": [
+        0.4900000012133059,
+        -2.0938426322207757,
+        0.5620000000000003
+       ],
+       "world_max_m": [
+        0.7099999987866947,
+        -1.8861573677792263,
+        0.9231670906886675
+       ]
+      },
+      "cross_alocasia": {
+       "source_model": "PLANTER_BOTTOM_CROSS",
+       "color_materials": [
+        "Alocasia_Polly_Mat",
+        "PLANTER_BOTTOM_CROSS_Mat"
+       ],
+       "scale": 0.3393193677315616,
+       "world_min_m": [
+        0.4899999966265908,
+        -2.104044244826444,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        0.7100000033734085,
+        -1.8759557551735557,
+        0.8981069885929087
+       ]
+      },
+      "cecilia_spider": {
+       "source_model": "CECILIA_PLANTER_GREEN_STAND",
+       "color_materials": [
+        "CECILIA_PLANTER_Mat",
+        "CHLOROPHYTUM_Mat"
+       ],
+       "scale": 0.24912707682614,
+       "world_min_m": [
+        0.49000000077271383,
+        -2.0985460281663912,
+        0.562
+       ],
+       "world_max_m": [
+        0.7099999992272854,
+        -1.881453971833606,
+        0.8064844875533268
+       ]
+      },
+      "dark_cross_palm": {
+       "source_model": "PLANTER_BOTTOM_CROSS_DARK_02",
+       "color_materials": [
+        "CHAMAEDOREA_ELEGANS_Mat",
+        "PLANTER_BOTTOM_CROSS_DARK_Mat"
+       ],
+       "scale": 0.1696144697940453,
+       "world_min_m": [
+        0.49000000372870395,
+        -2.098773686847192,
+        0.5619999999999996
+       ],
+       "world_max_m": [
+        0.7099999962712954,
+        -1.8812263131528042,
+        0.7910789921495968
+       ]
+      },
+      "bishop_dracaena": {
+       "source_model": "BISHOP_CERAMIC_POT_02",
+       "color_materials": [
+        "BISHOP_CERAMIC_POT_Mat",
+        "DRACAENA_FRAGANS_Mat"
+       ],
+       "scale": 0.2324226660113173,
+       "world_min_m": [
+        0.4900000005914873,
+        -2.100500185042527,
+        0.562
+       ],
+       "world_max_m": [
+        0.709999999408512,
+        -1.879499814957473,
+        0.8924747947459737
+       ]
+      }
+     }
+    },
+    "EastWindowRight": {
+     "path": "/World/Assets/LivingRoomPlantStands/EastWindowRight/Plant",
+     "variant_set": "plantAsset",
+     "default_variant": "eda_boston_fern",
+     "stand_top_z_m": 0.56,
+     "stand_center_xy_m": [
+      2.1,
+      -1.99
+     ],
+     "stand_size_xy_m": [
+      0.2,
+      0.22
+     ],
+     "world_min_m": [
+      1.9900000012270767,
+      -2.0999999994039538,
+      1.1920928966180355e-08
+     ],
+     "world_max_m": [
+      2.2099999987729233,
+      -1.8799999952316284,
+      0.8172787389755071
+     ],
+     "variant_bounds": {
+      "costa_white_ficus": {
+       "source_model": "PLANTER_COSTA_GLAZED_WHITE",
+       "color_materials": [
+        "Ficus_Lyrata_Mat",
+        "PLANTER_COSTA_GLAZED_WHITE_Mat"
+       ],
+       "scale": 0.2056626515843737,
+       "world_min_m": [
+        1.9899999993229915,
+        -2.0982611132598867,
+        0.5620000000000003
+       ],
+       "world_max_m": [
+        2.210000000677011,
+        -1.8817388867401152,
+        0.862142022205864
+       ]
+      },
+      "volume_small_rubber": {
+       "source_model": "PLANTER_VOLUME_SMALL",
+       "color_materials": [
+        "FICUS_ELASTICA_Mat",
+        "PLANTER_VOLUME_SMALL_Mat"
+       ],
+       "scale": 0.22420380770195375,
+       "world_min_m": [
+        1.9934812278972924,
+        -2.0949512922346116,
+        0.562
+       ],
+       "world_max_m": [
+        2.206518772102707,
+        -1.8850487077653897,
+        1.0020000046978983
+       ]
+      },
+      "volume_tall_audrey": {
+       "source_model": "PLANTER_VOLUME_TALL",
+       "color_materials": [
+        "FICUS_AUDREY_Mat",
+        "PLANTER_VOLUME_TALL_Mat"
+       ],
+       "scale": 0.16728617987047997,
+       "world_min_m": [
+        1.9900000048404556,
+        -2.1004878102947613,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        2.209999995159543,
+        -1.879512189705238,
+        0.8617298163396405
+       ]
+      },
+      "dark_rhodea": {
+       "source_model": "POT_SIMPLE_DARK_PLASTIC_02",
+       "color_materials": [
+        "POT_SIMPLE_DARK_PLASTIC_Mat",
+        "RHODEA_JAPONICA_Mat"
+       ],
+       "scale": 0.3369286487188978,
+       "world_min_m": [
+        1.990000004206107,
+        -2.099613976565993,
+        0.5620000000000003
+       ],
+       "world_max_m": [
+        2.209999995793895,
+        -1.8803860234340106,
+        0.7718415390723978
+       ]
+      },
+      "eda_boston_fern": {
+       "source_model": "Eda_Planter_Small",
+       "color_materials": [
+        "BOSTON_FERN_Mat",
+        "Eda_Planter_Small_Mat"
+       ],
+       "scale": 0.2521127192487644,
+       "world_min_m": [
+        1.9900000012270767,
+        -2.0996938584001663,
+        0.562
+       ],
+       "world_max_m": [
+        2.2099999987729233,
+        -1.880306141599834,
+        0.8172787389755071
+       ]
+      },
+      "sand_strelitzia": {
+       "source_model": "POT_STRIPES_SAND_MEDIUM",
+       "color_materials": [
+        "POT_STRIPES_SAND_MEDIUM_Mat",
+        "STRELITZIA_Mat"
+       ],
+       "scale": 0.1391747619288806,
+       "world_min_m": [
+        1.990000002008269,
+        -2.092970150225472,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        2.2099999979917335,
+        -1.8870298497745281,
+        0.8216368178101485
+       ]
+      },
+      "sand_cactus": {
+       "source_model": "POT_STRIPES_SAND_TALL",
+       "color_materials": [
+        "CACTUS_Opuntia_Mat",
+        "POT_STRIPES_SAND_TALL_Mat"
+       ],
+       "scale": 0.35001320226046767,
+       "world_min_m": [
+        1.9900000018203097,
+        -2.094099676017951,
+        0.562
+       ],
+       "world_max_m": [
+        2.2099999981796894,
+        -1.8859003239820478,
+        0.9848427536668446
+       ]
+      },
+      "bishop_cereus": {
+       "source_model": "BISHOP_CERAMIC_POT",
+       "color_materials": [
+        "BISHOP_CERAMIC_POT_Mat",
+        "CEREUS_PERUVIANUS_Mat"
+       ],
+       "scale": 0.31275977012187905,
+       "world_min_m": [
+        2.0274771274150583,
+        -2.0625228731571896,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        2.17252287258494,
+        -1.9174771268428066,
+        1.001999981598729
+       ]
+      },
+      "costa_dark_areca": {
+       "source_model": "PLANTER_COSTA_GLAZED_DARK",
+       "color_materials": [
+        "DYPSIS_LUTESCENS_Mat",
+        "PLANTER_COSTA_GLAZED_DARK_Mat"
+       ],
+       "scale": 0.1454581833843379,
+       "world_min_m": [
+        1.9900000050306599,
+        -2.106244654977691,
+        0.5620000000000003
+       ],
+       "world_max_m": [
+        2.2099999949693463,
+        -1.8737553450223112,
+        0.8715246739875245
+       ]
+      },
+      "dark_majesty_palm": {
+       "source_model": "DARK_PLASTIC_POT",
+       "color_materials": [
+        "DARK_PLASTIC_POT_Mat",
+        "MAJESTYPALM_Mat"
+       ],
+       "scale": 0.16147037407499276,
+       "world_min_m": [
+        1.9900000037948247,
+        -2.0855698003437375,
+        0.5620000000000003
+       ],
+       "world_max_m": [
+        2.209999996205178,
+        -1.894430199656265,
+        0.8462630513439762
+       ]
+      },
+      "dark_base_livistona": {
+       "source_model": "DARK_PLASTIC_BASE_POT_03",
+       "color_materials": [
+        "DARK_PLASTIC_BASE_POT_Mat",
+        "LIVISTONA_CHINENSIS_MAT"
+       ],
+       "scale": 0.1539640284896376,
+       "world_min_m": [
+        1.990000000519566,
+        -2.104200920635718,
+        0.562
+       ],
+       "world_max_m": [
+        2.2099999994804307,
+        -1.8757990793642796,
+        0.7917999698618275
+       ]
+      },
+      "metal_dracaena": {
+       "source_model": "METAL_POT_03",
+       "color_materials": [
+        "DRACAENA_VARIEGATA_Mat",
+        "METAL_POT_SIMPLE_Mat"
+       ],
+       "scale": 0.14642532561900817,
+       "world_min_m": [
+        1.99000000294546,
+        -2.093153811330764,
+        0.5620000000000003
+       ],
+       "world_max_m": [
+        2.2099999970545374,
+        -1.886846188669234,
+        0.8811622328133178
+       ]
+      },
+      "glazed_schefflera": {
+       "source_model": "CERAMIC_GLAZED_MEDIUM_02",
+       "color_materials": [
+        "CERAMIC_GLAZED_MEDIUM_Mat",
+        "SCHEFFLERA_Mat"
+       ],
+       "scale": 0.26392822797044696,
+       "world_min_m": [
+        1.9899999972464462,
+        -2.099666027135703,
+        0.562
+       ],
+       "world_max_m": [
+        2.210000002753554,
+        -1.8803339728642967,
+        0.9127950480592725
+       ]
+      },
+      "bright_calathea": {
+       "source_model": "CERAMIC_GLAZED_MEDIUM_BRIGHT",
+       "color_materials": [
+        "CALATHEA_ORBIFOLIA_Mat",
+        "CERAMIC_GLAZED_MEDIUM_BRIGHT_Mat"
+       ],
+       "scale": 0.25708113738307886,
+       "world_min_m": [
+        1.989999994169903,
+        -2.0965592754928037,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        2.210000005830097,
+        -1.8834407245071974,
+        0.7881773985303022
+       ]
+      },
+      "bamboo_monstera": {
+       "source_model": "BASE_BAMBOO_M",
+       "color_materials": [
+        "MONSTERA_Mat",
+        "SIMPLE_POT_GREY_Mat",
+        "WOOD_BAMBOO_BASE_Mat"
+       ],
+       "scale": 0.20900467443086537,
+       "world_min_m": [
+        1.9900000021311697,
+        -2.1043607230065575,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        2.209999997868823,
+        -1.8756392769934414,
+        0.8783928546693631
+       ]
+      },
+      "hanging_pothos": {
+       "source_model": "HANGING_POT_02",
+       "color_materials": [
+        "HANGING_POT_TERRA_03",
+        "POTHOS_Mat"
+       ],
+       "scale": 0.3321938861890061,
+       "world_min_m": [
+        1.9900000016277597,
+        -2.1087181183910824,
+        0.562
+       ],
+       "world_max_m": [
+        2.2099999983722456,
+        -1.8712818816089223,
+        0.9771653680318362
+       ]
+      },
+      "cross_alocasia": {
+       "source_model": "PLANTER_BOTTOM_CROSS",
+       "color_materials": [
+        "Alocasia_Polly_Mat",
+        "PLANTER_BOTTOM_CROSS_Mat"
+       ],
+       "scale": 0.24920712463093822,
+       "world_min_m": [
+        1.9900000002281615,
+        -2.0987498762289505,
+        0.5620000000000005
+       ],
+       "world_max_m": [
+        2.2099999997718407,
+        -1.8812501237710522,
+        0.8088478413511211
+       ]
+      },
+      "cecilia_spider": {
+       "source_model": "CECILIA_PLANTER_GREEN_STAND",
+       "color_materials": [
+        "CECILIA_PLANTER_Mat",
+        "CHLOROPHYTUM_Mat"
+       ],
+       "scale": 0.21934106718504842,
+       "world_min_m": [
+        1.9899999988591484,
+        -2.100000001140849,
+        0.5619999999999998
+       ],
+       "world_max_m": [
+        2.210000001140849,
+        -1.8799999988591483,
+        0.7772535566434297
+       ]
+      },
+      "dark_cross_palm": {
+       "source_model": "PLANTER_BOTTOM_CROSS_DARK_02",
+       "color_materials": [
+        "CHAMAEDOREA_ELEGANS_Mat",
+        "PLANTER_BOTTOM_CROSS_DARK_Mat"
+       ],
+       "scale": 0.17587910800127593,
+       "world_min_m": [
+        1.9900000012982149,
+        -2.1017881648143484,
+        0.562
+       ],
+       "world_max_m": [
+        2.2099999987017864,
+        -1.8782118351856518,
+        0.7995399324140906
+       ]
+      },
+      "bishop_dracaena": {
+       "source_model": "BISHOP_CERAMIC_POT_02",
+       "color_materials": [
+        "BISHOP_CERAMIC_POT_Mat",
+        "DRACAENA_FRAGANS_Mat"
+       ],
+       "scale": 0.283612040986978,
+       "world_min_m": [
+        1.9899999993489854,
+        -2.103916003947342,
+        0.562
+       ],
+       "world_max_m": [
+        2.210000000651013,
+        -1.8760839960526563,
+        0.9652594311898166
+       ]
+      }
+     }
+    }
+   }
+  },
+  "lamp_replacements": {
+   "path": "/World/Assets/LivingRoomLampReplacements",
+   "render_only": true,
+   "collision_authored": false,
+   "source_units": "centimetres",
+   "slots": {
+    "TvSouthWestWindowLeft": {
+     "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft",
+     "replaces": "/World/Assets/LivingRoomPlantStands/TvSouthWestWindowLeft",
+     "variant_set": "lampAsset",
+     "default_variant": "none",
+     "variants": [
+      "floor_lamp_01",
+      "floor_lamp_02",
+      "floor_lamp_03",
+      "floor_lamp_04",
+      "floor_lamp_05",
+      "floor_lamp_06",
+      "floor_lamp_07",
+      "floor_lamp_08",
+      "floor_lamp_09",
+      "floor_lamp_10",
+      "floor_lamp_11",
+      "floor_lamp_12",
+      "floor_lamp_13",
+      "floor_lamp_14",
+      "floor_lamp_15"
+     ],
+     "variant_bounds": {
+      "floor_lamp_01": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light01.usda",
+       "source_prim": "/Sm_Light01",
+       "scale": 0.008023916312683609,
+       "rebound_materials": [
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey"
+       ],
+       "world_min_m": [
+        -3.9700000139661418,
+        -1.6134883403864495,
+        0.002
+       ],
+       "world_max_m": [
+        -3.449999986033858,
+        -1.3465116596135505,
+        1.2300192214294061
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         1.0089757615721129
+        ]
+       }
+      },
+      "floor_lamp_02": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light02.usda",
+       "source_prim": "/Sm_Light02",
+       "scale": 0.008100767963735817,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_Screen02"
+       ],
+       "world_min_m": [
+        -3.969999988964593,
+        -1.7399999889645934,
+        0.002
+       ],
+       "world_max_m": [
+        -3.450000011035407,
+        -1.2200000110354066,
+        1.3783552266082115
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         1.1306112858187334
+        ]
+       }
+      },
+      "floor_lamp_03": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light03.usda",
+       "source_prim": "/Sm_Light03",
+       "scale": 0.009175433794688003,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey",
+        "MI_PlasticWhite",
+        "MI_Screen03"
+       ],
+       "world_min_m": [
+        -3.969358740416193,
+        -1.7399999995065107,
+        0.002
+       ],
+       "world_max_m": [
+        -3.4506412595838074,
+        -1.2200000004934892,
+        1.3039452749016125
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         1.0695951254193221
+        ]
+       }
+      },
+      "floor_lamp_04": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light04.usda",
+       "source_prim": "/Sm_Light04",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey",
+        "MI_PlasticWhite"
+       ],
+       "world_min_m": [
+        -3.916919895504289,
+        -1.726450458408758,
+        0.002
+       ],
+       "world_max_m": [
+        -3.503080104495711,
+        -1.2335495415912416,
+        1.444750822244193
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         1.185055674240238
+        ]
+       }
+      },
+      "floor_lamp_05": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light05.usda",
+       "source_prim": "/Sm_Light05",
+       "scale": 0.00984813649382538,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_PlasticDark"
+       ],
+       "world_min_m": [
+        -3.9178351710863346,
+        -1.687835134852653,
+        0.002
+       ],
+       "world_max_m": [
+        -3.5021648289136653,
+        -1.272164865147347,
+        1.5519999938610358
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         1.2729999949660493
+        ]
+       }
+      },
+      "floor_lamp_06": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light06.usda",
+       "source_prim": "/Sm_Light06",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Light",
+        "MI_Metal02",
+        "MI_PlasticDark"
+       ],
+       "world_min_m": [
+        -3.9616540853347972,
+        -1.7316540853347973,
+        0.002
+       ],
+       "world_max_m": [
+        -3.4583459146652027,
+        -1.2283459146652027,
+        1.0810084597689997
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         0.8867869370105798
+        ]
+       }
+      },
+      "floor_lamp_07": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light07.usda",
+       "source_prim": "/Sm_Light07",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Light",
+        "MI_PlasticDark"
+       ],
+       "world_min_m": [
+        -3.9172205871157924,
+        -1.6840594498376231,
+        0.002
+       ],
+       "world_max_m": [
+        -3.5027794128842076,
+        -1.275940550162377,
+        1.479305264831216
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         1.213390317161597
+        ]
+       }
+      },
+      "floor_lamp_08": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light08.usda",
+       "source_prim": "/Sm_Light08",
+       "scale": 0.009634617626904396,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticWhite",
+        "MI_Screen01"
+       ],
+       "world_min_m": [
+        -3.9700000024063327,
+        -1.7400000024063325,
+        0.002
+       ],
+       "world_max_m": [
+        -3.4499999975936673,
+        -1.2199999975936675,
+        1.3998160830944262
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         1.1482091881374294
+        ]
+       }
+      },
+      "floor_lamp_09": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_light09.usda",
+       "source_prim": "/Sm_light09",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey"
+       ],
+       "world_min_m": [
+        -3.8790975353790333,
+        -1.6490975353790331,
+        0.002
+       ],
+       "world_max_m": [
+        -3.5409024646209666,
+        -1.3109024646209668,
+        1.4289929185436752
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         1.1721341932058136
+        ]
+       }
+      },
+      "floor_lamp_10": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light10.usda",
+       "source_prim": "/Sm_Light10",
+       "scale": 0.00929506752368297,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey",
+        "MI_Screen02"
+       ],
+       "world_min_m": [
+        -3.9700000063281924,
+        -1.7400000063281928,
+        0.002
+       ],
+       "world_max_m": [
+        -3.4499999936718075,
+        -1.2199999936718071,
+        1.437170743193268
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         1.1788400094184797
+        ]
+       }
+      },
+      "floor_lamp_11": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light11.usda",
+       "source_prim": "/Sm_Light11",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey",
+        "MI_PlasticWhite",
+        "MI_RoughPlasticDark"
+       ],
+       "world_min_m": [
+        -3.9618098332593528,
+        -1.7318098332593526,
+        0.002
+       ],
+       "world_max_m": [
+        -3.458190166740647,
+        -1.2281901667406474,
+        1.369477081250911
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         1.1233312066257468
+        ]
+       }
+      },
+      "floor_lamp_12": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light12.usda",
+       "source_prim": "/Sm_Light12",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Metal02",
+        "MI_PlasticDark"
+       ],
+       "world_min_m": [
+        -3.885408346699858,
+        -1.713388237128257,
+        0.002
+       ],
+       "world_max_m": [
+        -3.5345916533001414,
+        -1.246611762871743,
+        1.2088420140406033
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         0.9916104515132946
+        ]
+       }
+      },
+      "floor_lamp_13": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light13.usda",
+       "source_prim": "/Sm_Light13",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Light",
+        "MI_Metal02",
+        "MI_PlasticGrey"
+       ],
+       "world_min_m": [
+        -3.802781840807854,
+        -1.6181386780394373,
+        0.002
+       ],
+       "world_max_m": [
+        -3.6172181591921455,
+        -1.3418613219605626,
+        1.016495598051795
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         0.8338863904024718
+        ]
+       }
+      },
+      "floor_lamp_14": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_light14.usda",
+       "source_prim": "/Sm_light14",
+       "scale": 0.006594604891454432,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_Screen03",
+        "MI_Wood"
+       ],
+       "world_min_m": [
+        -3.9699999968895923,
+        -1.7348110418718983,
+        0.002
+       ],
+       "world_max_m": [
+        -3.4500000031104077,
+        -1.2251889581281015,
+        0.8794785027621874
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         0.7215323722649937
+        ]
+       }
+      },
+      "floor_lamp_15": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light15.usda",
+       "source_prim": "/Sm_Light15",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark"
+       ],
+       "world_min_m": [
+        -3.94774325702514,
+        -1.7177432570251394,
+        0.002
+       ],
+       "world_max_m": [
+        -3.47225674297486,
+        -1.2422567429748606,
+        1.1875205270904179
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvSouthWestWindowLeft/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         -1.48,
+         0.9741268322141426
+        ]
+       }
+      }
+     }
+    },
+    "TvNorth": {
+     "path": "/World/Assets/LivingRoomLampReplacements/TvNorth",
+     "replaces": "/World/Assets/LivingRoomPlantStands/TvNorth",
+     "variant_set": "lampAsset",
+     "default_variant": "none",
+     "variants": [
+      "floor_lamp_01",
+      "floor_lamp_02",
+      "floor_lamp_03",
+      "floor_lamp_04",
+      "floor_lamp_05",
+      "floor_lamp_06",
+      "floor_lamp_07",
+      "floor_lamp_08",
+      "floor_lamp_09",
+      "floor_lamp_10",
+      "floor_lamp_11",
+      "floor_lamp_12",
+      "floor_lamp_13",
+      "floor_lamp_14",
+      "floor_lamp_15"
+     ],
+     "variant_bounds": {
+      "floor_lamp_01": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light01.usda",
+       "source_prim": "/Sm_Light01",
+       "scale": 0.008023916312683609,
+       "rebound_materials": [
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey"
+       ],
+       "world_min_m": [
+        -3.9700000139661418,
+        0.7065116596135504,
+        0.002
+       ],
+       "world_max_m": [
+        -3.449999986033858,
+        0.9734883403864495,
+        1.2300192214294061
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.84,
+         1.0089757615721129
+        ]
+       }
+      },
+      "floor_lamp_02": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light02.usda",
+       "source_prim": "/Sm_Light02",
+       "scale": 0.008100767963735812,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_Screen02"
+       ],
+       "world_min_m": [
+        -3.9699999889645934,
+        0.5800000110354065,
+        0.002
+       ],
+       "world_max_m": [
+        -3.4500000110354065,
+        1.0999999889645933,
+        1.3783552266082115
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.8399999999999999,
+         1.1306112858187334
+        ]
+       }
+      },
+      "floor_lamp_03": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light03.usda",
+       "source_prim": "/Sm_Light03",
+       "scale": 0.009175433794687998,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey",
+        "MI_PlasticWhite",
+        "MI_Screen03"
+       ],
+       "world_min_m": [
+        -3.969358740416193,
+        0.5800000004934892,
+        0.002
+       ],
+       "world_max_m": [
+        -3.450641259583807,
+        1.0999999995065108,
+        1.3039452749016125
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.8400000000000001,
+         1.0695951254193221
+        ]
+       }
+      },
+      "floor_lamp_04": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light04.usda",
+       "source_prim": "/Sm_Light04",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey",
+        "MI_PlasticWhite"
+       ],
+       "world_min_m": [
+        -3.916919895504289,
+        0.5935495415912416,
+        0.002
+       ],
+       "world_max_m": [
+        -3.5030801044957105,
+        1.0864504584087582,
+        1.444750822244193
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.8399999999999999,
+         1.185055674240238
+        ]
+       }
+      },
+      "floor_lamp_05": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light05.usda",
+       "source_prim": "/Sm_Light05",
+       "scale": 0.00984813649382538,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_PlasticDark"
+       ],
+       "world_min_m": [
+        -3.9178351710863346,
+        0.6321648651473469,
+        0.002
+       ],
+       "world_max_m": [
+        -3.5021648289136653,
+        1.0478351348526531,
+        1.5519999938610358
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.8400000000000001,
+         1.2729999949660493
+        ]
+       }
+      },
+      "floor_lamp_06": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light06.usda",
+       "source_prim": "/Sm_Light06",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Light",
+        "MI_Metal02",
+        "MI_PlasticDark"
+       ],
+       "world_min_m": [
+        -3.9616540853347972,
+        0.5883459146652026,
+        0.002
+       ],
+       "world_max_m": [
+        -3.4583459146652027,
+        1.0916540853347971,
+        1.0810084597689997
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.8399999999999999,
+         0.8867869370105798
+        ]
+       }
+      },
+      "floor_lamp_07": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light07.usda",
+       "source_prim": "/Sm_Light07",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Light",
+        "MI_PlasticDark"
+       ],
+       "world_min_m": [
+        -3.9172205871157924,
+        0.6359405501623769,
+        0.002
+       ],
+       "world_max_m": [
+        -3.5027794128842076,
+        1.044059449837623,
+        1.479305264831216
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.84,
+         1.213390317161597
+        ]
+       }
+      },
+      "floor_lamp_08": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light08.usda",
+       "source_prim": "/Sm_Light08",
+       "scale": 0.009634617626904396,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticWhite",
+        "MI_Screen01"
+       ],
+       "world_min_m": [
+        -3.9700000024063327,
+        0.5799999975936674,
+        0.002
+       ],
+       "world_max_m": [
+        -3.4499999975936673,
+        1.1000000024063326,
+        1.3998160830944262
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.84,
+         1.1482091881374294
+        ]
+       }
+      },
+      "floor_lamp_09": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_light09.usda",
+       "source_prim": "/Sm_light09",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey"
+       ],
+       "world_min_m": [
+        -3.8790975353790333,
+        0.6709024646209669,
+        0.002
+       ],
+       "world_max_m": [
+        -3.5409024646209666,
+        1.009097535379033,
+        1.4289929185436752
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.84,
+         1.1721341932058136
+        ]
+       }
+      },
+      "floor_lamp_10": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light10.usda",
+       "source_prim": "/Sm_Light10",
+       "scale": 0.00929506752368297,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey",
+        "MI_Screen02"
+       ],
+       "world_min_m": [
+        -3.9700000063281924,
+        0.5799999936718071,
+        0.002
+       ],
+       "world_max_m": [
+        -3.4499999936718075,
+        1.1000000063281927,
+        1.437170743193268
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.8399999999999999,
+         1.1788400094184797
+        ]
+       }
+      },
+      "floor_lamp_11": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light11.usda",
+       "source_prim": "/Sm_Light11",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark",
+        "MI_PlasticGrey",
+        "MI_PlasticWhite",
+        "MI_RoughPlasticDark"
+       ],
+       "world_min_m": [
+        -3.9618098332593528,
+        0.5881901667406475,
+        0.002
+       ],
+       "world_max_m": [
+        -3.458190166740647,
+        1.0918098332593524,
+        1.369477081250911
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.84,
+         1.1233312066257468
+        ]
+       }
+      },
+      "floor_lamp_12": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light12.usda",
+       "source_prim": "/Sm_Light12",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Metal02",
+        "MI_PlasticDark"
+       ],
+       "world_min_m": [
+        -3.885408346699858,
+        0.6066117628717432,
+        0.002
+       ],
+       "world_max_m": [
+        -3.534591653300142,
+        1.073388237128257,
+        1.2088420140406033
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.8400000000000001,
+         0.9916104515132946
+        ]
+       }
+      },
+      "floor_lamp_13": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light13.usda",
+       "source_prim": "/Sm_Light13",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Light",
+        "MI_Metal02",
+        "MI_PlasticGrey"
+       ],
+       "world_min_m": [
+        -3.8027818408078544,
+        0.7018613219605625,
+        0.002
+       ],
+       "world_max_m": [
+        -3.617218159192146,
+        0.9781386780394374,
+        1.016495598051795
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.84,
+         0.8338863904024718
+        ]
+       }
+      },
+      "floor_lamp_14": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_light14.usda",
+       "source_prim": "/Sm_light14",
+       "scale": 0.006594604891454432,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_Screen03",
+        "MI_Wood"
+       ],
+       "world_min_m": [
+        -3.969999996889592,
+        0.5851889581281015,
+        0.002
+       ],
+       "world_max_m": [
+        -3.450000003110408,
+        1.0948110418718984,
+        0.8794785027621874
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.8399999999999999,
+         0.7215323722649937
+        ]
+       }
+      },
+      "floor_lamp_15": {
+       "asset": "./livingroom_user_decor/lamps/lamp_set01_export/Assets/Sm_Light15.usda",
+       "source_prim": "/Sm_Light15",
+       "scale": 0.01,
+       "rebound_materials": [
+        "MI_Bulb",
+        "MI_Metal02",
+        "MI_PlasticDark"
+       ],
+       "world_min_m": [
+        -3.94774325702514,
+        0.6022567429748603,
+        0.002
+       ],
+       "world_max_m": [
+        -3.47225674297486,
+        1.0777432570251397,
+        1.1875205270904179
+       ],
+       "light": {
+        "path": "/World/Assets/LivingRoomLampReplacements/TvNorth/Light",
+        "intensity": 550.0,
+        "color_temperature_k": 2850.0,
+        "radius_m": 0.11,
+        "position_m": [
+         -3.71,
+         0.8400000000000001,
+         0.9741268322141426
+        ]
+       }
+      }
+     }
+    }
+   }
+  },
+  "task_owned_loose_objects_added": false,
+  "fixed_global_decor_created": true,
+  "existing_furniture_transforms_changed": false
+ },
+ "red_bull_shelf_target": {
+  "path": "/World/Assets/ShelfItems/red_bull_pink",
+  "reference": "./newcans/cans/red_bull_pink_slim/asset.usda",
+  "local_xyz_m": [
+   -2.52,
+   1.735,
+   1.183
+  ],
+  "grasp_collision_size_m": [
+   0.053,
+   0.053,
+   0.168
+  ]
+ },
+ "recovered_power_bank": {
+  "path": "/World/Assets/PowerBank",
+  "reference": "./house_task_assets/recovered/power_bank_v1.usda",
+  "source": "arena_scene/v1_2/demo_sim/house_task_assets/recovered/power_bank_v1.usda",
+  "runtime_asset": "arena_scene/v1_2/demo_sim/house_task_assets/recovered/power_bank_v1.usda",
+  "authored_home_xyz_m": [
+   6.0,
+   6.0,
+   5.0
+  ]
+ },
+ "normalized_nested_rigid_bodies": [
+  {
+   "rigid_root": "/World/Assets/GlassesCase",
+   "geometry_child": "/World/Assets/GlassesCase/Obj"
+  }
+ ],
+ "home_poses_seated": [
+  "/World/Assets/Tier2Items/honeymaid: -> (-2.440, 1.580), bottom 0.7515 on /World/Assets/Tier2Overlay [build_tier2 ITEMS / the 20260728 scene, before task 41 moved it]",
+  "/World/Assets/Tier2Items/pring_bbq: -> (-2.661, 1.471), bottom 0.7515 on /World/Assets/Tier2Overlay [20260728 scene; GRID's archived 1.680 reaches the background row]",
+  "/World/Assets/ShelfItems/pring_g: -> (-2.370, 1.470), bottom 0.7515 on /World/Assets/Tier2Overlay [free window between pring_bbq and oreo_gf; the 2026-08-02 oreo pack was installed into pring_g's slot]",
+  "/World/Assets/ShelfItems/grapefruit_can: -> (-2.229, 1.500), bottom 1.1830 on /World/Assets/Tier3Overlay [clears starbucks; the back row starts at local y 1.735]",
+  "/World/Assets/PaperBall: -> (-1.629, -0.392), bottom 0.4505 on /World/Assets/CoffeeTable [init_throw TASKS['30'] staged pose; the 2026-07-26 relayout parked it 6.0 m +x / 6.6 m +y outside the room]"
+ ],
+ "retired_stock": [
+  "/World/Assets/ShelfItems/littles2",
+  "/World/Assets/ShelfItems/zbar2"
+ ],
+ "retired_baseline_prims": [
+  "/World/Assets/BookRiser",
+  "/World/Assets/TableTopOverlay"
+ ],
+ "penetration_fixes": [],
+ "declared_support_mismatch": [],
+ "footprint_seated": [],
+ "grasp_envelopes_declared": [],
+ "task_targets_unfrozen": [],
+ "interpenetrating_pairs": [
+  {
+   "a": "/World/Assets/BaseballCap",
+   "b": "/World/Assets/PaperCup",
+   "overlap_mm": [
+    87.6,
+    19.0,
+    89.0
+   ]
+  },
+  {
+   "a": "/World/Assets/MicrowaveBeefbox",
+   "b": "/World/Assets/MicrowaveFoodbox",
+   "overlap_mm": [
+    153.6,
+    135.0,
+    58.0
+   ]
+  },
+  {
+   "a": "/World/Assets/MicrowaveBeefbox",
+   "b": "/World/Assets/MicrowaveSaladbox",
+   "overlap_mm": [
+    270.0,
+    135.0,
+    58.0
+   ]
+  },
+  {
+   "a": "/World/Assets/MicrowaveBeefbox",
+   "b": "/World/Assets/MicrowaveTakePlate",
+   "overlap_mm": [
+    270.0,
+    135.0,
+    10.7
+   ]
+  },
+  {
+   "a": "/World/Assets/MicrowaveFoodbox",
+   "b": "/World/Assets/MicrowaveSaladbox",
+   "overlap_mm": [
+    153.6,
+    159.8,
+    81.3
+   ]
+  },
+  {
+   "a": "/World/Assets/MicrowaveFoodbox",
+   "b": "/World/Assets/MicrowaveTakePlate",
+   "overlap_mm": [
+    153.6,
+    159.8,
+    10.7
+   ]
+  },
+  {
+   "a": "/World/Assets/MicrowaveSaladbox",
+   "b": "/World/Assets/MicrowaveTakePlate",
+   "overlap_mm": [
+    285.6,
+    194.3,
+    10.7
+   ]
+  },
+  {
+   "a": "/World/Assets/PaperBall",
+   "b": "/World/Assets/Task108Placemat",
+   "overlap_mm": [
+    58.1,
+    85.6,
+    1.5
+   ]
+  },
+  {
+   "a": "/World/Assets/PaperPlate",
+   "b": "/World/Assets/Tray",
+   "overlap_mm": [
+    14.7,
+    163.1,
+    18.5
+   ]
+  },
+  {
+   "a": "/World/Assets/ShelfItems/cayman_jacked",
+   "b": "/World/Assets/ShelfItems/coke_c3",
+   "overlap_mm": [
+    8.4,
+    66.4,
+    122.0
+   ]
+  },
+  {
+   "a": "/World/Assets/ShelfItems/cayman_jacked",
+   "b": "/World/Assets/ShelfItems/diet_coke",
+   "overlap_mm": [
+    8.4,
+    66.4,
+    119.0
+   ]
+  },
+  {
+   "a": "/World/Assets/ShelfItems/coke_c3",
+   "b": "/World/Assets/ShelfItems/diet_coke",
+   "overlap_mm": [
+    66.4,
+    66.4,
+    117.9
+   ]
+  },
+  {
+   "a": "/World/Assets/ShelfItems/gatorade_m",
+   "b": "/World/Assets/ShelfItems/grapefruit_can",
+   "overlap_mm": [
+    70.0,
+    31.5,
+    119.9
+   ]
+  },
+  {
+   "a": "/World/Assets/ShelfItems/rb_box",
+   "b": "/World/Assets/ShelfItems/red_bull_pink",
+   "overlap_mm": [
+    39.5,
+    36.5,
+    160.9
+   ]
+  },
+  {
+   "a": "/World/Assets/ShelfItems/rb_box",
+   "b": "/World/Assets/ShelfItems/sprite_box",
+   "overlap_mm": [
+    60.5,
+    55.0,
+    126.0
+   ]
+  },
+  {
+   "a": "/World/Assets/ShelfItems/red_bull_pink",
+   "b": "/World/Assets/ShelfItems/sprite_box",
+   "overlap_mm": [
+    53.0,
+    53.0,
+    127.0
+   ]
+  },
+  {
+   "a": "/World/Assets/Task108Beefbox",
+   "b": "/World/Assets/Task108Foodbox",
+   "overlap_mm": [
+    153.6,
+    135.0,
+    58.0
+   ]
+  },
+  {
+   "a": "/World/Assets/Task108Beefbox",
+   "b": "/World/Assets/Task108Plate",
+   "overlap_mm": [
+    270.0,
+    135.0,
+    10.7
+   ]
+  },
+  {
+   "a": "/World/Assets/Task108Beefbox",
+   "b": "/World/Assets/Task108Saladbox",
+   "overlap_mm": [
+    270.0,
+    135.0,
+    58.0
+   ]
+  },
+  {
+   "a": "/World/Assets/Task108Foodbox",
+   "b": "/World/Assets/Task108Plate",
+   "overlap_mm": [
+    153.6,
+    159.8,
+    10.7
+   ]
+  },
+  {
+   "a": "/World/Assets/Task108Foodbox",
+   "b": "/World/Assets/Task108Saladbox",
+   "overlap_mm": [
+    153.6,
+    159.8,
+    81.3
+   ]
+  },
+  {
+   "a": "/World/Assets/Task108Plate",
+   "b": "/World/Assets/Task108Saladbox",
+   "overlap_mm": [
+    285.6,
+    194.3,
+    10.7
+   ]
+  },
+  {
+   "a": "/World/Task73",
+   "b": "/World/Task75",
+   "overlap_mm": [
+    388.9,
+    373.0,
+    284.0
+   ]
+  }
+ ],
+ "interpenetration_policy": "authored positions may collide across episodes; one session must not activate both members of a pair",
+ "structure_stays_active": "everything under /World not listed above, including furniture, fixtures, the robot and the background",
+ "coffee_table_partition": {
+  "prim_path": "/World/Assets/CoffeeTable/WorkspaceDivider",
+  "visible_line": false,
+  "split_axis": "canonical_world_x",
+  "split_x_m": -1.95,
+  "cleanup_side": "toward_sofa",
+  "tablecloth_side": "away_from_sofa",
+  "collision_authored": false
+ }
+}

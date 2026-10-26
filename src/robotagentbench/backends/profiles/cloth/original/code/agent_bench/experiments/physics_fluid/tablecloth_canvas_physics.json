@@ -1,0 +1,9 @@
+{
+  "stretch": 5000.0,
+  "bend": 0.15,
+  "bend_damping": 0.01,
+  "friction_epsilon": 0.01,
+  "substeps": 128,
+  "iterations": 24,
+  "strain_iters": 8
+}

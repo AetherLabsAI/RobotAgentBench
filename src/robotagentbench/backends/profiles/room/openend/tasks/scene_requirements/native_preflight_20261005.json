@@ -1,0 +1,10 @@
+{
+  "status": "not_started_no_idle_device",
+  "wall_budget_s": 600,
+  "gpu_snapshot": "0, GPU-9ad6e227-6bea-8a62-7382-20c85d10383b, 6921, 0\n1, GPU-e98b9a30-11b5-3c4c-e3ea-f9431b3e9833, 4490, 0\n2, GPU-164f9762-1db7-fa50-6718-fce360504a8f, 6627, 25\n3, GPU-974ec1f1-3d14-3275-cee6-535a9009f1b9, 13415, 0\n4, GPU-dc9effae-4769-4f48-459b-cb71bcd34230, 16072, 17\n5, GPU-b30a9de4-4a6f-d5c4-95c4-58e792584387, 17492, 18\n",
+  "compute_snapshot": "GPU-9ad6e227-6bea-8a62-7382-20c85d10383b, 981836\nGPU-e98b9a30-11b5-3c4c-e3ea-f9431b3e9833, 1040766\nGPU-164f9762-1db7-fa50-6718-fce360504a8f, 38415\nGPU-974ec1f1-3d14-3275-cee6-535a9009f1b9, 296136\nGPU-dc9effae-4769-4f48-459b-cb71bcd34230, 3978732\nGPU-b30a9de4-4a6f-d5c4-95c4-58e792584387, 306711\n",
+  "device": null,
+  "container": "openend-shared_entry-niucdcx6",
+  "native_started": false,
+  "full_task_success": false
+}

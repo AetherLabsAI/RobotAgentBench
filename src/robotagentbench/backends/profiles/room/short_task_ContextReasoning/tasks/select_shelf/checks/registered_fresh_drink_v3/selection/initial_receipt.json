@@ -1,0 +1,279 @@
+{
+  "question_id": "R001",
+  "seed": 2,
+  "variant": "drink",
+  "inventory_counts": {
+    "tier3": 7,
+    "tier2": 7
+  },
+  "metrics": {
+    "policy": "scene_first_visible360_v1",
+    "packing_round": 0,
+    "rounds": [
+      {
+        "round": 0,
+        "inventory": {
+          "tier3": [
+            "sprite_c1",
+            "cayman_jacked",
+            "good2grow",
+            "gatorade_m",
+            "gatorade_t",
+            "red_bull_pink",
+            "grapefruit_can"
+          ],
+          "tier2": [
+            "zbar_t",
+            "oreo_gf",
+            "lindt",
+            "pringles_green",
+            "honeymaid",
+            "skit_littles",
+            "chomps_r"
+          ]
+        },
+        "placed": 14,
+        "complete": true
+      }
+    ],
+    "layer_counts": {
+      "tier3": 7,
+      "tier2": 7
+    },
+    "spacing_metrics": {
+      "tier3": {
+        "objects": 7,
+        "required_edge_gap_m": 0.055,
+        "minimum_edge_gap_m": 0.08490915117815569,
+        "median_nearest_edge_gap_m": 0.09153206314284872
+      },
+      "tier2": {
+        "objects": 7,
+        "required_edge_gap_m": 0.055,
+        "minimum_edge_gap_m": 0.07987504815054972,
+        "median_nearest_edge_gap_m": 0.11162065662340921
+      }
+    },
+    "rejections": {
+      "support": 315,
+      "object": 333,
+      "fixture": 0,
+      "target_visibility_or_corridor": 127
+    },
+    "package_yaw_deg": [
+      -180.0,
+      180.0
+    ],
+    "container_yaw_deg": [
+      -180.0,
+      180.0
+    ],
+    "uses_target": true,
+    "uses_robot": false,
+    "reserves_grasp_corridor": true,
+    "targeted_sampling": null,
+    "ordinary_shelf_policy": "three_four_candidates_rear204.v6"
+  },
+  "placement": {
+    "policy": {
+      "task_name": "select_shelf",
+      "version": "three_four_candidates_rear204.v6"
+    },
+    "lanes": [
+      {
+        "product": "gatorade_m",
+        "support_id": "tier3",
+        "polygon_xy_m": [
+          [
+            -0.16363810050712724,
+            -0.25
+          ],
+          [
+            0.14634481258308907,
+            -0.25
+          ],
+          [
+            0.05634481258308908,
+            -0.08899124396543745
+          ],
+          [
+            -0.07363810050712724,
+            -0.08899124396543745
+          ],
+          [
+            -0.16363810050712724,
+            -0.25
+          ]
+        ]
+      },
+      {
+        "product": "sprite_c1",
+        "support_id": "tier3",
+        "polygon_xy_m": [
+          [
+            0.052585028827480645,
+            -0.25
+          ],
+          [
+            0.35898597957322276,
+            -0.25
+          ],
+          [
+            0.26898597957322273,
+            -0.0746496378598458
+          ],
+          [
+            0.14258502882748064,
+            -0.0746496378598458
+          ],
+          [
+            0.052585028827480645,
+            -0.25
+          ]
+        ]
+      },
+      {
+        "product": "grapefruit_can",
+        "support_id": "tier3",
+        "polygon_xy_m": [
+          [
+            -0.47251351637120415,
+            -0.25
+          ],
+          [
+            -0.16641622994201472,
+            -0.25
+          ],
+          [
+            -0.25641622994201474,
+            -0.10659031889020909
+          ],
+          [
+            -0.3825135163712041,
+            -0.10659031889020909
+          ],
+          [
+            -0.47251351637120415,
+            -0.25
+          ]
+        ]
+      },
+      {
+        "product": "red_bull_pink",
+        "support_id": "tier3",
+        "polygon_xy_m": [
+          [
+            -0.32159356944826784,
+            -0.25
+          ],
+          [
+            -0.028493239767344802,
+            -0.25
+          ],
+          [
+            -0.1184932397673448,
+            -0.11753916671952915
+          ],
+          [
+            -0.23159356944826784,
+            -0.11753916671952915
+          ],
+          [
+            -0.32159356944826784,
+            -0.25
+          ]
+        ]
+      }
+    ],
+    "inventory_preserved": true,
+    "final_geometry_checked": true,
+    "origin_depth_from_front_m": [
+      0.091,
+      0.204
+    ],
+    "origin_x_m": [
+      -0.396,
+      0.443
+    ],
+    "shelf_front_y_m": -0.25,
+    "accessibility_scope": "three_or_four_same_kind_candidates",
+    "privileged_candidate_subset": true,
+    "background_access_guaranteed": false,
+    "robot_reachability_verified": false,
+    "native_contact_verified": false,
+    "native_physics_validated": false,
+    "source_gap_and_lane_rules_unchanged": true,
+    "added_snack_heading_convention": {
+      "lindt": "skit_littles",
+      "pringles_green": "pring_bbq"
+    },
+    "source_rule_files": [
+      "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/tasks/stock_wooden_tray/placement_policy.json",
+      "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/tasks/stock_wooden_tray/drink_fronts.json"
+    ]
+  },
+  "station": {
+    "position_xy": [
+      -2.385146164946642,
+      1.3183357818879515
+    ],
+    "yaw_rad": 1.6173236117628704,
+    "policy": "stock_wooden_tray_source_station_v1",
+    "local_perturbation": [
+      -0.0072311298989447895,
+      -0.020018916323209925,
+      2.8101334906171003
+    ],
+    "front_edge_standoff_m": 0.6846206461630825,
+    "lateral_m": -0.016125013944842205,
+    "collision_checked": false,
+    "physics_certified": false,
+    "candidate_index": 0,
+    "search_budget": 256,
+    "seed": 2
+  },
+  "rejections": [],
+  "joint_positions": {
+    "idx01_body_joint1": 0.4,
+    "idx02_body_joint2": 0,
+    "idx11_head_joint1": 0,
+    "idx12_head_joint2": 0.4363323129985824,
+    "idx21_arm_l_joint1": -1.0463638945234317,
+    "idx61_arm_r_joint1": 1.0146817505343473,
+    "idx22_arm_l_joint2": 0.5553795243153509,
+    "idx62_arm_r_joint2": -0.5544810046463908,
+    "idx23_arm_l_joint3": 0.30598837290307634,
+    "idx63_arm_r_joint3": -0.22207068727428536,
+    "idx24_arm_l_joint4": -1.2477034506751763,
+    "idx64_arm_r_joint4": 1.3224151316068253,
+    "idx25_arm_l_joint5": 0.7315242756431548,
+    "idx65_arm_r_joint5": -0.7628240431105453,
+    "idx26_arm_l_joint6": 1.450414316002107,
+    "idx66_arm_r_joint6": -1.435793949834476,
+    "idx27_arm_l_joint7": -0.17955661248719887,
+    "idx67_arm_r_joint7": 0.19283131129064382,
+    "idx31_gripper_l_inner_joint1": -0.7844060659408569,
+    "idx41_gripper_l_outer_joint1": 0.7844061851501465,
+    "idx71_gripper_r_inner_joint1": -0.7844092845916748,
+    "idx81_gripper_r_outer_joint1": 0.78440922498703,
+    "idx32_gripper_l_inner_joint3": -0.06586175411939621,
+    "idx42_gripper_l_outer_joint3": 0.08891744911670685,
+    "idx72_gripper_r_inner_joint3": -0.06552468240261078,
+    "idx82_gripper_r_outer_joint3": 0.08869274705648422,
+    "idx33_gripper_l_inner_joint4": -0.03039488196372986,
+    "idx43_gripper_l_outer_joint4": -0.0339159332215786,
+    "idx73_gripper_r_inner_joint4": -0.031381815671920776,
+    "idx83_gripper_r_outer_joint4": -0.033230822533369064,
+    "idx39_gripper_l_inner_joint0": 0.4464392364025116,
+    "idx49_gripper_l_outer_joint0": -0.39266160130500793,
+    "idx79_gripper_r_inner_joint0": 0.4472809433937073,
+    "idx89_gripper_r_outer_joint0": -0.3932376503944397
+  },
+  "robot_room_geometry_checked": true,
+  "robot_self_collision_validated": false,
+  "static_fk_only": true,
+  "native_physics_validated": false,
+  "shared_runtime_registered": false,
+  "source_scene": "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_ContextReasoning/tasks/select_shelf/checks/registered_fresh_drink_v3/base_source/native/room.usdc",
+  "source_scene_sha256": "7f37373e09479284e550482fd05a322c13e6cdec1b7fc40a2810cd9d611a5029"
+}

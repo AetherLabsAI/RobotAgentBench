@@ -1,0 +1,833 @@
+{
+  "provenance": {
+    "meta_path": "/data/lingjun/lerobot-reconcile-20261010/revisions/handoff_recovered_20261010_v2/dataset/meta/episode_provenance.jsonl",
+    "meta_sha256": "12870e530600dbafd2338eb3e9cde8f0bfc693c2d26d4860688f555571c13013",
+    "rows": [
+      {
+        "source_id": "cutlery_00050",
+        "episode_index": 3928,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_01/attempt_118/episode/source_initialization.json",
+        "job": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_01/attempt_118/job.json"
+      },
+      {
+        "source_id": "cutlery_00051",
+        "episode_index": 3929,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_02/attempt_031/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_02/attempt_031/job.json"
+      },
+      {
+        "source_id": "cutlery_00052",
+        "episode_index": 3930,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_03/attempt_154/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_03/attempt_154/job.json"
+      },
+      {
+        "source_id": "cutlery_00053",
+        "episode_index": 3931,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_04/attempt_051/episode/source_initialization.json",
+        "job": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_04/attempt_051/job.json"
+      },
+      {
+        "source_id": "cutlery_00054",
+        "episode_index": 3932,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_05/attempt_168/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_05/attempt_168/job.json"
+      },
+      {
+        "source_id": "cutlery_00055",
+        "episode_index": 3933,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_06/attempt_034/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_06/attempt_034/job.json"
+      },
+      {
+        "source_id": "cutlery_00056",
+        "episode_index": 3934,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_07/attempt_026/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_07/attempt_026/job.json"
+      },
+      {
+        "source_id": "cutlery_00057",
+        "episode_index": 3935,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_08/attempt_043/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_08/attempt_043/job.json"
+      },
+      {
+        "source_id": "cutlery_00058",
+        "episode_index": 3936,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_09/attempt_049/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_09/attempt_049/job.json"
+      },
+      {
+        "source_id": "cutlery_00059",
+        "episode_index": 3937,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_10/attempt_035/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_10/attempt_035/job.json"
+      },
+      {
+        "source_id": "cutlery_00060",
+        "episode_index": 3938,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_11/attempt_032/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_11/attempt_032/job.json"
+      },
+      {
+        "source_id": "cutlery_00061",
+        "episode_index": 3939,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_12/attempt_209/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_12/attempt_209/job.json"
+      },
+      {
+        "source_id": "cutlery_00062",
+        "episode_index": 3940,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_13/attempt_230/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_13/attempt_230/job.json"
+      },
+      {
+        "source_id": "cutlery_00063",
+        "episode_index": 3941,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_14/attempt_023/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_14/attempt_023/job.json"
+      },
+      {
+        "source_id": "cutlery_00064",
+        "episode_index": 3942,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_15/attempt_068/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_15/attempt_068/job.json"
+      },
+      {
+        "source_id": "cutlery_00065",
+        "episode_index": 3943,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_16/attempt_017/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_16/attempt_017/job.json"
+      },
+      {
+        "source_id": "cutlery_00066",
+        "episode_index": 3944,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_17/attempt_100/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_17/attempt_100/job.json"
+      },
+      {
+        "source_id": "cutlery_00067",
+        "episode_index": 3945,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_18/attempt_030/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_18/attempt_030/job.json"
+      },
+      {
+        "source_id": "cutlery_00068",
+        "episode_index": 3946,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_19/attempt_370/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_19/attempt_370/job.json"
+      },
+      {
+        "source_id": "cutlery_00069",
+        "episode_index": 3947,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_20/attempt_249/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_20/attempt_249/job.json"
+      },
+      {
+        "source_id": "cutlery_00070",
+        "episode_index": 3948,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_21/attempt_419/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_21/attempt_419/job.json"
+      },
+      {
+        "source_id": "cutlery_00071",
+        "episode_index": 3949,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_22/attempt_065/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_22/attempt_065/job.json"
+      },
+      {
+        "source_id": "cutlery_00072",
+        "episode_index": 3950,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_23/attempt_208/episode/source_initialization.json",
+        "job": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_23/attempt_208/job.json"
+      },
+      {
+        "source_id": "cutlery_00073",
+        "episode_index": 3951,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_24/attempt_134/episode/source_initialization.json",
+        "job": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_24/attempt_134/job.json"
+      },
+      {
+        "source_id": "cutlery_00074",
+        "episode_index": 3952,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_25/attempt_078/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_25/attempt_078/job.json"
+      },
+      {
+        "source_id": "cutlery_00075",
+        "episode_index": 3953,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_26/attempt_076/episode/source_initialization.json",
+        "job": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_26/attempt_076/job.json"
+      },
+      {
+        "source_id": "cutlery_00076",
+        "episode_index": 3954,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_27/attempt_058/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_27/attempt_058/job.json"
+      },
+      {
+        "source_id": "cutlery_00077",
+        "episode_index": 3955,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_28/attempt_069/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_28/attempt_069/job.json"
+      },
+      {
+        "source_id": "cutlery_00078",
+        "episode_index": 3956,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_29/attempt_065/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_29/attempt_065/job.json"
+      },
+      {
+        "source_id": "cutlery_00079",
+        "episode_index": 3957,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_30/attempt_078/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_30/attempt_078/job.json"
+      },
+      {
+        "source_id": "cutlery_00080",
+        "episode_index": 3958,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_31/attempt_046/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_31/attempt_046/job.json"
+      },
+      {
+        "source_id": "cutlery_00081",
+        "episode_index": 3959,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_32/attempt_077/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_32/attempt_077/job.json"
+      },
+      {
+        "source_id": "cutlery_00082",
+        "episode_index": 3960,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_33/attempt_073/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_33/attempt_073/job.json"
+      },
+      {
+        "source_id": "cutlery_00083",
+        "episode_index": 3961,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_34/attempt_067/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_34/attempt_067/job.json"
+      },
+      {
+        "source_id": "cutlery_00084",
+        "episode_index": 3962,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_35/attempt_043/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_35/attempt_043/job.json"
+      },
+      {
+        "source_id": "cutlery_00085",
+        "episode_index": 3963,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_36/attempt_017/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_36/attempt_017/job.json"
+      },
+      {
+        "source_id": "cutlery_00086",
+        "episode_index": 3964,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_37/attempt_028/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_37/attempt_028/job.json"
+      },
+      {
+        "source_id": "cutlery_00087",
+        "episode_index": 3965,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_38/attempt_053/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_38/attempt_053/job.json"
+      },
+      {
+        "source_id": "cutlery_00088",
+        "episode_index": 3966,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_39/attempt_087/episode/source_initialization.json",
+        "job": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_39/attempt_087/job.json"
+      },
+      {
+        "source_id": "cutlery_00089",
+        "episode_index": 3967,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_40/attempt_109/episode/source_initialization.json",
+        "job": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_40/attempt_109/job.json"
+      },
+      {
+        "source_id": "cutlery_00090",
+        "episode_index": 3968,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_41/attempt_049/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_41/attempt_049/job.json"
+      },
+      {
+        "source_id": "cutlery_00091",
+        "episode_index": 3969,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_42/attempt_059/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_42/attempt_059/job.json"
+      },
+      {
+        "source_id": "cutlery_00092",
+        "episode_index": 3970,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_43/attempt_058/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_43/attempt_058/job.json"
+      },
+      {
+        "source_id": "cutlery_00093",
+        "episode_index": 3971,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_44/attempt_082/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_44/attempt_082/job.json"
+      },
+      {
+        "source_id": "cutlery_00094",
+        "episode_index": 3972,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_45/attempt_066/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_45/attempt_066/job.json"
+      },
+      {
+        "source_id": "cutlery_00095",
+        "episode_index": 3973,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_46/attempt_130/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_46/attempt_130/job.json"
+      },
+      {
+        "source_id": "cutlery_00096",
+        "episode_index": 3974,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_47/attempt_026/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_47/attempt_026/job.json"
+      },
+      {
+        "source_id": "cutlery_00097",
+        "episode_index": 3975,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_48/attempt_033/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_48/attempt_033/job.json"
+      },
+      {
+        "source_id": "cutlery_00098",
+        "episode_index": 3976,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_49/attempt_061/episode/source_initialization.json",
+        "job": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_49/attempt_061/job.json"
+      },
+      {
+        "source_id": "cutlery_00099",
+        "episode_index": 3977,
+        "instruction": "Pick all three utensils from their holder slots and place them neatly in parallel on the meal tray.",
+        "initialization": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_50/attempt_048/episode/source_initialization.json",
+        "job": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_50/attempt_048/job.json"
+      }
+    ]
+  },
+  "audit": {
+    "rows": [
+      {
+        "source_id": "cutlery_00050",
+        "path": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_01/attempt_118/job.json",
+        "sha256": "070cb89c7b422274e6cc08908d536156d9b21c0fa335dee98c220a031b050eca",
+        "layout_id": "01",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00051",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_02/attempt_031/job.json",
+        "sha256": "034bbd8966e7890a0f099c8d36801d92801cc9f063e7afc9ef4c2400314cf1ea",
+        "layout_id": "02",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00052",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_03/attempt_154/job.json",
+        "sha256": "e18b6f47705ecd5b6c29bf8ec27f21004cd82077465ebf55c44424de40f70370",
+        "layout_id": "03",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00053",
+        "path": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_04/attempt_051/job.json",
+        "sha256": "d55c6add4ed7290441177fdf2f9097dfb1c9435025a3da901f200e94c1436f6c",
+        "layout_id": "04",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00054",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_05/attempt_168/job.json",
+        "sha256": "401eb1494e5195d1534911c6633d8f1850ca9b214f0a846ad32b6b606560aac1",
+        "layout_id": "05",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00055",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_06/attempt_034/job.json",
+        "sha256": "5a9db877b6260808e53ec97b67a6bed75a8b2a88ce3950f380f5c960d98e3ed6",
+        "layout_id": "06",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00056",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_07/attempt_026/job.json",
+        "sha256": "85045b91e5d77337205dae80e851e6b23cceaf5b64aa7a1269eac01d168f39fe",
+        "layout_id": "07",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00057",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_08/attempt_043/job.json",
+        "sha256": "9463d2688d94074759a78cca4a10cd52a30aa83e6b8c350f14f9fa18716406d7",
+        "layout_id": "08",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00058",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_09/attempt_049/job.json",
+        "sha256": "197f496f197df0581ac2ca10fe22fda4f9101c6e8060f725f53597da3f599d37",
+        "layout_id": "09",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00059",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_10/attempt_035/job.json",
+        "sha256": "ab049a3fa1612771bdf84311df8baf6ec8f73338fac0e3b07a510d3392aaa4d8",
+        "layout_id": "10",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00060",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_11/attempt_032/job.json",
+        "sha256": "4044c56c33e4158476ddb1649d6f0a0280e87dcb08e6b527e97554423d3d9c93",
+        "layout_id": "11",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00061",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_12/attempt_209/job.json",
+        "sha256": "e1eca6a5b780395cf565addf8c48cada3f9857c6313615c55932f8e324c4f8b1",
+        "layout_id": "12",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00062",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_13/attempt_230/job.json",
+        "sha256": "2c5d3f574dd8831f8a9e87047220e107f1aeb52ebcc2685ff87e6e2b571435bf",
+        "layout_id": "13",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00063",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_14/attempt_023/job.json",
+        "sha256": "bd84d6346e60d919c457a5c5aefb513c5a1525cd32fa0bfe6d346fe89be5f85f",
+        "layout_id": "14",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00064",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_15/attempt_068/job.json",
+        "sha256": "c5ccd4514cd5009c7c1b19c7aa0d8e3fcf5fee2023fd9ea2587a3bf0f3436566",
+        "layout_id": "15",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00065",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_16/attempt_017/job.json",
+        "sha256": "cf7dc4a9f19fdea8b365d80c517cb831f6eae8f444b36125dead394625f12f58",
+        "layout_id": "16",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00066",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_17/attempt_100/job.json",
+        "sha256": "758bab4af4261125b94b5510aea04d0702b98d44c65122ae1bb6f3d6f2846ab5",
+        "layout_id": "17",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00067",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_18/attempt_030/job.json",
+        "sha256": "043e17e5bf3e5dd66be3c1aca7b00102518a2680a9cdc0d72d7cae7d2d9c6dfe",
+        "layout_id": "18",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00068",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_19/attempt_370/job.json",
+        "sha256": "b18957a47d0b42ebc67a04f3d3e0c6ee35e9d5c04cf94c939795297b70c7363a",
+        "layout_id": "19",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00069",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_20/attempt_249/job.json",
+        "sha256": "df17271d0af9b4e07eaacf8f0c6e16dac2fe47b35e1e5fd2168bfdd4cac2e28a",
+        "layout_id": "20",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00070",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_21/attempt_419/job.json",
+        "sha256": "a0c03ddf35ed98801c43b1cdf03834d3bf4797cadc8750ee078fb93dc078bffa",
+        "layout_id": "21",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00071",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_22/attempt_065/job.json",
+        "sha256": "510563bad455b944e70fbd3fad0a5f1cc27769c6cc8b2987340945e7be85c29a",
+        "layout_id": "22",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00072",
+        "path": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_23/attempt_208/job.json",
+        "sha256": "1e72337e698411a67ad6bb56ba8f675d6b9d25d55c6032c89f0286573e5923d0",
+        "layout_id": "23",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00073",
+        "path": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_24/attempt_134/job.json",
+        "sha256": "5be63ec3eed6c7a850eff2de150c7039f22dc946182c5760dc6ee22e53ea3778",
+        "layout_id": "24",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00074",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_25/attempt_078/job.json",
+        "sha256": "85b5880dd79c935272d879ab931d303ec1a5cb48847adbc7581bffbfd6dc2e20",
+        "layout_id": "25",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00075",
+        "path": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_26/attempt_076/job.json",
+        "sha256": "aedae27714013d6021b3bba4da9481ed812a269e7f9fc57d99134ef22b0c67d0",
+        "layout_id": "26",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00076",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_27/attempt_058/job.json",
+        "sha256": "f5ca982d19872ccf394c801b04430fcdddb471ad21c0319b97ec0ae7313bea7e",
+        "layout_id": "27",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00077",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_28/attempt_069/job.json",
+        "sha256": "e940a498ff6bd7b770e8fbedb8d3939b28c7e2cc1bd6ea54fa24c461d59ddde0",
+        "layout_id": "28",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00078",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_29/attempt_065/job.json",
+        "sha256": "950713dd7caeda78c072ff5fc956978010d9792c193c860e911983eda43fd1f6",
+        "layout_id": "29",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00079",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_30/attempt_078/job.json",
+        "sha256": "e93768f2557c41e42c1a0d1b1225224ae25aa167047c5eff4d240473e33c1e6e",
+        "layout_id": "30",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00080",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_31/attempt_046/job.json",
+        "sha256": "43afa79da93eaf4d8ae554af50d4d8637ee24b143815338b65dd20b7594d9175",
+        "layout_id": "31",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00081",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_32/attempt_077/job.json",
+        "sha256": "6b38370a4f017d2347f0155671b28c28fa944e31985c4b87fba8fd8e28056779",
+        "layout_id": "32",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00082",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_33/attempt_073/job.json",
+        "sha256": "64c51551f3a08ac9afec4477285f418f96ddd0f79970039892ff467bdc9e9958",
+        "layout_id": "33",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00083",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_34/attempt_067/job.json",
+        "sha256": "487071466cac3711269b6b89d18e39ada016506e5ce77f1e018ba08931e12d70",
+        "layout_id": "34",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00084",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_35/attempt_043/job.json",
+        "sha256": "df54a958c68f72195989338e15273eed38c4a1a3a858908bae42b514e6a115fa",
+        "layout_id": "35",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00085",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_36/attempt_017/job.json",
+        "sha256": "41feb58064245dae0d6e936352265f78e05b18776b8c36386f275ddcedb974f9",
+        "layout_id": "36",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00086",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_37/attempt_028/job.json",
+        "sha256": "0b39235c7a818e9ef1b77cd4c7382d6c9f2bdf9ca5304590f4a8c6bcfa8fb558",
+        "layout_id": "37",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00087",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_38/attempt_053/job.json",
+        "sha256": "5746f3adbec74b4ce5056f1422c9301b1c0ebe2d6fd78d271b57ba55afc69f34",
+        "layout_id": "38",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00088",
+        "path": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_39/attempt_087/job.json",
+        "sha256": "219e6fd86c13c850421408f0fac03a2f3b2adcf049d653d486ac1df2489f9463",
+        "layout_id": "39",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00089",
+        "path": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_40/attempt_109/job.json",
+        "sha256": "7b75f9f6d212ae40fd2a8139e38587b85b2583309c53fdab076eafbdaf6b861a",
+        "layout_id": "40",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00090",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_41/attempt_049/job.json",
+        "sha256": "fba999e70be13ef1f04fde0641d8608727b8f9133fa97d2711758790f01f6a8a",
+        "layout_id": "41",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00091",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_42/attempt_059/job.json",
+        "sha256": "3b7dee57f00a783fa5a7704357111f1534af572ebb175fdd3cb0f5ea3a58fed6",
+        "layout_id": "42",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00092",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_43/attempt_058/job.json",
+        "sha256": "9521fe6cb938f84f927a270f50443f33ca3e5ef234bb0a6dc45bd3c463e5a99d",
+        "layout_id": "43",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00093",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_44/attempt_082/job.json",
+        "sha256": "26ceef0dab8ab2dbf13d0faadfce02d272e8b7453b5fbcc0f71906b5013f982e",
+        "layout_id": "44",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00094",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_45/attempt_066/job.json",
+        "sha256": "7b777d1eb95bcc474b0e6f80d647c94de48362ed58d39203cea5329cc0a02689",
+        "layout_id": "45",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00095",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_46/attempt_130/job.json",
+        "sha256": "e8411480952ef9412eb8e30fc6e1b1429ef060f020d535ee6e3a521567d4b60a",
+        "layout_id": "46",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00096",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_47/attempt_026/job.json",
+        "sha256": "7636af479a8c5eb0c2ab17b6bc8d80ae7fe40606e7702052aa1d4edc051ccbde",
+        "layout_id": "47",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00097",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_48/attempt_033/job.json",
+        "sha256": "a681d4cfea608b369207d3dca30af3fae24810c3ea1f37d62d657652df79157b",
+        "layout_id": "48",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00098",
+        "path": "/home/lingjun/ziche/runtime/meal_cutlery50_20260922/attempts/layout_49/attempt_061/job.json",
+        "sha256": "64b2b4903d664e990ca7fa66dd352c36df482ebc5ed2127cd6b25200e9667522",
+        "layout_id": "49",
+        "robot_sampling": "fixed_robot_reference_v1"
+      },
+      {
+        "source_id": "cutlery_00099",
+        "path": "/mnt/agent-bench-data/lingjun/workspace/meal_cutlery50_20260922/attempts/layout_50/attempt_048/job.json",
+        "sha256": "566880695f45cbf6b69be23ffbcf41da1245414e514dd692a5831105ec7a1e53",
+        "layout_id": "50",
+        "robot_sampling": "fixed_robot_reference_v1"
+      }
+    ],
+    "missing": [],
+    "declared_legacy_bounds": [
+      {
+        "bounds": {
+          "arm_joint_deg": 4,
+          "holder_xy_m": 0.03,
+          "holder_yaw_deg": 10,
+          "robot_base_xy_m": 0.05,
+          "robot_base_yaw_deg": 5,
+          "tray_xy_m": 0.03,
+          "tray_yaw_deg": 6,
+          "utensil_lean_deg": 5,
+          "utensil_slot_xy_m": 0.01,
+          "utensil_yaw_deg": 5
+        },
+        "count": 50
+      }
+    ],
+    "robot_sampling_schemas": {
+      "fixed_robot_reference_v1": 50
+    },
+    "unchanged_base_count": 31,
+    "unchanged_joints_count": 33,
+    "observed_ranges": {
+      "tray_jitter.dx_m": [
+        -0.024252667247266116,
+        0.02419798877031728
+      ],
+      "tray_jitter.dy_m": [
+        -0.020132891817468093,
+        0.024913791361138957
+      ],
+      "tray_jitter.yaw_deg": [
+        -2.942156034581103,
+        2.848715429342807
+      ],
+      "holder_jitter.dx_m": [
+        -0.01207360759260609,
+        0.023550602159300264
+      ],
+      "holder_jitter.dy_m": [
+        -0.023937220941497646,
+        0.024503282697019922
+      ],
+      "holder_jitter.yaw_deg": [
+        -4.248518415124625,
+        4.87715949176755
+      ],
+      "knife_0.tilt_magnitude_deg": [
+        0.0014553449023330112,
+        18.469063939001988
+      ],
+      "knife_0.lean_azimuth_holder_deg": [
+        -135.83666449895492,
+        8.850807786547165
+      ],
+      "knife_0.long_axis_yaw_deg": [
+        -9.71143978287759,
+        52.078737689576
+      ],
+      "knife_0.minimum_below_rim_wall_margin_m": [
+        0.008012200032569382,
+        0.02834554499698788
+      ],
+      "knife_0.root_xy_0": [
+        -0.004803892315529705,
+        0.02594262762963307
+      ],
+      "knife_0.root_xy_1": [
+        -0.004882009934981002,
+        0.027622767763569554
+      ],
+      "fork_1.tilt_magnitude_deg": [
+        0.0020138863139368413,
+        13.636183519872109
+      ],
+      "fork_1.lean_azimuth_holder_deg": [
+        -153.71326738986915,
+        9.998993636957607
+      ],
+      "fork_1.long_axis_yaw_deg": [
+        -87.7177789214165,
+        8.965648895536532
+      ],
+      "fork_1.minimum_below_rim_wall_margin_m": [
+        0.01103133441178885,
+        0.02195852180013126
+      ],
+      "fork_1.root_xy_0": [
+        -0.004799641533475796,
+        0.025964161376912775
+      ],
+      "fork_1.root_xy_1": [
+        -0.004714017966631373,
+        0.004953096958457043
+      ],
+      "fork_2.tilt_magnitude_deg": [
+        0.007110502044060385,
+        13.78847868234432
+      ],
+      "fork_2.lean_azimuth_holder_deg": [
+        -66.24288410337188,
+        9.543727923623123
+      ],
+      "fork_2.long_axis_yaw_deg": [
+        -165.05360894765894,
+        9.432891781663557
+      ],
+      "fork_2.minimum_below_rim_wall_margin_m": [
+        0.010964450123547777,
+        0.0226907951189603
+      ],
+      "fork_2.root_xy_0": [
+        -0.010815663064896753,
+        0.004621298209893049
+      ],
+      "fork_2.root_xy_1": [
+        -0.004684504009733081,
+        0.004391055970092842
+      ]
+    }
+  }
+}

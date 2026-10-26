@@ -1,0 +1,761 @@
+{
+  "schema": "arena.microwave.recorded_envelope.v3",
+  "pilot": true,
+  "expected": 3,
+  "measured": 3,
+  "errors": [],
+  "input_hashes": {
+    "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/microwave_selected50_placement_v2.json": "cd7987ed55574d2f60b6b5c91acc2acab5e35f84ec5906b61f3c70f2d923bcf0",
+    "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/task9_selected50_20261001/task_9.4_selected50.json": "3217ffceb76cf2dda8e529c0c98014fd460e0bd2f407acd03af1a53436586e85",
+    "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_complete50_20261001/manifest.json": "672895a9a21167a8974bdfb9ef0441f39a79729247f7c77e5e9528b88c9ce8cf"
+  },
+  "groups": {
+    "put": {
+      "count": 1,
+      "frames": 9963,
+      "combined": {
+        "min": [
+          -0.5486479555504727,
+          -0.6461677587766078,
+          -0.015035658465555019
+        ],
+        "max": [
+          0.7200648624940128,
+          0.4357500001788144,
+          0.7129363374104873
+        ],
+        "size": [
+          1.2687128180444855,
+          1.0819177589554223,
+          0.7279719958760423
+        ]
+      }
+    },
+    "put_leftover": {
+      "count": 1,
+      "frames": 9975,
+      "combined": {
+        "min": [
+          -0.5287663431929193,
+          -0.6595760689900132,
+          -0.03486272430048607
+        ],
+        "max": [
+          0.7402539270558174,
+          0.43574952334165556,
+          0.7031228506652808
+        ],
+        "size": [
+          1.2690202702487365,
+          1.0953255923316687,
+          0.7379855749657669
+        ]
+      }
+    },
+    "take": {
+      "count": 1,
+      "frames": 2865,
+      "combined": {
+        "min": [
+          -0.5757286000372703,
+          -0.9425972367940962,
+          -0.023627957888349416
+        ],
+        "max": [
+          0.5900617614542046,
+          0.435750000178814,
+          0.5347837092880035
+        ],
+        "size": [
+          1.1657903614914749,
+          1.3783472369729102,
+          0.5584116671763528
+        ]
+      }
+    }
+  },
+  "records": [
+    {
+      "kind": "put",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000002",
+      "scene": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000002/initial_scene.usda",
+      "hashes": {
+        "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000002/initial_scene.usda": "c348f59cbda456f8652a657298264ebf4dec1d69cb6c5f96fe5ca5b88d674db4",
+        "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000002/control_state_60hz.npz": "75e67dc3ac0fe976f63b6f8483f2a4ac89ac50b36de17f4321fa248d81aaec2a"
+      },
+      "frames": 9963,
+      "sample_hz": 60,
+      "phases": [
+        "approach_handle",
+        "approach_outer_face",
+        "center_held_box_on_plate",
+        "close_on_handle",
+        "connect_to_real_placement",
+        "contact_inside_face_closed",
+        "enter_handle_gap",
+        "enter_with_closed_gripper",
+        "hold",
+        "hover_closed_inside_gap",
+        "hover_outside_open_door",
+        "lift_left_clear",
+        "lower_on_outer_face",
+        "move_above_door_away_from_head",
+        "move_right_away_from_microwave",
+        "park_left_above_door",
+        "pull_handle_clearance_margin",
+        "pull_handle_crack",
+        "push_door_closed",
+        "push_outward_closed",
+        "raise_right_after_exit",
+        "real_place_440_772",
+        "release_box_open_right_in_place",
+        "seat_box_for_release",
+        "seek_outer_contact_0",
+        "seek_outer_contact_1",
+        "seek_outer_contact_10",
+        "seek_outer_contact_11",
+        "seek_outer_contact_12",
+        "seek_outer_contact_13",
+        "seek_outer_contact_14",
+        "seek_outer_contact_15",
+        "seek_outer_contact_16",
+        "seek_outer_contact_17",
+        "seek_outer_contact_18",
+        "seek_outer_contact_19",
+        "seek_outer_contact_2",
+        "seek_outer_contact_20",
+        "seek_outer_contact_21",
+        "seek_outer_contact_22",
+        "seek_outer_contact_23",
+        "seek_outer_contact_3",
+        "seek_outer_contact_4",
+        "seek_outer_contact_5",
+        "seek_outer_contact_6",
+        "seek_outer_contact_7",
+        "seek_outer_contact_8",
+        "seek_outer_contact_9",
+        "settle_closed_contact",
+        "settle_terminal_pressure_0",
+        "tuck_right_to_initial_wait",
+        "turn_closed_gripper_down",
+        "unhook_along_handle",
+        "unload_fingers_after_release",
+        "unload_terminal_contact_0",
+        "unload_terminal_contact_1",
+        "withdraw_and_close",
+        "withdraw_right_clear_of_box",
+        "withdraw_toward_opening"
+      ],
+      "skipped_initially_hidden_objects": [
+        "/World/Assets/MwFoodbox/Asset"
+      ],
+      "bodies_per_arm": {
+        "l": 17,
+        "r": 17
+      },
+      "initial_fk_max_matrix_error": 8.267074793899543e-07,
+      "measured_gripper_fk_residuals": {},
+      "robot_station_in_microwave": [
+        [
+          -0.07969230608847748,
+          -0.9968195104181601,
+          -1.8650848205429283e-10,
+          0.034019822057213434
+        ],
+        [
+          0.9968195104181601,
+          -0.07969230608847722,
+          -2.96368452516236e-09,
+          -0.751830552704281
+        ],
+        [
+          2.9393952663662537e-09,
+          -4.220981480991172e-10,
+          1.0,
+          -0.9133954218937482
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "components": {
+        "arm_l": {
+          "min": [
+            -0.5486479555504727,
+            -0.6461677587766078,
+            -0.015035658465555019
+          ],
+          "max": [
+            0.22044028176923752,
+            0.030559939366636375,
+            0.7129363374104873
+          ],
+          "size": [
+            0.7690882373197103,
+            0.6767276981432442,
+            0.7279719958760423
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.16014680726227273,
+            -0.612536870567548,
+            -0.01083691094232318
+          ],
+          "max": [
+            0.7200648624940128,
+            0.18305858962838395,
+            0.5459173338838126
+          ],
+          "size": [
+            0.8802116697562855,
+            0.795595460195932,
+            0.5567542448261358
+          ]
+        },
+        "door": {
+          "min": [
+            -0.30997528738715396,
+            -0.4175861476805811,
+            0.023149400067072567
+          ],
+          "max": [
+            0.1974617061811144,
+            0.06599349388966208,
+            0.2974331498339927
+          ],
+          "size": [
+            0.5074369935682683,
+            0.4835796415702432,
+            0.27428374976692016
+          ]
+        },
+        "plate": {
+          "min": [
+            -0.26008174419148944,
+            0.026969575899471826,
+            0.060767993353191135
+          ],
+          "max": [
+            0.09378820270558413,
+            0.3809601479394726,
+            0.10944929633291327
+          ],
+          "size": [
+            0.3538699468970736,
+            0.35399057204000073,
+            0.04868130297972213
+          ]
+        },
+        "beeftray": {
+          "min": [
+            -0.1967580953800644,
+            -0.26352852942307214,
+            0.08004847014496724
+          ],
+          "max": [
+            0.5923518739175739,
+            0.37150546619617214,
+            0.5812508907432073
+          ],
+          "size": [
+            0.7891099692976383,
+            0.6350339956192443,
+            0.5012024205982402
+          ]
+        },
+        "microwave_initial": {
+          "min": [
+            -0.3002539656553189,
+            -0.03274009588991288,
+            0.0
+          ],
+          "max": [
+            0.3001988032860617,
+            0.4357500001788144,
+            0.29743300905689374
+          ],
+          "size": [
+            0.6004527689413806,
+            0.46849009606872727,
+            0.29743300905689374
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.5486479555504727,
+          -0.6461677587766078,
+          -0.015035658465555019
+        ],
+        "max": [
+          0.7200648624940128,
+          0.4357500001788144,
+          0.7129363374104873
+        ],
+        "size": [
+          1.2687128180444855,
+          1.0819177589554223,
+          0.7279719958760423
+        ]
+      }
+    },
+    {
+      "kind": "put_leftover",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_food_grasp/sim_info/episode_000008",
+      "scene": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_food_grasp/sim_info/episode_000008/initial_scene.usda",
+      "hashes": {
+        "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_food_grasp/sim_info/episode_000008/initial_scene.usda": "61dc0a27191a69694d4c26137c2ea128750f771f3014e59118d9d00648819044",
+        "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_food_grasp/sim_info/episode_000008/control_state_60hz.npz": "d746011c5949c06b91e8700afad781a37455a95a10fbf9f7cf5d2f96e20616c0"
+      },
+      "frames": 9975,
+      "sample_hz": 60,
+      "phases": [
+        "approach_handle",
+        "center_held_box_on_plate",
+        "close_on_handle",
+        "connect_to_real_placement",
+        "contact_inside_face_closed",
+        "enter_handle_gap",
+        "enter_with_closed_gripper",
+        "hold",
+        "hover_closed_inside_gap",
+        "lift_left_clear",
+        "move_above_door_away_from_head",
+        "move_right_away_from_microwave",
+        "park_left_above_door",
+        "pull_handle_clearance_margin",
+        "pull_handle_crack",
+        "push_outward_closed",
+        "raise_right_after_exit",
+        "real_place_440_772",
+        "reference_closure_approach_outer_face",
+        "reference_closure_hold",
+        "reference_closure_hover_outside_open_door",
+        "reference_closure_lower_on_outer_face",
+        "reference_closure_push_door_closed",
+        "reference_closure_seek_outer_contact_0",
+        "reference_closure_seek_outer_contact_1",
+        "reference_closure_seek_outer_contact_10",
+        "reference_closure_seek_outer_contact_11",
+        "reference_closure_seek_outer_contact_12",
+        "reference_closure_seek_outer_contact_13",
+        "reference_closure_seek_outer_contact_14",
+        "reference_closure_seek_outer_contact_15",
+        "reference_closure_seek_outer_contact_16",
+        "reference_closure_seek_outer_contact_17",
+        "reference_closure_seek_outer_contact_18",
+        "reference_closure_seek_outer_contact_19",
+        "reference_closure_seek_outer_contact_2",
+        "reference_closure_seek_outer_contact_20",
+        "reference_closure_seek_outer_contact_21",
+        "reference_closure_seek_outer_contact_22",
+        "reference_closure_seek_outer_contact_23",
+        "reference_closure_seek_outer_contact_24",
+        "reference_closure_seek_outer_contact_3",
+        "reference_closure_seek_outer_contact_4",
+        "reference_closure_seek_outer_contact_5",
+        "reference_closure_seek_outer_contact_6",
+        "reference_closure_seek_outer_contact_7",
+        "reference_closure_seek_outer_contact_8",
+        "reference_closure_seek_outer_contact_9",
+        "release_box_open_right_in_place",
+        "seat_box_for_release",
+        "settle_closed_contact",
+        "settle_terminal_pressure_0",
+        "tuck_right_to_initial_wait",
+        "turn_closed_gripper_down",
+        "unhook_along_handle",
+        "unload_fingers_after_release",
+        "withdraw_and_close",
+        "withdraw_right_clear_of_box",
+        "withdraw_toward_opening"
+      ],
+      "skipped_initially_hidden_objects": [
+        "/World/Assets/BeefTray/Asset"
+      ],
+      "bodies_per_arm": {
+        "l": 17,
+        "r": 17
+      },
+      "initial_fk_max_matrix_error": 8.913055598025466e-07,
+      "measured_gripper_fk_residuals": {},
+      "robot_station_in_microwave": [
+        [
+          -0.12706955163655198,
+          -0.9918938093600975,
+          3.34317118429507e-10,
+          0.06733237271045367
+        ],
+        [
+          0.9918938093600972,
+          -0.12706955163655176,
+          -1.8278686968922924e-09,
+          -0.7541973842122234
+        ],
+        [
+          1.8555331711138353e-09,
+          9.934062436874235e-11,
+          1.0,
+          -0.9266434304085716
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "components": {
+        "arm_l": {
+          "min": [
+            -0.5287663431929193,
+            -0.6595760689900132,
+            -0.03486272430048607
+          ],
+          "max": [
+            0.22038680302002514,
+            0.029651135449664717,
+            0.7031228506652808
+          ],
+          "size": [
+            0.7491531462129444,
+            0.6892272044396779,
+            0.7379855749657669
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.1606391098513653,
+            -0.607967286423682,
+            -0.02176336769780409
+          ],
+          "max": [
+            0.7402539270558174,
+            0.17675662426995745,
+            0.5831020584700997
+          ],
+          "size": [
+            0.9008930369071827,
+            0.7847239106936394,
+            0.6048654261679037
+          ]
+        },
+        "door": {
+          "min": [
+            -0.30997602596286467,
+            -0.41757147590713,
+            0.02314937427303011
+          ],
+          "max": [
+            0.1974610099235193,
+            0.0659916729960946,
+            0.2974331018148347
+          ],
+          "size": [
+            0.507437035886384,
+            0.4835631489032246,
+            0.2742837275418046
+          ]
+        },
+        "plate": {
+          "min": [
+            -0.2600565662614981,
+            0.025588148142129147,
+            0.060462252939102366
+          ],
+          "max": [
+            0.09532271059469444,
+            0.3814618624507988,
+            0.11193687992275521
+          ],
+          "size": [
+            0.3553792768561925,
+            0.35587371430866965,
+            0.05147462698365284
+          ]
+        },
+        "foodbox": {
+          "min": [
+            -0.22504280206490426,
+            -0.26072248863787845,
+            0.07496365650668614
+          ],
+          "max": [
+            0.5977380049123555,
+            0.38813719063386437,
+            0.6000976494037318
+          ],
+          "size": [
+            0.8227808069772597,
+            0.6488596792717428,
+            0.5251339928970457
+          ]
+        },
+        "microwave_initial": {
+          "min": [
+            -0.30025424455558886,
+            -0.03274020251805654,
+            0.0
+          ],
+          "max": [
+            0.30019838605354815,
+            0.43574952334165556,
+            0.2974329888820648
+          ],
+          "size": [
+            0.600452630609137,
+            0.4684897258597121,
+            0.2974329888820648
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.5287663431929193,
+          -0.6595760689900132,
+          -0.03486272430048607
+        ],
+        "max": [
+          0.7402539270558174,
+          0.43574952334165556,
+          0.7031228506652808
+        ],
+        "size": [
+          1.2690202702487365,
+          1.0953255923316687,
+          0.7379855749657669
+        ]
+      }
+    },
+    {
+      "kind": "take",
+      "source": "/mnt/agent-bench-data/lingjun/workspaces/l2-task106-pilot-20260925/task106_pilot/experiments/object_positions_20260925/microwave_yaw10_v3/heating_P099_approved16_v5",
+      "scene": "/mnt/agent-bench-data/lingjun/workspaces/l2-task106-pilot-20260925/task106_pilot/experiments/object_positions_20260925/microwave_yaw10_v3/heating_P099_approved16_v5_appearance/scene_room.usda",
+      "hashes": {
+        "/mnt/agent-bench-data/lingjun/workspaces/l2-task106-pilot-20260925/task106_pilot/experiments/object_positions_20260925/microwave_yaw10_v3/heating_P099_approved16_v5_appearance/scene_room.usda": "64263d8024dcaaf3093b227b1f825216d6e62c30b1148c7dd360091753efc903",
+        "/mnt/agent-bench-data/lingjun/workspaces/l2-task106-pilot-20260925/task106_pilot/experiments/object_positions_20260925/microwave_yaw10_v3/heating_P099_approved16_v5/initial_probe_trace.npz": "c805883e9ddcb2ec0903a7c53e5ce2a02ab856884dd2dd91b858d1e5e968e66a",
+        "/mnt/agent-bench-data/lingjun/workspaces/l2-task106-pilot-20260925/task106_pilot/experiments/object_positions_20260925/microwave_yaw10_v3/heating_P099_approved16_v5/load_clearance_geometry.npz": "43b57594340c3c6d3fe05e0079dabab73c6d5efefda74027fde619cc8ef5ec77"
+      },
+      "frames": 2865,
+      "sample_hz": 20,
+      "phases": [
+        "approach_handle",
+        "bilateral_grasp_hold",
+        "close_on_handle",
+        "donor_timed_handle_close",
+        "enter_handle_gap",
+        "extended_handle_arc",
+        "final_hold",
+        "hold",
+        "hold_door_open",
+        "level_outside",
+        "normal_extract_until_clear",
+        "pull_handle_clearance_margin",
+        "pull_handle_crack",
+        "release_and_withdraw_left",
+        "right_wait_to_take",
+        "sequence_final_hold",
+        "settle",
+        "side_transfer",
+        "source_approach_grasp",
+        "verify_held_load_clear_of_door",
+        "vertical_lift_from_stand"
+      ],
+      "skipped_initially_hidden_objects": [],
+      "bodies_per_arm": {
+        "l": 17,
+        "r": 17
+      },
+      "initial_fk_max_matrix_error": 8.949101522656017e-07,
+      "measured_gripper_fk_residuals": {
+        "l": {
+          "max_position_m": 1.5642959897912194e-06,
+          "median_position_m": 9.741783849434455e-07,
+          "max_angle_deg": 8.891016033636605e-05
+        },
+        "r": {
+          "max_position_m": 1.1652343015493139e-06,
+          "median_position_m": 7.118926212129739e-07,
+          "max_angle_deg": 6.18969114888978e-05
+        }
+      },
+      "robot_station_in_microwave": [
+        [
+          0.11971759699056729,
+          -0.9928079859523714,
+          -6.659588468888426e-09,
+          -0.09090360773494666
+        ],
+        [
+          0.9928079859523712,
+          0.11971759699056728,
+          -1.7065085435549164e-08,
+          -0.8512694318379297
+        ],
+        [
+          1.7739623029814125e-08,
+          -4.56870159428608e-09,
+          0.9999999999999999,
+          -0.9199998323619366
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "components": {
+        "arm_l": {
+          "min": [
+            -0.5757286000372703,
+            -0.7065929287258247,
+            0.07093040370465677
+          ],
+          "max": [
+            0.2203854427601919,
+            0.018053887069692763,
+            0.5347837092880035
+          ],
+          "size": [
+            0.7961140427974622,
+            0.7246468157955175,
+            0.4638533055833467
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.0789514024698367,
+            -0.9425972367940962,
+            -0.023627957888349416
+          ],
+          "max": [
+            0.5900617614542046,
+            0.072775821220617,
+            0.43263992776832644
+          ],
+          "size": [
+            0.6690131639240413,
+            1.0153730580147133,
+            0.45626788565667586
+          ]
+        },
+        "plate": {
+          "min": [
+            -0.2256423615111941,
+            -0.45307492647578695,
+            0.05616607825128705
+          ],
+          "max": [
+            0.5405334045958242,
+            0.3800067009045628,
+            0.17701344036231528
+          ],
+          "size": [
+            0.7661757661070183,
+            0.8330816273803497,
+            0.12084736211102823
+          ]
+        },
+        "foodbox": {
+          "min": [
+            -0.1769718043754751,
+            -0.3581988093625687,
+            0.09268831679351205
+          ],
+          "max": [
+            0.5207068390971197,
+            0.3165437871381426,
+            0.22792513395391284
+          ],
+          "size": [
+            0.6976786434725948,
+            0.6747425965007112,
+            0.13523681716040079
+          ]
+        },
+        "door": {
+          "min": [
+            -0.3099756395724134,
+            -0.44659912728911527,
+            0.023379704668183753
+          ],
+          "max": [
+            0.19746152792375177,
+            0.06599346175892573,
+            0.29720210137041486
+          ],
+          "size": [
+            0.5074371674961652,
+            0.512592589048041,
+            0.27382239670223113
+          ]
+        },
+        "microwave_initial": {
+          "min": [
+            -0.3001987436814169,
+            -0.4928597204184729,
+            0.0
+          ],
+          "max": [
+            0.30019874368141697,
+            0.435750000178814,
+            0.2974329888820648
+          ],
+          "size": [
+            0.6003974873628339,
+            0.928609720597287,
+            0.2974329888820648
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.5757286000372703,
+          -0.9425972367940962,
+          -0.023627957888349416
+        ],
+        "max": [
+          0.5900617614542046,
+          0.435750000178814,
+          0.5347837092880035
+        ],
+        "size": [
+          1.1657903614914749,
+          1.3783472369729102,
+          0.5584116671763528
+        ]
+      }
+    }
+  ],
+  "combined": {
+    "min": [
+      -0.5757286000372703,
+      -0.9425972367940962,
+      -0.03486272430048607
+    ],
+    "max": [
+      0.7402539270558174,
+      0.4357500001788144,
+      0.7129363374104873
+    ],
+    "size": [
+      1.3159825270930878,
+      1.3783472369729106,
+      0.7477990617109734
+    ]
+  },
+  "limitations": [
+    "Measured joints reconstructed with source USD kinematics; not new simulation.",
+    "60Hz put / 20Hz take recorded frames, no continuous-time or 240Hz substep coverage.",
+    "Visual bounding boxes; take plate/box additionally use saved visual/collision geometry bounds.",
+    "Fixed source robot base retained; no navigation trace or target-layout reachability validation.",
+    "Union of different source episodes, NOT a single continuous put/take trajectory.",
+    "Selected 50 put 9.2 beef + 50 put 9.4 leftover + 50 delivered take recordings, not all possible randomizations.",
+    "No extra safety margin or approved placement policy; all failed audits retained."
+  ]
+}

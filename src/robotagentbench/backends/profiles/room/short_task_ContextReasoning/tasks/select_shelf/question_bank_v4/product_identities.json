@@ -1,0 +1,223 @@
+{
+  "evidence": "../asset_evidence/manifest.json",
+  "products": [
+    {
+      "id": "cayman_jacked",
+      "kind": "drink",
+      "label_en": "Cayman Jacked Margarita",
+      "label_zh": "含酒精玛格丽塔",
+      "features": [
+        "alcohol",
+        "lime",
+        "agave"
+      ]
+    },
+    {
+      "id": "gatorade_m",
+      "kind": "drink",
+      "label_en": "Gatorade Zero Orange",
+      "label_zh": "无糖橙味运动饮料",
+      "features": [
+        "sports",
+        "zero_sugar",
+        "orange",
+        "electrolytes",
+        "bottle"
+      ]
+    },
+    {
+      "id": "gatorade_t",
+      "kind": "drink",
+      "label_en": "Gatorade Zero Glacier Freeze",
+      "label_zh": "无糖冰川口味运动饮料",
+      "features": [
+        "sports",
+        "zero_sugar",
+        "glacier",
+        "electrolytes",
+        "bottle"
+      ]
+    },
+    {
+      "id": "starbucks",
+      "kind": "drink",
+      "label_en": "Starbucks Espresso and Cream Light",
+      "label_zh": "浓缩咖啡奶油饮料",
+      "features": [
+        "coffee",
+        "caffeinated",
+        "dairy",
+        "still"
+      ]
+    },
+    {
+      "id": "good2grow",
+      "kind": "drink",
+      "label_en": "Good2Grow Strawberry Kiwi",
+      "label_zh": "草莓猕猴桃果汁饮料",
+      "features": [
+        "juice_drink",
+        "strawberry_kiwi",
+        "spout",
+        "still",
+        "bottle",
+        "no_added_sugar",
+        "contains_sugar"
+      ]
+    },
+    {
+      "id": "grapefruit_can",
+      "kind": "drink",
+      "label_en": "Good & Gather Ruby Red Grapefruit Sparkling Water",
+      "label_zh": "无糖西柚气泡水",
+      "features": [
+        "water",
+        "sparkling",
+        "unsweetened",
+        "zero_sugar",
+        "grapefruit"
+      ]
+    },
+    {
+      "id": "coke_c3",
+      "kind": "drink",
+      "label_en": "Diet Coke",
+      "label_zh": "健怡可乐",
+      "features": [
+        "cola",
+        "caffeinated",
+        "sparkling",
+        "zero_sugar",
+        "sweetened"
+      ]
+    },
+    {
+      "id": "sprite_c1",
+      "kind": "drink",
+      "label_en": "Sprite",
+      "label_zh": "柠檬青柠汽水",
+      "features": [
+        "lemon_lime",
+        "sparkling",
+        "caffeine_free",
+        "contains_sugar",
+        "sweetened"
+      ]
+    },
+    {
+      "id": "chomps_r",
+      "kind": "snack",
+      "label_en": "Chomps Original Beef Sticks",
+      "label_zh": "原味牛肉棒",
+      "features": [
+        "beef",
+        "savory",
+        "stick",
+        "mild"
+      ]
+    },
+    {
+      "id": "pring_bbq",
+      "kind": "snack",
+      "label_en": "Pringles BBQ",
+      "label_zh": "烧烤味薯片",
+      "features": [
+        "crisps",
+        "bbq",
+        "crunchy",
+        "savory"
+      ]
+    },
+    {
+      "id": "oreo_gf",
+      "kind": "snack",
+      "label_en": "Oreo Double Stuf Gluten Free",
+      "label_zh": "无麸质双倍夹心饼干",
+      "features": [
+        "sandwich_cookie",
+        "chocolate",
+        "creme",
+        "gluten_free",
+        "sweet"
+      ]
+    },
+    {
+      "id": "honeymaid",
+      "kind": "snack",
+      "label_en": "Honey Maid S'mores Handi-Snacks",
+      "label_zh": "棉花糖巧克力风味蘸酱饼干",
+      "features": [
+        "dip_kit",
+        "graham",
+        "smores",
+        "sweet"
+      ]
+    },
+    {
+      "id": "zbar_t",
+      "kind": "snack",
+      "label_en": "Zbar Protein Cookies 'n Creme",
+      "label_zh": "饼干奶油风味燕麦蛋白棒",
+      "features": [
+        "bar",
+        "oats",
+        "protein_label",
+        "cookies_creme",
+        "gluten_free",
+        "sweet"
+      ]
+    },
+    {
+      "id": "skit_littles",
+      "kind": "snack",
+      "label_en": "Skittles Littles",
+      "label_zh": "迷你彩色糖果",
+      "features": [
+        "candy",
+        "fruit_flavour",
+        "tiny",
+        "multicolour",
+        "sweet"
+      ]
+    },
+    {
+      "id": "red_bull_pink",
+      "kind": "drink",
+      "label_en": "Red Bull Pink Edition",
+      "label_zh": "莓果味红牛能量饮料",
+      "features": [
+        "energy_drink",
+        "caffeinated",
+        "berries",
+        "contains_sugar"
+      ]
+    },
+    {
+      "id": "lindt",
+      "kind": "snack",
+      "label_en": "Lindt Lindor Milk Chocolate",
+      "label_zh": "瑞士莲牛奶巧克力球",
+      "features": [
+        "truffle",
+        "milk_chocolate",
+        "chocolate",
+        "smooth_filling",
+        "individually_wrapped",
+        "sweet"
+      ]
+    },
+    {
+      "id": "pringles_green",
+      "kind": "snack",
+      "label_en": "Pringles Sour Cream & Onion",
+      "label_zh": "酸奶油洋葱味薯片",
+      "features": [
+        "crisps",
+        "sour_cream",
+        "onion",
+        "crunchy",
+        "savory"
+      ]
+    }
+  ]
+}

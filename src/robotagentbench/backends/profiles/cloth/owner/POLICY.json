@@ -1,0 +1,33 @@
+{
+  "schema": "robotagentbench.cloth_geometric_policy.v15",
+  "fold": {"material_overlap_fraction_min": 0.6, "layer_distance_max_m": 0.02, "opposing_normal_deviation_max_deg": 45},
+  "approved_scores": {"spread_tablecloth": 5, "collect_tablecloth": 5, "long_task_18": 10},
+  "released_stability_duration_s": 1.0,
+  "cloth_stability": {
+    "user_confirmed": true,
+    "material_area_fraction_min": 0.95,
+    "position_span_m": 0.005,
+    "initial_window_s": 0.25,
+    "released_window_s": 1.0,
+    "area_measure": "conservative rest-triangle area; all three vertex displacements must stay within the bound throughout the window"
+  },
+  "coverage_minimum": 0.9,
+  "coverage_denominator": "rest_material_area",
+  "coverage_numerator": "actual_projected_triangle_union_on_table_no_overlap_double_count",
+  "coverage_user_confirmed": true,
+  "contact_evidence": {
+    "user_confirmed": true,
+    "method": "live_native_surface_geometry_and_bilateral_material_patch_relative_motion",
+    "force_measurement_claimed": false,
+    "command_closure_is_evidence": false,
+    "grasp_window_s": 0.1,
+    "lift_requires_patch_clear_of_measured_support": true
+  },
+  "no_progress_timeout_s": 120,
+  "drop_penalty_once_per_cloth": 1,
+  "reused_source_detection": {"grasp_window_s": 0.1, "relative_position_tolerance_m": 0.003, "relative_angle_tolerance_deg": 5, "support_face_tolerance_m": 0.003, "initial_history_s": 0.25, "initial_position_span_m": 0.002},
+  "reused_source_unfolded_projection_ratio": [0.85, 1.1],
+  "source_detection": "evaluation/tasks/shelf_pick/physical_detection.py DetectionConfig; copied values are not overrides",
+  "source_unfolded": "source_material/code/agent_bench/real2sim/production/task_randomization/benchmark_8_10/check_success.py",
+  "native_admission": false
+}

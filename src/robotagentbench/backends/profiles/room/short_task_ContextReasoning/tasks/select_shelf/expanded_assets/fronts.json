@@ -1,0 +1,19 @@
+{
+  "red_bull_pink": {
+    "wrapper_yaw_deg": -13.713596794200498,
+    "label_normal_asset_local": [
+      0.23706857221439634,
+      -0.9714923792320496,
+      -0.0010242862291180742
+    ],
+    "image_rect": [
+      0.46,
+      0.48,
+      0.62,
+      0.65
+    ],
+    "sample_count": 63,
+    "method": "actual mesh UV barycentric mapping",
+    "asset_entry_sha256": "58edcf3246449f8372cf501dd6c09fea62de76b345b39aef56c11f8f50e2ac60"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "policy": "stock_wooden_tray_source_station_v1",
+  "status": "source_posture_bound_cpu_geometry_checked_native_pending",
+  "scope": "Robot initial planar station only; no action rollout, physics or scoring change.",
+  "audit": "source_station_audit_20261010.json",
+  "source_generator": "/mnt/agent-bench-data/lingjun/ziche/work/shelf_training_visible360_20260916/setup_bulk.py",
+  "source_randomization": "/mnt/agent-bench-data/lingjun/ziche/work/shelf_training_visible360_20260916/EPISODE_RANDOMIZATION.json",
+  "coordinate_frame": {
+    "origin": "midpoint of shelf front edge at floor projection",
+    "lateral": "source world +X, rotated with shelf in other layouts",
+    "inward": "source world +Y, rotated with shelf in other layouts",
+    "robot_reference": "base/root origin, not robot hull or hands"
+  },
+  "nominal": {
+    "lateral_m": -0.008893884045897416,
+    "front_edge_standoff_m": 0.6646017298398725,
+    "heading_relative_inward_deg": -0.1443164297497077
+  },
+  "source_randomization_ranges": {
+    "lateral_delta_uniform_m": [
+      -0.05,
+      0.05
+    ],
+    "depth_delta_uniform_m": [
+      -0.05,
+      0.05
+    ],
+    "heading_delta_uniform_deg": [
+      -5,
+      5
+    ]
+  },
+  "mapping": "base = front_midpoint + lateral_axis*(nominal_lateral+dx) + inward_axis*(-nominal_standoff+dy); heading = inward_heading + nominal_heading_error + dyaw. Transform station with the actual shelf, not separately toward each product.",
+  "constraints": [
+    "Use existing collision/initial-state validity checks; sampled range alone is not proof of feasibility in every layout.",
+    "Station mapping changes no robot Z, dynamics, scoring or control. The separately approved source_ready_pose.json owns shelf-task joint initialization.",
+    "Do not substitute observed finite-sample extrema for the source generator bounds."
+  ],
+  "runtime_note": "Local target_spawn.py and prepare_task.py select source_ready_pose.json for shelf tasks. Remote task-owned candidate passed layout 03 CPU geometry and launch admission; remote shared snapshot unchanged. Native settling and actions not run. The previous rejection report is historical."
+}

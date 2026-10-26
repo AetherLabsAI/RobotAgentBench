@@ -1,0 +1,80 @@
+{
+  "schema": "short_tasks.sofa_to_coffee_table.position_policy.v1",
+  "assets": [
+    "book_red",
+    "remote_tv",
+    "wallet",
+    "glasses_case"
+  ],
+  "targets_per_episode": 1,
+  "selection": "explicit_asset; do_not_infer_sampling_weights_from_dataset_counts",
+  "domain": "middle_two_cushions_backrest_clearance_v2",
+  "frame": "canonical_sofa_uv; rigid-map to actual layout before use",
+  "footprint_bounds_uv_m": [
+    [
+      -0.5816666666666667,
+      0.03
+    ],
+    [
+      0.5816666666666667,
+      0.42144245853673845
+    ]
+  ],
+  "edge_margin_m": 0.03,
+  "structural_padding_m": 0.1,
+  "obstacles": [
+    {
+      "id": "armrest_1",
+      "kind": "armrest",
+      "bounds": [
+        1.2273162136176823,
+        0.049840908431816267,
+        1.3500434941585397,
+        0.8003563838413796
+      ],
+      "component": 1
+    },
+    {
+      "id": "armrest_3",
+      "kind": "armrest",
+      "bounds": [
+        -1.3499564280510332,
+        0.04984090843181682,
+        -1.2272291397073851,
+        0.8003563838413803
+      ],
+      "component": 3
+    },
+    {
+      "id": "backrest_8",
+      "kind": "backrest",
+      "bounds": [
+        -1.232494361204878,
+        0.5214424585367384,
+        1.2341035176275743,
+        0.7246614042719715
+      ],
+      "component": 8
+    },
+    {
+      "id": "backrest_9",
+      "kind": "backrest",
+      "bounds": [
+        -1.2272292957631925,
+        0.6876771182434163,
+        1.2273162136176823,
+        0.8003563838413803
+      ],
+      "component": 9
+    }
+  ],
+  "orientation_policy": "preserve each asset's independently approved orientation; cap yaw is not inherited",
+  "height_policy": "actual asset support geometry; cap height is not inherited",
+  "robot_station_policy": "initial_station_policy.json: one shared approved rectangle for all four assets",
+  "source_files": {
+    "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/tasks/sofa_to_coffee_table/source_evidence/hat_domain/sofa_domain.py": "0af76ddc7f382c57328ed29f2698e600d15db7a3beb06d9df72754e526081687",
+    "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/tasks/sofa_to_coffee_table/source_evidence/hat_domain/sofa-placement-policy-v1.json": "275d75d067ebfd79649028001863500d4e2dfa83e3042a7b53b4397007c26622",
+    "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/tasks/sofa_to_coffee_table/source_evidence/hat_domain/sofa-structural-obstacles-v2.json": "7f520a39fe9f55cd46b21987ddfe66c36446d3f1403a619575663c237794ed74"
+  },
+  "native_physics_validated": false
+}

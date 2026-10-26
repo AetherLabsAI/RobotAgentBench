@@ -1,0 +1,12 @@
+{
+  "schema": "short_tasks.hang_cap.robot_station.v5",
+  "policy": "sofa_center_front78to90_lateral17p5_yaw5_v5",
+  "front_edge_distance_m": [0.78, 0.90],
+  "lateral_offset_m": [-0.175, 0.175],
+  "yaw_offset_deg": [-5.0, 5.0],
+  "canonical_front_edge_x_m": -0.3503563938,
+  "canonical_centerline_y_m": -0.871,
+  "sampling": "Continuous independent uniform proposals before unchanged geometry rejection",
+  "provenance": "User-approved recentered envelope; not the empirical source probability distribution",
+  "native_physics_validated": false
+}

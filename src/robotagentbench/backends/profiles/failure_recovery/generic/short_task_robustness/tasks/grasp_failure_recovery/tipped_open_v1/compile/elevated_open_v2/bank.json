@@ -1,0 +1,3184 @@
+{
+  "schema": "failure_recovery.authored_tipped_open.bank.v1",
+  "profiles": [
+    {
+      "id": "train_ep1451_f121_l_opened_authored_side_cup",
+      "variant": "table_waste_tipped_cup",
+      "active_hand": "l",
+      "robot_initialization": {
+        "positions": {
+          "idx01_body_joint1": 0.01999751292169094,
+          "idx02_body_joint2": 0.5236078500747681,
+          "idx11_head_joint1": 7.754132980153372e-07,
+          "idx12_head_joint2": 0.43636465072631836,
+          "idx21_arm_l_joint1": -1.0022313594818115,
+          "idx22_arm_l_joint2": 0.9536810517311096,
+          "idx23_arm_l_joint3": 0.41284990310668945,
+          "idx24_arm_l_joint4": -1.58418869972229,
+          "idx25_arm_l_joint5": 0.9367010593414307,
+          "idx26_arm_l_joint6": 1.1579126119613647,
+          "idx27_arm_l_joint7": -0.286160945892334,
+          "idx61_arm_r_joint1": 1.4224576950073242,
+          "idx62_arm_r_joint2": -0.9595901966094971,
+          "idx63_arm_r_joint3": -0.813197910785675,
+          "idx64_arm_r_joint4": 1.1758185625076294,
+          "idx65_arm_r_joint5": -0.4889684319496155,
+          "idx66_arm_r_joint6": -1.4828357696533203,
+          "idx67_arm_r_joint7": -0.13473403453826904,
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444,
+          "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+          "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+          "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+          "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+          "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+          "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+          "idx89_gripper_r_outer_joint0": -0.43470815091828396
+        },
+        "hold_targets": {
+          "idx21_arm_l_joint1": -1.0022313594818115,
+          "idx22_arm_l_joint2": 0.9536810517311096,
+          "idx23_arm_l_joint3": 0.41284990310668945,
+          "idx24_arm_l_joint4": -1.58418869972229,
+          "idx25_arm_l_joint5": 0.9367010593414307,
+          "idx26_arm_l_joint6": 1.1579126119613647,
+          "idx27_arm_l_joint7": -0.286160945892334,
+          "idx61_arm_r_joint1": 1.4224576950073242,
+          "idx62_arm_r_joint2": -0.9595901966094971,
+          "idx63_arm_r_joint3": -0.813197910785675,
+          "idx64_arm_r_joint4": 1.1758185625076294,
+          "idx65_arm_r_joint5": -0.4889684319496155,
+          "idx66_arm_r_joint6": -1.4828357696533203,
+          "idx67_arm_r_joint7": -0.13473403453826904,
+          "idx01_body_joint1": 0.01999751292169094,
+          "idx02_body_joint2": 0.5236078500747681,
+          "idx11_head_joint1": 7.754132980153372e-07,
+          "idx12_head_joint2": 0.43636465072631836,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091
+        }
+      },
+      "gripper_opening": {
+        "hand": "l",
+        "open_coordinates": {
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444
+        },
+        "policy": "existing_native_ready_open_linkage",
+        "arm_body_head_changed": false,
+        "physical_opening_animation_run": false
+      },
+      "base_canonical_column": [
+        [
+          -1.0000000000000004,
+          5.359585455961219e-16,
+          -1.7191815119845181e-16,
+          -1.1511755128898546
+        ],
+        [
+          6.818112618906271e-17,
+          -0.9999999999999996,
+          -1.5250340952160541e-18,
+          -0.1799440369622355
+        ],
+        [
+          -1.9778581020339762e-16,
+          4.026682339312598e-18,
+          1.0000000000000004,
+          -4.916999102499746e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "initial_base_xyyaw": [
+        -1.059709898176706,
+        0.4557726594935412,
+        1.5707963267948963
+      ],
+      "cpu_accepted": true,
+      "fit": {
+        "cup_side_pose_authored": true,
+        "physical_drop_replayed": false,
+        "original_yaw_preserved_before_fixed_side_rotation": true,
+        "fixed_side_rotation_rad": 1.5707963267948966,
+        "support_gap_preserved_m": 0.0009999932944771972,
+        "center_below_fingertips_xy": true,
+        "accepted_cpu": true,
+        "reason": null,
+        "proposed_target_world": [
+          [
+            1.1532628283625105e-16,
+            -0.9999999999999996,
+            5.027655906635347e-16,
+            -1.0247454219744503
+          ],
+          [
+            0.9985734343755355,
+            1.6787492023380302e-16,
+            0.053395656747048874,
+            1.0573245907994326
+          ],
+          [
+            -0.05339565674704952,
+            5.014421563770198e-16,
+            0.9985734343755364,
+            0.4978126253700841
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "original_camera_projection": {
+          "head": {
+            "whole_target_envelope_inside_original_frustum": true,
+            "centre_inside_original_frustum": true,
+            "centre_ndc": [
+              -0.06071171848969896,
+              -0.7350795947458257,
+              0.9591958358011003
+            ],
+            "camera_path": "/World/Robot/head_link2/Head_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "left": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.030569511110141924,
+              -2.2895291213744127,
+              0.9068460818544358
+            ],
+            "camera_path": "/World/Robot/gripper_l_base_link/Left_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "right": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.12174584967856945,
+              -2.268317098365361,
+              0.9248830453079829
+            ],
+            "camera_path": "/World/Robot/gripper_r_base_link/Right_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          }
+        },
+        "hand_lowest_z_m": 0.7214663064891552,
+        "cup_highest_z_m": 0.5446252507401684,
+        "upright_source_cup_highest_z_m": 0.5809999952316283,
+        "protected_self_collision_checked": true,
+        "target_on_table_geometry_checked": true,
+        "hand_open_geometry_checked": true,
+        "physical_settle_verified": false,
+        "physical_grasp_proven": false
+      },
+      "training_provenance": {
+        "episode_index": 1451,
+        "frame": 121,
+        "row": {
+          "episode_index": 1451,
+          "task": {
+            "task_index": 29,
+            "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "task_kind": "atomic",
+            "benchmark_task_id": "7.10"
+          },
+          "active_hand": "l",
+          "parquet_relative": "data/chunk-001/episode_001451.parquet",
+          "parquet_sha256": "c0cf46f7d81fb89c655053566e9ff0441b240699d04098db253aca0feae51b53",
+          "source_id": "atomic_7_10/batch_20261008_001:1",
+          "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_01",
+          "mapping": {
+            "adapter": "named_native_joint_commands_full_state",
+            "source_row_alignment": "preserved same-row command/post-step state; no implicit shift",
+            "base_action_mode": "uncommanded_static_policy_not_velocity_telemetry",
+            "base_state_mode": "initial_pose_stationary_projection_not_per_frame_telemetry",
+            "source_metadata_files": [
+              "action.json",
+              "appearance.json",
+              "destination_geometry.json",
+              "distractor_audit.json",
+              "distractor_plan.json",
+              "house_layout.json",
+              "house_layout_extra_prim_frames.json",
+              "owner_request.json",
+              "result.json",
+              "scene_plan.json"
+            ],
+            "base_projection_requires_review": true,
+            "numeric_source": "full_state.npz",
+            "source_frame_count": 285,
+            "original_quality_facts": [
+              {
+                "file": "action.json",
+                "facts": {
+                  "schema": "real2sim.family7_guide_action.v1"
+                }
+              },
+              {
+                "file": "appearance.json",
+                "facts": {
+                  "ok": true
+                }
+              },
+              {
+                "file": "destination_geometry.json",
+                "facts": {
+                  "passed": true
+                }
+              },
+              {
+                "file": "distractor_audit.json",
+                "facts": {
+                  "schema": "real2sim.distractor_audit.v1",
+                  "task_id": "family7_cup_e2e"
+                }
+              },
+              {
+                "file": "distractor_plan.json",
+                "facts": {
+                  "schema": "real2sim.episode_scene_randomization.plan.v1",
+                  "task_id": "29"
+                }
+              },
+              {
+                "file": "house_layout.json",
+                "facts": {
+                  "layout_id": "final_house_layout_07"
+                }
+              },
+              {
+                "file": "result.json",
+                "facts": {
+                  "status": "pass",
+                  "owner_review": "pending"
+                }
+              }
+            ]
+          },
+          "close_transition_frame": 120,
+          "first_minimum_frame": 123,
+          "frames_examined": [
+            0,
+            4,
+            9,
+            13,
+            18,
+            22,
+            27,
+            31,
+            36,
+            40,
+            45,
+            49,
+            54,
+            58,
+            63,
+            67,
+            72,
+            76,
+            81,
+            85,
+            90,
+            94,
+            99,
+            103,
+            108,
+            110,
+            112,
+            113,
+            115,
+            117,
+            118,
+            120,
+            121,
+            123,
+            125,
+            126,
+            128,
+            130,
+            133,
+            135,
+            139,
+            144,
+            148,
+            153,
+            157,
+            162,
+            166,
+            171,
+            175,
+            180,
+            184,
+            189,
+            193,
+            198,
+            202,
+            207,
+            211,
+            216,
+            220,
+            225,
+            229,
+            234,
+            238,
+            243,
+            247,
+            252,
+            256,
+            261,
+            265,
+            270,
+            274,
+            279,
+            284
+          ],
+          "source_success_not_inferred": true,
+          "all_phase_real_frame_coverage": true,
+          "provenance_sha256": "9e63a0f6adab4047566d4b9b3919e308191c00385f7c870982c7428089398a82"
+        },
+        "source_state18_rad_or_m": {
+          "idx21_arm_l_joint1": -1.0022313594818115,
+          "idx22_arm_l_joint2": 0.9536810517311096,
+          "idx23_arm_l_joint3": 0.41284990310668945,
+          "idx24_arm_l_joint4": -1.58418869972229,
+          "idx25_arm_l_joint5": 0.9367010593414307,
+          "idx26_arm_l_joint6": 1.1579126119613647,
+          "idx27_arm_l_joint7": -0.286160945892334,
+          "idx61_arm_r_joint1": 1.4224576950073242,
+          "idx62_arm_r_joint2": -0.9595901966094971,
+          "idx63_arm_r_joint3": -0.813197910785675,
+          "idx64_arm_r_joint4": 1.1758185625076294,
+          "idx65_arm_r_joint5": -0.4889684319496155,
+          "idx66_arm_r_joint6": -1.4828357696533203,
+          "idx67_arm_r_joint7": -0.13473403453826904,
+          "idx01_body_joint1": 0.01999751292169094,
+          "idx02_body_joint2": 0.5236078500747681,
+          "idx11_head_joint1": 7.754132980153372e-07,
+          "idx12_head_joint2": 0.43636465072631836
+        },
+        "arm_body_head_copied_exactly": true,
+        "physical_source_grasp_proven": false,
+        "source_phase": "after_source_close_command_geometrically_elevated_not_a_failure_history"
+      },
+      "authored_failure_initial": true,
+      "physical_history_required": false,
+      "physical_failure_generation_verified": false,
+      "validation": {
+        "cpu": true,
+        "native": false,
+        "random_revalidation_required": true
+      },
+      "maximum_score": 9.5,
+      "completion_policy": "same_cup_released_inside_correct_bin"
+    },
+    {
+      "id": "train_ep1462_f120_l_opened_authored_side_cup",
+      "variant": "table_waste_tipped_cup",
+      "active_hand": "l",
+      "robot_initialization": {
+        "positions": {
+          "idx01_body_joint1": 0.019998546689748764,
+          "idx02_body_joint2": 0.5236032009124756,
+          "idx11_head_joint1": 3.2201782573793025e-07,
+          "idx12_head_joint2": 0.43634599447250366,
+          "idx21_arm_l_joint1": -0.9586775302886963,
+          "idx22_arm_l_joint2": 0.7658275961875916,
+          "idx23_arm_l_joint3": 0.3667309284210205,
+          "idx24_arm_l_joint4": -1.4540952444076538,
+          "idx25_arm_l_joint5": 0.7203959822654724,
+          "idx26_arm_l_joint6": 1.3227763175964355,
+          "idx27_arm_l_joint7": -0.1174721047282219,
+          "idx61_arm_r_joint1": 1.4241220951080322,
+          "idx62_arm_r_joint2": -1.1027624607086182,
+          "idx63_arm_r_joint3": -0.8923888206481934,
+          "idx64_arm_r_joint4": 1.295697808265686,
+          "idx65_arm_r_joint5": -0.5626167058944702,
+          "idx66_arm_r_joint6": -1.2479227781295776,
+          "idx67_arm_r_joint7": -0.09254567325115204,
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444,
+          "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+          "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+          "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+          "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+          "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+          "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+          "idx89_gripper_r_outer_joint0": -0.43470815091828396
+        },
+        "hold_targets": {
+          "idx21_arm_l_joint1": -0.9586775302886963,
+          "idx22_arm_l_joint2": 0.7658275961875916,
+          "idx23_arm_l_joint3": 0.3667309284210205,
+          "idx24_arm_l_joint4": -1.4540952444076538,
+          "idx25_arm_l_joint5": 0.7203959822654724,
+          "idx26_arm_l_joint6": 1.3227763175964355,
+          "idx27_arm_l_joint7": -0.1174721047282219,
+          "idx61_arm_r_joint1": 1.4241220951080322,
+          "idx62_arm_r_joint2": -1.1027624607086182,
+          "idx63_arm_r_joint3": -0.8923888206481934,
+          "idx64_arm_r_joint4": 1.295697808265686,
+          "idx65_arm_r_joint5": -0.5626167058944702,
+          "idx66_arm_r_joint6": -1.2479227781295776,
+          "idx67_arm_r_joint7": -0.09254567325115204,
+          "idx01_body_joint1": 0.019998546689748764,
+          "idx02_body_joint2": 0.5236032009124756,
+          "idx11_head_joint1": 3.2201782573793025e-07,
+          "idx12_head_joint2": 0.43634599447250366,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091
+        }
+      },
+      "gripper_opening": {
+        "hand": "l",
+        "open_coordinates": {
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444
+        },
+        "policy": "existing_native_ready_open_linkage",
+        "arm_body_head_changed": false,
+        "physical_opening_animation_run": false
+      },
+      "base_canonical_column": [
+        [
+          -1.0000000000000004,
+          5.359585455961219e-16,
+          -1.7191815119845181e-16,
+          -1.1511755128898546
+        ],
+        [
+          6.818112618906271e-17,
+          -0.9999999999999996,
+          -1.5250340952160541e-18,
+          -0.1799440369622355
+        ],
+        [
+          -1.9778581020339762e-16,
+          4.026682339312598e-18,
+          1.0000000000000004,
+          -4.916999102499746e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "initial_base_xyyaw": [
+        -1.059709898176706,
+        0.4557726594935412,
+        1.5707963267948963
+      ],
+      "cpu_accepted": true,
+      "fit": {
+        "cup_side_pose_authored": true,
+        "physical_drop_replayed": false,
+        "original_yaw_preserved_before_fixed_side_rotation": true,
+        "fixed_side_rotation_rad": 1.5707963267948966,
+        "support_gap_preserved_m": 0.0009999932944771972,
+        "center_below_fingertips_xy": true,
+        "accepted_cpu": true,
+        "reason": null,
+        "proposed_target_world": [
+          [
+            1.1532628283625105e-16,
+            -0.9999999999999996,
+            5.027655906635347e-16,
+            -1.1022772948560355
+          ],
+          [
+            0.9985734343755355,
+            1.6787492023380302e-16,
+            0.053395656747048874,
+            1.0484266239404536
+          ],
+          [
+            -0.05339565674704952,
+            5.014421563770198e-16,
+            0.9985734343755364,
+            0.4978126253700841
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "original_camera_projection": {
+          "head": {
+            "whole_target_envelope_inside_original_frustum": true,
+            "centre_inside_original_frustum": true,
+            "centre_ndc": [
+              -0.21972008784769326,
+              -0.7665057011613552,
+              0.958766390205066
+            ],
+            "camera_path": "/World/Robot/head_link2/Head_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "left": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.023786327023219443,
+              -2.312327786325879,
+              0.9068744997323442
+            ],
+            "camera_path": "/World/Robot/gripper_l_base_link/Left_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "right": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.09864241640998524,
+              -2.2476116265831574,
+              0.9244779119769508
+            ],
+            "camera_path": "/World/Robot/gripper_r_base_link/Right_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          }
+        },
+        "hand_lowest_z_m": 0.7245616821295218,
+        "cup_highest_z_m": 0.5446252507401684,
+        "upright_source_cup_highest_z_m": 0.5809999952316283,
+        "protected_self_collision_checked": true,
+        "target_on_table_geometry_checked": true,
+        "hand_open_geometry_checked": true,
+        "physical_settle_verified": false,
+        "physical_grasp_proven": false
+      },
+      "training_provenance": {
+        "episode_index": 1462,
+        "frame": 120,
+        "row": {
+          "episode_index": 1462,
+          "task": {
+            "task_index": 29,
+            "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "task_kind": "atomic",
+            "benchmark_task_id": "7.10"
+          },
+          "active_hand": "l",
+          "parquet_relative": "data/chunk-001/episode_001462.parquet",
+          "parquet_sha256": "bf0e874204a033aa84f18ff1a1c55200d9220f6a0626d0958abba0d856df3784",
+          "source_id": "atomic_7_10/batch_20261008_001:12",
+          "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_13",
+          "mapping": {
+            "adapter": "named_native_joint_commands_full_state",
+            "source_row_alignment": "preserved same-row command/post-step state; no implicit shift",
+            "base_action_mode": "uncommanded_static_policy_not_velocity_telemetry",
+            "base_state_mode": "initial_pose_stationary_projection_not_per_frame_telemetry",
+            "source_metadata_files": [
+              "action.json",
+              "appearance.json",
+              "destination_geometry.json",
+              "distractor_audit.json",
+              "distractor_plan.json",
+              "house_layout.json",
+              "house_layout_extra_prim_frames.json",
+              "owner_request.json",
+              "result.json",
+              "scene_plan.json"
+            ],
+            "base_projection_requires_review": true,
+            "numeric_source": "full_state.npz",
+            "source_frame_count": 283,
+            "original_quality_facts": [
+              {
+                "file": "action.json",
+                "facts": {
+                  "schema": "real2sim.family7_guide_action.v1"
+                }
+              },
+              {
+                "file": "appearance.json",
+                "facts": {
+                  "ok": true
+                }
+              },
+              {
+                "file": "destination_geometry.json",
+                "facts": {
+                  "passed": true
+                }
+              },
+              {
+                "file": "distractor_audit.json",
+                "facts": {
+                  "schema": "real2sim.distractor_audit.v1",
+                  "task_id": "family7_cup_e2e"
+                }
+              },
+              {
+                "file": "distractor_plan.json",
+                "facts": {
+                  "schema": "real2sim.episode_scene_randomization.plan.v1",
+                  "task_id": "29"
+                }
+              },
+              {
+                "file": "house_layout.json",
+                "facts": {
+                  "layout_id": "final_house_layout_12"
+                }
+              },
+              {
+                "file": "result.json",
+                "facts": {
+                  "status": "pass",
+                  "owner_review": "pending"
+                }
+              }
+            ]
+          },
+          "close_transition_frame": 119,
+          "first_minimum_frame": 122,
+          "frames_examined": [
+            0,
+            4,
+            8,
+            13,
+            17,
+            22,
+            26,
+            31,
+            35,
+            40,
+            44,
+            49,
+            53,
+            58,
+            62,
+            67,
+            71,
+            76,
+            80,
+            85,
+            89,
+            94,
+            98,
+            102,
+            107,
+            109,
+            111,
+            112,
+            114,
+            116,
+            117,
+            119,
+            120,
+            122,
+            124,
+            125,
+            127,
+            129,
+            132,
+            134,
+            138,
+            143,
+            147,
+            152,
+            156,
+            161,
+            165,
+            170,
+            174,
+            179,
+            183,
+            188,
+            192,
+            196,
+            201,
+            205,
+            210,
+            214,
+            219,
+            223,
+            228,
+            232,
+            237,
+            241,
+            246,
+            250,
+            255,
+            259,
+            264,
+            268,
+            273,
+            277,
+            282
+          ],
+          "source_success_not_inferred": true,
+          "all_phase_real_frame_coverage": true,
+          "provenance_sha256": "fabe2d4b426ecd540365dd45c525c08b40f74a24a3b7e47ac1b38bcc1abb847a"
+        },
+        "source_state18_rad_or_m": {
+          "idx21_arm_l_joint1": -0.9586775302886963,
+          "idx22_arm_l_joint2": 0.7658275961875916,
+          "idx23_arm_l_joint3": 0.3667309284210205,
+          "idx24_arm_l_joint4": -1.4540952444076538,
+          "idx25_arm_l_joint5": 0.7203959822654724,
+          "idx26_arm_l_joint6": 1.3227763175964355,
+          "idx27_arm_l_joint7": -0.1174721047282219,
+          "idx61_arm_r_joint1": 1.4241220951080322,
+          "idx62_arm_r_joint2": -1.1027624607086182,
+          "idx63_arm_r_joint3": -0.8923888206481934,
+          "idx64_arm_r_joint4": 1.295697808265686,
+          "idx65_arm_r_joint5": -0.5626167058944702,
+          "idx66_arm_r_joint6": -1.2479227781295776,
+          "idx67_arm_r_joint7": -0.09254567325115204,
+          "idx01_body_joint1": 0.019998546689748764,
+          "idx02_body_joint2": 0.5236032009124756,
+          "idx11_head_joint1": 3.2201782573793025e-07,
+          "idx12_head_joint2": 0.43634599447250366
+        },
+        "arm_body_head_copied_exactly": true,
+        "physical_source_grasp_proven": false,
+        "source_phase": "after_source_close_command_geometrically_elevated_not_a_failure_history"
+      },
+      "authored_failure_initial": true,
+      "physical_history_required": false,
+      "physical_failure_generation_verified": false,
+      "validation": {
+        "cpu": true,
+        "native": false,
+        "random_revalidation_required": true
+      },
+      "maximum_score": 9.5,
+      "completion_policy": "same_cup_released_inside_correct_bin"
+    },
+    {
+      "id": "train_ep1488_f140_l_opened_authored_side_cup",
+      "variant": "table_waste_tipped_cup",
+      "active_hand": "l",
+      "robot_initialization": {
+        "positions": {
+          "idx01_body_joint1": 0.019998064264655113,
+          "idx02_body_joint2": 0.5236054062843323,
+          "idx11_head_joint1": 5.246238288236782e-07,
+          "idx12_head_joint2": 0.4363545775413513,
+          "idx21_arm_l_joint1": -1.3223837614059448,
+          "idx22_arm_l_joint2": 0.7565943598747253,
+          "idx23_arm_l_joint3": 0.5617085099220276,
+          "idx24_arm_l_joint4": -1.5092599391937256,
+          "idx25_arm_l_joint5": 0.8916687965393066,
+          "idx26_arm_l_joint6": 1.3039414882659912,
+          "idx27_arm_l_joint7": -0.33264777064323425,
+          "idx61_arm_r_joint1": 1.4698529243469238,
+          "idx62_arm_r_joint2": -1.0552260875701904,
+          "idx63_arm_r_joint3": -0.8605655431747437,
+          "idx64_arm_r_joint4": 1.0949835777282715,
+          "idx65_arm_r_joint5": -0.5141289234161377,
+          "idx66_arm_r_joint6": -1.4813913106918335,
+          "idx67_arm_r_joint7": -0.1386282593011856,
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444,
+          "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+          "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+          "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+          "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+          "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+          "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+          "idx89_gripper_r_outer_joint0": -0.43470815091828396
+        },
+        "hold_targets": {
+          "idx21_arm_l_joint1": -1.3223837614059448,
+          "idx22_arm_l_joint2": 0.7565943598747253,
+          "idx23_arm_l_joint3": 0.5617085099220276,
+          "idx24_arm_l_joint4": -1.5092599391937256,
+          "idx25_arm_l_joint5": 0.8916687965393066,
+          "idx26_arm_l_joint6": 1.3039414882659912,
+          "idx27_arm_l_joint7": -0.33264777064323425,
+          "idx61_arm_r_joint1": 1.4698529243469238,
+          "idx62_arm_r_joint2": -1.0552260875701904,
+          "idx63_arm_r_joint3": -0.8605655431747437,
+          "idx64_arm_r_joint4": 1.0949835777282715,
+          "idx65_arm_r_joint5": -0.5141289234161377,
+          "idx66_arm_r_joint6": -1.4813913106918335,
+          "idx67_arm_r_joint7": -0.1386282593011856,
+          "idx01_body_joint1": 0.019998064264655113,
+          "idx02_body_joint2": 0.5236054062843323,
+          "idx11_head_joint1": 5.246238288236782e-07,
+          "idx12_head_joint2": 0.4363545775413513,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091
+        }
+      },
+      "gripper_opening": {
+        "hand": "l",
+        "open_coordinates": {
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444
+        },
+        "policy": "existing_native_ready_open_linkage",
+        "arm_body_head_changed": false,
+        "physical_opening_animation_run": false
+      },
+      "base_canonical_column": [
+        [
+          -1.0000000000000004,
+          5.359585455961219e-16,
+          -1.7191815119845181e-16,
+          -1.1511755128898546
+        ],
+        [
+          6.818112618906271e-17,
+          -0.9999999999999996,
+          -1.5250340952160541e-18,
+          -0.1799440369622355
+        ],
+        [
+          -1.9778581020339762e-16,
+          4.026682339312598e-18,
+          1.0000000000000004,
+          -4.916999102499746e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "initial_base_xyyaw": [
+        -1.059709898176706,
+        0.4557726594935412,
+        1.5707963267948963
+      ],
+      "cpu_accepted": true,
+      "fit": {
+        "cup_side_pose_authored": true,
+        "physical_drop_replayed": false,
+        "original_yaw_preserved_before_fixed_side_rotation": true,
+        "fixed_side_rotation_rad": 1.5707963267948966,
+        "support_gap_preserved_m": 0.0009999932944771972,
+        "center_below_fingertips_xy": true,
+        "accepted_cpu": true,
+        "reason": null,
+        "proposed_target_world": [
+          [
+            1.1532628283625105e-16,
+            -0.9999999999999996,
+            5.027655906635347e-16,
+            -1.0809304709396055
+          ],
+          [
+            0.9985734343755355,
+            1.6787492023380302e-16,
+            0.053395656747048874,
+            1.0738410788256443
+          ],
+          [
+            -0.05339565674704952,
+            5.014421563770198e-16,
+            0.9985734343755364,
+            0.4978126253700841
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "original_camera_projection": {
+          "head": {
+            "whole_target_envelope_inside_original_frustum": true,
+            "centre_inside_original_frustum": true,
+            "centre_ndc": [
+              -0.1709777120040646,
+              -0.6785524506373505,
+              0.9599694497733031
+            ],
+            "camera_path": "/World/Robot/head_link2/Head_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "left": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              0.08179351970020945,
+              -1.71359190021186,
+              0.9283204105746627
+            ],
+            "camera_path": "/World/Robot/gripper_l_base_link/Left_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "right": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.035046433653648276,
+              -2.0242627509265154,
+              0.9311522381384983
+            ],
+            "camera_path": "/World/Robot/gripper_r_base_link/Right_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          }
+        },
+        "hand_lowest_z_m": 0.7491035837099785,
+        "cup_highest_z_m": 0.5446252507401684,
+        "upright_source_cup_highest_z_m": 0.5809999952316283,
+        "protected_self_collision_checked": true,
+        "target_on_table_geometry_checked": true,
+        "hand_open_geometry_checked": true,
+        "physical_settle_verified": false,
+        "physical_grasp_proven": false
+      },
+      "training_provenance": {
+        "episode_index": 1488,
+        "frame": 140,
+        "row": {
+          "episode_index": 1488,
+          "task": {
+            "task_index": 29,
+            "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "task_kind": "atomic",
+            "benchmark_task_id": "7.10"
+          },
+          "active_hand": "l",
+          "parquet_relative": "data/chunk-001/episode_001488.parquet",
+          "parquet_sha256": "6428925896eaff1bab47360d5743cd0e5693842ee6beee7bea8065be00c1ba84",
+          "source_id": "atomic_7_10/batch_20261008_001:38",
+          "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_43",
+          "mapping": {
+            "adapter": "named_native_joint_commands_full_state",
+            "source_row_alignment": "preserved same-row command/post-step state; no implicit shift",
+            "base_action_mode": "uncommanded_static_policy_not_velocity_telemetry",
+            "base_state_mode": "initial_pose_stationary_projection_not_per_frame_telemetry",
+            "source_metadata_files": [
+              "action.json",
+              "appearance.json",
+              "destination_geometry.json",
+              "distractor_audit.json",
+              "distractor_plan.json",
+              "house_layout.json",
+              "house_layout_extra_prim_frames.json",
+              "owner_request.json",
+              "result.json",
+              "scene_plan.json"
+            ],
+            "base_projection_requires_review": true,
+            "numeric_source": "full_state.npz",
+            "source_frame_count": 307,
+            "original_quality_facts": [
+              {
+                "file": "action.json",
+                "facts": {
+                  "schema": "real2sim.family7_guide_action.v1"
+                }
+              },
+              {
+                "file": "appearance.json",
+                "facts": {
+                  "ok": true
+                }
+              },
+              {
+                "file": "destination_geometry.json",
+                "facts": {
+                  "passed": true
+                }
+              },
+              {
+                "file": "distractor_audit.json",
+                "facts": {
+                  "schema": "real2sim.distractor_audit.v1",
+                  "task_id": "family7_cup_e2e"
+                }
+              },
+              {
+                "file": "distractor_plan.json",
+                "facts": {
+                  "schema": "real2sim.episode_scene_randomization.plan.v1",
+                  "task_id": "29"
+                }
+              },
+              {
+                "file": "house_layout.json",
+                "facts": {
+                  "layout_id": "final_house_layout_14"
+                }
+              },
+              {
+                "file": "result.json",
+                "facts": {
+                  "status": "pass",
+                  "owner_review": "pending"
+                }
+              }
+            ]
+          },
+          "close_transition_frame": 139,
+          "first_minimum_frame": 143,
+          "frames_examined": [
+            0,
+            4,
+            9,
+            14,
+            19,
+            24,
+            29,
+            34,
+            38,
+            43,
+            48,
+            53,
+            58,
+            63,
+            68,
+            72,
+            77,
+            82,
+            87,
+            92,
+            97,
+            101,
+            106,
+            111,
+            116,
+            121,
+            126,
+            129,
+            131,
+            133,
+            134,
+            136,
+            138,
+            139,
+            140,
+            143,
+            144,
+            145,
+            148,
+            149,
+            150,
+            153,
+            155,
+            160,
+            165,
+            170,
+            174,
+            179,
+            184,
+            189,
+            194,
+            199,
+            203,
+            208,
+            213,
+            218,
+            223,
+            228,
+            233,
+            237,
+            242,
+            247,
+            252,
+            257,
+            262,
+            267,
+            272,
+            276,
+            281,
+            286,
+            291,
+            296,
+            301,
+            306
+          ],
+          "source_success_not_inferred": true,
+          "all_phase_real_frame_coverage": true,
+          "provenance_sha256": "d210c026caeff278542e70a30c47aae64543718eb0cd7a9c6d2f164c77a80913"
+        },
+        "source_state18_rad_or_m": {
+          "idx21_arm_l_joint1": -1.3223837614059448,
+          "idx22_arm_l_joint2": 0.7565943598747253,
+          "idx23_arm_l_joint3": 0.5617085099220276,
+          "idx24_arm_l_joint4": -1.5092599391937256,
+          "idx25_arm_l_joint5": 0.8916687965393066,
+          "idx26_arm_l_joint6": 1.3039414882659912,
+          "idx27_arm_l_joint7": -0.33264777064323425,
+          "idx61_arm_r_joint1": 1.4698529243469238,
+          "idx62_arm_r_joint2": -1.0552260875701904,
+          "idx63_arm_r_joint3": -0.8605655431747437,
+          "idx64_arm_r_joint4": 1.0949835777282715,
+          "idx65_arm_r_joint5": -0.5141289234161377,
+          "idx66_arm_r_joint6": -1.4813913106918335,
+          "idx67_arm_r_joint7": -0.1386282593011856,
+          "idx01_body_joint1": 0.019998064264655113,
+          "idx02_body_joint2": 0.5236054062843323,
+          "idx11_head_joint1": 5.246238288236782e-07,
+          "idx12_head_joint2": 0.4363545775413513
+        },
+        "arm_body_head_copied_exactly": true,
+        "physical_source_grasp_proven": false,
+        "source_phase": "after_source_close_command_geometrically_elevated_not_a_failure_history"
+      },
+      "authored_failure_initial": true,
+      "physical_history_required": false,
+      "physical_failure_generation_verified": false,
+      "validation": {
+        "cpu": true,
+        "native": false,
+        "random_revalidation_required": true
+      },
+      "maximum_score": 9.5,
+      "completion_policy": "same_cup_released_inside_correct_bin"
+    },
+    {
+      "id": "train_ep1452_f121_l_opened_authored_side_cup",
+      "variant": "table_waste_tipped_cup",
+      "active_hand": "l",
+      "robot_initialization": {
+        "positions": {
+          "idx01_body_joint1": 0.01999654620885849,
+          "idx02_body_joint2": 0.5236085057258606,
+          "idx11_head_joint1": 8.749243534111883e-07,
+          "idx12_head_joint2": 0.43636906147003174,
+          "idx21_arm_l_joint1": -1.0831935405731201,
+          "idx22_arm_l_joint2": 0.9067611694335938,
+          "idx23_arm_l_joint3": 0.46117690205574036,
+          "idx24_arm_l_joint4": -1.4156098365783691,
+          "idx25_arm_l_joint5": 0.8168254494667053,
+          "idx26_arm_l_joint6": 1.2809395790100098,
+          "idx27_arm_l_joint7": -0.17462946474552155,
+          "idx61_arm_r_joint1": 1.4125006198883057,
+          "idx62_arm_r_joint2": -1.0005296468734741,
+          "idx63_arm_r_joint3": -0.8500860333442688,
+          "idx64_arm_r_joint4": 1.2400568723678589,
+          "idx65_arm_r_joint5": -0.5116451978683472,
+          "idx66_arm_r_joint6": -1.3491716384887695,
+          "idx67_arm_r_joint7": -0.12634070217609406,
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444,
+          "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+          "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+          "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+          "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+          "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+          "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+          "idx89_gripper_r_outer_joint0": -0.43470815091828396
+        },
+        "hold_targets": {
+          "idx21_arm_l_joint1": -1.0831935405731201,
+          "idx22_arm_l_joint2": 0.9067611694335938,
+          "idx23_arm_l_joint3": 0.46117690205574036,
+          "idx24_arm_l_joint4": -1.4156098365783691,
+          "idx25_arm_l_joint5": 0.8168254494667053,
+          "idx26_arm_l_joint6": 1.2809395790100098,
+          "idx27_arm_l_joint7": -0.17462946474552155,
+          "idx61_arm_r_joint1": 1.4125006198883057,
+          "idx62_arm_r_joint2": -1.0005296468734741,
+          "idx63_arm_r_joint3": -0.8500860333442688,
+          "idx64_arm_r_joint4": 1.2400568723678589,
+          "idx65_arm_r_joint5": -0.5116451978683472,
+          "idx66_arm_r_joint6": -1.3491716384887695,
+          "idx67_arm_r_joint7": -0.12634070217609406,
+          "idx01_body_joint1": 0.01999654620885849,
+          "idx02_body_joint2": 0.5236085057258606,
+          "idx11_head_joint1": 8.749243534111883e-07,
+          "idx12_head_joint2": 0.43636906147003174,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091
+        }
+      },
+      "gripper_opening": {
+        "hand": "l",
+        "open_coordinates": {
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444
+        },
+        "policy": "existing_native_ready_open_linkage",
+        "arm_body_head_changed": false,
+        "physical_opening_animation_run": false
+      },
+      "base_canonical_column": [
+        [
+          -1.0000000000000004,
+          5.359585455961219e-16,
+          -1.7191815119845181e-16,
+          -1.1511755128898546
+        ],
+        [
+          6.818112618906271e-17,
+          -0.9999999999999996,
+          -1.5250340952160541e-18,
+          -0.1799440369622355
+        ],
+        [
+          -1.9778581020339762e-16,
+          4.026682339312598e-18,
+          1.0000000000000004,
+          -4.916999102499746e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "initial_base_xyyaw": [
+        -1.059709898176706,
+        0.4557726594935412,
+        1.5707963267948963
+      ],
+      "cpu_accepted": true,
+      "fit": {
+        "cup_side_pose_authored": true,
+        "physical_drop_replayed": false,
+        "original_yaw_preserved_before_fixed_side_rotation": true,
+        "fixed_side_rotation_rad": 1.5707963267948966,
+        "support_gap_preserved_m": 0.0009999932944771972,
+        "center_below_fingertips_xy": true,
+        "accepted_cpu": true,
+        "reason": null,
+        "proposed_target_world": [
+          [
+            1.1532628283625105e-16,
+            -0.9999999999999996,
+            5.027655906635347e-16,
+            -1.0524823116550932
+          ],
+          [
+            0.9985734343755355,
+            1.6787492023380302e-16,
+            0.053395656747048874,
+            1.0672767657811015
+          ],
+          [
+            -0.05339565674704952,
+            5.014421563770198e-16,
+            0.9985734343755364,
+            0.4978126253700841
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "original_camera_projection": {
+          "head": {
+            "whole_target_envelope_inside_original_frustum": true,
+            "centre_inside_original_frustum": true,
+            "centre_ndc": [
+              -0.11543350024984247,
+              -0.7007351437170894,
+              0.9596655369204623
+            ],
+            "camera_path": "/World/Robot/head_link2/Head_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "left": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.02418894443463342,
+              -2.322187277956268,
+              0.90632257521639
+            ],
+            "camera_path": "/World/Robot/gripper_l_base_link/Left_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "right": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.09267463738772665,
+              -2.2671379445422604,
+              0.9239088846787272
+            ],
+            "camera_path": "/World/Robot/gripper_r_base_link/Right_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          }
+        },
+        "hand_lowest_z_m": 0.7234895468665968,
+        "cup_highest_z_m": 0.5446252507401684,
+        "upright_source_cup_highest_z_m": 0.5809999952316283,
+        "protected_self_collision_checked": true,
+        "target_on_table_geometry_checked": true,
+        "hand_open_geometry_checked": true,
+        "physical_settle_verified": false,
+        "physical_grasp_proven": false
+      },
+      "training_provenance": {
+        "episode_index": 1452,
+        "frame": 121,
+        "row": {
+          "episode_index": 1452,
+          "task": {
+            "task_index": 29,
+            "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "task_kind": "atomic",
+            "benchmark_task_id": "7.10"
+          },
+          "active_hand": "l",
+          "parquet_relative": "data/chunk-001/episode_001452.parquet",
+          "parquet_sha256": "86f22c0f81783da36626736b85671f79fc5cafcdefe63d646c3c47418f1cfe2a",
+          "source_id": "atomic_7_10/batch_20261008_001:2",
+          "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_02",
+          "mapping": {
+            "adapter": "named_native_joint_commands_full_state",
+            "source_row_alignment": "preserved same-row command/post-step state; no implicit shift",
+            "base_action_mode": "uncommanded_static_policy_not_velocity_telemetry",
+            "base_state_mode": "initial_pose_stationary_projection_not_per_frame_telemetry",
+            "source_metadata_files": [
+              "action.json",
+              "appearance.json",
+              "destination_geometry.json",
+              "distractor_audit.json",
+              "distractor_plan.json",
+              "house_layout.json",
+              "house_layout_extra_prim_frames.json",
+              "owner_request.json",
+              "result.json",
+              "scene_plan.json"
+            ],
+            "base_projection_requires_review": true,
+            "numeric_source": "full_state.npz",
+            "source_frame_count": 284,
+            "original_quality_facts": [
+              {
+                "file": "action.json",
+                "facts": {
+                  "schema": "real2sim.family7_guide_action.v1"
+                }
+              },
+              {
+                "file": "appearance.json",
+                "facts": {
+                  "ok": true
+                }
+              },
+              {
+                "file": "destination_geometry.json",
+                "facts": {
+                  "passed": true
+                }
+              },
+              {
+                "file": "distractor_audit.json",
+                "facts": {
+                  "schema": "real2sim.distractor_audit.v1",
+                  "task_id": "family7_cup_e2e"
+                }
+              },
+              {
+                "file": "distractor_plan.json",
+                "facts": {
+                  "schema": "real2sim.episode_scene_randomization.plan.v1",
+                  "task_id": "29"
+                }
+              },
+              {
+                "file": "house_layout.json",
+                "facts": {
+                  "layout_id": "final_house_layout_31"
+                }
+              },
+              {
+                "file": "result.json",
+                "facts": {
+                  "status": "pass",
+                  "owner_review": "pending"
+                }
+              }
+            ]
+          },
+          "close_transition_frame": 119,
+          "first_minimum_frame": 123,
+          "frames_examined": [
+            0,
+            4,
+            8,
+            13,
+            17,
+            22,
+            26,
+            31,
+            35,
+            40,
+            44,
+            49,
+            53,
+            58,
+            62,
+            67,
+            71,
+            76,
+            80,
+            85,
+            89,
+            94,
+            98,
+            103,
+            107,
+            109,
+            112,
+            113,
+            114,
+            116,
+            118,
+            119,
+            121,
+            123,
+            124,
+            125,
+            128,
+            129,
+            130,
+            133,
+            134,
+            139,
+            143,
+            148,
+            152,
+            157,
+            161,
+            166,
+            170,
+            175,
+            179,
+            184,
+            188,
+            193,
+            197,
+            202,
+            206,
+            211,
+            215,
+            220,
+            224,
+            229,
+            233,
+            238,
+            242,
+            247,
+            251,
+            256,
+            260,
+            265,
+            269,
+            274,
+            278,
+            283
+          ],
+          "source_success_not_inferred": true,
+          "all_phase_real_frame_coverage": true,
+          "provenance_sha256": "684947c03055db91c791ca2cb2262861644a69819853eaead81c80b4e91e05d9"
+        },
+        "source_state18_rad_or_m": {
+          "idx21_arm_l_joint1": -1.0831935405731201,
+          "idx22_arm_l_joint2": 0.9067611694335938,
+          "idx23_arm_l_joint3": 0.46117690205574036,
+          "idx24_arm_l_joint4": -1.4156098365783691,
+          "idx25_arm_l_joint5": 0.8168254494667053,
+          "idx26_arm_l_joint6": 1.2809395790100098,
+          "idx27_arm_l_joint7": -0.17462946474552155,
+          "idx61_arm_r_joint1": 1.4125006198883057,
+          "idx62_arm_r_joint2": -1.0005296468734741,
+          "idx63_arm_r_joint3": -0.8500860333442688,
+          "idx64_arm_r_joint4": 1.2400568723678589,
+          "idx65_arm_r_joint5": -0.5116451978683472,
+          "idx66_arm_r_joint6": -1.3491716384887695,
+          "idx67_arm_r_joint7": -0.12634070217609406,
+          "idx01_body_joint1": 0.01999654620885849,
+          "idx02_body_joint2": 0.5236085057258606,
+          "idx11_head_joint1": 8.749243534111883e-07,
+          "idx12_head_joint2": 0.43636906147003174
+        },
+        "arm_body_head_copied_exactly": true,
+        "physical_source_grasp_proven": false,
+        "source_phase": "after_source_close_command_geometrically_elevated_not_a_failure_history"
+      },
+      "authored_failure_initial": true,
+      "physical_history_required": false,
+      "physical_failure_generation_verified": false,
+      "validation": {
+        "cpu": true,
+        "native": false,
+        "random_revalidation_required": true
+      },
+      "maximum_score": 9.5,
+      "completion_policy": "same_cup_released_inside_correct_bin"
+    },
+    {
+      "id": "train_ep1458_f127_l_opened_authored_side_cup",
+      "variant": "table_waste_tipped_cup",
+      "active_hand": "l",
+      "robot_initialization": {
+        "positions": {
+          "idx01_body_joint1": 0.019998829811811447,
+          "idx02_body_joint2": 0.5236044526100159,
+          "idx11_head_joint1": 5.405855745266308e-07,
+          "idx12_head_joint2": 0.4363553822040558,
+          "idx21_arm_l_joint1": -1.052394986152649,
+          "idx22_arm_l_joint2": 0.8621194362640381,
+          "idx23_arm_l_joint3": 0.46076107025146484,
+          "idx24_arm_l_joint4": -1.4294497966766357,
+          "idx25_arm_l_joint5": 0.7705360054969788,
+          "idx26_arm_l_joint6": 1.3276983499526978,
+          "idx27_arm_l_joint7": -0.14768804609775543,
+          "idx61_arm_r_joint1": 1.9509621858596802,
+          "idx62_arm_r_joint2": -0.9119539260864258,
+          "idx63_arm_r_joint3": -2.0769548416137695,
+          "idx64_arm_r_joint4": 1.4327795505523682,
+          "idx65_arm_r_joint5": -2.6855690479278564,
+          "idx66_arm_r_joint6": 1.1540311574935913,
+          "idx67_arm_r_joint7": 2.2060039043426514,
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444,
+          "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+          "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+          "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+          "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+          "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+          "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+          "idx89_gripper_r_outer_joint0": -0.43470815091828396
+        },
+        "hold_targets": {
+          "idx21_arm_l_joint1": -1.052394986152649,
+          "idx22_arm_l_joint2": 0.8621194362640381,
+          "idx23_arm_l_joint3": 0.46076107025146484,
+          "idx24_arm_l_joint4": -1.4294497966766357,
+          "idx25_arm_l_joint5": 0.7705360054969788,
+          "idx26_arm_l_joint6": 1.3276983499526978,
+          "idx27_arm_l_joint7": -0.14768804609775543,
+          "idx61_arm_r_joint1": 1.9509621858596802,
+          "idx62_arm_r_joint2": -0.9119539260864258,
+          "idx63_arm_r_joint3": -2.0769548416137695,
+          "idx64_arm_r_joint4": 1.4327795505523682,
+          "idx65_arm_r_joint5": -2.6855690479278564,
+          "idx66_arm_r_joint6": 1.1540311574935913,
+          "idx67_arm_r_joint7": 2.2060039043426514,
+          "idx01_body_joint1": 0.019998829811811447,
+          "idx02_body_joint2": 0.5236044526100159,
+          "idx11_head_joint1": 5.405855745266308e-07,
+          "idx12_head_joint2": 0.4363553822040558,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091
+        }
+      },
+      "gripper_opening": {
+        "hand": "l",
+        "open_coordinates": {
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444
+        },
+        "policy": "existing_native_ready_open_linkage",
+        "arm_body_head_changed": false,
+        "physical_opening_animation_run": false
+      },
+      "base_canonical_column": [
+        [
+          -1.0000000000000004,
+          5.359585455961219e-16,
+          -1.7191815119845181e-16,
+          -1.1511755128898546
+        ],
+        [
+          6.818112618906271e-17,
+          -0.9999999999999996,
+          -1.5250340952160541e-18,
+          -0.1799440369622355
+        ],
+        [
+          -1.9778581020339762e-16,
+          4.026682339312598e-18,
+          1.0000000000000004,
+          -4.916999102499746e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "initial_base_xyyaw": [
+        -1.059709898176706,
+        0.4557726594935412,
+        1.5707963267948963
+      ],
+      "cpu_accepted": true,
+      "fit": {
+        "cup_side_pose_authored": true,
+        "physical_drop_replayed": false,
+        "original_yaw_preserved_before_fixed_side_rotation": true,
+        "fixed_side_rotation_rad": 1.5707963267948966,
+        "support_gap_preserved_m": 0.0009999932944771972,
+        "center_below_fingertips_xy": true,
+        "accepted_cpu": true,
+        "reason": null,
+        "proposed_target_world": [
+          [
+            1.1532628283625105e-16,
+            -0.9999999999999996,
+            5.027655906635347e-16,
+            -1.0646600160364668
+          ],
+          [
+            0.9985734343755355,
+            1.6787492023380302e-16,
+            0.053395656747048874,
+            1.0461793293252641
+          ],
+          [
+            -0.05339565674704952,
+            5.014421563770198e-16,
+            0.9985734343755364,
+            0.4978126253700841
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "original_camera_projection": {
+          "head": {
+            "whole_target_envelope_inside_original_frustum": true,
+            "centre_inside_original_frustum": true,
+            "centre_ndc": [
+              -0.14326187973594964,
+              -0.7745149807055117,
+              0.9586566711641447
+            ],
+            "camera_path": "/World/Robot/head_link2/Head_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "left": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.028720169258777514,
+              -2.3223499510049503,
+              0.905802748981876
+            ],
+            "camera_path": "/World/Robot/gripper_l_base_link/Left_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "right": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.1322979182481214,
+              -2.2995350799593655,
+              0.9232850266142362
+            ],
+            "camera_path": "/World/Robot/gripper_r_base_link/Right_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          }
+        },
+        "hand_lowest_z_m": 0.7212590033899284,
+        "cup_highest_z_m": 0.5446252507401684,
+        "upright_source_cup_highest_z_m": 0.5809999952316283,
+        "protected_self_collision_checked": true,
+        "target_on_table_geometry_checked": true,
+        "hand_open_geometry_checked": true,
+        "physical_settle_verified": false,
+        "physical_grasp_proven": false
+      },
+      "training_provenance": {
+        "episode_index": 1458,
+        "frame": 127,
+        "row": {
+          "episode_index": 1458,
+          "task": {
+            "task_index": 29,
+            "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "task_kind": "atomic",
+            "benchmark_task_id": "7.10"
+          },
+          "active_hand": "l",
+          "parquet_relative": "data/chunk-001/episode_001458.parquet",
+          "parquet_sha256": "00af75f317580952c3da1b5e9b4badb57e29144c14b616c285672782cceb1304",
+          "source_id": "atomic_7_10/batch_20261008_001:8",
+          "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_09",
+          "mapping": {
+            "adapter": "named_native_joint_commands_full_state",
+            "source_row_alignment": "preserved same-row command/post-step state; no implicit shift",
+            "base_action_mode": "uncommanded_static_policy_not_velocity_telemetry",
+            "base_state_mode": "initial_pose_stationary_projection_not_per_frame_telemetry",
+            "source_metadata_files": [
+              "action.json",
+              "appearance.json",
+              "destination_geometry.json",
+              "distractor_audit.json",
+              "distractor_plan.json",
+              "house_layout.json",
+              "house_layout_extra_prim_frames.json",
+              "owner_request.json",
+              "result.json",
+              "scene_plan.json"
+            ],
+            "base_projection_requires_review": true,
+            "numeric_source": "full_state.npz",
+            "source_frame_count": 288,
+            "original_quality_facts": [
+              {
+                "file": "action.json",
+                "facts": {
+                  "schema": "real2sim.family7_guide_action.v1"
+                }
+              },
+              {
+                "file": "appearance.json",
+                "facts": {
+                  "ok": true
+                }
+              },
+              {
+                "file": "destination_geometry.json",
+                "facts": {
+                  "passed": true
+                }
+              },
+              {
+                "file": "distractor_audit.json",
+                "facts": {
+                  "schema": "real2sim.distractor_audit.v1",
+                  "task_id": "family7_cup_e2e"
+                }
+              },
+              {
+                "file": "distractor_plan.json",
+                "facts": {
+                  "schema": "real2sim.episode_scene_randomization.plan.v1",
+                  "task_id": "29"
+                }
+              },
+              {
+                "file": "house_layout.json",
+                "facts": {
+                  "layout_id": "final_house_layout_42"
+                }
+              },
+              {
+                "file": "result.json",
+                "facts": {
+                  "status": "pass",
+                  "owner_review": "pending"
+                }
+              }
+            ]
+          },
+          "close_transition_frame": 125,
+          "first_minimum_frame": 128,
+          "frames_examined": [
+            0,
+            4,
+            9,
+            13,
+            18,
+            22,
+            27,
+            31,
+            36,
+            41,
+            45,
+            50,
+            54,
+            59,
+            63,
+            68,
+            72,
+            77,
+            82,
+            86,
+            91,
+            95,
+            100,
+            104,
+            109,
+            113,
+            115,
+            118,
+            120,
+            123,
+            125,
+            127,
+            128,
+            130,
+            132,
+            133,
+            135,
+            136,
+            138,
+            141,
+            145,
+            150,
+            154,
+            159,
+            164,
+            168,
+            173,
+            177,
+            182,
+            186,
+            191,
+            195,
+            200,
+            205,
+            209,
+            214,
+            218,
+            223,
+            227,
+            232,
+            236,
+            241,
+            246,
+            250,
+            255,
+            259,
+            264,
+            268,
+            273,
+            277,
+            282,
+            287
+          ],
+          "source_success_not_inferred": true,
+          "all_phase_real_frame_coverage": true,
+          "provenance_sha256": "6a04b4cd9882ae076412f76df0130b339bf52885f2d3522f329baba8531f782d"
+        },
+        "source_state18_rad_or_m": {
+          "idx21_arm_l_joint1": -1.052394986152649,
+          "idx22_arm_l_joint2": 0.8621194362640381,
+          "idx23_arm_l_joint3": 0.46076107025146484,
+          "idx24_arm_l_joint4": -1.4294497966766357,
+          "idx25_arm_l_joint5": 0.7705360054969788,
+          "idx26_arm_l_joint6": 1.3276983499526978,
+          "idx27_arm_l_joint7": -0.14768804609775543,
+          "idx61_arm_r_joint1": 1.9509621858596802,
+          "idx62_arm_r_joint2": -0.9119539260864258,
+          "idx63_arm_r_joint3": -2.0769548416137695,
+          "idx64_arm_r_joint4": 1.4327795505523682,
+          "idx65_arm_r_joint5": -2.6855690479278564,
+          "idx66_arm_r_joint6": 1.1540311574935913,
+          "idx67_arm_r_joint7": 2.2060039043426514,
+          "idx01_body_joint1": 0.019998829811811447,
+          "idx02_body_joint2": 0.5236044526100159,
+          "idx11_head_joint1": 5.405855745266308e-07,
+          "idx12_head_joint2": 0.4363553822040558
+        },
+        "arm_body_head_copied_exactly": true,
+        "physical_source_grasp_proven": false,
+        "source_phase": "after_source_close_command_geometrically_elevated_not_a_failure_history"
+      },
+      "authored_failure_initial": true,
+      "physical_history_required": false,
+      "physical_failure_generation_verified": false,
+      "validation": {
+        "cpu": true,
+        "native": false,
+        "random_revalidation_required": true
+      },
+      "maximum_score": 9.5,
+      "completion_policy": "same_cup_released_inside_correct_bin"
+    },
+    {
+      "id": "train_ep1477_f143_l_opened_authored_side_cup",
+      "variant": "table_waste_tipped_cup",
+      "active_hand": "l",
+      "robot_initialization": {
+        "positions": {
+          "idx01_body_joint1": 0.01999865472316742,
+          "idx02_body_joint2": 0.5236065983772278,
+          "idx11_head_joint1": 7.233505812109797e-07,
+          "idx12_head_joint2": 0.4363628923892975,
+          "idx21_arm_l_joint1": -1.0906000137329102,
+          "idx22_arm_l_joint2": 0.9183845520019531,
+          "idx23_arm_l_joint3": 0.4663855731487274,
+          "idx24_arm_l_joint4": -1.3938069343566895,
+          "idx25_arm_l_joint5": 0.8236843943595886,
+          "idx26_arm_l_joint6": 1.2792224884033203,
+          "idx27_arm_l_joint7": -0.16914710402488708,
+          "idx61_arm_r_joint1": 1.440699577331543,
+          "idx62_arm_r_joint2": -1.0313372611999512,
+          "idx63_arm_r_joint3": -0.8460259437561035,
+          "idx64_arm_r_joint4": 1.1623567342758179,
+          "idx65_arm_r_joint5": -0.5132321715354919,
+          "idx66_arm_r_joint6": -1.402529001235962,
+          "idx67_arm_r_joint7": -0.1395971029996872,
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444,
+          "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+          "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+          "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+          "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+          "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+          "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+          "idx89_gripper_r_outer_joint0": -0.43470815091828396
+        },
+        "hold_targets": {
+          "idx21_arm_l_joint1": -1.0906000137329102,
+          "idx22_arm_l_joint2": 0.9183845520019531,
+          "idx23_arm_l_joint3": 0.4663855731487274,
+          "idx24_arm_l_joint4": -1.3938069343566895,
+          "idx25_arm_l_joint5": 0.8236843943595886,
+          "idx26_arm_l_joint6": 1.2792224884033203,
+          "idx27_arm_l_joint7": -0.16914710402488708,
+          "idx61_arm_r_joint1": 1.440699577331543,
+          "idx62_arm_r_joint2": -1.0313372611999512,
+          "idx63_arm_r_joint3": -0.8460259437561035,
+          "idx64_arm_r_joint4": 1.1623567342758179,
+          "idx65_arm_r_joint5": -0.5132321715354919,
+          "idx66_arm_r_joint6": -1.402529001235962,
+          "idx67_arm_r_joint7": -0.1395971029996872,
+          "idx01_body_joint1": 0.01999865472316742,
+          "idx02_body_joint2": 0.5236065983772278,
+          "idx11_head_joint1": 7.233505812109797e-07,
+          "idx12_head_joint2": 0.4363628923892975,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091
+        }
+      },
+      "gripper_opening": {
+        "hand": "l",
+        "open_coordinates": {
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444
+        },
+        "policy": "existing_native_ready_open_linkage",
+        "arm_body_head_changed": false,
+        "physical_opening_animation_run": false
+      },
+      "base_canonical_column": [
+        [
+          -1.0000000000000004,
+          5.359585455961219e-16,
+          -1.7191815119845181e-16,
+          -1.1511755128898546
+        ],
+        [
+          6.818112618906271e-17,
+          -0.9999999999999996,
+          -1.5250340952160541e-18,
+          -0.1799440369622355
+        ],
+        [
+          -1.9778581020339762e-16,
+          4.026682339312598e-18,
+          1.0000000000000004,
+          -4.916999102499746e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "initial_base_xyyaw": [
+        -1.059709898176706,
+        0.4557726594935412,
+        1.5707963267948963
+      ],
+      "cpu_accepted": true,
+      "fit": {
+        "cup_side_pose_authored": true,
+        "physical_drop_replayed": false,
+        "original_yaw_preserved_before_fixed_side_rotation": true,
+        "fixed_side_rotation_rad": 1.5707963267948966,
+        "support_gap_preserved_m": 0.0009999932944771972,
+        "center_below_fingertips_xy": true,
+        "accepted_cpu": true,
+        "reason": null,
+        "proposed_target_world": [
+          [
+            1.1532628283625105e-16,
+            -0.9999999999999996,
+            5.027655906635347e-16,
+            -1.0509269964040355
+          ],
+          [
+            0.9985734343755355,
+            1.6787492023380302e-16,
+            0.053395656747048874,
+            1.0730420980162458
+          ],
+          [
+            -0.05339565674704952,
+            5.014421563770198e-16,
+            0.9985734343755364,
+            0.4978126253700841
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "original_camera_projection": {
+          "head": {
+            "whole_target_envelope_inside_original_frustum": true,
+            "centre_inside_original_frustum": true,
+            "centre_ndc": [
+              -0.11158162434850284,
+              -0.6812207036875346,
+              0.9599328259077834
+            ],
+            "camera_path": "/World/Robot/head_link2/Head_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "left": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.02909331924652312,
+              -2.3066772304013425,
+              0.905934170065789
+            ],
+            "camera_path": "/World/Robot/gripper_l_base_link/Left_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "right": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.11585225254280826,
+              -2.3058269187056455,
+              0.9232754748929707
+            ],
+            "camera_path": "/World/Robot/gripper_r_base_link/Right_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          }
+        },
+        "hand_lowest_z_m": 0.720124858134474,
+        "cup_highest_z_m": 0.5446252507401684,
+        "upright_source_cup_highest_z_m": 0.5809999952316283,
+        "protected_self_collision_checked": true,
+        "target_on_table_geometry_checked": true,
+        "hand_open_geometry_checked": true,
+        "physical_settle_verified": false,
+        "physical_grasp_proven": false
+      },
+      "training_provenance": {
+        "episode_index": 1477,
+        "frame": 143,
+        "row": {
+          "episode_index": 1477,
+          "task": {
+            "task_index": 29,
+            "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "task_kind": "atomic",
+            "benchmark_task_id": "7.10"
+          },
+          "active_hand": "l",
+          "parquet_relative": "data/chunk-001/episode_001477.parquet",
+          "parquet_sha256": "af83713eaaa904b319c0bb23d2ae1a8ed924a435f35c087a92d85e3bad97af1e",
+          "source_id": "atomic_7_10/batch_20261008_001:27",
+          "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_32",
+          "mapping": {
+            "adapter": "named_native_joint_commands_full_state",
+            "source_row_alignment": "preserved same-row command/post-step state; no implicit shift",
+            "base_action_mode": "uncommanded_static_policy_not_velocity_telemetry",
+            "base_state_mode": "initial_pose_stationary_projection_not_per_frame_telemetry",
+            "source_metadata_files": [
+              "action.json",
+              "appearance.json",
+              "destination_geometry.json",
+              "distractor_audit.json",
+              "distractor_plan.json",
+              "house_layout.json",
+              "house_layout_extra_prim_frames.json",
+              "owner_request.json",
+              "result.json",
+              "scene_plan.json"
+            ],
+            "base_projection_requires_review": true,
+            "numeric_source": "full_state.npz",
+            "source_frame_count": 305,
+            "original_quality_facts": [
+              {
+                "file": "action.json",
+                "facts": {
+                  "schema": "real2sim.family7_guide_action.v1"
+                }
+              },
+              {
+                "file": "appearance.json",
+                "facts": {
+                  "ok": true
+                }
+              },
+              {
+                "file": "destination_geometry.json",
+                "facts": {
+                  "passed": true
+                }
+              },
+              {
+                "file": "distractor_audit.json",
+                "facts": {
+                  "schema": "real2sim.distractor_audit.v1",
+                  "task_id": "family7_cup_e2e"
+                }
+              },
+              {
+                "file": "distractor_plan.json",
+                "facts": {
+                  "schema": "real2sim.episode_scene_randomization.plan.v1",
+                  "task_id": "29"
+                }
+              },
+              {
+                "file": "house_layout.json",
+                "facts": {
+                  "layout_id": "final_house_layout_18"
+                }
+              },
+              {
+                "file": "result.json",
+                "facts": {
+                  "status": "pass",
+                  "owner_review": "pending"
+                }
+              }
+            ]
+          },
+          "close_transition_frame": 140,
+          "first_minimum_frame": 143,
+          "frames_examined": [
+            0,
+            4,
+            9,
+            14,
+            19,
+            24,
+            28,
+            33,
+            38,
+            43,
+            48,
+            53,
+            57,
+            62,
+            67,
+            72,
+            77,
+            82,
+            86,
+            91,
+            96,
+            101,
+            106,
+            110,
+            115,
+            120,
+            125,
+            130,
+            133,
+            135,
+            138,
+            139,
+            140,
+            143,
+            144,
+            145,
+            148,
+            149,
+            150,
+            153,
+            154,
+            159,
+            164,
+            168,
+            173,
+            178,
+            183,
+            188,
+            193,
+            197,
+            202,
+            207,
+            212,
+            217,
+            221,
+            226,
+            231,
+            236,
+            241,
+            246,
+            250,
+            255,
+            260,
+            265,
+            270,
+            275,
+            279,
+            284,
+            289,
+            294,
+            299,
+            304
+          ],
+          "source_success_not_inferred": true,
+          "all_phase_real_frame_coverage": true,
+          "provenance_sha256": "445e6be53f39cf1dc7bd8361be29404d7067e83448a09b850fb59fe170fdbfa0"
+        },
+        "source_state18_rad_or_m": {
+          "idx21_arm_l_joint1": -1.0906000137329102,
+          "idx22_arm_l_joint2": 0.9183845520019531,
+          "idx23_arm_l_joint3": 0.4663855731487274,
+          "idx24_arm_l_joint4": -1.3938069343566895,
+          "idx25_arm_l_joint5": 0.8236843943595886,
+          "idx26_arm_l_joint6": 1.2792224884033203,
+          "idx27_arm_l_joint7": -0.16914710402488708,
+          "idx61_arm_r_joint1": 1.440699577331543,
+          "idx62_arm_r_joint2": -1.0313372611999512,
+          "idx63_arm_r_joint3": -0.8460259437561035,
+          "idx64_arm_r_joint4": 1.1623567342758179,
+          "idx65_arm_r_joint5": -0.5132321715354919,
+          "idx66_arm_r_joint6": -1.402529001235962,
+          "idx67_arm_r_joint7": -0.1395971029996872,
+          "idx01_body_joint1": 0.01999865472316742,
+          "idx02_body_joint2": 0.5236065983772278,
+          "idx11_head_joint1": 7.233505812109797e-07,
+          "idx12_head_joint2": 0.4363628923892975
+        },
+        "arm_body_head_copied_exactly": true,
+        "physical_source_grasp_proven": false,
+        "source_phase": "after_source_close_command_geometrically_elevated_not_a_failure_history"
+      },
+      "authored_failure_initial": true,
+      "physical_history_required": false,
+      "physical_failure_generation_verified": false,
+      "validation": {
+        "cpu": true,
+        "native": false,
+        "random_revalidation_required": true
+      },
+      "maximum_score": 9.5,
+      "completion_policy": "same_cup_released_inside_correct_bin"
+    },
+    {
+      "id": "train_ep1479_f143_l_opened_authored_side_cup",
+      "variant": "table_waste_tipped_cup",
+      "active_hand": "l",
+      "robot_initialization": {
+        "positions": {
+          "idx01_body_joint1": 0.019998397678136826,
+          "idx02_body_joint2": 0.5236070156097412,
+          "idx11_head_joint1": 8.090873961918987e-07,
+          "idx12_head_joint2": 0.43636655807495117,
+          "idx21_arm_l_joint1": -0.9819726347923279,
+          "idx22_arm_l_joint2": 0.954036295413971,
+          "idx23_arm_l_joint3": 0.41020509600639343,
+          "idx24_arm_l_joint4": -1.6034246683120728,
+          "idx25_arm_l_joint5": 0.9338904023170471,
+          "idx26_arm_l_joint6": 1.1574673652648926,
+          "idx27_arm_l_joint7": -0.27925440669059753,
+          "idx61_arm_r_joint1": 1.3912856578826904,
+          "idx62_arm_r_joint2": -0.9403483867645264,
+          "idx63_arm_r_joint3": -0.8204668760299683,
+          "idx64_arm_r_joint4": 1.2416880130767822,
+          "idx65_arm_r_joint5": -0.48456716537475586,
+          "idx66_arm_r_joint6": -1.4418081045150757,
+          "idx67_arm_r_joint7": -0.13504421710968018,
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444,
+          "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+          "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+          "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+          "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+          "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+          "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+          "idx89_gripper_r_outer_joint0": -0.43470815091828396
+        },
+        "hold_targets": {
+          "idx21_arm_l_joint1": -0.9819726347923279,
+          "idx22_arm_l_joint2": 0.954036295413971,
+          "idx23_arm_l_joint3": 0.41020509600639343,
+          "idx24_arm_l_joint4": -1.6034246683120728,
+          "idx25_arm_l_joint5": 0.9338904023170471,
+          "idx26_arm_l_joint6": 1.1574673652648926,
+          "idx27_arm_l_joint7": -0.27925440669059753,
+          "idx61_arm_r_joint1": 1.3912856578826904,
+          "idx62_arm_r_joint2": -0.9403483867645264,
+          "idx63_arm_r_joint3": -0.8204668760299683,
+          "idx64_arm_r_joint4": 1.2416880130767822,
+          "idx65_arm_r_joint5": -0.48456716537475586,
+          "idx66_arm_r_joint6": -1.4418081045150757,
+          "idx67_arm_r_joint7": -0.13504421710968018,
+          "idx01_body_joint1": 0.019998397678136826,
+          "idx02_body_joint2": 0.5236070156097412,
+          "idx11_head_joint1": 8.090873961918987e-07,
+          "idx12_head_joint2": 0.43636655807495117,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091
+        }
+      },
+      "gripper_opening": {
+        "hand": "l",
+        "open_coordinates": {
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444
+        },
+        "policy": "existing_native_ready_open_linkage",
+        "arm_body_head_changed": false,
+        "physical_opening_animation_run": false
+      },
+      "base_canonical_column": [
+        [
+          -1.0000000000000004,
+          5.359585455961219e-16,
+          -1.7191815119845181e-16,
+          -1.1511755128898546
+        ],
+        [
+          6.818112618906271e-17,
+          -0.9999999999999996,
+          -1.5250340952160541e-18,
+          -0.1799440369622355
+        ],
+        [
+          -1.9778581020339762e-16,
+          4.026682339312598e-18,
+          1.0000000000000004,
+          -4.916999102499746e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "initial_base_xyyaw": [
+        -1.059709898176706,
+        0.4557726594935412,
+        1.5707963267948963
+      ],
+      "cpu_accepted": true,
+      "fit": {
+        "cup_side_pose_authored": true,
+        "physical_drop_replayed": false,
+        "original_yaw_preserved_before_fixed_side_rotation": true,
+        "fixed_side_rotation_rad": 1.5707963267948966,
+        "support_gap_preserved_m": 0.0009999932944771972,
+        "center_below_fingertips_xy": true,
+        "accepted_cpu": true,
+        "reason": null,
+        "proposed_target_world": [
+          [
+            1.1532628283625105e-16,
+            -0.9999999999999996,
+            5.027655906635347e-16,
+            -1.0227648714192825
+          ],
+          [
+            0.9985734343755355,
+            1.6787492023380302e-16,
+            0.053395656747048874,
+            1.0489870701543231
+          ],
+          [
+            -0.05339565674704952,
+            5.014421563770198e-16,
+            0.9985734343755364,
+            0.4978126253700841
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "original_camera_projection": {
+          "head": {
+            "whole_target_envelope_inside_original_frustum": true,
+            "centre_inside_original_frustum": true,
+            "centre_ndc": [
+              -0.05726684513387887,
+              -0.7644618717168047,
+              0.9587939363341649
+            ],
+            "camera_path": "/World/Robot/head_link2/Head_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "left": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.02853578046551669,
+              -2.307185951661252,
+              0.9059857036858672
+            ],
+            "camera_path": "/World/Robot/gripper_l_base_link/Left_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "right": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.10807362603326429,
+              -2.3080536262157305,
+              0.9231001754644975
+            ],
+            "camera_path": "/World/Robot/gripper_r_base_link/Right_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          }
+        },
+        "hand_lowest_z_m": 0.7204657146792259,
+        "cup_highest_z_m": 0.5446252507401684,
+        "upright_source_cup_highest_z_m": 0.5809999952316283,
+        "protected_self_collision_checked": true,
+        "target_on_table_geometry_checked": true,
+        "hand_open_geometry_checked": true,
+        "physical_settle_verified": false,
+        "physical_grasp_proven": false
+      },
+      "training_provenance": {
+        "episode_index": 1479,
+        "frame": 143,
+        "row": {
+          "episode_index": 1479,
+          "task": {
+            "task_index": 29,
+            "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "task_kind": "atomic",
+            "benchmark_task_id": "7.10"
+          },
+          "active_hand": "l",
+          "parquet_relative": "data/chunk-001/episode_001479.parquet",
+          "parquet_sha256": "9c046874a169f5947a969a406270cf18c8e83f05c14036efecf50be3f9bba650",
+          "source_id": "atomic_7_10/batch_20261008_001:29",
+          "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_34",
+          "mapping": {
+            "adapter": "named_native_joint_commands_full_state",
+            "source_row_alignment": "preserved same-row command/post-step state; no implicit shift",
+            "base_action_mode": "uncommanded_static_policy_not_velocity_telemetry",
+            "base_state_mode": "initial_pose_stationary_projection_not_per_frame_telemetry",
+            "source_metadata_files": [
+              "action.json",
+              "appearance.json",
+              "destination_geometry.json",
+              "distractor_audit.json",
+              "distractor_plan.json",
+              "house_layout.json",
+              "house_layout_extra_prim_frames.json",
+              "owner_request.json",
+              "result.json",
+              "scene_plan.json"
+            ],
+            "base_projection_requires_review": true,
+            "numeric_source": "full_state.npz",
+            "source_frame_count": 304,
+            "original_quality_facts": [
+              {
+                "file": "action.json",
+                "facts": {
+                  "schema": "real2sim.family7_guide_action.v1"
+                }
+              },
+              {
+                "file": "appearance.json",
+                "facts": {
+                  "ok": true
+                }
+              },
+              {
+                "file": "destination_geometry.json",
+                "facts": {
+                  "passed": true
+                }
+              },
+              {
+                "file": "distractor_audit.json",
+                "facts": {
+                  "schema": "real2sim.distractor_audit.v1",
+                  "task_id": "family7_cup_e2e"
+                }
+              },
+              {
+                "file": "distractor_plan.json",
+                "facts": {
+                  "schema": "real2sim.episode_scene_randomization.plan.v1",
+                  "task_id": "29"
+                }
+              },
+              {
+                "file": "house_layout.json",
+                "facts": {
+                  "layout_id": "final_house_layout_06"
+                }
+              },
+              {
+                "file": "result.json",
+                "facts": {
+                  "status": "pass",
+                  "owner_review": "pending"
+                }
+              }
+            ]
+          },
+          "close_transition_frame": 140,
+          "first_minimum_frame": 143,
+          "frames_examined": [
+            0,
+            4,
+            9,
+            14,
+            19,
+            24,
+            28,
+            33,
+            38,
+            43,
+            48,
+            52,
+            57,
+            62,
+            67,
+            72,
+            76,
+            81,
+            86,
+            91,
+            96,
+            101,
+            105,
+            110,
+            115,
+            120,
+            125,
+            129,
+            130,
+            133,
+            134,
+            135,
+            138,
+            139,
+            140,
+            143,
+            144,
+            145,
+            148,
+            149,
+            150,
+            153,
+            158,
+            163,
+            168,
+            173,
+            177,
+            182,
+            187,
+            192,
+            197,
+            202,
+            206,
+            211,
+            216,
+            221,
+            226,
+            230,
+            235,
+            240,
+            245,
+            250,
+            254,
+            259,
+            264,
+            269,
+            274,
+            278,
+            283,
+            288,
+            293,
+            298,
+            303
+          ],
+          "source_success_not_inferred": true,
+          "all_phase_real_frame_coverage": true,
+          "provenance_sha256": "a0e636c9f76ca25c6bbd2de2a558bf6680a86c282c9a7881c0144c4544cf8088"
+        },
+        "source_state18_rad_or_m": {
+          "idx21_arm_l_joint1": -0.9819726347923279,
+          "idx22_arm_l_joint2": 0.954036295413971,
+          "idx23_arm_l_joint3": 0.41020509600639343,
+          "idx24_arm_l_joint4": -1.6034246683120728,
+          "idx25_arm_l_joint5": 0.9338904023170471,
+          "idx26_arm_l_joint6": 1.1574673652648926,
+          "idx27_arm_l_joint7": -0.27925440669059753,
+          "idx61_arm_r_joint1": 1.3912856578826904,
+          "idx62_arm_r_joint2": -0.9403483867645264,
+          "idx63_arm_r_joint3": -0.8204668760299683,
+          "idx64_arm_r_joint4": 1.2416880130767822,
+          "idx65_arm_r_joint5": -0.48456716537475586,
+          "idx66_arm_r_joint6": -1.4418081045150757,
+          "idx67_arm_r_joint7": -0.13504421710968018,
+          "idx01_body_joint1": 0.019998397678136826,
+          "idx02_body_joint2": 0.5236070156097412,
+          "idx11_head_joint1": 8.090873961918987e-07,
+          "idx12_head_joint2": 0.43636655807495117
+        },
+        "arm_body_head_copied_exactly": true,
+        "physical_source_grasp_proven": false,
+        "source_phase": "after_source_close_command_geometrically_elevated_not_a_failure_history"
+      },
+      "authored_failure_initial": true,
+      "physical_history_required": false,
+      "physical_failure_generation_verified": false,
+      "validation": {
+        "cpu": true,
+        "native": false,
+        "random_revalidation_required": true
+      },
+      "maximum_score": 9.5,
+      "completion_policy": "same_cup_released_inside_correct_bin"
+    },
+    {
+      "id": "train_ep1480_f143_l_opened_authored_side_cup",
+      "variant": "table_waste_tipped_cup",
+      "active_hand": "l",
+      "robot_initialization": {
+        "positions": {
+          "idx01_body_joint1": 0.019997477531433105,
+          "idx02_body_joint2": 0.5236098766326904,
+          "idx11_head_joint1": 1.0636346132741892e-06,
+          "idx12_head_joint2": 0.43637728691101074,
+          "idx21_arm_l_joint1": -1.1006050109863281,
+          "idx22_arm_l_joint2": 0.8974530100822449,
+          "idx23_arm_l_joint3": 0.47125616669654846,
+          "idx24_arm_l_joint4": -1.353933572769165,
+          "idx25_arm_l_joint5": 0.7942456603050232,
+          "idx26_arm_l_joint6": 1.319206714630127,
+          "idx27_arm_l_joint7": -0.14241722226142883,
+          "idx61_arm_r_joint1": 1.432409405708313,
+          "idx62_arm_r_joint2": -1.0409085750579834,
+          "idx63_arm_r_joint3": -0.8565253615379333,
+          "idx64_arm_r_joint4": 1.2064272165298462,
+          "idx65_arm_r_joint5": -0.5188379287719727,
+          "idx66_arm_r_joint6": -1.3475333452224731,
+          "idx67_arm_r_joint7": -0.13401776552200317,
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444,
+          "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+          "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+          "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+          "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+          "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+          "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+          "idx89_gripper_r_outer_joint0": -0.43470815091828396
+        },
+        "hold_targets": {
+          "idx21_arm_l_joint1": -1.1006050109863281,
+          "idx22_arm_l_joint2": 0.8974530100822449,
+          "idx23_arm_l_joint3": 0.47125616669654846,
+          "idx24_arm_l_joint4": -1.353933572769165,
+          "idx25_arm_l_joint5": 0.7942456603050232,
+          "idx26_arm_l_joint6": 1.319206714630127,
+          "idx27_arm_l_joint7": -0.14241722226142883,
+          "idx61_arm_r_joint1": 1.432409405708313,
+          "idx62_arm_r_joint2": -1.0409085750579834,
+          "idx63_arm_r_joint3": -0.8565253615379333,
+          "idx64_arm_r_joint4": 1.2064272165298462,
+          "idx65_arm_r_joint5": -0.5188379287719727,
+          "idx66_arm_r_joint6": -1.3475333452224731,
+          "idx67_arm_r_joint7": -0.13401776552200317,
+          "idx01_body_joint1": 0.019997477531433105,
+          "idx02_body_joint2": 0.5236098766326904,
+          "idx11_head_joint1": 1.0636346132741892e-06,
+          "idx12_head_joint2": 0.43637728691101074,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx81_gripper_r_outer_joint1": 0.7844094634056091
+        }
+      },
+      "gripper_opening": {
+        "hand": "l",
+        "open_coordinates": {
+          "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+          "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+          "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+          "idx39_gripper_l_inner_joint0": 0.427589621193043,
+          "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+          "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+          "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+          "idx49_gripper_l_outer_joint0": -0.4247991277133444
+        },
+        "policy": "existing_native_ready_open_linkage",
+        "arm_body_head_changed": false,
+        "physical_opening_animation_run": false
+      },
+      "base_canonical_column": [
+        [
+          -1.0000000000000004,
+          5.359585455961219e-16,
+          -1.7191815119845181e-16,
+          -1.1511755128898546
+        ],
+        [
+          6.818112618906271e-17,
+          -0.9999999999999996,
+          -1.5250340952160541e-18,
+          -0.1799440369622355
+        ],
+        [
+          -1.9778581020339762e-16,
+          4.026682339312598e-18,
+          1.0000000000000004,
+          -4.916999102499746e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "initial_base_xyyaw": [
+        -1.059709898176706,
+        0.4557726594935412,
+        1.5707963267948963
+      ],
+      "cpu_accepted": true,
+      "fit": {
+        "cup_side_pose_authored": true,
+        "physical_drop_replayed": false,
+        "original_yaw_preserved_before_fixed_side_rotation": true,
+        "fixed_side_rotation_rad": 1.5707963267948966,
+        "support_gap_preserved_m": 0.0009999932944771972,
+        "center_below_fingertips_xy": true,
+        "accepted_cpu": true,
+        "reason": null,
+        "proposed_target_world": [
+          [
+            1.1532628283625105e-16,
+            -0.9999999999999996,
+            5.027655906635347e-16,
+            -1.0623189433120603
+          ],
+          [
+            0.9985734343755355,
+            1.6787492023380302e-16,
+            0.053395656747048874,
+            1.073026686396131
+          ],
+          [
+            -0.05339565674704952,
+            5.014421563770198e-16,
+            0.9985734343755364,
+            0.4978126253700841
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "original_camera_projection": {
+          "head": {
+            "whole_target_envelope_inside_original_frustum": true,
+            "centre_inside_original_frustum": true,
+            "centre_ndc": [
+              -0.13419477338783875,
+              -0.6812387105194789,
+              0.9599321642858517
+            ],
+            "camera_path": "/World/Robot/head_link2/Head_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "left": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.030045684827860224,
+              -2.3038944463863174,
+              0.9058568421316787
+            ],
+            "camera_path": "/World/Robot/gripper_l_base_link/Left_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          },
+          "right": {
+            "whole_target_envelope_inside_original_frustum": false,
+            "centre_inside_original_frustum": false,
+            "centre_ndc": [
+              -0.10920308157164384,
+              -2.318594685671731,
+              0.9230915710302668
+            ],
+            "camera_path": "/World/Robot/gripper_r_base_link/Right_Camera",
+            "parameters_changed": false,
+            "occlusion_verified": false
+          }
+        },
+        "hand_lowest_z_m": 0.7194617242079447,
+        "cup_highest_z_m": 0.5446252507401684,
+        "upright_source_cup_highest_z_m": 0.5809999952316283,
+        "protected_self_collision_checked": true,
+        "target_on_table_geometry_checked": true,
+        "hand_open_geometry_checked": true,
+        "physical_settle_verified": false,
+        "physical_grasp_proven": false
+      },
+      "training_provenance": {
+        "episode_index": 1480,
+        "frame": 143,
+        "row": {
+          "episode_index": 1480,
+          "task": {
+            "task_index": 29,
+            "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+            "task_kind": "atomic",
+            "benchmark_task_id": "7.10"
+          },
+          "active_hand": "l",
+          "parquet_relative": "data/chunk-001/episode_001480.parquet",
+          "parquet_sha256": "31f30f02c9ca9eec15fc991a83d3a83176bce3e8e136c559c080f8ea9a6882a2",
+          "source_id": "atomic_7_10/batch_20261008_001:30",
+          "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_35",
+          "mapping": {
+            "adapter": "named_native_joint_commands_full_state",
+            "source_row_alignment": "preserved same-row command/post-step state; no implicit shift",
+            "base_action_mode": "uncommanded_static_policy_not_velocity_telemetry",
+            "base_state_mode": "initial_pose_stationary_projection_not_per_frame_telemetry",
+            "source_metadata_files": [
+              "action.json",
+              "appearance.json",
+              "destination_geometry.json",
+              "distractor_audit.json",
+              "distractor_plan.json",
+              "house_layout.json",
+              "house_layout_extra_prim_frames.json",
+              "owner_request.json",
+              "result.json",
+              "scene_plan.json"
+            ],
+            "base_projection_requires_review": true,
+            "numeric_source": "full_state.npz",
+            "source_frame_count": 304,
+            "original_quality_facts": [
+              {
+                "file": "action.json",
+                "facts": {
+                  "schema": "real2sim.family7_guide_action.v1"
+                }
+              },
+              {
+                "file": "appearance.json",
+                "facts": {
+                  "ok": true
+                }
+              },
+              {
+                "file": "destination_geometry.json",
+                "facts": {
+                  "passed": true
+                }
+              },
+              {
+                "file": "distractor_audit.json",
+                "facts": {
+                  "schema": "real2sim.distractor_audit.v1",
+                  "task_id": "family7_cup_e2e"
+                }
+              },
+              {
+                "file": "distractor_plan.json",
+                "facts": {
+                  "schema": "real2sim.episode_scene_randomization.plan.v1",
+                  "task_id": "29"
+                }
+              },
+              {
+                "file": "house_layout.json",
+                "facts": {
+                  "layout_id": "final_house_layout_31"
+                }
+              },
+              {
+                "file": "result.json",
+                "facts": {
+                  "status": "pass",
+                  "owner_review": "pending"
+                }
+              }
+            ]
+          },
+          "close_transition_frame": 140,
+          "first_minimum_frame": 143,
+          "frames_examined": [
+            0,
+            4,
+            9,
+            14,
+            19,
+            24,
+            28,
+            33,
+            38,
+            43,
+            48,
+            52,
+            57,
+            62,
+            67,
+            72,
+            76,
+            81,
+            86,
+            91,
+            96,
+            101,
+            105,
+            110,
+            115,
+            120,
+            125,
+            129,
+            130,
+            133,
+            134,
+            135,
+            138,
+            139,
+            140,
+            143,
+            144,
+            145,
+            148,
+            149,
+            150,
+            153,
+            158,
+            163,
+            168,
+            173,
+            177,
+            182,
+            187,
+            192,
+            197,
+            202,
+            206,
+            211,
+            216,
+            221,
+            226,
+            230,
+            235,
+            240,
+            245,
+            250,
+            254,
+            259,
+            264,
+            269,
+            274,
+            278,
+            283,
+            288,
+            293,
+            298,
+            303
+          ],
+          "source_success_not_inferred": true,
+          "all_phase_real_frame_coverage": true,
+          "provenance_sha256": "2e23fc1cb70204645ec8a8dd79bffe27e60fb8c633b907170a8d85a88471d857"
+        },
+        "source_state18_rad_or_m": {
+          "idx21_arm_l_joint1": -1.1006050109863281,
+          "idx22_arm_l_joint2": 0.8974530100822449,
+          "idx23_arm_l_joint3": 0.47125616669654846,
+          "idx24_arm_l_joint4": -1.353933572769165,
+          "idx25_arm_l_joint5": 0.7942456603050232,
+          "idx26_arm_l_joint6": 1.319206714630127,
+          "idx27_arm_l_joint7": -0.14241722226142883,
+          "idx61_arm_r_joint1": 1.432409405708313,
+          "idx62_arm_r_joint2": -1.0409085750579834,
+          "idx63_arm_r_joint3": -0.8565253615379333,
+          "idx64_arm_r_joint4": 1.2064272165298462,
+          "idx65_arm_r_joint5": -0.5188379287719727,
+          "idx66_arm_r_joint6": -1.3475333452224731,
+          "idx67_arm_r_joint7": -0.13401776552200317,
+          "idx01_body_joint1": 0.019997477531433105,
+          "idx02_body_joint2": 0.5236098766326904,
+          "idx11_head_joint1": 1.0636346132741892e-06,
+          "idx12_head_joint2": 0.43637728691101074
+        },
+        "arm_body_head_copied_exactly": true,
+        "physical_source_grasp_proven": false,
+        "source_phase": "after_source_close_command_geometrically_elevated_not_a_failure_history"
+      },
+      "authored_failure_initial": true,
+      "physical_history_required": false,
+      "physical_failure_generation_verified": false,
+      "validation": {
+        "cpu": true,
+        "native": false,
+        "random_revalidation_required": true
+      },
+      "maximum_score": 9.5,
+      "completion_policy": "same_cup_released_inside_correct_bin"
+    }
+  ],
+  "counts": {
+    "hand_not_above_original_upright_cup_top": 18,
+    "accepted": 8,
+    "target_not_wholly_in_original_camera": 16
+  },
+  "definition_sha256": "aac5c454d284b227e842611b6334141c17e9d84d326a52b37347e1fe0d0ce8cd",
+  "inventory_sha256": "dc449edad64e8cf45c4049fce86c561cec2a68ec2318874d0c9afa02ba57814d",
+  "station_template_sha256": "54778f8e61295ff4d2d8316345858b1757cab2d3f886b46a42459698928b5b8b",
+  "source_base_key": "tipped_cup_base401_r3",
+  "online_ik_calls": 0,
+  "runtime_training_dataset_required": false,
+  "physical_history_required": false,
+  "native_physics_tested": false,
+  "runtime_registered": false,
+  "code_sha256": {
+    "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/tipped_open_v1/compile_elevated.py": "80b543e5bcce3094f2b84c62d9e54080f9482f7a0a261c85698f3af0b58e836b",
+    "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/tipped_open_v1/geometry.py": "a67c492fbd24ea1a783ee0bb33a319df6063d0b0f7cd927224eae2817e60d400"
+  },
+  "content_sha256": "98c852f5d58f5ebb387e4357745e841b1a3c7a05ead18a29451fa6a47e87602b"
+}

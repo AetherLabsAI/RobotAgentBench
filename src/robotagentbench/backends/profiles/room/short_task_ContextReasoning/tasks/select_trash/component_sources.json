@@ -1,0 +1,20 @@
+{
+  "sources": {
+    "short_task_ContextReasoning/tasks/select_trash/task.py": "653e8b8d3feab2e42a141586c6a32ce6be0fa61af6909b76d9efd4128869509d",
+    "short_task_ContextReasoning/tasks/select_trash/adapter.py": "ccab6e0fd0eb80e1a6ecc46f7d581ed2d82a9f9772771b34374b82012e0264a1",
+    "short_task_ContextReasoning/tasks/select_trash/native.py": "5664beeb77527a67dd87f849de3eb479ca9708b561de77a2358e5421fb7965a7",
+    "short_task_ContextReasoning/tasks/select_trash/prepare.py": "46317e242328f2b61234bad1ee4afceb62baee4e51b4939af7e217eac4860925",
+    "short_task_ContextReasoning/tasks/select_trash/registered_prepare.py": "d35c4ff08b35b0497f886672406136455e4fc51f6771919c89eee1492fcbd2db",
+    "short_task_ContextReasoning/tasks/select_trash/placement.cjs": "8029a7938416ee7772157d3b98ae78abb9557cffabaa75c202a614ebedf1f378",
+    "short_task_ContextReasoning/asset_pools/trash_selection_v1/catalog.json": "76a4d2314357c39774d5fd1a0864961cf323c5f1a9e1e60763889754cb78d7f3",
+    "openend/tasks/meal_tray/task_contact_routing.py": "090afe2556453393730388ceed837e14c1ffd7bda9c2502f4ec9c2408e887e71",
+    "evaluation/tasks/tidy_sofa/isaac_reader.py": "3cd24769562d6be4353f00705ea2502e521ea8ff1c6782951d5b133039391185",
+    "arena_api/contact_identity.py": "cf4655ad044ae7104dfbbb86a280b487c6727d610558dfd54c609ee548d116c4",
+    "openend/tasks/holding_follow_v1/detection.py": "11df2be850fe9c815c4b185d69bddcab47b03ca5109661eff81b5356ff8a54c6",
+    "openend/tasks/glasses_transfer/contacts.py": "2e6837a2e0ecb9acde560e82d8f4fa356aedff5de264c727816794c8b2ab8fe3",
+    "openend/tasks/meal_tray/nonmotion_closeout_v1/initial_windows.py": "1ca088609be6bf5468691c9c70deac99c66e395c71cce15a8be5918a44178f64",
+    "arena_api/robot_drive_defaults.py": "1adb35f0f422d4dc6b0a9be43d786a46ef8d91dd9b3e38bc72e4161615733fe6",
+    "short_tasks/agent_probe_v1/robot_parameter_alignment.py": "224a176df609253478264de51e5506bfe8fce8733d16c75c50d96e08824b697c",
+    "short_tasks/agent_probe_v1/native_owner.py": "c4f8c6f812fde94c29234e7b859863cb5190aa19455d1cd9d19e16f4c11281f1"
+  }
+}

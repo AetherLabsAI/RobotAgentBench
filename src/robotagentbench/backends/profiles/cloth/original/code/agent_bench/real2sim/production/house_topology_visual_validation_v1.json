@@ -1,0 +1,97 @@
+{
+  "schema": "real2sim.house_topology_visual_validation.v1",
+  "candidate_status": "topology_planning_candidate",
+  "production_layout_catalog_replaced": false,
+  "asset_identity_audit": {
+    "selected_air_fryer": "chefman_photo_v8_task_compatible_repro",
+    "local_contract": "real2sim/production/assets/kitchen_task_appliances/air_fryer_chefman_task63/usd/air_fryer_chefman_photo_physics_v8_repro_v1.usda",
+    "l1_current_checkout": "/mnt/data1/workspace/agent_bench_0807",
+    "l2_current_checkout": "/data/admin/work/agent_bench_workspaces/agent_bench_0807",
+    "l2_task66_wrapper": "/home/admin/workspace/genie_sim_demo/genie_sim_demo/demo_sim/task66_67_assets/air_fryer/usd/air_fryer_chefman_task_compatible_photo_v8_repro_v1.usda",
+    "l2_task63_policy": "oldparams wrapper composes the same Chefman photo-v8 reproduction base",
+    "direct_file_comparison": "local_l1_l2_and_task_runtime_copies_equal",
+    "historical_v19_selected": false
+  },
+  "unified_randomization": {
+    "entrypoint": "real2sim/production/appearance.py",
+    "topology_option": "--topology-id",
+    "topology_count": 50,
+    "palette_count": 4,
+    "plan_matrix_tested": 200,
+    "domains": [
+      "furniture_materials",
+      "floor_and_wall_materials",
+      "kitchen_materials",
+      "room_lighting",
+      "artwork",
+      "lamps",
+      "plants"
+    ],
+    "result": "passed_plan_and_unit_validation"
+  },
+  "usd_overlay_smoke": {
+    "entrypoint": "real2sim/production/run_house_topology_visual_canary.py --all-topology-usd-smoke --execute",
+    "report": "real2sim/work/house_topology_visual_smoke_v8/TOPOLOGY_VISUAL_SMOKE.json",
+    "evaluated_topologies": 50,
+    "author_save_reopen_passed": 50,
+    "exact_composed_footprint_modules_per_topology": 13,
+    "composed_footprint_passed": 50,
+    "composed_footprint_violations": 0,
+    "render_only_proxy_count": 0,
+    "furniture_to_wall_gap_m": 0.02,
+    "result": "passed",
+    "live_collision": "not_run",
+    "physics_replay": "not_run"
+  },
+  "accepted_trajectory_render_canary": {
+    "task_key": "benchmark_7_2",
+    "source_core": "dataset/sim_episodes_repro/task_owned_50x4/benchmark_7_2/trajectories/episode_000",
+    "topology_id": "house_topology_21",
+    "topology_ordinal": 21,
+    "archetype": "u_courtyard",
+    "palette": "dark_walnut",
+    "visual_seed": 50700020,
+    "artifact": "real2sim/work/house_topology_visual_canary_v8/house_topology_21/core_000_dark_walnut",
+    "frames_per_camera": 361,
+    "fps": 20.0,
+    "camera_count": 3,
+    "accepted_source_action_state_modified": false,
+    "base_xyyaw_matches_topology_transform": true,
+    "non_base_action_channels_unchanged": true,
+    "maximum_body_position_write_readback_error_m": 8.881784197001252e-16,
+    "maximum_robot_root_position_write_readback_error_m": 1.277829121829868e-07,
+    "required_composed_asset_prims_checked_in_renderer": 8,
+    "air_fryer_body_and_tray_composed": true,
+    "task73_tote_composed": true,
+    "video_qc_passed": true,
+    "camera_mean_luma": {
+      "head": 40.913,
+      "hand_left": 44.2446,
+      "hand_right": 41.6051
+    },
+    "physics_rollout_performed": false,
+    "result": "passed_state_driven_render_only"
+  },
+  "known_visual_findings": {
+    "fixed": [
+      "canonical wallpaper, windows, doors, shell and old lights leaked through untyped parent scopes",
+      "topology overview initially showed ceilings and walls instead of a cutaway",
+      "lamp replacement roots shared plant pivots and could drift from their slots",
+      "dark palette was under-lit after canonical lights were removed",
+      "sofa and TV fixture width/depth axes were reversed relative to their interaction frames",
+      "the 2.28 x 4.62 m monolithic kitchen was incorrectly reused as a 1.8 x 0.7 m prep counter and crossed room walls",
+      "Chefman air-fryer asset staging root was mode 0700 and could not be traversed by the renderer container uid",
+      "Task73 tote existed in the asset library but was inactive and absent from topology review renders"
+    ],
+    "remaining": [
+      "the accepted Task-7.2 left wrist camera is naturally occluded by furniture around the middle of the trajectory"
+    ]
+  },
+  "acceptance_limits": {
+    "live_navigation_validated": false,
+    "live_collision_validated": false,
+    "physics_replay_validated": false,
+    "manipulation_validated": false,
+    "production_schedule_enabled": false
+  }
+}

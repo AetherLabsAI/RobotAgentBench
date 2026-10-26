@@ -1,0 +1,10 @@
+{
+  "schema": "openend.short_task.request.v1",
+  "task_name": "fridge_to_heated_box",
+  "rule_version": "openend.short_task.fridge_to_heated_box.v3",
+  "seed": 47,
+  "layout_id": null,
+  "options": {
+    "payload_variant": "beef_box"
+  }
+}

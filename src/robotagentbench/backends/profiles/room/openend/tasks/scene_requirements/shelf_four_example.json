@@ -1,0 +1,12 @@
+{
+  "schema": "openend.scene_requirements.request.v2",
+  "seed": 42,
+  "layout_id": 26,
+  "tasks": [
+    {"id": "shelf_coke_c3", "type": "snack_drink_to_tray", "product": "coke_c3"},
+    {"id": "shelf_gatorade_m", "type": "snack_drink_to_tray", "product": "gatorade_m"},
+    {"id": "shelf_oreo_gf", "type": "snack_drink_to_tray", "product": "oreo_gf"},
+    {"id": "shelf_zbar_t", "type": "snack_drink_to_tray", "product": "zbar_t"}
+  ],
+  "extras": []
+}

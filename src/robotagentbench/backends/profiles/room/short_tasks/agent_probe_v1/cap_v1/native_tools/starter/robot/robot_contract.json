@@ -1,0 +1,501 @@
+{
+  "schema": "arena.g1.kinematics.v1",
+  "model": "robot_arm_kinematics.xml",
+  "model_use": "FK/IK only; placeholder inertials; closed-chain constraints not simulated",
+  "frame": "base_link",
+  "transform_convention": "column vector, quaternion wxyz",
+  "control_hz": 20.0,
+  "transport_note": "Robot kinematic coordinates only. ShortTasks uses 22D: command_order below plus base forward m/s and yaw rad/s; see native contract.",
+  "command_profile": "g1.joint20.v1",
+  "command_order": [
+    "idx21_arm_l_joint1",
+    "idx22_arm_l_joint2",
+    "idx23_arm_l_joint3",
+    "idx24_arm_l_joint4",
+    "idx25_arm_l_joint5",
+    "idx26_arm_l_joint6",
+    "idx27_arm_l_joint7",
+    "idx61_arm_r_joint1",
+    "idx62_arm_r_joint2",
+    "idx63_arm_r_joint3",
+    "idx64_arm_r_joint4",
+    "idx65_arm_r_joint5",
+    "idx66_arm_r_joint6",
+    "idx67_arm_r_joint7",
+    "idx01_body_joint1",
+    "idx02_body_joint2",
+    "idx11_head_joint1",
+    "idx12_head_joint2",
+    "idx41_gripper_l_outer_joint1",
+    "idx81_gripper_r_outer_joint1"
+  ],
+  "state_joints": [
+    {
+      "name": "idx01_body_joint1",
+      "unit": "m",
+      "limits": [
+        0.0,
+        0.550000011920929
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx02_body_joint2",
+      "unit": "rad",
+      "limits": [
+        0.0,
+        1.5707963267948966
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx11_head_joint1",
+      "unit": "rad",
+      "limits": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx12_head_joint2",
+      "unit": "rad",
+      "limits": [
+        -0.3490658171093523,
+        0.5235987755982988
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx21_arm_l_joint1",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx22_arm_l_joint2",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx23_arm_l_joint3",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx24_arm_l_joint4",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx25_arm_l_joint5",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx26_arm_l_joint6",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx27_arm_l_joint7",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx31_gripper_l_inner_joint1",
+      "unit": "rad",
+      "limits": [
+        -0.7853981633974483,
+        0.0
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx32_gripper_l_inner_joint3",
+      "unit": "rad",
+      "limits": [
+        -0.17453292519943295,
+        0.17453292519943295
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx33_gripper_l_inner_joint4",
+      "unit": "rad",
+      "limits": [
+        -0.03490658503988659,
+        0.03490658503988659
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx39_gripper_l_inner_joint0",
+      "unit": "rad",
+      "limits": [
+        -1.9999998901875549,
+        1.9999998901875549
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx41_gripper_l_outer_joint1",
+      "unit": "rad",
+      "limits": [
+        0.0,
+        0.7853981633974483
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx42_gripper_l_outer_joint3",
+      "unit": "rad",
+      "limits": [
+        -0.17453292519943295,
+        0.17453292519943295
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx43_gripper_l_outer_joint4",
+      "unit": "rad",
+      "limits": [
+        -0.03490658503988659,
+        0.03490658503988659
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx49_gripper_l_outer_joint0",
+      "unit": "rad",
+      "limits": [
+        -1.9999998901875549,
+        1.9999998901875549
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx61_arm_r_joint1",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx62_arm_r_joint2",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx63_arm_r_joint3",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx64_arm_r_joint4",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx65_arm_r_joint5",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx66_arm_r_joint6",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx67_arm_r_joint7",
+      "unit": "rad",
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx71_gripper_r_inner_joint1",
+      "unit": "rad",
+      "limits": [
+        -0.7853981633974483,
+        0.0
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx72_gripper_r_inner_joint3",
+      "unit": "rad",
+      "limits": [
+        -0.17453292519943295,
+        0.17453292519943295
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx73_gripper_r_inner_joint4",
+      "unit": "rad",
+      "limits": [
+        -0.03490658503988659,
+        0.03490658503988659
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx79_gripper_r_inner_joint0",
+      "unit": "rad",
+      "limits": [
+        -1.9999998901875549,
+        1.9999998901875549
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx81_gripper_r_outer_joint1",
+      "unit": "rad",
+      "limits": [
+        0.0,
+        0.7853981633974483
+      ],
+      "driven": true
+    },
+    {
+      "name": "idx82_gripper_r_outer_joint3",
+      "unit": "rad",
+      "limits": [
+        -0.17453292519943295,
+        0.17453292519943295
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx83_gripper_r_outer_joint4",
+      "unit": "rad",
+      "limits": [
+        -0.03490658503988659,
+        0.03490658503988659
+      ],
+      "driven": false
+    },
+    {
+      "name": "idx89_gripper_r_outer_joint0",
+      "unit": "rad",
+      "limits": [
+        -1.9999998901875549,
+        1.9999998901875549
+      ],
+      "driven": false
+    }
+  ],
+  "arm_ik_model": "robot_arm_kinematics.xml",
+  "arm_ik_coordinates": [
+    "idx21_arm_l_joint1",
+    "idx22_arm_l_joint2",
+    "idx23_arm_l_joint3",
+    "idx24_arm_l_joint4",
+    "idx25_arm_l_joint5",
+    "idx26_arm_l_joint6",
+    "idx27_arm_l_joint7",
+    "idx61_arm_r_joint1",
+    "idx62_arm_r_joint2",
+    "idx63_arm_r_joint3",
+    "idx64_arm_r_joint4",
+    "idx65_arm_r_joint5",
+    "idx66_arm_r_joint6",
+    "idx67_arm_r_joint7",
+    "idx01_body_joint1",
+    "idx02_body_joint2",
+    "idx11_head_joint1",
+    "idx12_head_joint2"
+  ],
+  "arm_ik_excluded_coordinates": [
+    "idx31_gripper_l_inner_joint1",
+    "idx32_gripper_l_inner_joint3",
+    "idx33_gripper_l_inner_joint4",
+    "idx39_gripper_l_inner_joint0",
+    "idx41_gripper_l_outer_joint1",
+    "idx42_gripper_l_outer_joint3",
+    "idx43_gripper_l_outer_joint4",
+    "idx49_gripper_l_outer_joint0",
+    "idx71_gripper_r_inner_joint1",
+    "idx72_gripper_r_inner_joint3",
+    "idx73_gripper_r_inner_joint4",
+    "idx79_gripper_r_inner_joint0",
+    "idx81_gripper_r_outer_joint1",
+    "idx82_gripper_r_outer_joint3",
+    "idx83_gripper_r_outer_joint4",
+    "idx89_gripper_r_outer_joint0"
+  ],
+  "arm_ik_scope": "18 body/head/arm coordinates determine TCP; all 34 measured states remain in API; gripper commands separate, no channel truncation",
+  "arms": {
+    "left": [
+      "idx21_arm_l_joint1",
+      "idx22_arm_l_joint2",
+      "idx23_arm_l_joint3",
+      "idx24_arm_l_joint4",
+      "idx25_arm_l_joint5",
+      "idx26_arm_l_joint6",
+      "idx27_arm_l_joint7"
+    ],
+    "right": [
+      "idx61_arm_r_joint1",
+      "idx62_arm_r_joint2",
+      "idx63_arm_r_joint3",
+      "idx64_arm_r_joint4",
+      "idx65_arm_r_joint5",
+      "idx66_arm_r_joint6",
+      "idx67_arm_r_joint7"
+    ]
+  },
+  "tcp": {
+    "l": {
+      "site": "gripper_l_center_link",
+      "parent": "gripper_l_base_link",
+      "parent_T_tcp": [
+        [
+          -2.220446049250313e-16,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          -2.220446049250313e-16,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1430799961090088
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "r": {
+      "site": "gripper_r_center_link",
+      "parent": "gripper_r_base_link",
+      "parent_T_tcp": [
+        [
+          -2.220446049250313e-16,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          -2.220446049250313e-16,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1430799961090088
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "excluded_constraints": [
+    {
+      "name": "idx53_gripper_l_outer_joint2",
+      "type": "PhysicsSphericalJoint",
+      "reason": "closed-chain constraint, not independent scalar coordinate"
+    },
+    {
+      "name": "idx54_gripper_l_inner_joint2",
+      "type": "PhysicsSphericalJoint",
+      "reason": "closed-chain constraint, not independent scalar coordinate"
+    },
+    {
+      "name": "idx93_gripper_r_outer_joint2",
+      "type": "PhysicsSphericalJoint",
+      "reason": "closed-chain constraint, not independent scalar coordinate"
+    },
+    {
+      "name": "idx94_gripper_r_inner_joint2",
+      "type": "PhysicsSphericalJoint",
+      "reason": "closed-chain constraint, not independent scalar coordinate"
+    }
+  ],
+  "gripper_encoding": "native outer joint rad; normalization is joint-coordinate, not linear aperture",
+  "gripper_endpoints_pending_physical_check": false,
+  "model_sha256": "d9cad7a2ff36e059ac125526c9a1d8bb5938eb765a6dcb1430b6b0ec1887c54f",
+  "gripper_open_coordinate": 1.0,
+  "gripper_closed_coordinate": 0.0,
+  "gripper_one_native_rad": 0.7853981633974483,
+  "gripper_zero_native_rad": 0.0,
+  "calibration_scope": "robot-only FK and six 1-cm native-PD moves; not task/API rollout or global reachability guarantee",
+  "validation": {
+    "max_live_tcp_position_mm": 0.0009555535279881953,
+    "max_live_tcp_angle_deg": 7.897290852168028e-05,
+    "physical_small_moves_passed": 6,
+    "strict_ik_converged": 47,
+    "strict_ik_cases": 48,
+    "strict_ik_position_tolerance_mm": 0.1,
+    "max_ik_residual_mm": 0.637078463307287
+  }
+}

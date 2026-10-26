@@ -1,0 +1,192 @@
+{
+  "schema": "real2sim.whole_house_appearance_registry.v1",
+  "status": "current",
+  "activation_env": "REAL2SIM_APPEARANCE_PROFILE_V2=1",
+  "entrypoint": "real2sim/production/appearance.py",
+  "application_groups": [
+    ["kitchen", "central_table"],
+    ["livingroom_lamps", "livingroom_plants"]
+  ],
+  "components": {
+    "kitchen": {
+      "owner": "real2sim/production/kitchen_material_randomization.py",
+      "plan_path": "kitchen_materials.stove",
+      "scope": "stove worktop, lower cabinets, upper cabinets, and handles"
+    },
+    "central_table": {
+      "owner": "real2sim/production/kitchen_material_randomization.py",
+      "policy": "real2sim/production/central_table_material_random_options.json",
+      "plan_path": "kitchen_materials.central_table",
+      "scope": "large central kitchen table material option"
+    },
+    "livingroom_lamps": {
+      "owner": "real2sim/production/livingroom_environment_randomization.py",
+      "plan_path": "environment.decor_selection.lamp_replacement",
+      "scope": "one lamp asset per seed in left, right, or both TV-side slots"
+    },
+    "livingroom_plants": {
+      "owner": "real2sim/production/livingroom_plant_randomization.py",
+      "coordinator": "real2sim/production/livingroom_environment_randomization.py",
+      "plan_path": "environment.decor_selection.plants",
+      "scope": "five unique plants with lamp-aware TV-side stand visibility"
+    }
+  },
+  "harmony_policy": {
+    "schema": "real2sim.whole_house_appearance_harmony.v1",
+    "status": "enforced",
+    "selection": "furniture_style_first_then_conditional_component_sampling",
+    "canonical_palette_id": "canonical",
+    "delivery_variant_palette_policy": "one_fixed_palette_per_variant_each_core",
+    "delivery_palette_ids": [
+      "warm_oak_linen",
+      "cool_gray_black",
+      "light_scandi",
+      "dark_walnut"
+    ],
+    "failure_mode": "fail_closed_before_scene_authoring",
+    "review_basis": "existing current-House review renders plus named material temperature and value families",
+    "palettes": {
+      "canonical": {
+        "environment_style": "warm_sage_oak",
+        "lighting_schemes": ["mixed_soft", "neutral_day"],
+        "central_table_options": [
+          "light_oak_warmwhite",
+          "light_worktop_warmwhite",
+          "worktopmat_warmwhite"
+        ],
+        "stove_rules": [
+          "light_worktop_countertop",
+          "warm_white_countertop"
+        ],
+        "artworks": ["modern_canvas", "wall_frame_16a"],
+        "lamps": [
+          "floor_lamp_01", "floor_lamp_02", "floor_lamp_03",
+          "floor_lamp_04", "floor_lamp_05", "floor_lamp_06",
+          "floor_lamp_07", "floor_lamp_08", "floor_lamp_09",
+          "floor_lamp_10", "floor_lamp_11", "floor_lamp_12",
+          "floor_lamp_13", "floor_lamp_14", "floor_lamp_15"
+        ],
+        "plants": [
+          "costa_white_ficus", "volume_small_rubber", "volume_tall_audrey",
+          "eda_boston_fern", "sand_strelitzia", "sand_cactus",
+          "bishop_cereus", "glazed_schefflera", "bright_calathea",
+          "bamboo_monstera", "cecilia_spider", "bishop_dracaena"
+        ]
+      },
+      "warm_oak_linen": {
+        "environment_style": "terracotta_linen",
+        "lighting_schemes": ["mixed_bright", "mixed_soft", "warm_evening"],
+        "central_table_options": [
+          "light_oak_warmwhite",
+          "oak_medium_matte_warmwhite",
+          "walnut_dark_satin_all"
+        ],
+        "stove_rules": [
+          "light_worktop_countertop",
+          "warm_white_countertop"
+        ],
+        "artworks": ["modern_canvas", "wall_frame_16c"],
+        "lamps": [
+          "floor_lamp_01", "floor_lamp_02", "floor_lamp_03",
+          "floor_lamp_04", "floor_lamp_05", "floor_lamp_06",
+          "floor_lamp_07", "floor_lamp_08", "floor_lamp_09",
+          "floor_lamp_10", "floor_lamp_11", "floor_lamp_12",
+          "floor_lamp_13", "floor_lamp_14", "floor_lamp_15"
+        ],
+        "plants": [
+          "sand_strelitzia", "sand_cactus", "bishop_cereus",
+          "glazed_schefflera", "bright_calathea", "bamboo_monstera",
+          "hanging_pothos", "cecilia_spider", "bishop_dracaena"
+        ]
+      },
+      "cool_gray_black": {
+        "environment_style": "blue_gray_walnut",
+        "lighting_schemes": ["cool_day", "mixed_soft", "neutral_day"],
+        "central_table_options": [
+          "dark_worktop_charcoal_matte",
+          "dark_worktop_lower_cabinet_charcoal"
+        ],
+        "stove_rules": [
+          "charcoal_countertop",
+          "dark_worktop_countertop"
+        ],
+        "artworks": ["wall_frame_16g"],
+        "lamps": [
+          "floor_lamp_01", "floor_lamp_02", "floor_lamp_03",
+          "floor_lamp_04", "floor_lamp_05", "floor_lamp_06",
+          "floor_lamp_07", "floor_lamp_08", "floor_lamp_09",
+          "floor_lamp_10", "floor_lamp_11", "floor_lamp_12",
+          "floor_lamp_13", "floor_lamp_15"
+        ],
+        "plants": [
+          "costa_white_ficus", "volume_small_rubber", "volume_tall_audrey",
+          "dark_rhodea", "costa_dark_areca", "dark_majesty_palm",
+          "dark_base_livistona", "metal_dracaena", "dark_cross_palm"
+        ]
+      },
+      "light_scandi": {
+        "environment_style": "scandi_light",
+        "lighting_schemes": ["cool_day", "mixed_soft", "neutral_day"],
+        "central_table_options": [
+          "light_oak_warmwhite",
+          "light_worktop_warmwhite",
+          "oak_medium_matte_warmwhite",
+          "worktopmat_warmwhite"
+        ],
+        "stove_rules": [
+          "light_worktop_countertop",
+          "warm_white_countertop"
+        ],
+        "artworks": ["wall_frame_16f"],
+        "lamps": [
+          "floor_lamp_01", "floor_lamp_02", "floor_lamp_03",
+          "floor_lamp_04", "floor_lamp_05", "floor_lamp_06",
+          "floor_lamp_07", "floor_lamp_08", "floor_lamp_09",
+          "floor_lamp_10", "floor_lamp_11", "floor_lamp_12",
+          "floor_lamp_13", "floor_lamp_15"
+        ],
+        "plants": [
+          "costa_white_ficus", "volume_small_rubber", "volume_tall_audrey",
+          "eda_boston_fern", "sand_strelitzia", "sand_cactus",
+          "bishop_cereus", "bright_calathea", "bamboo_monstera",
+          "cecilia_spider"
+        ]
+      },
+      "dark_walnut": {
+        "environment_style": "dramatic_olive",
+        "lighting_schemes": ["mixed_soft", "warm_evening"],
+        "central_table_options": [
+          "dark_worktop_charcoal_matte",
+          "dark_worktop_lower_cabinet_charcoal",
+          "walnut_dark_satin_all"
+        ],
+        "stove_rules": [
+          "charcoal_countertop",
+          "dark_worktop_countertop"
+        ],
+        "artworks": ["modern_canvas", "wall_frame_16j"],
+        "lamps": [
+          "floor_lamp_01", "floor_lamp_02", "floor_lamp_03",
+          "floor_lamp_04", "floor_lamp_05", "floor_lamp_06",
+          "floor_lamp_07", "floor_lamp_08", "floor_lamp_09",
+          "floor_lamp_10", "floor_lamp_11", "floor_lamp_12",
+          "floor_lamp_13", "floor_lamp_14", "floor_lamp_15"
+        ],
+        "plants": [
+          "dark_rhodea", "bishop_cereus", "costa_dark_areca",
+          "dark_majesty_palm", "dark_base_livistona", "metal_dracaena",
+          "glazed_schefflera", "bamboo_monstera", "hanging_pothos",
+          "cross_alocasia", "dark_cross_palm", "bishop_dracaena"
+        ]
+      }
+    }
+  },
+  "invariants": {
+    "deterministic_per_task_and_seed": true,
+    "appearance_only": true,
+    "furniture_transforms_authored": false,
+    "collision_authored": false,
+    "lamp_plant_slot_conflicts": "livingroom_environment_randomization owns lamp selection; plant stands at selected lamp slots are hidden",
+    "whole_house_harmony": "every non-canonical draw must pass the registered furniture-style palette compatibility gate before scene authoring"
+  }
+}

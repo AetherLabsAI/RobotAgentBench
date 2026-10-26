@@ -1,0 +1,10 @@
+{
+  "schema": "openend.short_task.request.draft.v1",
+  "task_name": "sofa_to_coffee_table",
+  "seed": 42,
+  "layout_id": null,
+  "rule_version": "openend.short_task.sofa_to_coffee_table.v1",
+  "options": {
+    "asset": "remote_tv"
+  }
+}

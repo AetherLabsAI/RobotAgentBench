@@ -1,0 +1,6 @@
+{
+  "schema": "grasp_failure_recovery.coffee_json_provenance.v1",
+  "episode": "bag_small30_seed_4126_episode_0000",
+  "public_binding_sha256": "386e439983ed70cc5b1480c5df7f6bbb373c3ad2a6dba85fbd6d8558800bf5bb",
+  "episode_manifest_sha256": "7e01a42966278fda2970ab1159c463c63d49b80df9d1d52e727e840a0c3e859c"
+}

@@ -1,0 +1,266 @@
+{
+  "id": "snack_shelf",
+  "name": "零食架（1.20 m 加宽，含四层支撑）",
+  "entry": "snack_shelf/asset.usda",
+  "revision": "task3_unified_shelf_20261003_v3",
+  "source_scene": "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/scene_room_shelf_pick.usda",
+  "source_prim": "/World/Assets/ShelvingUnit",
+  "behaviors": [],
+  "source_release": "API composed support asset",
+  "default_prim": "/Asset",
+  "payload": "4f7a62330ec4ec645c19427598c54ce2832012cc3998d8e2c0086c6b55869771.usda",
+  "normalization": {
+    "active": true,
+    "removed_world_translation_m": [
+      -2.3690211510018,
+      2.252956604618633,
+      0.0
+    ],
+    "original_world_matrix": [
+      [
+        0.007112099789083004,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        2.2204459996194763e-18,
+        0.009999999776482582,
+        0.0
+      ],
+      [
+        0.0,
+        -0.009156499989330769,
+        2.033151422627004e-18,
+        0.0
+      ],
+      [
+        -2.3690211510018,
+        2.252956604618633,
+        0.0,
+        1.0
+      ]
+    ],
+    "scale_and_orientation_preserved": true,
+    "support_container_definition": "BoardSupports over -> def Scope; no geometry/physics attribute edits"
+  },
+  "extracted_mappings": [
+    [
+      "/World/Assets/ShelvingUnit",
+      "/Asset"
+    ],
+    [
+      "/World/Assets/Tier2Overlay",
+      "/Asset/BoardSupports/Tier2Overlay"
+    ],
+    [
+      "/World/Assets/Tier3Overlay",
+      "/Asset/BoardSupports/Tier3Overlay"
+    ]
+  ],
+  "validation": {
+    "all_mesh_vertices": 105517,
+    "analytic_shapes": 4,
+    "max_world_error_m": 4.440892098500626e-16,
+    "composed_nonplacement_fields_preserved": true,
+    "physics_facts": null,
+    "dependencies": {
+      "layers": 2,
+      "files": 7,
+      "builtins": []
+    },
+    "ordinary_traversal_four_supports": true,
+    "support_corners_match_source": true,
+    "structural_colliders_match_api_worker": true
+  },
+  "support_layers": [
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/layout/l1_shelf_supports/shelf_support_collisions.usda",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/layout/l1_shelf_supports/shelf_support_alignment.usda"
+  ],
+  "source_support_validation": {
+    "source_commit": "82cc53652ef38470106c00bdc952f276a08afa74",
+    "source_assets_modified": false,
+    "geometry_check": {
+      "schema": "real2sim.shelf_support_geometry.v1",
+      "passed": true,
+      "method": "visible_face_vertices_and_collision_corners",
+      "boards": [
+        {
+          "z_m": 0.095,
+          "area_m2": 0.5725140305954933,
+          "xy_min_m": [
+            -2.96224140010662,
+            2.0116827980268037
+          ],
+          "xy_max_m": [
+            -1.77580090189698,
+            2.494230411210463
+          ]
+        },
+        {
+          "z_m": 0.751,
+          "area_m2": 0.5725140305954933,
+          "xy_min_m": [
+            -2.96224140010662,
+            2.0116827980268037
+          ],
+          "xy_max_m": [
+            -1.77580090189698,
+            2.494230411210463
+          ]
+        },
+        {
+          "z_m": 1.1825,
+          "area_m2": 0.5725140305954934,
+          "xy_min_m": [
+            -2.96224140010662,
+            2.0116827980268037
+          ],
+          "xy_max_m": [
+            -1.77580090189698,
+            2.494230411210463
+          ]
+        },
+        {
+          "z_m": 1.564,
+          "area_m2": 0.5725140305954934,
+          "xy_min_m": [
+            -2.96224140010662,
+            2.0116827980268037
+          ],
+          "xy_max_m": [
+            -1.77580090189698,
+            2.494230411210463
+          ]
+        }
+      ],
+      "supports": {
+        "shelf_snack": {
+          "visible_top_z_m": 0.751,
+          "collision_top_z_m": 0.750999970473349
+        },
+        "shelf_beverage": {
+          "visible_top_z_m": 1.1825,
+          "collision_top_z_m": 1.182500097680835
+        },
+        "shelf_top": {
+          "visible_top_z_m": 1.564,
+          "collision_top_z_m": 1.563999975532293
+        }
+      },
+      "placements_checked": 0,
+      "physics_replay_performed": false
+    },
+    "physics_replay": false
+  },
+  "asset_revision": "shelf_w120_aligned_20260914",
+  "measured_shelf_width_m": 1.199996595472452,
+  "support_slab_checks": [
+    {
+      "source": "/World/Assets/ShelvingUnit/BoardSupports/Bottom",
+      "entry_prim": "/Asset/BoardSupports/Bottom",
+      "min_m": [
+        -0.5935758707117094,
+        -0.241731625696981,
+        0.0830000024363397
+      ],
+      "max_m": [
+        0.5935758707117103,
+        0.24173162569698106,
+        0.09499999668449172
+      ],
+      "size_m": [
+        1.1871517414234196,
+        0.48346325139396207,
+        0.011999994248152013
+      ]
+    },
+    {
+      "source": "/World/Assets/Tier2Overlay",
+      "entry_prim": "/Asset/BoardSupports/Tier2Overlay",
+      "min_m": [
+        -0.5935758948326106,
+        -0.24173162877559642,
+        0.7390000057592987
+      ],
+      "max_m": [
+        0.5935758948326115,
+        0.24173162877559676,
+        0.750999970473349
+      ],
+      "size_m": [
+        1.1871517896652222,
+        0.4834632575511932,
+        0.011999964714050293
+      ]
+    },
+    {
+      "source": "/World/Assets/Tier3Overlay",
+      "entry_prim": "/Asset/BoardSupports/Tier3Overlay",
+      "min_m": [
+        -0.5935758948326106,
+        -0.24173162877559634,
+        1.170500013757495
+      ],
+      "max_m": [
+        0.5935758948326115,
+        0.24173162877559684,
+        1.1825000976808349
+      ],
+      "size_m": [
+        1.1871517896652222,
+        0.4834632575511932,
+        0.012000083923339844
+      ]
+    },
+    {
+      "source": "/World/Assets/ShelvingUnit/BoardSupports/Top",
+      "entry_prim": "/Asset/BoardSupports/Top",
+      "min_m": [
+        -0.5935758707117094,
+        -0.2417316256969807,
+        1.551999891877176
+      ],
+      "max_m": [
+        0.5935758707117103,
+        0.24173162569698137,
+        1.563999975532293
+      ],
+      "size_m": [
+        1.1871517414234196,
+        0.48346325139396207,
+        0.012000083655117066
+      ]
+    }
+  ],
+  "unification_changes": [
+    {
+      "path": "/Asset/o/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/horizontal_brackets_1/Object_6/Object_1",
+      "property": "physics:collisionEnabled",
+      "before": false,
+      "after": true,
+      "reason": "Both selected ziche scenes and current API worker enable this structural collider"
+    },
+    {
+      "path": "/Asset/o/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/vertical_beams_2/Object_8/Object_2",
+      "property": "physics:collisionEnabled",
+      "before": false,
+      "after": true,
+      "reason": "Both selected ziche scenes and current API worker enable this structural collider"
+    },
+    {
+      "path": "/Asset/o/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/vertical_beams_2/Object_9/Object_3",
+      "property": "physics:collisionEnabled",
+      "before": false,
+      "after": true,
+      "reason": "Both selected ziche scenes and current API worker enable this structural collider"
+    }
+  ],
+  "alignment": {
+    "state": "structural_omissions_repaired",
+    "support_policy": "Four defined support slabs; visual shelf board mesh collision remains disabled as in current API; avoid duplicate board contact surface",
+    "source_difference": "Source scenes enable visual board mesh collision in addition to support slabs",
+    "parent_definition": "Keep BoardSupports defined so bottom/top supports exist during normal traversal"
+  }
+}

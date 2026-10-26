@@ -1,0 +1,17 @@
+.git
+.venv
+venv
+build
+dist
+Assets
+Runtime
+downloads
+runs
+outputs
+**/__pycache__
+**/*.pyc
+.env
+.env.*
+private
+*.key
+*.pem

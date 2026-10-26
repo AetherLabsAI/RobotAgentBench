@@ -1,0 +1,31 @@
+{
+  "schema": "arena.short_wipe.source_audit.v1",
+  "source_root": "/workspace/lukun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source",
+  "source_benchmark": "st18-1 (source identity only)",
+  "public_runtime_id": "wipe_table",
+  "registered": true,
+  "sources": {
+    "openend/tasks/wipe_table/process_rules.py": "3633e8ae7c298ecbc25bf43f0d787209d3f6fc6062737e32b0e20b1ee8cd3b84",
+    "openend/tasks/wipe_table/stain.py": "8c03dc721ec25fa4fd9e92c5c763a43a0257e73a359997abeb7840f6fafe9fe6",
+    "openend/tasks/wipe_table/port.py": "63b693d345796c83007f6cfbd240ec86a98a0a483cb75c434fbbfa661101e60c",
+    "openend/tasks/wipe_table/scene.py": "3b412617fd9a80c7914a2a98c4d1878b99f732ccdf53cb265a9028e25ba34b76",
+    "openend/tasks/wipe_table/random_stain.py": "4ce00dd28408700fddd30b444097afa1e366ae3f030e4fad9126cd00b0e64228",
+    "openend/tasks/wipe_table/registration.py": "3936ffed6ae10dda5d388f9faeded1a6a5efd3dd2970ed98240ef43d550ad5f7",
+    "short_tasks/tasks/interaction_progress_v1/scoring.py": "f31090a61d27adbc1d90efefacfec0fb00046621fc1cea90ebe7e004ecc9b29d",
+    "short_tasks/tasks/interaction_progress_v1/native.py": "d448cc25c03cface7a0bed118fbb7a8072bf9caf864bb87a79f2a631fc055ebf",
+    "short_tasks/registry.py": "62bee79678f22b9b77cde9ff62dbd26cc8177346d41f31630e225ce5b86d2763",
+    "short_tasks/agent_probe_v1/prepare_task.py": "b3c86d0c227680d55ab04ee99d5143e1eb86579eb1f699bd289046315c52365b",
+    "short_tasks/agent_probe_v1/native_owner.py": "c4f8c6f812fde94c29234e7b859863cb5190aa19455d1cd9d19e16f4c11281f1",
+    "short_tasks/common/episode.py": "36b9c47865130a3d9ba3be1c0aebf33bc763fdb74863d5b099d099699f2f3030",
+    "short_tasks/tasks/wipe_table/__init__.py": "e5424dd7d0d83495357a01b362f2f92d5f4f941e1aca4e823962cee9dfd2fcd8",
+    "short_tasks/tasks/wipe_table/process_rules.py": "a2d4468fd87351eaf87117c24249aae3f504ecb04be9a460510049ccd1db0662",
+    "short_tasks/tasks/wipe_table/adapter.py": "2b0241ece512f500d630928abad3d73f143d561040cc496b2ab0ca3adf88629c",
+    "short_tasks/tasks/wipe_table/interaction.py": "8f9c54be741bc3aab34a59724c8091e9f2d0f6d3632e327c47d0b03f598ca855",
+    "short_tasks/tasks/wipe_table/port.py": "034ed3b7acbf8e4095e4a971002a7f90092dbfd0e395f80556caf8c8ccc467b5",
+    "short_tasks/tasks/wipe_table/prepare.py": "75b3cfaa6b1627ea2d729c960ad31802906c3e4ffd96c753e647440487bf2991",
+    "short_tasks/tasks/wipe_table/generation.py": "c7602c7fe6eae134318f1ea4a34e1ea881a2f0bd458b075b29253ddbf8f1f573",
+    "short_tasks/tasks/wipe_table/request.json": "b839aafba7fe70c9b3fe3d9aaedbe1da75164c19ccea7a3021c5f33698b0e6a5",
+    "short_tasks/scene_sources.json": "83517821abb47f69971b1081b00c93faa62b8e9166e61f581e607bddde8eaa3a"
+  },
+  "rule_version": "openend.short_task.wipe_table.v1"
+}

@@ -1,0 +1,218 @@
+{
+  "schema": "context_shelf.atomic_robot_initial.v1",
+  "scope": "Robot initial state only. Product layout and scoring are not imported from atomic tasks.",
+  "profiles": {
+    "drink": {
+      "representative_api": "4-1",
+      "source_robot": {
+        "position_m": [
+          -2.3779150350476974,
+          1.338354698211161,
+          0.0013671815395355225
+        ],
+        "quaternion_wxyz": [
+          0.7079967493571234,
+          0,
+          0,
+          0.7062156914850778
+        ]
+      },
+      "joint_positions": {
+        "idx01_body_joint1": 0.4,
+        "idx02_body_joint2": 0,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0463638945234317,
+        "idx61_arm_r_joint1": 1.0146817505343473,
+        "idx22_arm_l_joint2": 0.5553795243153509,
+        "idx62_arm_r_joint2": -0.5544810046463908,
+        "idx23_arm_l_joint3": 0.30598837290307634,
+        "idx63_arm_r_joint3": -0.22207068727428536,
+        "idx24_arm_l_joint4": -1.2477034506751763,
+        "idx64_arm_r_joint4": 1.3224151316068253,
+        "idx25_arm_l_joint5": 0.7315242756431548,
+        "idx65_arm_r_joint5": -0.7628240431105453,
+        "idx26_arm_l_joint6": 1.450414316002107,
+        "idx66_arm_r_joint6": -1.435793949834476,
+        "idx27_arm_l_joint7": -0.17955661248719887,
+        "idx67_arm_r_joint7": 0.19283131129064382,
+        "idx31_gripper_l_inner_joint1": -0.7844060659408569,
+        "idx41_gripper_l_outer_joint1": 0.7844061851501465,
+        "idx71_gripper_r_inner_joint1": -0.7844092845916748,
+        "idx81_gripper_r_outer_joint1": 0.78440922498703,
+        "idx32_gripper_l_inner_joint3": -0.06586175411939621,
+        "idx42_gripper_l_outer_joint3": 0.08891744911670685,
+        "idx72_gripper_r_inner_joint3": -0.06552468240261078,
+        "idx82_gripper_r_outer_joint3": 0.08869274705648422,
+        "idx33_gripper_l_inner_joint4": -0.03039488196372986,
+        "idx43_gripper_l_outer_joint4": -0.0339159332215786,
+        "idx73_gripper_r_inner_joint4": -0.031381815671920776,
+        "idx83_gripper_r_outer_joint4": -0.033230822533369064,
+        "idx39_gripper_l_inner_joint0": 0.4464392364025116,
+        "idx49_gripper_l_outer_joint0": -0.39266160130500793,
+        "idx79_gripper_r_inner_joint0": 0.4472809433937073,
+        "idx89_gripper_r_outer_joint0": -0.3932376503944397
+      },
+      "source_initial_schema": "arena.shelf_pick.initial_state.v2",
+      "source_release": "newdata_20260924",
+      "sources": [
+        {
+          "api_id": "4-1",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-1/fixed.json",
+          "sha256": "b39b7d66195c4454594cf4eb4be4eaaf9bdcfe40dd95ce4f96dadce8cdcbb234",
+          "episode_id": "2561e8b7-bc54-4bff-b543-5a9919c0226b",
+          "lerobot_episode_index": 84
+        },
+        {
+          "api_id": "4-2",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-2/fixed.json",
+          "sha256": "2672e00ec55c32dd0e61262ce08b4e817389a0c6c74b68e16c2e489eb6af3fa7",
+          "episode_id": "0df68cf4-f24c-4eea-b2d1-cfd717989567",
+          "lerobot_episode_index": 70
+        },
+        {
+          "api_id": "4-3",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-3/fixed.json",
+          "sha256": "6dd053b249307f755557e168024e07f9483da27d4199f239d3c83f6543c1366b",
+          "episode_id": "3a59f2da-a58f-4403-b783-b1e551f2e475",
+          "lerobot_episode_index": 128
+        },
+        {
+          "api_id": "4-4",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-4/fixed.json",
+          "sha256": "a20636a573f554b038829c29267fddd4d20b212190d90fb563119b2ec18bbe11",
+          "episode_id": "aab6a179-4cbb-4d13-b3bc-772ef15f1626",
+          "lerobot_episode_index": 203
+        },
+        {
+          "api_id": "4-5",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-5/fixed.json",
+          "sha256": "f397e0b850030fb7e26e274047601b275a0892ddf01af83198e8ba907465f5b0",
+          "episode_id": "b06e519d-aebd-44c1-aa98-d2421c08cc74",
+          "lerobot_episode_index": 34
+        },
+        {
+          "api_id": "4-6",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-6/fixed.json",
+          "sha256": "86a1ab66c069f459150b7bb769a45c00a7e7163fabe179a90b33dfb34a524643",
+          "episode_id": "4f7a0e62-47f0-48f2-b0a6-9ece4af2c0da",
+          "lerobot_episode_index": 73
+        },
+        {
+          "api_id": "4-7",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-7/fixed.json",
+          "sha256": "4609261f2f72a60aa59fc4dc8908c9e314de90ddad4b0f6e47ec2cdfc75235c5",
+          "episode_id": "36c3b7e2-df19-41c4-b1b6-4bdf530aa2ea",
+          "lerobot_episode_index": 99
+        },
+        {
+          "api_id": "4-8",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-8/fixed.json",
+          "sha256": "f103e5eee9f9f1490d88d46a276b7da2411071323ac5161aa166796f46c2e137",
+          "episode_id": "bab1df01-0e83-423f-ae99-f4de5f85f357",
+          "lerobot_episode_index": 51
+        }
+      ],
+      "native_validated_here": false
+    },
+    "snack": {
+      "representative_api": "4-9",
+      "source_robot": {
+        "position_m": [
+          -2.3779150350476974,
+          1.338354698211161,
+          0.0013671815395355225
+        ],
+        "quaternion_wxyz": [
+          0.7079967493571234,
+          0,
+          0,
+          0.7062156914850778
+        ]
+      },
+      "joint_positions": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0463638945234317,
+        "idx61_arm_r_joint1": 1.0146817505343473,
+        "idx22_arm_l_joint2": 0.5553795243153509,
+        "idx62_arm_r_joint2": -0.5544810046463908,
+        "idx23_arm_l_joint3": 0.30598837290307634,
+        "idx63_arm_r_joint3": -0.22207068727428536,
+        "idx24_arm_l_joint4": -1.2477034506751763,
+        "idx64_arm_r_joint4": 1.3224151316068253,
+        "idx25_arm_l_joint5": 0.7315242756431548,
+        "idx65_arm_r_joint5": -0.7628240431105453,
+        "idx26_arm_l_joint6": 1.450414316002107,
+        "idx66_arm_r_joint6": -1.435793949834476,
+        "idx27_arm_l_joint7": -0.17955661248719887,
+        "idx67_arm_r_joint7": 0.19283131129064382,
+        "idx31_gripper_l_inner_joint1": -0.7844060659408569,
+        "idx41_gripper_l_outer_joint1": 0.7844061851501465,
+        "idx71_gripper_r_inner_joint1": -0.7844092845916748,
+        "idx81_gripper_r_outer_joint1": 0.78440922498703,
+        "idx32_gripper_l_inner_joint3": -0.06586175411939621,
+        "idx42_gripper_l_outer_joint3": 0.08891744911670685,
+        "idx72_gripper_r_inner_joint3": -0.06552468240261078,
+        "idx82_gripper_r_outer_joint3": 0.08869274705648422,
+        "idx33_gripper_l_inner_joint4": -0.03039488196372986,
+        "idx43_gripper_l_outer_joint4": -0.0339159332215786,
+        "idx73_gripper_r_inner_joint4": -0.031381815671920776,
+        "idx83_gripper_r_outer_joint4": -0.033230822533369064,
+        "idx39_gripper_l_inner_joint0": 0.4464392364025116,
+        "idx49_gripper_l_outer_joint0": -0.39266160130500793,
+        "idx79_gripper_r_inner_joint0": 0.4472809433937073,
+        "idx89_gripper_r_outer_joint0": -0.3932376503944397
+      },
+      "source_initial_schema": "arena.shelf_pick.initial_state.v2",
+      "source_release": "newdata_20260924",
+      "sources": [
+        {
+          "api_id": "4-9",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-9/fixed.json",
+          "sha256": "d9447dad8faa2b16c232e792c633d8089ab3058c9c25e309f891e15f640d2448",
+          "episode_id": "0ff9906a-6272-4ada-b869-c1b9a62fd82d",
+          "lerobot_episode_index": 60
+        },
+        {
+          "api_id": "4-10",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-10/fixed.json",
+          "sha256": "3534d1a2dba0224bd9299a89071aa12e0637b73e54b4ffb24f5f3cd455d4ef65",
+          "episode_id": "ae3fa5b1-3ea0-47ff-aef3-73a6412774b8",
+          "lerobot_episode_index": 168
+        },
+        {
+          "api_id": "4-11",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-11/fixed.json",
+          "sha256": "d84a703e810a8e8349ca1d53ea224a7e038e46c330e5d39f08235973e430a1e8",
+          "episode_id": "bf500ea6-7e8c-4051-ae0b-a06d4699fee7",
+          "lerobot_episode_index": 156
+        },
+        {
+          "api_id": "4-12",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-12/fixed.json",
+          "sha256": "8997b43d2ad8a8a9c3d90341acb7e3b1f09902ce0e40b18f33c6845e52ae9216",
+          "episode_id": "85717c1b-2cd5-479c-aa41-00a73f3ace68",
+          "lerobot_episode_index": 163
+        },
+        {
+          "api_id": "4-13",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-13/fixed.json",
+          "sha256": "f3060957e5b259589a9b21208ec6084e18e31b216461c7c3a57a44c6b712db7c",
+          "episode_id": "1c42fa08-9d01-4237-b639-fa1ab9b96102",
+          "lerobot_episode_index": 81
+        },
+        {
+          "api_id": "4-14",
+          "source_path": "evaluation/tasks/shelf_pick/resources/newdata_20260924/4-14/fixed.json",
+          "sha256": "e1a152bae15046df450b13416fb45493052277551a6728aefd140bf10627d363",
+          "episode_id": "d7b32d40-3259-47a3-88e1-92774a4c63db",
+          "lerobot_episode_index": 61
+        }
+      ],
+      "native_validated_here": false
+    }
+  }
+}

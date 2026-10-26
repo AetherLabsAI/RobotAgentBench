@@ -1,0 +1,4605 @@
+{
+  "schema": "short_tasks.initial_source_evidence.v1",
+  "samples": [
+    {
+      "task_index": 42,
+      "episode_index": 1832,
+      "source_id": "short_18/batch_20261008_001:0",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_000_both02",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9447797536849976,
+        -0.5651798844337463,
+        3.0569080801880535
+      ],
+      "target_matrix": [
+        [
+          0.19699473950463742,
+          -0.9791253439752925,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9789974825009746,
+          0.19372037701376044,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.05250716012371619,
+          0.061530287785086936,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.6108247522738393,
+          -0.2675309346791913,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0305860173182013,
+        "idx61_arm_r_joint1": 0.9579910423217858,
+        "idx22_arm_l_joint2": 0.6529034357419978,
+        "idx62_arm_r_joint2": -0.7135455445548924,
+        "idx23_arm_l_joint3": 0.3761286936591694,
+        "idx63_arm_r_joint3": -0.2695017323696062,
+        "idx24_arm_l_joint4": -1.0879006395070963,
+        "idx64_arm_r_joint4": 1.377205421360693,
+        "idx25_arm_l_joint5": 0.681954195597991,
+        "idx65_arm_r_joint5": -0.6476805107911617,
+        "idx26_arm_l_joint6": 1.3133056673233863,
+        "idx66_arm_r_joint6": -1.4857192489273343,
+        "idx27_arm_l_joint7": -0.09741297319486387,
+        "idx67_arm_r_joint7": 0.15073972803320385,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "bf35acb568f46e1a716f21c29657d8d697800879375df29aa19ac3a74b4e487b",
+        "layout_receipt.json": "11a928686f9006e179520acad13c7af0c6222298342d8f067ae076cedd0f89dd",
+        "scene.usda": "15f1599219a73b216071c11543d6c896fea6816ec910254971f74df783d85101"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1833,
+      "source_id": "short_18/batch_20261008_001:1",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_001_both02_nav09",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.919680610926778,
+        -0.5430794710996313,
+        3.069271122515669
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.6047835310460958,
+          -0.2130159577356946,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.11020121810612,
+        "idx61_arm_r_joint1": 0.9491267772124843,
+        "idx22_arm_l_joint2": 0.610232337964958,
+        "idx62_arm_r_joint2": -0.6934308885786057,
+        "idx23_arm_l_joint3": 0.3077441430566556,
+        "idx63_arm_r_joint3": -0.35092746657985857,
+        "idx24_arm_l_joint4": -1.0847775504967603,
+        "idx64_arm_r_joint4": 1.306400090616811,
+        "idx25_arm_l_joint5": 0.691465675431209,
+        "idx65_arm_r_joint5": -0.6513664588978859,
+        "idx26_arm_l_joint6": 1.3548589698118927,
+        "idx66_arm_r_joint6": -1.484435072649698,
+        "idx27_arm_l_joint7": -0.16809779589941998,
+        "idx67_arm_r_joint7": 0.24501925917899411,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "61ff54f405f90c14486f5ce7728b713b7c4f76b0f61866b3be3d86e2354295e5",
+        "layout_receipt.json": "919e830de8977e8dd1f3566e08b11e7a081d8f9c018ffbbc2f672a146d33b88f",
+        "scene.usda": "30d243214dfee319a5434048ea32d9669414acfb8396ff27e687c4ed26a04cf4"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1834,
+      "source_id": "short_18/batch_20261008_001:2",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_002_both02_nav09",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9108411746836707,
+        -0.5773917069688317,
+        3.075924369346233
+      ],
+      "target_matrix": [
+        [
+          -0.010881673984780953,
+          -0.9986866153997077,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.997880769763549,
+          -0.014057899903849185,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06415261886625949,
+          0.04926885092808272,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.5805858505698887,
+          -0.1693647949961946,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0387980742765424,
+        "idx61_arm_r_joint1": 1.0487326638279466,
+        "idx22_arm_l_joint2": 0.5800035953797956,
+        "idx62_arm_r_joint2": -0.7058045342143591,
+        "idx23_arm_l_joint3": 0.37618964675861855,
+        "idx63_arm_r_joint3": -0.2773519656043464,
+        "idx24_arm_l_joint4": -1.133500615271978,
+        "idx64_arm_r_joint4": 1.347255511741662,
+        "idx25_arm_l_joint5": 0.6610961847824359,
+        "idx65_arm_r_joint5": -0.6807089014722699,
+        "idx26_arm_l_joint6": 1.3954917506696132,
+        "idx66_arm_r_joint6": -1.5520339574411248,
+        "idx27_arm_l_joint7": -0.17184235019488273,
+        "idx67_arm_r_joint7": 0.19226363588117845,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "80a4283f5164f7770ff53330db6788cc48ea771e81fb90203fc4576062b962d9",
+        "layout_receipt.json": "ae139d11d199f3e06ffdeec2d85c68fdd5bdf6a63556b0295d5f16f864bb17f4",
+        "scene.usda": "a411eda0b6e4d643a73f34b3dcf55701cf1b8e8d9855c8949de1ad121c8a4427"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1835,
+      "source_id": "short_18/batch_20261008_001:3",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_003_both02_nav09",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.898988471031493,
+        -0.5820234985755836,
+        3.0599813070740076
+      ],
+      "target_matrix": [
+        [
+          -0.010881673984780953,
+          -0.9986866153997077,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.997880769763549,
+          -0.014057899903849185,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06415261886625949,
+          0.04926885092808272,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.6034001576133379,
+          -0.21899196897823062,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0460719661618758,
+        "idx61_arm_r_joint1": 0.9947738909286604,
+        "idx22_arm_l_joint2": 0.5633984530880153,
+        "idx62_arm_r_joint2": -0.6828255153276377,
+        "idx23_arm_l_joint3": 0.37734439340727693,
+        "idx63_arm_r_joint3": -0.3638007878151381,
+        "idx24_arm_l_joint4": -1.1536937679213948,
+        "idx64_arm_r_joint4": 1.3562149182809065,
+        "idx25_arm_l_joint5": 0.664898379870742,
+        "idx65_arm_r_joint5": -0.6642007648231958,
+        "idx26_arm_l_joint6": 1.3345403822751332,
+        "idx66_arm_r_joint6": -1.5900286109230128,
+        "idx27_arm_l_joint7": -0.1679154026542632,
+        "idx67_arm_r_joint7": 0.1526004786868422,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "bcc51306805e8a2ef82fe9476723c8a70a4064ce894b83078a8a4c7c416f603a",
+        "layout_receipt.json": "83865242da066460f2437daba7b0060d7154e3afa40255865d548d01ec9c2060",
+        "scene.usda": "e60f9d316f1e61f691032d865dbaf063fc8938b68db5ef3deef5ea413b985f4a"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1836,
+      "source_id": "short_18/batch_20261008_001:4",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_004_both02",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9347988853841573,
+        -0.5564968043626338,
+        3.1260402602047157
+      ],
+      "target_matrix": [
+        [
+          -0.010881673984780953,
+          -0.9986866153997077,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.997880769763549,
+          -0.014057899903849185,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06415261886625949,
+          0.04926885092808272,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.5893741586326384,
+          -0.22536745258473093,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.1122424645026385,
+        "idx61_arm_r_joint1": 1.0070150443001824,
+        "idx22_arm_l_joint2": 0.5483833511250668,
+        "idx62_arm_r_joint2": -0.73661284723175,
+        "idx23_arm_l_joint3": 0.37921533065208485,
+        "idx63_arm_r_joint3": -0.36685783043044,
+        "idx24_arm_l_joint4": -1.1952008645649883,
+        "idx64_arm_r_joint4": 1.2946491586229452,
+        "idx25_arm_l_joint5": 0.671940443583184,
+        "idx65_arm_r_joint5": -0.7593257497465453,
+        "idx26_arm_l_joint6": 1.3743157584199026,
+        "idx66_arm_r_joint6": -1.5814188774348956,
+        "idx27_arm_l_joint7": -0.11098378464201356,
+        "idx67_arm_r_joint7": 0.21285832664395196,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "01272101fbebcc554924808437bb02404499fe145b3da4aadeafcca22f8e53aa",
+        "layout_receipt.json": "79e78c6662bf82a13ecf15d9c8564b32611353beb333b9b233bd1444de199712",
+        "scene.usda": "fa0abf704b25d887aa9068940b28318d1698bf5c1ae73560fc6bdec3662e4820"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1837,
+      "source_id": "short_18/batch_20261008_001:5",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_005_both02",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9392634034156799,
+        -0.5545364022254944,
+        3.1369827978757363
+      ],
+      "target_matrix": [
+        [
+          0.12821453887090498,
+          -0.9904819022220221,
+          0.050066289984072414,
+          0
+        ],
+        [
+          0.9901259442307059,
+          0.12495707172806303,
+          -0.06353223423116801,
+          0
+        ],
+        [
+          0.05667139122500433,
+          0.05771768875999531,
+          0.996723142011274,
+          0
+        ],
+        [
+          -1.583206151736095,
+          -0.1876788128648674,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0527702157775884,
+        "idx61_arm_r_joint1": 0.9588417225529844,
+        "idx22_arm_l_joint2": 0.5392831299431843,
+        "idx62_arm_r_joint2": -0.6539588464819963,
+        "idx23_arm_l_joint3": 0.2891443929769468,
+        "idx63_arm_r_joint3": -0.300335328772596,
+        "idx24_arm_l_joint4": -1.0936225742671861,
+        "idx64_arm_r_joint4": 1.3091249038861255,
+        "idx25_arm_l_joint5": 0.7667108951864168,
+        "idx65_arm_r_joint5": -0.6712305779946234,
+        "idx26_arm_l_joint6": 1.39256653452827,
+        "idx66_arm_r_joint6": -1.5093288377811591,
+        "idx27_arm_l_joint7": -0.16984724306424986,
+        "idx67_arm_r_joint7": 0.13992964091819277,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "724dc7406ff1c8cb0cd8ca60b68acddcc81a4f4d4e92e0ee71a998c32d60d70b",
+        "layout_receipt.json": "f1718870e1352558dacdc73f0eedb15a947a6999291ca9402b6a6cdab2f07b3b",
+        "scene.usda": "fce3e09335c348404e2c0189a7705402eeae2152ebf5772ad9d38865b9138859"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1838,
+      "source_id": "short_18/batch_20261008_001:6",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_006_both02",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9315290976343615,
+        -0.5510414727657149,
+        3.131776715125325
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.6027852458224474,
+          -0.20597321333416588,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0205060857503059,
+        "idx61_arm_r_joint1": 1.071762881986625,
+        "idx22_arm_l_joint2": 0.5289756312601416,
+        "idx62_arm_r_joint2": -0.604954485316639,
+        "idx23_arm_l_joint3": 0.3740503294549579,
+        "idx63_arm_r_joint3": -0.37296618986470026,
+        "idx24_arm_l_joint4": -1.1714234965624883,
+        "idx64_arm_r_joint4": 1.3521526655121543,
+        "idx25_arm_l_joint5": 0.6994192060267306,
+        "idx65_arm_r_joint5": -0.7639149755159971,
+        "idx26_arm_l_joint6": 1.3807656682639655,
+        "idx66_arm_r_joint6": -1.5369974836104285,
+        "idx27_arm_l_joint7": -0.07111806075726317,
+        "idx67_arm_r_joint7": 0.12304536605465852,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "f7229f44ae23258b7f9043b60e0898b7132c4355434a5cf8bc5c2789527f634c",
+        "layout_receipt.json": "dd264ad16bc85f8c2e4efccde9eb248026db08c4fd0acca1d14d4e7075b8765f",
+        "scene.usda": "4ec517cfc0a9b4f389c52a167ea5f39421097775418df249f0676f83346ed119"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1839,
+      "source_id": "short_18/batch_20261008_001:7",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_007_both02",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9321064080818955,
+        -0.5545018851889189,
+        -3.1292412473167652
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.598127500696324,
+          -0.2165071239586224,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0827494201686105,
+        "idx61_arm_r_joint1": 1.0213409867520458,
+        "idx22_arm_l_joint2": 0.5856462345184282,
+        "idx62_arm_r_joint2": -0.6076595246148597,
+        "idx23_arm_l_joint3": 0.3928271131681297,
+        "idx63_arm_r_joint3": -0.26909148904843627,
+        "idx24_arm_l_joint4": -1.1786664957791768,
+        "idx64_arm_r_joint4": 1.2988520262972538,
+        "idx25_arm_l_joint5": 0.7411872258781246,
+        "idx65_arm_r_joint5": -0.7589668887896571,
+        "idx26_arm_l_joint6": 1.3233653588669971,
+        "idx66_arm_r_joint6": -1.5126500659765971,
+        "idx27_arm_l_joint7": -0.13176483842444378,
+        "idx67_arm_r_joint7": 0.14130717763679307,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "d8116462d92f5cda90b252de47d1cfeeef15cc8330ec48776816516d77e2e76c",
+        "layout_receipt.json": "f5f25528be18a072da85b59517bd68d80c53a651a29ee4a990f6622ce6a9cbc5",
+        "scene.usda": "fbbfb1f54afb99278443b6d1536d7850759455fe0ae8d5c86a42ff16d5403e08"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1840,
+      "source_id": "short_18/batch_20261008_001:8",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_008_both02",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.902576561805802,
+        -0.5446853108054162,
+        3.1054070472678816
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.581399023498895,
+          -0.21545983768664373,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0366511003847476,
+        "idx61_arm_r_joint1": 0.9554076429063544,
+        "idx22_arm_l_joint2": 0.5870629030602958,
+        "idx62_arm_r_joint2": -0.6611162250696387,
+        "idx23_arm_l_joint3": 0.3380026464669996,
+        "idx63_arm_r_joint3": -0.33622938065517033,
+        "idx24_arm_l_joint4": -1.1488015409989194,
+        "idx64_arm_r_joint4": 1.307953512480654,
+        "idx25_arm_l_joint5": 0.7909260868721257,
+        "idx65_arm_r_joint5": -0.736033942589794,
+        "idx26_arm_l_joint6": 1.3698641514997807,
+        "idx66_arm_r_joint6": -1.582035399227249,
+        "idx27_arm_l_joint7": -0.16182738311282843,
+        "idx67_arm_r_joint7": 0.2373078432160743,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "a8f367435c6bfe5be974b5d94ed51706d1f4fbc1af9b221d0fdf7152278438d6",
+        "layout_receipt.json": "2abc750a4a7e9c90df7f9e058f79ff934f6e887a37ac22d6de6e4e72aaae489d",
+        "scene.usda": "812b58900af63cf4cc1a9c97dc315255b8934839d9df2b882468b59f9228d3a1"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1841,
+      "source_id": "short_18/batch_20261008_001:9",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_009_mix11a01",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9272174905362766,
+        -0.6223759525611736,
+        -3.1062490536595724
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.1244017922496679,
+        "idx61_arm_r_joint1": 1.0129782614550333,
+        "idx22_arm_l_joint2": 0.5840817605360612,
+        "idx62_arm_r_joint2": -0.6590769760439378,
+        "idx23_arm_l_joint3": 0.35877966389590266,
+        "idx63_arm_r_joint3": -0.3186882703982817,
+        "idx24_arm_l_joint4": -1.1433985197793666,
+        "idx64_arm_r_joint4": 1.405604305960862,
+        "idx25_arm_l_joint5": 0.7802960793810745,
+        "idx65_arm_r_joint5": -0.6552306390605637,
+        "idx26_arm_l_joint6": 1.3348141552351933,
+        "idx66_arm_r_joint6": -1.5095319038142778,
+        "idx27_arm_l_joint7": -0.13599067586315425,
+        "idx67_arm_r_joint7": 0.177649772425964,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "eb85942817cbddb2971e62ab79dae625935c0588aed6568653f6d51380359ea1",
+        "layout_receipt.json": "04a095549b9c9c33af906642782711a237079d7256cc0ac9949288c24c2c5df2",
+        "scene.usda": "476447268b1e8d5870ce4dce2a412b3398239d034b7ee45a74537bb55b8f2e16"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1842,
+      "source_id": "short_18/batch_20261008_001:10",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_010_mix11a01",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.8691226454161651,
+        -0.5482883439643848,
+        -3.1029643206243964
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.1296792454238234,
+        "idx61_arm_r_joint1": 1.0133142192265467,
+        "idx22_arm_l_joint2": 0.6105962589279174,
+        "idx62_arm_r_joint2": -0.5998974753017148,
+        "idx23_arm_l_joint3": 0.4050158022661771,
+        "idx63_arm_r_joint3": -0.35863864951618296,
+        "idx24_arm_l_joint4": -1.1825463220132588,
+        "idx64_arm_r_joint4": 1.3871635133087175,
+        "idx25_arm_l_joint5": 0.6577676328940003,
+        "idx65_arm_r_joint5": -0.738258947101528,
+        "idx26_arm_l_joint6": 1.3807756551180532,
+        "idx66_arm_r_joint6": -1.5449973532089174,
+        "idx27_arm_l_joint7": -0.15201944351601415,
+        "idx67_arm_r_joint7": 0.1568383669294853,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "aa971f6767d83555650cdb8e35af0b820380c230649e629c6178a731e3338f50",
+        "layout_receipt.json": "7b2c55b81e514649c950c17cead82bd81cad08b7f50c090d64d1c9ac8b325918",
+        "scene.usda": "1cf8fdd8a222be9149ebc005f3583170617b08acc3e03ad86f4cdcf991b38892"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1843,
+      "source_id": "short_18/batch_20261008_001:11",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_011_mix11a01",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.8745074493473514,
+        -0.5609693559898083,
+        -3.105559108076372
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0619492665277375,
+        "idx61_arm_r_joint1": 1.083118933769859,
+        "idx22_arm_l_joint2": 0.5705464440328152,
+        "idx62_arm_r_joint2": -0.7028691314818465,
+        "idx23_arm_l_joint3": 0.3046723198973037,
+        "idx63_arm_r_joint3": -0.3647374881495462,
+        "idx24_arm_l_joint4": -1.15459032110237,
+        "idx64_arm_r_joint4": 1.30228643883902,
+        "idx25_arm_l_joint5": 0.671897100636443,
+        "idx65_arm_r_joint5": -0.6689928568886844,
+        "idx26_arm_l_joint6": 1.3657904471383409,
+        "idx66_arm_r_joint6": -1.5009031287243666,
+        "idx27_arm_l_joint7": -0.07282796830228376,
+        "idx67_arm_r_joint7": 0.17110908207824302,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "4f69754b3fbe8224e55b40d4560242a12d91ef15ebbe04141a81e066ccf02cd9",
+        "layout_receipt.json": "f55dee64e1e512c16ccb8642c4c281a1b8c1ad00ab82c5b7957a856593e5e8c2",
+        "scene.usda": "c5d8181655814b4d6c4e9b09866d6721557ffa845c35838d3b902ed9b5b40215"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1844,
+      "source_id": "short_18/batch_20261008_001:12",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_012_both02_nav08",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9007405492360102,
+        -0.5750892525673164,
+        3.132491052887005
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.6007911910316426,
+          -0.21840056074469333,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.1419473633013824,
+        "idx61_arm_r_joint1": 1.0784896940050288,
+        "idx22_arm_l_joint2": 0.5709834021886699,
+        "idx62_arm_r_joint2": -0.6337692225210239,
+        "idx23_arm_l_joint3": 0.3980214757162748,
+        "idx63_arm_r_joint3": -0.3091848799168748,
+        "idx24_arm_l_joint4": -1.1423706727566505,
+        "idx64_arm_r_joint4": 1.3327299653660973,
+        "idx25_arm_l_joint5": 0.6579105780655103,
+        "idx65_arm_r_joint5": -0.6948702605687663,
+        "idx26_arm_l_joint6": 1.2683306023082916,
+        "idx66_arm_r_joint6": -1.4803389977351016,
+        "idx27_arm_l_joint7": -0.1353771085151352,
+        "idx67_arm_r_joint7": 0.20816973167632657,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "112b0b1f875b6098cdf310a746e6b8c575bda07a241f232c701111318613dd89",
+        "layout_receipt.json": "2688d5481f7d307091769e48d51d7cd9f447f698a7ad84a0eb80ddf06b228192",
+        "scene.usda": "b9e6d965260519410fe93d4e8da2cefaa26033f2a4885226b4cc4381fd24cdf5"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1845,
+      "source_id": "short_18/batch_20261008_001:13",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_013_both02",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9557982455552083,
+        -0.5398411100287016,
+        -3.119090254851785
+      ],
+      "target_matrix": [
+        [
+          -0.19699473950463756,
+          0.9791253439752925,
+          0.05006628998407242,
+          0
+        ],
+        [
+          -0.9789974825009746,
+          -0.19372037701376058,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          -0.05250716012371618,
+          -0.06153028778508694,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.6013979914951944,
+          -0.29623240771301007,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0645160211863558,
+        "idx61_arm_r_joint1": 1.0231653186777772,
+        "idx22_arm_l_joint2": 0.612558808914224,
+        "idx62_arm_r_joint2": -0.6051440358072253,
+        "idx23_arm_l_joint3": 0.3954716321305784,
+        "idx63_arm_r_joint3": -0.27452422115890024,
+        "idx24_arm_l_joint4": -1.1003429946989738,
+        "idx64_arm_r_joint4": 1.3997477484076688,
+        "idx25_arm_l_joint5": 0.7269707393470636,
+        "idx65_arm_r_joint5": -0.6941464133844828,
+        "idx26_arm_l_joint6": 1.3039961882588509,
+        "idx66_arm_r_joint6": -1.461565043630588,
+        "idx27_arm_l_joint7": -0.18297552868439085,
+        "idx67_arm_r_joint7": 0.17478068240459438,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "27bcc5312173f21caa0498f4b65748f78769821be9253ac41661c0a40b9ab3f8",
+        "layout_receipt.json": "065ad44cbd7db2cbde58522cc4d64962762e011cb172480afc48e491e210336a",
+        "scene.usda": "ab061013b6382301dedccc1e313840febe7715f4c676dfffb965bbb8af26ad90"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1846,
+      "source_id": "short_18/batch_20261008_001:14",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_014_both02",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9557982455552083,
+        -0.5398411100287016,
+        -3.119090254851785
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.598468321265417,
+          -0.2415496432027794,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0645160211863558,
+        "idx61_arm_r_joint1": 1.0231653186777772,
+        "idx22_arm_l_joint2": 0.612558808914224,
+        "idx62_arm_r_joint2": -0.6051440358072253,
+        "idx23_arm_l_joint3": 0.3954716321305784,
+        "idx63_arm_r_joint3": -0.27452422115890024,
+        "idx24_arm_l_joint4": -1.1003429946989738,
+        "idx64_arm_r_joint4": 1.3997477484076688,
+        "idx25_arm_l_joint5": 0.7269707393470636,
+        "idx65_arm_r_joint5": -0.6941464133844828,
+        "idx26_arm_l_joint6": 1.3039961882588509,
+        "idx66_arm_r_joint6": -1.461565043630588,
+        "idx27_arm_l_joint7": -0.18297552868439085,
+        "idx67_arm_r_joint7": 0.17478068240459438,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "557d949af826b56f0ca245c3751be84fde4407c3fab0427ceac1a0b007025139",
+        "layout_receipt.json": "a8aa5a66326fd738c7c167df56088eeac82010d651c87c4810d2be5c55ecb8dc",
+        "scene.usda": "f9fabe25be28db43326f350000a8625f2996d6df9fcc0fda6d74a209ff664c74"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1847,
+      "source_id": "short_18/batch_20261008_001:15",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_015_mix11a01",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.8902000029280137,
+        -0.5207465383493382,
+        -3.0548638441674263
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.1195556380140506,
+        "idx61_arm_r_joint1": 1.062282627717188,
+        "idx22_arm_l_joint2": 0.5458743870621031,
+        "idx62_arm_r_joint2": -0.6601150762368507,
+        "idx23_arm_l_joint3": 0.40257817763091397,
+        "idx63_arm_r_joint3": -0.2963059660433061,
+        "idx24_arm_l_joint4": -1.0729031809863696,
+        "idx64_arm_r_joint4": 1.3324079891903067,
+        "idx25_arm_l_joint5": 0.6936646475432874,
+        "idx65_arm_r_joint5": -0.736241868891902,
+        "idx26_arm_l_joint6": 1.2658595882908616,
+        "idx66_arm_r_joint6": -1.554121875735747,
+        "idx27_arm_l_joint7": -0.11524233735023998,
+        "idx67_arm_r_joint7": 0.21906718711984907,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "2df991fc37c161878d30b4c4c609e7e44d0f33628541845cbe379ffa23305fe1",
+        "layout_receipt.json": "ac8c10c1c9fbec7377df96123c8b3b03843ff385036dfba44ba609ba5213eb88",
+        "scene.usda": "7435ef28d8065bdf29fd099ad8f24358b73cd19e176274a0ccb8cf410f3ed0fa"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1848,
+      "source_id": "short_18/batch_20261008_001:16",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_016_mix11a01",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.8808168699068842,
+        -0.5730529379716276,
+        -3.0985601602482964
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0419422688385171,
+        "idx61_arm_r_joint1": 0.9658295909372433,
+        "idx22_arm_l_joint2": 0.6397661286636642,
+        "idx62_arm_r_joint2": -0.6475213869160295,
+        "idx23_arm_l_joint3": 0.39151816949235574,
+        "idx63_arm_r_joint3": -0.35288652116723446,
+        "idx24_arm_l_joint4": -1.1306271976138371,
+        "idx64_arm_r_joint4": 1.341861944743979,
+        "idx25_arm_l_joint5": 0.6730609686118348,
+        "idx65_arm_r_joint5": -0.6582998656378527,
+        "idx26_arm_l_joint6": 1.3250593956363965,
+        "idx66_arm_r_joint6": -1.5373780493302007,
+        "idx27_arm_l_joint7": -0.07940896392862741,
+        "idx67_arm_r_joint7": 0.1843116532480404,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "fa977ba25cab0eca61a19395f0731a22f2ad7bdd78839fef92937a777c118e21",
+        "layout_receipt.json": "acf569a3d2bc68c77ec4a79792777f1d0b10da1cee5f1662b17b65f10778bd0e",
+        "scene.usda": "48fa2c66dda5eae8b71227aa492d1945fc95524bf9c3a427f79de4adda66a428"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1849,
+      "source_id": "short_18/batch_20261008_001:17",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_017_both02_nav09",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.8829786772196195,
+        -0.5649599340913856,
+        3.110988482740061
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.5816300584670133,
+          -0.24249650323440186,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.064664891891291,
+        "idx61_arm_r_joint1": 1.0075289012325133,
+        "idx22_arm_l_joint2": 0.6316273086353004,
+        "idx62_arm_r_joint2": -0.6336097657507553,
+        "idx23_arm_l_joint3": 0.32290382137728174,
+        "idx63_arm_r_joint3": -0.3065306071269337,
+        "idx24_arm_l_joint4": -1.140115907419735,
+        "idx64_arm_r_joint4": 1.4159935636893701,
+        "idx25_arm_l_joint5": 0.7752121714391405,
+        "idx65_arm_r_joint5": -0.6549103939394816,
+        "idx26_arm_l_joint6": 1.3269849942625784,
+        "idx66_arm_r_joint6": -1.540465318823875,
+        "idx27_arm_l_joint7": -0.1829218160541553,
+        "idx67_arm_r_joint7": 0.13374894337082324,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "97a4edce92125f594b8791f54b51e6e9b92e9b5c7456a8827e8c43352e334d9d",
+        "layout_receipt.json": "0ab6714a6292acc3d86dc2b83bf1345e6bcba6d4ce539b7c0adc1fecc0902467",
+        "scene.usda": "9614717a982c2708616c784853ccf72f20b69dee2b6d1058f8a0ec3195b03999"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1850,
+      "source_id": "short_18/batch_20261008_001:18",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_018_both02_nav09",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.8837819141685379,
+        -0.5815538507513954,
+        3.1171218275464123
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.5882290581994234,
+          -0.22693657983681795,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0415376015108795,
+        "idx61_arm_r_joint1": 1.0208754661934998,
+        "idx22_arm_l_joint2": 0.5435608990231513,
+        "idx62_arm_r_joint2": -0.7067483585046832,
+        "idx23_arm_l_joint3": 0.36124105724389477,
+        "idx63_arm_r_joint3": -0.30134946051569816,
+        "idx24_arm_l_joint4": -1.1051891489345909,
+        "idx64_arm_r_joint4": 1.3439416072392218,
+        "idx25_arm_l_joint5": 0.7921586644036417,
+        "idx65_arm_r_joint5": -0.7495554772343989,
+        "idx26_arm_l_joint6": 1.2981512154563994,
+        "idx66_arm_r_joint6": -1.4953772026205066,
+        "idx27_arm_l_joint7": -0.15256723910748665,
+        "idx67_arm_r_joint7": 0.21895173908659413,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "ee62fbdd50f73a29065515f6321f584b911e33398679d21af5a12a2381d74f07",
+        "layout_receipt.json": "2f303f7376f4425a5f76e9dd825d4ffa4701955550580e7927549fa8f02e8882",
+        "scene.usda": "b8a91101d708b6c90b008a28be7e9b6869aa5d448c6d22d4a31051691dc17b06"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1851,
+      "source_id": "short_18/batch_20261008_001:19",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_019_both02",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9541404677722257,
+        -0.511544123445384,
+        3.1344127852273234
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.59787161152619,
+          -0.24120385210820772,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0697261629639596,
+        "idx61_arm_r_joint1": 1.057326085454387,
+        "idx22_arm_l_joint2": 0.6478747218136558,
+        "idx62_arm_r_joint2": -0.6676770555731034,
+        "idx23_arm_l_joint3": 0.3016105501710668,
+        "idx63_arm_r_joint3": -0.26560684263060846,
+        "idx24_arm_l_joint4": -1.2080394315480423,
+        "idx64_arm_r_joint4": 1.3126974013304122,
+        "idx25_arm_l_joint5": 0.6743371554062009,
+        "idx65_arm_r_joint5": -0.6601781265756583,
+        "idx26_arm_l_joint6": 1.2934862893329622,
+        "idx66_arm_r_joint6": -1.5221373110438954,
+        "idx27_arm_l_joint7": -0.14930318565170148,
+        "idx67_arm_r_joint7": 0.19798633630008158,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "864dcedbff404316e6d95e637d4b0e9eebddfc4d72c9e1f6cc36273ad0917e93",
+        "layout_receipt.json": "ea52aa15f2d0691a90a7488013dce31da80fa35edd68084e126ff6ebb469d29e",
+        "scene.usda": "08288a675ea497e3e16bcaa3b0f99ad4e375ed88ebf118dfaee9206365e4713b"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1852,
+      "source_id": "short_18/batch_20261008_001:20",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_020_both02_nav09",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.8891012780044835,
+        -0.5201658577318129,
+        3.115773083589139
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.6131428241189507,
+          -0.21914655890281357,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.009833134786677,
+        "idx61_arm_r_joint1": 0.9831200311565282,
+        "idx22_arm_l_joint2": 0.6266503931901602,
+        "idx62_arm_r_joint2": -0.7118764083416853,
+        "idx23_arm_l_joint3": 0.26888947163499693,
+        "idx63_arm_r_joint3": -0.31573322685272975,
+        "idx24_arm_l_joint4": -1.1622776687469383,
+        "idx64_arm_r_joint4": 1.328938023447988,
+        "idx25_arm_l_joint5": 0.7111710701269778,
+        "idx65_arm_r_joint5": -0.7499935006546896,
+        "idx26_arm_l_joint6": 1.3097855009945196,
+        "idx66_arm_r_joint6": -1.5917621956346,
+        "idx27_arm_l_joint7": -0.17339134455341368,
+        "idx67_arm_r_joint7": 0.1650555837624384,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "ab4da75a2bb7d2986e62cbc1e419cb6eb0ee4e0bc05b2a8c4932ff5eb2d78762",
+        "layout_receipt.json": "a82936973cd6f7d86b6462952e1153ce86a32a0062ea9ccb0af23d0f9ee4c351",
+        "scene.usda": "948a5f6679df1fcf36cba285fda3ab59fcbb085d53f4377875585aa4b498361f"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1853,
+      "source_id": "short_18/batch_20261008_001:21",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_021_both02_nav09",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.8967650423658917,
+        -0.5097743014715191,
+        3.1157603698679726
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.5963602005207098,
+          -0.24225729570565077,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.094803086999391,
+        "idx61_arm_r_joint1": 1.022562046111847,
+        "idx22_arm_l_joint2": 0.5580076491199633,
+        "idx62_arm_r_joint2": -0.6604883182636253,
+        "idx23_arm_l_joint3": 0.2792657298084341,
+        "idx63_arm_r_joint3": -0.2887469827632797,
+        "idx24_arm_l_joint4": -1.071313207236565,
+        "idx64_arm_r_joint4": 1.349967808153853,
+        "idx25_arm_l_joint5": 0.705060180689682,
+        "idx65_arm_r_joint5": -0.703599836305937,
+        "idx26_arm_l_joint6": 1.3459395106889993,
+        "idx66_arm_r_joint6": -1.5656969059396129,
+        "idx27_arm_l_joint7": -0.09011965687832968,
+        "idx67_arm_r_joint7": 0.12017412885966003,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "36eff0d33e71edba3afc2523f1b400f00218667ee88eded9c4081b9bf826d6ab",
+        "layout_receipt.json": "0b13a2a3f6775fc32cc317fe718d1301ccf53bd04bc25db3c576ca74fc5e35b9",
+        "scene.usda": "9d70851d8e899a49c12ef9af28ad2e501445dbc32168a6e4f9a3ef4752ec583e"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1854,
+      "source_id": "short_18/batch_20261008_001:22",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_022_mix11a01",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9015511946667345,
+        -0.5116672879399353,
+        -3.1158125485018147
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0551596039076077,
+        "idx61_arm_r_joint1": 0.9571119328459506,
+        "idx22_arm_l_joint2": 0.5855030230308093,
+        "idx62_arm_r_joint2": -0.6713449607634423,
+        "idx23_arm_l_joint3": 0.35153713073240495,
+        "idx63_arm_r_joint3": -0.23945551618765507,
+        "idx24_arm_l_joint4": -1.145981919194798,
+        "idx64_arm_r_joint4": 1.3466883915875296,
+        "idx25_arm_l_joint5": 0.7224954302932399,
+        "idx65_arm_r_joint5": -0.7817301916280822,
+        "idx26_arm_l_joint6": 1.295444112208334,
+        "idx66_arm_r_joint6": -1.4844053784035436,
+        "idx27_arm_l_joint7": -0.061205363222257114,
+        "idx67_arm_r_joint7": 0.16867964666333185,
+        "idx31_gripper_l_inner_joint1": -0.7843978802965452,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7568520119374346,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.06433522732958621,
+        "idx42_gripper_l_outer_joint3": 0.06435304015993207,
+        "idx72_gripper_r_inner_joint3": -0.05389181064017062,
+        "idx82_gripper_r_outer_joint3": 0.053922915898099666,
+        "idx33_gripper_l_inner_joint4": -0.034686542654441405,
+        "idx43_gripper_l_outer_joint4": 0.03460055900884191,
+        "idx73_gripper_r_inner_joint4": -0.03490659376653285,
+        "idx83_gripper_r_outer_joint4": 0.034906588530545096,
+        "idx39_gripper_l_inner_joint0": 0.45006304511682454,
+        "idx49_gripper_l_outer_joint0": -0.44997771596969455,
+        "idx79_gripper_r_inner_joint0": 0.4337483181344197,
+        "idx89_gripper_r_outer_joint0": -0.43373589139014557
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "8fed2ec9a198f69fe7908904b14a5a3be1c35418f2193e49a792aced5eb4e973",
+        "layout_receipt.json": "59a13f41b3a41f87ac24486be2e87ac51418a511c4b9a125f214c27e32cbd37e",
+        "scene.usda": "5175674b23d5eecf0d93ec4bd37ecc6a6c0a412ddada4fd3b64e521af135fe50"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1855,
+      "source_id": "short_18/batch_20261008_001:23",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_023_mix11a01",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9347988853841573,
+        -0.5564968043626338,
+        3.1260402602047157
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.1122424645026385,
+        "idx61_arm_r_joint1": 1.0070150443001824,
+        "idx22_arm_l_joint2": 0.5483833511250668,
+        "idx62_arm_r_joint2": -0.73661284723175,
+        "idx23_arm_l_joint3": 0.37921533065208485,
+        "idx63_arm_r_joint3": -0.36685783043044,
+        "idx24_arm_l_joint4": -1.1952008645649883,
+        "idx64_arm_r_joint4": 1.2946491586229452,
+        "idx25_arm_l_joint5": 0.671940443583184,
+        "idx65_arm_r_joint5": -0.7593257497465453,
+        "idx26_arm_l_joint6": 1.3743157584199026,
+        "idx66_arm_r_joint6": -1.5814188774348956,
+        "idx27_arm_l_joint7": -0.11098378464201356,
+        "idx67_arm_r_joint7": 0.21285832664395196,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "2709427debf5231157760e1357cb2db372bd7aadfd24967c01c8c51b4f77b0ca",
+        "layout_receipt.json": "1af49c4ef4612a495da74f45904603c13bad8f355543b4708f91a2b9c26cb1f0",
+        "scene.usda": "d08cfbbcdd73ece790436cddc5c1d96bf2473f2917939960c620ca24dc20c8e6"
+      }
+    },
+    {
+      "task_index": 42,
+      "episode_index": 1856,
+      "source_id": "short_18/batch_20261008_001:24",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_wallet_r_024_both02",
+      "asset": "wallet",
+      "hand": "r",
+      "base_xyyaw": [
+        -0.9405137313999667,
+        -0.5263847046219792,
+        -3.0835530054133926
+      ],
+      "target_matrix": [
+        [
+          0.02397861507797139,
+          -0.998458007442565,
+          0.05006628998407242,
+          0
+        ],
+        [
+          0.9977635013917835,
+          0.02077620042279246,
+          -0.06353223423116802,
+          0
+        ],
+        [
+          0.06239408072369128,
+          0.051477731785876946,
+          0.9967231420112741,
+          0
+        ],
+        [
+          -1.5922322965535116,
+          -0.22272537961357897,
+          0.4500010013580322,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.1256919606397566,
+        "idx61_arm_r_joint1": 1.0149703059504127,
+        "idx22_arm_l_joint2": 0.6009001554521296,
+        "idx62_arm_r_joint2": -0.7354830011392839,
+        "idx23_arm_l_joint3": 0.2841783632027624,
+        "idx63_arm_r_joint3": -0.3600071148423202,
+        "idx24_arm_l_joint4": -1.1601087903551777,
+        "idx64_arm_r_joint4": 1.4132977788759375,
+        "idx25_arm_l_joint5": 0.7424237981512757,
+        "idx65_arm_r_joint5": -0.7625730752217335,
+        "idx26_arm_l_joint6": 1.3910035252845026,
+        "idx66_arm_r_joint6": -1.4943120713425295,
+        "idx27_arm_l_joint7": -0.128556378456414,
+        "idx67_arm_r_joint7": 0.15653809551657885,
+        "idx31_gripper_l_inner_joint1": -0.7844088584175404,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.2291393382125524,
+        "idx81_gripper_r_outer_joint1": 0.22999999602684235,
+        "idx32_gripper_l_inner_joint3": -0.08924744620731509,
+        "idx42_gripper_l_outer_joint3": 0.08883384855315297,
+        "idx72_gripper_r_inner_joint3": 0.01786202594148009,
+        "idx82_gripper_r_outer_joint3": -0.01798869321194358,
+        "idx33_gripper_l_inner_joint4": 0.0348216590638138,
+        "idx43_gripper_l_outer_joint4": -0.03368550906196006,
+        "idx73_gripper_r_inner_joint4": 0.02751415572660201,
+        "idx83_gripper_r_outer_joint4": -0.027231489182266016,
+        "idx39_gripper_l_inner_joint0": 0.3919099834373125,
+        "idx49_gripper_l_outer_joint0": -0.3928507159041374,
+        "idx79_gripper_r_inner_joint0": 0.0915189485955544,
+        "idx89_gripper_r_outer_joint0": -0.09174231234256612
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "71ec3b65127e23db79318a487d9fa9e051e4d0b3f4dbbbc38d89b40c63e8a851",
+        "layout_receipt.json": "d4692dbff5104dc9c7b5802085ad44ec999380e955be05d8612471c6b9ba0ff0",
+        "scene.usda": "9f9fe33a89ff3df2a801a122f080253efeb03f7ca0322cce968c3b2480173621"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1857,
+      "source_id": "short_18/batch_20261008_001:25",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_000_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1012055709178183,
+        -0.35578325525840854,
+        -2.967725685238699
+      ],
+      "target_matrix": [
+        [
+          0.499928119520206,
+          -0.8661891328916255,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.8660314815184919,
+          0.4988732481033192,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.026001651396356143,
+          -0.03816550708111242,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.767427389500248,
+          -0.4333629870032959,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9447669161919156,
+        "idx61_arm_r_joint1": 0.8411609616191542,
+        "idx22_arm_l_joint2": 0.45577725053974144,
+        "idx62_arm_r_joint2": -0.6473074685014689,
+        "idx23_arm_l_joint3": 0.12409064846013622,
+        "idx63_arm_r_joint3": -0.18950614895423995,
+        "idx24_arm_l_joint4": -1.486703686424282,
+        "idx64_arm_r_joint4": 1.338586656077345,
+        "idx25_arm_l_joint5": 0.6146825467255077,
+        "idx65_arm_r_joint5": -0.7067173326779838,
+        "idx26_arm_l_joint6": 1.4538542601684272,
+        "idx66_arm_r_joint6": -1.3786118367323639,
+        "idx27_arm_l_joint7": -0.24943351526482768,
+        "idx67_arm_r_joint7": 0.11600101368815471,
+        "idx31_gripper_l_inner_joint1": -0.7844058040913494,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054201189139,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924058706335473,
+        "idx42_gripper_l_outer_joint3": 0.08859912620336927,
+        "idx72_gripper_r_inner_joint3": -0.08716388959957677,
+        "idx82_gripper_r_outer_joint3": 0.08841675674982838,
+        "idx33_gripper_l_inner_joint4": 0.03480826017114624,
+        "idx43_gripper_l_outer_joint4": -0.033018555922919954,
+        "idx73_gripper_r_inner_joint4": 0.028982309240087118,
+        "idx83_gripper_r_outer_joint4": -0.03248701589922508,
+        "idx39_gripper_l_inner_joint0": 0.3919139802412996,
+        "idx49_gripper_l_outer_joint0": -0.3934074410289386,
+        "idx79_gripper_r_inner_joint0": 0.3967680899569462,
+        "idx89_gripper_r_outer_joint0": -0.3938514353373534
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "57affdcdd0842fbe4e51d8046763615b7752d0aaa4375c0720254c3aa1634e6f",
+        "layout_receipt.json": "9e948a0b7e21a0c05f02f89c7badb5831da5db9ae58a27d341879b06a4402e84",
+        "scene.usda": "b8eac99f86258f289b150e09dbefcd66f7fb0d119ef8907c4c5b16cb718896bc"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1858,
+      "source_id": "short_18/batch_20261008_001:26",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_001_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1012055709178183,
+        -0.35578325525840854,
+        -2.967725685238699
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7738314693782073,
+          -0.4357418176052243,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9447669161919156,
+        "idx61_arm_r_joint1": 0.8411609616191542,
+        "idx22_arm_l_joint2": 0.45577725053974144,
+        "idx62_arm_r_joint2": -0.6473074685014689,
+        "idx23_arm_l_joint3": 0.12409064846013622,
+        "idx63_arm_r_joint3": -0.18950614895423995,
+        "idx24_arm_l_joint4": -1.486703686424282,
+        "idx64_arm_r_joint4": 1.338586656077345,
+        "idx25_arm_l_joint5": 0.6146825467255077,
+        "idx65_arm_r_joint5": -0.7067173326779838,
+        "idx26_arm_l_joint6": 1.4538542601684272,
+        "idx66_arm_r_joint6": -1.3786118367323639,
+        "idx27_arm_l_joint7": -0.24943351526482768,
+        "idx67_arm_r_joint7": 0.11600101368815471,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "e7ac3611b1413738889640adbe5330243b1ce0db736086a3e1d1bbb03eaca9b7",
+        "layout_receipt.json": "f17510d46f35f08b58f1c26388f80ae7b1fdc72c47cd0faf4386b7e20e3ffdcd",
+        "scene.usda": "99b051366342db62a423b35cde024169b0a02245e5d16db3bbbd2e68199a432b"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1859,
+      "source_id": "short_18/batch_20261008_001:27",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_002_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.095923863658888,
+        -0.36780763563875646,
+        -2.972440594377441
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7493901942980132,
+          -0.4227667095024874,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.8776738322705221,
+        "idx61_arm_r_joint1": 0.9421462991002504,
+        "idx22_arm_l_joint2": 0.4858432406927864,
+        "idx62_arm_r_joint2": -0.573866340647708,
+        "idx23_arm_l_joint3": 0.16595688069910527,
+        "idx63_arm_r_joint3": -0.1372998692102804,
+        "idx24_arm_l_joint4": -1.4847269551051707,
+        "idx64_arm_r_joint4": 1.430821911480877,
+        "idx25_arm_l_joint5": 0.7195125567142967,
+        "idx65_arm_r_joint5": -0.7278302745888867,
+        "idx26_arm_l_joint6": 1.4416142386403685,
+        "idx66_arm_r_joint6": -1.4218036490815416,
+        "idx27_arm_l_joint7": -0.19260804918915295,
+        "idx67_arm_r_joint7": 0.15459661779239747,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "170d956a4c2712babe8311767529b73ae3c28616ac24caa9d7d8150fe430dee2",
+        "layout_receipt.json": "e6a5eb3fe04426eff957d38661ad1096255515316bde822b731ecbb8d823de77",
+        "scene.usda": "6aeab7aa958b72fd291c46d43a4fd851faf5383eb0d39c7f31ecc4b8b34c0bcb"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1860,
+      "source_id": "short_18/batch_20261008_001:28",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_003_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.104455821143811,
+        -0.3760321998760374,
+        -2.9456168187371947
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7412264102438753,
+          -0.44180598559860884,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9589467176789607,
+        "idx61_arm_r_joint1": 0.9184134058879547,
+        "idx22_arm_l_joint2": 0.5083820390513177,
+        "idx62_arm_r_joint2": -0.5539916354856375,
+        "idx23_arm_l_joint3": 0.11054703454561897,
+        "idx63_arm_r_joint3": -0.1445341798639125,
+        "idx24_arm_l_joint4": -1.4266315606636917,
+        "idx64_arm_r_joint4": 1.3869914731022983,
+        "idx25_arm_l_joint5": 0.7216111942323065,
+        "idx65_arm_r_joint5": -0.7495886335899703,
+        "idx26_arm_l_joint6": 1.4600265354688493,
+        "idx66_arm_r_joint6": -1.427413997391957,
+        "idx27_arm_l_joint7": -0.17444081311522983,
+        "idx67_arm_r_joint7": 0.06059342289921655,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "d71ede58fbb7f99543dbd73f57e3b249d06b591a4a66b08850332feaf80ea019",
+        "layout_receipt.json": "c3ae2cbce516f4854e8db4b6bfda0466b7204eb3fe7280b65bd69c7a6c997515",
+        "scene.usda": "afef3ede5a8a28338d8d7be1f75f570628014e10023367fa114d16737a9b688e"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1861,
+      "source_id": "short_18/batch_20261008_001:29",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_004_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.104027405117714,
+        -0.38796580601776165,
+        -2.9603989628001286
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7422489184039052,
+          -0.44439485021501723,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9595908697676236,
+        "idx61_arm_r_joint1": 0.8986709932530338,
+        "idx22_arm_l_joint2": 0.4420919314880968,
+        "idx62_arm_r_joint2": -0.6039844288895776,
+        "idx23_arm_l_joint3": 0.2088544636820996,
+        "idx63_arm_r_joint3": -0.18907554909548777,
+        "idx24_arm_l_joint4": -1.3874994710802309,
+        "idx64_arm_r_joint4": 1.4196811096927484,
+        "idx25_arm_l_joint5": 0.6808290766164597,
+        "idx65_arm_r_joint5": -0.7262422316308724,
+        "idx26_arm_l_joint6": 1.4466834326172797,
+        "idx66_arm_r_joint6": -1.4092042339643767,
+        "idx27_arm_l_joint7": -0.17306926850908222,
+        "idx67_arm_r_joint7": 0.12986612108051496,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "fcd4f12bb93ddeedace5112acccb94d0f5ad0122b8f18920b860571465dc883e",
+        "layout_receipt.json": "61fa3fcb88c552750801ef11589dbf5bb4af6f094f48575bed1f342207bdf8ee",
+        "scene.usda": "bdd9fb3a667c48bf84421eecb18b047196c825e504496ad1401ff0b3cf6859f7"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1862,
+      "source_id": "short_18/batch_20261008_001:30",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_005_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1003143872382235,
+        -0.3655517393210192,
+        -3.016570069433502
+      ],
+      "target_matrix": [
+        [
+          -0.4999281195202061,
+          0.8661891328916255,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          -0.8660314815184917,
+          -0.4988732481033193,
+          0.04158957668924767,
+          0
+        ],
+        [
+          0.02600165139635614,
+          0.038165507081112424,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.765153070474232,
+          -0.44445714635656086,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9276756804221685,
+        "idx61_arm_r_joint1": 0.864251034323332,
+        "idx22_arm_l_joint2": 0.47665423637806337,
+        "idx62_arm_r_joint2": -0.5530596955516778,
+        "idx23_arm_l_joint3": 0.1472778349979394,
+        "idx63_arm_r_joint3": -0.25177817893329024,
+        "idx24_arm_l_joint4": -1.3898623607574037,
+        "idx64_arm_r_joint4": 1.363051785431358,
+        "idx25_arm_l_joint5": 0.7252385527950489,
+        "idx65_arm_r_joint5": -0.7461492276211602,
+        "idx26_arm_l_joint6": 1.4810766933570536,
+        "idx66_arm_r_joint6": -1.3943247534799406,
+        "idx27_arm_l_joint7": -0.2897488972548812,
+        "idx67_arm_r_joint7": 0.14696226705352183,
+        "idx31_gripper_l_inner_joint1": -0.7844058040913494,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054201189139,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924058706335473,
+        "idx42_gripper_l_outer_joint3": 0.08859912620336927,
+        "idx72_gripper_r_inner_joint3": -0.08716388959957677,
+        "idx82_gripper_r_outer_joint3": 0.08841675674982838,
+        "idx33_gripper_l_inner_joint4": 0.03480826017114624,
+        "idx43_gripper_l_outer_joint4": -0.033018555922919954,
+        "idx73_gripper_r_inner_joint4": 0.028982309240087118,
+        "idx83_gripper_r_outer_joint4": -0.03248701589922508,
+        "idx39_gripper_l_inner_joint0": 0.3919139802412996,
+        "idx49_gripper_l_outer_joint0": -0.3934074410289386,
+        "idx79_gripper_r_inner_joint0": 0.3967680899569462,
+        "idx89_gripper_r_outer_joint0": -0.3938514353373534
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "d4561254437fc1f251ce8a45e50697fb76f1cbbbfcc1de4af9a8eb48a4d47dc4",
+        "layout_receipt.json": "66bc9d898e045f3ec81aaac2a020c41cdb2ef3c86b9fabf4a0ada6fc938d4a80",
+        "scene.usda": "f106081761b5109ffee33974e41c9fce7dbae3eb3bac8dd62d1bbbfdddaffd54"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1863,
+      "source_id": "short_18/batch_20261008_001:31",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_006_mix11a01",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1724932140856092,
+        -0.4143637063527061,
+        -2.995541780563436
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.8815008613359931,
+        "idx61_arm_r_joint1": 0.9198127638827368,
+        "idx22_arm_l_joint2": 0.4521184999656497,
+        "idx62_arm_r_joint2": -0.6452794713313735,
+        "idx23_arm_l_joint3": 0.14307749732666641,
+        "idx63_arm_r_joint3": -0.23981477661870676,
+        "idx24_arm_l_joint4": -1.437030139456015,
+        "idx64_arm_r_joint4": 1.4410435232187646,
+        "idx25_arm_l_joint5": 0.7221679946372147,
+        "idx65_arm_r_joint5": -0.6776352141001549,
+        "idx26_arm_l_joint6": 1.4658291640099685,
+        "idx66_arm_r_joint6": -1.3639944112991915,
+        "idx27_arm_l_joint7": -0.16545742148141773,
+        "idx67_arm_r_joint7": 0.15178640027587542,
+        "idx31_gripper_l_inner_joint1": -0.7844058040913494,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054201189139,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924058706335473,
+        "idx42_gripper_l_outer_joint3": 0.08859912620336927,
+        "idx72_gripper_r_inner_joint3": -0.08716388959957677,
+        "idx82_gripper_r_outer_joint3": 0.08841675674982838,
+        "idx33_gripper_l_inner_joint4": 0.03480826017114624,
+        "idx43_gripper_l_outer_joint4": -0.033018555922919954,
+        "idx73_gripper_r_inner_joint4": 0.028982309240087118,
+        "idx83_gripper_r_outer_joint4": -0.03248701589922508,
+        "idx39_gripper_l_inner_joint0": 0.3919139802412996,
+        "idx49_gripper_l_outer_joint0": -0.3934074410289386,
+        "idx79_gripper_r_inner_joint0": 0.3967680899569462,
+        "idx89_gripper_r_outer_joint0": -0.3938514353373534
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "aa1696b1d4448fdf264891b206ad497b646a9397b525abd335ed29a0993a7fdc",
+        "layout_receipt.json": "55208a95044d3862898b1a7aabe16478236eff543585ac43a8858ecaff91555d",
+        "scene.usda": "83c938ef9219f5ebd170724a5f3fe7abc69280cafc640f135a9c521de7700156"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1864,
+      "source_id": "short_18/batch_20261008_001:32",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_007_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1030182367564008,
+        -0.3870634328006293,
+        -2.9987807450088964
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7745063550533595,
+          -0.4256550111442238,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9817744024367384,
+        "idx61_arm_r_joint1": 0.8562713381701003,
+        "idx22_arm_l_joint2": 0.5300347038466389,
+        "idx62_arm_r_joint2": -0.577662144149398,
+        "idx23_arm_l_joint3": 0.1724689087755943,
+        "idx63_arm_r_joint3": -0.23938966952970286,
+        "idx24_arm_l_joint4": -1.4308353604443818,
+        "idx64_arm_r_joint4": 1.4174796075776344,
+        "idx25_arm_l_joint5": 0.6822259711872336,
+        "idx65_arm_r_joint5": -0.6793884396247813,
+        "idx26_arm_l_joint6": 1.4625457527020098,
+        "idx66_arm_r_joint6": -1.4125289242692316,
+        "idx27_arm_l_joint7": -0.1764986709790477,
+        "idx67_arm_r_joint7": 0.15945543868794934,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "fa8aed9bda595b45a04a72433b29b713b93d6e5d5fb1c84205837434a8800ac6",
+        "layout_receipt.json": "082df8286ca5cbdb996dba576883db6480e960c381be7e2a4d5a606f64962bff",
+        "scene.usda": "930d412207b20079823b040ee9a5c23bcfd770c6fc3ea316c013f77f8d9db99b"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1865,
+      "source_id": "short_18/batch_20261008_001:33",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_008_both02_nav09",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1314479094099312,
+        -0.38821627748052784,
+        -2.9840176028487484
+      ],
+      "target_matrix": [
+        [
+          -0.17352463345778285,
+          0.9849370234740379,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          -0.9844280923688536,
+          -0.17258729851669097,
+          0.04158957668924767,
+          0
+        ],
+        [
+          0.03748693214738237,
+          0.026970756835387875,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.795533097163737,
+          -0.33065582099262003,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9257374983598361,
+        "idx61_arm_r_joint1": 0.8123790478752045,
+        "idx22_arm_l_joint2": 0.45596626839810983,
+        "idx62_arm_r_joint2": -0.6356413581883222,
+        "idx23_arm_l_joint3": 0.09994306777660161,
+        "idx63_arm_r_joint3": -0.2565624146735631,
+        "idx24_arm_l_joint4": -1.508045993084068,
+        "idx64_arm_r_joint4": 1.3648496854832706,
+        "idx25_arm_l_joint5": 0.7054918125233566,
+        "idx65_arm_r_joint5": -0.7134922147540635,
+        "idx26_arm_l_joint6": 1.3608099364257293,
+        "idx66_arm_r_joint6": -1.3923297795073621,
+        "idx27_arm_l_joint7": -0.2627712418599466,
+        "idx67_arm_r_joint7": 0.17106029629602412,
+        "idx31_gripper_l_inner_joint1": -0.7844058040913494,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054201189139,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924058706335473,
+        "idx42_gripper_l_outer_joint3": 0.08859912620336927,
+        "idx72_gripper_r_inner_joint3": -0.08716388959957677,
+        "idx82_gripper_r_outer_joint3": 0.08841675674982838,
+        "idx33_gripper_l_inner_joint4": 0.03480826017114624,
+        "idx43_gripper_l_outer_joint4": -0.033018555922919954,
+        "idx73_gripper_r_inner_joint4": 0.028982309240087118,
+        "idx83_gripper_r_outer_joint4": -0.03248701589922508,
+        "idx39_gripper_l_inner_joint0": 0.3919139802412996,
+        "idx49_gripper_l_outer_joint0": -0.3934074410289386,
+        "idx79_gripper_r_inner_joint0": 0.3967680899569462,
+        "idx89_gripper_r_outer_joint0": -0.3938514353373534
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "1fb356dbfd0e65fb43585f14039e233c6bd25021c610c1c12d6d2446e46ecb44",
+        "layout_receipt.json": "14f542246f99b6f5ae7e6f19618013b5072ddde67770e4cece8c08e49bdcb284",
+        "scene.usda": "2bfb624e798fe33b3416b6ba46d8e3179f10311fa4ff868b1f44953162f32938"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1866,
+      "source_id": "short_18/batch_20261008_001:34",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_009_mix11a04",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.0928387431731614,
+        -0.3837245209191973,
+        -3.10505340194441
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9687651934068376,
+        "idx61_arm_r_joint1": 0.8134983744813649,
+        "idx22_arm_l_joint2": 0.5460986252258878,
+        "idx62_arm_r_joint2": -0.6424699695393944,
+        "idx23_arm_l_joint3": 0.09331123074057267,
+        "idx63_arm_r_joint3": -0.2206899343958184,
+        "idx24_arm_l_joint4": -1.4190834963441346,
+        "idx64_arm_r_joint4": 1.340604266919189,
+        "idx25_arm_l_joint5": 0.6693054454216324,
+        "idx65_arm_r_joint5": -0.6725586298512187,
+        "idx26_arm_l_joint6": 1.3952045287460482,
+        "idx66_arm_r_joint6": -1.3639793644390326,
+        "idx27_arm_l_joint7": -0.23132373689142305,
+        "idx67_arm_r_joint7": 0.07386220691161603,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "a555a1c2eb9e7a2df0e1b03154dc5b6e2016d92b68f7eb649ef91d36d4e50ccf",
+        "layout_receipt.json": "5aeeaa27058d1d5ce84dc3d3f8dcbc5aa0e693eddda660590fe73d4091b253eb",
+        "scene.usda": "867f9c6582d084053bafc9cc29d5edf4b3195f1cf80f39e74e246c0f775bdd30"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1867,
+      "source_id": "short_18/batch_20261008_001:35",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_010_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.120747278924803,
+        -0.4034678678448089,
+        -2.956576883354328
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.751552055396451,
+          -0.4158487515157827,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9424946405708327,
+        "idx61_arm_r_joint1": 0.8758315240074325,
+        "idx22_arm_l_joint2": 0.46797452833230435,
+        "idx62_arm_r_joint2": -0.5953468653680691,
+        "idx23_arm_l_joint3": 0.16379237987838657,
+        "idx63_arm_r_joint3": -0.2575895293269794,
+        "idx24_arm_l_joint4": -1.491168742307909,
+        "idx64_arm_r_joint4": 1.4340101147798652,
+        "idx25_arm_l_joint5": 0.6879003019428381,
+        "idx65_arm_r_joint5": -0.6922555024314992,
+        "idx26_arm_l_joint6": 1.377095699123782,
+        "idx66_arm_r_joint6": -1.4248331279795612,
+        "idx27_arm_l_joint7": -0.22809951433869138,
+        "idx67_arm_r_joint7": 0.17702617661196512,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "0b679559a5ed27fcf52149fb6c6dfba0a1b1ba2bbb4bfc0960955cca791369cb",
+        "layout_receipt.json": "31a1109595cc783a6a12050bab14188e0c6fb2eac72c65da7f82a3a7f729530d",
+        "scene.usda": "15e40bbdd616ca88954c83d715aef7fd277caa7408500835197b8f13dec260e3"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1868,
+      "source_id": "short_18/batch_20261008_001:36",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_011_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1180468885641965,
+        -0.40270699197086457,
+        -2.9890334585850287
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7615484407734068,
+          -0.421119121274241,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9172441450113554,
+        "idx61_arm_r_joint1": 0.8936347558946122,
+        "idx22_arm_l_joint2": 0.43739488098401036,
+        "idx62_arm_r_joint2": -0.536802694993398,
+        "idx23_arm_l_joint3": 0.20177995933862902,
+        "idx63_arm_r_joint3": -0.15147454411222713,
+        "idx24_arm_l_joint4": -1.50284031210129,
+        "idx64_arm_r_joint4": 1.4369057698331085,
+        "idx25_arm_l_joint5": 0.6332711448181517,
+        "idx65_arm_r_joint5": -0.6285622765367281,
+        "idx26_arm_l_joint6": 1.381653566171398,
+        "idx66_arm_r_joint6": -1.388546892336959,
+        "idx27_arm_l_joint7": -0.21741000184203363,
+        "idx67_arm_r_joint7": 0.0899156420940728,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "6f0be66dd15a7c267c89f2bd2f31836f03953bb9926111f9c28f54cbd170362e",
+        "layout_receipt.json": "ef56313c946c316535dfa1a522ccf19c25f52843bd2039b6e59cfb1d76830475",
+        "scene.usda": "12fb67d2bc861718c6b09d6fc67b4db477265e206770a12bcc12d3573cb380f4"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1869,
+      "source_id": "short_18/batch_20261008_001:37",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_012_both02_nav08",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.0963388758819779,
+        -0.408364641068075,
+        -2.9480347820596804
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7517039522114946,
+          -0.4599996820291014,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9231244712772776,
+        "idx61_arm_r_joint1": 0.8833060185018762,
+        "idx22_arm_l_joint2": 0.5443446673319616,
+        "idx62_arm_r_joint2": -0.5699492967373923,
+        "idx23_arm_l_joint3": 0.18540875910385535,
+        "idx63_arm_r_joint3": -0.1818798542776618,
+        "idx24_arm_l_joint4": -1.521100675589582,
+        "idx64_arm_r_joint4": 1.3368569329493385,
+        "idx25_arm_l_joint5": 0.6580140418738599,
+        "idx65_arm_r_joint5": -0.7539906391347896,
+        "idx26_arm_l_joint6": 1.3913902162747822,
+        "idx66_arm_r_joint6": -1.416322730400104,
+        "idx27_arm_l_joint7": -0.16346138224440335,
+        "idx67_arm_r_joint7": 0.0876168014411164,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "a17f2768f6603d842cef950570ce4e6d6be78058f9dea0435b6cda84c4f5d026",
+        "layout_receipt.json": "b5b30b6024cada8d11f8e3dd418d2ee7c222d905dc58903c5eaf2c90265ccce5",
+        "scene.usda": "e862599723445a3ab38b10dd8e6c1e46ec829ed130f991c3a8c8d96cf9904313"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1870,
+      "source_id": "short_18/batch_20261008_001:38",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_013_mix11a01",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1549182339007884,
+        -0.42666320674354263,
+        -3.0847502521356813
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9681003352406993,
+        "idx61_arm_r_joint1": 0.8541053226765116,
+        "idx22_arm_l_joint2": 0.4193411787963087,
+        "idx62_arm_r_joint2": -0.5943000433225862,
+        "idx23_arm_l_joint3": 0.10784619804849352,
+        "idx63_arm_r_joint3": -0.1625578049760531,
+        "idx24_arm_l_joint4": -1.4871617501317758,
+        "idx64_arm_r_joint4": 1.318374728142243,
+        "idx25_arm_l_joint5": 0.6551109299695645,
+        "idx65_arm_r_joint5": -0.6381489906707408,
+        "idx26_arm_l_joint6": 1.434218240819055,
+        "idx66_arm_r_joint6": -1.4216682273401111,
+        "idx27_arm_l_joint7": -0.23255704679223874,
+        "idx67_arm_r_joint7": 0.1330982415703544,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "df7f88faba1137762b6a513ed9a0fd3689762f49d6ba582b538eb8093076f4e2",
+        "layout_receipt.json": "ccdddef7a3a2d1253ca22868c64096e44beec22ff3f190ec8357948fdfe2407f",
+        "scene.usda": "c976f2be373e03e38ba13761276b679ddfc22df447e089cd54f21a4683c33578"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1871,
+      "source_id": "short_18/batch_20261008_001:39",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_014_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1403979253396106,
+        -0.40908402381617365,
+        -2.9555018202112953
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7748486458231354,
+          -0.42090928085477114,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9822698169785204,
+        "idx61_arm_r_joint1": 0.9371149220108181,
+        "idx22_arm_l_joint2": 0.4994819877148683,
+        "idx62_arm_r_joint2": -0.6501631761383608,
+        "idx23_arm_l_joint3": 0.1537160935122332,
+        "idx63_arm_r_joint3": -0.19403029372455294,
+        "idx24_arm_l_joint4": -1.4039302428996383,
+        "idx64_arm_r_joint4": 1.3869508598956746,
+        "idx25_arm_l_joint5": 0.6104188258202908,
+        "idx65_arm_r_joint5": -0.7526807633526341,
+        "idx26_arm_l_joint6": 1.4205789944542686,
+        "idx66_arm_r_joint6": -1.379842083997926,
+        "idx27_arm_l_joint7": -0.15209476104059297,
+        "idx67_arm_r_joint7": 0.13497366457712343,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "8f6bdb133e8a44f00771db8a07a647c9355cd4de309664d8fa67741dacc62e9b",
+        "layout_receipt.json": "05a59cc6989a9f9c77617347d51bc8e7aefa3116b708cc23e9cc7bcf7ac2f587",
+        "scene.usda": "a20a632e7b66d5d125d47310ac271250978cdf69a8e405adffa986a7fe38ee2d"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1872,
+      "source_id": "short_18/batch_20261008_001:40",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_015_mix11a02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1762040862401304,
+        -0.40604130814334355,
+        -2.974784043727157
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9541640132563146,
+        "idx61_arm_r_joint1": 0.8186708991085713,
+        "idx22_arm_l_joint2": 0.4576913975732359,
+        "idx62_arm_r_joint2": -0.5401667002138453,
+        "idx23_arm_l_joint3": 0.20991075659420907,
+        "idx63_arm_r_joint3": -0.26425392350733456,
+        "idx24_arm_l_joint4": -1.4177344720939549,
+        "idx64_arm_r_joint4": 1.383273034430275,
+        "idx25_arm_l_joint5": 0.7087645711869549,
+        "idx65_arm_r_joint5": -0.754559623501685,
+        "idx26_arm_l_joint6": 1.4367931181189981,
+        "idx66_arm_r_joint6": -1.4626823728659308,
+        "idx27_arm_l_joint7": -0.1728224267655455,
+        "idx67_arm_r_joint7": 0.19184703426290597,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "6a84912d5fb80b1630eb2b208cbec79437567b3d998e7b4d6ad48f23fd962219",
+        "layout_receipt.json": "3fac4ae0d6a3e22c08b0c1b262454774ca99fad35835ef672e0c2b19d15b2699",
+        "scene.usda": "5e2d0e9567bb56d1cbaaca8e7fad808049cef9c9a4b2119dceb4e64044ebe1a7"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1873,
+      "source_id": "short_18/batch_20261008_001:41",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_016_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1283096129927241,
+        -0.40268775487813085,
+        -3.005818916173743
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7548043896120014,
+          -0.45645920325447664,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0005675313011007,
+        "idx61_arm_r_joint1": 0.9295500131973663,
+        "idx22_arm_l_joint2": 0.4535535110295253,
+        "idx62_arm_r_joint2": -0.655225179580329,
+        "idx23_arm_l_joint3": 0.19356122783280594,
+        "idx63_arm_r_joint3": -0.17187069621573525,
+        "idx24_arm_l_joint4": -1.4434879056252938,
+        "idx64_arm_r_joint4": 1.4407782723741926,
+        "idx25_arm_l_joint5": 0.7267588183033206,
+        "idx65_arm_r_joint5": -0.6314370257754142,
+        "idx26_arm_l_joint6": 1.402610912895613,
+        "idx66_arm_r_joint6": -1.35033106332654,
+        "idx27_arm_l_joint7": -0.1651959323518856,
+        "idx67_arm_r_joint7": 0.13870385444745653,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "45128ed2ab7431802c3f5c87436e6d5586f2825a55b68e6f72cd8682d4d068a9",
+        "layout_receipt.json": "86883e3945ff85ab2a64d1a74dcc3bec64deb2ead92be6c012ed05c5466ec58f",
+        "scene.usda": "38458f5a0ae8bbb0eff407eb8f5f9f450026b068ab2ff42102b0a1bc46b0bb90"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1874,
+      "source_id": "short_18/batch_20261008_001:42",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_017_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1634587882837775,
+        -0.34468128311576884,
+        -2.9954039310716007
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7505940011548558,
+          -0.4459289892032179,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9261920999579126,
+        "idx61_arm_r_joint1": 0.8998173509442584,
+        "idx22_arm_l_joint2": 0.44457306551766906,
+        "idx62_arm_r_joint2": -0.5255636891400729,
+        "idx23_arm_l_joint3": 0.09821934508342624,
+        "idx63_arm_r_joint3": -0.150564991376181,
+        "idx24_arm_l_joint4": -1.3933626865361493,
+        "idx64_arm_r_joint4": 1.3529759817631521,
+        "idx25_arm_l_joint5": 0.7288858184869396,
+        "idx65_arm_r_joint5": -0.636442170728109,
+        "idx26_arm_l_joint6": 1.4938581355347254,
+        "idx66_arm_r_joint6": -1.4131050991710703,
+        "idx27_arm_l_joint7": -0.18480428811543462,
+        "idx67_arm_r_joint7": 0.08122794456504356,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "b361b6205e8082894923a3f7e41c591d747e853f8371b628c1653cb5060226ac",
+        "layout_receipt.json": "872a53652312d822126ae458db7c56d9eea5868fe23b947c27bb4b73ac8ba857",
+        "scene.usda": "8225c60ab0502df7dac7d707216c3ea6eabac2e6635ec517143241af21bf9e29"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1875,
+      "source_id": "short_18/batch_20261008_001:43",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_018_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1383217255091898,
+        -0.3580036011067045,
+        -3.0465815586375866
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7750638946023476,
+          -0.4574068338572239,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9459305844302257,
+        "idx61_arm_r_joint1": 0.83440605325125,
+        "idx22_arm_l_joint2": 0.48855587000011386,
+        "idx62_arm_r_joint2": -0.6387486679691995,
+        "idx23_arm_l_joint3": 0.13056536731422888,
+        "idx63_arm_r_joint3": -0.23289135673282776,
+        "idx24_arm_l_joint4": -1.392171987212775,
+        "idx64_arm_r_joint4": 1.3364262998010727,
+        "idx25_arm_l_joint5": 0.6215708794640249,
+        "idx65_arm_r_joint5": -0.6553910945162409,
+        "idx26_arm_l_joint6": 1.4456938019562064,
+        "idx66_arm_r_joint6": -1.37664922016703,
+        "idx27_arm_l_joint7": -0.1837521730372852,
+        "idx67_arm_r_joint7": 0.10752379743140421,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "1a16bd7f65da294b44566d45009306dc26944f826123ed6889e61a4a4948d865",
+        "layout_receipt.json": "7601d58102cada7b687b41c15558fc79ecf29367e079b569b39a31e6fa4a2889",
+        "scene.usda": "69dac546c611fca3e6627961ed9229060e1e36a4567e80c0fd2b53bae283e559"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1876,
+      "source_id": "short_18/batch_20261008_001:44",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_019_both02_timing09",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1636011768865764,
+        -0.366092212458145,
+        -3.0029998103745252
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7597011964563407,
+          -0.4442333865555343,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -1.0023998527101023,
+        "idx61_arm_r_joint1": 0.8544946768278812,
+        "idx22_arm_l_joint2": 0.4387756301406756,
+        "idx62_arm_r_joint2": -0.5628925190599275,
+        "idx23_arm_l_joint3": 0.1338061513999895,
+        "idx63_arm_r_joint3": -0.21511209329545877,
+        "idx24_arm_l_joint4": -1.5175536113337054,
+        "idx64_arm_r_joint4": 1.3814787296458342,
+        "idx25_arm_l_joint5": 0.6455555079783603,
+        "idx65_arm_r_joint5": -0.6965301422971855,
+        "idx26_arm_l_joint6": 1.426706395490323,
+        "idx66_arm_r_joint6": -1.3383132825914483,
+        "idx27_arm_l_joint7": -0.17608533173311058,
+        "idx67_arm_r_joint7": 0.07357578393637801,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "1258e6998417307b0d39d119f979a6580b046126a45331bca982b8b1a9242d9a",
+        "layout_receipt.json": "ed652e90fea4a866cbb901e63e495ed22ca326ed191dd3b72f25f181e8e64779",
+        "scene.usda": "1f5bc876c85237da98b7b36da4f9d2209202b5cb8d84862da81b92f0e77c2111"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1877,
+      "source_id": "short_18/batch_20261008_001:45",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_020_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.132518188456034,
+        -0.37342604080482433,
+        -3.0523404073102878
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7789179759702212,
+          -0.4445934776409405,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9646522074193192,
+        "idx61_arm_r_joint1": 0.915282460552403,
+        "idx22_arm_l_joint2": 0.5408013315016112,
+        "idx62_arm_r_joint2": -0.5365337823023274,
+        "idx23_arm_l_joint3": 0.1050595994418891,
+        "idx63_arm_r_joint3": -0.2214251166594916,
+        "idx24_arm_l_joint4": -1.451650361208332,
+        "idx64_arm_r_joint4": 1.4219859424581576,
+        "idx25_arm_l_joint5": 0.6373993774029109,
+        "idx65_arm_r_joint5": -0.7133938775308124,
+        "idx26_arm_l_joint6": 1.3688545471305316,
+        "idx66_arm_r_joint6": -1.455733386633587,
+        "idx27_arm_l_joint7": -0.17555516293910306,
+        "idx67_arm_r_joint7": 0.06750159202666564,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "ba9f50be8a8067529d12416e605374a30fa4dedbee2727ea49ab2dd80e00b19b",
+        "layout_receipt.json": "b7714ba29e6edd7f0355657fb581dc34b0accfab687040233e6ce49c041a288f",
+        "scene.usda": "4f173d7d7f2fdb9a0f6729850eeaf043c71347cc7fcfdf7e1e274dffd0f0e2b7"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1878,
+      "source_id": "short_18/batch_20261008_001:46",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_021_mix11a01",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.092922218602337,
+        -0.4031841281230418,
+        -3.049239989281294
+      ],
+      "target_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.8920254742269046,
+        "idx61_arm_r_joint1": 0.9250031316892467,
+        "idx22_arm_l_joint2": 0.5529984095570923,
+        "idx62_arm_r_joint2": -0.5392497405610174,
+        "idx23_arm_l_joint3": 0.22673838935030868,
+        "idx63_arm_r_joint3": -0.13651926340526455,
+        "idx24_arm_l_joint4": -1.3925084776165064,
+        "idx64_arm_r_joint4": 1.3296988885714236,
+        "idx25_arm_l_joint5": 0.6687658224057551,
+        "idx65_arm_r_joint5": -0.7302108077082813,
+        "idx26_arm_l_joint6": 1.4495428686796978,
+        "idx66_arm_r_joint6": -1.4606041751092875,
+        "idx27_arm_l_joint7": -0.1602489774690089,
+        "idx67_arm_r_joint7": 0.18637826625394188,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "a0f089380725313857788a2c9d632381b14bd1c93c47d62b6ed28ba2ed2dd38d",
+        "layout_receipt.json": "61c7ee06c20314fe92246afa052d41ce2f48a6d6c5174acb2aeecc364584cab0",
+        "scene.usda": "1caad6cb4840274aeb19d3380c9861736c9e573838308bbff6d4e1ba7e4c3a17"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1879,
+      "source_id": "short_18/batch_20261008_001:47",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_022_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1402266158731607,
+        -0.43485255311136206,
+        -2.9741962177188466
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7644480625167651,
+          -0.46184379172040085,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9218353015725975,
+        "idx61_arm_r_joint1": 0.8357792456883221,
+        "idx22_arm_l_joint2": 0.46568797150987595,
+        "idx62_arm_r_joint2": -0.5263272840036259,
+        "idx23_arm_l_joint3": 0.12595152394945067,
+        "idx63_arm_r_joint3": -0.23204761736522023,
+        "idx24_arm_l_joint4": -1.399340151602832,
+        "idx64_arm_r_joint4": 1.334418010023044,
+        "idx25_arm_l_joint5": 0.7339125350444642,
+        "idx65_arm_r_joint5": -0.7246156394160793,
+        "idx26_arm_l_joint6": 1.3983562467381023,
+        "idx66_arm_r_joint6": -1.4535151066036056,
+        "idx27_arm_l_joint7": -0.27642626745419163,
+        "idx67_arm_r_joint7": 0.12854249672923196,
+        "idx31_gripper_l_inner_joint1": -0.7844057691847643,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054724787914,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924243711236186,
+        "idx42_gripper_l_outer_joint3": 0.08859415201500108,
+        "idx72_gripper_r_inner_joint3": -0.08716188247093698,
+        "idx82_gripper_r_outer_joint3": 0.08842070992058415,
+        "idx33_gripper_l_inner_joint4": 0.03481140001847058,
+        "idx43_gripper_l_outer_joint4": -0.03301884913823429,
+        "idx73_gripper_r_inner_joint4": 0.02898136676229104,
+        "idx83_gripper_r_outer_joint4": -0.032489626911786064,
+        "idx39_gripper_l_inner_joint0": 0.39191734872675593,
+        "idx49_gripper_l_outer_joint0": -0.39340227485435264,
+        "idx79_gripper_r_inner_joint0": 0.3967646516583197,
+        "idx89_gripper_r_outer_joint0": -0.393852831600755
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "cf25a4677daf81e5fa4edf2b4ab2155e705842bf2c5993259dcd8f5174163b26",
+        "layout_receipt.json": "3de7bf7f3aba2e4927226f3534c3f208e45c2e489c6bf43341e12549806ed8b3",
+        "scene.usda": "8d622832129daddd9b94b730ccfe99f1ff24af6ca7af3332cfeca4674af305a1"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1880,
+      "source_id": "short_18/batch_20261008_001:48",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_023_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1328897330304493,
+        -0.4376681987744651,
+        -2.9748658244936275
+      ],
+      "target_matrix": [
+        [
+          0.00014411487513130521,
+          1.0001058533262657,
+          -0.020074832923470676,
+          0
+        ],
+        [
+          -0.9994418875237471,
+          0.000978834633314614,
+          0.04158957668924766,
+          0
+        ],
+        [
+          0.04160084419014775,
+          0.02005147298238016,
+          0.9992407346267266,
+          0
+        ],
+        [
+          -1.7904857590025738,
+          -0.43123383521673153,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9775090170558403,
+        "idx61_arm_r_joint1": 0.8467483401651676,
+        "idx22_arm_l_joint2": 0.42085105797632916,
+        "idx62_arm_r_joint2": -0.5870601733201786,
+        "idx23_arm_l_joint3": 0.21562353673805168,
+        "idx63_arm_r_joint3": -0.15688838442370834,
+        "idx24_arm_l_joint4": -1.3855275334510817,
+        "idx64_arm_r_joint4": 1.4153682534654195,
+        "idx25_arm_l_joint5": 0.6175040327423921,
+        "idx65_arm_r_joint5": -0.6418939277956103,
+        "idx26_arm_l_joint6": 1.436691119049248,
+        "idx66_arm_r_joint6": -1.3329430182533037,
+        "idx27_arm_l_joint7": -0.23987103589673467,
+        "idx67_arm_r_joint7": 0.1351403951061192,
+        "idx31_gripper_l_inner_joint1": -0.7844058040913494,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054201189139,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924058706335473,
+        "idx42_gripper_l_outer_joint3": 0.08859912620336927,
+        "idx72_gripper_r_inner_joint3": -0.08716388959957677,
+        "idx82_gripper_r_outer_joint3": 0.08841675674982838,
+        "idx33_gripper_l_inner_joint4": 0.03480826017114624,
+        "idx43_gripper_l_outer_joint4": -0.033018555922919954,
+        "idx73_gripper_r_inner_joint4": 0.028982309240087118,
+        "idx83_gripper_r_outer_joint4": -0.03248701589922508,
+        "idx39_gripper_l_inner_joint0": 0.3919139802412996,
+        "idx49_gripper_l_outer_joint0": -0.3934074410289386,
+        "idx79_gripper_r_inner_joint0": 0.3967680899569462,
+        "idx89_gripper_r_outer_joint0": -0.3938514353373534
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "4dcd1b6c11d0dbeaaacf9c8c8dc4b472cf2b42056c28b449c8fdd6bd104bc5cf",
+        "layout_receipt.json": "38e2963ee5617e0611057e7dabc2416bb12a26f5aeff282b217da5760f2bd031",
+        "scene.usda": "48d6c8bf282e503ba8b00e68c47dd09e650f9a2fbae0e588508008f95139e895"
+      }
+    },
+    {
+      "task_index": 43,
+      "episode_index": 1881,
+      "source_id": "short_18/batch_20261008_001:49",
+      "path": "/mnt/agent-bench-data/lingjun/short18_workspace_20261006/runtime/short18_original_basket_20261006/jobs/continuous_glasses_case_r_024_both02",
+      "asset": "glasses_case",
+      "hand": "r",
+      "base_xyyaw": [
+        -1.1328897330304493,
+        -0.4376681987744651,
+        -2.9748658244936275
+      ],
+      "target_matrix": [
+        [
+          0.34192092361078336,
+          -0.9398413805657336,
+          -0.02007483292347068,
+          0
+        ],
+        [
+          0.9395029477719833,
+          0.34090945393465355,
+          0.04158957668924767,
+          0
+        ],
+        [
+          -0.03223399864062173,
+          -0.0330705478898138,
+          0.9992407346267267,
+          0
+        ],
+        [
+          -1.7678933005296795,
+          -0.4068062785420846,
+          0.4475861191749573,
+          1
+        ]
+      ],
+      "targets_rad": {
+        "idx01_body_joint1": 0,
+        "idx02_body_joint2": 0.5235987755982988,
+        "idx11_head_joint1": 0,
+        "idx12_head_joint2": 0.4363323129985824,
+        "idx21_arm_l_joint1": -0.9775090170558403,
+        "idx61_arm_r_joint1": 0.8467483401651676,
+        "idx22_arm_l_joint2": 0.42085105797632916,
+        "idx62_arm_r_joint2": -0.5870601733201786,
+        "idx23_arm_l_joint3": 0.21562353673805168,
+        "idx63_arm_r_joint3": -0.15688838442370834,
+        "idx24_arm_l_joint4": -1.3855275334510817,
+        "idx64_arm_r_joint4": 1.4153682534654195,
+        "idx25_arm_l_joint5": 0.6175040327423921,
+        "idx65_arm_r_joint5": -0.6418939277956103,
+        "idx26_arm_l_joint6": 1.436691119049248,
+        "idx66_arm_r_joint6": -1.3329430182533037,
+        "idx27_arm_l_joint7": -0.23987103589673467,
+        "idx67_arm_r_joint7": 0.1351403951061192,
+        "idx31_gripper_l_inner_joint1": -0.7844058040913494,
+        "idx41_gripper_l_outer_joint1": 0.7843981464081236,
+        "idx71_gripper_r_inner_joint1": -0.7844054201189139,
+        "idx81_gripper_r_outer_joint1": 0.7843981464081236,
+        "idx32_gripper_l_inner_joint3": -0.08924058706335473,
+        "idx42_gripper_l_outer_joint3": 0.08859912620336927,
+        "idx72_gripper_r_inner_joint3": -0.08716388959957677,
+        "idx82_gripper_r_outer_joint3": 0.08841675674982838,
+        "idx33_gripper_l_inner_joint4": 0.03480826017114624,
+        "idx43_gripper_l_outer_joint4": -0.033018555922919954,
+        "idx73_gripper_r_inner_joint4": 0.028982309240087118,
+        "idx83_gripper_r_outer_joint4": -0.03248701589922508,
+        "idx39_gripper_l_inner_joint0": 0.3919139802412996,
+        "idx49_gripper_l_outer_joint0": -0.3934074410289386,
+        "idx79_gripper_r_inner_joint0": 0.3967680899569462,
+        "idx89_gripper_r_outer_joint0": -0.3938514353373534
+      },
+      "table_bounds": [
+        [
+          -2.349999995986884,
+          -0.7210435941542119,
+          -6.705522756180538e-9
+        ],
+        [
+          -1.550000005801256,
+          0.4789564280510332,
+          0.45
+        ]
+      ],
+      "sha256": {
+        "job.json": "5c1b33a59cb2702adb52aa04515be3eaa520059d81da68efe9038c7ae16f2dc9",
+        "layout_receipt.json": "45b4677b5ef07917dbc6923ceca5052eabbf28ec19fea2cb3ccc07ff9e5b4038",
+        "scene.usda": "e8b9e85c22cff42b00a9dfe05ab075b103ae73270aa5affea46a347e7facb139"
+      }
+    }
+  ]
+}

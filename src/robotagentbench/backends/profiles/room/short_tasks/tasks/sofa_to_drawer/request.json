@@ -1,0 +1,8 @@
+{
+  "schema": "openend.short_task.request.v1",
+  "task_name": "sofa_to_drawer",
+  "rule_version": "openend.short_task.sofa_to_drawer.v1",
+  "seed": 43,
+  "layout_id": null,
+  "options": {"asset": "wallet"}
+}

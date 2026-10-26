@@ -1,0 +1,250 @@
+{
+  "passed": true,
+  "count": 20,
+  "assets": [
+    {
+      "id": "cloth_clear_citrus_can",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_citrus_can.usda",
+      "mass_kg": 0.05,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_citrus_can/asset.usda": "c8c4dc1a811e213acc8d2517837f2d9c6a70d842257626e724dd84fa5a35cb20",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/585cba1af8f7523bf047b3f144c361deda463b0513e0d88d06eb35b3e7662af2.usdc": "585cba1af8f7523bf047b3f144c361deda463b0513e0d88d06eb35b3e7662af2"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_berry_can",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_berry_can.usda",
+      "mass_kg": 0.05,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_berry_can/asset.usda": "d4fb4a20e2460e18384a64cef193973e6f01c53841a9864fe777cf343fe81e32",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/1727b2056275ef6da1d00aba615ee6a3850c4d9185f523f3eb40f595f4822b06.usdc": "1727b2056275ef6da1d00aba615ee6a3850c4d9185f523f3eb40f595f4822b06"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_water_bottle",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_water_bottle.usda",
+      "mass_kg": 0.05,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_water_bottle/asset.usda": "dcffdd212ff7fe5fb44d9862fb82bdf2bbf2beb9f19f89fdb55c204ff569c803",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/35ac9f50dbd718d11b1565c451ed95a04d49950b650f89da57690c865ad84fcd.usdc": "35ac9f50dbd718d11b1565c451ed95a04d49950b650f89da57690c865ad84fcd"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_juice_bottle",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_juice_bottle.usda",
+      "mass_kg": 0.05,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_juice_bottle/asset.usda": "ad2c81b52f00b8e92dca696e03ba5e43da94788e42ffe1ae6f5a8dd12b5fd624",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/e2c027c7fcb237c7f3c1a0e12da82aac462d321d468d6448acac2bc37829a055.usdc": "e2c027c7fcb237c7f3c1a0e12da82aac462d321d468d6448acac2bc37829a055"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_small_bottle",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_small_bottle.usda",
+      "mass_kg": 0.05,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_small_bottle/asset.usda": "01b9465703889d54a67fbbd67f96e4dd813165d67aebe86d9385be90c86a4980",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/34f44ba92b59eb8306109a6263a5061c54a8356b835d6a7b8d06c0e05d504995.usdc": "34f44ba92b59eb8306109a6263a5061c54a8356b835d6a7b8d06c0e05d504995"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_bear",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_bear.usda",
+      "mass_kg": 0.1,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_bear/asset.usda": "956d8c92d60c954a4c1eb7f7be00bd575c530bb332ea08525abfc2a5ce0cbf6a",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/9756358b5aa3353afecb61d132031aceec9b66818d33a5e80c3a34a1820e2fcf.usdc": "9756358b5aa3353afecb61d132031aceec9b66818d33a5e80c3a34a1820e2fcf"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_rabbit",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_rabbit.usda",
+      "mass_kg": 0.1,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_rabbit/asset.usda": "734bee1fb66342d4c974a4338486ac0b0e4bd0a581c31323e6a741cd1bdec716",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/c4779360ef3e58ec15b29bbc2850c87ac9a71bf844fa5ccd03e7d0e73f1055d3.usdc": "c4779360ef3e58ec15b29bbc2850c87ac9a71bf844fa5ccd03e7d0e73f1055d3"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_penguin",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_penguin.usda",
+      "mass_kg": 0.1,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/e6269b8e3c658d10a60c6f0d5eccc0ee3d8fba5e5b8d0f5839c4daadbcb28931.usdc": "e6269b8e3c658d10a60c6f0d5eccc0ee3d8fba5e5b8d0f5839c4daadbcb28931",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_penguin/asset.usda": "17cb685e2c31779ee13cdc91391f51abd92cf990336ed68cd9facf7538d6b275"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_cat",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_cat.usda",
+      "mass_kg": 0.1,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_cat/asset.usda": "b4c8826fcd1efc56384a69ed30a11681041b9a1d4270de5be71301b170914cc3",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/8da02dd1cb42c61505d58416731b81d72507dce4530e28e477530d94e15a30a7.usdc": "8da02dd1cb42c61505d58416731b81d72507dce4530e28e477530d94e15a30a7"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_car",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_car.usda",
+      "mass_kg": 0.15,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_car/asset.usda": "489775f296f3110ee0026238b98a6adbc8e16aa2999a8ba3b6eaf50c1d34ccb2",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/920819c5a94f77e976868fe02f993d7349a85cc6fdbbd054100cc7bbfa5a55e6.usdc": "920819c5a94f77e976868fe02f993d7349a85cc6fdbbd054100cc7bbfa5a55e6"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_train",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_train.usda",
+      "mass_kg": 0.15,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_train/asset.usda": "c2eae8144ba98c48602cd7a6a8add7c61ddff2b0fae105ad44384bac3544de27",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/5d06ef2c8d5d699f6780afb699d72d59b40dcc63bec25275482e8d5518106783.usdc": "5d06ef2c8d5d699f6780afb699d72d59b40dcc63bec25275482e8d5518106783"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_block",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_block.usda",
+      "mass_kg": 0.15,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_block/asset.usda": "836c3f63233b1ba8843fe3030c3e675e6f7e9bac5536ac58bec4db32408ccd97",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/1cb57c4a977c454b19922f388d7c50dfea47597b5f08d962c4c2b5d7b2f52072.usdc": "1cb57c4a977c454b19922f388d7c50dfea47597b5f08d962c4c2b5d7b2f52072"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_house",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_house.usda",
+      "mass_kg": 0.15,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_house/asset.usda": "09475632ac8bb75844c9fedfa682ac8052a2a7ac2aa72cbc5ce2c631bb565e05",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/2ab8b123b74256a5ecbaf7f40869daf7bd4f71b8ecff4330f650822173bfd816.usdc": "2ab8b123b74256a5ecbaf7f40869daf7bd4f71b8ecff4330f650822173bfd816"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_robot",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_robot.usda",
+      "mass_kg": 0.15,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_robot/asset.usda": "371e8556945372d664a5a3f42604730db90adeaaa397f82d139003f52611291f",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/94001642239e1bc3ac24529ea83e71c87599c28447bd726d7d9c853ab569f14c.usdc": "94001642239e1bc3ac24529ea83e71c87599c28447bd726d7d9c853ab569f14c"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_duck",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_duck.usda",
+      "mass_kg": 0.15,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_duck/asset.usda": "a3be2f782132c58e8f4cec94e1a952e459d14584ecc33af9403eb19a202e8f8a",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/375494c9b4b6f845352ff1b18c7aa7489827e4c26b5e1858a0726d92d52c3456.usdc": "375494c9b4b6f845352ff1b18c7aa7489827e4c26b5e1858a0726d92d52c3456"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_glasses_case",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_glasses_case.usda",
+      "mass_kg": 0.1,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_glasses_case/asset.usda": "8b5946c2404384f76658f6f93aa492723f8caeca7d96e3fe14be8339cb76f9b8",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/aa1ee545ddcccd9ea97a813133cb4ea469757371ddbf2572099980d917464f8d.usdc": "aa1ee545ddcccd9ea97a813133cb4ea469757371ddbf2572099980d917464f8d"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_pouch",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_pouch.usda",
+      "mass_kg": 0.1,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_pouch/asset.usda": "21a5c4c679244bf32434799190cb7c48a3d0f0d75058c29e59b316969b505f9a",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/82cf2cce6820751b85462442bb70dcbee06ade131ee23500e22a04d4381a5fd1.usdc": "82cf2cce6820751b85462442bb70dcbee06ade131ee23500e22a04d4381a5fd1"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_tape_measure",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_tape_measure.usda",
+      "mass_kg": 0.1,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_tape_measure/asset.usda": "b5c036491bb3f5937146d8dc042529eef61797d807a63f7d1dda9f58ca34ef5e",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/d46818ba3cdc50836a6c27fc61d6705fc6438cebd5f1ba6f4c649c942b579024.usdc": "d46818ba3cdc50836a6c27fc61d6705fc6438cebd5f1ba6f4c649c942b579024"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_eraser",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_eraser.usda",
+      "mass_kg": 0.1,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_eraser/asset.usda": "c86a660994e9a36154ebd9b5bb0d508a3afd93d70e8fb0ac40a2d431da9e9ae8",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/7b4829f93627a8df9f1ecca915682fc475a9d825efe61c63aae17939fe0f8d50.usdc": "7b4829f93627a8df9f1ecca915682fc475a9d825efe61c63aae17939fe0f8d50"
+      },
+      "collision_material_geometry_preserved": true
+    },
+    {
+      "id": "cloth_clear_memo_pad",
+      "entry": "/home/lingjun/robot_agent_arena/openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_memo_pad.usda",
+      "mass_kg": 0.1,
+      "dynamic": true,
+      "native_verified": false,
+      "source_layers": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_memo_pad/asset.usda": "cdde33ae940a17dbc88245000da0a2038cef61050dd975dfe232b06995d6caf4",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/aa4591e399768290a15e26a2396d55acc2c716e95f81bde50b83677072281961.usdc": "aa4591e399768290a15e26a2396d55acc2c716e95f81bde50b83677072281961"
+      },
+      "collision_material_geometry_preserved": true
+    }
+  ],
+  "shared_registry_unchanged": true,
+  "native_started": false,
+  "room_generation_connected": false,
+  "mass_provenance": "user_approved_test_model"
+}

@@ -1,0 +1,7 @@
+{
+  "schema": "openend.short_task.request.v1",
+  "task_name": "clear_table_trash",
+  "rule_version": "openend.short_task.clear_table_trash.v1",
+  "seed": 47,
+  "layout_id": null
+}

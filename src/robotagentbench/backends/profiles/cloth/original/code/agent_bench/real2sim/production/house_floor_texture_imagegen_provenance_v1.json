@@ -1,0 +1,33 @@
+{
+  "schema": "real2sim.house_floor_texture_imagegen_provenance.v1",
+  "authority": "non_authoritative_generated_artifact_provenance",
+  "runtime_mapping_source": "real2sim/production/livingroom_environment_randomization.py:FLOOR_TEXTURE_ASSETS",
+  "generation_mode": "built_in_imagegen",
+  "reference_asset": {
+    "path": "arena_scene/v1_2/demo_sim/usdz/floor_wood.png",
+    "role": "canonical_default_scene_wood_floor_reference"
+  },
+  "assets": [
+    {
+      "path": "arena_scene/v1_2/demo_sim/usdz/floor_wood_cool_gray_black_v1.png",
+      "width_px": 1254,
+      "height_px": 1254,
+      "channels": "RGB",
+      "prompt": "Precise object edit of the reference wood floor into a seamless top-down simulation base-color texture: smoked cool-gray walnut, preserving the staggered plank widths, seams, scale, and realistic longitudinal grain; even flat lighting, no perspective, shadows, text, or watermark."
+    },
+    {
+      "path": "arena_scene/v1_2/demo_sim/usdz/floor_wood_light_scandi_v1.png",
+      "width_px": 1254,
+      "height_px": 1254,
+      "channels": "RGB",
+      "prompt": "Precise object edit of the reference wood floor into a seamless top-down simulation base-color texture: pale Scandinavian white oak, preserving the staggered plank widths, seams, scale, and realistic longitudinal grain; even flat lighting, no perspective, shadows, text, or watermark."
+    },
+    {
+      "path": "arena_scene/v1_2/demo_sim/usdz/floor_wood_dark_walnut_v1.png",
+      "width_px": 1254,
+      "height_px": 1254,
+      "channels": "RGB",
+      "prompt": "Precise object edit of the reference wood floor into a seamless top-down simulation base-color texture: rich dark walnut, preserving the staggered plank widths, seams, scale, and realistic longitudinal grain; even flat lighting, no perspective, shadows, text, or watermark."
+    }
+  ]
+}

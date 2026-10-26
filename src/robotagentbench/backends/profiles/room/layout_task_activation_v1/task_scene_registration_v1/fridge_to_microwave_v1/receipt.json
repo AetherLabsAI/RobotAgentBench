@@ -1,0 +1,35 @@
+{
+  "status": "task_owned_composite_rules_complete_native_reader_and_room_registration_pending",
+  "directory": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/fridge_to_microwave_v1",
+  "variants": {
+    "beef_box": {"source_tasks": ["9.1", "9.2"], "source_api_ids": ["26-1", "27-1"]},
+    "leftover_box": {"source_tasks": ["9.3", "9.4"], "source_api_ids": ["26-2", "27-2"]}
+  },
+  "rules": {
+    "instance": "One explicit actual target prim is bound through both stages. Reject substitutions and contradictory current grasp readings.",
+    "scores": "Reuse original 8-point refrigerator and 10-point microwave scorers without changing deductions or hold times.",
+    "handoff": "Only complete refrigerator success, including original five-second final holding, advances to microwave. Same measured frame creates a zero-reward microwave observation baseline, without reset or pose gate.",
+    "initialization": "Unified room owns initialization; no closed-door/right-hand-held requirement added.",
+    "clock": "Consecutive 20-Hz selected observations; explicit pause clears unfinished holding and allows unobserved global-time gaps without counting them.",
+    "rates": "Requested rates declared as 60 Hz refrigerator, 240 Hz microwave. Pure composition does not change simulation settings; native room phase dispatcher remains unconnected."
+  },
+  "tests": {
+    "new_composition": {"passed": 14, "failed": 0},
+    "composition_and_existing_room_rules_and_fridge_process": {"passed": 41, "failed": 0},
+    "type": "CPU synthetic facts, not a native physical replay"
+  },
+  "read_only_room_audit": {
+    "evidence": "room_dependencies_v1.json",
+    "rooms": 3,
+    "fridge_and_microwave_present": true,
+    "target_box_manifest_entries": 0,
+    "required_payload_and_plate_and_stand_paths_present": false,
+    "notes": "Read current composition manifests, including new room_tote_v1 layers in layout03 and layout04. Did not replace those concurrent room changes. Candidate rigid-body scan found fridge/microwave bodies but no task9 food boxes or microwave support plate."
+  },
+  "blocked_scope": "Shared all_assets imports and unified initialization must be completed before a bound native reader can run; existing standalone readers cannot reset the scene or force right-hand initial state.",
+  "requested_next_authority": "Package original Task9 target boxes, microwave support plate and stand into shared all_assets, preserving their existing physics, then add them via unified scene initialization.",
+  "unchanged": ["all_assets", "shared API registry", "existing room manifests", "existing helper and 60-Hz reservation", "all physical parameters", "all original score thresholds"],
+  "full_task_success": false,
+  "native_reader_connected": false,
+  "room_registered": false
+}

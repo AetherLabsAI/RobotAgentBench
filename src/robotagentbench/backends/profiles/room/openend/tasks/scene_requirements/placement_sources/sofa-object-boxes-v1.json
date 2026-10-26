@@ -1,0 +1,460 @@
+{
+  "schema": "arena.sofa_object_placement_boxes.v1",
+  "objects": [
+    {
+      "id": "umbrella",
+      "name": "折叠雨伞",
+      "entry": "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/openend/tasks/umbrella_transfer/umbrella.usda",
+      "source_prim": "/World/Assets/Umbrella",
+      "revision": "openend_umbrella_v1_original_physics",
+      "visible_vertex_count": 12941,
+      "body_bounds_m": {
+        "min": [
+          -0.03272515270954912,
+          -0.12500000070811357,
+          9.601182071605763e-10
+        ],
+        "max": [
+          0.03272515260777742,
+          0.12500000240338327,
+          0.06545030014371145
+        ]
+      },
+      "body_size_m": [
+        0.06545030531732654,
+        0.25000000311149684,
+        0.06545029918359324
+      ],
+      "source_layer_sha256": {
+        "umbrella.usda": "8c3eb630a243541e6f73a4dd5fdf54ef804f6b36c006d0869a4528e42bc822fd"
+      }
+    },
+    {
+      "id": "book_red",
+      "name": "红皮书",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/book_red/asset.usda",
+      "source_prim": "/World/Assets/Book",
+      "revision": "archive204_20261003_v1",
+      "visible_vertex_count": 24,
+      "source_layer_sha256": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/book_red/asset.usda": "51eec72e59abcad17411ffdda8c1b6b278438c1b326397a10c143d4ed0504026",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/788925a5e391b301ba411986e377c642a924bfcbcba50a0d5e816da997bdd7d6.usda": "788925a5e391b301ba411986e377c642a924bfcbcba50a0d5e816da997bdd7d6"
+      },
+      "body_bounds_m": {
+        "min": [
+          -0.13711118983759432,
+          -0.09256107717048082,
+          -9.270362255620057e-15
+        ],
+        "max": [
+          0.1439766480235837,
+          0.1340319520981064,
+          0.017999999225130348
+        ]
+      },
+      "body_size_m": [
+        0.281087837861178,
+        0.2265930292685872,
+        0.017999999225139618
+      ],
+      "protection_bounds_m": {
+        "min": [
+          -0.23711118983759433,
+          -0.19256107717048082,
+          -9.270362255620057e-15
+        ],
+        "max": [
+          0.2439766480235837,
+          0.2340319520981064,
+          0.017999999225130348
+        ]
+      },
+      "protection_size_m": [
+        0.48108783786117804,
+        0.4265930292685872,
+        0.017999999225139618
+      ]
+    },
+    {
+      "id": "baseball_cap",
+      "name": "棒球帽",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/baseball_cap/asset.usda",
+      "source_prim": "/World/Assets/BaseballCap",
+      "revision": "archive204_20261003_v1",
+      "visible_vertex_count": 229229,
+      "source_layer_sha256": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/baseball_cap/asset.usda": "b56ebadc414ec1fcde71945ea6e93d5719b583f93eeae369b4e7c120ee17ceea",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/469741956c2fef5d9cf5b6c0493221496afc716b403df395174c952d6c01be29.usda": "469741956c2fef5d9cf5b6c0493221496afc716b403df395174c952d6c01be29"
+      },
+      "body_bounds_m": {
+        "min": [
+          -0.08226542270695948,
+          -0.24722491019797183,
+          -1.9264472646443545
+        ],
+        "max": [
+          0.11445576808323858,
+          0.019202171092902485,
+          -1.760836681912227
+        ]
+      },
+      "body_size_m": [
+        0.19672119079019806,
+        0.26642708129087433,
+        0.16561058273212748
+      ],
+      "protection_bounds_m": {
+        "min": [
+          -0.1822654227069595,
+          -0.34722491019797186,
+          -1.9264472646443545
+        ],
+        "max": [
+          0.21445576808323857,
+          0.11920217109290249,
+          -1.760836681912227
+        ]
+      },
+      "protection_size_m": [
+        0.3967211907901981,
+        0.46642708129087435,
+        0.16561058273212748
+      ]
+    },
+    {
+      "id": "wallet",
+      "name": "钱包",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/wallet/asset.usda",
+      "source_prim": "/World/Assets/Wallet",
+      "revision": "archive204_20261003_v1",
+      "visible_vertex_count": 1550,
+      "source_layer_sha256": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/wallet/asset.usda": "25bb9146e2824ee04f06de2fe4ac6bf6574c3202d0760457e27136ae0fb2112f",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/9970cd9cf1b3d9310cc5ff551d300299d6239a8e6baa3452749a19f006caad42.usda": "9970cd9cf1b3d9310cc5ff551d300299d6239a8e6baa3452749a19f006caad42"
+      },
+      "body_bounds_m": {
+        "min": [
+          -0.08250000327825546,
+          -0.06499999761581421,
+          0.0
+        ],
+        "max": [
+          0.08250000327825546,
+          0.06499999761581421,
+          0.03999999910593033
+        ]
+      },
+      "body_size_m": [
+        0.16500000655651093,
+        0.12999999523162842,
+        0.03999999910593033
+      ],
+      "protection_bounds_m": {
+        "min": [
+          -0.18250000327825547,
+          -0.16499999761581421,
+          0.0
+        ],
+        "max": [
+          0.18250000327825547,
+          0.16499999761581421,
+          0.03999999910593033
+        ]
+      },
+      "protection_size_m": [
+        0.36500000655651094,
+        0.32999999523162843,
+        0.03999999910593033
+      ]
+    },
+    {
+      "id": "remote_tv",
+      "name": "电视遥控器",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/remote_tv/asset.usda",
+      "source_prim": "/World/Assets/Remote",
+      "revision": "archive204_20261003_v1",
+      "visible_vertex_count": 65532,
+      "source_layer_sha256": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/1f4f9adc11d5e0726efc9867bedf69e60863e640a49e2f92619177a58bf86a42.usda": "1f4f9adc11d5e0726efc9867bedf69e60863e640a49e2f92619177a58bf86a42",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/remote_tv/asset.usda": "58435180c299721e0750f9bb6b85fa09ab286a78c5e50582d0f9c6d34e0a8c60"
+      },
+      "body_bounds_m": {
+        "min": [
+          -0.1965483667039788,
+          -0.03062687235317966,
+          0.010077622959864356
+        ],
+        "max": [
+          0.004392727741423852,
+          0.0275119996023774,
+          0.03723656871457344
+        ]
+      },
+      "body_size_m": [
+        0.20094109444540265,
+        0.05813887195555706,
+        0.027158945754709084
+      ],
+      "protection_bounds_m": {
+        "min": [
+          -0.29654836670397877,
+          -0.13062687235317966,
+          0.010077622959864356
+        ],
+        "max": [
+          0.10439272774142386,
+          0.1275119996023774,
+          0.03723656871457344
+        ]
+      },
+      "protection_size_m": [
+        0.4009410944454026,
+        0.25813887195555707,
+        0.027158945754709084
+      ]
+    },
+    {
+      "id": "glasses_case",
+      "name": "墨镜盒",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/glasses_case/asset.usda",
+      "source_prim": "/World/Assets/GlassesCase",
+      "revision": "archive204_20261003_v1",
+      "visible_vertex_count": 6074,
+      "source_layer_sha256": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/a8cec6a1d4a93eb5acf32841574920f3ac4bbccf2ed1aeebfb8c311731a523df.usda": "a8cec6a1d4a93eb5acf32841574920f3ac4bbccf2ed1aeebfb8c311731a523df",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/glasses_case/asset.usda": "4079251ce47ee46896457f5afce29feb0c7ce5826d3ff4c219d09c2951525a06"
+      },
+      "body_bounds_m": {
+        "min": [
+          -0.030000001638326168,
+          -0.08500000091548898,
+          0.0
+        ],
+        "max": [
+          0.030000001638326168,
+          0.08500000091548898,
+          0.03501075640325357
+        ]
+      },
+      "body_size_m": [
+        0.060000003276652336,
+        0.17000000183097796,
+        0.03501075640325357
+      ],
+      "protection_bounds_m": {
+        "min": [
+          -0.13000000163832617,
+          -0.185000000915489,
+          0.0
+        ],
+        "max": [
+          0.13000000163832617,
+          0.185000000915489,
+          0.03501075640325357
+        ]
+      },
+      "protection_size_m": [
+        0.26000000327665235,
+        0.370000001830978,
+        0.03501075640325357
+      ]
+    },
+    {
+      "id": "power_bank",
+      "name": "移动电源",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/power_bank/asset.usda",
+      "source_prim": "/World/Assets/PowerBank",
+      "revision": "archive204_20261003_v1",
+      "visible_vertex_count": 1307,
+      "source_layer_sha256": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/85048f5dd2d7fa97f91094097d5b201a1d589dc539f77f54294c59abaa54427e.usda": "85048f5dd2d7fa97f91094097d5b201a1d589dc539f77f54294c59abaa54427e",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/power_bank/asset.usda": "479d23e54d1f94795909625f1cc81930e6146f9cf01c9464a7fb87de4b68cf18"
+      },
+      "body_bounds_m": {
+        "min": [
+          -0.07249999791383743,
+          -0.03400000184774399,
+          -0.00800000037997961
+        ],
+        "max": [
+          0.07260499999936845,
+          0.03400000184774399,
+          0.008179999887943268
+        ]
+      },
+      "body_size_m": [
+        0.14510499791320589,
+        0.06800000369548798,
+        0.01618000026792288
+      ],
+      "protection_bounds_m": {
+        "min": [
+          -0.17249999791383744,
+          -0.134000001847744,
+          -0.00800000037997961
+        ],
+        "max": [
+          0.17260499999936846,
+          0.134000001847744,
+          0.008179999887943268
+        ]
+      },
+      "protection_size_m": [
+        0.3451049979132059,
+        0.268000003695488,
+        0.01618000026792288
+      ]
+    },
+    {
+      "id": "water_bottle",
+      "name": "水瓶",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/water_bottle/asset.usda",
+      "source_prim": "/World/Task73/Bottle",
+      "revision": "archive204_20261003_v1",
+      "visible_vertex_count": 10710,
+      "source_layer_sha256": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/309175f55b30596e57aadcffc6b0e1a135e5fdcf91dcdb6c01bbe442a01b39b1.usda": "309175f55b30596e57aadcffc6b0e1a135e5fdcf91dcdb6c01bbe442a01b39b1",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/water_bottle/asset.usda": "efffe11962e63b4e02079abb938bf940e6e062c1820ffea219cb2aa4bcb5a17f"
+      },
+      "body_bounds_m": {
+        "min": [
+          -0.042922389171654744,
+          -0.04292238344266922,
+          -5.639666377082421e-09
+        ],
+        "max": [
+          0.042922389171654744,
+          0.042922394900640266,
+          0.2544847467412306
+        ]
+      },
+      "body_size_m": [
+        0.08584477834330949,
+        0.08584477834330949,
+        0.254484752380897
+      ],
+      "protection_bounds_m": {
+        "min": [
+          -0.14292238917165476,
+          -0.14292238344266922,
+          -5.639666377082421e-09
+        ],
+        "max": [
+          0.14292238917165476,
+          0.14292239490064026,
+          0.2544847467412306
+        ]
+      },
+      "protection_size_m": [
+        0.2858447783433095,
+        0.28584477834330946,
+        0.254484752380897
+      ]
+    },
+    {
+      "id": "notebook_green",
+      "name": "绿色账单 / 本子",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/notebook_green/asset.usda",
+      "source_prim": "/World/Assets/Note",
+      "revision": "archive204_20261003_v1",
+      "visible_vertex_count": 24,
+      "source_layer_sha256": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/62a9cec7bf2a10b40d30993c8376edf040c031b1b9d774d8485e216cc7dbfc42.usda": "62a9cec7bf2a10b40d30993c8376edf040c031b1b9d774d8485e216cc7dbfc42",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/notebook_green/asset.usda": "5464b511a6c0f1c129d59d939ddf40fddf4e1acb93079d510456553eb8db67c5"
+      },
+      "body_bounds_m": {
+        "min": [
+          -0.1149637803855626,
+          -0.08249051836586789,
+          0.0
+        ],
+        "max": [
+          0.1149637803855626,
+          0.08249051836586789,
+          0.010999999940395355
+        ]
+      },
+      "body_size_m": [
+        0.2299275607711252,
+        0.16498103673173578,
+        0.010999999940395355
+      ],
+      "protection_bounds_m": {
+        "min": [
+          -0.2149637803855626,
+          -0.18249051836586788,
+          0.0
+        ],
+        "max": [
+          0.2149637803855626,
+          0.18249051836586788,
+          0.010999999940395355
+        ]
+      },
+      "protection_size_m": [
+        0.4299275607711252,
+        0.36498103673173576,
+        0.010999999940395355
+      ]
+    },
+    {
+      "id": "paper_cup",
+      "name": "一次性纸杯",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_cup/asset.usda",
+      "source_prim": "/World/Assets/PaperCup",
+      "revision": "archive204_20261003_v1",
+      "visible_vertex_count": 1202,
+      "source_layer_sha256": {
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/_shared/b0d2636827823b714d3036bf89a028e5f9aa102d983851a99172904534f784dd.usda": "b0d2636827823b714d3036bf89a028e5f9aa102d983851a99172904534f784dd",
+        "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_cup/asset.usda": "ccc9470d208fba48cd9845d6bc73ff7b1caf6ff593f40495fc6a61059a15a0d6"
+      },
+      "body_bounds_m": {
+        "min": [
+          -0.04450000077486041,
+          -6.661337998858429e-18,
+          -0.04450000077486038
+        ],
+        "max": [
+          0.044500000774860354,
+          0.12999999523162842,
+          0.04450000077486038
+        ]
+      },
+      "body_size_m": [
+        0.08900000154972076,
+        0.12999999523162842,
+        0.08900000154972076
+      ],
+      "protection_bounds_m": {
+        "min": [
+          -0.14450000077486042,
+          -0.1,
+          -0.04450000077486038
+        ],
+        "max": [
+          0.14450000077486036,
+          0.22999999523162842,
+          0.04450000077486038
+        ]
+      },
+      "protection_size_m": [
+        0.2890000015497208,
+        0.32999999523162843,
+        0.08900000154972076
+      ]
+    }
+  ],
+  "source_root": "/home/lingjun/robot_agent_arena/api-protocol/all_assets",
+  "source_registry_sha256": "e8f8473c6fe65f00ccf46d82c79bfb97a48150e88aca11ae12806566da5ab571",
+  "padding_xy_m": 0.1,
+  "padding_z_m": 0,
+  "method": "actual visible mesh vertices and analytic cube corners; default asset pose; XY axis-aligned bounds",
+  "pair_rule": "other object body must not enter this expanded XY box; protection boxes may overlap",
+  "pose_rule": "recompute bounds after final rotation, scale and placement; preserve center offsets",
+  "scope": "nine sofa task objects; not all assets; not a physics collider",
+  "cushion_occlusion_policy": "not changed; cushions are not included in these nine ordinary-object boxes",
+  "arm_sweep_included": false,
+  "assets_modified": false,
+  "scene_generation_connected": false,
+  "physics_validated": false
+}

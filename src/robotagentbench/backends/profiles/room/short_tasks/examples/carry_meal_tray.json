@@ -1,0 +1,10 @@
+{
+  "schema": "openend.short_task.request.draft.v1",
+  "task_name": "carry_meal_tray",
+  "seed": 47,
+  "layout_id": 4,
+  "rule_version": "openend.short_task.carry_meal_tray.v1",
+  "options": {
+    "contents": []
+  }
+}

@@ -1,0 +1,500 @@
+{
+  "path": "/mnt/data2/lingjun/ziche_runtime/meal_cutlery50_20260922/attempts/layout_01/attempt_118/job.json",
+  "sha256": "070cb89c7b422274e6cc08908d536156d9b21c0fa335dee98c220a031b050eca",
+  "policy": {
+    "schema": "broad_continuous_initial_utensil_poses_v1",
+    "mode": "continuous_random_geometry_fitted",
+    "pose_seed": 6167181562795797490,
+    "pose_seed_derivation": "uint64_le(sha256('20260922:layout:attempt:retry:utensil_pose')[:8])",
+    "retry_index": 0,
+    "resampled_after_preflight_rejection": true,
+    "tilt_magnitude_range_deg": [
+      0.0,
+      30.0
+    ],
+    "lean_azimuth_range_deg": [
+      -180.0,
+      180.0
+    ],
+    "long_axis_yaw_range_deg": [
+      -180.0,
+      180.0
+    ],
+    "placement": "uniform_over_geometry_feasible_root_xy_box",
+    "minimum_below_rim_wall_margin_m": 0.001,
+    "minimum_all_vertex_wall_margin_m": 0.001,
+    "maximum_geometry_draws_per_tool": 256,
+    "support_minimum_z_preserved": true,
+    "initial_scene_only": true,
+    "native_settle_required": true,
+    "accepted_orientation_distribution_guaranteed": false,
+    "reachable_region": {
+      "schema": "ziche.meal_cutlery50.accepted_template_neighborhood.v1",
+      "anchor_id": "legacy_original",
+      "template_id": "legacy_original",
+      "source_layout": null,
+      "source_job_sha256": null,
+      "environment_signature": "644379e6beed66c066b250ed855d1ba8837b7c89a8c0023065ec719f15f70de7",
+      "environment_match": false,
+      "proposal_only_for_current_environment": true,
+      "source_selected_joint_seeds_discarded": true,
+      "fresh_full_geometry_and_native_gates_required": true,
+      "tools": {
+        "knife_0": {
+          "tilt_magnitude_deg": 0.0,
+          "lean_azimuth_holder_deg": 0.0,
+          "long_axis_yaw_deg": 0.0,
+          "sampled_root_xy_shift_holder_m": [
+            0.0,
+            0.0
+          ]
+        },
+        "fork_1": {
+          "tilt_magnitude_deg": 0.0,
+          "lean_azimuth_holder_deg": 0.0,
+          "long_axis_yaw_deg": 0.0,
+          "sampled_root_xy_shift_holder_m": [
+            0.0,
+            0.0
+          ]
+        },
+        "fork_2": {
+          "tilt_magnitude_deg": 0.0,
+          "lean_azimuth_holder_deg": 0.0,
+          "long_axis_yaw_deg": 0.0,
+          "sampled_root_xy_shift_holder_m": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "halfwidths": {
+        "tilt_deg": 5.0,
+        "lean_azimuth_deg": 10.0,
+        "long_axis_yaw_deg": 10.0,
+        "xy_m": 0.005
+      },
+      "fork_grasp_plans": {
+        "/World/Cutlery/fork_1": {
+          "selected": {
+            "grip_local": [
+              0.0,
+              -0.073,
+              0.002
+            ]
+          }
+        },
+        "/World/Cutlery/fork_2": {
+          "selected": {
+            "grip_local": [
+              0.0,
+              -0.073,
+              0.002
+            ]
+          }
+        }
+      },
+      "motion_reference": null,
+      "bank_sha256": "bfe0b0d0d43442678bf393df839af45c77c981627a5a96f9a462ddbeb0b23b5b",
+      "selection_layout": 1,
+      "selection_attempt_index": 118,
+      "selection_retry_index": 0,
+      "selection_seed": 6167181562795797490,
+      "selection_pool_anchor_ids": [
+        "legacy_original"
+      ],
+      "selection_policy": "selected_success_templates_round_robin_v1"
+    }
+  },
+  "geometry": {
+    "schema": "ziche.meal_cutlery50.random_support_pivot_geometry.v1",
+    "policy_schema": "broad_continuous_initial_utensil_poses_v1",
+    "pose_seed": 6167181562795797490,
+    "canonical_scene_path": "/home/lingjun/ziche/runs/fork_meal_demo/scene_horizontal.usda",
+    "canonical_scene_sha256": "ddcba63f62bb26451aafa3f06506b982bc6ea845ea9580068764890d0af5b981",
+    "support_minimum_z_preserved": true,
+    "tools": {
+      "knife_0": {
+        "root_relative": [
+          [
+            0.9907812156900935,
+            -0.013313464543414642,
+            -0.1348159274622686,
+            -0.08317999581292303
+          ],
+          [
+            0.13480555881348114,
+            -0.0016772821470400073,
+            0.9908706515169293,
+            -0.0028909401739184784
+          ],
+          [
+            -0.01341804563434991,
+            -0.9999099651400871,
+            0.00013290938281889,
+            0.13724458741170556
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "audit": {
+          "tilt_magnitude_deg": 0.7688581731021399,
+          "lean_azimuth_holder_deg": 7.18051548274903,
+          "lean_direction_holder_local": [
+            0.9921572658909538,
+            0.12499583888989022,
+            0.0
+          ],
+          "long_axis_yaw_deg": 7.748027165413674,
+          "root_xy_feasible_interval_holder_m": [
+            [
+              -0.005,
+              -0.005
+            ],
+            [
+              0.005,
+              0.005
+            ]
+          ],
+          "sampled_root_xy_shift_holder_m": [
+            0.0024411273153319953,
+            0.004021627282715218
+          ],
+          "support_pivot_holder_local_m": [
+            -0.08514303998084069,
+            -0.004117653099331165,
+            0.028154806840920487
+          ],
+          "support_patch_vertex_count": 20,
+          "source_min_z_m": 0.02789240000000004,
+          "candidate_min_z_m": 0.02789240000000004,
+          "support_height_delta_m": 0.0,
+          "root_translation_delta_holder_local_m": [
+            0.004277204187076986,
+            0.003917159826082171,
+            2.5154249588515976e-05
+          ],
+          "minimum_below_rim_wall_margin_m": 0.028196798232414902,
+          "minimum_all_vertex_wall_margin_m": 0.020305856178554516,
+          "minimum_authored_root_bbox_proxy_wall_margin_m": 0.0197518456389328,
+          "pass_below_rim_inside_expected_cavity": true,
+          "pass_current_generator_all_vertex_aabb": true,
+          "reachable_region": {
+            "schema": "ziche.meal_cutlery50.accepted_template_neighborhood.v1",
+            "anchor_id": "legacy_original",
+            "environment_signature": "644379e6beed66c066b250ed855d1ba8837b7c89a8c0023065ec719f15f70de7",
+            "source_job_sha256": null,
+            "anchor": {
+              "tilt_magnitude_deg": 0.0,
+              "lean_azimuth_holder_deg": 0.0,
+              "long_axis_yaw_deg": 0.0,
+              "sampled_root_xy_shift_holder_m": [
+                0.0,
+                0.0
+              ]
+            },
+            "halfwidths": {
+              "tilt_deg": 5.0,
+              "lean_azimuth_deg": 10.0,
+              "long_axis_yaw_deg": 10.0,
+              "xy_m": 0.005
+            },
+            "actual_limits": {
+              "tilt_magnitude_deg": [
+                0.0,
+                5.0
+              ],
+              "lean_azimuth_holder_deg_unwrapped": [
+                -10.0,
+                10.0
+              ],
+              "long_axis_yaw_deg_unwrapped": [
+                -10.0,
+                10.0
+              ],
+              "sampled_root_xy_shift_holder_m": [
+                [
+                  -0.005,
+                  -0.005
+                ],
+                [
+                  0.005,
+                  0.005
+                ]
+              ]
+            },
+            "sampled_offsets_from_anchor": {
+              "tilt_deg": 0.7688581731021399,
+              "lean_azimuth_deg": 7.18051548274903,
+              "long_axis_yaw_deg": 7.748027165413674,
+              "xy_m": [
+                0.0024411273153319953,
+                0.004021627282715218
+              ]
+            }
+          },
+          "accepted_draw_index": 0,
+          "rejected_geometry_draw_count": 0
+        }
+      },
+      "fork_1": {
+        "root_relative": [
+          [
+            0.9982463912785715,
+            -0.05917181336335409,
+            0.001684874654511155,
+            0.006270236688241373
+          ],
+          [
+            -0.0020533070769717227,
+            -0.006166235040111969,
+            0.9999788805147225,
+            -0.0048633595461709785
+          ],
+          [
+            -0.05916017435198007,
+            -0.9982287683936595,
+            -0.006276919779703476,
+            0.1232941874985229
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "audit": {
+          "tilt_magnitude_deg": 3.410667875786384,
+          "lean_azimuth_holder_deg": 5.949262089399554,
+          "lean_direction_holder_local": [
+            0.994614069921602,
+            0.1036477299027179,
+            0.0
+          ],
+          "long_axis_yaw_deg": -0.10718600621888186,
+          "root_xy_feasible_interval_holder_m": [
+            [
+              -0.005,
+              -0.005
+            ],
+            [
+              0.005,
+              0.005
+            ]
+          ],
+          "sampled_root_xy_shift_holder_m": [
+            0.0013999556789420246,
+            0.0013627792720969445
+          ],
+          "support_pivot_holder_local_m": [
+            -0.001389533027728544,
+            0.01173540049723256,
+            0.028129545057813333
+          ],
+          "support_patch_vertex_count": 127,
+          "source_min_z_m": 0.02789240000000004,
+          "candidate_min_z_m": 0.02789240000000004,
+          "support_height_delta_m": 0.0,
+          "root_translation_delta_holder_local_m": [
+            0.006962036688241393,
+            0.0019447404538296712,
+            0.0006171253710280517
+          ],
+          "minimum_below_rim_wall_margin_m": 0.018624552072361116,
+          "minimum_all_vertex_wall_margin_m": 0.017684427465559007,
+          "minimum_authored_root_bbox_proxy_wall_margin_m": 0.010131947940639398,
+          "pass_below_rim_inside_expected_cavity": true,
+          "pass_current_generator_all_vertex_aabb": true,
+          "reachable_region": {
+            "schema": "ziche.meal_cutlery50.accepted_template_neighborhood.v1",
+            "anchor_id": "legacy_original",
+            "environment_signature": "644379e6beed66c066b250ed855d1ba8837b7c89a8c0023065ec719f15f70de7",
+            "source_job_sha256": null,
+            "anchor": {
+              "tilt_magnitude_deg": 0.0,
+              "lean_azimuth_holder_deg": 0.0,
+              "long_axis_yaw_deg": 0.0,
+              "sampled_root_xy_shift_holder_m": [
+                0.0,
+                0.0
+              ]
+            },
+            "halfwidths": {
+              "tilt_deg": 5.0,
+              "lean_azimuth_deg": 10.0,
+              "long_axis_yaw_deg": 10.0,
+              "xy_m": 0.005
+            },
+            "actual_limits": {
+              "tilt_magnitude_deg": [
+                0.0,
+                5.0
+              ],
+              "lean_azimuth_holder_deg_unwrapped": [
+                -10.0,
+                10.0
+              ],
+              "long_axis_yaw_deg_unwrapped": [
+                -10.0,
+                10.0
+              ],
+              "sampled_root_xy_shift_holder_m": [
+                [
+                  -0.005,
+                  -0.005
+                ],
+                [
+                  0.005,
+                  0.005
+                ]
+              ]
+            },
+            "sampled_offsets_from_anchor": {
+              "tilt_deg": 3.410667875786384,
+              "lean_azimuth_deg": 5.949262089399554,
+              "long_axis_yaw_deg": -0.10718600621888186,
+              "xy_m": [
+                0.0013999556789420246,
+                0.0013627792720969445
+              ]
+            }
+          },
+          "accepted_draw_index": 0,
+          "rejected_geometry_draw_count": 0
+        }
+      },
+      "fork_2": {
+        "root_relative": [
+          [
+            0.9985252767339083,
+            -0.043419158018171214,
+            0.03258908468282978,
+            0.08943888185122349
+          ],
+          [
+            -0.03269424896229484,
+            -0.001713974371708929,
+            0.9994639305030695,
+            -0.004768236215690529
+          ],
+          [
+            -0.04334002547603145,
+            -0.999055473439211,
+            -0.0031310034958047955,
+            0.12313592258661375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "audit": {
+          "tilt_magnitude_deg": 2.4904561950495996,
+          "lean_azimuth_holder_deg": 2.2605812792006645,
+          "lean_direction_holder_local": [
+            0.9992217687703194,
+            0.03944435086947659,
+            0.0
+          ],
+          "long_axis_yaw_deg": -1.8714461489596772,
+          "root_xy_feasible_interval_holder_m": [
+            [
+              -0.005,
+              -0.005
+            ],
+            [
+              0.005,
+              0.005
+            ]
+          ],
+          "sampled_root_xy_shift_holder_m": [
+            -0.00034144706150078443,
+            0.0018906830154788576
+          ],
+          "support_pivot_holder_local_m": [
+            0.0855827669722717,
+            0.01173540049723256,
+            0.028129545057813333
+          ],
+          "support_patch_vertex_count": 127,
+          "source_min_z_m": 0.02789240000000004,
+          "candidate_min_z_m": 0.02789240000000004,
+          "support_height_delta_m": 0.0,
+          "root_translation_delta_holder_local_m": [
+            0.00315838185122351,
+            0.0020398637843101206,
+            0.00045886045911890105
+          ],
+          "minimum_below_rim_wall_margin_m": 0.021586808627907253,
+          "minimum_all_vertex_wall_margin_m": 0.021586808627907253,
+          "minimum_authored_root_bbox_proxy_wall_margin_m": 0.01482500172528077,
+          "pass_below_rim_inside_expected_cavity": true,
+          "pass_current_generator_all_vertex_aabb": true,
+          "reachable_region": {
+            "schema": "ziche.meal_cutlery50.accepted_template_neighborhood.v1",
+            "anchor_id": "legacy_original",
+            "environment_signature": "644379e6beed66c066b250ed855d1ba8837b7c89a8c0023065ec719f15f70de7",
+            "source_job_sha256": null,
+            "anchor": {
+              "tilt_magnitude_deg": 0.0,
+              "lean_azimuth_holder_deg": 0.0,
+              "long_axis_yaw_deg": 0.0,
+              "sampled_root_xy_shift_holder_m": [
+                0.0,
+                0.0
+              ]
+            },
+            "halfwidths": {
+              "tilt_deg": 5.0,
+              "lean_azimuth_deg": 10.0,
+              "long_axis_yaw_deg": 10.0,
+              "xy_m": 0.005
+            },
+            "actual_limits": {
+              "tilt_magnitude_deg": [
+                0.0,
+                5.0
+              ],
+              "lean_azimuth_holder_deg_unwrapped": [
+                -10.0,
+                10.0
+              ],
+              "long_axis_yaw_deg_unwrapped": [
+                -10.0,
+                10.0
+              ],
+              "sampled_root_xy_shift_holder_m": [
+                [
+                  -0.005,
+                  -0.005
+                ],
+                [
+                  0.005,
+                  0.005
+                ]
+              ]
+            },
+            "sampled_offsets_from_anchor": {
+              "tilt_deg": 2.4904561950495996,
+              "lean_azimuth_deg": 2.2605812792006645,
+              "long_axis_yaw_deg": -1.8714461489596772,
+              "xy_m": [
+                -0.00034144706150078443,
+                0.0018906830154788576
+              ]
+            }
+          },
+          "accepted_draw_index": 0,
+          "rejected_geometry_draw_count": 0
+        }
+      }
+    }
+  }
+}

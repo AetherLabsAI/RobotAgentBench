@@ -1,0 +1,49 @@
+{
+  "schema": "carry_meal_tray.initial_station.v1",
+  "source_id": "handoff/short16/S02",
+  "source_preparation_sha256": "14a5d4ece9df34d2736be76bb75d22221f0c8fc661616a40765cd2aba31b1b99",
+  "frame": "tray body origin; inward perpendicular to support front; left = 90deg CCW from inward",
+  "nominal": {
+    "outward_distance_m": 0.5823786524885326,
+    "left_offset_m": 0.16181438783909982,
+    "yaw_from_inward_deg": -8.0882222128167
+  },
+  "approved_jitter": {
+    "forward_m": [
+      -0.05,
+      0.05
+    ],
+    "yaw_deg": [
+      -5,
+      5
+    ],
+    "lateral_m": [
+      0,
+      0
+    ]
+  },
+  "targets_rad": {
+    "idx01_body_joint1": 0.3600000000000001,
+    "idx02_body_joint2": 0.4363323129985823,
+    "idx11_head_joint1": 1.6635583538398241e-18,
+    "idx12_head_joint2": 0.4363323129985823,
+    "idx21_arm_l_joint1": -1.3731253508590917,
+    "idx61_arm_r_joint1": 1.3458577934672662,
+    "idx22_arm_l_joint2": -0.366522756474052,
+    "idx62_arm_r_joint2": 0.3797307121691501,
+    "idx23_arm_l_joint3": 1.142683651702408,
+    "idx63_arm_r_joint3": -1.148430304804653,
+    "idx24_arm_l_joint4": -2.100842951389484,
+    "idx64_arm_r_joint4": 2.0384687228449434,
+    "idx25_arm_l_joint5": -0.15783357561314734,
+    "idx65_arm_r_joint5": 0.1697275190745296,
+    "idx26_arm_l_joint6": 1.0434455566418674,
+    "idx66_arm_r_joint6": -1.1160300328388504,
+    "idx27_arm_l_joint7": 0.3494968164797031,
+    "idx67_arm_r_joint7": -0.41022650006494044,
+    "idx41_gripper_l_outer_joint1": 0.5,
+    "idx81_gripper_r_outer_joint1": 0.5
+  },
+  "source_evidence": "dataset_initial_evidence.json",
+  "native_validated": false
+}

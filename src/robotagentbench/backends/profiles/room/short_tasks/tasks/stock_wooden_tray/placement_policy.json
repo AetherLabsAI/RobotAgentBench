@@ -1,0 +1,164 @@
+{
+  "schema": "stock_wooden_tray.placement.v1",
+  "task_name": "stock_wooden_tray",
+  "version": "common_range_trapezoid.v1",
+  "coordinate_frame": "shelf_local_m",
+  "origin_x_m": [
+    -0.396,
+    0.443
+  ],
+  "origin_depth_from_front_m": [
+    0.091,
+    0.284
+  ],
+  "shelf_front_y_m": -0.25,
+  "target_side_margin_m": 0.03,
+  "front_side_margin_m": 0.12,
+  "snack_target_angle_exclusion": {
+    "products": ["chomps_r", "oreo_gf", "honeymaid", "zbar_t", "skit_littles"],
+    "closed_interval_deg": [-30.0, 30.0],
+    "sampling": "equal_probability_sides_then_uniform",
+    "scope": "task_targets_only"
+  },
+  "source_yaw_audit": {
+    "source_sha256": "b4b40f2129eda21059ff121bd180818b769344fd06e31484d9625202ca727f5a",
+    "products": {
+      "cayman_jacked": {
+        "yaw_deg": [
+          -69.405011407956,
+          39.922771386925206
+        ],
+        "tiers": [
+          "tier3"
+        ]
+      },
+      "chomps_r": {
+        "yaw_deg": [
+          -82.93900096541994,
+          84.2685789360779
+        ],
+        "tiers": [
+          "tier2"
+        ]
+      },
+      "coke_c3": {
+        "yaw_deg": [
+          -25.47230555010131,
+          85.69669055526292
+        ],
+        "tiers": [
+          "tier3"
+        ]
+      },
+      "gatorade_m": {
+        "yaw_deg": [
+          -97.6469978292219,
+          25.723283554126596
+        ],
+        "tiers": [
+          "tier3"
+        ]
+      },
+      "gatorade_t": {
+        "yaw_deg": [
+          -105.1963568453482,
+          36.9928987316938
+        ],
+        "tiers": [
+          "tier3"
+        ]
+      },
+      "good2grow": {
+        "yaw_deg": [
+          -74.91638543433446,
+          46.69093043567859
+        ],
+        "tiers": [
+          "tier3"
+        ]
+      },
+      "grapefruit_can": {
+        "yaw_deg": [
+          -69.57211906847711,
+          50.43284049409294
+        ],
+        "tiers": [
+          "tier3"
+        ]
+      },
+      "honeymaid": {
+        "yaw_deg": [
+          -79.72073740709422,
+          77.43816287432956
+        ],
+        "tiers": [
+          "tier2"
+        ]
+      },
+      "oreo_gf": {
+        "yaw_deg": [
+          -83.22923153398243,
+          72.87830953189062
+        ],
+        "tiers": [
+          "tier2"
+        ]
+      },
+      "pring_bbq": {
+        "yaw_deg": [
+          -65.62180653670053,
+          31.256428215348762
+        ],
+        "tiers": [
+          "tier2"
+        ]
+      },
+      "skit_littles": {
+        "yaw_deg": [
+          -83.10193892193314,
+          84.7998919220779
+        ],
+        "range_source": {
+          "selected_sha256": "f87dda941e1f5b1c7bcf6c6e9955c3b6ecd1bfcc15ae37f2763ae5e6a9fdae41",
+          "target_episode_count": 50,
+          "evidence": "validation_current/snack_angle_audit.json"
+        },
+        "tiers": [
+          "tier2"
+        ]
+      },
+      "sprite_c1": {
+        "yaw_deg": [
+          -31.154223453669317,
+          63.533014794326775
+        ],
+        "tiers": [
+          "tier3"
+        ]
+      },
+      "starbucks": {
+        "yaw_deg": [
+          -46.28407245925138,
+          61.35630151542147
+        ],
+        "tiers": [
+          "tier3"
+        ]
+      },
+      "zbar_t": {
+        "yaw_deg": [
+          -89.93242488332525,
+          76.01187817664686
+        ],
+        "tiers": [
+          "tier2"
+        ]
+      }
+    }
+  },
+  "notes": [
+    "Common XY applies to asset origin; original product-specific yaw and tier retained.",
+    "Same-tier full footprint AABBs excluded from each target trapezoid.",
+    "No inventory reduction, unconstrained fallback, physics or scoring changes."
+  ]
+}

@@ -1,0 +1,784 @@
+{
+  "trial": "feasible_mouth_fast_removal_0178",
+  "canonical_diagnostic": true,
+  "production_count": 0,
+  "owner_approved": false,
+  "source_trial": "actual_mouth_fast_removal_0177",
+  "exact_left_prefix_frames": 2205,
+  "reason_preserve_left_prefix": "175 slower approach/clear changed contact timing and pushed cloth inward; restore all previously verified left commands and durations",
+  "fresh_initial_state": true,
+  "same_physics_as": [
+    "same_actions_autovelocity_0171",
+    "local_ik_autovelocity_removal_0173"
+  ],
+  "object_state_writes": 0,
+  "cloth_youngs_modulus_Pa": 10000000000.0,
+  "target_two_layer_exposure_m": 0.04,
+  "measured_selected_patch_requires_40mm": true,
+  "drooping_overlap_included": true,
+  "brush_contact_height_m": 0.4512,
+  "brush_stroke_m": 0.05,
+  "maximum_brush_passes": 12,
+  "remaining_passes_skipped_when_ready": true,
+  "action_frames": 5305,
+  "maximum_template_seconds": 265.25,
+  "estimated_if_first_brush_ready_seconds": 188.25,
+  "not_yet_physical_success": true,
+  "retiming": [
+    {
+      "phase": "initial_settle",
+      "source_frames": 60,
+      "requested_frames": 60,
+      "executed_template_frames": 60,
+      "max_arm_rate_rad_s": 0.0,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "chest_to_reference_approach",
+      "source_frames": 45,
+      "requested_frames": 45,
+      "executed_template_frames": 45,
+      "max_arm_rate_rad_s": 1.1622033176764557,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_friction_touch",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.7301964015604367,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_friction_pull",
+      "source_frames": 60,
+      "requested_frames": 60,
+      "executed_template_frames": 60,
+      "max_arm_rate_rad_s": 0.28366607637827723,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_friction_clear",
+      "source_frames": 20,
+      "requested_frames": 20,
+      "executed_template_frames": 20,
+      "max_arm_rate_rad_s": 1.3451305951743775,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_brush2_raised_return",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.5733365898145815,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_brush2_L_friction_touch",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.7301964015604367,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_brush2_L_friction_pull",
+      "source_frames": 60,
+      "requested_frames": 60,
+      "executed_template_frames": 60,
+      "max_arm_rate_rad_s": 0.28366607637827723,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_brush2_L_friction_clear",
+      "source_frames": 20,
+      "requested_frames": 20,
+      "executed_template_frames": 20,
+      "max_arm_rate_rad_s": 1.3451305951743775,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_brush3_raised_return",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.5733365898145815,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_brush3_L_friction_touch",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.7301964015604367,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_brush3_L_friction_pull",
+      "source_frames": 60,
+      "requested_frames": 60,
+      "executed_template_frames": 60,
+      "max_arm_rate_rad_s": 0.28366607637827723,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_brush3_L_friction_clear",
+      "source_frames": 20,
+      "requested_frames": 20,
+      "executed_template_frames": 20,
+      "max_arm_rate_rad_s": 1.3451305951743775,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_match_reference_entry_start",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.0,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_below_edge_joint_pregrasp",
+      "source_frames": 180,
+      "requested_frames": 180,
+      "executed_template_frames": 180,
+      "max_arm_rate_rad_s": 0.22394599840917184,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_drooping_corner_enter_32mm",
+      "source_frames": 80,
+      "requested_frames": 80,
+      "executed_template_frames": 80,
+      "max_arm_rate_rad_s": 0.04709483481805332,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_drooping_corner_depth_preserving_close",
+      "source_frames": 60,
+      "requested_frames": 60,
+      "executed_template_frames": 60,
+      "max_arm_rate_rad_s": 0.021985972021694167,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_drooping_corner_physical_micro_lift",
+      "source_frames": 60,
+      "requested_frames": 60,
+      "executed_template_frames": 60,
+      "max_arm_rate_rad_s": 0.12665135790186355,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_drooping_corner_hold",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.0,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_vertical_clear_before_fold",
+      "source_frames": 160,
+      "requested_frames": 160,
+      "executed_template_frames": 160,
+      "max_arm_rate_rad_s": 0.15986983597330973,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_elevated_grasp_check",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.0,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_fold_right_over_table",
+      "source_frames": 360,
+      "requested_frames": 360,
+      "executed_template_frames": 360,
+      "max_arm_rate_rad_s": 0.37841222299840216,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_lower_folded_corner",
+      "source_frames": 140,
+      "requested_frames": 140,
+      "executed_template_frames": 140,
+      "max_arm_rate_rad_s": 0.30133368963750184,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_fold_on_table_hold",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.0,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_release_after_table_fold",
+      "source_frames": 80,
+      "requested_frames": 80,
+      "executed_template_frames": 80,
+      "max_arm_rate_rad_s": 0.0,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "fold_relaxation_after_left_release",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.0,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_withdraw_open_hand",
+      "source_frames": 180,
+      "requested_frames": 180,
+      "executed_template_frames": 180,
+      "max_arm_rate_rad_s": 0.045718345751049605,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "L_retract_after_release",
+      "source_frames": 180,
+      "requested_frames": 180,
+      "executed_template_frames": 180,
+      "max_arm_rate_rad_s": 0.1738039702925187,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush_safe_approach",
+      "source_frames": 160,
+      "requested_frames": 160,
+      "executed_template_frames": 160,
+      "max_arm_rate_rad_s": 0.29566412637656025,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush1_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.31586961958959936,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush1_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.137663098809524,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush1_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.21714487597692678,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush1_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.1620074067136723,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush2_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.31595490428148576,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush2_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.1378702438490098,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush2_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.21714553581075435,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush2_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.16211128217758608,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush3_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.3159533285348237,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush3_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.13807476788248785,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush3_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.2171461652220863,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush3_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.16220223616339569,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush4_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.31595184479520366,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush4_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.13827639385322388,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush4_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.2171467640596081,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush4_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.16228033876158232,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush5_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.3159504508682387,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush5_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.13847492755365898,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush5_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.21714733226655625,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush5_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.16234566223528923,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush6_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.31594914442090616,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush6_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.13867017728399156,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush6_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.21714786986140933,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush6_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.16239827888990366,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush7_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.3159479230190243,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush7_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.13886195344601004,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush7_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.21714837692735411,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush7_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.16243825901697928,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush8_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.31594678416271726,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush8_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.13905006804340148,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush8_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.21714885360044178,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush8_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.16246566891051528,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush9_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.315945725320006,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush9_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.13923433408898123,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush9_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.21714930005844568,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush9_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.16248056895772245,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush10_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.31594474395879146,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush10_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.13941456492191917,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush10_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.21714971650944825,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush10_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.162483011797403,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush11_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.31594383757585387,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush11_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.13959057343656434,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush11_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.21715010318037908,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush11_raised_return",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.1624730405442043,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush12_touch",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.31594300372506545,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush12_pull",
+      "source_frames": 40,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.13976217122391166,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_bundle_brush12_clear",
+      "source_frames": 30,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.21715046030562402,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_edge_joint_pregrasp",
+      "source_frames": 240,
+      "requested_frames": 160,
+      "executed_template_frames": 160,
+      "max_arm_rate_rad_s": 0.6020978916079067,
+      "runtime_replanned_from_actual_pose": true
+    },
+    {
+      "phase": "R_lower_outside_to_table_height",
+      "source_frames": 180,
+      "requested_frames": 100,
+      "executed_template_frames": 100,
+      "max_arm_rate_rad_s": 0.09639800971685375,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_horizontal_sweep_into_layers",
+      "source_frames": 360,
+      "requested_frames": 100,
+      "executed_template_frames": 100,
+      "max_arm_rate_rad_s": 0.048817880201907915,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_edge_physical_close",
+      "source_frames": 120,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.0362404085841761,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_edge_physical_hold",
+      "source_frames": 40,
+      "requested_frames": 20,
+      "executed_template_frames": 20,
+      "max_arm_rate_rad_s": 0.0,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_vertical_clear_table",
+      "source_frames": 180,
+      "requested_frames": 100,
+      "executed_template_frames": 100,
+      "max_arm_rate_rad_s": 0.1326819093505316,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_lift_folded_cloth",
+      "source_frames": 180,
+      "requested_frames": 100,
+      "executed_template_frames": 100,
+      "max_arm_rate_rad_s": 0.3714178504828314,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_higher_clearance_after_outward_lift",
+      "source_frames": 300,
+      "requested_frames": 140,
+      "executed_template_frames": 140,
+      "max_arm_rate_rad_s": 0.25385717122192286,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_hold_lifted_cloth",
+      "source_frames": 40,
+      "requested_frames": 20,
+      "executed_template_frames": 20,
+      "max_arm_rate_rad_s": 0.0,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_transfer_over_original_basket",
+      "source_frames": 300,
+      "requested_frames": 160,
+      "executed_template_frames": 160,
+      "max_arm_rate_rad_s": 0.10461800335799687,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_lower_into_basket",
+      "source_frames": 260,
+      "requested_frames": 120,
+      "executed_template_frames": 120,
+      "max_arm_rate_rad_s": 0.5621935074189532,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_release_in_original_basket",
+      "source_frames": 100,
+      "requested_frames": 30,
+      "executed_template_frames": 30,
+      "max_arm_rate_rad_s": 0.03648061812299597,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_withdraw_open_hand",
+      "source_frames": 200,
+      "requested_frames": 100,
+      "executed_template_frames": 100,
+      "max_arm_rate_rad_s": 0.23148054978896954,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "R_raise_after_release",
+      "source_frames": 160,
+      "requested_frames": 80,
+      "executed_template_frames": 80,
+      "max_arm_rate_rad_s": 0.09713427386523588,
+      "runtime_replanned_from_actual_pose": false
+    },
+    {
+      "phase": "basket_settle_after_release",
+      "source_frames": 100,
+      "requested_frames": 40,
+      "executed_template_frames": 40,
+      "max_arm_rate_rad_s": 0.0,
+      "runtime_replanned_from_actual_pose": false
+    }
+  ],
+  "episode_task_ids": [
+    "8.7",
+    "8.8"
+  ],
+  "native_collisions_and_failure_gates_unchanged": true,
+  "brush_target": "actual uncovered lower panel, not sliding upper panel",
+  "brush_pose_and_path_audits": [
+    "bottom_brush_pose175_v3.json",
+    "folded_bottom_contact50_proposal175.json"
+  ],
+  "measured_native_jaw_stability_before_lift": {
+    "right": "actual native jaw stability",
+    "left": "exact preserved prefix"
+  },
+  "reason": "Stop repeated brush once actual native open jaws enclose broad patches of both separated layers; both selected points must be40mm beyond table edge.",
+  "control_runtime": "native_removal_open_mouth_v52.py",
+  "controller": "removal_open_mouth_bundle_v9.py",
+  "selection": "native cooked open-mouth geometry, >=10 nodes per layer; no requirement that layers already touch",
+  "grasp_reference": "midpoint of native pad face reference points, not old corner heuristic",
+  "executed": false,
+  "launched_utc": "2026-09-30T11:25:03.029741+00:00",
+  "raw_native_record_storage": "/home/aether/tablecloth-pure-physics-20260921/live_record_storage/feasible_mouth_fast_removal_0178/full_state.npz",
+  "source_action_unchanged": true,
+  "entire_robot_route_required_before_accepting_grasp": true,
+  "failed_candidate_repeats_physical_brush": true,
+  "no_unhandled_pregrasp_route_exit": true,
+  "preflight": "feasible_candidate178_preflight.json"
+}

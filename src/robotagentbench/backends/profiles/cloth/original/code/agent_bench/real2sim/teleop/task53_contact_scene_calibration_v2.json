@@ -1,0 +1,201 @@
+{
+  "schema": "real2sim.task53_contact_scene_calibration.v2",
+  "task_id": "53",
+  "task_label": "small Task 53 (wallet from sofa)",
+  "target_body_path": "/World/Assets/Wallet",
+  "support_body_path": "/World/Assets/CushionOnBook",
+  "support_mode": "task53_real_rgb_rounded_cushion_v2",
+  "coordinate_frame": "sim_scene_world_from_robot_base",
+  "target": {
+    "asset_reference": "./usdz/wallet.usda",
+    "scale_xyz": [
+      0.78,
+      1.14,
+      1.0
+    ],
+    "scaled_size_m": [
+      0.1287,
+      0.1482,
+      0.04
+    ],
+    "pose": "flat",
+    "dynamic": true
+  },
+  "support": {
+    "source_asset_reference": "./usdz/cushions_set.usdz",
+    "geometry_version": "task53_rounded_pillow_v2",
+    "size_xyz_m": [
+      0.46,
+      0.36,
+      0.1
+    ],
+    "flat_top_size_xy_m": [
+      0.43,
+      0.33
+    ],
+    "relation": "directly_supports_target",
+    "required": true,
+    "active": true,
+    "kinematic": true,
+    "rigid_body_enabled": true,
+    "collision_required": true,
+    "visible": true
+  },
+  "policy": {
+    "scope_task_ids": [
+      "53"
+    ],
+    "contact_context_scope": "per_episode",
+    "missing_episode_policy": "fail_closed",
+    "forbid_cross_episode_pose_reuse": true,
+    "forbid_invisible_replacement_support": true,
+    "requires_three_primary_camera_initial_review": true,
+    "publication_scope": "pick_contact_v1_and_three_view_compare_video"
+  },
+  "episodes": {
+    "7217cfe2-16a4-4b14-b82f-f09bd65cb9dc": {
+      "source_episode_uuid": "7217cfe2-16a4-4b14-b82f-f09bd65cb9dc",
+      "active_hand": "r",
+      "source_initial_state": {
+        "frame_index": 0,
+        "review": "head frame: blue Wallet PCA 2.2 deg; Wallet and rectangular cushion lie flat with aligned long edges",
+        "head_decoded_frame0_shape": [
+          800,
+          1280,
+          3
+        ],
+        "hand_left_frame0_filename": "1784140102099591424.jpg",
+        "hand_right_frame0_filename": "1784140102099956480.jpg"
+      },
+      "scene_state": {
+        "wallet_translate_xyz_m": [
+          -0.0809713746203994,
+          -1.1012359588301175,
+          0.6190000008940697
+        ],
+        "wallet_yaw_deg": -5.0,
+        "grasp_local_offset_xy_m": [
+          -0.028091529067036398,
+          -0.0287011926707734
+        ],
+        "cushion_translate_xyz_m": [
+          -0.0809713746203994,
+          -1.1012359588301175,
+          0.5690000008940697
+        ],
+        "cushion_orient_wxyz": [
+          0.9990482215818578,
+          0.0,
+          0.0,
+          -0.043619387365336
+        ],
+        "support_top_m": 0.619000001
+      },
+      "contact_controls": {
+        "bite_z_m": 0.051,
+        "pad_axis_offset_m": -0.01,
+        "grip_past_rad": -0.4,
+        "static_friction": 2.0,
+        "dynamic_friction": 1.5,
+        "torsional_patch_radius_m": 0.006,
+        "min_torsional_patch_radius_m": 0.003
+      }
+    },
+    "f913c9e0-5e5c-4f64-98d4-7b046de95453": {
+      "source_episode_uuid": "f913c9e0-5e5c-4f64-98d4-7b046de95453",
+      "active_hand": "r",
+      "source_initial_state": {
+        "frame_index": 0,
+                "review": "head frame: largest dark-blue component is a complete 194x155 px quadrilateral; calibrated horizontal-rectangle fit gives Wallet top-centre (-0.63780426,-1.07081439,0.64939788) m and local-X yaw 3.20511045 deg; precontact real-vs-sim robot-relative review applies a bounded 17.5 mm local-Y correction, bracketed by inner-only contact through 15 mm and outer-only contact at 20 mm; the real right gripper bites the near corner, not the long-edge midpoint; after metric/video open-command parity, -0.40 rad carried for 2.35 s then expelled the corner as measured closure rose from 0.278 to 0.491, -0.55 rad reached only outer-pad contact at 0.300 closure, and -0.50 rad had only intermittent opposition at 0.363 closure; the next reviewed bounded bisection is -0.45 rad",
+        "head_decoded_frame0_shape": [
+          800,
+          1280,
+          3
+        ],
+        "hand_left_frame0_filename": "1784140047118737920.jpg",
+        "hand_right_frame0_filename": "1784140047119045376.jpg"
+      },
+      "scene_state": {
+        "wallet_translate_xyz_m": [
+          -0.1271822238127572,
+          -1.08828702,
+          0.60939788
+        ],
+        "wallet_yaw_deg": 3.20511045,
+        "grasp_local_offset_xy_m": [
+          -0.03237748,
+          -0.04770708
+        ],
+        "cushion_translate_xyz_m": [
+          -0.1271822238127572,
+          -1.08828702,
+          0.55939788
+        ],
+        "cushion_orient_wxyz": [
+          0.6870551070056173,
+          0.0,
+          0.0,
+          0.7266053123515542
+        ],
+        "support_top_m": 0.60939788
+      },
+      "contact_controls": {
+        "bite_z_m": 0.03439788,
+        "pad_axis_offset_m": 0.0,
+                "grip_past_rad": -0.45,
+        "static_friction": 2.0,
+        "dynamic_friction": 1.5,
+        "torsional_patch_radius_m": 0.006,
+        "min_torsional_patch_radius_m": 0.003
+      }
+    },
+    "1b241e0d-33d4-4d46-9eb4-09a788370c02": {
+      "source_episode_uuid": "1b241e0d-33d4-4d46-9eb4-09a788370c02",
+      "active_hand": "r",
+      "source_initial_state": {
+        "frame_index": 0,
+        "review": "head frame: blue Wallet PCA 6.2 deg; Wallet and rectangular cushion lie flat with aligned long edges",
+        "head_decoded_frame0_shape": [
+          800,
+          1280,
+          3
+        ],
+        "hand_left_frame0_filename": "1784139208576070656.jpg",
+        "hand_right_frame0_filename": "1784139208578088960.jpg"
+      },
+      "scene_state": {
+        "wallet_translate_xyz_m": [
+          -0.1006767005003995,
+          -1.1843148511001176,
+          0.5840000008940697
+        ],
+        "wallet_yaw_deg": -3.0,
+        "grasp_local_offset_xy_m": [
+          -0.02953837697470892,
+          -0.028012922209692415
+        ],
+        "cushion_translate_xyz_m": [
+          -0.1006767005003995,
+          -1.1843148511001176,
+          0.5340000008940696
+        ],
+        "cushion_orient_wxyz": [
+          0.9996573249755573,
+          0.0,
+          0.0,
+          -0.026176948307873153
+        ],
+        "support_top_m": 0.584000001
+      },
+      "contact_controls": {
+        "bite_z_m": 0.028,
+        "pad_axis_offset_m": 0.0,
+        "grip_past_rad": -0.4,
+        "static_friction": 2.0,
+        "dynamic_friction": 1.5,
+        "torsional_patch_radius_m": 0.006,
+        "min_torsional_patch_radius_m": 0.003
+      }
+    }
+  }
+}

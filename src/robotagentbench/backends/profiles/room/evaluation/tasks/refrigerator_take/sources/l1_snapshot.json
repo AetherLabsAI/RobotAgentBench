@@ -1,0 +1,322 @@
+{
+  "host": "L1 / 64.62.194.196",
+  "files": [
+    {
+      "path": "/mnt/agent-bench-data/lingjun/handoff/l1-microwave/mw_studio/ep_run.py",
+      "sha256": "6c543d206cea4d39ac3c34ed287be10215baa83294bcca04340d110c8a7762e4",
+      "excerpts": [
+        {
+          "first_line": 145,
+          "last_line": 225,
+          "text": "#   ★结论(08-07): **不改倾角**, LEAN_BACK=0。那次抓取+收臂都过的集是在模板原样\n#     (真实前后倾约17°)下拿到的, 功劳在另外两个改动: ①插入方向投影到平行盒面\n#     ②间隙改用 OBB 距离(把 0.0cm 虚报纠正成 0.4cm 真值)。倾角不是瓶颈。\n#     需要时可用 T95_LEAN_BACK 在线降(7≈10°, 17≈平躺)。\nLEAN_BACK = float(os.environ.get(\"T95_LEAN_BACK\", 0.0))   # 度, 越大越接近平躺\nLEAN_LQ_RAW = {\n    # 下层格子(门局部 y≈0.81)\n    \"low\": [-0.617, 0.326, 0.344, 0.628],     # 倾角28°, z跨16.6, 实测底面0.755\n    # 上层格子(门局部 y≈1.17)\n    \"up\":  [-0.536, 0.332, 0.411, 0.658],     # 倾角26°, z跨15.6, 实测底面1.115\n}\n\n\ndef _qmul_wxyz(a, b):\n    return [a[0]*b[0] - a[1]*b[1] - a[2]*b[2] - a[3]*b[3],\n            a[0]*b[1] + a[1]*b[0] + a[2]*b[3] - a[3]*b[2],\n            a[0]*b[2] - a[1]*b[3] + a[2]*b[0] + a[3]*b[1],\n            a[0]*b[3] + a[1]*b[2] - a[2]*b[1] + a[3]*b[0]]\n\n\ndef _lean_back(q, deg):\n    \"\"\"把斜靠模板绕门局部 x(横向)转回 deg 度 -> 更接近平躺。\"\"\"\n    import math as _m\n    h = _m.radians(-float(deg)) / 2.0\n    return _qmul_wxyz([_m.cos(h), _m.sin(h), 0.0, 0.0], q)\n\n\ndef _lean_deg(q):\n    \"\"\"模板四元数 -> 前后倾(长轴离水平面, 度)。\n\n    可以直接在**门局部系**算(y 竖直): 铰链轴也是竖直的, 绕它转门不改变任何向量与水平面\n    的夹角 —— 所以这个数与门开到几度无关。长轴 = 旋转矩阵第 0 列, 它的竖直分量是\n    2(xy+zw)。实测两个模板: low=33.4° up=25.6°(代码老注释标的 28°/26° 偏小)。\n    ★别用包围盒反推 —— yaw(±20°)会把 z 跨度撑大, 曾把 17° 误算成 28°。\"\"\"\n    import math as _m\n    w, x, y, z = [float(v) for v in q]\n    n = _m.sqrt(w*w + x*x + y*y + z*z) or 1.0\n    w, x, y, z = w/n, x/n, y/n, z/n\n    return _m.degrees(_m.asin(min(1.0, abs(2*(x*y + z*w)))))\n\n\ndef _lean_to(q, target_deg):\n    \"\"\"反解: 要把模板 q 压到 target_deg 前后倾, 该给 _lean_back 多少度。二分即可(单调)。\"\"\"\n    lo, hi = -40.0, 60.0\n    for _ in range(60):\n        mid = 0.5 * (lo + hi)\n        if _lean_deg(_lean_back(q, mid)) > target_deg:\n            lo = mid\n        else:\n            hi = mid\n    return 0.5 * (lo + hi)\n\n\n# ★★08-08 改成按**目标前后倾**反解, 不再手调单个 LEAN_BACK。\n#   为什么: 上下层模板差 7.8°(33.4 vs 25.6), **一个旋钮没法让两层落到同一个角** ——\n#   实测 4cm 栏杆下 12 个样本 7°~36°, 层与层系统性差一截。\n#   目标值怎么定: 盒子屁股坐底板、肚子搭栏杆顶棱, 这个几何**自然支持的平衡角**是\n#     tanθ = 栏杆高 / (盒尾z - 栏杆后面z)\n#   栏杆 3cm + 盒子前移 1cm => 约 14°。钉一个物理不认可的角度没有意义, 释放时它自己\n#   会滚回平衡角(现在 `[release] 沉降-0.5cm` 就是这么来的)。所以模板要跟栏杆高配套改。\n#   倾角为什么重要: 越斜, 盒心相对\"探出格外那一截\"的偏移越大, 而抓取点是按盒心算的\n#   -> 伸入后盒心偏中线, 吃光爪口 ±1.7cm 的窗口(见 task95-grasp-lean-insertion ⑩)。\n#   T95_LEAN_TARGET < 0 时退回老的单旋钮 T95_LEAN_BACK 行为。\n# 08-08 晚: 栏杆 3.0 -> 2.5cm 后几何平衡角 14.1 -> 11.7°, 模板跟着走(钉一个物理不认可的角\n# 没有意义, 预落定每集都要多搬一段)。抓取门禁是\"爪面离盒厚度轴 15°\", 而盒子倾角≈厚度轴离竖直,\n# 实测 11 次抓取有 4 次死在这条(盒子 29.6/30.3/32.8°), 是当时的头号失败原因。\n# ★★08-10 栏杆加高 2.5 -> 3.5cm(用户: \"原来栏杆高一点时盒子一头在格子里一头搭在栏杆上,\n#   本身就固定; 现在变平了, 上下爪一碰就位移\")。倾角必须同步回调 —— 钉一个物理不认可的角\n#   没有意义, 预落定每集都要多搬一段。\n#   换算依据就在上面这条注释里: 栏杆 3.0 -> 2.5cm 时平衡角 14.1 -> 11.7°(即每 1cm 约 4.8°),\n#   所以 2.5 -> 3.5cm 对应 11.5 -> 约 16.3°。但抓取门禁是\"爪面离盒厚度轴 15°\", 倾角越大越吃\n#   爪口窗口(29-33° 那批全死在这条), 所以**不取满**, 折中到 14.0°:\n#   既恢复\"搭在栏杆上\"的自锁, 又离 15° 门禁留 1° 余量。栏杆若再加高必须重新权衡这条。\nLEAN_TARGET = float(os.environ.get(\"T95_LEAN_TARGET\", \"14.0\"))\nif LEAN_TARGET >= 0:\n    LEAN_LQ = {k: _lean_back(v, _lean_to(v, LEAN_TARGET)) for k, v in LEAN_LQ_RAW.items()}\nelse:\n    LEAN_LQ = {k: _lean_back(v, LEAN_BACK) for k, v in LEAN_LQ_RAW.items()}\n# 落定高度也一并取自实测(自由落定的稳定值), 不用点位的标称值\nLEAN_Y = {\"low\": 0.815, \"up\": 1.168}\n"
+        }
+      ]
+    },
+    {
+      "path": "/mnt/agent-bench-data/lingjun/handoff/l1-microwave/mw_studio/layout_gen.py",
+      "sha256": "df1f6290248dc51bab4fbf263e1385838055841c49a8f0d98560868763e010ad",
+      "excerpts": [
+        {
+          "first_line": 140,
+          "last_line": 179,
+          "text": "def _qmul(a, b):\n    \"\"\"四元数乘 (wxyz)。\"\"\"\n    return [a[0]*b[0] - a[1]*b[1] - a[2]*b[2] - a[3]*b[3],\n            a[0]*b[1] + a[1]*b[0] + a[2]*b[3] - a[3]*b[2],\n            a[0]*b[2] - a[1]*b[3] + a[2]*b[0] + a[3]*b[1],\n            a[0]*b[3] + a[1]*b[2] - a[2]*b[1] + a[3]*b[0]]\n\n\ndef _qaxis(axis, deg):\n    \"\"\"绕门局部某轴转 deg 度的四元数 (wxyz)。axis: 0=x(横向) 1=y(竖直) 2=z(深度)。\"\"\"\n    import math as _m\n    h = _m.radians(float(deg)) / 2.0\n    q = [_m.cos(h), 0.0, 0.0, 0.0]\n    q[1 + axis] = _m.sin(h)\n    return q\n\n\n# ★钉住的斜靠姿态要加**小扰动**, 否则每集倾角一模一样(用户 08-07)。\n#   分开三个轴, 幅度各自可调:\n#     y(竖直)=yaw   —— 大幅度, 直接用布局的 ±20°, 只转朝向不影响稳定性\n#     x(横向)=倾角  —— 小幅度, 改的是\"斜多少\", 给多了会翻出格子\n#     z(深度)=翻滚  —— 更小\n#   倾角/翻滚复用布局里已有的 pitch(±20)/roll(±12) 随机数按比例缩小 —— 这样同一个 seed\n#   仍然完全可复现, 不引入新的随机源。\nLEAN_JIT_TILT = float(os.environ.get(\"T95_JIT_TILT\", 0.30))   # ±20° * 0.30 = ±6°\nLEAN_JIT_ROLL = float(os.environ.get(\"T95_JIT_ROLL\", 0.25))   # ±12° * 0.25 = ±3°\n\n\ndef lean_lq(level, yaw_deg, pitch_deg=0.0, roll_deg=0.0):\n    \"\"\"斜靠模板 + 三轴小扰动 -> 门局部四元数(wxyz)。\"\"\"\n    q = list(ep_run.LEAN_LQ[level])\n    q = _qmul(_qaxis(2, float(roll_deg) * LEAN_JIT_ROLL), q)\n    q = _qmul(_qaxis(0, float(pitch_deg) * LEAN_JIT_TILT), q)\n    q = _qmul(_qaxis(1, float(yaw_deg)), q)\n    return q\n\n\ndef apply_layout(lay, hide):\n    \"\"\"按布局摆三个盒子并钉门(门此刻是关着的)。牛肉盘用 tray_dock 挪, 另两个用 binfood 生成。\"\"\"\n    import math"
+        },
+        {
+          "first_line": 204,
+          "last_line": 223,
+          "text": "            # ★牛肉盘也用同一套斜靠模板(用户 08-07: 三个都要斜靠)。它本来就是钉姿态的机制,\n            #   只是原来钉的是 TRAY_DOCK 记录的那个近似平放的姿态。换成 LEAN_LQ 后三个盒子\n            #   姿态机制统一。★牛肉盘是场景原装 col_box(24.3cm), 与另两个不是同一资产,\n            #   这个姿态对它稳不稳由 `[release] BeefTray 沉降/平移` 裁决 —— 塌了就退回\n            #   TRAY_DOCK[\"lq\"](置 T95_LEAN=0 即可)。\n            _lvl0 = \"up\" if lv[\"y_floor\"] > 1.0 else \"low\"\n            _lean_on = int(os.environ.get(\"T95_LEAN\", \"1\"))\n            if _lean_on:\n                _lq = lean_lq(_lvl0, v[\"yaw\"], v.get(\"pitch\", 0.0), v.get(\"roll\", 0.0))\n            else:\n                _q = ep_run.TRAY_DOCK[\"lq\"]                 # 记录里是 [w,x,y,z]\n                _lq = _qmul(_qaxis(1, v[\"yaw\"]), _q)\n            _by = (ep_run.LEAN_Y[_lvl0] if _lean_on else lv[\"y_floor\"] + 0.049)\n            # ★★phys 模式不钉门(见下方 dock 处的同款注释): 钉门=启动逐步跟随, 而跟随\n            #   持有的刚体句柄会被后一个盒子的 PhysX 写操作作废, 整个 tensor view 跟着完蛋。\n            if not _PHYS_MODE:\n                ep_run.post({\"cmd\": \"tray_dock\",\n                             \"lp\": [v[\"x\"], _by, v[\"z\"]],\n                             \"lq\": _lq}, 20)\n            paths[k] = \"/World/Assets/BeefTray\""
+        }
+      ]
+    },
+    {
+      "path": "/mnt/agent-bench-data/lingjun/handoff/l1-microwave/mw_studio/mw_studio_server.py",
+      "sha256": "7065ef33c034f2856819741bcc97d0a789b7db9e304fbac0b877ff832406d62a",
+      "excerpts": [
+        {
+          "first_line": 398,
+          "last_line": 456,
+          "text": "TRAY_ROOT = \"/World/Assets/BeefTray\"\nTRAY_SCALE = float(os.environ.get(\"TRAY_SCALE\", 1.0))   # 整盘均匀缩放(col_box随动); 所有盘尺寸耦合常量均乘此系数\ntray_root = stage.DefinePrim(TRAY_ROOT, \"Xform\")\ntray_asset = stage.DefinePrim(TRAY_ROOT + \"/Asset\", \"Xform\")\ntray_asset.GetReferences().AddReference(f\"{ROOT}/demo_sim/l2_imports/beefbox_v1/beefbox.usda\")\nUsdPhysics.RigidBodyAPI.Apply(tray_asset)     # beefbox资产没带API, 裸属性会被忽略->静态碰撞体(不跟手不下落)\nUsdPhysics.MassAPI.Apply(tray_asset)\ntray_asset.CreateAttribute(\"physics:mass\", Sdf.ValueTypeNames.Float).Set(float(os.environ.get(\"BOX_MASS\", 0.12)))\n_tx = UsdGeom.Xformable(tray_root); _tx.ClearXformOpOrder()\n_tx.AddTranslateOp().Set(Gf.Vec3d(3.05, 0.25, 0.92))     # 默认停车位 (台面远角)\n_tx.AddRotateZOp().Set(0.0)\n_tx.AddScaleOp().Set(Gf.Vec3f(TRAY_SCALE, TRAY_SCALE, TRAY_SCALE))   # 建于sim初始化前, PhysX解析时烘进碰撞体\nif PHYS:\n    for a, v in ((\"physics:kinematicEnabled\", False), (\"physics:rigidBodyEnabled\", True)):\n        tray_asset.CreateAttribute(a, Sdf.ValueTypeNames.Bool).Set(v)\n    _pxtr = PhysxSchema.PhysxRigidBodyAPI.Apply(tray_asset)   # 高迭代对齐饭盒配方; 去穿透/速度封顶防\"碰爪弹飞\"\n    _pxtr.CreateSolverPositionIterationCountAttr().Set(16)\n    _pxtr.CreateSolverVelocityIterationCountAttr().Set(4)\n    _pxtr.CreateMaxDepenetrationVelocityAttr().Set(1.0)       # m/s: 瞬移落位的微穿透不再转成弹射冲量\n    _pxtr.CreateMaxLinearVelocityAttr().Set(3.0)\n    _pxtr.CreateMaxAngularVelocityAttr().Set(1146.0)          # deg/s ≈ 20 rad/s\n    # 简化为与饭盒同构(精装双层碰撞的刚体在PhysX解析不出/张量视图死绑): 原生col_box+GripMat\n    _cb = stage.GetPrimAtPath(f\"{TRAY_ROOT}/Asset/col_box\")\n    if _cb:\n        _cb.SetActive(True)\n        _cb.CreateRelationship(\"material:binding:physics\", False).SetTargets([Sdf.Path(\"/World/PhysicsMaterials/GripMat\")])\n        _pxcb = PhysxSchema.PhysxCollisionAPI.Apply(_cb)\n        _pxcb.CreateTorsionalPatchRadiusAttr().Set(0.012)\n        _pxcb.CreateMinTorsionalPatchRadiusAttr().Set(0.005)\n        _pxcb.CreateContactOffsetAttr().Set(0.002)\n        _pxcb.CreateRestOffsetAttr().Set(0.0)\nbxf = UsdGeom.Xformable(box_root); bxf.ClearXformOpOrder()\nbox_tr = bxf.AddTranslateOp(); box_rz = bxf.AddRotateZOp()\n_bb = UsdGeom.BBoxCache(Usd.TimeCode.Default(), [\"default\"]).ComputeWorldBound(box_asset).ComputeAlignedRange()\n_bmn, _bmx = _bb.GetMin(), _bb.GetMax()\nBCO = ((_bmn[0]+_bmx[0])/2, (_bmn[1]+_bmx[1])/2, _bmn[2])\ndef set_box(p, yaw):\n    r = math.radians(float(yaw)); c, s = math.cos(r), math.sin(r)\n    ox, oy = BCO[0]*c - BCO[1]*s, BCO[0]*s + BCO[1]*c\n    box_tr.Set(Gf.Vec3d(float(p[0])-ox, float(p[1])-oy, float(p[2])-BOX_HZ-BCO[2]))\n    box_rz.Set(float(yaw))\nif PHYS:   # 离线标定的可抓初始位: 前壁正对 90s 右爪闭合点 (2.245,-1.288)\n    box_tr.Set(Gf.Vec3d(float(os.environ.get(\"BOX_X\", 2.325)),\n                        float(os.environ.get(\"BOX_Y\", -1.31)), 0.921))\n    box_rz.Set(float(os.environ.get(\"BOX_YAW\", -104.0)))\nelse:\n    try:\n        _bx0 = np.load(f\"{OUTD}/box_track_v2.npz\")\n        set_box(_bx0[\"pos\"][0], _bx0[\"yaw\"][0])      # 初始台面位(运动学预览)\n    except Exception:\n        pass\n\n# ---------- 相机 ----------\ncam = UsdGeom.Camera.Define(stage, Sdf.Path(\"/World/_stCam\"))\ncam.CreateFocalLengthAttr().Set(18.0)\ncam.CreateHorizontalApertureAttr().Set(20.955)\ncam.CreateVerticalApertureAttr().Set(20.955*EXT_RES[1]/EXT_RES[0])\ncam.CreateClippingRangeAttr().Set(Gf.Vec2f(0.05, 40))\ncxf = UsdGeom.Xformable(cam.GetPrim()); cxf.ClearXformOpOrder()"
+        },
+        {
+          "first_line": 1872,
+          "last_line": 1889,
+          "text": "            if name.startswith(\"task95_\"):\n                # 冰箱任务站位 (08-03 晚 v2: 改由真机头部**深度图**直接量, 见 HANDOFF)。\n                # 依据: 12 集 head 关节全程 [yaw 0, pitch 25°] => 头相机光轴水平方向 == 机器人前向,\n                # 于是深度里拟合冰箱前脸(竖直平面)的法线, 它相对机器人前向的夹角直接就是站位角。\n                # 实测 12/12: 法线 α=+37.0°(σ0.3°) 相机-门面垂距 54.0cm(σ0.15cm) 平面竖直度 0.0°;\n                # => yaw = 90 - α = 53.0°, 即**斜着站在门缝左侧、从左往右够**(用户肉眼判定一致)。\n                # x,y 仍由\"接触帧钩点落在右门把手杆心\"约束定 (接触帧改由深度判门何时开始动, 不用 lgrip)。\n                # 12 集散布: x σ=1.4cm  y σ=2.0cm  yaw σ=0.3°。尺度自检: 量出右门门板宽 0.49m vs 资产 0.495m。\n                # 12集中位是 (2.871,0.895); 默认值再做了一步**sim内闭环**: 接触帧 f97 实测钩点比资产\n                # 实时把手(3.143,1.578) 差 (-0.006,+0.033) -> 平移到 (2.865,0.928), 钩点才真落在杆上。\n                # A/B(左门让开、其余同条件): 新站位右门开到 23.9°, 老站位只到 10.7° 且反复脱手掉回 0。\n                # 旧值 (3.477,0.915,99.5°) 来自\"手路径贴合门弧\"扫描 —— 那是退化解: 真机张爪勾门,\n                # 把手在爪口里滑, 手的轨迹根本不是把手圆弧(20cm 直线落在 R44cm 圆的 3cm 内太容易)。\n                # 要回旧站位设 T95_BASE=3.477,0.915,99.5 ; 回微波炉原站位 T95_BASE=1.683,-0.794,3.948\n                _b95 = [float(v) for v in os.environ.get(\"T95_BASE\", \"2.865,0.928,53.0\").split(\",\")]\n                set_asset(ROBOT, x=_b95[0], y=_b95[1], yaw=_b95[2])\n                print(f\"[studio] task95 站位 ({_b95[0]}, {_b95[1]}, yaw {_b95[2]}°)\", flush=True)\n                # 任务初始态 = 两扇门都关 (用户裁定)。reset_state 只管微波炉/盘, 冰箱门必须在这里驱回 0,"
+        }
+      ]
+    },
+    {
+      "path": "/mnt/agent-bench-data/lingjun/install/lreach-recovery-20260910/lreach_impl.py",
+      "sha256": "068469b343c9903d24d0230739c239fd9ca8293af7b475e01d0a69220eb6ede6",
+      "excerpts": []
+    },
+    {
+      "path": "/mnt/agent-bench-data/lingjun/runs/fridge-repair-20260910/run_original.py",
+      "sha256": "75cb7b3bba06b6075b7df88c8c1268441301a29877512568d6d6432d3c622cb7",
+      "excerpts": []
+    }
+  ],
+  "reports": {
+    "placement_layout.json": {
+      "source": "/mnt/agent-bench-data/lingjun/runs/fridge-repair-20260910/placement_layout.json",
+      "sha256": "d4eddde7a16473bac8c6a51519372b76f6551932724fba36037889fe687c9465",
+      "data": {
+        "beef": {
+          "slot": "low_in",
+          "x": 0.289,
+          "z": 0.217,
+          "yaw": 10.5,
+          "pitch": 6.1,
+          "roll": 6.9
+        },
+        "salad": {
+          "slot": "up_out",
+          "x": 0.076,
+          "z": 0.237,
+          "yaw": 28.9,
+          "pitch": -2.7,
+          "roll": 6.3
+        },
+        "food": {
+          "slot": "low_out",
+          "x": 0.083,
+          "z": 0.221,
+          "yaw": 16,
+          "pitch": -10.8,
+          "roll": 10.7
+        }
+      }
+    },
+    "corrected_physics_result.json": {
+      "source": "/mnt/agent-bench-data/lingjun/runs/fridge-repair-20260910/corrected_physics_result.json",
+      "sha256": "55c626759e162fc5a0c4d650e7ddfa51bab9280ba2d7ba4bd2fc20353394d317",
+      "data": {
+        "door_before_deg": 0.007541416726326133,
+        "door_after_deg": 88.87465738551907,
+        "opening_pass_88deg": true,
+        "boxes": {
+          "/World/Assets/SaladBoxR": {
+            "before_m": [
+              3.2404074668884277,
+              1.8005931377410889,
+              1.1582437753677368
+            ],
+            "after_m": [
+              3.4361822605133057,
+              1.328588843345642,
+              1.1582469940185547
+            ],
+            "deviation_from_rigid_door_motion_cm": 0.01342191030172521,
+            "height_change_cm": 0.0003218650817871094
+          },
+          "/World/Assets/BinFoodR": {
+            "before_m": [
+              3.2481329441070557,
+              1.8156044483184814,
+              0.8028910160064697
+            ],
+            "after_m": [
+              3.421325445175171,
+              1.3366081714630127,
+              0.802893340587616
+            ],
+            "deviation_from_rigid_door_motion_cm": 0.013338744653009448,
+            "height_change_cm": 0.00023245811462402344
+          },
+          "/World/Assets/BeefTray": {
+            "before_m": [
+              3.4546337127685547,
+              1.8141142129898071,
+              0.8053651452064514
+            ],
+            "after_m": [
+              3.4268949031829834,
+              1.5430405139923096,
+              0.8053686022758484
+            ],
+            "deviation_from_rigid_door_motion_cm": 0.013607750050997734,
+            "height_change_cm": 0.0003457069396972656
+          }
+        },
+        "scope": "One seed1 layout, recovered original code and recipe, isolated corrected asset composition; reconstructed IK, no controller changes."
+      }
+    },
+    "box_physics_audit.json": {
+      "source": "/mnt/agent-bench-data/lingjun/runs/fridge-repair-20260910/box_physics_audit.json",
+      "sha256": "69b61ee4e465bb919bdf472e6b4672e77194fdf301e3fa7fa0742e6036dbd181",
+      "data": {
+        "BeefTray": [
+          {
+            "path": "/World/Assets/BeefTray/Asset",
+            "rigid": true,
+            "kinematic": false,
+            "gravity_disabled": false,
+            "collision": null
+          },
+          {
+            "path": "/World/Assets/BeefTray/Asset/col_box",
+            "rigid": false,
+            "kinematic": null,
+            "gravity_disabled": null,
+            "collision": true
+          }
+        ],
+        "SaladBoxR": [
+          {
+            "path": "/World/Assets/SaladBoxR/Asset",
+            "rigid": true,
+            "kinematic": false,
+            "gravity_disabled": false,
+            "collision": null
+          },
+          {
+            "path": "/World/Assets/SaladBoxR/Asset/top",
+            "rigid": false,
+            "kinematic": null,
+            "gravity_disabled": null,
+            "collision": false
+          },
+          {
+            "path": "/World/Assets/SaladBoxR/Asset/bottom",
+            "rigid": false,
+            "kinematic": null,
+            "gravity_disabled": null,
+            "collision": false
+          },
+          {
+            "path": "/World/Assets/SaladBoxR/Asset/side_a",
+            "rigid": false,
+            "kinematic": null,
+            "gravity_disabled": null,
+            "collision": false
+          },
+          {
+            "path": "/World/Assets/SaladBoxR/Asset/side_b",
+            "rigid": false,
+            "kinematic": null,
+            "gravity_disabled": null,
+            "collision": false
+          },
+          {
+            "path": "/World/Assets/SaladBoxR/Asset/end_a",
+            "rigid": false,
+            "kinematic": null,
+            "gravity_disabled": null,
+            "collision": false
+          },
+          {
+            "path": "/World/Assets/SaladBoxR/Asset/end_b",
+            "rigid": false,
+            "kinematic": null,
+            "gravity_disabled": null,
+            "collision": false
+          },
+          {
+            "path": "/World/Assets/SaladBoxR/Asset/col_body",
+            "rigid": false,
+            "kinematic": null,
+            "gravity_disabled": null,
+            "collision": true
+          },
+          {
+            "path": "/World/Assets/SaladBoxR/Asset/col_rim",
+            "rigid": false,
+            "kinematic": null,
+            "gravity_disabled": null,
+            "collision": true
+          }
+        ],
+        "BinFoodR": [
+          {
+            "path": "/World/Assets/BinFoodR/Asset",
+            "rigid": true,
+            "kinematic": false,
+            "gravity_disabled": false,
+            "collision": null
+          },
+          {
+            "path": "/World/Assets/BinFoodR/Asset/geo",
+            "rigid": false,
+            "kinematic": null,
+            "gravity_disabled": null,
+            "collision": true
+          }
+        ],
+        "DOCKS": "[]",
+        "TRAY_DOCK": "{'on': False, 'spawn_lp': None}",
+        "softrel_frozen": "[]"
+      }
+    },
+    "original_recipe.json": {
+      "source": "/mnt/agent-bench-data/lingjun/runs/fridge-repair-20260910/original_recipe.json",
+      "sha256": "7571f53b9cdc1ed64ca04145c6bf13053e3181f34685f0dcda6e43b927242775",
+      "data": {
+        "source": "/mnt/agent-bench-data/lingjun/handoff/l1-microwave/mw_studio/mw_studio_server.py",
+        "lreach": "/mnt/agent-bench-data/lingjun/runs/fridge-repair-20260910/producer_data/mw_studio/lreach_impl.py",
+        "settings": {
+          "CUDA_VISIBLE_DEVICES": "0",
+          "PORT": "8391",
+          "ARM_MAXF": "400",
+          "ARM_STIFF_MULT": "20",
+          "ARM_DAMP_MULT": "4.5",
+          "FR_LOCK_LEFT": "0",
+          "FRIDGE_DOOR_MASS": "15",
+          "FRIDGE_DAMP": "0.3",
+          "FRIDGE_LATCH_FRICTION": "0.6",
+          "FRIDGE_ANG_DAMP": "0.0",
+          "FR_LATCH_DEG": "2",
+          "FR_SPEED_TRIG": "15",
+          "FR_AUTO_SPEED": "55",
+          "FR_AUTO_STOP": "89",
+          "FR_AUTO_DAMP": "3000",
+          "FR_AUTO_FORCE": "100000",
+          "FR_FREE_FRIC": "0.001",
+          "FR_FREE_DAMP": "0.002",
+          "FR_OPEN_HOLD_FRIC": "0.06",
+          "FR_OPEN_HOLD_DAMP": "0.02",
+          "FR_KEEP_COL": "col_handle",
+          "FR_CORR": "1",
+          "PHYS": "1",
+          "IH_RULE": "2",
+          "MIC_X": "2.313",
+          "MIC_Y": "-0.763",
+          "MIC_Z": "0.92",
+          "MIC_SZ": "1.10",
+          "LIFT_EN": "0",
+          "DOOR_DAMP": "0.12",
+          "DOOR_LATCH_FRICTION": "4.0",
+          "DOOR_LATCH_MODE": "1",
+          "GRIP_OVERRIDE": "0.15",
+          "BOX_MASS": "0.2",
+          "GUIDED": "1",
+          "TRAY_SCALE": "0.9",
+          "TRAY_BITE_EXTRA": "0.02",
+          "TRAY_DRAG_IN": "0.015",
+          "INHAND_JOINT": "1",
+          "PL_WAIST": "0.2618",
+          "PL_Z_OFF": "0.025",
+          "PL_HOOK_EPS": "0.05",
+          "FL_SERVO_AT": "20.0",
+          "R_TUCK": "1",
+          "MW_SCENE": "/mnt/agent-bench-data/lingjun/runs/fridge-repair-20260910/scene_original_recovered.usda",
+          "DET_PLAY": "1",
+          "T95_CANON": "1",
+          "T95_CAPTURE": "0",
+          "T95_REUSE": "1",
+          "T95_PLACE_MODE": "phys",
+          "MW_PRELOAD_BOXES": "1"
+        },
+        "adapter_changes": [
+          "I/O root remapping",
+          "lreach absolute I/O path remapping",
+          "fridge prim remapping to shared House location",
+          "overlay preserves translation and yaw xformOpOrder",
+          "GPU selection"
+        ],
+        "physics_changes": [],
+        "asset_composition": "Old KitchenRefrigerator inactive in isolated overlay; fresh RefrigeratorRecovered reference contains only recovered asset. Original nested reference composition caused prior failure.",
+        "calibration_provenance": "Reconstructed current robot IK; frame95 TE agreement2.987mm; physical hand/FK difference<0.4mm."
+      }
+    }
+  },
+  "scope": "Source audit only; no execution of L1 code"
+}

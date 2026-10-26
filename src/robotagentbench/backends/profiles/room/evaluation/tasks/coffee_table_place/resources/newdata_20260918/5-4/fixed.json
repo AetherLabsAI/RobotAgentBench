@@ -1,0 +1,162 @@
+{
+ "schema": "arena.coffee_table_place.initial_state.v2",
+ "api_id": "5-4",
+ "source": {
+  "episode_id": "b85775af-27e0-5b3c-a3a0-0b37eab5719c",
+  "lerobot_episode_index": 55,
+  "sim_info_dir": "/mnt/agent-bench-data/lingjun/ziche/data/place_tray_lerobot_20260918/sim_info/episode_000055",
+  "dataset": "/mnt/agent-bench-data/lingjun/ziche/data/place_tray_lerobot_20260918",
+  "hand": "l",
+  "clutter_count": 0,
+  "coffee_table_variant": "cool_gray_black",
+  "tray_color": "white",
+  "seed": 922600003,
+  "slot": 46,
+  "attempt": 3,
+  "case": "/mnt/agent-bench-data/lingjun/ziche/work/place_training_tray_20260918/cases/starbucks/slot_046_attempt_003",
+  "asset_release": "/mnt/agent-bench-data/lingjun/ziche/assets/shelf_pick/releases/20260916_oreo_v10",
+  "benchmark_task": "benchmark_3_8",
+  "physics_hz": 60,
+  "control_hz": 20,
+  "release_frame": 203,
+  "world_geometry_status": "CLEAR_AT_CHECKED_SAMPLES",
+  "robot_frame": "/World/Robot",
+  "sha256": {
+   "episode_json": "824f1167aa3c42a017c8bd6d8706fc80c56af93217855e38c2ebaaa835f2c1d5",
+   "sim_info_json": "5b109c81a0dddd45ef06dd3db145a941a525329cba75a45029041ad01a784ad5",
+   "appearance_json": "99e8cc9c07412c67e42ca89761c95b02755db93fc114bf9a0c456a46872b1121",
+   "scene_usda": "6533b8c4436b7af1046929143f12cc3272ad22d2a0d95535dc04b08b4b991dbc",
+   "initial_state_npz": "fdec591bc3c7447951f2ab8e20502fc3800e28388308405ba582eb1ede79cb63",
+   "recording_20hz_npz": "2fc248df5c1141fe0d54a3797205ae4a40c36f3c4f8516b307d973b0bc9991a8"
+  },
+  "local_recording": "references/newdata_recordings_20260918/5-4/fixed/recording_20hz.npz",
+  "scope": "held-object start, tray pose, in-tray clutter and robot station of one accepted source episode; source physics (60 Hz) and controller are NOT reproduced",
+  "role": "fixed"
+ },
+ "target_path": "/World/Assets/ShelfItems/starbucks",
+ "held": {
+  "position_m": [
+   -1.6931737661361694,
+   0.3105952739715576,
+   0.7546067833900452
+  ],
+  "quaternion_wxyz": [
+   0.6334466216426858,
+   -0.07213688569440087,
+   0.057945136865488966,
+   0.768234344692699
+  ]
+ },
+ "robot": {
+  "prim_path": "/World/Robot",
+  "position_m": [
+   -1.9058291912078857,
+   0.9184790253639221,
+   0.012377019971609116
+  ],
+  "quaternion_wxyz": [
+   0.7273532152175903,
+   0.0,
+   0.0,
+   -0.6862632878951298
+  ]
+ },
+ "joint_positions": {
+  "idx01_body_joint1": 0.007612153887748718,
+  "idx02_body_joint2": 0.5236164331436157,
+  "idx11_head_joint1": 1.7879968936540536e-06,
+  "idx12_head_joint2": 0.4364086091518402,
+  "idx21_arm_l_joint1": -1.1345584392547607,
+  "idx61_arm_r_joint1": 1.0930951833724976,
+  "idx22_arm_l_joint2": 0.5210899114608765,
+  "idx62_arm_r_joint2": -0.6129334568977356,
+  "idx23_arm_l_joint3": 0.21729379892349243,
+  "idx63_arm_r_joint3": -0.32297900319099426,
+  "idx24_arm_l_joint4": -1.36919367313385,
+  "idx64_arm_r_joint4": 1.218581199645996,
+  "idx25_arm_l_joint5": 0.7549384236335754,
+  "idx65_arm_r_joint5": -0.7177598476409912,
+  "idx26_arm_l_joint6": 1.5453431606292725,
+  "idx66_arm_r_joint6": -1.4774632453918457,
+  "idx27_arm_l_joint7": -0.13635101914405823,
+  "idx67_arm_r_joint7": 0.16928249597549438,
+  "idx31_gripper_l_inner_joint1": -0.2739168703556061,
+  "idx41_gripper_l_outer_joint1": 0.2665651738643646,
+  "idx71_gripper_r_inner_joint1": -0.7843998074531555,
+  "idx81_gripper_r_outer_joint1": 0.7843998074531555,
+  "idx32_gripper_l_inner_joint3": 0.041673991829156876,
+  "idx42_gripper_l_outer_joint3": -0.036547306925058365,
+  "idx72_gripper_r_inner_joint3": -0.07928604632616043,
+  "idx82_gripper_r_outer_joint3": 0.08830337971448898,
+  "idx33_gripper_l_inner_joint4": 0.03492094203829765,
+  "idx43_gripper_l_outer_joint4": -0.034906622022390366,
+  "idx73_gripper_r_inner_joint4": 0.007006247527897358,
+  "idx83_gripper_r_outer_joint4": -0.03215876221656799,
+  "idx39_gripper_l_inner_joint0": 0.10421964526176453,
+  "idx49_gripper_l_outer_joint0": -0.10119808465242386,
+  "idx79_gripper_r_inner_joint0": 0.41507619619369507,
+  "idx89_gripper_r_outer_joint0": -0.3941197395324707
+ },
+ "tray": {
+  "prim_path": "/World/Assets/Tray",
+  "floor_z_m": 0.45490211957462423,
+  "position_m": [
+   -1.8226566330133631,
+   0.20583302862526723,
+   0.45000002653844173
+  ],
+  "quaternion_wxyz": [
+   0.7069764699780717,
+   0.7069764699780716,
+   -0.013574641702258711,
+   -0.013574641702258713
+  ]
+ },
+ "clutter": [],
+ "verification": {
+  "state_reference": "recording_20hz.npz frame 0",
+  "plan_reference": "episode.json",
+  "authored_state_kind": "AUTHORED_INITIAL_STATE_ONLY_NOT_ACTUAL",
+  "authored_npz_is_a_spawn_seed": true,
+  "held_vs_authored_seed_m": 0.32955766667166914,
+  "held_min_distance_from_seed_m": 0.05,
+  "posture_joints": [
+   "idx01_body_joint1",
+   "idx02_body_joint2",
+   "idx11_head_joint1",
+   "idx12_head_joint2",
+   "idx21_arm_l_joint1",
+   "idx61_arm_r_joint1",
+   "idx22_arm_l_joint2",
+   "idx62_arm_r_joint2",
+   "idx23_arm_l_joint3",
+   "idx63_arm_r_joint3",
+   "idx24_arm_l_joint4",
+   "idx64_arm_r_joint4",
+   "idx25_arm_l_joint5",
+   "idx65_arm_r_joint5",
+   "idx26_arm_l_joint6",
+   "idx66_arm_r_joint6",
+   "idx27_arm_l_joint7",
+   "idx67_arm_r_joint7"
+  ],
+  "max_posture_joint_deviation_rad": 0.002313539191278302,
+  "posture_joint_tolerance_rad": 0.01,
+  "max_gripper_joint_deviation_rad": 0.057959526777267456,
+  "gripper_joints_excluded": "the clamp loop closes the gripper before frame 0",
+  "max_base_position_deviation_m": 2.7689605053282662e-08,
+  "base_position_tolerance_m": 1e-06,
+  "max_base_quaternion_deviation": 2.235403906425404e-08,
+  "base_quaternion_tolerance": 1e-06,
+  "max_clutter_position_deviation_m": 0.0,
+  "clutter_position_tolerance_m": 0.005,
+  "max_clutter_quaternion_deviation": 0.0,
+  "clutter_quaternion_tolerance": 0.005,
+  "tray_position_deviation_m": 0.0,
+  "tray_orientation_matches_baseline": true,
+  "coffee_table_xform_matches_baseline": true,
+  "baseline": "assets/house_scene_l1/demo_sim/scene_room_baseline.usda",
+  "baseline_sha256": "3d7e4924c41d0316b501d0643b45af4cf8e6783e928ec890fee2709904a5fb19"
+ },
+ "physical_acceptance": false
+}

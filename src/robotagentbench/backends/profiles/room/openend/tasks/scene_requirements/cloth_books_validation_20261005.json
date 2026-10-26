@@ -1,0 +1,18 @@
+{
+  "change": "Explicit cloth-clear books in UI and role-separated runtime binding",
+  "python_regression_tests_passed": 99,
+  "frontend_request_contract_passed": true,
+  "browser_verified": {"mode": "books", "count": 2, "cloth_task_checked": true, "generate_clicked": false},
+  "cpu_composition": "/home/lingjun/robot_agent_arena/openend/tasks/scene_requirements/generated_rooms/cloth_books_check_f2cccfbea4aa",
+  "cloth_target_count": 2,
+  "cloth_maximum_score": 6,
+  "ordinary_book_separately_bound": true,
+  "native_geometry_reader": "passed; two dynamic bodies with colliders",
+  "source_assets_unchanged": true,
+  "original_random_clutter_weights_changed": false,
+  "local_and_remote_preview_restarted_idle": true,
+  "test_scene_published": false,
+  "gpu_render_started": false,
+  "native_physics_rollout_validated": false,
+  "capacity_note": "1-4 is the requested count limit, not a guarantee of geometric fit. Two books validated on layout48, seed42. Infeasible requests fail without scaling or dropping targets."
+}

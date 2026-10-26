@@ -1,0 +1,89 @@
+{
+  "schema": "short_tasks.initial_pose_policy.v1",
+  "task_name": "bake_bread",
+  "status": "user_approved_definition_pending_generator_integration",
+  "approved_on": "2026-10-10",
+  "horizontal_distance_m": {
+    "reference_from": "robot_base_origin",
+    "reference_to": "air_fryer_asset_origin",
+    "inclusive_range": [0.81, 0.99]
+  },
+  "station": {
+    "side": "front_of_basket_pull_direction",
+    "lateral_offset_policy": "reuse_measured_source_relative_pose_offsets_without_expanding_them",
+    "sampling_policy": "seeded_source_relative_pose_selection_filtered_by_approved_bounds",
+    "transform_with": "actual_air_fryer_asset_frame"
+  },
+  "heading": {
+    "reference": "horizontal_bearing_from_robot_base_origin_to_air_fryer_asset_origin",
+    "absolute_error_deg_inclusive_range": [5.0, 20.0],
+    "sign_policy": "preserve_selected_source_pose_signed_error"
+  },
+  "fryer_randomization": {
+    "status": "definition_only_pending_generator_integration",
+    "scope": "whole_appliance_including_basket_not_independent_basket_motion",
+    "reference": "baseline_appliance_placement_in_task_workspace_frame",
+    "translation_x_m": [-0.05, 0.05],
+    "translation_y_m": [-0.05, 0.05],
+    "yaw_delta_deg": [-5.0, 5.0],
+    "height": "preserve_support_height",
+    "basket_relative_initial_pose": "inherit_source_no_extra_randomization",
+    "source_group_jitter": "not_an_additional_independent_appliance_jitter",
+    "robot_pose_order": "sample_relative_to_final_appliance_pose_then_check_approved_distance_heading_and_collisions",
+    "countertop_front_edge_gap_m": [0.24, 0.38],
+    "measured_50_scene_offsets": {
+      "x_m": [-0.04964596926218173, 0.048745124703984885],
+      "y_m": [-0.04186915373300855, 0.04981431815273571],
+      "yaw_deg": [-4.906334496538039, 4.511727483528071]
+    },
+    "source_generator": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/scripted_rule_v8/wide_random_batch_v2.py",
+    "note": "Bounds are the existing source generator's uniform proposal ranges, not proof that all combinations are collision-free or executable. Plate and cake randomization is separate and not changed here."
+  },
+  "plate_randomization": {
+    "reference": "baseline_plate_pose_in_task_workspace_frame",
+    "translation_x_m": [-0.05, 0.05],
+    "translation_y_m": [-0.05, 0.05],
+    "yaw_delta_deg": [-5.0, 5.0],
+    "minimum_planar_aabb_gap_to_whole_fryer_m": 0.03,
+    "height": "preserve_support_height"
+  },
+  "cake_randomization": {
+    "count": 2,
+    "roles": ["target", "distractor"],
+    "reference": "baseline_slots_after_plate_transform_in_task_workspace_frame",
+    "per_cake_translation_x_m": [-0.05, 0.05],
+    "per_cake_translation_y_m": [-0.05, 0.05],
+    "per_cake_yaw_delta_deg": [-5.0, 5.0],
+    "maximum_center_radius_on_plate_m": 0.075,
+    "minimum_center_separation_m": 0.095,
+    "height": "preserve_support_height",
+    "target_slot_choices": ["outer", "inner"],
+    "target_slot_selection": "seeded_random_choice",
+    "swap": "initial_positions_and_yaws_only_preserve_target_identity",
+    "legacy_second_slot_offset_workspace_xyz_m": [0.0, 0.03, 0.0],
+    "legacy_offset_application": "once_before_final_geometry_checks_and_role_assignment_never_again_in_runtime",
+    "component": "short_tasks.agent_probe_v1.fryer_cake_slots.finalize_slots",
+    "status": "slot_assignment_component_tested_pending_scene_generator_integration"
+  },
+  "validation": {
+    "require_front_side": true,
+    "require_measured_robot_envelope_inside_floor": true,
+    "require_robot_environment_collision_check": true,
+    "out_of_range_fallback_allowed": false,
+    "static_checks_prove_manipulation_reachability": false
+  },
+  "source_evidence": {
+    "host": "64.62.194.202",
+    "manifest": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/delivery_white50_yellow50_diverse_20260924/yellow50/manifest.json",
+    "scene_count": 50,
+    "robot_prim": "/World/Robot",
+    "fryer_prim": "/World/Task66_67/AirFryerPlacement/AirFryer",
+    "measurement": "source_scene_composed_world_transforms_not_runtime_rollout",
+    "measured_distance_m": [0.8108605602181241, 0.9915253092128111],
+    "measured_heading_error_deg": [5.32262557283363, 19.68754669941103],
+    "note": "Approved rounded bounds are authoritative: source poses above 0.99 m must be rejected, not silently admitted. Countertop-edge distance is a separate placement constraint."
+  },
+  "runtime_available": false,
+  "runtime_blocker": "bake_completion_event_unavailable",
+  "physics_verified": false
+}

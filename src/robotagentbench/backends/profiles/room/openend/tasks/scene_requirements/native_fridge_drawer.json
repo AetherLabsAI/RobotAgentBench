@@ -1,0 +1,7 @@
+{
+  "schema": "openend.native_trial.v1",
+  "mode": "navigation",
+  "manifest": "generated_rooms/binding_ebd8a860d145/composition.json",
+  "request": "generated_rooms/binding_ebd8a860d145/runtime_request.json",
+  "actions": null
+}

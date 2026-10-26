@@ -1,0 +1,10 @@
+{
+  "schema": "openend.scene_requirements.request.v2",
+  "layout_id": 1,
+  "seed": 42,
+  "tasks": [
+    {"id": "coffee", "type": "coffee", "placement": {"surface_group": "island"}},
+    {"id": "fryer", "type": "fryer", "placement": {"edge_gap_m": [0.24, 0.38]}}
+  ],
+  "extras": []
+}

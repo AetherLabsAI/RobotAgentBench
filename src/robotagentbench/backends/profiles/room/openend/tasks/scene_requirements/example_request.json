@@ -1,0 +1,11 @@
+{
+  "schema": "openend.scene_requirements.request.v1",
+  "seed": 42,
+  "tasks": [
+    {"id": "wallet", "type": "wallet_transfer", "source": "sofa"},
+    {"id": "glasses", "type": "glasses_transfer", "source": "small_table"},
+    {"id": "trash", "type": "trash_transfer", "source": "coffee_table.objects"},
+    {"id": "cloth", "type": "cloth_clear"}
+  ],
+  "extras": []
+}

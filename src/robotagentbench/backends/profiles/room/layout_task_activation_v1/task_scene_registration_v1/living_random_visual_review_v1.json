@@ -1,0 +1,14 @@
+{
+  "scope": "layout03/layout04 static initialization previews only",
+  "method": "Actual image inspection through view_image; not native physics or manipulation validation",
+  "reviewed": [
+    {"layout": 3, "view": "sofa", "result": "Six objects visible, changed positions and headings compared with prior arrangement"},
+    {"layout": 4, "view": "sofa", "result": "Six objects visible; arrangement differs from layout03 and prior seed42"},
+    {"layout": 3, "view": "table", "result": "Eight randomized trash objects visible, fixed cloth and wooden tray retained"},
+    {"layout": 4, "view": "table", "result": "Seven randomized trash objects visible, arrangement differs from layout03"},
+    {"layout": 3, "view": "renders/small_table", "result": "REJECTED VIEW: exterior wall occludes the objects; preserve original render, replace camera only"},
+    {"layout": 4, "view": "renders/small_table", "result": "REJECTED VIEW: exterior wall occludes the objects; preserve original render, replace camera only"}
+  ],
+  "replacement_small_table_views": "Both detail_fix/small_table.png actually inspected: wallet, remote and glasses case clearly visible; positions and headings differ between layouts; camera moved inside the room without changing scene assets",
+  "limitations": ["Static visual inspection cannot certify support stability, collision-free grasps, or task execution"]
+}

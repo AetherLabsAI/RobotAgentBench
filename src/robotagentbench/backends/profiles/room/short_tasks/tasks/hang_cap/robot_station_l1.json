@@ -1,0 +1,19 @@
+{
+  "schema": "short_tasks.hang_cap.center_station.v1",
+  "source_host": "lingjun@64.62.194.196",
+  "source_file": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/real2sim/teleop/robot_positions.py",
+  "source_sha256": "3978cce302b07d9e012df4dfdb61407fe26ba4d90ad420628f6840d47f2fb9af",
+  "source_station": "sofa_pick",
+  "source_authored_xy_m": [-1.478, -1.050],
+  "source_sofa_face_shift_xy_m": [0.5096436061872428, 0.0],
+  "source_resolved_xy_m": [-0.9683563938127572, -1.050],
+  "source_yaw_deg": 0.0,
+  "user_rule": "Fixed XY centered in front of sofa; yaw random plus/minus 5 degrees",
+  "canonical_centered_xy_m": [-0.9683563938127572, -0.871],
+  "canonical_front_edge_x_m": -0.3503563938,
+  "front_edge_to_base_origin_m": 0.6180000000127572,
+  "lateral_adjustment_from_marker_m": 0.179,
+  "layout_transfer": "Same rigid sofa geometry transform as the approved placement domain",
+  "yaw_halfspan_deg": 5.0,
+  "physics_validated": false
+}

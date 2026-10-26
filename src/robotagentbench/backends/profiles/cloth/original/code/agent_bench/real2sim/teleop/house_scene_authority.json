@@ -1,0 +1,33 @@
+{
+  "schema": "real2sim.house_scene_authority.v1",
+  "status": "current",
+  "effective_date": "2026-08-11",
+  "policy": "Only scene_room.usda under the configured demo root is a selectable House runtime or panorama source.",
+  "repository_source": "arena_scene/v1_2/demo_sim/scene_room_baseline.usda",
+  "canonical_control_owner": "real2sim/production/appearance.py",
+  "control_libraries": {
+    "kitchen_materials": "real2sim/production/kitchen_material_randomization.py",
+    "kitchen_tableware": "real2sim/production/kitchen_tableware_randomization.py",
+    "living_room_environment": "real2sim/production/livingroom_environment_randomization.py",
+    "living_room_plants": "real2sim/production/livingroom_plant_randomization.py",
+    "living_room_decor": "real2sim/teleop/livingroom_decor.py",
+    "kitchen_task_components": "real2sim/production/kitchen_task_components.py",
+    "kitchen_component_document": "real2sim/production/kitchen_task_components_v1.json",
+    "runtime_deployer": "real2sim/teleop/deploy_current_house_scene.py",
+    "scene_authority": "real2sim/teleop/house_scene_authority.py"
+  },
+  "roles": {
+    "scene_room.usda": "current_working_scene",
+    "scene_room_baseline.usda": "restore_source_only_never_render_directly",
+    "scene_room_task*.usda": "migration_input_only",
+    "scene_room_[A-Z]*.usda": "lane_copy_only_never_publish_as_current",
+    "scene_livingroom_decor_candidate*.usda": "superseded_review_artifact"
+  },
+  "baseline_contents": "One House shell, furniture, Kitchen/Dining layers, inactive episode objects, one PhysicsScene and one robot. Each server creates scene_room.usda from this baseline when a session opens.",
+  "superseded_outputs": [
+    {
+      "path": "real2sim/output/livingroom_decor_20260808/v3",
+      "reason": "rendered from the stale workstation shell; removed from the workspace to system trash on 2026-08-11 after replacement photography passed QC"
+    }
+  ]
+}

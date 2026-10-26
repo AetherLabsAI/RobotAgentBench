@@ -1,0 +1,93 @@
+{
+  "source_episode": "ep_beefw3_001",
+  "source_control_hz": 20,
+  "source_frames": 1128,
+  "opening_frames": 168,
+  "opening_duration_s": 8.4,
+  "action_values_changed": false,
+  "source_sha256": {
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/refrigerator_take/sources/ep_beefw3_001/trajectory/raw_npz": "3a9b17ec2177f3993262f32170bb29461a6f3384922a6196716f45e51b684b4c",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/refrigerator_take/sources/ep_beefw3_001/trajectory/actions_20hz.npz": "5ee0bef2407139ce83ea8adf1fb88e0d67fa67121d3397c6ab65400afe59e4ea",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/refrigerator_take/sources/ep_beefw3_001/trajectory/states_20hz.npz": "6ef9467ad0783ec167e528ed0ddf94a348897959a15072fca97ad14b8407c7d7"
+  },
+  "source_to_room_matrix": [
+    [
+      0.999992509710269,
+      -0.003870468104489856,
+      9.780577483622445e-08,
+      0.0
+    ],
+    [
+      0.0038704681044734873,
+      0.9999925097102597,
+      1.6687881584736627e-07,
+      0.0
+    ],
+    [
+      -9.845094138280242e-08,
+      -1.6649901166546495e-07,
+      0.999999999999981,
+      0.0
+    ],
+    [
+      -0.013715092786468208,
+      0.12104753781080424,
+      -7.698125876323024e-07,
+      1.0
+    ]
+  ],
+  "trial_base_matrix": [
+    [
+      0.5951712659786449,
+      0.8035988826232523,
+      1.9239359121191038e-07,
+      0.0
+    ],
+    [
+      -0.8035988826232694,
+      0.5951712659786526,
+      1.9980361120804008e-08,
+      0.0
+    ],
+    [
+      -9.845094138280242e-08,
+      -1.6649901166546495e-07,
+      0.999999999999981,
+      0.0
+    ],
+    [
+      2.843392762955295,
+      1.022872077061527,
+      -3.3837473506738724e-07,
+      1.0
+    ]
+  ],
+  "target_initial_difference_m": 0.01973237298919671,
+  "target_slot": "up_out",
+  "target_reset_planned": false,
+  "command_limit_violations": [],
+  "fixed_anchor_attributes": {
+    "physics:breakForce": "inf",
+    "physics:breakTorque": "inf",
+    "physics:collisionEnabled": "False",
+    "physics:excludeFromArticulation": "False",
+    "physics:jointEnabled": "True",
+    "physics:localPos0": "(3.4284093, -0.9437317, 0)",
+    "physics:localPos1": "(0, 0, 0)",
+    "physics:localRot0": "(-0.6862651, 0, 0, 0.7273515)",
+    "physics:localRot1": "(1, 0, 0, 0)",
+    "purpose": "default",
+    "visibility": "inherited"
+  },
+  "microwave_source_frames": 9606,
+  "microwave_source_hz": 60,
+  "boundary_max_right_arm_jump_deg": 89.15497833055336,
+  "boundary_max_right_arm_jump_joint": "idx63_arm_r_joint3",
+  "missing_continuous_segments": [
+    "held-box navigation between appliances",
+    "arm/grasp transition to microwave entry"
+  ],
+  "combined_replay_ready": false,
+  "full_trajectory_verified": false,
+  "next_test": "opening-only native room diagnostic; preserve randomized boxes and original physics"
+}

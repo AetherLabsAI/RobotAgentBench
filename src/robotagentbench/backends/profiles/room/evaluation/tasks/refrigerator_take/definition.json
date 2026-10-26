@@ -1,0 +1,113 @@
+{
+  "benchmark_id": "9.1",
+  "sheet_api_id": "26-1",
+  "source_task_id": "task95",
+  "runtime_id": "26-1",
+  "instruction": "打开冰箱，取出盒装牛排，关闭冰箱，最后保持持有牛排盒。",
+  "status": "registered_random_reset_four_slots_4_of_4_short_passed_random_full_replay_and_VLA_pending",
+  "standard_version": "refrigerator_take.rules.v1",
+  "stages": [
+    "open_refrigerator",
+    "take_beef_box",
+    "close_refrigerator",
+    "hold_beef_box"
+  ],
+  "initial_state": {
+    "doors": "closed",
+    "target": "beef_box",
+    "target_held": false,
+    "source": "L1 task95 recovered physical placement",
+    "validation": "passed_fixed_Isaac_settle_api_registered_smoke_v6",
+    "asset_binding": {
+      "prim": "/World/Assets/MicrowaveBeefbox",
+      "layer": "../../../resources/shared_assets/beef_box_standard243_v1/scene_bindings.usda",
+      "legacy_source_prim": "/World/Assets/BeefTray",
+      "policy": "shared baked geometry 243 x 121.5 x 52.2 mm; scale=1; no mass/contact/drive overrides",
+      "uniform_instance_scale": 1,
+      "initial_scene": "prepared/ep_beefw3_001_20260913_v4/scene.usda",
+      "placement": "original_L1_source_pose; discard_unscaled_box_outward_correction"
+    }
+  },
+  "randomization": {
+    "whole_room": "unchanged_in_this_local_randomization",
+    "local_source": "L1 layout_gen.py",
+    "enabled_in_this_task": true,
+    "accepted_samples": [7, 0, 1, 2],
+    "rejected_samples": [],
+    "historical_rejected_samples": [{"seed": 1, "reason": "Settled joint outside USD limits: idx02_body_joint2", "followup": "Three repeat probes measured -0.010848 deg after settle with left arm-door contact. User-approved waist tolerance 0.02 deg; new reset passes without removing contact."}],
+    "acceptance_report": "reports/random_reset_acceptance_waist002_v2.json",
+    "acceptance_scope": "Four representative seeds, one per beef slot. 60 settle steps plus six hold controls each; 3 actual TCP HTTP cases and 1 ASGI HTTP case. No collision-free, long-stability, random-full-task or VLA claim.",
+    "approved_on": "2026-09-14",
+    "sampler": "randomization.py:build_plan",
+    "implementation_status": "task_local_layout_flag_registered_physical_reset_verified_4_of_4_representative_short_samples_no_random_full_replay",
+    "boxes": {
+      "kinds": ["beef", "salad", "food"],
+      "slots_without_replacement": ["low_out", "low_in", "up_out", "up_in"],
+      "horizontal_jitter_m": [-0.03, 0.03],
+      "depth_jitter_m": [-0.006, 0.006],
+      "orientation": "L1 per-level lean template; outward yaw 0..20 degrees from computed straight heading, tilt +/-6 degrees, roll +/-3 degrees",
+      "rounding": "Preserve L1 rounding: position 1 mm, sampled angles 0.1 degree before tilt/roll scaling",
+      "frame": "closed right-door local frame, Y vertical, metres"
+    },
+    "robot_base": {
+      "baseline_xy_yaw_m_deg": [2.865, 0.928, 53.0],
+      "x_jitter_m": [-0.05, 0.05],
+      "y_jitter_m": [-0.05, 0.05],
+      "yaw_jitter_deg": [-5.0, 5.0]
+    },
+    "excluded": ["persistent_arm_bias", "IK_or_action_retargeting", "door_path_jitter", "room_appearance_or_topology_changes", "new_docking_or_softrel_physics_overrides"]
+  },
+  "process": {
+    "stage_points": {"open": 3, "grasp": 1, "take_out": 3, "close": 1},
+    "maximum_score": 8,
+    "minimum_score": 0,
+    "collision_penalty": {"per_episode_cap": 1, "affects_success": false},
+    "contact_event_rules": "Penalize non-operational collisions; exclude normal box grasp, door pushing and selected source shelf4/bin34 support. One fixed positive API replay passed with no deduction; physical collision counterexamples pending.",
+    "stage_detection_thresholds": {"open_angle_deg": 60, "closed_angle_tolerance_deg": 5},
+    "one_time_ordered_rewards": true,
+    "held_detection": "Measured correct-object contact/carry/support evidence, not closing commands; no mandatory two-pad contact or handover.",
+    "take_out_detection": "Complete target geometry outside the source storage compartment while physically held."
+  },
+  "success": {
+    "requires_all_stages_in_order": true,
+    "final_target_held": true,
+    "handover_required": false,
+    "hold_duration_s": 5,
+    "open_angle_deg": 60,
+    "closed_angle_tolerance_deg": 5,
+    "hold_failure_penalty": 3,
+    "hold_award_points": 0,
+    "hold_interruption": "reset continuous timer; do not add disconnected intervals",
+    "current_conditions": "All required refrigerator doors closed, correct box fully out and held continuously for 5 seconds after close."
+  },
+  "termination": {
+    "timeout_s": null,
+    "step_budget": 5000,
+    "budget_source": "existing common default; lifecycle owns timeout",
+    "new_wall_clock_timeout": false,
+    "failure_rules": "No additional early failure rule; incomplete final hold is unsuccessful with a one-time 3-point deduction. Evidence/runtime errors are invalid evaluations."
+  },
+  "assistance": {
+    "baseline": "L1 user-specified mw_studio + lreach recovery",
+    "shared_helper_alignment": "completed_previous_turn_CPU_only",
+    "object_attachment": "not_enabled",
+    "phase_bridge": "L1 ep_beefw3_001 recorded trajectory available; no local IK or generated actions",
+    "notes": "Automatic door drive and original collision filtering retained; cannot label evaluation unassisted."
+  },
+  "integration": {
+    "registered": true,
+    "reason": "Registered task; current-controller fixed full replay completed but failed final hold: score 5/8, success=false. Four representative random reset short tests pass. Historical fixed 8/8 is not current-controller success. Full-random and VLA coverage pending.",
+    "physical_smoke": "runs/api_registered_smoke_v6: valid finalized zero, six controls, 21 images, worker normal exit",
+    "physical_full": "runs/api_registered_full_v1: 1436 controls, 47.866669 simulation seconds, success 8/8, 5.00000026s post-close hold, no collision deduction; ASGI facade and ordinary worker socket",
+    "current_controller_physical_full": "runs/api_contact_close_zero_full_v1: all 1692 controls, 56.400003 simulation seconds, valid finalized 5/8, success=false; open/grasp/take_out/close achieved, maximum continuous post-close hold 4.533334s then dropped; hold deduction 3, collision deduction 0. ASGI facade and ordinary worker socket; 1693 three-camera frames, no drops, worker normal exit. See CONTACT_CLOSE_FULL_REPLAY.md.",
+    "network_smoke": "runs/api_network_smoke_v1: public ArenaClient over real TCP HTTP, six physical controls, 21 images, valid finalized zero; service alive at localhost:18098 through SSH",
+    "controller_alignment": "Current shared default observed 2026-09-14 is contact_close_zero.v1, arena.g1.position_controller.v12_target_hold_contact_close_zero. Task inherits it without overrides. Four reset samples share the same action spec, including previously user-approved waist-only settle tolerance 0.02 deg. Historical close_ramp full replay is not current-controller full-task proof.",
+    "current_controller_validation": "contact_close_zero.v1 with user-approved waist settle tolerance 0.02deg: four representative slot reset samples pass, three over real TCP HTTP, six hold controls and 21 images each. See reports/random_reset_acceptance_waist002_v2.json. No current-controller random full-task or VLA pass claimed.",
+    "historical_close_ramp_validation": "runs/api_close_ramp_full_v1: 1436 controls, success 8/8, post-close hold 5.00000026s, no deductions; both 72-substep ramps and 4002 zero-hold substeps audited. Historical evidence; current-controller fixed full replay did not pass.",
+    "entrypoints": [
+      "evaluation/registration.py",
+      "arena_api/task_registry.py",
+      "configs/tasks.json"
+    ]
+  }
+}

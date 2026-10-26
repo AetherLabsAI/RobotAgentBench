@@ -1,0 +1,69 @@
+{
+  "schema": "arena.robustness.source_manifest.v1",
+  "task_key": "coffee_button_lighting_interference",
+  "read_only_sources": [
+    {
+      "module": "arena_api.task_runtime",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/arena_api/task_runtime.py",
+      "sha256": "4fd177e96bde5167fef5be0d5560421837007ee16f5e00220525b0fc33ec4074"
+    },
+    {
+      "module": "arena_api.policy_execution",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/arena_api/policy_execution.py",
+      "sha256": "3a2c81eb14b4a7b005a02a5fdc49775fa47bbbaface2aab403f554d3582d4e8c"
+    },
+    {
+      "module": "arena_api.physics_defaults",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/arena_api/physics_defaults.py",
+      "sha256": "c2c34a1117fe99ed0b58466c28721d28d216fc4f75219269811c527c294ad2d6"
+    },
+    {
+      "module": "evaluation.tasks.coffee_machine.specs",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/specs.py",
+      "sha256": "7f5a2a1181c4d4ad9271406a71b8847c80b1930db74a045d51c41ad55af4997c"
+    },
+    {
+      "module": "evaluation.tasks.coffee_machine.registration",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/registration.py",
+      "sha256": "1d9202628cd6bb519010a27ebdbb1ad85ddc7d3ab99be902ea596ab3a279e119"
+    },
+    {
+      "module": "evaluation.tasks.coffee_machine.api_runtime",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/api_runtime.py",
+      "sha256": "183232bdb9d3c43a3f00d222d9152807d1e0919a034e45d6d3ac561494100d1d"
+    },
+    {
+      "module": "evaluation.tasks.coffee_machine.initial_state",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/initial_state.py",
+      "sha256": "e1dcdbf3e6c74f8671291dd4050603f2715ce8eb7ea6657299df3397dd7120df"
+    },
+    {
+      "module": "evaluation.tasks.coffee_machine.randomization",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/randomization.py",
+      "sha256": "8fe115962b1554ae42560e20a176dab03d9cd1dd6f65fd17773b13e753ad7d48"
+    },
+    {
+      "module": "evaluation.tasks.coffee_machine.isaac_evidence",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/isaac_evidence.py",
+      "sha256": "62eb0ba1c373374033eb28c10258dbca7c98d0c3ad6657c7489d53d2e993b111"
+    },
+    {
+      "module": "evaluation.tasks.coffee_machine.process_rules",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/process_rules.py",
+      "sha256": "e0abb8ef213b7dd35755637ede7e066f5dc919e24adfe19adf018ab6a4261fdc"
+    },
+    {
+      "module": "evaluation.tasks.coffee_machine.facts",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/facts.py",
+      "sha256": "737b643c8048be3f5bf5d1a8ffbf08277d898f7686d42c5b0a1b3e641a83c87c"
+    },
+    {
+      "module": "evaluation.tasks.coffee_machine.visual_coffee",
+      "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/visual_coffee.py",
+      "sha256": "f1e52e54f2443d2672451d56c538e9f7f844731a09ecdd65be9d188131fe0986"
+    }
+  ],
+  "old_source_api": "1-3",
+  "runtime_id": null,
+  "global_registration": false
+}

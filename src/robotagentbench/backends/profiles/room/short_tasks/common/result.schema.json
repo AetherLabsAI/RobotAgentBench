@@ -1,0 +1,567 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Short Tasks result draft — produced by reviewed adapters, not the legacy HTTP host",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "task_name",
+    "episode_id",
+    "actual_layout_id",
+    "rule_version",
+    "status",
+    "stages",
+    "targets",
+    "scores",
+    "success",
+    "termination_reason",
+    "evidence_time_s"
+  ],
+  "properties": {
+    "deduction_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "enabled", "final_state_revocation_preserved", "success_unchanged", "component_details"],
+      "properties": {
+        "version": {"const": "short_tasks.no_deductions.v1"},
+        "enabled": {"const": false},
+        "final_state_revocation_preserved": {"const": true},
+        "success_unchanged": {"const": true},
+        "component_details": {"const": "legacy_diagnostic_only"}
+      }
+    },
+    "schema": {
+      "const": "openend.short_task.result.draft.v1"
+    },
+    "task_name": {
+      "enum": [
+        "prepare_coffee",
+        "bake_bread",
+        "stock_wooden_tray",
+        "retrieve_from_drawer",
+        "hang_cap",
+        "clear_table_trash",
+        "fridge_to_heated_box",
+        "microwave_to_meal_tray",
+        "spread_tablecloth",
+        "collect_tablecloth",
+        "clear_tablecloth",
+        "pack_object",
+        "prepare_cutlery",
+        "carry_meal_tray",
+        "sofa_to_coffee_table",
+        "sofa_to_drawer",
+        "table_to_storage_basket"
+      ]
+    },
+    "episode_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "actual_layout_id": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 50
+    },
+    "rule_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "running",
+        "finished",
+        "error",
+        "unavailable"
+      ]
+    },
+    "stages": {
+      "description": "One top-level task's stages; internal components are not additional task registrations.",
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "targets": {
+      "description": "Per-instance state, with scene-owned identities after unique binding. Distinct identical-category objects remain distinct instances.",
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "process",
+        "current_final",
+        "deductions",
+        "total",
+        "maximum"
+      ],
+      "properties": {
+        "process": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "current_final": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "deductions": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "total": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "maximum": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "description": "Resolved benchmark rules produce numeric scores. Errors, unavailable tasks, and explicit unscored GPU cloth previews use null scores. A preview never claims benchmark success."
+    },
+    "success": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "termination_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_time_s": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "message"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "input",
+            "rules",
+            "layout",
+            "binding",
+            "load",
+            "execution"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "execution_mode": {
+      "const": "gpu_cloth_preview"
+    },
+    "scoring_available": {
+      "type": "boolean"
+    },
+    "layout_scope": {
+      "enum": [
+        "isolated_component_preview",
+        "shared_world"
+      ]
+    },
+    "native_state": {
+      "type": "object"
+    },
+    "evidence_step": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "requested_layout_id": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 50,
+      "description": "Optional request provenance for an isolated fixture; does not claim that the requested room was loaded."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "running",
+              "finished"
+            ]
+          }
+        },
+        "not": {
+          "required": [
+            "execution_mode"
+          ],
+          "properties": {
+            "execution_mode": {
+              "const": "gpu_cloth_preview"
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "episode_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actual_layout_id": {
+            "type": "integer"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "evidence_time_s": {
+            "type": "number"
+          },
+          "scores": {
+            "properties": {
+              "process": {
+                "type": "number"
+              },
+              "current_final": {
+                "type": "number"
+              },
+              "deductions": {
+                "type": "number"
+              },
+              "total": {
+                "type": "number"
+              },
+              "maximum": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "not": {
+          "required": [
+            "error"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "error",
+              "unavailable"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "success": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "running"
+          }
+        },
+        "not": {
+          "required": [
+            "execution_mode"
+          ],
+          "properties": {
+            "execution_mode": {
+              "const": "gpu_cloth_preview"
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "success": {
+            "const": false
+          },
+          "termination_reason": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "finished"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "termination_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "success": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "status": {
+            "const": "finished"
+          },
+          "termination_reason": {
+            "const": "success"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "termination_reason": {
+            "const": "success"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "success": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "execution_mode"
+        ],
+        "properties": {
+          "execution_mode": {
+            "const": "gpu_cloth_preview"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "scoring_available",
+          "layout_scope",
+          "native_state",
+          "evidence_step"
+        ],
+        "properties": {
+          "task_name": {
+            "enum": [
+              "spread_tablecloth",
+              "collect_tablecloth"
+            ]
+          },
+          "rule_version": {
+            "pattern": "^openend\\.short_task\\.(spread_tablecloth|collect_tablecloth)\\.gpu_preview\\.v1$"
+          },
+          "scoring_available": {
+            "const": false
+          },
+          "success": {
+            "type": "null"
+          },
+          "scores": {
+            "properties": {
+              "process": {
+                "type": "null"
+              },
+              "current_final": {
+                "type": "null"
+              },
+              "deductions": {
+                "type": "null"
+              },
+              "total": {
+                "type": "null"
+              },
+              "maximum": {
+                "type": "null"
+              }
+            }
+          },
+          "termination_reason": {
+            "not": {
+              "const": "success"
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "layout_scope": {
+                  "const": "isolated_component_preview"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "actual_layout_id": {
+                  "type": "null"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "enum": [
+                    "running",
+                    "finished"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "episode_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence_time_s": {
+                  "type": "number"
+                },
+                "evidence_step": {
+                  "type": "integer"
+                }
+              },
+              "not": {
+                "required": [
+                  "error"
+                ]
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "running"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "termination_reason": {
+                  "type": "null"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "layout_scope": {
+                  "const": "shared_world"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "actual_layout_id": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 50
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "task_name": {
+                  "const": "spread_tablecloth"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "rule_version": {
+                  "const": "openend.short_task.spread_tablecloth.gpu_preview.v1"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "task_name": {
+                  "const": "collect_tablecloth"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "rule_version": {
+                  "const": "openend.short_task.collect_tablecloth.gpu_preview.v1"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "else": {
+        "properties": {
+          "scoring_available": {
+            "const": true
+          }
+        }
+      }
+    }
+  ]
+}

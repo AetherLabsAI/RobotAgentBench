@@ -1,0 +1,12 @@
+{
+  "schema": "openend.short_task.request.draft.v1",
+  "task_name": "microwave_to_meal_tray",
+  "seed": 47,
+  "layout_id": 4,
+  "rule_version": "openend.short_task.microwave_to_meal_tray.pending.v1",
+  "options": {
+    "payload_variant": "beef_box",
+    "carrier_plate": true,
+    "initial_heating": "scene_declared_completed"
+  }
+}

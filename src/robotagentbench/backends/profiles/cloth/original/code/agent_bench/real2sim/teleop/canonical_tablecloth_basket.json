@@ -1,0 +1,50 @@
+{
+  "schema": "real2sim.canonical_tablecloth_basket.v2",
+  "status": "current",
+  "applied_date": "2026-08-08",
+  "authority": {
+    "installer": "real2sim/teleop/set_canonical_tablecloth_basket_height.py",
+    "path_contract": "real2sim/teleop/tablecloth_basket_contract.py",
+    "scene_prim": "/World/Assets/TableclothBasket",
+    "asset_reference": "./usdz/tablecloth_basket/tablecloth_basket.usda"
+  },
+  "source_asset": {
+    "download_name": "indian_towel_basket.usdz",
+    "bytes": 3668446,
+    "mesh_count": 1,
+    "installed_path": "arena_scene/v1_2/demo_sim/usdz/tablecloth_basket/indian_towel_basket.usdz"
+  },
+  "wrapper": {
+    "path": "arena_scene/v1_2/demo_sim/usdz/tablecloth_basket/tablecloth_basket.usda",
+    "bytes": 1676,
+    "normalized_body_size_xyz_m": [0.398, 0.318, 0.19]
+  },
+  "preserved_geometry": {
+    "world_center_xy_m": [-2.24, -0.8750841202700185],
+    "world_bounds_m": {
+      "min": [-2.439000000104308, -1.0340841203743265, 0.0],
+      "max": [-2.0409999998956923, -0.7160841201657103, 0.45]
+    },
+    "full_size_xyz_m": [0.3980000002086157, 0.3180000002086162, 0.45],
+    "body_bottom_z_m": 0.26,
+    "rim_z_m": 0.45,
+    "riser_height_m": 0.26,
+    "legacy_placeholder_prims_removed": ["floor", "wxn", "wxp", "wyn", "wyp"]
+  },
+  "appearance_physics_contract": {
+    "one_asset_mesh_for_appearance_and_physics": true,
+    "mesh_collision_approximation": "none",
+    "render_and_collision_mesh": "/World/Assets/TableclothBasket/model/Geometry/Meshes/Sketchfab_model/_dc85028501a4347a20df6a75b3e3044_fbx/RootNode/pCube2/pCube2_Texture_0/pCube2_Texture_0",
+    "separate_retained_riser_collider": "/World/Assets/TableclothBasket/riser",
+    "robot_only_collision_filter_retained": true
+  },
+  "canonical_scene": {
+    "working": "arena_scene/v1_2/demo_sim/scene_room.usda",
+    "baseline": "arena_scene/v1_2/demo_sim/scene_room_baseline.usda",
+    "basket_geometry_unchanged_by_2026_08_09_bin_translation": true
+  },
+  "visual_qc": {
+    "preview_artifact": "local_only_not_part_of_runtime_or_deployment",
+    "result": "upright open basket; replacement asset, retained riser, and surrounding bins visually reviewed"
+  }
+}

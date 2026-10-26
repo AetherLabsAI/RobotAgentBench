@@ -1,0 +1,3495 @@
+{
+  "schema": "arena.coffee.current_geometry_measured_motion.v1",
+  "expected": 20,
+  "measured": 20,
+  "errors": [],
+  "coordinate_frame": "Coffee machine asset: +Y up, +Z front, +X lateral. Gf row transforms transposed for projection.",
+  "records": [
+    {
+      "api": "1-1",
+      "episode": "044_right_241.3deg",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-1",
+      "verdict": "success",
+      "frames": 635,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-1/run/episode/trace.json": "0dadad018c3f2a0c35ce984a265b91413315afd95b7191f422b30751b89c9fb1",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-1/run/report.json": "3a432bd120324529d31620114c546fa1e65592d955647726c4b23c2720da76bc",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-1/044_right_241.3deg/public_binding.json": "a8bece8f0f792df9dfe4035cb4c10cd5a36eca7eb951cf8b59fef3524c325924",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-1/episodes/97784069-dbc1-4392-9ed7-62b9f81f143b/coffee_detection/control_facts.jsonl": "66c6df6460eb8db4f057d6821dc1837b8d8422b845f1c4feb8b4900c80f16ddb"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.46249171401931954,
+            -0.010244741373206134,
+            0.05671330395501778
+          ],
+          "max": [
+            0.12200619310235677,
+            0.43189054713644637,
+            0.6934144613988759
+          ],
+          "size": [
+            0.5844979071216763,
+            0.4421352885096525,
+            0.6367011574438581
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.0348041109722598,
+            -0.11482489229822229,
+            0.03209431149004677
+          ],
+          "max": [
+            0.7333367320523535,
+            0.4724280277401555,
+            0.6744979382814658
+          ],
+          "size": [
+            0.7681408430246133,
+            0.5872529200383778,
+            0.642403626791419
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.15050875775548855,
+            -0.15166199001905245,
+            -0.08411481318638847
+          ],
+          "max": [
+            0.42664259040368574,
+            0.19351807388898645,
+            0.33150314734051634
+          ],
+          "size": [
+            0.5771513481591743,
+            0.3451800639080389,
+            0.4156179605269048
+          ]
+        },
+        "bag": {
+          "min": [
+            0.07844031137790083,
+            -0.23502020696799444,
+            -0.2238558086040934
+          ],
+          "max": [
+            0.5484809971110698,
+            0.23502047876517454,
+            0.24618487712907558
+          ],
+          "size": [
+            0.47004068573316893,
+            0.470040685733169,
+            0.470040685733169
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.46249171401931954,
+          -0.23502020696799444,
+          -0.2238558086040934
+        ],
+        "max": [
+          0.7333367320523535,
+          0.4724280277401555,
+          0.6934144613988759
+        ],
+        "size": [
+          1.195828446071673,
+          0.70744823470815,
+          0.9172702700029692
+        ]
+      },
+      "robot_station": [
+        [
+          -0.05247347203548605,
+          -0.9986223183629239,
+          -3.6315477650193364e-09,
+          0.13931971050260597
+        ],
+        [
+          1.7739623251552822e-08,
+          -4.568701605937531e-09,
+          0.9999999999999999,
+          -0.9199998323619367
+        ],
+        [
+          -0.9986223183629237,
+          0.05247347203548598,
+          1.7954919334308156e-08,
+          0.8090761051025843
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_green_tall/asset.usda",
+          "sha256": "e564fdbc4a77b9ccc9e0f899699fb95bd1f7dbf7af173647e91cf7bdaf5e00f7",
+          "all_orientation_radius_m": 0.15044195923444548
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-1",
+      "episode": "013_left_135.0deg",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-2",
+      "verdict": "failure",
+      "frames": 475,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-2/run/episode/trace.json": "728dfa06fa5024c6f73baa223a5cf79671bc026f761947f351c472b7fbdab586",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-2/run/report.json": "8e3399fdce06746f74c882fb438b0d41d23b7f70904c10d76bca44356f9503ad",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-1/013_left_135.0deg/public_binding.json": "a5a180a20d4b2a911ae6d8f8c791226ef90dfb74d431eaa5777d2ac0157fcb41",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-2/episodes/cd65ae69-9612-4b2e-a570-1e197fe91fcc/coffee_detection/control_facts.jsonl": "eda0c4ab5d713d951ec981c1056c560e137e56f607ad9d3299c8fe01617617e2"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.5138084049265569,
+            -0.1285857792415988,
+            0.025449427930427093
+          ],
+          "max": [
+            0.3033346263106286,
+            0.43258901411897144,
+            0.6841052535693258
+          ],
+          "size": [
+            0.8171430312371855,
+            0.5611747933605702,
+            0.6586558256388988
+          ]
+        },
+        "arm_r": {
+          "min": [
+            0.08464917405939439,
+            0.11117588343761492,
+            0.07180291577446135
+          ],
+          "max": [
+            0.6137889251907062,
+            0.47350688018201675,
+            0.6833109267043924
+          ],
+          "size": [
+            0.5291397511313117,
+            0.36233099674440183,
+            0.6115080109299311
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.15832895530524774,
+            -0.1467034353184238,
+            -0.03607333566785012
+          ],
+          "max": [
+            0.41864653958964115,
+            0.2646795381474031,
+            0.33535187603345007
+          ],
+          "size": [
+            0.5769754948948889,
+            0.41138297346582686,
+            0.37142521170130016
+          ]
+        },
+        "bag": {
+          "min": [
+            0.03894249280703002,
+            -0.23502014736334967,
+            -0.23188678614661432
+          ],
+          "max": [
+            0.508983178540199,
+            0.23502053836981932,
+            0.23815389958655467
+          ],
+          "size": [
+            0.47004068573316904,
+            0.470040685733169,
+            0.470040685733169
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.5138084049265569,
+          -0.23502014736334967,
+          -0.23188678614661432
+        ],
+        "max": [
+          0.6137889251907062,
+          0.47350688018201675,
+          0.6841052535693258
+        ],
+        "size": [
+          1.127597330117263,
+          0.7085270275453665,
+          0.9159920397159401
+        ]
+      },
+      "robot_station": [
+        [
+          -3.1347201581510695e-06,
+          -0.9999999999950868,
+          -4.568645985509724e-09,
+          0.0750000000000002
+        ],
+        [
+          1.773962325185873e-08,
+          -4.5687015942867754e-09,
+          0.9999999999999999,
+          -0.9199998323619367
+        ],
+        [
+          -0.9999999999950866,
+          3.134720158070023e-06,
+          1.7739637573372555e-08,
+          0.8069999999999995
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_cream_classic/asset.usda",
+          "sha256": "32f4a1e0eca2d8cdc6de727f555a1b9f859e3c8c63bc7daf7d16d7c127e2e3bb",
+          "all_orientation_radius_m": 0.14548340453381683
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-1",
+      "episode": "042_right_239.7deg",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-3",
+      "verdict": "success",
+      "frames": 607,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-3/run/episode/trace.json": "f5be6f50de66a63225c7998430a9ece8c1528de12ed2003e16d89b941d858f7a",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-3/run/report.json": "9567938e795249c14592028c4efba45dba9b4e7a4d69358d0b10d37a29085a19",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-1/042_right_239.7deg/public_binding.json": "ab8cb5c55c25d52150fa9a619fc846b18683729522bb7448e649eb59ffc17740",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-3/episodes/0e66e64f-7dc5-4053-af41-be8f518613cf/coffee_detection/control_facts.jsonl": "f584a8c906b968e7812c878546903dd29a51f9317b7f529d5892008017c4e1de"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.5369484802363426,
+            -0.010244950118326213,
+            0.037477253239804165
+          ],
+          "max": [
+            0.03849547989509676,
+            0.4318902849456445,
+            0.6792857320632932
+          ],
+          "size": [
+            0.5754439601314393,
+            0.44213523506397073,
+            0.641808478823489
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.03130481414291264,
+            -0.12797661300157087,
+            0.035577330598338286
+          ],
+          "max": [
+            0.6512844127149877,
+            0.4724280277401555,
+            0.696681122197786
+          ],
+          "size": [
+            0.6825892268579004,
+            0.6004046407417264,
+            0.6611037915994478
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.1437621991558493,
+            -0.13966974090333958,
+            -0.06512125077841832
+          ],
+          "max": [
+            0.3380452258839122,
+            0.18156885932680142,
+            0.32845709202542916
+          ],
+          "size": [
+            0.48180742503976154,
+            0.321238600230141,
+            0.3935783428038475
+          ]
+        },
+        "bag": {
+          "min": [
+            -0.009148906635444515,
+            -0.23502002815406012,
+            -0.2904414657218011
+          ],
+          "max": [
+            0.4608917790977245,
+            0.23502065757910887,
+            0.17959922001136788
+          ],
+          "size": [
+            0.47004068573316904,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.5369484802363426,
+          -0.23502002815406012,
+          -0.2904414657218011
+        ],
+        "max": [
+          0.6512844127149877,
+          0.4724280277401555,
+          0.696681122197786
+        ],
+        "size": [
+          1.1882328929513304,
+          0.7074480558942157,
+          0.9871225879195871
+        ]
+      },
+      "robot_station": [
+        [
+          -0.02700339831532165,
+          -0.9996353417518932,
+          -4.088005472928861e-09,
+          0.0520925554596042
+        ],
+        [
+          1.773962325177776e-08,
+          -4.568701600282039e-09,
+          0.9999999999999999,
+          -0.9199998323619367
+        ],
+        [
+          -0.9996353417518928,
+          0.027003398315321576,
+          1.7856524820936954e-08,
+          0.8001409676797917
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda",
+          "sha256": "7dc189ca8a4624b7fdce016dc8584428425a5041e6ecda61564d38fd88dcd62a",
+          "all_orientation_radius_m": 0.13844959090944306
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-1",
+      "episode": "028_right_204.2deg",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-4",
+      "verdict": "success",
+      "frames": 609,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-4/run/episode/trace.json": "8ddf41004c95462a9efe0ea4e055aff902c6862cb85dbff51a2939de3e5f73cd",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-4/run/report.json": "717052c3109d9eb9788d5a3d2c8e18de2441a59e06c37553cc41298fe4ac1890",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-1/028_right_204.2deg/public_binding.json": "119d5cab79936e57f6690b2d2c94ef7870cf255d171ca11d03cd668e22e29365",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-4/episodes/8cbcb648-0b92-43fa-8322-a3e8498c314d/coffee_detection/control_facts.jsonl": "9b1be791e98033829f464139df45f5cd6b706416df80432247fe68fd8d3cfe74"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.45435618687549845,
+            -0.010244756050723114,
+            -0.05627005334753893
+          ],
+          "max": [
+            0.06652973896397363,
+            0.4318922240303599,
+            0.6217339688439192
+          ],
+          "size": [
+            0.520885925839472,
+            0.442136980081083,
+            0.6780040221914581
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.032576429939226687,
+            -0.1207938678747667,
+            0.03434431849256142
+          ],
+          "max": [
+            0.6449020319146899,
+            0.4724280277401555,
+            0.8229805158029234
+          ],
+          "size": [
+            0.6774784618539166,
+            0.5932218956149222,
+            0.7886361973103619
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.14588488039999317,
+            -0.14670355452771336,
+            -0.0787956975965042
+          ],
+          "max": [
+            0.5100909267222997,
+            0.18856786383862637,
+            0.3245128919418835
+          ],
+          "size": [
+            0.6559758071222929,
+            0.3352714183663397,
+            0.40330858953838766
+          ]
+        },
+        "bag": {
+          "min": [
+            0.13463975070503284,
+            -0.23502026657263922,
+            -0.29593414496799664
+          ],
+          "max": [
+            0.6046804364382018,
+            0.23502041916052976,
+            0.17410654076517232
+          ],
+          "size": [
+            0.47004068573316893,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.45435618687549845,
+          -0.23502026657263922,
+          -0.29593414496799664
+        ],
+        "max": [
+          0.6449020319146899,
+          0.4724280277401555,
+          0.8229805158029234
+        ],
+        "size": [
+          1.0992582187901883,
+          0.7074482943127948,
+          1.11891466077092
+        ]
+      },
+      "robot_station": [
+        [
+          0.15165798798948085,
+          -0.9884330299413222,
+          -7.206211096131409e-09,
+          0.03457722841359856
+        ],
+        [
+          1.7739623249290347e-08,
+          -4.568701560611242e-09,
+          0.9999999999999999,
+          -0.9199998323619367
+        ],
+        [
+          -0.988433029941322,
+          -0.151657987989481,
+          1.6841549471906878e-08,
+          0.7678022147012178
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_cream_classic/asset.usda",
+          "sha256": "32f4a1e0eca2d8cdc6de727f555a1b9f859e3c8c63bc7daf7d16d7c127e2e3bb",
+          "all_orientation_radius_m": 0.14548340453381683
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-1",
+      "episode": "017_right_197.9deg",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-5",
+      "verdict": "success",
+      "frames": 610,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-5/run/episode/trace.json": "583424db6b07cf994c2d3c8d452f12432601e50fd86db82481d3bbdab4c5795c",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-5/run/report.json": "a6a8f9e7c7598a129f439c2330bf0c8bdd7c11888dfca5fb16553e5e3df23334",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-1/017_right_197.9deg/public_binding.json": "55dd398f9d427ee5971ad3cb5a2d0154f615052e88e1674ca2d2a30acc4a4923",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-5/episodes/de426e95-350a-4373-ab66-3483177498ee/coffee_detection/control_facts.jsonl": "cf0dbec838a60ab9660ca3fadf5630b283f913075a378f429929a903d03a2484"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.4689287803378022,
+            -0.010244807250920973,
+            0.07331667891852417
+          ],
+          "max": [
+            0.05543943649762388,
+            0.431890501221414,
+            0.748141712395916
+          ],
+          "size": [
+            0.5243682168354261,
+            0.44213530847233495,
+            0.6748250334773918
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.03481190775746837,
+            -0.11481542076509182,
+            0.03213530934484138
+          ],
+          "max": [
+            0.6316729330916983,
+            0.4724280277401555,
+            0.9578234413115977
+          ],
+          "size": [
+            0.6664848408491666,
+            0.5872434485052473,
+            0.9256881319667563
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.15120942099990017,
+            -0.151662109228342,
+            -0.08318108185918627
+          ],
+          "max": [
+            0.5284516064779549,
+            0.19369807991620813,
+            0.4157634829333152
+          ],
+          "size": [
+            0.6796610274778551,
+            0.34536018914455013,
+            0.4989445647925015
+          ]
+        },
+        "bag": {
+          "min": [
+            0.17674275411931337,
+            -0.235020326177284,
+            -0.10446573178605159
+          ],
+          "max": [
+            0.6467834398524823,
+            0.235020359555885,
+            0.36557495394711736
+          ],
+          "size": [
+            0.47004068573316893,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.4689287803378022,
+          -0.235020326177284,
+          -0.11985000222921371
+        ],
+        "max": [
+          0.6467834398524823,
+          0.4724280277401555,
+          0.9578234413115977
+        ],
+        "size": [
+          1.1157122201902845,
+          0.7074483539174395,
+          1.0776734435408115
+        ]
+      },
+      "robot_station": [
+        [
+          0.14124467813607292,
+          -0.9899747173025367,
+          -7.028526414344374e-09,
+          0.02635054805131673
+        ],
+        [
+          1.773962324963267e-08,
+          -4.568701562923461e-09,
+          0.9999999999999999,
+          -0.9199998323619367
+        ],
+        [
+          -0.9899747173025365,
+          -0.141244678136073,
+          1.691647372985371e-08,
+          0.8943363152004458
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_green_tall/asset.usda",
+          "sha256": "e564fdbc4a77b9ccc9e0f899699fb95bd1f7dbf7af173647e91cf7bdaf5e00f7",
+          "all_orientation_radius_m": 0.15044195923444548
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-2",
+      "episode": "bag_small30_seed_4126_episode_0000",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-1",
+      "verdict": "success",
+      "frames": 743,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-1/run/episode/trace.json": "4f63a5a5bed6fb166c06a64d94d3c116dec8199e0ece0bc6e15a4fb0259b5563",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-1/run/report.json": "d28dde4e0083e263cacdfe3ee30b5ef0a820227b18a1adfcafab86e55e59c375",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-2/bag_small30_seed_4126_episode_0000/public_binding.json": "386e439983ed70cc5b1480c5df7f6bbb373c3ad2a6dba85fbd6d8558800bf5bb",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-1/episodes/573c09b2-8541-472f-a46f-ad0eba5202ca/coffee_detection/control_facts.jsonl": "77ca764a56676e935af6eb9f70687d72e736e810cc0053519c88103e996f19b2"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.5033792995517649,
+            -0.010245724903682085,
+            -0.012939122261394653
+          ],
+          "max": [
+            0.04944218862454287,
+            0.43189487425153844,
+            0.6421217178583845
+          ],
+          "size": [
+            0.5528214881763077,
+            0.4421405991552205,
+            0.655060840119779
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.03501715133153932,
+            -0.07370528964752182,
+            -0.18483523359292792
+          ],
+          "max": [
+            0.6327986365614389,
+            0.6346427680685556,
+            0.765023996724352
+          ],
+          "size": [
+            0.6678157878929782,
+            0.7083480577160775,
+            0.9498592303172799
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.13844965468024117,
+            -0.12013461660142918,
+            -0.07129982594496628
+          ],
+          "max": [
+            0.13844952713864495,
+            0.15676456521745694,
+            0.20559935587391984
+          ],
+          "size": [
+            0.2768991818188861,
+            0.2768991818188861,
+            0.2768991818188861
+          ]
+        },
+        "bag": {
+          "min": [
+            -0.1655300220594112,
+            -0.23502050499121832,
+            -0.4302573267607901
+          ],
+          "max": [
+            0.5326447425836947,
+            0.7883432112137523,
+            0.20335780700670372
+          ],
+          "size": [
+            0.6981747646431058,
+            1.0233637162049707,
+            0.6336151337674938
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.5033792995517649,
+          -0.23502050499121832,
+          -0.4302573267607901
+        ],
+        "max": [
+          0.6327986365614389,
+          0.7883432112137523,
+          0.765023996724352
+        ],
+        "size": [
+          1.1361779361132038,
+          1.0233637162049707,
+          1.195281323485142
+        ]
+      },
+      "robot_station": [
+        [
+          0.04777336949431145,
+          -0.9988582007307943,
+          -5.410966619837613e-09,
+          0.046011133551216166
+        ],
+        [
+          1.7739623251605195e-08,
+          -4.56870158367826e-09,
+          0.9999999999999997,
+          -0.9199998323619365
+        ],
+        [
+          -0.9988582007307941,
+          -0.04777336949431154,
+          1.7501105893874223e-08,
+          0.7777448740025084
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda",
+          "sha256": "7dc189ca8a4624b7fdce016dc8584428425a5041e6ecda61564d38fd88dcd62a",
+          "all_orientation_radius_m": 0.13844959090944306
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-2",
+      "episode": "bag_until50_seed_2130_episode_0000",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-2",
+      "verdict": "success",
+      "frames": 786,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-2/run/episode/trace.json": "b347906726058d68f5ffc1570a522493de25db8df7f64e89be1795619c879c82",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-2/run/report.json": "e508ecafe75faf03411d349e03a51e7cc172d9fd193311478ea5cd10827b8545",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-2/bag_until50_seed_2130_episode_0000/public_binding.json": "9fa289734b5cf728fd09f489482f0d56b63ea054f0b059910d26eca1a85f30b6",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-2/episodes/bb945758-f84d-43e0-acf9-e34c2bc92cbf/coffee_detection/control_facts.jsonl": "cc00fd3a8d4c44f5ade26d4884ca08be79b11f650f76b992d782b836bbc6e793"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.28685963495770733,
+            -0.010245611504664798,
+            0.14122861989179597
+          ],
+          "max": [
+            0.3926282794533531,
+            0.4318939508113675,
+            0.7013478722993876
+          ],
+          "size": [
+            0.6794879144110604,
+            0.4421395623160323,
+            0.5601192524075915
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.03505500954317181,
+            -0.07213347617884697,
+            -0.18070048191449412
+          ],
+          "max": [
+            0.9192697838528081,
+            0.6341195390672543,
+            0.6121192126278577
+          ],
+          "size": [
+            0.95432479339598,
+            0.7062530152461013,
+            0.7928196945423518
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.14548373484682023,
+            -0.12716860903973728,
+            -0.07833412007279753
+          ],
+          "max": [
+            0.1454836360696802,
+            0.16379849805112026,
+            0.21263406728238024
+          ],
+          "size": [
+            0.29096737091650043,
+            0.29096710709085755,
+            0.29096818735517777
+          ]
+        },
+        "bag": {
+          "min": [
+            -0.1646355153977315,
+            -0.23502038578192877,
+            -0.4246288248644219
+          ],
+          "max": [
+            0.587216404288224,
+            0.7882460556427684,
+            0.17794133552109284
+          ],
+          "size": [
+            0.7518519196859554,
+            1.0232664414246972,
+            0.6025701603855147
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.28685963495770733,
+          -0.23502038578192877,
+          -0.4246288248644219
+        ],
+        "max": [
+          0.9192697838528081,
+          0.7882460556427684,
+          0.7013478722993876
+        ],
+        "size": [
+          1.2061294188105154,
+          1.0232664414246972,
+          1.1259766971638094
+        ]
+      },
+      "robot_station": [
+        [
+          -0.3338495664486367,
+          -0.9426263665854341,
+          1.6157868736307304e-09,
+          0.45056536975457306
+        ],
+        [
+          1.773962323911922e-08,
+          -4.5687016684155735e-09,
+          0.9999999999999997,
+          -0.9199998323619366
+        ],
+        [
+          -0.9426263665854336,
+          0.3338495664486367,
+          1.8247095669719185e-08,
+          0.7532429046386055
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_cream_classic/asset.usda",
+          "sha256": "32f4a1e0eca2d8cdc6de727f555a1b9f859e3c8c63bc7daf7d16d7c127e2e3bb",
+          "all_orientation_radius_m": 0.14548340453381683
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-2",
+      "episode": "bag_large_extra_gpu4_seed_140045_episode_0000",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-3",
+      "verdict": "success",
+      "frames": 787,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-3/run/episode/trace.json": "20f6897c8b6bc496adc92c1b9addab3de8cdead6fa0796767149c5d047791190",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-3/run/report.json": "995ca677e28eb7dc3cba8e7408b310a714253aea4a8c5c684b3a9814eafac10e",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-2/bag_large_extra_gpu4_seed_140045_episode_0000/public_binding.json": "e8f3f32585fb31f5942e499d9555a17cb6164b90d46699941974da79d5b04205",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-3/episodes/1f169320-2eb9-4085-bd4d-1fdd131464ae/coffee_detection/control_facts.jsonl": "fc921c072fd6aa993c79b520b3b4c03e20830d4d04abb5581167795b08f70203"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.5253914883742086,
+            -0.010245698104211443,
+            0.15215463774970267
+          ],
+          "max": [
+            0.06457365902785517,
+            0.4318945864377872,
+            0.7855241935817662
+          ],
+          "size": [
+            0.5899651474020637,
+            0.44214028454199866,
+            0.6333695558320636
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.0643993138479372,
+            -0.06867087960255452,
+            -0.1558639215001804
+          ],
+          "max": [
+            0.6245175003075464,
+            0.5951513089571292,
+            0.8330905367729996
+          ],
+          "size": [
+            0.6889168141554836,
+            0.6638221885596838,
+            0.98895445827318
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.15044207006737426,
+            -0.13212716374036593,
+            -0.08329318277516329
+          ],
+          "max": [
+            0.1504420442834572,
+            0.1687570527517489,
+            0.21759264010659818
+          ],
+          "size": [
+            0.30088411435083146,
+            0.30088421649211483,
+            0.30088582288176147
+          ]
+        },
+        "bag": {
+          "min": [
+            -0.1531066811932764,
+            -0.235020326177284,
+            -0.4183344345061668
+          ],
+          "max": [
+            0.48400636342585623,
+            0.7863688669602122,
+            0.317592111111896
+          ],
+          "size": [
+            0.6371130446191327,
+            1.0213891931374963,
+            0.7359265456180628
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.5253914883742086,
+          -0.235020326177284,
+          -0.4183344345061668
+        ],
+        "max": [
+          0.6245175003075464,
+          0.7863688669602122,
+          0.8330905367729996
+        ],
+        "size": [
+          1.149908988681755,
+          1.0213891931374963,
+          1.2514249712791665
+        ]
+      },
+      "robot_station": [
+        [
+          -0.06838069140100837,
+          -0.9976593010860569,
+          -3.3449599514542637e-09,
+          0.08420451465332268
+        ],
+        [
+          1.7739623251338986e-08,
+          -4.5687016094696425e-09,
+          0.9999999999999997,
+          -0.9199998323619365
+        ],
+        [
+          -0.9976593010860568,
+          0.06838069140100832,
+          1.8010511109321256e-08,
+          0.8978896581808316
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_green_tall/asset.usda",
+          "sha256": "e564fdbc4a77b9ccc9e0f899699fb95bd1f7dbf7af173647e91cf7bdaf5e00f7",
+          "all_orientation_radius_m": 0.15044195923444548
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-2",
+      "episode": "coffee_wide_machine_2100_v1_episode_0002",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-4",
+      "verdict": "success",
+      "frames": 809,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-4/run/episode/trace.json": "7dd1affa414318de0045b26a354c08ef9f5051bbebc956d174e8b12418701ae0",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-4/run/report.json": "61b1645e0c8713c89d837cd3d670a8bf9b17b04fdf00108c5c5a1566a91481e7",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-2/coffee_wide_machine_2100_v1_episode_0002/public_binding.json": "abdc85701647a5f150eace6a9bc6aeffd1cdbc111c6e92c8117b1e8972af67c1",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-4/episodes/45ab7d9a-cb9d-4048-9150-2928783f975c/coffee_detection/control_facts.jsonl": "4659d7cae16be7413fe0c8384b83d30edaf61aca20620c669484bd04f3ab2e53"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.4061665968255636,
+            -0.010245651766075226,
+            0.013273642651995876
+          ],
+          "max": [
+            0.25702129407812546,
+            0.4318936848398171,
+            0.5893465290975679
+          ],
+          "size": [
+            0.663187890903689,
+            0.44213933660589233,
+            0.576072886445572
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.03555976991373927,
+            -0.07540773249280147,
+            -0.23532815384640954
+          ],
+          "max": [
+            0.7875845131997932,
+            0.6345932172006383,
+            0.510961163027541
+          ],
+          "size": [
+            0.8231442831135325,
+            0.7100009496934399,
+            0.7462893168739506
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.13844978200377653,
+            -0.12013473581071873,
+            -0.07130022196707606
+          ],
+          "max": [
+            0.1384497276252091,
+            0.1567646844267465,
+            0.2055998954583623
+          ],
+          "size": [
+            0.27689950962898563,
+            0.2768994202374652,
+            0.27690011742543835
+          ]
+        },
+        "bag": {
+          "min": [
+            -0.16448470453843936,
+            -0.23502044538657355,
+            -0.4242066300512759
+          ],
+          "max": [
+            0.4590015756111262,
+            0.7881485424439159,
+            0.16811209729663504
+          ],
+          "size": [
+            0.6234862801495655,
+            1.0231689878304895,
+            0.5923187273479109
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.4061665968255636,
+          -0.23502044538657355,
+          -0.4242066300512759
+        ],
+        "max": [
+          0.7875845131997932,
+          0.7881485424439159,
+          0.5893465290975679
+        ],
+        "size": [
+          1.1937511100253568,
+          1.0231689878304895,
+          1.0135531591488438
+        ]
+      },
+      "robot_station": [
+        [
+          -0.2838066578318366,
+          -0.958881526034537,
+          6.537795665627688e-10,
+          0.3077942691807555
+        ],
+        [
+          1.773962324272859e-08,
+          -4.568701657303816e-09,
+          0.9999999999999997,
+          -0.9199998323619366
+        ],
+        [
+          -0.958881526034537,
+          0.2838066578318367,
+          1.830682495425551e-08,
+          0.6539802542371767
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda",
+          "sha256": "7dc189ca8a4624b7fdce016dc8584428425a5041e6ecda61564d38fd88dcd62a",
+          "all_orientation_radius_m": 0.13844959090944306
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-2",
+      "episode": "bag_small_extra_gpu5_seed_70005_episode_0000",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-5",
+      "verdict": "success",
+      "frames": 716,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-5/run/episode/trace.json": "cc4b6a1f58bdfb9a4b017708720651a0281708f81be245a366958142bc8e1885",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-5/run/report.json": "ae18ede195272100e4e72b11d9f187f31a021b4785d872cd621d719bca339e7a",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-2/bag_small_extra_gpu5_seed_70005_episode_0000/public_binding.json": "9d8c756a47992a12341b5f730d57912389e459783328f653db68682e68ee8388",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260929-r2/1-2/source-run-5/episodes/aab9ac61-aca5-40eb-a1bd-84613b272cbd/coffee_detection/control_facts.jsonl": "519d9c4d65ead56ffd8ca4e4ddd9b28d3ec919c3108c17905d01aaf315ca7e91"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.4680840779807451,
+            -0.010245692733853506,
+            0.006906659623309996
+          ],
+          "max": [
+            0.09105164598000806,
+            0.43189178407592205,
+            0.6581196126588483
+          ],
+          "size": [
+            0.5591357239607532,
+            0.44213747680977555,
+            0.6512129530355384
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.05717701237814843,
+            -0.06973253157592046,
+            -0.19563831142023752
+          ],
+          "max": [
+            0.6702967271520186,
+            0.5974761769781489,
+            0.7660147335670244
+          ],
+          "size": [
+            0.727473739530167,
+            0.6672087085540694,
+            0.961653044987262
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.14548350614377378,
+            -0.12716860903973728,
+            -0.07833402750258292
+          ],
+          "max": [
+            0.14548341303886778,
+            0.1637983788418307,
+            0.21263397293561073
+          ],
+          "size": [
+            0.29096691918264156,
+            0.290966987881568,
+            0.29096800043819365
+          ]
+        },
+        "bag": {
+          "min": [
+            -0.21546421234638882,
+            -0.23502062420050787,
+            -0.457849914608786
+          ],
+          "max": [
+            0.5050307211662948,
+            0.7871768675247874,
+            0.17595172710499354
+          ],
+          "size": [
+            0.7204949335126836,
+            1.0221974917252954,
+            0.6338016417137795
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.4680840779807451,
+          -0.23502062420050787,
+          -0.457849914608786
+        ],
+        "max": [
+          0.6702967271520186,
+          0.7871768675247874,
+          0.7660147335670244
+        ],
+        "size": [
+          1.1383808051327637,
+          1.0221974917252954,
+          1.2238646481758104
+        ]
+      },
+      "robot_station": [
+        [
+          0.024483869299268077,
+          -0.9997002251395847,
+          -5.0016666240836286e-09,
+          0.0940003748219844
+        ],
+        [
+          1.773962325179216e-08,
+          -4.5687015888495675e-09,
+          0.9999999999999997,
+          -0.9199998323619365
+        ],
+        [
+          -0.9997002251395842,
+          -0.024483869299268164,
+          1.7622445866139284e-08,
+          0.789219536964402
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_cream_classic/asset.usda",
+          "sha256": "32f4a1e0eca2d8cdc6de727f555a1b9f859e3c8c63bc7daf7d16d7c127e2e3bb",
+          "all_orientation_radius_m": 0.14548340453381683
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-3",
+      "episode": "button_two_press_seed5058_v2",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-1",
+      "verdict": "success",
+      "frames": 469,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-1/run/episode/trace.json": "44854dba2565989f1fe78c1a92bebb5f4f0a74d6d880bc81dd6641a3d87d5773",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-1/run/report.json": "cb7ef5d7ac73874b938e4fe2a631e59578d7fb96d2c5ce57e3d0eea7ae9e17fb",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-3/button_two_press_seed5058_v2/public_binding.json": "b5cc2af84abea1765e5237159e7c37553a50ba2d8cad7e0380eac38ae2ca8df1",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-1/episodes/ba8d9312-5991-42d2-a712-f44b30f83c38/coffee_detection/control_facts.jsonl": "608a84a05a8485a1361309ffd8b6cd5bb2d81db010773178aea0f3afae1f5e11"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.5534393771774216,
+            -0.010243292256850112,
+            -0.003618809671714518
+          ],
+          "max": [
+            -0.025965362037128716,
+            0.4318908655687391,
+            0.668278030594581
+          ],
+          "size": [
+            0.5274740151402929,
+            0.44213415782558924,
+            0.6718968402662955
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.06501478877199737,
+            0.06064649121434257,
+            -0.040345857355025216
+          ],
+          "max": [
+            0.5482753300962221,
+            0.47242570995247973,
+            0.7215488533138212
+          ],
+          "size": [
+            0.6132901188682195,
+            0.41177921873813716,
+            0.7618947106688465
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.13844975701030215,
+            -0.12013479541536351,
+            -0.07129991954523737
+          ],
+          "max": [
+            0.1384496334847173,
+            0.15676450561281216,
+            0.20559975459018606
+          ],
+          "size": [
+            0.27689939049501944,
+            0.27689930102817567,
+            0.27689967413542343
+          ]
+        },
+        "bag": {
+          "min": [
+            -0.009604557807011693,
+            -0.235020326177284,
+            -0.22150475460964628
+          ],
+          "max": [
+            0.4604361279261573,
+            0.235020359555885,
+            0.2485359311235227
+          ],
+          "size": [
+            0.470040685733169,
+            0.470040685733169,
+            0.470040685733169
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.5534393771774216,
+          -0.235020326177284,
+          -0.22150475460964628
+        ],
+        "max": [
+          0.5482753300962221,
+          0.47242570995247973,
+          0.7215488533138212
+        ],
+        "size": [
+          1.1017147072736437,
+          0.7074460361297638,
+          0.9430536079234675
+        ]
+      },
+      "robot_station": [
+        [
+          0.13179011063187485,
+          -0.991277643619404,
+          -6.866758632451079e-09,
+          -0.05245473996930808
+        ],
+        [
+          1.7739623249921972e-08,
+          -4.5687015650227954e-09,
+          0.9999999999999997,
+          -0.9199998323619365
+        ],
+        [
+          -0.9912776436194038,
+          -0.13179011063187498,
+          1.698278224918028e-08,
+          0.8145717683565108
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda",
+          "sha256": "7dc189ca8a4624b7fdce016dc8584428425a5041e6ecda61564d38fd88dcd62a",
+          "all_orientation_radius_m": 0.13844959090944306
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-3",
+      "episode": "button_two_press_seed5021_v2",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-2",
+      "verdict": "success",
+      "frames": 469,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-2/run/episode/trace.json": "678a6282657eae0f5ed281ad1c0b17d2ba635159376149b643693a5927c61da8",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-2/run/report.json": "7853d76cfeb31e5e567fe0462ff917eb7aa2820f59d36fa88676b5c685c568db",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-3/button_two_press_seed5021_v2/public_binding.json": "ecd5f4948ee783ace8001fc069ab6bdcdaa581a7b37bbeae37705b51449619ba",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-2/episodes/a226bb24-d4a5-4440-9a16-6d102284fd21/coffee_detection/control_facts.jsonl": "5e68eca2ac18b46152768f2f1495144df73ad41dd55d955d5ac18adaeff650ca"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.25801647441742687,
+            -0.010242449801162234,
+            0.07217488453022897
+          ],
+          "max": [
+            0.36815382642916605,
+            0.4318908397249225,
+            0.6786185285002151
+          ],
+          "size": [
+            0.6261703008465929,
+            0.4421332895260847,
+            0.6064436439699861
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.06230212418580944,
+            0.06060750703965373,
+            -0.04641996390454278
+          ],
+          "max": [
+            0.9168471429734982,
+            0.47242570995247973,
+            0.6213244659931114
+          ],
+          "size": [
+            0.9791492671593076,
+            0.411818202912826,
+            0.6677444298976543
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.13844974466620083,
+            -0.12013479541536351,
+            -0.07129995675725972
+          ],
+          "max": [
+            0.1384496696899203,
+            0.15676456521745694,
+            0.20559969945835407
+          ],
+          "size": [
+            0.27689941435612114,
+            0.27689936063282045,
+            0.2768996562156138
+          ]
+        },
+        "bag": {
+          "min": [
+            0.18632833273568142,
+            -0.235020326177284,
+            -0.31576130661724555
+          ],
+          "max": [
+            0.6563690184688504,
+            0.235020359555885,
+            0.1542793791159234
+          ],
+          "size": [
+            0.47004068573316904,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.25801647441742687,
+          -0.235020326177284,
+          -0.31576130661724555
+        ],
+        "max": [
+          0.9168471429734982,
+          0.47242570995247973,
+          0.6786185285002151
+        ],
+        "size": [
+          1.174863617390925,
+          0.7074460361297638,
+          0.9943798351174606
+        ]
+      },
+      "robot_station": [
+        [
+          -0.18028959238451803,
+          -0.9836135739597255,
+          -1.295567498411029e-09,
+          0.40402147413909995
+        ],
+        [
+          1.7739623248220207e-08,
+          -4.56870163431841e-09,
+          0.9999999999999997,
+          -0.9199998323619366
+        ],
+        [
+          -0.9836135739597253,
+          0.18028959238451797,
+          1.8272623579258665e-08,
+          0.7669634661333633
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda",
+          "sha256": "7dc189ca8a4624b7fdce016dc8584428425a5041e6ecda61564d38fd88dcd62a",
+          "all_orientation_radius_m": 0.13844959090944306
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-3",
+      "episode": "button_two_press_seed5121_v2",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-3",
+      "verdict": "success",
+      "frames": 469,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-3/run/episode/trace.json": "9b4bf40e82d419d249425ece71b5d343bc9fec62c9dc7fec0049c5bdcf054559",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-3/run/report.json": "87a0dd8c845d0c5745e6dcda892b4d7adfc467398f68042bfea0de08e9600209",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-3/button_two_press_seed5121_v2/public_binding.json": "115534fba10f129302b1726a3ab4b58c5d3d1f85d077514677d56de20bb64503",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-3/episodes/f5344c48-67b8-4aff-b987-3044c528664e/coffee_detection/control_facts.jsonl": "234a9bac8d7f8d45a294ffa39082dc090ffb92115d54c0a09d9e303f2ecb09b5"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.482941449161956,
+            -0.010243770297949928,
+            0.0931961037532027
+          ],
+          "max": [
+            0.029655316471129945,
+            0.43189121583888734,
+            0.7908313866964836
+          ],
+          "size": [
+            0.512596765633086,
+            0.44213498613683727,
+            0.6976352829432808
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.09110415588028803,
+            0.060713839576654716,
+            -0.0039318169440362705
+          ],
+          "max": [
+            0.6205622749631955,
+            0.47242570995247973,
+            0.8702370704129284
+          ],
+          "size": [
+            0.7116664308434835,
+            0.411711870375825,
+            0.8741688873569646
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.13844979474395078,
+            -0.12013479541536351,
+            -0.07129992496094259
+          ],
+          "max": [
+            0.13844958491503642,
+            0.15676450561281216,
+            0.20559976136105926
+          ],
+          "size": [
+            0.2768993796589872,
+            0.27689930102817567,
+            0.27689968632200185
+          ]
+        },
+        "bag": {
+          "min": [
+            0.09239304770932597,
+            -0.235020326177284,
+            -0.07227367640919449
+          ],
+          "max": [
+            0.5624337334424949,
+            0.235020359555885,
+            0.39776700932397446
+          ],
+          "size": [
+            0.47004068573316893,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.482941449161956,
+          -0.235020326177284,
+          -0.11985000222921371
+        ],
+        "max": [
+          0.6205622749631955,
+          0.47242570995247973,
+          0.8702370704129284
+        ],
+        "size": [
+          1.1035037241251515,
+          0.7074460361297638,
+          0.9900870726421421
+        ]
+      },
+      "robot_station": [
+        [
+          0.22012977900321026,
+          -0.9754705943266551,
+          -8.361653356632622e-09,
+          -0.02115475310893944
+        ],
+        [
+          1.7739623246412103e-08,
+          -4.568701545407449e-09,
+          0.9999999999999997,
+          -0.9199998323619366
+        ],
+        [
+          -0.9754705943266548,
+          -0.22012977900321037,
+          1.6298773569786397e-08,
+          0.9356653436567715
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda",
+          "sha256": "7dc189ca8a4624b7fdce016dc8584428425a5041e6ecda61564d38fd88dcd62a",
+          "all_orientation_radius_m": 0.13844959090944306
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-3",
+      "episode": "button_two_press_seed5078_v2",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-4",
+      "verdict": "success",
+      "frames": 469,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-4/run/episode/trace.json": "3d4dffb5a0ed415f88029c02ed66fbc942ae544253feb676934c08def5271131",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-4/run/report.json": "ba91738498d7c1a41817dbc5347b28d06e105b3b5b979bd27e0de612105dce59",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-3/button_two_press_seed5078_v2/public_binding.json": "cb10e6bf668a7a39836025c69a1fb43b0d5176b14e9c2006ecc87754eca12055",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-4/episodes/6c9a8789-926e-4cb0-bb20-dbbe1b4868cb/coffee_detection/control_facts.jsonl": "d93ed73a08dbccbf3c6bc38d7d1790195db9d7b1c5c69d511c8048345f5736e5"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.6020847015471975,
+            -0.010241703074703346,
+            -0.13316600484135815
+          ],
+          "max": [
+            -0.12800026818539362,
+            0.4318907582904037,
+            0.6187854243671874
+          ],
+          "size": [
+            0.4740844333618039,
+            0.44213246136510703,
+            0.7519514292085456
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.1892854174436478,
+            0.06063109702986719,
+            -0.0010556608898275033
+          ],
+          "max": [
+            0.4684915915924125,
+            0.47242570995247973,
+            0.781210406771468
+          ],
+          "size": [
+            0.6577770090360603,
+            0.41179461292261255,
+            0.7822660676612956
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.13844984161500692,
+            -0.12013467620607396,
+            -0.07129990832727393
+          ],
+          "max": [
+            0.13844970519393648,
+            0.1567646248221017,
+            0.20559973230932846
+          ],
+          "size": [
+            0.2768995468089434,
+            0.27689930102817567,
+            0.2768996406366024
+          ]
+        },
+        "bag": {
+          "min": [
+            0.05289930371515125,
+            -0.235020326177284,
+            -0.12278788017159095
+          ],
+          "max": [
+            0.5229399894483202,
+            0.235020359555885,
+            0.347252805561578
+          ],
+          "size": [
+            0.47004068573316893,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.6020847015471975,
+          -0.235020326177284,
+          -0.13316600484135815
+        ],
+        "max": [
+          0.5229399894483202,
+          0.47242570995247973,
+          0.781210406771468
+        ],
+        "size": [
+          1.1250246909955177,
+          0.7074460361297638,
+          0.9143764116128261
+        ]
+      },
+      "robot_station": [
+        [
+          0.4936724007652964,
+          -0.8696479521752629,
+          -1.273072427537043e-08,
+          -0.2699008470195071
+        ],
+        [
+          1.7739623222914757e-08,
+          -4.568701484668786e-09,
+          0.9999999999999997,
+          -0.9199998323619366
+        ],
+        [
+          -0.8696479521752627,
+          -0.49367240076529656,
+          1.3171785177852145e-08,
+          0.7507771590741972
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda",
+          "sha256": "7dc189ca8a4624b7fdce016dc8584428425a5041e6ecda61564d38fd88dcd62a",
+          "all_orientation_radius_m": 0.13844959090944306
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-3",
+      "episode": "button_two_press_seed5107_v2",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-5",
+      "verdict": "success",
+      "frames": 469,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-5/run/episode/trace.json": "e9c0f6d0a113f0cf1d4efc2e61bf60468f8883ce9c4993400e266d392aa046fc",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-5/run/report.json": "8acbd80edd4cf3ae28cf89c9977c9d32022aec85cefda9b80331186a59d46624",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-3/button_two_press_seed5107_v2/public_binding.json": "a80fe4ee61638bd972b1fbdcc2959c9a35a40cccde150ff1b23e19cd170d6494",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-3/source-run-5/episodes/d46f02e0-6dd5-41ae-8354-22d62ddefe39/coffee_detection/control_facts.jsonl": "5e52aae8d3c003cb23fb998a09dc7e16056238bb1df2a6a43e0417fc16f8187f"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.5368752190094217,
+            -0.010241561020356393,
+            -0.08284820353818484
+          ],
+          "max": [
+            -0.031639640649664375,
+            0.43189040918142774,
+            0.6294916067255456
+          ],
+          "size": [
+            0.5052355783597573,
+            0.44213197020178413,
+            0.7123398102637304
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.07449086139909816,
+            0.060618957623480185,
+            -0.02380310950555725
+          ],
+          "max": [
+            0.5676598963150054,
+            0.47242570995247973,
+            0.7169575933018997
+          ],
+          "size": [
+            0.6421507577141035,
+            0.41180675232899955,
+            0.740760702807457
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.13844976808363127,
+            -0.12013467620607396,
+            -0.07130008933796747
+          ],
+          "max": [
+            0.13844971782931,
+            0.15676474403139126,
+            0.20559958367202288
+          ],
+          "size": [
+            0.2768994859129413,
+            0.2768994202374652,
+            0.27689967300999035
+          ]
+        },
+        "bag": {
+          "min": [
+            0.06038800027669941,
+            -0.235020326177284,
+            -0.21324124552770532
+          ],
+          "max": [
+            0.5304286860098684,
+            0.235020359555885,
+            0.25679944020546364
+          ],
+          "size": [
+            0.47004068573316893,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.5368752190094217,
+          -0.235020326177284,
+          -0.21324124552770532
+        ],
+        "max": [
+          0.5676598963150054,
+          0.47242570995247973,
+          0.7169575933018997
+        ],
+        "size": [
+          1.1045351153244272,
+          0.7074460361297638,
+          0.930198838829605
+        ]
+      },
+      "robot_station": [
+        [
+          0.277451392044414,
+          -0.9607396760062616,
+          -9.311215993428775e-09,
+          -0.09827384940392947
+        ],
+        [
+          1.7739623243141182e-08,
+          -4.568701532679494e-09,
+          0.9999999999999997,
+          -0.9199998323619366
+        ],
+        [
+          -0.9607396760062616,
+          -0.27745139204441416,
+          1.5775567287011244e-08,
+          0.7727234119366813
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda",
+          "sha256": "7dc189ca8a4624b7fdce016dc8584428425a5041e6ecda61564d38fd88dcd62a",
+          "all_orientation_radius_m": 0.13844959090944306
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-4",
+      "episode": "cup_retrieve_prefix50_044_v1",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-1",
+      "verdict": "success",
+      "frames": 669,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-1/run/episode/trace.json": "e449f3a0adc0e7feac005b6971864bfd5722f1a643b9c2a93fe70efa4a0137a2",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-1/run/report.json": "d4166ef89415f28bd0c4cd6e638f9054f3e60d00804fbc7e006f0d6c42cfc77d",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-4/cup_retrieve_prefix50_044_v1/public_binding.json": "852154c1d5ce6ded4eefb5de5c2c0f598e2faa2718ca2fad35a1d498c280a82b",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-1/episodes/b8156803-7c45-4e16-9bb8-6acfe7e322d3/coffee_detection/control_facts.jsonl": "23cb36189fd54254480311b5da1766aa3a94b1f3b160f8bb85576ed1f4c06ff3"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.494340196816297,
+            -0.010259568996841717,
+            0.06544474911010129
+          ],
+          "max": [
+            0.0853334585076235,
+            0.43189008726207423,
+            0.7049326854522137
+          ],
+          "size": [
+            0.5796736553239205,
+            0.44214965625891595,
+            0.6394879363421124
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.032632872734507656,
+            -0.09959932426025281,
+            0.030129594526031422
+          ],
+          "max": [
+            0.6224515475521228,
+            0.47242898770114977,
+            0.791495656520674
+          ],
+          "size": [
+            0.6550844202866305,
+            0.5720283119614026,
+            0.7613660619946425
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.1468262984296522,
+            -0.12716860903973728,
+            -0.07827057620647096
+          ],
+          "max": [
+            0.41071496037567157,
+            0.2623522151875032,
+            0.4094950306541919
+          ],
+          "size": [
+            0.5575412588053238,
+            0.38952082422724044,
+            0.48776560686066284
+          ]
+        },
+        "bag": {
+          "min": [
+            0.02191765367148693,
+            -0.235020326177284,
+            -0.19994807668236805
+          ],
+          "max": [
+            0.49195833940465594,
+            0.235020359555885,
+            0.2700926090508009
+          ],
+          "size": [
+            0.47004068573316904,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.494340196816297,
+          -0.235020326177284,
+          -0.19994807668236805
+        ],
+        "max": [
+          0.6224515475521228,
+          0.47242898770114977,
+          0.791495656520674
+        ],
+        "size": [
+          1.1167917443684199,
+          0.7074493138784338,
+          0.991443733203042
+        ]
+      },
+      "robot_station": [
+        [
+          -0.03877301329840292,
+          -0.9992480440009688,
+          -3.877447492070835e-09,
+          0.10064863840903165
+        ],
+        [
+          1.773962325169176e-08,
+          -4.568701602895419e-09,
+          0.9999999999999999,
+          -0.9199998323619367
+        ],
+        [
+          -0.9992480440009684,
+          0.038773013298402846,
+          1.7903426163572595e-08,
+          0.8233972873337831
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_cream_classic/asset.usda",
+          "sha256": "32f4a1e0eca2d8cdc6de727f555a1b9f859e3c8c63bc7daf7d16d7c127e2e3bb",
+          "all_orientation_radius_m": 0.14548340453381683
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-4",
+      "episode": "cup_retrieve_initial43_v3",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-2",
+      "verdict": "failure",
+      "frames": 499,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-2/run/episode/trace.json": "b7e6c014249927ceae3d2632c14846044e30cd02de84c696aba61f47aa9aad4a",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-2/run/report.json": "c30d2323ba1c9692b55b6828211469393f0532061136aa1f3fde6f7e7851b2cc",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-4/cup_retrieve_initial43_v3/public_binding.json": "356178f3df6a282645bfbd6314d60d21c4adbaf78491bf771517f956b30286a9",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-2/episodes/aab815ce-ae99-4924-938e-fbf2474989de/coffee_detection/control_facts.jsonl": "75340cd9d51ade3ce0a6654156e389c5ec73f02f36393b003bd4530e84e43a44"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.45151037885834355,
+            -0.07303208948848555,
+            0.02733980221195459
+          ],
+          "max": [
+            0.09973031889516565,
+            0.4215872220616257,
+            0.6483480197289482
+          ],
+          "size": [
+            0.5512406977535091,
+            0.49461931155011124,
+            0.6210082175169935
+          ]
+        },
+        "arm_r": {
+          "min": [
+            0.09857387046860983,
+            0.11127280496670316,
+            0.016146450426620718
+          ],
+          "max": [
+            0.6202195577397276,
+            0.473339913213143,
+            0.63205429338326
+          ],
+          "size": [
+            0.5216456872711177,
+            0.36206710824643984,
+            0.6159078429566394
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.16850583973315078,
+            -0.13833333386655003,
+            -0.08527643372448038
+          ],
+          "max": [
+            0.183386130902449,
+            0.20448063506360195,
+            0.39254515880234175
+          ],
+          "size": [
+            0.3518919706355998,
+            0.342813968930152,
+            0.4778215925268221
+          ]
+        },
+        "bag": {
+          "min": [
+            0.02874010046285244,
+            -0.23502020696799444,
+            -0.28253460381937323
+          ],
+          "max": [
+            0.4987807861960214,
+            0.23502047876517454,
+            0.18750608191379572
+          ],
+          "size": [
+            0.47004068573316893,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.45151037885834355,
+          -0.23502020696799444,
+          -0.28253460381937323
+        ],
+        "max": [
+          0.6202195577397276,
+          0.473339913213143,
+          0.6483480197289482
+        ],
+        "size": [
+          1.071729936598071,
+          0.7083601201811375,
+          0.9308826235483214
+        ]
+      },
+      "robot_station": [
+        [
+          -0.0451376336432366,
+          -0.9989807776074017,
+          -3.763320466027212e-09,
+          0.10128274651643554
+        ],
+        [
+          1.7739623251632416e-08,
+          -4.5687016043086476e-09,
+          0.9999999999999999,
+          -0.9199998323619367
+        ],
+        [
+          -0.9989807776074016,
+          0.04513763364323653,
+          1.792776300961865e-08,
+          0.7645130538078679
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_cream_classic/asset.usda",
+          "sha256": "32f4a1e0eca2d8cdc6de727f555a1b9f859e3c8c63bc7daf7d16d7c127e2e3bb",
+          "all_orientation_radius_m": 0.14548340453381683
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-4",
+      "episode": "cup_retrieve_initial_repair_right_v2",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-3",
+      "verdict": "success",
+      "frames": 667,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-3/run/episode/trace.json": "37c3e2744c1fa8a26981474afff8a1bbbeaaced803c61da297c79022b039a8e9",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-3/run/report.json": "96b8323dcab6225e76f6c8030b27526050d8538ce7799291cf9890b61df72754",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-4/cup_retrieve_initial_repair_right_v2/public_binding.json": "e1bae4fff9d82b13eac9d232e1a23bd8f6b632c82b759ffe3a62e2afd78b918f",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-3/episodes/fe1c9b80-3321-4a4a-a1d6-f9a5f6d65da6/coffee_detection/control_facts.jsonl": "cbefa6f4fec70cb78c7e911e938bb6d60206cf3839913f3aef71d0ce7a1b372f"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.6117761229630732,
+            -0.010256732986915928,
+            -0.17566597173111603
+          ],
+          "max": [
+            -0.10414974069063662,
+            0.4318904916132329,
+            0.5324644323757572
+          ],
+          "size": [
+            0.5076263822724365,
+            0.4421472246001488,
+            0.7081304041068732
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.11865922759171488,
+            -0.10682178682895888,
+            0.027927371216756758
+          ],
+          "max": [
+            0.49285598054340546,
+            0.47242905204512303,
+            0.7155556677592466
+          ],
+          "size": [
+            0.6115152081351203,
+            0.5792508388740819,
+            0.6876282965424898
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.13890985845952894,
+            -0.12013479541536351,
+            -0.07083836049159395
+          ],
+          "max": [
+            0.14492717569450383,
+            0.242725370633564,
+            0.3296403754820302
+          ],
+          "size": [
+            0.2838370341540328,
+            0.3628601660489275,
+            0.40047873597362416
+          ]
+        },
+        "bag": {
+          "min": [
+            -0.03612710363617869,
+            -0.235020326177284,
+            -0.28079804469441916
+          ],
+          "max": [
+            0.43391358209699027,
+            0.235020359555885,
+            0.1892426410387498
+          ],
+          "size": [
+            0.47004068573316893,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.6117761229630732,
+          -0.235020326177284,
+          -0.28079804469441916
+        ],
+        "max": [
+          0.49285598054340546,
+          0.47242905204512303,
+          0.7155556677592466
+        ],
+        "size": [
+          1.1046321035064786,
+          0.707449378222407,
+          0.9963537124536658
+        ]
+      },
+      "robot_station": [
+        [
+          0.26038433973375313,
+          -0.9655050469165954,
+          -9.03022447688294e-09,
+          -0.16607015049980872
+        ],
+        [
+          1.7739623244199312e-08,
+          -4.568701536469142e-09,
+          0.9999999999999999,
+          -0.9199998323619368
+        ],
+        [
+          -0.9655050469165953,
+          -0.26038433973375325,
+          1.5938077439659285e-08,
+          0.6762288084142449
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda",
+          "sha256": "7dc189ca8a4624b7fdce016dc8584428425a5041e6ecda61564d38fd88dcd62a",
+          "all_orientation_radius_m": 0.13844959090944306
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-4",
+      "episode": "cup_retrieve_prefix50_006_v1",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-4",
+      "verdict": "success",
+      "frames": 634,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-4/run/episode/trace.json": "905956ca20e9f1bef583a916daa25837a4ed544586dd9721adda721d0db78280",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-4/run/report.json": "0fd0c8c208cb144b5ca1fe99486cacdb1bd6c41d891d969b28d81015be2a6e9e",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-4/cup_retrieve_prefix50_006_v1/public_binding.json": "91c40090a5188bb7ff4f5480c99b7ce213ed9414b9c73dc93f38fe50a8800189",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-4/episodes/6490fe9c-a882-4fbe-88b2-1e840fe00c4c/coffee_detection/control_facts.jsonl": "dc3a60be0ee667270b4272677e2bd8b995d7b51d2e10f2d9afc6315cd6f92232"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.6411220083028235,
+            -0.09960875015444809,
+            0.0339973586661339
+          ],
+          "max": [
+            0.033196193892026604,
+            0.43264124442420715,
+            0.7896810989552131
+          ],
+          "size": [
+            0.6743182021948502,
+            0.5322499945786552,
+            0.7556837402890793
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.12478153563808356,
+            0.11127155953351991,
+            0.25714072564849727
+          ],
+          "max": [
+            0.45761729220278774,
+            0.47243129554750224,
+            0.8464125439639957
+          ],
+          "size": [
+            0.5823988278408713,
+            0.3611597360139823,
+            0.5892718183154984
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.17494023467737704,
+            -0.12716860903973728,
+            -0.07756926259204913
+          ],
+          "max": [
+            0.1498780263098549,
+            0.2623618711399568,
+            0.47316512516979936
+          ],
+          "size": [
+            0.32481826098723193,
+            0.38953048017969405,
+            0.5507343877618485
+          ]
+        },
+        "bag": {
+          "min": [
+            -0.06572235771717547,
+            -0.23502020696799444,
+            -0.060057059433297005
+          ],
+          "max": [
+            0.40431832801599354,
+            0.23502047876517454,
+            0.40998362629987195
+          ],
+          "size": [
+            0.47004068573316904,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.6411220083028235,
+          -0.23502020696799444,
+          -0.11985000222921371
+        ],
+        "max": [
+          0.45761729220278774,
+          0.47243129554750224,
+          0.8464125439639957
+        ],
+        "size": [
+          1.0987393005056112,
+          0.7074515025154967,
+          0.9662625461932094
+        ]
+      },
+      "robot_station": [
+        [
+          0.16317873606704664,
+          -0.9865965234560486,
+          -7.402194373941695e-09,
+          -0.1581740867245707
+        ],
+        [
+          1.773962324888256e-08,
+          -4.568701558053122e-09,
+          0.9999999999999999,
+          -0.9199998323619367
+        ],
+        [
+          -0.9865965234560483,
+          -0.16317873606704672,
+          1.6756335679056972e-08,
+          0.9355876348851873
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_cream_classic/asset.usda",
+          "sha256": "32f4a1e0eca2d8cdc6de727f555a1b9f859e3c8c63bc7daf7d16d7c127e2e3bb",
+          "all_orientation_radius_m": 0.14548340453381683
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    },
+    {
+      "api": "1-4",
+      "episode": "cup_retrieve_prefix50_038_v1",
+      "run": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-5",
+      "verdict": "success",
+      "frames": 704,
+      "hashes": {
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-5/run/episode/trace.json": "029237f5ee9250ab7b41f2e27376d0041bd17997f71d0143155097052eb70289",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-5/run/report.json": "735096ad439559dae55e29eddc7ee7485c75a2b538ba0b6478de31de1112873b",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-4/cup_retrieve_prefix50_038_v1/public_binding.json": "2d03e70d7835a4df5bb6268e8e0d75ed11d5f7e4b012fe91d6b79c1226e1ee30",
+        "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-4/source-run-5/episodes/e7d14630-b62a-44b7-b9e6-e1bffd7019bd/coffee_detection/control_facts.jsonl": "0e18a57a60e206aa93c88167026a604276f213fe6ed9656b79cb2a07c514a6c5"
+      },
+      "components": {
+        "machine": {
+          "min": [
+            -0.11475000530481339,
+            0.0,
+            -0.11985000222921371
+          ],
+          "max": [
+            0.11475000530481339,
+            0.29999998211860657,
+            0.16192500293254852
+          ],
+          "size": [
+            0.22950001060962677,
+            0.29999998211860657,
+            0.28177500516176224
+          ]
+        },
+        "arm_l": {
+          "min": [
+            -0.5501567445446449,
+            -0.010264416690546174,
+            0.16674688171663682
+          ],
+          "max": [
+            0.03247691173542322,
+            0.4318891718405096,
+            0.8045447353886536
+          ],
+          "size": [
+            0.5826336562800681,
+            0.4421535885310558,
+            0.6377978536720168
+          ]
+        },
+        "arm_r": {
+          "min": [
+            -0.06611730193647122,
+            -0.0936264246940634,
+            0.031962759276831065
+          ],
+          "max": [
+            0.598606389834345,
+            0.472429032318397,
+            0.8011206719835178
+          ],
+          "size": [
+            0.6647236917708162,
+            0.5660554570124604,
+            0.7691579127066868
+          ]
+        },
+        "cup": {
+          "min": [
+            -0.1503285647595855,
+            -0.13212716374036593,
+            -0.08421709165827851
+          ],
+          "max": [
+            0.30711773791542074,
+            0.26128474030133986,
+            0.5302287373496521
+          ],
+          "size": [
+            0.45744630267500624,
+            0.3934119040417058,
+            0.6144458290079307
+          ]
+        },
+        "bag": {
+          "min": [
+            0.015722894292069384,
+            -0.23502038578192877,
+            -0.08116566355558555
+          ],
+          "max": [
+            0.48576358002523834,
+            0.2350202999512402,
+            0.3888750221775834
+          ],
+          "size": [
+            0.47004068573316893,
+            0.470040685733169,
+            0.47004068573316893
+          ]
+        }
+      },
+      "combined": {
+        "min": [
+          -0.5501567445446449,
+          -0.23502038578192877,
+          -0.11985000222921371
+        ],
+        "max": [
+          0.598606389834345,
+          0.472429032318397,
+          0.8045447353886536
+        ],
+        "size": [
+          1.14876313437899,
+          0.7074494181003258,
+          0.9243947376178673
+        ]
+      },
+      "robot_station": [
+        [
+          -0.04714299335129694,
+          -0.9988881509848238,
+          -3.7273229573687975e-09,
+          0.049013149501185654
+        ],
+        [
+          1.773962325161185e-08,
+          -4.568701604753927e-09,
+          0.9999999999999999,
+          -0.9199998323619367
+        ],
+        [
+          -0.9988881509848234,
+          0.04714299335129687,
+          1.793528173834692e-08,
+          0.9212998968050303
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hand_radius_m": {
+        "l": 0.18057281248899942,
+        "r": 0.18057281248899953
+      },
+      "objects": {
+        "cup": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_green_tall/asset.usda",
+          "sha256": "e564fdbc4a77b9ccc9e0f899699fb95bd1f7dbf7af173647e91cf7bdaf5e00f7",
+          "all_orientation_radius_m": 0.15044195923444548
+        },
+        "bag": {
+          "asset": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+          "sha256": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+          "all_orientation_radius_m": 0.2350203428665845
+        }
+      },
+      "simulated_hz": 240,
+      "recorded_hz": 20
+    }
+  ],
+  "successful_records": 18,
+  "frames": 11321,
+  "groups": {
+    "1-1": {
+      "count": 4,
+      "combined": {
+        "min": [
+          -0.5369484802363426,
+          -0.235020326177284,
+          -0.29593414496799664
+        ],
+        "max": [
+          0.7333367320523535,
+          0.4724280277401555,
+          0.9578234413115977
+        ],
+        "size": [
+          1.270285212288696,
+          0.7074483539174395,
+          1.2537575862795944
+        ]
+      }
+    },
+    "1-2": {
+      "count": 5,
+      "combined": {
+        "min": [
+          -0.5253914883742086,
+          -0.23502062420050787,
+          -0.457849914608786
+        ],
+        "max": [
+          0.9192697838528081,
+          0.7883432112137523,
+          0.8330905367729996
+        ],
+        "size": [
+          1.4446612722270167,
+          1.0233638354142602,
+          1.2909404513817857
+        ]
+      }
+    },
+    "1-3": {
+      "count": 5,
+      "combined": {
+        "min": [
+          -0.6020847015471975,
+          -0.235020326177284,
+          -0.31576130661724555
+        ],
+        "max": [
+          0.9168471429734982,
+          0.47242570995247973,
+          0.8702370704129284
+        ],
+        "size": [
+          1.5189318445206959,
+          0.7074460361297638,
+          1.1859983770301739
+        ]
+      }
+    },
+    "1-4": {
+      "count": 4,
+      "combined": {
+        "min": [
+          -0.6411220083028235,
+          -0.23502038578192877,
+          -0.28079804469441916
+        ],
+        "max": [
+          0.6224515475521228,
+          0.47243129554750224,
+          0.8464125439639957
+        ],
+        "size": [
+          1.2635735558549464,
+          0.707451681329431,
+          1.1272105886584147
+        ]
+      }
+    }
+  },
+  "combined": {
+    "min": [
+      -0.6411220083028235,
+      -0.23502062420050787,
+      -0.457849914608786
+    ],
+    "max": [
+      0.9192697838528081,
+      0.7883432112137523,
+      0.9578234413115977
+    ],
+    "size": [
+      1.5603917921556316,
+      1.0233638354142602,
+      1.4156733559203838
+    ]
+  },
+  "geometry_layers": {
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/scene_room_baseline.usda": "3d7e4924c41d0316b501d0643b45af4cf8e6783e928ec890fee2709904a5fb19",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/shelf_support_alignment.usda": "b2f41e2af9752a267d159381e95e35d6765624a381380af33360209189cf26b7",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/house_task73_objects_v1.usda": "d9ce91432ec205afe04e4b482c106a8da4dead6867dc3758665d110dc1b259ec",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/l1_scene/baseline_alignment.usda": "5b90d1ff01b50357afdef90dd27c2c77cccec131649fbc7d2559b716cbc70e48",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/l1_scene/fridge_recovered.usda": "9e69b3ac2250428a8ae7093b8e8ab471784ec1f25b0ba0116d32b6213020fb1d",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/kitchen_dining_objects_v1.usda": "ee251b79684686a8dc1b79093163c4e95fe4a9e7038715938abd5bf1b847d5af",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/kitchen_task75_objects_v1.usda": "4b73cd18446b7fd8849f423a4643ff077d6090af3831af5549391319d4c0d7bb",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/fridge_food_boxes_v1/scene_bindings.usda": "9f7fa500ce01d7602a786df00966402aca9353f359ab84b4a278b243def1018c",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/source/geniesim/assets/robot/G1_omnipicker/configuration/robot_physics.usd": "6e07643a33e0b5c7991fd92205687b0b4cadf73631fd90fe1e894866ee2cac92",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/coffee_v1/scene_bindings.usda": "8f43d0706cf67d755e21d40f8c2153a1348368f4d1f1a0d979a50ceaae796bb7",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/source/geniesim/assets/robot/G1_omnipicker/configuration/robot_base.usd": "2187eb6d7e88caaaf9919e624a3a176b51d11f67a87bb906794714335d1f531b",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/source/geniesim/assets/robot/G1_omnipicker/configuration/robot_sensor.usd": "df3e0cdbd9602efeef99a8e2eaa5989cf86c471f68632ec5a94caff1a2d17780",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/reference/station.usda": "ff398d0dbfd2653c04c5aeb03a992e61b8d7a66bd913fc3ff3850b068985ce35",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/shelf_support_collisions.usda": "c7f926c1eaf99a73cd85072089c65b058ff4a3c1ed1ec98aa93f25049e627c1f",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/beef_box_standard243_v1/scene_bindings.usda": "c1059823793cac54c5b5eb26905f6ef2f4e2e58114062d9ecba973ff7db0a7f1",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/house_scene_l1/approved_microwave.usda": "bf6c3940a7166820ab76ad07c16e6713d2d8eb447ba777ba2c700390d4e8c184",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/source/geniesim/assets/robot/G1_omnipicker/robot.usda": "98e42ad4028c0ea21392188b635fd11b94103a5393d3b3af497ec3d96c740347",
+    "/home/lingjun/robot_agent_arena/api-protocol/vendor/l1_scene/fridge_articulated_v1/src/full_assembly.usd": "343a08b662ce93d79cb455bca8d235a8bb9d82a5057bb0f185d5e8974ce5d782",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Join_02.usda": "99da1a5c79c25208ce3e1893c710b054ee67b5f0363c0ef351716d05f4c7606e",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/source/geniesim/assets/robot/G1_omnipicker/configuration/robot_robot.usd": "a71c9abc0b830fb9101dd955bf8003bc691a3da64a770507d0df77987d124587",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/photo_assets/pringles_green/asset.usda": "e925698edec1c43e2a10bbadb5d2acf9ee2e0551837defdeadb1708595a62818",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_B_400.usda": "9c80fc1a0804015a00d205ccd3d11227325056595dcf92f08a1a6fe4097e1f3d",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Worktop_400.usda": "a2c5e8a7e5f410b5d131fe27817094f2cac22a3fa785b1668ba0aab9cfd59369",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/photo_assets/smores_kit_box/asset.usda": "ef02e122c4e45727706dc81f631c959ac01142ed552d81dcf9e44bc18e1916f2",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/right_sink_arm_v1_range_silver_tapleft_all_handles_candidate.usda": "0fe175c949159b11bb67f82f2b144b58a9d9f5b0404cb82c65ded9964e2df1bb",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/right_sink_arm_v1_range_silver_tapleft_vertical_handles_candidate.usda": "a9107147671a27bc60f2787f4b0afcb704b22fd517f5cf53d06041a0b677353a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/right_sink_arm_exact_candidate.usda": "2ad2f243fc16528bb9cacb02eaa4a0253c31111af1a0aaa34d53b6b3b619db3a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/right_sink_arm_v1_charcoal_warmwhite_filled_right_candidate.usda": "bf9aecf49227d5839d2bb2c0561ee27c62c95ee35fc42062a5c433910b103593",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_T_800.usda": "2b475d4b7e06e1c843311c962893b72585cbf37eb68f314e2bfc5adc402a8754",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_Door_300_G_V2.usda": "0594481e37c440ccf06d8e405a8c8eb5a06ce08587bb48860112459786ab1e3e",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/right_sink_arm_v1_range_silver_tapleft_candidate.usda": "3fe5a45dabe31751ad0fbc4183b5f42a178f9389988fbf539dde24ae69c1854a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/right_sink_arm_v1_charcoal_warmwhite_filled_right_range_candidate.usda": "4a10a3f8ae6cb29c54c6b0589fb23ff16153d0c97c21ae49f9e49f337e922d84",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/right_sink_arm_v1_charcoal_warmwhite_interior_candidate.usda": "8a37aa85b6cbebfff2aa833e61c8064bf0dd1322d17e593450e3a20d017f9df7",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/right_sink_arm_v1_charcoal_darkwood_candidate.usda": "ff765e481bbbcb4279a00e9bf79e083fe1bd17a44d9607058fa18464c96d9e7f",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/right_sink_arm_v1_blackwarm_darktop_candidate.usda": "41aa0eb3071c5d21702d1f8f095a99caf04889551c9412c5ee2254b4f11436d9",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Join_01.usda": "9aab289225f758813a022287b354cc84ab2ea6f1579541a43effe0d35c70a53d",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/fridge_food_boxes_v1/saladbox.usda": "b63e2154e79b2d180bf3fa7feccd2760908cda7113bb33f2c794254b36589b99",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/bags/chomps_beef_pouch/asset.usda": "116338c583f5ff0195c4c398ba3a8c9d86be5baf58330b3441a3e0ceafd6f7c3",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Box_In_400_03.usda": "19f99ac87a99957dcf7bb2803cd9fd7ef1b9149f2c0fb4097620ee44cbe872e5",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/5_tier_industrial_shelving_unit.usdz": "0c2b794680917090775769d18de51548adacc4f7b25839431a6a5c9b5fe84699",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/shelf_tiers_adjusted_w120.usda": "92f184cb933cb8d61088265cbefa8907fef0aeffca3d365bf4e76938a567d990",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/assets_living_room/trash_bin/Aligned_bag_red.usd": "4b6502fa6b155b70c396f50dc96c7e315cc52914348f29f375dec8c0ad48674a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/assets_living_room/trash_bin/trash_cans_raw.usd": "2eb31bf0ef0760f65b81c766a6a33498785ff9acd469a87dfc7c91cf1b187a11",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/tv_livingroom.usdz": "9dd78cc706ca7f45e893e3e84888e10336eaf1eafe67e7d9d4718260fb1ebb0d",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/cans/grapefruit_sparkling/asset.usda": "f76f88f049c590ca5a56a9261f389e27d55cf1e066c5c2125e7d0804a943cf53",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/constructor_kitchen_static_phys.usda": "b5e63b620b109a91075700a06f79eefb77ff82ab43c1a575d611c2f3258203c8",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_T_Corner_01.usda": "d33beeffb1a2c0f9ed105947cae76c9eeab33288e7ad7a4165171852adfca683",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Shelf_T_Corner_01.usda": "5dba627815db6e130067e8c4b1b84ffeb97eb4e2e01b02c35c0c38976d2f8922",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/sofa_4seat.usdz": "c9194640111d023f9a5186de5258fed5f526b4d534539b6fd9f092e254368dc9",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Shelf_800_Grid_01.usda": "47de2b8ba4f3d8d10cf8b2865357c8e653fefd5ab13d99f4a63d0b23957a99b2",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/constructor_kitchen_clean_meter.usda": "acd81c9fa9e9ab14f59becbf98c976b4066c1d22277c3ec334a1db7137071daf",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Shelf_400_300.usda": "f0509badae572db0f29623c9562609096a9ae7bc2259ba32f8cc7f1f9fe7f899",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/cans/coke_usa_fifa/asset.usda": "5495d740d192e1cad5fe39b99565572c7099faefa6fb34a9ef17548cc0009568",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_B_Sink_800.usda": "d776d6399f01cb57406388910be0a6f4aa806f2e8ef52a9db7fa11a23ec4a479",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Sink_01.usda": "79f57b0b92d6112f51438c952fb6d79bc5b557f208ac6dec71f808883e537915",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/fireplace_aligned.usda": "4422150057d905a7e40c45d07296ac82d1c6f49a4243350b998ba8081de18e7e",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/fireplace.usdz": "05aad31a2f1c66aa10774fd45a8ab5524b45952b4f07f1bf2f5aedb9f95ea72d",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/bottles/good2grow_strawberry_kiwi/asset.usda": "38240975da35f91512aa6cf81c06ee10bb6ed794d2f69b933afe9a84a5efed62",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/house_task_assets/recovered/power_bank_v1.usda": "47f800abe7452c72ebbfac5a8f55653e8a354e780f2ca2f0bbfa98168408f7d6",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/fab_range_oven_v1/fab_range_oven_v1.usda": "c37bc1c14b65e8a94a12819ed518fcc1fb88701872b3e14db361cfa83e303215",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_T_400.usda": "0d7037e56cae6395fb3cda5654e3b0391eec3d6e0c41c8d33123739450ded473",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/door_style_preview_assets/SM_K_Door_150_V1.usda": "a01661b0f1e4dd8328c79bc4850463600f6a980e9c6fe4bd9b9a28ddb2eae584",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/bags/lindt_lindor_milk/asset.usda": "c3c8aed5a2ffc2cbf2c81e7b9faff3851e9015ff61439b57bdff400ba6462ade",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_Door_150_V2.usda": "30bad5d93ff38d9d1c332179ee7f858eb0c2bfc54bf9838c310cd6d535d3e940",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/white_door_closed.usda": "2b4ed54a071f3cae99c0842aafb27f2980454e5d6b72a537707975b833fae454",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/white_door.usdz": "662c5aac0a0ddbb67d34d0585fdd473b29532020b689a6a3cb17c3ad05e5aa0a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Tap_01.usda": "affc179fa7fc47a733c01a4b9958fd9c8559f136701039f3069627b39e585d22",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_Door_400_V2_Glass.usda": "e618159e7f7c6515d1feb667ef5d9bc8931589f1b34011b209cab512bcabbad2",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_Door_600_G_V2.usda": "5d6d3bfdf9672fbd663608353fa37477a2cb1d0195634b6a41cd1a1c09d1bb1d",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/assets_living_room/coffee_table/Aligned.usd": "c1ae4e4add52e6f20078e5e2a5f20c2e7f6ab7f2d85b3d4853addadeaa93571c",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Demo.usda": "79319bace61d85eda0846acd3d0fee023b3f379fdda64b70e932bc0d6d7749bb",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/assets_living_room/black_box/Aligned.usd": "872b66c22a3cb57e14360b7d3707ea7fa4384bda7aca265ab1f002ed96bad0ad",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/cans/starbucks_espresso_light/asset.usda": "06838020a2c959994838adf296c4602bcfbd468071fbd293685fc8dd4f9e59c6",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_T_600.usda": "788b465e4cc0ce46c2c71bcdde088c683b95c4d7dbd83a7e4c174fe3faffccec",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Shelf_600_300.usda": "6e0de80717bec7c4a09aab07d0f27b8c8384accddef107d37a59c825f8a2ff35",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/source/geniesim/assets/robot/G1_omnipicker/configuration/Cam.usd": "0ccb700998f7994cf5cf3ddf6dde0d18a1266313e6b64be327b1d9d050dde039",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_B_Corner_01.usda": "cc438c23e8aa74729d5d0b695f36411b29bf46b6c8b2823da77c1b77b2a521c3",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Worktop_Corne_01.usda": "ad830c42e7372f601cca2e9ed4b4460ad91b9cf813f436fdfa61823fa6446f11",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Shelf_B_Corner_01.usda": "c283b603fd90ea698d0017a95519bff4601b70d476f996a3561211f3588cf2a1",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/room_shell_v2.usda": "90dbb89f24e7c8fab959eacb69a3d5a46a470f037bd2461d8c5fea4480d2df1f",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_Door_400_250_G_V2.usda": "22a3488e96fad0256cf44c75872050449ec831348a2daf4c5b26464add935263",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/assets_living_room/small_coffee_table/Aligned.usd": "b01ce8f564b557f498ca8dcd43879b1c5f10b6f63f05f613941129d8ad7dfac8",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Decor_600.usda": "0f38267991d690e646375f51aad8cf24c311d5ce2b83788b44fdfb5fd8360f33",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_Door_Oven__V2.usda": "00bd13d6161e290f5880c9e5f4630761bf1605a9d01a679aff60df8afc6ebf5a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/tubes/pringles_bbq/asset.usda": "4e3cd4a2b5818ee9bf31d5d45512623ff0c5552a0e70324e8c6d316d24d46108",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_Door_400_100_G_V2.usda": "006d221ddb153f13fbca35d2cd9209731bc7e6cb2a42de414cd1597bd599a667",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Knob_02.usda": "e287008bdf32f8457e6583894953b67cefc441102b098acda590a2cd8ac55305",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/door_style_preview_assets/SM_K_Door_400_V1.usda": "a1169218cada832302ec893e6a596d995c03f537555cc0566be1a7cbab30c7ea",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/bags/oreo_gf_pack/asset.usda": "c7388eacaf6138a25f9c42f99910a5a94cfa61d3f9d29afe8dae2fb9f4016a5d",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Decor_Corner_01.usda": "e06ec1182d939a458561bc2253769dc051c0f1acf576467c4e29a148d195551e",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/livingroom_user_decor/paintings/wall_frames/converted/dkg_Wall_Frames_16a_fbx.usd": "43a65e448b5031dbc552cc78f5178f8bef5a387cee4b5b529aee25c6a33f228b",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_B_300.usda": "19b90b80e7e2c349595fc7fea4d57ee9f41b442242c1a2e74b6e71afc48a5e9f",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/wall_clock.usdz": "5fc4bd381ef20ceaf407ea23143c222a9dd974d4dd03bb702a66f1a63783eb24",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Box_In_300.usda": "7d2ea01c3035c0a30360e1d834295a96879430f312e64c16e3354b0af12fa539",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/small_wood_table.usdz": "493a59a918c56bfe8b6371b09581503bed598a984a722129653843e595608caa",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/constructor_kitchen_preview.usda": "a4adb38f20f0955dc8513a51a2d47806463acf277301af3397a125520bf68d6e",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_T_150.usda": "05d67581ac764ff5028d277c0b9a6dcbde9ebee5629c016e1e5872f0ca60c4e3",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Shelf_150_300.usda": "b16c43cefb02c650545257863c0ff275ff8293b72bac50495a2a9259949a236e",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/boxes/honey_maid_handi_snacks/asset.usda": "8307b2ea37151555e9081fc157f04965028c50a357b5e44d25af0a4fc5d1f6c4",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_B_600.usda": "f426b3de768223012b2cbc3dbef1cd606762ee58374b58ae7c8383289c01fc40",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Stove_01.usda": "174933749a9af8521ede7621d9e7c750b35afa376d3a148be6874bbc30221acb",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Oven_01.usda": "5e7e2ea4ae39277cf43948e90fae036daef272f379756b652fd3f8e11345d078",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Oven_01_Door.usda": "abee343c4fd18997021da7752a1643bdd3162f219729da425d042eb480988534",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/soda_can_355ml/variants/sprite/sprite.usda": "3bb4a1a15e49384fbcb3a33e75785d3c0e05b6cb9cf20a2b2ebf9211b5eb511b",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/beef_box_standard243_v1/beefbox_standard243_v1.usda": "8d0b53928067ff0622c3c1961a5a20d310f3d79ea9d20c3fc4888a67b2cdb314",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/tablecloth_basket/tablecloth_basket.usda": "fe23be617be447225bd39a0da26a364d3258a00b0d7aaff19d8d0456f38deb79",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/tablecloth_basket/indian_towel_basket.usdz": "ef6a597e3d55b7fe92d5e83816c9c92e91aea3a38ad3f04a509bb6558dbda7a7",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/door_style_preview_assets/SM_K_Door_400_V1_Glass.usda": "39f4142b32ac1865233f8fca58432852a14c5cdf8e9e3e500d89319c7f4e6201",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/cans/cayman_jacked_margarita/asset.usda": "4fbc9ded14450d75c794f61208e33353b2a8335b9244bd29aeb4faeb2c6427aa",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/bottles/gatorade_orange/asset.usda": "acf35b4c7558250625efd370603b455c83ccc9856471a3e3e976dc26946e529a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Decor_800.usda": "f7397716a0036f9112c98f9a91b19c02b0a9d692729caaf649817fb679081898",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/tv_table.usdz": "39903ff5c2cc90cd42d4410af51156e182745bab7bd2451ec5377fe7cac408ad",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/assets_living_room/small_coffee_table/sct_raw.usd": "5b5ecf2e191dc3428df2cc80f4c2b9ab075679f553f065148946ddfec8a80fe1",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Decor_150.usda": "f784ed46d0879897ab5615106eb9d3fd3b89360d0f6fc6f128acb420a4cb12f7",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Worktop_Sink.usda": "780cb6304ca70b4a9a49a6d6af776c0c39506a15f69286a62dd6d26d8f655d93",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Worktop_600.usda": "b7612e998d816c2a33700a6403fa10f3ccbd78eec2b3519dfaa97de2c11a33d1",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/livingroom_user_decor/plants/plants_collection_for_archviz_20_models.usdz": "15c795d9cc62d6ad721980b296c2d58357eebbb1d413378aa5cb162338c066ef",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/constructor_kitchen_original_blackwhite_candidate.usda": "28485da8f67299ddeae82179c4622d4984a54ab30da53ab34d2f7727a3bfa136",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_Door_400_G_V2.usda": "4ebcfb4afd760174dcf7361fb66831b6fb22d1e73eedd4313d6fcf92c84a761c",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/constructor_kitchen_final_v1/door_style_preview_assets/SM_K_Door_300_V1.usda": "83158e83a1b93c2fdfeb7e316db27ab201b12257c39d31e51918ec7494a2099d",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_Door_300_V2.usda": "b767879fe30a7d21cc3ed156c4081dd59233384b6ad08f89767bee474b591cab",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/photo_assets/cacao_bag/asset.usda": "5566e575cfa60cf45c849f91622e6a75bda0830e1e973fec94f6590cc98d8f4b",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/beef_box_standard243_v1/beefbox.usda": "d1f612cca6bde9f6bb91fea98cc685e79475ff1d88564b4c247b5afba86271f3",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/assets_living_room/coffee_table/geom.usd": "6426d4c18d3309e7ca00c21e0839fe7d82296b116a80f18be827a0579ab1f2fb",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Decor_400.usda": "73db5121eda285c3690c2d5a64953314ba6c50284c4c4fa4d130a1527aa51ad9",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/fridge_food_boxes_v1/foodbox.usda": "b2d028a9a268c700e3446246cfa6a2d5b5538decffec4a59a48192f5055bcbc7",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_Door_400_V2.usda": "b5b59004ea6262b7bdbdaffaf4fa273b4357ae615572f11fec28b6504d23b46b",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/coat_rack/coat_rack.usda": "3fc62e92f593e3fa5b34b8e9760bad861065210d1c71a469b788dc6b9dc15779",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Worktop_150.usda": "b451d7e454dd983ecd8a3b57172a697e307ddce550882669e6a9f71578416027",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Shelf_800_Grid_02.usda": "1783c9f6520fb4842d50a9d403dbce44cde3c78a813400c893d235d9a4ca0f53",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/bags/skittles_share/asset.usda": "f02f2d91e3dbf0ad24c3afcf16086cccab8a57c957b826dafe05de9b5d18a052",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/assets_living_room/black_box/box_glb.usdz": "65fdb2e9452672e86d836ffbb9c14739738a2a6da7a0aa89dcb4578b0344441b",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/coffee_v1/cluster.usda": "d57f24d333638a93db461a92096e0300c3c65e9ef4370af5ed9a1eed29f9b0a5",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Box_In_150.usda": "155f61181e3ecc800aa4e3503fd6207c174936d79787bed7a137a312f3d50652",
+    "/home/lingjun/robot_agent_arena/api-protocol/vendor/l1_scene/fridge_articulated_v1/fridge.usda": "be32c81f71e1889c9d47d8e6948bcabc4075338a98c40844191e7bba0641cf4a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Shelf_300_300.usda": "a1835bb4965b0e231db9878bc43f55e943e10d64deea9266eaa44425e86685e9",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/photo_assets/zbar_box/asset.usda": "0eb20c5ea27abb33a8b7e19cc428fd4554817ed6339363f3d9d745b903699024",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Decor_300.usda": "6f4f5596a8cc97a00897f207d178dc96f95153ac9f683393738fd95807386c01",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/assets_living_room/trash_bin/Aligned_bag_teal.usd": "0f30d4bea4aa17baf3c0b495a886c6f475696e38fbc0047cc8e5389b15dab36d",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/fridge_articulated_v1/fridge.usda": "ec46bdfc804341dfbb9eabf05e9db08da44f7651c6df896bbe91f63a0cfa7a95",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Worktop_300.usda": "7ec0b85b5d68c67bc0ff3f21f654057cb9952fa8e5d2079556764d0e7ad09275",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/bottles/gatorade_zero_blue/asset.usda": "378a69015bf93acfd9a7b893ec6c7a65e8fbe5b048147fb9e7375abf4aafb021",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/boxes/clif_zbar_protein/asset.usda": "54e15a45690593fa1af44313eb0af78e336dde01b3593b49aeba8f9308f72198",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/cans/diet_coke_fifa/asset.usda": "60740c0fb259d203a98e703ba12b866b8c8393c2d2ae1deec23169cfa177550d",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Box_In_600_Ovel.usda": "cc837d53720b6e2d80579a022c67abc0dbd4309144a5888f72c0e382cd1adeea",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_B_150.usda": "3194b4d7679b345cfa53fc9f73a8fb3cc31a2e50d4011519fb25768c3002f991",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/cans/red_bull_pink_slim/asset.usda": "c4af8638bf06daf8e443ee542ddb46e558974725f39c681a05d4fdeb6db7126a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_Shelf_800_300.usda": "1598e046ba19152f76988dd5b7b7461d5fadeb48a477f2796c27a1425471be8f",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/photo_assets/redbull_pink_box/asset.usda": "0cda5b46dd6fe842643d79bced357fb5c4bead1bf0ce2b8c0d57ee4cef63405c",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/photo_assets/sprite_mini_box/asset.usda": "765476edd08a9e265ca83e9502e57d3a6caccb0b94321a9ea08f22267521858a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/l2_imports/constructor_kitchen_room_v1/source/Assets/SM_K_T_300.usda": "3becff35ab59647e41813b5d960e595c208754d89bcce0d3454a3f500db75c19",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/newcans/bags/skittles_littles/asset.usda": "49ee7c18b4bca4d5b640d6c5b0e5e134619ccdc2269fb9eade01055f247f77ca"
+  },
+  "initial_fk_max_matrix_error": 7.784413478860073e-07,
+  "geometry_mode": "current public geometry with historical measured joints; not recovered historical full scene",
+  "limitations": [
+    "20 selected public API replays; successful completed segments form the default envelope; failed attempts retained separately.",
+    "All 20 Hz recorded control frames, not 240 Hz substeps or continuous collision sweeps.",
+    "Historical frozen scene paths are no longer available. Current public robot geometry is used with measured joints and source station. This is a design envelope, not exact historic mesh reconstruction.",
+    "Hand articulation is enclosed by joint-chain spheres. Cup and bag orientations are not recorded; measured centers use all-orientation asset spheres.",
+    "Bean and liquid particle positions are not in these logs and are excluded; spill clearance is not certified.",
+    "Fixed source base, no recorded navigation; four independently initialized tasks, not a continuous workflow.",
+    "No target-layout collision, support, reachability or physical replay validation; no added safety margin."
+  ]
+}

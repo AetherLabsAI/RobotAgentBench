@@ -1,0 +1,95 @@
+{
+  "rule_version": "openend.short_task.bake_bread.manipulation.v2",
+  "scope": "Existing 5+3+4 mechanical stages; first opening distributes its two points every 2 cm; no heating stage",
+  "files_sha256": {
+    "openend/tasks/scores.py": "ca4d61dda84422ae8dc0ca9bf91f49de0dfd301b0cacd69de4d38be0a8f77e07",
+    "openend/tasks/fryer_reader.py": "fb41973012c5d91957e0ecfe08e11c06ccaa0109627d17f939cf84116f54e066",
+    "evaluation/tasks/air_fryer/continuous_openended_v1/composite.py": "129db505759f26f2de9cc408e00245b2ad014e012ddee7371940b65dad35d9f4",
+    "evaluation/tasks/air_fryer/continuous_openended_v1/native.py": "5884c5b6ec2f231e60383ecddc99dc7dd15e69bcc9ddab2b16d0d5b343e90ca2",
+    "evaluation/tasks/air_fryer/process_rules.py": "ee9326540ef5637aec57fa354c6786830f3b40883cd0978f366305ceb705b5b3",
+    "evaluation/tasks/air_fryer/isaac_evidence.py": "2f94c8c6a2a5478ba142876dff9537ed94b43dcef9c458bf7d694aa297e198b1",
+    "openend/room.py": "ab98899c634002c339525b06fb9a1c91f52dfcd15525f8932cf152c7b7f34e03",
+    "openend/tasks/holding_follow_v1/detection.py": "11df2be850fe9c815c4b185d69bddcab47b03ca5109661eff81b5356ff8a54c6",
+    "openend/tasks/holding_follow_v1/fryer.py": "4bc8da9aa3295000c1b1b2eabd9eaf91046134aa98096dc277465cc4c356cf7b",
+    "short_tasks/tasks/interaction_progress_v1/__init__.py": "e227495daccffb435cd7c8edaf8fee2fb5d3788b533f587f28b751d7c7a9535f",
+    "short_tasks/tasks/interaction_progress_v1/scoring.py": "f31090a61d27adbc1d90efefacfec0fb00046621fc1cea90ebe7e004ecc9b29d",
+    "short_tasks/tasks/interaction_progress_v1/policy.py": "d6adb74ab7db6760480155eb6aaefd7f6b5de85501599a063bda72621265e237",
+    "short_tasks/tasks/interaction_progress_v1/bindings.py": "6c023d2560d68a05e660ec8690effd9f7750d49a8f385ba66f79dba626992f54",
+    "short_tasks/tasks/interaction_progress_v1/geometry.py": "4f4c454755831fd21c7d095efc6abb37ed06089b697e4235710dd358c0f89f03",
+    "short_tasks/tasks/interaction_progress_v1/contact.py": "d57f3eb9b6ecd2ba4da8e6ab864ff7e8bc8525e5269fb9ceb74750eef254a13d",
+    "short_tasks/tasks/interaction_progress_v1/native.py": "d448cc25c03cface7a0bed118fbb7a8072bf9caf864bb87a79f2a631fc055ebf",
+    "short_tasks/runtime.py": "edc288e06230a592a5bb0fd232727d8e377e4b52d9cf75e9028596a886764a3c",
+    "short_tasks/registry.py": "62bee79678f22b9b77cde9ff62dbd26cc8177346d41f31630e225ce5b86d2763",
+    "short_tasks/common/episode.py": "36b9c47865130a3d9ba3be1c0aebf33bc763fdb74863d5b099d099699f2f3030",
+    "short_tasks/tasks/no_deductions_v1/__init__.py": "4d369002d0423d256d835b9ab6eb2b93bc2ca2d0f6b6f95d76129fdbb58b50a6",
+    "short_tasks/tasks/no_deductions_v1/policy.py": "e3cc393f3d4bb4d6b376dd6c4edac90fdc14e9252bd0f02ad0c7fef56bb1be86",
+    "short_tasks/common/result.schema.json": "7a0ff76e78fd1483a300fb87ff0bb090c83f6eafd4aed5e7cc9052ebc5953be4",
+    "short_tasks/tasks/navigation_progress_v1/__init__.py": "8d92bda5fc390ecca30d82f7e96194bde0cef2078375349f73ef6bfc8d733169",
+    "short_tasks/tasks/navigation_progress_v1/rules.py": "cf8ea721b9095808bffe4aef3fe39cff33e5c5d113dc6d810306524c1a9c7d7d",
+    "arena_api/robot_drive_defaults.py": "1adb35f0f422d4dc6b0a9be43d786a46ef8d91dd9b3e38bc72e4161615733fe6",
+    "short_tasks/agent_probe_v1/robot_parameter_alignment.py": "224a176df609253478264de51e5506bfe8fce8733d16c75c50d96e08824b697c",
+    "short_tasks/agent_probe_v1/native_owner.py": "c4f8c6f812fde94c29234e7b859863cb5190aa19455d1cd9d19e16f4c11281f1",
+    "short_tasks/tasks/bake_bread/adapter.py": "406389bbd8eec3e568b016dbf249963f6e1d4130ea6b18f587cc6fa0f9854c14",
+    "short_tasks/tasks/bake_bread/evaluator.py": "2b5d3a90d72404be2054c22a83d3cc78e56e46c9d36f563f2a0062f64d142151",
+    "short_tasks/tasks/bake_bread/opening_progress.py": "70bdadcee10b00ee93a7339c112609ff360ee1a21b365ea7baf76b83e3e7ef83",
+    "short_tasks/tasks/bake_bread/native_port.py": "61613e020fd39246d2736f69e82bc0c5502c81ef812472517f07e3ddec4952f9"
+  },
+  "interaction_progress": {
+    "version": "short_tasks.interaction_progress.v2",
+    "approach": 0.5,
+    "touch": 1.0,
+    "once_per_operation_target": true,
+    "success_unchanged": true,
+    "approach_tiers": [
+      {
+        "distance_m": 0.3,
+        "points": 0.1
+      },
+      {
+        "distance_m": 0.2,
+        "points": 0.2
+      },
+      {
+        "distance_m": 0.1,
+        "points": 0.2
+      }
+    ],
+    "initially_satisfied_tiers": "skipped_without_credit",
+    "public_maximum_unchanged": true
+  },
+  "deduction_policy": {
+    "version": "short_tasks.no_deductions.v1",
+    "enabled": false,
+    "final_state_revocation_preserved": true,
+    "success_unchanged": true,
+    "component_details": "legacy_diagnostic_only"
+  },
+  "scoring_notes": "Public scores are gross process plus current final, including interaction rewards; no punitive deductions. Component details are diagnostic only. Success, maxima and final-state revocation are unchanged.",
+  "navigation_progress": {
+    "version": "short_tasks.navigation_progress.v1",
+    "enabled": false,
+    "spacing_m": 0.2,
+    "points_per_segment": 0.2,
+    "operation_timeout_s": 60,
+    "navigation_timeout_s": 120,
+    "success_unchanged": true,
+    "route_budget": "bound_at_activation",
+    "stage_change_resets_clock": false
+  },
+  "opening_progress": {
+    "version": "short_tasks.bake_bread.first_opening_2cm_v1",
+    "thresholds_m": [
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1
+    ],
+    "points_each": 0.4,
+    "maximum_points": 2.0,
+    "first_insert_phase_only": true,
+    "success_unchanged": true,
+    "public_maximum_unchanged": true,
+    "timeout_parameters_unchanged": true
+  }
+}

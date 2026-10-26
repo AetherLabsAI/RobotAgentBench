@@ -1,0 +1,13 @@
+{
+  "schema": "short_tasks.clear_tablecloth.approved_station.v1",
+  "nominal_edge_gap_m": 0.569300004013116,
+  "nominal_robot_right_offset_m": 0.0788435808581385,
+  "annulus_m": [0.04, 0.058],
+  "yaw_half_width_deg": 5.0,
+  "yaw_min_abs_deg": 0.5,
+  "arm_half_width_deg": 5.0,
+  "observed_edge_gap_m_not_an_additional_clip": [0.514, 0.616],
+  "initialization_owner": "unified scene for targets; task sampler for robot",
+  "source_sampling": "tidy_table_v2.initial_state_draw.v1",
+  "native_physics_validated": false
+}

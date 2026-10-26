@@ -1,0 +1,350 @@
+{
+  "schema": "microwave_put.api20_cases.v1",
+  "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info",
+  "sample_policy": "All 20 distinct source episodes; no retries or substitutions",
+  "physics_hz": 240,
+  "control_hz": 20,
+  "requested_backend": "CPU",
+  "cases": {
+    "episode_000000": {
+      "source_episode": "grasp20_beef_004507",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000000",
+      "controls": 3382,
+      "duration_s": 169.1,
+      "source_recording": {
+        "control_frames": 10146,
+        "duration_s": 169.1,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "03305fc581c4a537fb13739d1a8e5783068ef6431a1fa1e2e1a7b57cee33c3d0",
+      "source_scene_sha256": "395e63d5ee2303f37bd47b9688d0f6e015610e1e0cee9a0c5240fb1df6ae90ec",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000001": {
+      "source_episode": "grasp20_beef_004585",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000001",
+      "controls": 3463,
+      "duration_s": 173.15,
+      "source_recording": {
+        "control_frames": 10389,
+        "duration_s": 173.15,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "855b2d3f529f7a3aa2d3646890d0d206faa040775d71eff72c0b30a1d0f73a54",
+      "source_scene_sha256": "782420dbb432a094f8b1364ac2911f33c12e47fcb7d8e20be2a9642890911c60",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000002": {
+      "source_episode": "grasp20_beef_004613",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000002",
+      "controls": 3321,
+      "duration_s": 166.05,
+      "source_recording": {
+        "control_frames": 9963,
+        "duration_s": 166.05,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "ecb0a97cea845c3954cf82ab2119cc8d050543a89e114840e5bc100a90586168",
+      "source_scene_sha256": "c348f59cbda456f8652a657298264ebf4dec1d69cb6c5f96fe5ca5b88d674db4",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000003": {
+      "source_episode": "grasp20_beef_004631",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000003",
+      "controls": 3195,
+      "duration_s": 159.75,
+      "source_recording": {
+        "control_frames": 9585,
+        "duration_s": 159.75,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "8a77331d849b1163dcdd0c8e50c11a5a06d4845fe78b8b26e7bab47682c20520",
+      "source_scene_sha256": "99366a3010b778697c825479dd9b8891a408d10cdf97cf438f7f34e7d5edefb3",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000004": {
+      "source_episode": "grasp20_beef_004647",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000004",
+      "controls": 3221,
+      "duration_s": 161.05,
+      "source_recording": {
+        "control_frames": 9663,
+        "duration_s": 161.05,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "20d9df5758170434e87cb64809a63e26cab48dfc9dc58e626d890f440888bda3",
+      "source_scene_sha256": "bb819807db5b6ff2a225cebf5f09de617a377c078fd989d9dca5a9eb3a2195bc",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000005": {
+      "source_episode": "grasp20_beef_004665",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000005",
+      "controls": 3527,
+      "duration_s": 176.35,
+      "source_recording": {
+        "control_frames": 10581,
+        "duration_s": 176.35,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "3de7ec79469bffe402de59cc8cc904b22634d5f207bca5d633e17b88ca6a6836",
+      "source_scene_sha256": "4207751787ab5cd0ea5177f82f3dcf52c5299cdbc7476df760c57591d625cab4",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000006": {
+      "source_episode": "grasp20_beef_004677",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000006",
+      "controls": 3326,
+      "duration_s": 166.3,
+      "source_recording": {
+        "control_frames": 9978,
+        "duration_s": 166.3,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "99177cbbe570ef9ae5d4c902619f187edd9290a83ef55a69cf62cce0973c183d",
+      "source_scene_sha256": "f99f3c87a00992392ee31094065a8d798d8652c6604d9324b29258faa8ef913d",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000007": {
+      "source_episode": "grasp20_beef_004715",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000007",
+      "controls": 3227,
+      "duration_s": 161.35,
+      "source_recording": {
+        "control_frames": 9681,
+        "duration_s": 161.35,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "573ecd2d637b883ca13b0b0a065611411474e2f15ee53a2732a053d943c97eaa",
+      "source_scene_sha256": "c69142bfa1860fad9895e4fe3b2812bb42ce633226bb2d8512cd6669fe9eacee",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000008": {
+      "source_episode": "grasp20_beef_004721",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000008",
+      "controls": 3209,
+      "duration_s": 160.45,
+      "source_recording": {
+        "control_frames": 9627,
+        "duration_s": 160.45,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "0f9af944a6e052c5b4ccc20088f581ee258e97d36ea75df81ebacd3cee49b137",
+      "source_scene_sha256": "c76e46a04aaccb361269d71712489128ee84edb72a7c2d5fd3276ee7ee4ffe0f",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000009": {
+      "source_episode": "grasp20_beef_004793",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000009",
+      "controls": 3481,
+      "duration_s": 174.05,
+      "source_recording": {
+        "control_frames": 10443,
+        "duration_s": 174.05,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "8a6285171ec0fb518b6a351621a5e13c5a65af92538e84c9043cbbb8f49c8fa2",
+      "source_scene_sha256": "67178d6e4ed397f5151616af6b952bed7f2f5f9de432a1e5ca01c7b3d3dcd253",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000010": {
+      "source_episode": "grasp20_beef_004806",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000010",
+      "controls": 3106,
+      "duration_s": 155.3,
+      "source_recording": {
+        "control_frames": 9318,
+        "duration_s": 155.3,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "dd8aaa754c108868bb99b87c9f0178a5c3750c7f5e99f79e1636e65963ac6b54",
+      "source_scene_sha256": "984a6c768492dac85d75766f4187de003ba6fe37ccec19f395d30551d1b2d58d",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000011": {
+      "source_episode": "grasp20_beef_004815",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000011",
+      "controls": 3421,
+      "duration_s": 171.05,
+      "source_recording": {
+        "control_frames": 10263,
+        "duration_s": 171.05,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "69452011fef22ca4a1afe7a597d917e3a2de9d4cc5ce6d67b63f4559b5d94f05",
+      "source_scene_sha256": "bcf16d6f35b6dcbdaa823b49cdf600e5778da5e2808b3182d81d69ae376a004d",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000012": {
+      "source_episode": "grasp20_beef_004818",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000012",
+      "controls": 3240,
+      "duration_s": 162.0,
+      "source_recording": {
+        "control_frames": 9720,
+        "duration_s": 162.0,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "dee7e0667b0e512de369b264d1ad5b49625ea838ccbc4f7b56d2516e44b3574d",
+      "source_scene_sha256": "fc83d8accd97ae74c7b31591ba62181f05db89b4c5ee0c28373f9e584e709b5a",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000013": {
+      "source_episode": "grasp20_beef_004838",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000013",
+      "controls": 3241,
+      "duration_s": 162.05,
+      "source_recording": {
+        "control_frames": 9723,
+        "duration_s": 162.05,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "bdc6f6737dc7b6c51b57f9b193a651632a6a26cdc8b81955d476f143027383b5",
+      "source_scene_sha256": "4763daa8a1778ce7fefbf251ac5dd1aabaa8b264a596f734ebb110c353990cea",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000014": {
+      "source_episode": "grasp20_beef_004851",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000014",
+      "controls": 3176,
+      "duration_s": 158.8,
+      "source_recording": {
+        "control_frames": 9528,
+        "duration_s": 158.8,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "9040029711d59ef31440bbb173407cc8346ab1ad4526b68a073d4fd9d3f88d10",
+      "source_scene_sha256": "8c8d4c0bfe33561f182e7ec88ceeebb61f28544ec21a3654da70e32e370f04f7",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000015": {
+      "source_episode": "grasp20_beef_004846",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000015",
+      "controls": 3292,
+      "duration_s": 164.6,
+      "source_recording": {
+        "control_frames": 9876,
+        "duration_s": 164.6,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "a052132384f72809d222f1cb9a24b22c3b9993f7aaf451da58b98b78bffe13c3",
+      "source_scene_sha256": "8e109a53e14337cd0de8397d3f99f23c3b2f9309c0a0565091714f3984ece9ee",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000016": {
+      "source_episode": "grasp20_beef_004878",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000016",
+      "controls": 3450,
+      "duration_s": 172.5,
+      "source_recording": {
+        "control_frames": 10350,
+        "duration_s": 172.5,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "b3cc1319b94afb74107d406d54af15899425ebf6257088a5ea7cc139307143f9",
+      "source_scene_sha256": "ea52f626a2deca9dcbe9580c3f2263cb15f8b772b265ee0e5ea732cce7ae9e7d",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000017": {
+      "source_episode": "grasp20_beef_004884",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000017",
+      "controls": 3183,
+      "duration_s": 159.15,
+      "source_recording": {
+        "control_frames": 9549,
+        "duration_s": 159.15,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "8cc62a35e29479ffc77275d854518e2f42e546fe54adb32d7da353e86e79acff",
+      "source_scene_sha256": "6b1e356953808181c96437e191b9bc44971b23f66fbed6b51a9cfd26e5325f4a",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000018": {
+      "source_episode": "grasp20_beef_004902",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000018",
+      "controls": 3402,
+      "duration_s": 170.1,
+      "source_recording": {
+        "control_frames": 10206,
+        "duration_s": 170.1,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "5a7c17535cf4a57b0b354d58651bc90839fb609ae3713da2aa1805241e6a2121",
+      "source_scene_sha256": "cd3aefa09651c303eb1d5db3caf58260ec66b593aadd520e321c11e69e6cb792",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    },
+    "episode_000019": {
+      "source_episode": "grasp20_beef_004912",
+      "source": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/microwave_beef_grasp/sim_info/episode_000019",
+      "controls": 3170,
+      "duration_s": 158.5,
+      "source_recording": {
+        "control_frames": 9510,
+        "duration_s": 158.5,
+        "native_channels": 34,
+        "command_channels": 20,
+        "resampled": false
+      },
+      "checkpoint_manifest_sha256": "5b08915c35f7976ecad8052d749761f758f38446bf1f6d8667bd3227a16dc490",
+      "source_scene_sha256": "8a42bb6022baada5d800415494df3bf369485329765b0b1e6662993d9cfb7954",
+      "asset_collision_check": "pending CPU USD audit",
+      "api_result": "not_run"
+    }
+  }
+}

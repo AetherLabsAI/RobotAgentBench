@@ -1,0 +1,2052 @@
+{
+ "4.1": {
+  "pool": 50,
+  "listed": 61,
+  "excluded_not_passed": 11,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、存放主机、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -0.0335,
+    1.662
+   ],
+   "y": [
+    -1.1209,
+    -0.0268
+   ],
+   "yaw": [
+    -179.6305,
+    179.9073
+   ],
+   "frames": [
+    351.0,
+    451.0
+   ],
+   "slot": [
+    0.0,
+    48.0
+   ]
+  },
+  "target": "GlassesCase",
+  "episodes": [
+   {
+    "label": "simple_401_o19l_001_source",
+    "run": "simple_401_o19l_001_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_401_o19l_001_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_401_o19l_001_source/episode",
+    "features": {
+     "x": 1.5977600812911987,
+     "y": -0.4745444357395172,
+     "yaw": 177.30444520353217,
+     "frames": 401,
+     "slot": 19
+    },
+    "categories": {
+     "用手": "l",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 401,
+     "station": "glasses_case_pick_4.1",
+     "support": [
+      "GlassesCase",
+      "Sofa"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_401_o32_004_source",
+    "run": "simple_401_o32_004_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_20260919_runs/simple_401_o32_004_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": 0.004222669638693333,
+     "y": -1.1014586687088013,
+     "yaw": 4.704624433775933,
+     "frames": 351,
+     "slot": 32
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "zones"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 351,
+     "station": "glasses_case_pick_4.1",
+     "support": [
+      "GlassesCase"
+     ],
+     "commit": "1b19fb0e",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_401_o48_014_source",
+    "run": "simple_401_o48_014_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_401_o48_014_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_401_o48_014_source/episode",
+    "features": {
+     "x": 1.5948841571807861,
+     "y": -0.2932210862636566,
+     "yaw": -177.89517914493095,
+     "frames": 351,
+     "slot": 48
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 351,
+     "station": "glasses_case_pick_4.1",
+     "support": [
+      "GlassesCase",
+      "Sofa"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_401_o04l_018_source",
+    "run": "simple_401_o04l_018_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_20260919_runs/simple_401_o04l_018_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": 1.5803436040878296,
+     "y": -0.40624165534973145,
+     "yaw": -178.28345609672252,
+     "frames": 451,
+     "slot": 4
+    },
+    "categories": {
+     "用手": "l",
+     "存放主机": "196",
+     "扰动布局": "zones"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 451,
+     "station": "glasses_case_pick_4.1",
+     "support": [
+      "GlassesCase"
+     ],
+     "commit": "1b19fb0e",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_401_o07l_029_source",
+    "run": "simple_401_o07l_029_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_20260919_runs/simple_401_o07l_029_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": 0.003630431368947029,
+     "y": -0.9293932914733887,
+     "yaw": 4.7053989687462945,
+     "frames": 451,
+     "slot": 7
+    },
+    "categories": {
+     "用手": "l",
+     "存放主机": "196",
+     "扰动布局": "zones"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 451,
+     "station": "glasses_case_pick_4.1",
+     "support": [
+      "GlassesCase",
+      "Sofa"
+     ],
+     "commit": "1b19fb0e",
+     "source_core": null
+    }
+   }
+  ]
+ },
+ "4.10": {
+  "pool": 50,
+  "listed": 50,
+  "excluded_not_passed": 0,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -0.9206,
+    -0.8731
+   ],
+   "y": [
+    -0.6655,
+    -0.6217
+   ],
+   "frames": [
+    1656.0,
+    1834.0
+   ]
+  },
+  "target": "Wallet",
+  "episodes": [
+   {
+    "label": "o007_a04_freezeleft4021_push10_pb63_pae7fe139_pp840005_t0",
+    "run": "o007_a04_freezeleft4021_push10_pb63_pae7fe139_pp840005_t0",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp76_410/works_rail/o007_a04_freezeleft4021_push10_pb63_pae7fe139_pp840005_t0",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp76_410/rendered/4.10_diagnostic_wp76_o007_a04_push10_pb63_pae7fe139_p_fb68d60b005b_v00/videos",
+    "features": {
+     "x": -0.9114686266597385,
+     "y": -0.6556617554411016,
+     "frames": 1776
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "canonical_house_default"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1776,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/family4-drawer-repair-20260917/sol_drawers3948/task4_10_v28_goal_screw_rzm3/capture"
+    }
+   },
+   {
+    "label": "o042_a04_freezeleft4021_pp360_pae7fe139_t0",
+    "run": "o042_a04_freezeleft4021_pp360_pae7fe139_t0",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp76_410/works_rail/o042_a04_freezeleft4021_pp360_pae7fe139_t0",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp76_410/rendered/4.10_diagnostic_wp76_o042_a04_pp360_pae7fe139_t0_f6919787fa0a_v00/videos",
+    "features": {
+     "x": -0.8852101147446448,
+     "y": -0.6217273477379248,
+     "frames": 1733
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "canonical_house_default"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1733,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/family4-drawer-repair-20260917/sol_drawers3948/task4_10_v28_goal_screw_rzm3/capture"
+    }
+   },
+   {
+    "label": "o021_a03_freezeleft4021_grip340_pp1_pae7fe139_t0",
+    "run": "o021_a03_freezeleft4021_grip340_pp1_pae7fe139_t0",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp76_410/works_rail/o021_a03_freezeleft4021_grip340_pp1_pae7fe139_t0",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp76_410/rendered/4.10_diagnostic_wp76_o021_a03_grip340_pp1_pae7fe139_t0_v00/videos",
+    "features": {
+     "x": -0.8730980571075946,
+     "y": -0.6655464890602812,
+     "frames": 1834
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "canonical_house_default"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1834,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/family4-drawer-repair-20260917/sol_drawers3948/task4_10_v28_goal_screw_rzm3/capture"
+    }
+   },
+   {
+    "label": "o000_a00_freezeleft4021_seatp4_wp53_push10_pp1_pae7fe139_t0",
+    "run": "o000_a00_freezeleft4021_seatp4_wp53_push10_pp1_pae7fe139_t0",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp76_410/works_rail/o000_a00_freezeleft4021_seatp4_wp53_push10_pp1_pae7fe139_t0",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp76_410/rendered/4.10_diagnostic_wp76_o000_a00_seatp4_wp53_push10_pp1_pae7fe139_t0_v00/videos",
+    "features": {
+     "x": -0.920618904757251,
+     "y": -0.6570090305995356,
+     "frames": 1656
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "canonical_house_default"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1656,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/family4-drawer-repair-20260917/sol_drawers3948/task4_10_v28_goal_screw_rzm3/capture"
+    }
+   },
+   {
+    "label": "o037_a00_freezeleft4021_wp53_pp2_pae7fe139_t0",
+    "run": "o037_a00_freezeleft4021_wp53_pp2_pae7fe139_t0",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp76_410/works_rail/o037_a00_freezeleft4021_wp53_pp2_pae7fe139_t0",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp76_410/rendered/4.10_diagnostic_wp76_o037_a00_wp53_pp2_pae7fe139_t0_v00/videos",
+    "features": {
+     "x": -0.8915165408436064,
+     "y": -0.6407752361487783,
+     "frames": 1660
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "canonical_house_default"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1660,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/family4-drawer-repair-20260917/sol_drawers3948/task4_10_v28_goal_screw_rzm3/capture"
+    }
+   }
+  ]
+ },
+ "4.13": {
+  "pool": 50,
+  "listed": 50,
+  "excluded_not_passed": 0,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、存放主机、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -0.1218,
+    1.7474
+   ],
+   "y": [
+    -0.8868,
+    -0.2367
+   ],
+   "yaw": [
+    -179.518,
+    184.985
+   ],
+   "frames": [
+    1451.0,
+    1651.0
+   ],
+   "slot": [
+    0.0,
+    40.0
+   ]
+  },
+  "target": "Remote",
+  "episodes": [
+   {
+    "label": "simple_413_o21_001_source",
+    "run": "simple_413_o21_001_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/l40s16_runs_archive_20260924/simple_413_o21_001_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": 1.6711294651031494,
+     "y": -0.685576319694519,
+     "yaw": 181.5698545329208,
+     "frames": 1501,
+     "slot": 21
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1501,
+     "station": "remote_control_pick_4.13",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_413_o01l_065_source",
+    "run": "simple_413_o01l_065_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_413_o01l_065_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_413_o01l_065_source/episode",
+    "features": {
+     "x": 1.7337058782577515,
+     "y": -0.28463512659072876,
+     "yaw": -174.81213742908042,
+     "frames": 1551,
+     "slot": 1
+    },
+    "categories": {
+     "用手": "l",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1551,
+     "station": "remote_control_pick_4.13",
+     "support": [
+      "Remote",
+      "Sofa"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_413_o40_001_source",
+    "run": "simple_413_o40_001_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_20260919_runs/simple_413_o40_001_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -0.06931605190038681,
+     "y": -0.8504175543785095,
+     "yaw": 1.4287680469015527,
+     "frames": 1551,
+     "slot": 40
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "zones"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1551,
+     "station": "remote_control_pick_4.13",
+     "support": [
+      "Remote",
+      "Sofa"
+     ],
+     "commit": "1b19fb0e",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_413_o00_002_source",
+    "run": "simple_413_o00_002_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_20260919_runs/simple_413_o00_002_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -0.07752726227045059,
+     "y": -0.8867922425270081,
+     "yaw": -3.814424847164589,
+     "frames": 1451,
+     "slot": 0
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1451,
+     "station": "remote_control_pick_4.13",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_413_o36_001_source",
+    "run": "simple_413_o36_001_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_413_o36_001_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_413_o36_001_source/episode",
+    "features": {
+     "x": 1.7105087041854858,
+     "y": -0.26190581917762756,
+     "yaw": -178.96944793084626,
+     "frames": 1501,
+     "slot": 36
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1501,
+     "station": "remote_control_pick_4.13",
+     "support": [
+      "Remote"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   }
+  ]
+ },
+ "4.14": {
+  "pool": 46,
+  "listed": 49,
+  "excluded_not_passed": 3,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、存放主机、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -1.0974,
+    0.086
+   ],
+   "y": [
+    -1.9327,
+    -0.643
+   ],
+   "yaw": [
+    42.0001,
+    232.8187
+   ],
+   "frames": [
+    901.0,
+    1001.0
+   ],
+   "slot": [
+    1.0,
+    48.0
+   ]
+  },
+  "target": "Remote",
+  "episodes": [
+   {
+    "label": "simple_414_o04_wp85fsr1_043_source",
+    "run": "simple_414_o04_wp85fsr1_043_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_414_o04_wp85fsr1_043_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_414_o04_wp85fsr1_043_source/episode",
+    "features": {
+     "x": -1.0862252712249756,
+     "y": -1.892059087753296,
+     "yaw": 52.07655627622036,
+     "frames": 901,
+     "slot": 4
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 901,
+     "station": "remote_control_pick_4.14",
+     "support": [
+      "Remote"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_414_o14_001_source",
+    "run": "simple_414_o14_001_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/l40s16_runs_archive_20260924/simple_414_o14_001_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": 0.05477554723620415,
+     "y": -0.6655515432357788,
+     "yaw": 232.81865299985427,
+     "frames": 901,
+     "slot": 14
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 901,
+     "station": "remote_control_pick_4.14",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_414_o48_wp85g_003_source",
+    "run": "simple_414_o48_wp85g_003_source",
+    "host": "196",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919/runs/simple_414_o48_wp85g_003_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919/runs/simple_414_o48_wp85g_003_source/episode",
+    "features": {
+     "x": -1.0312062501907349,
+     "y": -1.932666301727295,
+     "yaw": 48.04625067958005,
+     "frames": 901,
+     "slot": 48
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "grid"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 901,
+     "station": "remote_control_pick_4.14",
+     "support": [
+      "Remote"
+     ],
+     "commit": "1b19fb0e",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_414_o01_wp90c_001_source",
+    "run": "simple_414_o01_wp90c_001_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_414_o01_wp90c_001_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_414_o01_wp90c_001_source/episode",
+    "features": {
+     "x": -1.0281504392623901,
+     "y": -1.8899741172790527,
+     "yaw": 45.50409565254623,
+     "frames": 1001,
+     "slot": 1
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1001,
+     "station": "remote_control_pick_4.14",
+     "support": [
+      "Remote"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_414_o29_wp85g_033_source",
+    "run": "simple_414_o29_wp85g_033_source",
+    "host": "196",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919/runs/simple_414_o29_wp85g_033_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919/runs/simple_414_o29_wp85g_033_source/episode",
+    "features": {
+     "x": -1.0625914335250854,
+     "y": -1.874062418937683,
+     "yaw": 45.086225943561615,
+     "frames": 951,
+     "slot": 29
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "grid"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 951,
+     "station": "remote_control_pick_4.14",
+     "support": [
+      "Remote"
+     ],
+     "commit": "1b19fb0e",
+     "source_core": null
+    }
+   }
+  ]
+ },
+ "4.16": {
+  "pool": 49,
+  "listed": 50,
+  "excluded_not_passed": 1,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、存放主机、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -2.394,
+    -2.3063
+   ],
+   "y": [
+    1.2862,
+    1.3553
+   ],
+   "yaw": [
+    83.9398,
+    94.1555
+   ],
+   "frames": [
+    651.0,
+    801.0
+   ],
+   "slot": [
+    0.0,
+    48.0
+   ]
+  },
+  "target": "Remote",
+  "episodes": [
+   {
+    "label": "simple_416_o23_009_source",
+    "run": "simple_416_o23_009_source",
+    "host": "196",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919/runs/simple_416_o23_009_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919/runs/simple_416_o23_009_source/episode",
+    "features": {
+     "x": -2.353729486465454,
+     "y": 1.3179728984832764,
+     "yaw": 88.25470371762914,
+     "frames": 701,
+     "slot": 23
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "grid"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 701,
+     "station": "remote_control_pick_4.16",
+     "support": [
+      "Remote"
+     ],
+     "commit": "2a117ef1",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_416_o02l_052_source",
+    "run": "simple_416_o02l_052_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_416_o02l_052_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_416_o02l_052_source/episode",
+    "features": {
+     "x": -2.394037961959839,
+     "y": 1.317444920539856,
+     "yaw": 87.69301995711893,
+     "frames": 751,
+     "slot": 2
+    },
+    "categories": {
+     "用手": "l",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 751,
+     "station": "remote_control_pick_4.16",
+     "support": [
+      "Remote"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_416_o48_002_source",
+    "run": "simple_416_o48_002_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_offload/196/runs/simple_416_o48_002_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -2.3253889083862305,
+     "y": 1.302385687828064,
+     "yaw": 85.97083268825085,
+     "frames": 801,
+     "slot": 48
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "zones"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 801,
+     "station": "remote_control_pick_4.16",
+     "support": [
+      "Remote"
+     ],
+     "commit": "1b19fb0e",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_416_o20_wp84_fill_00013_source",
+    "run": "simple_416_o20_wp84_fill_00013_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_416_o20_wp84_fill_00013_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_416_o20_wp84_fill_00013_source/episode",
+    "features": {
+     "x": -2.352485418319702,
+     "y": 1.2861523628234863,
+     "yaw": 94.15548928540218,
+     "frames": 701,
+     "slot": 20
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 701,
+     "station": "remote_control_pick_4.16",
+     "support": [
+      "Remote"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_416_o42_005_source",
+    "run": "simple_416_o42_005_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_offload/196/runs/simple_416_o42_005_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -2.3129868507385254,
+     "y": 1.3117504119873047,
+     "yaw": 92.04884714347368,
+     "frames": 701,
+     "slot": 42
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "zones"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 701,
+     "station": "remote_control_pick_4.16",
+     "support": [
+      "Remote"
+     ],
+     "commit": "1b19fb0e",
+     "source_core": null
+    }
+   }
+  ]
+ },
+ "4.17": {
+  "pool": 60,
+  "listed": 60,
+  "excluded_not_passed": 0,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -3.1048,
+    -3.0189
+   ],
+   "y": [
+    -1.6864,
+    -1.5599
+   ],
+   "frames": [
+    558.0,
+    1239.0
+   ]
+  },
+  "target": "Remote",
+  "episodes": [
+   {
+    "label": "r04_o026_n26",
+    "run": "r04_o026_n26",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp77_417/works/r04_o026_n26",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp77_417/rendered/4.17_diagnostic_wp77_r04_o026_n26_v00/videos",
+    "features": {
+     "x": -3.0586921448144353,
+     "y": -1.6275966605435142,
+     "frames": 758
+    },
+    "categories": {
+     "用手": "r",
+     "扰动布局": "prephysics_full_random_house_layout"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 758,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/family4-native-grip-20260912/representatives/benchmark_4_17/left_fold_clear_019/capture"
+    }
+   },
+   {
+    "label": "fb26_center_l04",
+    "run": "fb26_center_l04",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp77_417/works/fb26_center_l04",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp77_417/rendered/4.17_diagnostic_wp77_fb26_center_l04_v00/videos",
+    "features": {
+     "x": -3.100086213618788,
+     "y": -1.576364513174749,
+     "frames": 1239
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "prephysics_full_random_house_layout"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1239,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/family4-native-grip-20260912/representatives/benchmark_4_17/left_fold_clear_019/capture"
+    }
+   },
+   {
+    "label": "r15_c32_o42",
+    "run": "r15_c32_o42",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp77_417/works/r15_c32_o42",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp77_417/rendered/4.17_diagnostic_wp77_r15_c32_o42_v00/videos",
+    "features": {
+     "x": -3.01894566088473,
+     "y": -1.5598619023999454,
+     "frames": 874
+    },
+    "categories": {
+     "用手": "r",
+     "扰动布局": "prephysics_full_random_house_layout"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 874,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/family4-native-grip-20260912/representatives/benchmark_4_17/left_fold_clear_019/capture"
+    }
+   },
+   {
+    "label": "r13_c05_prt009",
+    "run": "r13_c05_prt009",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp77_417/works/r13_c05_prt009",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp77_417/rendered/4.17_diagnostic_wp77_r13_c05_prt009_v00/videos",
+    "features": {
+     "x": -3.100086213618788,
+     "y": -1.576364513174749,
+     "frames": 558
+    },
+    "categories": {
+     "用手": "r",
+     "扰动布局": "prephysics_full_random_house_layout"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 558,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/family4-native-grip-20260912/representatives/benchmark_4_17/left_fold_clear_019/capture"
+    }
+   },
+   {
+    "label": "r35_o018_n24",
+    "run": "r35_o018_n24",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp77_417/works/r35_o018_n24",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp77_417/rendered/4.17_diagnostic_wp77_r35_o018_n24_v00/videos",
+    "features": {
+     "x": -3.0517133738646227,
+     "y": -1.6864333297986616,
+     "frames": 1048
+    },
+    "categories": {
+     "用手": "r",
+     "扰动布局": "prephysics_full_random_house_layout"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1048,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/family4-native-grip-20260912/representatives/benchmark_4_17/post_release_arm_return962/capture"
+    }
+   }
+  ]
+ },
+ "4.2": {
+  "pool": 48,
+  "listed": 61,
+  "excluded_not_passed": 13,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、存放主机、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -1.1835,
+    -1.0928
+   ],
+   "y": [
+    -0.4376,
+    -0.3447
+   ],
+   "yaw": [
+    182.0935,
+    191.5449
+   ],
+   "frames": [
+    251.0,
+    1051.0
+   ],
+   "slot": [
+    0.0,
+    49.0
+   ]
+  },
+  "target": "GlassesCase",
+  "episodes": [
+   {
+    "label": "simple_402_o34_002_source",
+    "run": "simple_402_o34_002_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/l40s16_runs_archive_20260924/simple_402_o34_002_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -1.1283096075057983,
+     "y": -0.40268775820732117,
+     "yaw": 187.77926193923426,
+     "frames": 301,
+     "slot": 34
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 301,
+     "station": "glasses_case_pick_4.2",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "wp86_402_fp04_lm24_yp16_ref_source",
+    "run": "wp86_402_fp04_lm24_yp16_ref_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/family4_supplements_20261001/wp86_402_fp04_lm24_yp16_ref_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -1.1834841966629028,
+     "y": -0.4063786566257477,
+     "yaw": 186.64401129378993,
+     "frames": 1051,
+     "slot": 30
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "grid"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1051,
+     "station": "glasses_case_pick_4.2",
+     "support": [
+      "CoffeeTable"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_402_o00_002_source",
+    "run": "simple_402_o00_002_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_402_o00_002_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_402_o00_002_source/episode",
+    "features": {
+     "x": -1.101205587387085,
+     "y": -0.35578325390815735,
+     "yaw": 189.96184384014282,
+     "frames": 251,
+     "slot": 0
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 251,
+     "station": "glasses_case_pick_4.2",
+     "support": [
+      "CoffeeTable"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_402_o04_004_source",
+    "run": "simple_402_o04_004_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/l40s16_runs_archive_20260924/simple_402_o04_004_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -1.1451719999313354,
+     "y": -0.3633631467819214,
+     "yaw": 183.60647974368885,
+     "frames": 301,
+     "slot": 4
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 301,
+     "station": "glasses_case_pick_4.2",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_402_o44_001_source",
+    "run": "simple_402_o44_001_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/l40s16_runs_archive_20260924/simple_402_o44_001_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -1.180375337600708,
+     "y": -0.43557924032211304,
+     "yaw": 184.12895427185964,
+     "frames": 251,
+     "slot": 44
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 251,
+     "station": "glasses_case_pick_4.2",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   }
+  ]
+ },
+ "4.3": {
+  "pool": 59,
+  "listed": 61,
+  "excluded_not_passed": 2,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、存放主机、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -1.1309,
+    0.0967
+   ],
+   "y": [
+    -1.9124,
+    -0.5932
+   ],
+   "yaw": [
+    40.6746,
+    229.2818
+   ],
+   "frames": [
+    351.0,
+    1101.0
+   ],
+   "slot": [
+    0.0,
+    49.0
+   ]
+  },
+  "target": "GlassesCase",
+  "episodes": [
+   {
+    "label": "simple_403_o28_001_source",
+    "run": "simple_403_o28_001_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/l40s16_runs_archive_20260924/simple_403_o28_001_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -1.0467119216918945,
+     "y": -1.785524845123291,
+     "yaw": 47.996666022739234,
+     "frames": 351,
+     "slot": 28
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 351,
+     "station": "glasses_case_pick_4.3",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "wp86_403_fp00_lm08_ym01_source",
+    "run": "wp86_403_fp00_lm08_ym01_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/family4_supplements_20261001/wp86_403_fp00_lm08_ym01_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": 0.04166204109787941,
+     "y": -0.6791419386863708,
+     "yaw": 225.20013586208105,
+     "frames": 1101,
+     "slot": 30
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "grid"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1101,
+     "station": "glasses_case_pick_4.3",
+     "support": [
+      "GlassesCase"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_403_o20_005_source",
+    "run": "simple_403_o20_005_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/family4_delivered_from197_20261002/simple_403_o20_005_source",
+    "videos_dir": "/home/lingjun/family4_delivered_from197_20261002/simple_403_o20_005_source/episode",
+    "features": {
+     "x": 0.07455732673406601,
+     "y": -0.6115502119064331,
+     "yaw": 226.8045997789248,
+     "frames": 401,
+     "slot": 20
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 401,
+     "station": "glasses_case_pick_4.3",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_403_o00_004_source",
+    "run": "simple_403_o00_004_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_20260919_runs/simple_403_o00_004_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -1.0464162826538086,
+     "y": -1.8757045269012451,
+     "yaw": 46.9996737409786,
+     "frames": 351,
+     "slot": 0
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 351,
+     "station": "glasses_case_pick_4.3",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_403_o42_002_source",
+    "run": "simple_403_o42_002_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/l40s16_runs_archive_20260924/simple_403_o42_002_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": 0.04822055995464325,
+     "y": -0.6674314141273499,
+     "yaw": 220.78387721117412,
+     "frames": 351,
+     "slot": 42
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 351,
+     "station": "glasses_case_pick_4.3",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   }
+  ]
+ },
+ "4.4": {
+  "pool": 60,
+  "listed": 60,
+  "excluded_not_passed": 0,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -0.9816,
+    -0.9444
+   ],
+   "y": [
+    -0.6438,
+    -0.6051
+   ],
+   "frames": [
+    926.0,
+    1151.0
+   ]
+  },
+  "target": "GlassesCase",
+  "episodes": [
+   {
+    "label": "o020_a41",
+    "run": "o020_a41",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp79_44/works/o020_a41",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp79_44/rendered/4.4_diagnostic_wp79_o020_a41_v00/videos",
+    "features": {
+     "x": -0.9554114920246988,
+     "y": -0.6156218828515021,
+     "frames": 1073
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "prephysics_full_random_house_layout"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1073,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/wp71_44/mother/native_settled_closure_324/capture"
+    }
+   },
+   {
+    "label": "x005_o028_a70",
+    "run": "x005_o028_a70",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp79_44/works/x005_o028_a70",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp79_44/rendered/4.4_diagnostic_wp79_x005_o028_a70_v00/videos",
+    "features": {
+     "x": -0.9813721386827784,
+     "y": -0.6239381785615201,
+     "frames": 968
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "prephysics_full_random_house_layout"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 968,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/wp71_44/mother/native_settled_closure_324/capture"
+    }
+   },
+   {
+    "label": "o003_a41_r79",
+    "run": "o003_a41_r79",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp79_44/works/o003_a41_r79",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp79_44/rendered/4.4_diagnostic_wp79_o003_a41_r79_v00/videos",
+    "features": {
+     "x": -0.9503416793976034,
+     "y": -0.6438359215025,
+     "frames": 1011
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "prephysics_full_random_house_layout"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1011,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/wp71_44/mother/native_settled_closure_324/capture"
+    }
+   },
+   {
+    "label": "o025_a47_r79",
+    "run": "o025_a47_r79",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp79_44/works/o025_a47_r79",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp79_44/rendered/4.4_diagnostic_wp79_o025_a47_r79_v00/videos",
+    "features": {
+     "x": -0.9799374470438785,
+     "y": -0.6106099668357725,
+     "frames": 1130
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "prephysics_full_random_house_layout"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1130,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/wp71_44/mother/native_settled_closure_324/capture"
+    }
+   },
+   {
+    "label": "o040_a46_r79",
+    "run": "o040_a46_r79",
+    "host": "16",
+    "kind": "wp53",
+    "run_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp79_44/works/o040_a46_r79",
+    "videos_dir": "/home/lingjun/wp53_l40/root/data/admin/work/wp79_44/rendered/4.4_diagnostic_wp79_o040_a46_r79_v00/videos",
+    "features": {
+     "x": -0.9487789020387118,
+     "y": -0.6340922962036937,
+     "frames": 1119
+    },
+    "categories": {
+     "用手": "l",
+     "扰动布局": "prephysics_full_random_house_layout"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 1119,
+     "station": null,
+     "support": null,
+     "commit": null,
+     "source_core": "/data/admin/work/wp71_44/mother/native_settled_closure_324/capture"
+    }
+   }
+  ]
+ },
+ "4.7": {
+  "pool": 50,
+  "listed": 53,
+  "excluded_not_passed": 3,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、存放主机、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -0.2718,
+    1.889
+   ],
+   "y": [
+    -0.9768,
+    -0.3579
+   ],
+   "yaw": [
+    -4.7084,
+    184.9013
+   ],
+   "frames": [
+    901.0,
+    951.0
+   ],
+   "slot": [
+    0.0,
+    44.0
+   ]
+  },
+  "target": "Wallet",
+  "episodes": [
+   {
+    "label": "simple_407_o15_005_source",
+    "run": "simple_407_o15_005_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_offload/196/runs/simple_407_o15_005_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": 1.8033337593078613,
+     "y": -0.7068261504173279,
+     "yaw": 175.74478716050268,
+     "frames": 951,
+     "slot": 15
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 951,
+     "station": "wallet_pick_4.7",
+     "support": [
+      "Sofa"
+     ],
+     "commit": "66e7f87a",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_407_o01l_017_source",
+    "run": "simple_407_o01l_017_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_20260919_runs/simple_407_o01l_017_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -0.20125269889831543,
+     "y": -0.3578536808490753,
+     "yaw": -4.7083620956274395,
+     "frames": 901,
+     "slot": 1
+    },
+    "categories": {
+     "用手": "l",
+     "存放主机": "196",
+     "扰动布局": "zones"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 901,
+     "station": "wallet_pick_4.7",
+     "support": [
+      "Sofa"
+     ],
+     "commit": "1b19fb0e",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_407_o41_005_source",
+    "run": "simple_407_o41_005_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_407_o41_005_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_407_o41_005_source/episode",
+    "features": {
+     "x": -0.2515973150730133,
+     "y": -0.6121788024902344,
+     "yaw": -2.0823490926250576,
+     "frames": 951,
+     "slot": 41
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 951,
+     "station": "wallet_pick_4.7",
+     "support": [
+      "Sofa"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_407_o04_001_source",
+    "run": "simple_407_o04_001_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_20260919_runs/simple_407_o04_001_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": 1.8501516580581665,
+     "y": -0.928668200969696,
+     "yaw": 182.04870591830814,
+     "frames": 901,
+     "slot": 4
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 901,
+     "station": "wallet_pick_4.7",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_407_o43_002_source",
+    "run": "simple_407_o43_002_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_407_o43_002_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_407_o43_002_source/episode",
+    "features": {
+     "x": -0.2717829644680023,
+     "y": -0.5586997866630554,
+     "yaw": -3.1181847384611467,
+     "frames": 901,
+     "slot": 43
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 901,
+     "station": "wallet_pick_4.7",
+     "support": [
+      "Sofa"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   }
+  ]
+ },
+ "4.8": {
+  "pool": 50,
+  "listed": 50,
+  "excluded_not_passed": 0,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、存放主机、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -0.9601,
+    -0.8641
+   ],
+   "y": [
+    -0.6224,
+    -0.495
+   ],
+   "yaw": [
+    175.1479,
+    184.976
+   ],
+   "frames": [
+    651.0,
+    751.0
+   ],
+   "slot": [
+    0.0,
+    47.0
+   ]
+  },
+  "target": "Wallet",
+  "episodes": [
+   {
+    "label": "simple_408_o29_004_source",
+    "run": "simple_408_o29_004_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/l40s16_runs_archive_20260924/simple_408_o29_004_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -0.9176611304283142,
+     "y": -0.5721414089202881,
+     "yaw": 181.45899941531462,
+     "frames": 701,
+     "slot": 29
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 701,
+     "station": "wallet_pick_4.8",
+     "support": [
+      "CoffeeTable"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_408_o46_001_source",
+    "run": "simple_408_o46_001_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/family4_delivered_from197_20261002/simple_408_o46_001_source",
+    "videos_dir": "/home/lingjun/family4_delivered_from197_20261002/simple_408_o46_001_source/episode",
+    "features": {
+     "x": -0.8752902150154114,
+     "y": -0.49617069959640503,
+     "yaw": 180.95031389513713,
+     "frames": 701,
+     "slot": 46
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 701,
+     "station": "wallet_pick_4.8",
+     "support": [],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_408_o11_009_source",
+    "run": "simple_408_o11_009_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_408_o11_009_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_408_o11_009_source/episode",
+    "features": {
+     "x": -0.9447797536849976,
+     "y": -0.5651798844337463,
+     "yaw": 175.14793135421448,
+     "frames": 751,
+     "slot": 11
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 751,
+     "station": "wallet_pick_4.8",
+     "support": [
+      "CoffeeTable"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_408_o04_021_source",
+    "run": "simple_408_o04_021_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/family4_delivered_from197_20261002/simple_408_o04_021_source",
+    "videos_dir": "/home/lingjun/family4_delivered_from197_20261002/simple_408_o04_021_source/episode",
+    "features": {
+     "x": -0.8682461977005005,
+     "y": -0.5771995782852173,
+     "yaw": 176.06048872351087,
+     "frames": 701,
+     "slot": 4
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 701,
+     "station": "wallet_pick_4.8",
+     "support": [
+      "CoffeeTable"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_408_o16_004_source",
+    "run": "simple_408_o16_004_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/l40s16_runs_archive_20260924/simple_408_o16_004_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -0.9198565483093262,
+     "y": -0.5029250383377075,
+     "yaw": 177.45259600341242,
+     "frames": 651,
+     "slot": 16
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 651,
+     "station": "wallet_pick_4.8",
+     "support": [
+      "CoffeeTable"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   }
+  ]
+ },
+ "4.9": {
+  "pool": 49,
+  "listed": 52,
+  "excluded_not_passed": 3,
+  "method": "确定性选择：先取最接近各特征中位数的 episode，再按范围归一化特征（机器人站位 x / y / yaw、帧数、摆位序号）做最远点贪心，每覆盖一个新的类别值（用手、存放主机、扰动布局）加 0.35；只在数据方自己判“通过”的 episode 里选",
+  "feature_ranges_in_pool": {
+   "x": [
+    -1.1365,
+    -0.1067
+   ],
+   "y": [
+    -1.8849,
+    -0.2306
+   ],
+   "yaw": [
+    40.5768,
+    266.8134
+   ],
+   "frames": [
+    701.0,
+    801.0
+   ],
+   "slot": [
+    0.0,
+    36.0
+   ]
+  },
+  "target": "Wallet",
+  "episodes": [
+   {
+    "label": "simple_409_o08_004_source",
+    "run": "simple_409_o08_004_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_409_o08_004_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919_runs/simple_409_o08_004_source/episode",
+    "features": {
+     "x": -1.1108061075210571,
+     "y": -1.867835521697998,
+     "yaw": 48.27645553248398,
+     "frames": 801,
+     "slot": 8
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 801,
+     "station": "wallet_pick_4.9",
+     "support": [
+      "SmallCoffeeTable"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_409_o00_004_source",
+    "run": "simple_409_o00_004_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_20260919_runs/simple_409_o00_004_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -0.10673988610506058,
+     "y": -0.23061618208885193,
+     "yaw": 266.76650508047334,
+     "frames": 701,
+     "slot": 0
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 701,
+     "station": "wallet_pick_4.9",
+     "support": [],
+     "commit": "fea84040",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_409_o36_001_source",
+    "run": "simple_409_o36_001_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_20260919_runs/simple_409_o36_001_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -1.095945119857788,
+     "y": -1.8766636848449707,
+     "yaw": 41.648544900771995,
+     "frames": 801,
+     "slot": 36
+    },
+    "categories": {
+     "用手": "?",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 801,
+     "station": "wallet_pick_4.9",
+     "support": [],
+     "commit": "f3994bbf",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_409_o8_wp84_fill_00095_source",
+    "run": "simple_409_o8_wp84_fill_00095_source",
+    "host": "16",
+    "kind": "mid_horizon",
+    "run_dir": "/home/lingjun/mid_horizon_20260919/runs/simple_409_o8_wp84_fill_00095_source",
+    "videos_dir": "/home/lingjun/mid_horizon_20260919/runs/simple_409_o8_wp84_fill_00095_source/episode",
+    "features": {
+     "x": -1.1108061075210571,
+     "y": -1.867835521697998,
+     "yaw": 48.27645553248398,
+     "frames": 751,
+     "slot": 8
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "16",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 751,
+     "station": "wallet_pick_4.9",
+     "support": [
+      "SmallCoffeeTable"
+     ],
+     "commit": "9c9ff71f",
+     "source_core": null
+    }
+   },
+   {
+    "label": "simple_409_o26_002_source",
+    "run": "simple_409_o26_002_source",
+    "host": "196",
+    "kind": "mid_horizon_tar",
+    "run_dir": "/mnt/agent-bench-data/lingjun/mid_horizon_offload/196/runs/simple_409_o26_002_source.tar",
+    "videos_dir": null,
+    "features": {
+     "x": -1.095945119857788,
+     "y": -1.8766636848449707,
+     "yaw": 41.648544900771995,
+     "frames": 801,
+     "slot": 26
+    },
+    "categories": {
+     "用手": "r",
+     "存放主机": "196",
+     "扰动布局": "?"
+    },
+    "producer": {
+     "passed": true,
+     "frames": 801,
+     "station": "wallet_pick_4.9",
+     "support": [
+      "SmallCoffeeTable"
+     ],
+     "commit": "01b0a8e8",
+     "source_core": null
+    }
+   }
+  ]
+ }
+}

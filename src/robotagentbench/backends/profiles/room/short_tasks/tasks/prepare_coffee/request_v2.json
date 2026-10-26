@@ -1,0 +1,8 @@
+{
+  "schema": "openend.short_task.request.v1",
+  "task_name": "prepare_coffee",
+  "seed": 47,
+  "layout_id": 4,
+  "rule_version": "openend.short_task.prepare_coffee.v2",
+  "options": {}
+}

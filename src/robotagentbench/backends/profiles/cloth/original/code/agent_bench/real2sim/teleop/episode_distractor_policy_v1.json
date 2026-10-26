@@ -1,0 +1,774 @@
+{
+ "schema": "real2sim.episode_distractor_policy.v1",
+ "status": "current",
+ "design_source": {
+  "real_scene_audit": "current fixed REAL episodes, three primary cameras, frame zero",
+  "policy": "dense category-consistent shelf stock plus episode-varying interactive clutter on the CoffeeTable, Sofa, and wooden side table (SmallCoffeeTable)",
+  "furniture_rule": "never author furniture transforms; only small props may move"
+ },
+ "eligible_small_task_ids": [
+  "6",
+  "8",
+  "10",
+  "12",
+  "13",
+  "14",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20",
+  "21",
+  "22",
+  "27",
+  "28",
+  "29",
+  "30",
+  "31",
+  "32",
+  "33",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48",
+  "50",
+  "51",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59",
+  "60",
+  "61",
+  "78",
+  "85",
+  "86",
+  "87",
+  "88",
+  "89",
+  "90",
+  "91"
+ ],
+ "eligible_production_task_ids": [
+  "family7:snack"
+ ],
+ "shelf": {
+  "render_distractors_per_layer": 5,
+  "render_yaw_abs_range_deg": [
+   15.0,
+   65.0
+  ],
+  "center_x_m": -2.369,
+  "inner_x_bounds_m": [
+   -2.839,
+   -1.899
+  ],
+  "front_local_y_range_m": [
+   1.47,
+   1.61
+  ],
+  "background_local_y_m": 1.735,
+  "minimum_foreground_edge_gap_m": 0.018,
+  "target_grasp_clearance_half_width_m": 0.11,
+  "maximum_foreground_omissions_for_target_clearance": 3,
+  "target_swept_x_interval_m_by_small_task": {
+   "35": [
+    -2.839,
+    -2.4
+   ],
+   "38": [
+    -2.84,
+    -2.47
+   ],
+   "39": [
+    -2.31,
+    -1.95
+   ]
+  },
+  "target_swept_x_interval_note": "small Tasks 35, 38, and 39 use the shared snack station/posture. Their replay-verified targets traverse the listed shelf-X intervals while held; each interval includes target half-width and clearance so randomized shelf stock cannot enter the audited carried-object sweep.",
+  "hand_half_deadband_m": 0.015,
+  "hand_half_exception_small_task_ids": [
+   "38"
+  ],
+  "hand_half_exception_note": "small Task 38's replay-verified left-hand candy grasp is at world x=-2.290 m, across the generic shelf midpoint; retain the exact recorded hand and anchor while still reserving its target corridor",
+  "beverage_surface_z_m": 1.1825,
+  "snack_surface_z_m": 0.751,
+  "beverage_foreground": [
+   {
+    "id": "gatorade_t",
+    "prim_path": "/World/Assets/ShelfItems/gatorade_t",
+    "width_m": 0.07,
+    "depth_m": 0.07,
+    "mass_kg": 0.4
+   },
+   {
+    "id": "sprite_c1",
+    "prim_path": "/World/Assets/ShelfItems/sprite_c1",
+    "width_m": 0.066,
+    "depth_m": 0.066,
+    "mass_kg": 0.355
+   },
+   {
+    "id": "coke_c3",
+    "prim_path": "/World/Assets/ShelfItems/coke_c3",
+    "width_m": 0.066,
+    "depth_m": 0.066,
+    "mass_kg": 0.355
+   },
+   {
+    "id": "diet_coke",
+    "prim_path": "/World/Assets/ShelfItems/diet_coke",
+    "width_m": 0.066,
+    "depth_m": 0.066,
+    "mass_kg": 0.355
+   },
+   {
+    "id": "sprite_c2",
+    "prim_path": "/World/Assets/ShelfItems/sprite_c2",
+    "width_m": 0.066,
+    "depth_m": 0.066,
+    "mass_kg": 0.355
+   },
+   {
+    "id": "gatorade_m",
+    "prim_path": "/World/Assets/ShelfItems/gatorade_m",
+    "width_m": 0.07,
+    "depth_m": 0.07,
+    "mass_kg": 0.4
+   },
+   {
+    "id": "good2grow",
+    "prim_path": "/World/Assets/ShelfItems/good2grow",
+    "width_m": 0.07,
+    "depth_m": 0.07,
+    "mass_kg": 0.18
+   },
+   {
+    "id": "grapefruit_can",
+    "prim_path": "/World/Assets/ShelfItems/grapefruit_can",
+    "width_m": 0.066,
+    "depth_m": 0.066,
+    "mass_kg": 0.355
+   },
+   {
+    "id": "cayman_jacked",
+    "prim_path": "/World/Assets/ShelfItems/cayman_jacked",
+    "width_m": 0.066,
+    "depth_m": 0.066,
+    "mass_kg": 0.355
+   },
+   {
+    "id": "starbucks",
+    "prim_path": "/World/Assets/ShelfItems/starbucks",
+    "width_m": 0.054,
+    "depth_m": 0.054,
+    "mass_kg": 0.2,
+    "production_distractor": false,
+    "production_distractor_reason": "excluded 2026-08-08: canonical House prim has no enabled collision shape; remains available as an owner-reviewed target"
+   },
+   {
+    "id": "red_bull_pink",
+    "prim_path": "/World/Assets/ShelfItems/red_bull_pink",
+    "width_m": 0.053,
+    "depth_m": 0.053,
+    "mass_kg": 0.25,
+    "production_distractor": false,
+    "production_distractor_reason": "quarantined 2026-08-07: isolated L40S playback displaced this asset 553169.71 mm while all 28 peer distractors remained stationary"
+   }
+  ],
+  "beverage_background": [
+   {
+    "id": "rb_box",
+    "prim_path": "/World/Assets/ShelfItems/rb_box",
+    "width_m": 0.11,
+    "depth_m": 0.11,
+    "yaw_deg": 0.0,
+    "asset_id": "red_bull_box"
+   },
+   {
+    "id": "sprite_box",
+    "prim_path": "/World/Assets/ShelfItems/sprite_box",
+    "width_m": 0.395,
+    "depth_m": 0.127,
+    "yaw_deg": 0.0,
+    "asset_id": "sprite_mini_fridge_pack"
+   },
+   {
+    "id": "coke_box",
+    "prim_path": "/World/EpisodeBackground/ShelfBeverage/CokeBox",
+    "source_asset": "photo_assets/coke_mini_box/asset.usda",
+    "width_m": 0.395,
+    "depth_m": 0.127,
+    "world_y_offset_m": 0.6306552699470328,
+    "yaw_deg": 0.0,
+    "asset_id": "coke_mini_fridge_pack",
+    "production_distractor": false,
+    "production_distractor_reason": "excluded 2026-08-08: no public runtime release approval; keep the authored bundle audit-only until an owner-reviewed release receipt exists"
+   }
+  ],
+  "snack_foreground": [
+   {
+    "id": "oreo_gf",
+    "prim_path": "/World/Assets/Tier2Items/oreo_gf",
+    "width_m": 0.205,
+    "depth_m": 0.06,
+    "mass_kg": 0.2,
+    "production_distractor": false,
+    "production_distractor_reason": "target-only shelf membership: reserve the small Task 40 grasp corridor without introducing the wide pack into unrelated task clutter"
+   },
+   {
+    "id": "chomps_r",
+    "prim_path": "/World/Assets/Tier2Items/chomps_r",
+    "width_m": 0.12,
+    "depth_m": 0.06,
+    "mass_kg": 0.08
+   },
+   {
+    "id": "pring_bbq",
+    "prim_path": "/World/Assets/Tier2Items/pring_bbq",
+    "width_m": 0.075,
+    "depth_m": 0.075,
+    "mass_kg": 0.16
+   },
+   {
+    "id": "honeymaid",
+    "prim_path": "/World/Assets/Tier2Items/honeymaid",
+    "width_m": 0.125,
+    "depth_m": 0.045,
+    "mass_kg": 0.16
+   },
+   {
+    "id": "skit_littles",
+    "prim_path": "/World/Assets/Tier2Items/skit_littles",
+    "width_m": 0.15,
+    "depth_m": 0.065,
+    "mass_kg": 0.08
+   },
+   {
+    "id": "zbar_t",
+    "prim_path": "/World/Assets/Tier2Items/zbar_t",
+    "width_m": 0.135,
+    "depth_m": 0.04,
+    "mass_kg": 0.12
+   },
+   {
+    "id": "pring_g",
+    "prim_path": "/World/Assets/ShelfItems/pring_g",
+    "width_m": 0.075,
+    "depth_m": 0.075,
+    "mass_kg": 0.16,
+    "production_distractor": false,
+    "production_distractor_reason": "excluded 2026-08-08: canonical House prim has no enabled collision shape; remains available as an owner-reviewed target"
+   }
+  ],
+  "snack_background": [
+   {
+    "id": "cacao",
+    "prim_path": "/World/Assets/ShelfItems/cacao",
+    "width_m": 0.16,
+    "depth_m": 0.06,
+    "yaw_deg": 0.0,
+    "asset_id": "viva_cacao_powder"
+   },
+   {
+    "id": "smores_k",
+    "prim_path": "/World/Assets/Tier2Items/smores_k",
+    "width_m": 0.255,
+    "depth_m": 0.065,
+    "yaw_deg": 0.0,
+    "asset_id": "unreal_smores_kit"
+   }
+  ],
+  "pending_background_assets": [
+   {
+    "role": "large_chip_bag",
+    "candidate": "photo_assets/lays_party_bag/asset.usda",
+    "status": "blocked_pending_reviewed-local asset registration and isolated/in-scene QC"
+   },
+   {
+    "role": "large_cookie_pack",
+    "candidate": "photo_assets/oreo_gf_pack/asset.usda",
+    "status": "blocked_pending_reviewed-local asset registration and isolated/in-scene QC"
+   }
+  ],
+  "front_local_y_range_note": "Each foreground item samples its depth uniformly in this band, so the band IS the front-to-back scatter. It used to be [1.405, 1.465]: only 60 mm of variation, which read as one flat row, and its front edge sat 15 mm in front of the board (local y 1.420) so stock could overhang the shelf. [1.470, 1.610] keeps a 75 mm deep item 12.5 mm clear of the front edge at the shallowest and 55 mm clear of the background row at 1.735 at the deepest, with 140 mm of scatter between.",
+  "top_surface_z_m": 1.564,
+  "top_background": [
+   {
+    "id": "top_cacao",
+    "prim_path": "/World/EpisodeBackground/ShelfTop/CacaoBag",
+    "source_asset": "photo_assets/cacao_bag/asset.usda",
+    "width_m": 0.16,
+    "depth_m": 0.06,
+    "yaw_deg": 0.0,
+    "asset_id": "viva_cacao_powder"
+   },
+   {
+    "id": "top_sprite_box",
+    "prim_path": "/World/EpisodeBackground/ShelfTop/SpriteBox",
+    "source_asset": "photo_assets/sprite_mini_box/asset.usda",
+    "width_m": 0.395,
+    "depth_m": 0.127,
+    "yaw_deg": 0.0,
+    "asset_id": "sprite_mini_fridge_pack"
+   },
+   {
+    "id": "top_smores",
+    "prim_path": "/World/EpisodeBackground/ShelfTop/SmoresKit",
+    "source_asset": "photo_assets/smores_kit_box/asset.usda",
+    "width_m": 0.255,
+    "depth_m": 0.065,
+    "yaw_deg": 0.0,
+    "asset_id": "unreal_smores_kit"
+   }
+  ],
+  "top_background_note": "Visual dressing for the TOP shelf board (z 1.564): the real top tier is stocked and the sim one was empty, which reads as a different room on camera. Approved-bundle assets only, kinematic, never a manipulation target; randomized in order like the other background rows. Depth uses top_local_y_m (1.52, near the front edge) rather than the deep background row: at 1.735 the items exist but sit above the head camera's upward view cone and the tier reads empty on camera anyway -- the real top-tier stock is parked at the front edge.",
+  "top_local_y_m": 1.52
+ },
+ "surfaces": {
+  "coffee_table": {
+   "bounds_xy_m": [
+    -2.35,
+    -1.55,
+    -0.7210435942,
+    0.4789564281
+   ],
+   "surface_z_m": 0.45,
+   "edge_margin_m": 0.035,
+   "minimum_gap_m": 0.035,
+   "desired_count": 4,
+   "minimum_count": 3,
+   "minimum_distractor_count": 3
+  },
+  "sofa": {
+   "bounds_xy_m": [
+    -0.3503563938,
+    0.3296436062,
+    -1.4825,
+    -0.2595
+   ],
+   "surface_z_m": 0.452,
+   "edge_margin_m": 0.03,
+   "minimum_gap_m": 0.04,
+   "desired_count": 5,
+   "minimum_count": 0,
+   "minimum_distractor_count": 0,
+   "presence_probability": 0.5,
+   "whole_sofa_bounds_xy_m": [
+    -0.3503563938,
+    0.3296436062,
+    -2.22,
+    0.479
+   ],
+   "placement_scope": "middle_two_seat_cushions",
+   "seat_geometry_evidence": "Four connected cushion meshes: y[-2.0941,-1.4826],[-1.4826,-0.8710],[-0.8711,-0.2594],[-0.2595,0.3521]; sample only the middle pair."
+  },
+  "side_table": {
+   "bounds_xy_m": [
+    -2.52,
+    -1.71,
+    -2.17,
+    -1.845
+   ],
+   "surface_z_m": 0.457,
+   "edge_margin_m": 0.03,
+   "minimum_gap_m": 0.015,
+   "desired_count": 3,
+   "minimum_count": 3,
+   "minimum_distractor_count": 3,
+   "desired_count_when_target_here": 3
+  }
+ },
+ "coffee_table_semantic_refresh": {
+  "enabled": true,
+  "scope": "all_current_randomization_tasks",
+  "axis": "canonical_world_x",
+  "total_distractor_count": 4,
+  "invariants": {
+   "all_generated_table_objects_inside_sofa_half": true,
+   "tablecloth_half_reserved": true,
+   "other_surface_eligibility_is_unchanged": true,
+   "camera_or_furniture_transform_authored": false
+  },
+  "split_x_m": -1.95,
+  "sofa_side_bounds_xy_m": [
+   -1.95,
+   -1.55,
+   -0.7210435942,
+   0.4789564281
+  ],
+  "tablecloth_side_bounds_xy_m": [
+   -2.35,
+   -1.95,
+   -0.7210435942,
+   0.4789564281
+  ],
+  "trash_group": {
+   "meaning": "cleanup objects on the sofa-side half of the CoffeeTable",
+   "desired_count": 2,
+   "candidate_rule": "sample without replacement from reviewed Family-7 trash classes",
+   "candidates": [
+    {
+     "id": "TableTrashPaper",
+     "prim_path": "/World/EpisodeDistractors/TableTrashPaper",
+     "source_prim_path": "/World/Assets/PaperBall",
+     "semantic_class": "trash",
+     "trash_kind": "paper",
+     "width_m": 0.09,
+     "depth_m": 0.09,
+     "mass_kg": 0.01,
+     "rest_modes": [
+      "flat"
+     ]
+    },
+    {
+     "id": "TableTrashCup",
+     "prim_path": "/World/EpisodeDistractors/TableTrashCup",
+     "source_prim_path": "/World/Assets/PaperCup",
+     "semantic_class": "trash",
+     "trash_kind": "cup",
+     "width_m": 0.13,
+     "depth_m": 0.09,
+     "mass_kg": 0.02,
+     "rest_modes": [
+      "upright",
+      "side"
+     ]
+    },
+    {
+     "id": "TableTrashCan",
+     "prim_path": "/World/EpisodeDistractors/TableTrashCan",
+     "source_prim_path": "/World/Assets/EmptyCan",
+     "semantic_class": "trash",
+     "trash_kind": "can",
+     "width_m": 0.066,
+     "depth_m": 0.066,
+     "mass_kg": 0.015,
+     "rest_modes": [
+      "upright",
+      "side"
+     ]
+    },
+    {
+     "id": "TableTrashBar",
+     "prim_path": "/World/EpisodeDistractors/TableTrashBar",
+     "source_prim_path": "/World/Assets/Tier2Items/zbar_t",
+     "semantic_class": "trash",
+     "trash_kind": "bar_wrapper",
+     "width_m": 0.135,
+     "depth_m": 0.04,
+     "mass_kg": 0.12,
+     "rest_modes": [
+      "flat"
+     ]
+    }
+   ]
+  },
+  "shelf_group": {
+   "meaning": "cleanup objects on the sofa-side half of the CoffeeTable",
+   "desired_count": 2,
+   "candidate_rule": "sample without replacement from every production-approved shelf beverage and snack foreground type",
+   "source_inventory": "shelf.beverage_foreground + shelf.snack_foreground where production_distractor is not false"
+  },
+  "visible_line": false,
+  "distractor_count_range": [
+   3,
+   5
+  ],
+  "count_sampling": "uniform_integer_per_episode",
+  "count_authority": "User requested mean four on 2026-09-16; count excludes the target; record post-placement actual counts"
+ },
+ "surface_objects": [
+  {
+   "id": "CushionOnBook",
+   "prim_path": "/World/Assets/CushionOnBook",
+   "width_m": 0.48,
+   "depth_m": 0.42,
+   "mass_kg": 0.35,
+   "sofa_yaw_base_deg": 0.0,
+   "allowed_surfaces": [
+    "sofa"
+   ]
+  },
+  {
+   "id": "Book",
+   "prim_path": "/World/Assets/Book",
+   "width_m": 0.29,
+   "depth_m": 0.24,
+   "mass_kg": 0.35,
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa"
+   ]
+  },
+  {
+   "id": "Note",
+   "prim_path": "/World/Assets/Note",
+   "width_m": 0.266,
+   "depth_m": 0.241,
+   "mass_kg": 0.15,
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa",
+    "side_table"
+   ]
+  },
+  {
+   "id": "Remote",
+   "prim_path": "/World/Assets/Remote",
+   "width_m": 0.2,
+   "depth_m": 0.055,
+   "mass_kg": 0.08,
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa",
+    "side_table"
+   ]
+  },
+  {
+   "id": "BaseballCap",
+   "prim_path": "/World/Assets/BaseballCap",
+   "width_m": 0.25,
+   "depth_m": 0.2,
+   "mass_kg": 0.08,
+   "rotate_x_deg": -87.0,
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa"
+   ]
+  },
+  {
+   "id": "PaperCup",
+   "prim_path": "/World/Assets/PaperCup",
+   "width_m": 0.13,
+   "depth_m": 0.09,
+   "mass_kg": 0.02,
+   "rest_modes": [
+    "upright",
+    "side"
+   ],
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa",
+    "side_table"
+   ]
+  },
+  {
+   "id": "PaperCupClone1",
+   "prim_path": "/World/EpisodeDistractors/PaperCupClone1",
+   "source_prim_path": "/World/Assets/PaperCup",
+   "width_m": 0.13,
+   "depth_m": 0.09,
+   "mass_kg": 0.02,
+   "rest_modes": [
+    "upright",
+    "side"
+   ],
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa",
+    "side_table"
+   ]
+  },
+  {
+   "id": "PaperCupClone2",
+   "prim_path": "/World/EpisodeDistractors/PaperCupClone2",
+   "source_prim_path": "/World/Assets/PaperCup",
+   "width_m": 0.13,
+   "depth_m": 0.09,
+   "mass_kg": 0.02,
+   "rest_modes": [
+    "upright",
+    "side"
+   ],
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa",
+    "side_table"
+   ]
+  },
+  {
+   "id": "GlassesCase",
+   "prim_path": "/World/Assets/GlassesCase",
+   "width_m": 0.177,
+   "depth_m": 0.09,
+   "mass_kg": 0.08,
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa",
+    "side_table"
+   ]
+  },
+  {
+   "id": "Umbrella",
+   "prim_path": "/World/Assets/Umbrella",
+   "width_m": 0.35,
+   "depth_m": 0.075,
+   "mass_kg": 0.12,
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa"
+   ]
+  },
+  {
+   "id": "Wallet",
+   "prim_path": "/World/Assets/Wallet",
+   "width_m": 0.165,
+   "depth_m": 0.13,
+   "mass_kg": 0.12,
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa",
+    "side_table"
+   ]
+  },
+  {
+   "id": "PaperPlate",
+   "prim_path": "/World/Assets/PaperPlate",
+   "width_m": 0.26,
+   "depth_m": 0.26,
+   "mass_kg": 0.03,
+   "sofa_yaw_base_deg": 0.0,
+   "allowed_surfaces": [
+    "coffee_table"
+   ]
+  },
+  {
+   "id": "EmptyCan",
+   "prim_path": "/World/Assets/EmptyCan",
+   "width_m": 0.066,
+   "depth_m": 0.066,
+   "mass_kg": 0.015,
+   "rest_modes": [
+    "upright",
+    "side"
+   ],
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa",
+    "side_table"
+   ]
+  },
+  {
+   "id": "EmptyCanClone1",
+   "prim_path": "/World/EpisodeDistractors/EmptyCanClone1",
+   "source_prim_path": "/World/Assets/EmptyCan",
+   "width_m": 0.066,
+   "depth_m": 0.066,
+   "mass_kg": 0.015,
+   "rest_modes": [
+    "upright",
+    "side"
+   ],
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa",
+    "side_table"
+   ]
+  },
+  {
+   "id": "EmptyCanClone2",
+   "prim_path": "/World/EpisodeDistractors/EmptyCanClone2",
+   "source_prim_path": "/World/Assets/EmptyCan",
+   "width_m": 0.066,
+   "depth_m": 0.066,
+   "mass_kg": 0.015,
+   "rest_modes": [
+    "upright",
+    "side"
+   ],
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa",
+    "side_table"
+   ]
+  },
+  {
+   "id": "PaperBall",
+   "prim_path": "/World/Assets/PaperBall",
+   "width_m": 0.09,
+   "depth_m": 0.09,
+   "mass_kg": 0.01,
+   "rest_modes": [
+    "flat"
+   ],
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa"
+   ]
+  },
+  {
+   "id": "PaperBallClone1",
+   "prim_path": "/World/EpisodeDistractors/PaperBallClone1",
+   "source_prim_path": "/World/Assets/PaperBall",
+   "width_m": 0.09,
+   "depth_m": 0.09,
+   "mass_kg": 0.01,
+   "rest_modes": [
+    "flat"
+   ],
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa"
+   ]
+  },
+  {
+   "id": "PaperBallClone2",
+   "prim_path": "/World/EpisodeDistractors/PaperBallClone2",
+   "source_prim_path": "/World/Assets/PaperBall",
+   "width_m": 0.09,
+   "depth_m": 0.09,
+   "mass_kg": 0.01,
+   "rest_modes": [
+    "flat"
+   ],
+   "sofa_yaw_base_deg": 90.0,
+   "allowed_surfaces": [
+    "coffee_table",
+    "sofa"
+   ]
+  }
+ ],
+ "protected_furniture_prims": [
+  "/World/Assets/CoffeeTable",
+  "/World/Assets/Sofa",
+  "/World/Assets/ShelvingUnit",
+  "/World/Assets/SeatOverlay",
+  "/World/Assets/Tier2Overlay",
+  "/World/Assets/Tier3Overlay",
+  "/World/Assets/SmallCoffeeTable",
+  "/World/Assets/NightStand",
+  "/World/Assets/TvTable"
+ ],
+ "target_source_clone_allowed_task_ids": [],
+ "primary_asset_max_instances_including_target": 4,
+ "primary_asset_clone_ids_by_task": {},
+ "required_companions_by_task": {}
+}

@@ -1,0 +1,19 @@
+{
+  "tests": 91,
+  "passed": true,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "scope": "synthetic_room_routing_and_score_contracts_not_native_manipulation",
+  "modules": [
+    "openend.tasks.scene_requirements.test_shelf_retirement",
+    "openend.tasks.scene_requirements.test_shelf_instances",
+    "openend.tasks.scene_requirements.test_shelf_runtime",
+    "openend.tasks.scene_requirements.test_shelf_legacy_contract",
+    "openend.tasks.scene_requirements.test_shelf_request",
+    "openend.tests.test_dispatch",
+    "openend.tests.test_unified_policy",
+    "openend.tasks.remote_transfer.test_room"
+  ],
+  "log": "...........................................................................................\n----------------------------------------------------------------------\nRan 91 tests in 21.145s\n\nOK\n"
+}

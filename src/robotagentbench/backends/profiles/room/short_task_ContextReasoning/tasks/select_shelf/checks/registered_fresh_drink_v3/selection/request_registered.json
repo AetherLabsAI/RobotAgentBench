@@ -1,0 +1,10 @@
+{
+  "schema": "openend.short_task.request.v1",
+  "task_name": "select_drink",
+  "rule_version": "context_reasoning.select_shelf.v1",
+  "seed": 2,
+  "options": {
+    "question_id": "R001"
+  },
+  "layout_id": 3
+}

@@ -1,0 +1,14 @@
+{
+  "version": "native_surface_candidate_v1",
+  "status": "cpu_candidate_not_physically_validated",
+  "width_m": 0.42,
+  "length_m": 0.62,
+  "cells_x": 36,
+  "cells_y": 54,
+  "areal_density_kg_m2": 0.35,
+  "thickness_m": 0.001,
+  "youngs_modulus_pa": 10000000.0,
+  "poissons_ratio": 0.3,
+  "static_friction": 0.35,
+  "dynamic_friction": 0.35
+}

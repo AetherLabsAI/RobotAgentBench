@@ -1,0 +1,335 @@
+{
+  "schema": "sofa_to_coffee_table.remote_posture.v1",
+  "asset": "remote_tv",
+  "dataset_task_index": 119,
+  "source": "/mnt/agent-bench-data/lingjun/lerobot-reconcile-20261010/current_dataset",
+  "sampling": "independent_continuous_first_state_ranges",
+  "episode_indices": [
+    4617,
+    4619,
+    4620,
+    4622,
+    4624,
+    4626,
+    4629,
+    4641
+  ],
+  "units": "native radians; idx01_body_joint1 metres",
+  "ranges": {
+    "idx01_body_joint1": [
+      6.6599794255883804e-12,
+      0.020000075921416283
+    ],
+    "idx02_body_joint2": [
+      0.5235977172851562,
+      0.5235987901687622
+    ],
+    "idx11_head_joint1": [
+      -3.754795085963991e-11,
+      3.5952123222937615e-11
+    ],
+    "idx12_head_joint2": [
+      0.43633079528808594,
+      0.4363376200199127
+    ],
+    "idx21_arm_l_joint1": [
+      -1.047366738319397,
+      -0.9234312772750854
+    ],
+    "idx61_arm_r_joint1": [
+      0.6788301467895508,
+      1.0221264362335205
+    ],
+    "idx22_arm_l_joint2": [
+      0.5028628706932068,
+      0.6365223526954651
+    ],
+    "idx62_arm_r_joint2": [
+      -0.8934401273727417,
+      -0.6227044463157654
+    ],
+    "idx23_arm_l_joint3": [
+      0.23455412685871124,
+      0.307710200548172
+    ],
+    "idx63_arm_r_joint3": [
+      -0.5216314792633057,
+      -0.059297531843185425
+    ],
+    "idx24_arm_l_joint4": [
+      -1.3113794326782227,
+      -1.2209458351135254
+    ],
+    "idx64_arm_r_joint4": [
+      1.0989925861358643,
+      1.502104640007019
+    ],
+    "idx25_arm_l_joint5": [
+      0.6737058162689209,
+      0.7232837677001953
+    ],
+    "idx65_arm_r_joint5": [
+      -0.9660747051239014,
+      -0.7229447364807129
+    ],
+    "idx26_arm_l_joint6": [
+      1.3251415491104126,
+      1.441744327545166
+    ],
+    "idx66_arm_r_joint6": [
+      -1.6284713745117188,
+      -1.2895491123199463
+    ],
+    "idx27_arm_l_joint7": [
+      -0.17170941829681396,
+      -0.07520964741706848
+    ],
+    "idx67_arm_r_joint7": [
+      0.022781135514378548,
+      0.3642670810222626
+    ],
+    "idx41_gripper_l_outer_joint1": [
+      0.7843981385231018,
+      0.7843981385231018
+    ],
+    "idx81_gripper_r_outer_joint1": [
+      0.7843981385231018,
+      0.7843981385231018
+    ]
+  },
+  "evidence": [
+    {
+      "episode_index": 4617,
+      "file": "/mnt/agent-bench-data/lingjun/lerobot-reconcile-20261010/current_dataset/data/chunk-004/episode_004617.parquet",
+      "joints": {
+        "idx21_arm_l_joint1": -0.9595273733139038,
+        "idx22_arm_l_joint2": 0.5169061422348022,
+        "idx23_arm_l_joint3": 0.23455412685871124,
+        "idx24_arm_l_joint4": -1.2595202922821045,
+        "idx25_arm_l_joint5": 0.6945468187332153,
+        "idx26_arm_l_joint6": 1.441744327545166,
+        "idx27_arm_l_joint7": -0.07520964741706848,
+        "idx61_arm_r_joint1": 0.892863392829895,
+        "idx62_arm_r_joint2": -0.883705735206604,
+        "idx63_arm_r_joint3": -0.2808722257614136,
+        "idx64_arm_r_joint4": 1.4791508913040161,
+        "idx65_arm_r_joint5": -0.9660747051239014,
+        "idx66_arm_r_joint6": -1.3495042324066162,
+        "idx67_arm_r_joint7": 0.3642670810222626,
+        "idx01_body_joint1": 3.8998769491538354e-11,
+        "idx02_body_joint2": 0.5235987901687622,
+        "idx11_head_joint1": -3.271105955549025e-11,
+        "idx12_head_joint2": 0.4363323152065277,
+        "idx41_gripper_l_outer_joint1": 0.7843981385231018,
+        "idx81_gripper_r_outer_joint1": 0.7843981385231018,
+        "base_x_world_m": 1.7474145889282227,
+        "base_y_world_m": -0.6009438633918762,
+        "base_yaw_world_unwrapped_rad": -3.0858447551727295
+      }
+    },
+    {
+      "episode_index": 4619,
+      "file": "/mnt/agent-bench-data/lingjun/lerobot-reconcile-20261010/current_dataset/data/chunk-004/episode_004619.parquet",
+      "joints": {
+        "idx21_arm_l_joint1": -0.9595273733139038,
+        "idx22_arm_l_joint2": 0.5169061422348022,
+        "idx23_arm_l_joint3": 0.23455412685871124,
+        "idx24_arm_l_joint4": -1.2595202922821045,
+        "idx25_arm_l_joint5": 0.6945468187332153,
+        "idx26_arm_l_joint6": 1.441744327545166,
+        "idx27_arm_l_joint7": -0.07520964741706848,
+        "idx61_arm_r_joint1": 0.8719816207885742,
+        "idx62_arm_r_joint2": -0.6234632134437561,
+        "idx63_arm_r_joint3": -0.19573518633842468,
+        "idx64_arm_r_joint4": 1.1488215923309326,
+        "idx65_arm_r_joint5": -0.9237557053565979,
+        "idx66_arm_r_joint6": -1.5191229581832886,
+        "idx67_arm_r_joint7": 0.10839272290468216,
+        "idx01_body_joint1": 2.6098461933243833e-11,
+        "idx02_body_joint2": 0.5235987901687622,
+        "idx11_head_joint1": -1.3820762242988671e-11,
+        "idx12_head_joint2": 0.4363323152065277,
+        "idx41_gripper_l_outer_joint1": 0.7843981385231018,
+        "idx81_gripper_r_outer_joint1": 0.7843981385231018,
+        "base_x_world_m": 1.7474145889282227,
+        "base_y_world_m": -0.6009438633918762,
+        "base_yaw_world_unwrapped_rad": -3.0854625701904297
+      }
+    },
+    {
+      "episode_index": 4620,
+      "file": "/mnt/agent-bench-data/lingjun/lerobot-reconcile-20261010/current_dataset/data/chunk-004/episode_004620.parquet",
+      "joints": {
+        "idx21_arm_l_joint1": -0.9234312772750854,
+        "idx22_arm_l_joint2": 0.5028628706932068,
+        "idx23_arm_l_joint3": 0.307710200548172,
+        "idx24_arm_l_joint4": -1.2796475887298584,
+        "idx25_arm_l_joint5": 0.7218775749206543,
+        "idx26_arm_l_joint6": 1.4369717836380005,
+        "idx27_arm_l_joint7": -0.1711466759443283,
+        "idx61_arm_r_joint1": 1.0132490396499634,
+        "idx62_arm_r_joint2": -0.8032433390617371,
+        "idx63_arm_r_joint3": -0.25985535979270935,
+        "idx64_arm_r_joint4": 1.23428213596344,
+        "idx65_arm_r_joint5": -0.8875000476837158,
+        "idx66_arm_r_joint6": -1.5145944356918335,
+        "idx67_arm_r_joint7": 0.2029193937778473,
+        "idx01_body_joint1": 8.773000555184485e-12,
+        "idx02_body_joint2": 0.5235987901687622,
+        "idx11_head_joint1": -3.754795085963991e-11,
+        "idx12_head_joint2": 0.4363323152065277,
+        "idx41_gripper_l_outer_joint1": 0.7843981385231018,
+        "idx81_gripper_r_outer_joint1": 0.7843981385231018,
+        "base_x_world_m": 1.7417633533477783,
+        "base_y_world_m": -0.637951135635376,
+        "base_yaw_world_unwrapped_rad": 3.1266531944274902
+      }
+    },
+    {
+      "episode_index": 4622,
+      "file": "/mnt/agent-bench-data/lingjun/lerobot-reconcile-20261010/current_dataset/data/chunk-004/episode_004622.parquet",
+      "joints": {
+        "idx21_arm_l_joint1": -1.0086084604263306,
+        "idx22_arm_l_joint2": 0.5909302830696106,
+        "idx23_arm_l_joint3": 0.24114465713500977,
+        "idx24_arm_l_joint4": -1.3003982305526733,
+        "idx25_arm_l_joint5": 0.6785416007041931,
+        "idx26_arm_l_joint6": 1.3251415491104126,
+        "idx27_arm_l_joint7": -0.17170941829681396,
+        "idx61_arm_r_joint1": 0.9177300930023193,
+        "idx62_arm_r_joint2": -0.8658384084701538,
+        "idx63_arm_r_joint3": -0.20420977473258972,
+        "idx64_arm_r_joint4": 1.4433438777923584,
+        "idx65_arm_r_joint5": -0.8950557708740234,
+        "idx66_arm_r_joint6": -1.3911609649658203,
+        "idx67_arm_r_joint7": 0.3165738582611084,
+        "idx01_body_joint1": 3.1733744104700534e-11,
+        "idx02_body_joint2": 0.5235987901687622,
+        "idx11_head_joint1": -2.9151230040991294e-11,
+        "idx12_head_joint2": 0.4363323152065277,
+        "idx41_gripper_l_outer_joint1": 0.7843981385231018,
+        "idx81_gripper_r_outer_joint1": 0.7843981385231018,
+        "base_x_world_m": 1.7179310321807861,
+        "base_y_world_m": -0.6566838026046753,
+        "base_yaw_world_unwrapped_rad": 3.104778289794922
+      }
+    },
+    {
+      "episode_index": 4624,
+      "file": "/mnt/agent-bench-data/lingjun/lerobot-reconcile-20261010/current_dataset/data/chunk-004/episode_004624.parquet",
+      "joints": {
+        "idx21_arm_l_joint1": -0.9344340562820435,
+        "idx22_arm_l_joint2": 0.6012434363365173,
+        "idx23_arm_l_joint3": 0.2444329708814621,
+        "idx24_arm_l_joint4": -1.3113794326782227,
+        "idx25_arm_l_joint5": 0.6737058162689209,
+        "idx26_arm_l_joint6": 1.3289636373519897,
+        "idx27_arm_l_joint7": -0.12278646975755692,
+        "idx61_arm_r_joint1": 0.8710402250289917,
+        "idx62_arm_r_joint2": -0.6533820033073425,
+        "idx63_arm_r_joint3": -0.20165206491947174,
+        "idx64_arm_r_joint4": 1.0989925861358643,
+        "idx65_arm_r_joint5": -0.7583113312721252,
+        "idx66_arm_r_joint6": -1.6284713745117188,
+        "idx67_arm_r_joint7": 0.022781135514378548,
+        "idx01_body_joint1": 6.6599794255883804e-12,
+        "idx02_body_joint2": 0.5235987901687622,
+        "idx11_head_joint1": -1.763328025261579e-11,
+        "idx12_head_joint2": 0.4363323152065277,
+        "idx41_gripper_l_outer_joint1": 0.7843981385231018,
+        "idx81_gripper_r_outer_joint1": 0.7843981385231018,
+        "base_x_world_m": 1.7329076528549194,
+        "base_y_world_m": -0.26282185316085815,
+        "base_yaw_world_unwrapped_rad": -3.1229920387268066
+      }
+    },
+    {
+      "episode_index": 4626,
+      "file": "/mnt/agent-bench-data/lingjun/lerobot-reconcile-20261010/current_dataset/data/chunk-004/episode_004626.parquet",
+      "joints": {
+        "idx21_arm_l_joint1": -0.9378989338874817,
+        "idx22_arm_l_joint2": 0.5544382333755493,
+        "idx23_arm_l_joint3": 0.2954257130622864,
+        "idx24_arm_l_joint4": -1.2209458351135254,
+        "idx25_arm_l_joint5": 0.7194361090660095,
+        "idx26_arm_l_joint6": 1.410825252532959,
+        "idx27_arm_l_joint7": -0.14928442239761353,
+        "idx61_arm_r_joint1": 1.0221264362335205,
+        "idx62_arm_r_joint2": -0.8934401273727417,
+        "idx63_arm_r_joint3": -0.5216314792633057,
+        "idx64_arm_r_joint4": 1.4323885440826416,
+        "idx65_arm_r_joint5": -0.8462433815002441,
+        "idx66_arm_r_joint6": -1.4892417192459106,
+        "idx67_arm_r_joint7": 0.13796940445899963,
+        "idx01_body_joint1": 3.518492874832191e-8,
+        "idx02_body_joint2": 0.5235978960990906,
+        "idx11_head_joint1": 3.5952123222937615e-11,
+        "idx12_head_joint2": 0.43633079528808594,
+        "idx41_gripper_l_outer_joint1": 0.7843981385231018,
+        "idx81_gripper_r_outer_joint1": 0.7843981385231018,
+        "base_x_world_m": 1.7168611288070679,
+        "base_y_world_m": -0.4223487377166748,
+        "base_yaw_world_unwrapped_rad": -3.0889534950256348
+      }
+    },
+    {
+      "episode_index": 4629,
+      "file": "/mnt/agent-bench-data/lingjun/lerobot-reconcile-20261010/current_dataset/data/chunk-004/episode_004629.parquet",
+      "joints": {
+        "idx21_arm_l_joint1": -0.9234312772750854,
+        "idx22_arm_l_joint2": 0.5028628706932068,
+        "idx23_arm_l_joint3": 0.307710200548172,
+        "idx24_arm_l_joint4": -1.2796475887298584,
+        "idx25_arm_l_joint5": 0.7218775749206543,
+        "idx26_arm_l_joint6": 1.4369717836380005,
+        "idx27_arm_l_joint7": -0.1711466759443283,
+        "idx61_arm_r_joint1": 0.6788301467895508,
+        "idx62_arm_r_joint2": -0.6227044463157654,
+        "idx63_arm_r_joint3": -0.059297531843185425,
+        "idx64_arm_r_joint4": 1.269478440284729,
+        "idx65_arm_r_joint5": -0.7229447364807129,
+        "idx66_arm_r_joint6": -1.5624607801437378,
+        "idx67_arm_r_joint7": 0.04137632995843887,
+        "idx01_body_joint1": 3.414736549078867e-11,
+        "idx02_body_joint2": 0.5235987901687622,
+        "idx11_head_joint1": -1.5028679689610414e-11,
+        "idx12_head_joint2": 0.4363323152065277,
+        "idx41_gripper_l_outer_joint1": 0.7843981385231018,
+        "idx81_gripper_r_outer_joint1": 0.7843981385231018,
+        "base_x_world_m": 1.7417633533477783,
+        "base_y_world_m": -0.637951135635376,
+        "base_yaw_world_unwrapped_rad": 3.1266531944274902
+      }
+    },
+    {
+      "episode_index": 4641,
+      "file": "/mnt/agent-bench-data/lingjun/lerobot-reconcile-20261010/current_dataset/data/chunk-004/episode_004641.parquet",
+      "joints": {
+        "idx21_arm_l_joint1": -1.047366738319397,
+        "idx22_arm_l_joint2": 0.6365223526954651,
+        "idx23_arm_l_joint3": 0.26802682876586914,
+        "idx24_arm_l_joint4": -1.2328184843063354,
+        "idx25_arm_l_joint5": 0.7232837677001953,
+        "idx26_arm_l_joint6": 1.3992609977722168,
+        "idx27_arm_l_joint7": -0.07885633409023285,
+        "idx61_arm_r_joint1": 0.8687306046485901,
+        "idx62_arm_r_joint2": -0.8132104873657227,
+        "idx63_arm_r_joint3": -0.14475907385349274,
+        "idx64_arm_r_joint4": 1.502104640007019,
+        "idx65_arm_r_joint5": -0.9397746324539185,
+        "idx66_arm_r_joint6": -1.2895491123199463,
+        "idx67_arm_r_joint7": 0.32720598578453064,
+        "idx01_body_joint1": 0.020000075921416283,
+        "idx02_body_joint2": 0.5235977172851562,
+        "idx11_head_joint1": -3.254157707188732e-11,
+        "idx12_head_joint2": 0.4363376200199127,
+        "idx41_gripper_l_outer_joint1": 0.7843981385231018,
+        "idx81_gripper_r_outer_joint1": 0.7843981385231018,
+        "base_x_world_m": -1.002776026725769,
+        "base_y_world_m": -1.1901323795318604,
+        "base_yaw_world_unwrapped_rad": 0.08462988585233688
+      }
+    }
+  ],
+  "scope": "Remote-control variant only; other variants retain their approved posture; station/object domains unchanged."
+}

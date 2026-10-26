@@ -1,0 +1,208 @@
+{
+ "schema": "arena.coffee_table_place.initial_state.v2",
+ "api_id": "5-2",
+ "source": {
+  "episode_id": "9758661a-970c-5fd2-bac1-d7163f8d69c3",
+  "lerobot_episode_index": 95,
+  "sim_info_dir": "/mnt/agent-bench-data/lingjun/ziche/data/place_tray_lerobot_20260918/sim_info/episode_000095",
+  "dataset": "/mnt/agent-bench-data/lingjun/ziche/data/place_tray_lerobot_20260918",
+  "hand": "r",
+  "clutter_count": 3,
+  "coffee_table_variant": "cool_gray_black",
+  "tray_color": "gray",
+  "seed": 918200005,
+  "slot": 2,
+  "attempt": 5,
+  "case": "/mnt/agent-bench-data/lingjun/ziche/work/place_training_tray_20260918/cases/gatorade_m/slot_002_attempt_005",
+  "asset_release": "/mnt/agent-bench-data/lingjun/ziche/assets/shelf_pick/releases/20260916_oreo_v10",
+  "benchmark_task": "benchmark_3_4",
+  "physics_hz": 60,
+  "control_hz": 20,
+  "release_frame": 203,
+  "world_geometry_status": "CLEAR_AT_CHECKED_SAMPLES",
+  "robot_frame": "/World/Robot",
+  "sha256": {
+   "episode_json": "3b58f419b605db29d79bb97d2365eca1b7b0576fb0e4abaf13f4d8f01107aaa8",
+   "sim_info_json": "ae8f125146415b38bdb42e18c86ed2b8a88ba352e1647281dcd3957ff9741dce",
+   "appearance_json": "e86a6242ccc0d9815640beb288520261227d3178b2101058d38422ad2b12ac8b",
+   "scene_usda": "153c1431d31c23088bb11ebd43f5881f401714558884a0629df4c57ea2dc87a1",
+   "initial_state_npz": "4a7f0df3c8b744ea012c83dd2dd551244ae0377ef7bc65193466acbe083420c2",
+   "recording_20hz_npz": "2dbbd8b30cf3504ca543b419fb61e9344b052a8d072e6064862413ab39b06c46"
+  },
+  "local_recording": "references/newdata_recordings_20260918/5-2/fixed/recording_20hz.npz",
+  "scope": "held-object start, tray pose, in-tray clutter and robot station of one accepted source episode; source physics (60 Hz) and controller are NOT reproduced",
+  "role": "fixed"
+ },
+ "target_path": "/World/Assets/ShelfItems/gatorade_m",
+ "held": {
+  "position_m": [
+   -2.089442014694214,
+   0.3509497046470642,
+   0.6658594608306885
+  ],
+  "quaternion_wxyz": [
+   0.7469245599000186,
+   0.018818551550573666,
+   -0.03254706068974841,
+   0.6638450517825374
+  ]
+ },
+ "robot": {
+  "prim_path": "/World/Robot",
+  "position_m": [
+   -1.9222123622894287,
+   0.8970584273338318,
+   0.012377019971609116
+  ],
+  "quaternion_wxyz": [
+   -0.6763727664947509,
+   0.0,
+   0.0,
+   0.7365594889377485
+  ]
+ },
+ "joint_positions": {
+  "idx01_body_joint1": 0.007586667314171791,
+  "idx02_body_joint2": 0.5236273407936096,
+  "idx11_head_joint1": 2.948411292891251e-06,
+  "idx12_head_joint2": 0.4364578127861023,
+  "idx21_arm_l_joint1": -0.9562374353408813,
+  "idx61_arm_r_joint1": 0.9842097759246826,
+  "idx22_arm_l_joint2": 0.6116267442703247,
+  "idx62_arm_r_joint2": -0.6146817207336426,
+  "idx23_arm_l_joint3": 0.2369564175605774,
+  "idx63_arm_r_joint3": -0.3215008080005646,
+  "idx24_arm_l_joint4": -1.2981934547424316,
+  "idx64_arm_r_joint4": 1.4378786087036133,
+  "idx25_arm_l_joint5": 0.5785406231880188,
+  "idx65_arm_r_joint5": -0.6616502404212952,
+  "idx26_arm_l_joint6": 1.368079423904419,
+  "idx66_arm_r_joint6": -1.479148507118225,
+  "idx27_arm_l_joint7": -0.16778437793254852,
+  "idx67_arm_r_joint7": 0.21550223231315613,
+  "idx31_gripper_l_inner_joint1": -0.7844011187553406,
+  "idx41_gripper_l_outer_joint1": 0.7844011187553406,
+  "idx71_gripper_r_inner_joint1": -0.37891724705696106,
+  "idx81_gripper_r_outer_joint1": 0.3744930028915405,
+  "idx32_gripper_l_inner_joint3": -0.08809357136487961,
+  "idx42_gripper_l_outer_joint3": 0.08874634653329849,
+  "idx72_gripper_r_inner_joint3": 0.03951193392276764,
+  "idx82_gripper_r_outer_joint3": -0.04065164551138878,
+  "idx33_gripper_l_inner_joint4": 0.03159896284341812,
+  "idx43_gripper_l_outer_joint4": -0.03344009444117546,
+  "idx73_gripper_r_inner_joint4": 0.034915462136268616,
+  "idx83_gripper_r_outer_joint4": -0.034906622022390366,
+  "idx39_gripper_l_inner_joint0": 0.3945818245410919,
+  "idx49_gripper_l_outer_joint0": -0.39305248856544495,
+  "idx79_gripper_r_inner_joint0": 0.15720076858997345,
+  "idx89_gripper_r_outer_joint0": -0.1532670557498932
+ },
+ "tray": {
+  "prim_path": "/World/Assets/Tray",
+  "floor_z_m": 0.45490211957462423,
+  "position_m": [
+   -2.0962168443420985,
+   0.18787831889560852,
+   0.45000002653844173
+  ],
+  "quaternion_wxyz": [
+   0.7069764699780717,
+   0.7069764699780716,
+   -0.013574641702258711,
+   -0.013574641702258713
+  ]
+ },
+ "clutter": [
+  {
+   "prim_path": "/World/Assets/ShelfItems/sprite_c1",
+   "product": "sprite_c1",
+   "position_m": [
+    -2.021608829498291,
+    0.20210818946361542,
+    0.4548425078392029
+   ],
+   "quaternion_wxyz": [
+    0.8513644116543285,
+    3.910957629501039e-05,
+    7.0955514671181455e-06,
+    0.5245747201196158
+   ]
+  },
+  {
+   "prim_path": "/World/Assets/ShelfItems/cayman_jacked",
+   "product": "cayman_jacked",
+   "position_m": [
+    -1.982761263847351,
+    0.12263417989015579,
+    0.45485684275627136
+   ],
+   "quaternion_wxyz": [
+    0.7196377761830439,
+    -5.124678978926464e-05,
+    2.9988974707782712e-05,
+    -0.6943496724019902
+   ]
+  },
+  {
+   "prim_path": "/World/Assets/ShelfItems/gatorade_t",
+   "product": "gatorade_t",
+   "position_m": [
+    -2.0653023719787598,
+    0.11515979468822479,
+    0.45490631461143494
+   ],
+   "quaternion_wxyz": [
+    0.8646653461698383,
+    8.892770155396357e-05,
+    0.00042754799604759696,
+    0.5023481346910416
+   ]
+  }
+ ],
+ "verification": {
+  "state_reference": "recording_20hz.npz frame 0",
+  "plan_reference": "episode.json",
+  "authored_state_kind": "AUTHORED_INITIAL_STATE_ONLY_NOT_ACTUAL",
+  "authored_npz_is_a_spawn_seed": true,
+  "held_vs_authored_seed_m": 0.34567519048767276,
+  "held_min_distance_from_seed_m": 0.05,
+  "posture_joints": [
+   "idx01_body_joint1",
+   "idx02_body_joint2",
+   "idx11_head_joint1",
+   "idx12_head_joint2",
+   "idx21_arm_l_joint1",
+   "idx61_arm_r_joint1",
+   "idx22_arm_l_joint2",
+   "idx62_arm_r_joint2",
+   "idx23_arm_l_joint3",
+   "idx63_arm_r_joint3",
+   "idx24_arm_l_joint4",
+   "idx64_arm_r_joint4",
+   "idx25_arm_l_joint5",
+   "idx65_arm_r_joint5",
+   "idx26_arm_l_joint6",
+   "idx66_arm_r_joint6",
+   "idx27_arm_l_joint7",
+   "idx67_arm_r_joint7"
+  ],
+  "max_posture_joint_deviation_rad": 0.0034088832217510356,
+  "posture_joint_tolerance_rad": 0.01,
+  "max_gripper_joint_deviation_rad": 0.055015772581100464,
+  "gripper_joints_excluded": "the clamp loop closes the gripper before frame 0",
+  "max_base_position_deviation_m": 2.0632394015507316e-08,
+  "base_position_tolerance_m": 1e-06,
+  "max_base_quaternion_deviation": 2.0057491001423955e-08,
+  "base_quaternion_tolerance": 1e-06,
+  "max_clutter_position_deviation_m": 0.0005596117354213503,
+  "clutter_position_tolerance_m": 0.005,
+  "max_clutter_quaternion_deviation": 0.00042754799604759696,
+  "clutter_quaternion_tolerance": 0.005,
+  "tray_position_deviation_m": 0.0,
+  "tray_orientation_matches_baseline": true,
+  "coffee_table_xform_matches_baseline": true,
+  "baseline": "assets/house_scene_l1/demo_sim/scene_room_baseline.usda",
+  "baseline_sha256": "3d7e4924c41d0316b501d0643b45af4cf8e6783e928ec890fee2709904a5fb19"
+ },
+ "physical_acceptance": false
+}

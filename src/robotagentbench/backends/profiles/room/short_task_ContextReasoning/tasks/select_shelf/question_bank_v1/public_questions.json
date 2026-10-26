@@ -1,0 +1,1209 @@
+{
+  "schema": "shelf_context_questions.v1",
+  "status": "review_draft",
+  "language": "en",
+  "shared_instruction": "Use the situation and the latest confirmed request to select one shelf product. Touch it with either gripper. A correct touch earns 1 point and ends the episode. Touching any other stocked product fails immediately at 0 points; simultaneous correct and wrong touches also fail. Do not pick up, carry, or place the product. Shelf/frame contact is not product selection.",
+  "shared_context": "Preferences, orders, reservations and assignments in each question are explicit fictional scenario facts. They do not claim nutritional, medical or dietary properties of real brands. Not every product is stocked in every episode; all products needed to resolve this question must be present.",
+  "questions": [
+    {
+      "id": "H001",
+      "kind": "snack",
+      "context": "My order is Chomps meat stick. Kai’s order was Oreo cookies, but Kai changed it to Zbar snack bar.",
+      "scenario": "Select my item. Kai’s correction does not change my order."
+    },
+    {
+      "id": "H002",
+      "kind": "snack",
+      "context": "My order is Oreo cookies. Kai’s order was Skittles candy, but Kai changed it to Honey Maid crackers.",
+      "scenario": "Select my item. Kai’s correction does not change my order."
+    },
+    {
+      "id": "H003",
+      "kind": "drink",
+      "context": "The volunteer ordered blue Gatorade. The visitor ordered grapefruit sparkling water. The organizer ordered Good2Grow juice.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H004",
+      "kind": "snack",
+      "context": "The guest ranks Chomps meat stick first, Zbar snack bar second, and Pringles BBQ crisps third. The first choice is reserved for someone else.",
+      "scenario": "Select the guest’s highest-ranked unreserved option, even if the reserved item is still visible."
+    },
+    {
+      "id": "H005",
+      "kind": "drink",
+      "context": "Maya ordered Sprite. Leo ordered Coca-Cola. Noor ordered Starbucks bottled coffee.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H006",
+      "kind": "drink",
+      "context": "For an indoor meeting, the host requests Good2Grow juice. For a garden meeting, the host requests orange Gatorade. grapefruit sparkling water is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H007",
+      "kind": "drink",
+      "context": "The list contains Coca-Cola, Sprite, and Good2Grow juice. Good2Grow juice has been provided. Sprite has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H008",
+      "kind": "snack",
+      "context": "The original request was Chomps meat stick. The customer explicitly approved replacing it with Zbar snack bar. Oreo cookies was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H009",
+      "kind": "drink",
+      "context": "",
+      "scenario": "Both sports-drink colours look familiar, but my order was explicitly the orange Gatorade."
+    },
+    {
+      "id": "H010",
+      "kind": "drink",
+      "context": "The original request was Sprite. The customer explicitly approved replacing it with grapefruit sparkling water. Cayman Jacked was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H011",
+      "kind": "drink",
+      "context": "The old order was grapefruit sparkling water. The customer replaced that order with Good2Grow juice.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H012",
+      "kind": "drink",
+      "context": "The guest accepts Cayman Jacked or Sprite. Today they do not want Sprite. They have never requested Good2Grow juice.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H013",
+      "kind": "drink",
+      "context": "The camera operator’s item is orange Gatorade. The visitor’s item is Coca-Cola. The presenter’s item is blue Gatorade.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H014",
+      "kind": "snack",
+      "context": "The list contains Skittles candy, Oreo cookies, and Chomps meat stick. Chomps meat stick has been provided. Oreo cookies has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H015",
+      "kind": "drink",
+      "context": "The list contains Good2Grow juice, Cayman Jacked, and Coca-Cola. Coca-Cola has been provided. Cayman Jacked has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H016",
+      "kind": "snack",
+      "context": "The visitor’s item is Oreo cookies. The camera operator’s item is Skittles candy. The presenter’s item is Pringles BBQ crisps.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H017",
+      "kind": "snack",
+      "context": "The old order was Chomps meat stick. The customer replaced that order with Zbar snack bar.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H018",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The guest asked for Skittles candy, not cookies or crisps."
+    },
+    {
+      "id": "H019",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I need Sprite, not the grapefruit sparkling water; both being drinks is not enough."
+    },
+    {
+      "id": "H020",
+      "kind": "snack",
+      "context": "The guest ranks Honey Maid crackers first, Skittles candy second, and Oreo cookies third. The first choice is reserved for someone else.",
+      "scenario": "Select the guest’s highest-ranked unreserved option, even if the reserved item is still visible."
+    },
+    {
+      "id": "H021",
+      "kind": "snack",
+      "context": "The visitor’s item is Zbar snack bar. The presenter’s item is Oreo cookies. The camera operator’s item is Honey Maid crackers.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H022",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The team requested Gatorade and specified the orange one, not the blue one. Select the matching drink."
+    },
+    {
+      "id": "H023",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I am checking the shelf for the Cayman Jacked product on my receipt, not choosing any drink in a can."
+    },
+    {
+      "id": "H024",
+      "kind": "drink",
+      "context": "",
+      "scenario": "Choose the juice product branded Good2Grow; the sports-drink brand is for another order."
+    },
+    {
+      "id": "H025",
+      "kind": "snack",
+      "context": "My order is Skittles candy. Kai’s order was Pringles BBQ crisps, but Kai changed it to Oreo cookies.",
+      "scenario": "Select my item. Kai’s correction does not change my order."
+    },
+    {
+      "id": "H026",
+      "kind": "snack",
+      "context": "",
+      "scenario": "I need the Zbar item from the snack list, not a biscuit packet."
+    },
+    {
+      "id": "H027",
+      "kind": "snack",
+      "context": "The old order was Skittles candy. The customer replaced that order with Pringles BBQ crisps.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H028",
+      "kind": "drink",
+      "context": "For an indoor meeting, the host requests Sprite. For a garden meeting, the host requests Coca-Cola. grapefruit sparkling water is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H029",
+      "kind": "snack",
+      "context": "The guest ranks Zbar snack bar first, Pringles BBQ crisps second, and Oreo cookies third. The first choice is reserved for someone else.",
+      "scenario": "Select the guest’s highest-ranked unreserved option, even if the reserved item is still visible."
+    },
+    {
+      "id": "H030",
+      "kind": "drink",
+      "context": "Maya ordered Sprite. Leo ordered grapefruit sparkling water. Noor ordered Cayman Jacked.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H031",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The remaining snack on the list is Honey Maid; the cookies and crisps are already covered."
+    },
+    {
+      "id": "H032",
+      "kind": "drink",
+      "context": "The old order was grapefruit sparkling water. The customer replaced that order with Starbucks bottled coffee.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H033",
+      "kind": "drink",
+      "context": "The old order was blue Gatorade. The customer replaced that order with orange Gatorade.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H034",
+      "kind": "snack",
+      "context": "If Rina attends, choose Skittles candy; otherwise choose Zbar snack bar. Oreo cookies is the option for the separate afternoon session.",
+      "scenario": "Rina has confirmed attendance at this session. Apply the relevant condition."
+    },
+    {
+      "id": "H035",
+      "kind": "drink",
+      "context": "The camera operator’s item is Coca-Cola. The presenter’s item is Sprite. The visitor’s item is blue Gatorade.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H036",
+      "kind": "drink",
+      "context": "The list contains Starbucks bottled coffee, Cayman Jacked, and orange Gatorade. orange Gatorade has been provided. Cayman Jacked has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H037",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I need the sparkling-water product with grapefruit identification, not just any fizzy-looking drink."
+    },
+    {
+      "id": "H038",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The list calls for the crisps rather than either type of biscuit."
+    },
+    {
+      "id": "H039",
+      "kind": "drink",
+      "context": "For an indoor meeting, the host requests Starbucks bottled coffee. For a garden meeting, the host requests orange Gatorade. blue Gatorade is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H040",
+      "kind": "drink",
+      "context": "Noor ordered Good2Grow juice. Leo ordered orange Gatorade. Maya ordered blue Gatorade.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H041",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The team requested Gatorade and specified the blue one, not the orange one. Select the matching drink."
+    },
+    {
+      "id": "H042",
+      "kind": "drink",
+      "context": "The visitor ordered Sprite. The volunteer ordered Cayman Jacked. The organizer ordered grapefruit sparkling water.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H043",
+      "kind": "snack",
+      "context": "",
+      "scenario": "Choose the wrapped snack bar branded Zbar; another long narrow package is not the same order."
+    },
+    {
+      "id": "H044",
+      "kind": "snack",
+      "context": "The visitor ordered Zbar snack bar. The volunteer ordered Oreo cookies. The organizer ordered Chomps meat stick.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H045",
+      "kind": "drink",
+      "context": "The old order was orange Gatorade. The customer replaced that order with blue Gatorade.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H046",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The shopping list names Sprite. Do not replace it with another green-looking package."
+    },
+    {
+      "id": "H047",
+      "kind": "snack",
+      "context": "",
+      "scenario": "Select the snack bar rather than the Chomps meat stick; the brand requested was Zbar."
+    },
+    {
+      "id": "H048",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The remaining item on the list is candy. The biscuit order is already covered."
+    },
+    {
+      "id": "H049",
+      "kind": "snack",
+      "context": "The confirmed order has Pringles BBQ crisps and Chomps meat stick. The suggestion Oreo cookies was never ordered. Chomps meat stick has already been handed over.",
+      "scenario": "Select the outstanding confirmed item, ignoring suggestions that were not accepted."
+    },
+    {
+      "id": "H050",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I have already ordered the orange sports drink elsewhere. The shelf item I need now is blue Gatorade."
+    },
+    {
+      "id": "H051",
+      "kind": "drink",
+      "context": "Noor ordered Cayman Jacked. Leo ordered Good2Grow juice. Maya ordered Coca-Cola.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H052",
+      "kind": "snack",
+      "context": "The organizer ordered Oreo cookies. The visitor ordered Honey Maid crackers. The volunteer ordered Zbar snack bar.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H053",
+      "kind": "drink",
+      "context": "The visitor ordered grapefruit sparkling water. The organizer ordered Starbucks bottled coffee. The volunteer ordered Cayman Jacked.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H054",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The request is for grapefruit sparkling water, not a lemon-lime soda or cola."
+    },
+    {
+      "id": "H055",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The order is for a bottled coffee, not a soda or a sports drink. Choose the coffee product on the shelf."
+    },
+    {
+      "id": "H056",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The order is for a Zbar snack bar, not a meat stick."
+    },
+    {
+      "id": "H057",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The shopping list says grapefruit sparkling water. Sprite is not the same request."
+    },
+    {
+      "id": "H058",
+      "kind": "snack",
+      "context": "For an indoor meeting, the host requests Honey Maid crackers. For a garden meeting, the host requests Oreo cookies. Chomps meat stick is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H059",
+      "kind": "drink",
+      "context": "My order is Starbucks bottled coffee. Kai’s order was Good2Grow juice, but Kai changed it to Coca-Cola.",
+      "scenario": "Select my item. Kai’s correction does not change my order."
+    },
+    {
+      "id": "H060",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The guest requested the coffee-shop brand Starbucks, not just any bottle with a dark label."
+    },
+    {
+      "id": "H061",
+      "kind": "snack",
+      "context": "If Rina attends, choose Chomps meat stick; otherwise choose Zbar snack bar. Oreo cookies is the option for the separate afternoon session.",
+      "scenario": "Rina has confirmed attendance at this session. Apply the relevant condition."
+    },
+    {
+      "id": "H062",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The request is for Oreo cookies, not the Honey Maid crackers."
+    },
+    {
+      "id": "H063",
+      "kind": "snack",
+      "context": "The list contains Zbar snack bar, Chomps meat stick, and Honey Maid crackers. Honey Maid crackers has been provided. Chomps meat stick has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H064",
+      "kind": "snack",
+      "context": "",
+      "scenario": "Choose the sandwich-cookie product branded Oreo; another biscuit box is not the same order."
+    },
+    {
+      "id": "H065",
+      "kind": "snack",
+      "context": "My order is Pringles BBQ crisps. Kai’s order was Chomps meat stick, but Kai changed it to Honey Maid crackers.",
+      "scenario": "Select my item. Kai’s correction does not change my order."
+    },
+    {
+      "id": "H066",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The guest specifically ordered Coca-Cola, not the lemon-lime soda."
+    },
+    {
+      "id": "H067",
+      "kind": "snack",
+      "context": "The original request was Chomps meat stick. The customer explicitly approved replacing it with Pringles BBQ crisps. Zbar snack bar was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H068",
+      "kind": "snack",
+      "context": "",
+      "scenario": "I need the meat-stick snack. A similarly narrow wrapped bar is not the same product."
+    },
+    {
+      "id": "H069",
+      "kind": "drink",
+      "context": "The list contains Sprite, Coca-Cola, and Good2Grow juice. Good2Grow juice has been provided. Coca-Cola has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H070",
+      "kind": "snack",
+      "context": "The confirmed order has Chomps meat stick and Zbar snack bar. The suggestion Skittles candy was never ordered. Zbar snack bar has already been handed over.",
+      "scenario": "Select the outstanding confirmed item, ignoring suggestions that were not accepted."
+    },
+    {
+      "id": "H071",
+      "kind": "snack",
+      "context": "First I requested Oreo cookies. Then I considered Honey Maid crackers, but did not confirm the change. I have now explicitly confirmed my original request.",
+      "scenario": "Select the confirmed item, not the alternative I merely considered."
+    },
+    {
+      "id": "H072",
+      "kind": "snack",
+      "context": "The guest ranks Zbar snack bar first, Chomps meat stick second, and Skittles candy third. The first choice is reserved for someone else.",
+      "scenario": "Select the guest’s highest-ranked unreserved option, even if the reserved item is still visible."
+    },
+    {
+      "id": "H073",
+      "kind": "drink",
+      "context": "The original request was Starbucks bottled coffee. The customer explicitly approved replacing it with Good2Grow juice. grapefruit sparkling water was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H074",
+      "kind": "drink",
+      "context": "My order is orange Gatorade. Kai’s order was grapefruit sparkling water, but Kai changed it to blue Gatorade.",
+      "scenario": "Select my item. Kai’s correction does not change my order."
+    },
+    {
+      "id": "H075",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The host wants the same Cayman Jacked brand as last time; packaging shape alone is not enough to choose."
+    },
+    {
+      "id": "H076",
+      "kind": "snack",
+      "context": "The guest accepts Oreo cookies or Honey Maid crackers. Today they do not want Honey Maid crackers. They have never requested Skittles candy.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H077",
+      "kind": "snack",
+      "context": "The list contains Oreo cookies, Honey Maid crackers, and Skittles candy. Skittles candy has been provided. Honey Maid crackers has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H078",
+      "kind": "snack",
+      "context": "If Rina attends, choose Honey Maid crackers; otherwise choose Oreo cookies. Pringles BBQ crisps is the option for the separate afternoon session.",
+      "scenario": "Rina has confirmed attendance at this session. Apply the relevant condition."
+    },
+    {
+      "id": "H079",
+      "kind": "snack",
+      "context": "",
+      "scenario": "Choose the Chomps item on the snack list; the cookies are for another order."
+    },
+    {
+      "id": "H080",
+      "kind": "snack",
+      "context": "The guest accepts Pringles BBQ crisps or Oreo cookies. Today they do not want Oreo cookies. They have never requested Zbar snack bar.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H081",
+      "kind": "drink",
+      "context": "The camera operator’s item is Starbucks bottled coffee. The presenter’s item is Cayman Jacked. The visitor’s item is blue Gatorade.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H082",
+      "kind": "snack",
+      "context": "The confirmed order has Zbar snack bar and Chomps meat stick. The suggestion Oreo cookies was never ordered. Chomps meat stick has already been handed over.",
+      "scenario": "Select the outstanding confirmed item, ignoring suggestions that were not accepted."
+    },
+    {
+      "id": "H083",
+      "kind": "snack",
+      "context": "The guest accepts Skittles candy or Pringles BBQ crisps. Today they do not want Pringles BBQ crisps. They have never requested Zbar snack bar.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H084",
+      "kind": "drink",
+      "context": "My order is blue Gatorade. Kai’s order was Starbucks bottled coffee, but Kai changed it to orange Gatorade.",
+      "scenario": "Select my item. Kai’s correction does not change my order."
+    },
+    {
+      "id": "H085",
+      "kind": "snack",
+      "context": "The guest accepts Honey Maid crackers or Oreo cookies. Today they do not want Oreo cookies. They have never requested Skittles candy.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H086",
+      "kind": "drink",
+      "context": "The original request was Good2Grow juice. The customer explicitly approved replacing it with Starbucks bottled coffee. grapefruit sparkling water was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H087",
+      "kind": "snack",
+      "context": "First I requested Chomps meat stick. Then I considered Zbar snack bar, but did not confirm the change. I have now explicitly confirmed my original request.",
+      "scenario": "Select the confirmed item, not the alternative I merely considered."
+    },
+    {
+      "id": "H088",
+      "kind": "drink",
+      "context": "",
+      "scenario": "We already have the juice. Identify the bottled coffee for the remaining coffee order."
+    },
+    {
+      "id": "H089",
+      "kind": "snack",
+      "context": "The volunteer ordered Honey Maid crackers. The visitor ordered Oreo cookies. The organizer ordered Pringles BBQ crisps.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H090",
+      "kind": "snack",
+      "context": "The organizer ordered Honey Maid crackers. The volunteer ordered Chomps meat stick. The visitor ordered Oreo cookies.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H091",
+      "kind": "snack",
+      "context": "The confirmed order has Oreo cookies and Honey Maid crackers. The suggestion Chomps meat stick was never ordered. Honey Maid crackers has already been handed over.",
+      "scenario": "Select the outstanding confirmed item, ignoring suggestions that were not accepted."
+    },
+    {
+      "id": "H092",
+      "kind": "drink",
+      "context": "For an indoor meeting, the host requests Cayman Jacked. For a garden meeting, the host requests blue Gatorade. Sprite is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H093",
+      "kind": "drink",
+      "context": "The old order was Sprite. The customer replaced that order with Coca-Cola.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H094",
+      "kind": "drink",
+      "context": "The old order was grapefruit sparkling water. The customer replaced that order with Cayman Jacked.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H095",
+      "kind": "snack",
+      "context": "The guest ranks Honey Maid crackers first, Oreo cookies second, and Pringles BBQ crisps third. The first choice is reserved for someone else.",
+      "scenario": "Select the guest’s highest-ranked unreserved option, even if the reserved item is still visible."
+    },
+    {
+      "id": "H096",
+      "kind": "drink",
+      "context": "The old order was Sprite. The customer replaced that order with grapefruit sparkling water.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H097",
+      "kind": "snack",
+      "context": "The volunteer ordered Skittles candy. The organizer ordered Zbar snack bar. The visitor ordered Chomps meat stick.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H098",
+      "kind": "snack",
+      "context": "The guest accepts Chomps meat stick or Zbar snack bar. Today they do not want Zbar snack bar. They have never requested Skittles candy.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H099",
+      "kind": "snack",
+      "context": "Leo ordered Honey Maid crackers. Noor ordered Pringles BBQ crisps. Maya ordered Oreo cookies.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H100",
+      "kind": "snack",
+      "context": "",
+      "scenario": "I need the Oreo packet for this order. The cracker request has already been fulfilled."
+    },
+    {
+      "id": "H101",
+      "kind": "snack",
+      "context": "If Rina attends, choose Zbar snack bar; otherwise choose Chomps meat stick. Skittles candy is the option for the separate afternoon session.",
+      "scenario": "Rina has confirmed attendance at this session. Apply the relevant condition."
+    },
+    {
+      "id": "H102",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I need the cola product for this order. A different drink in similar packaging is not a substitute."
+    },
+    {
+      "id": "H103",
+      "kind": "drink",
+      "context": "The organizer ordered orange Gatorade. The visitor ordered blue Gatorade. The volunteer ordered Cayman Jacked.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H104",
+      "kind": "snack",
+      "context": "My order is Honey Maid crackers. Kai’s order was Skittles candy, but Kai changed it to Oreo cookies.",
+      "scenario": "Select my item. Kai’s correction does not change my order."
+    },
+    {
+      "id": "H105",
+      "kind": "snack",
+      "context": "The old order was Honey Maid crackers. The customer replaced that order with Oreo cookies.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H106",
+      "kind": "snack",
+      "context": "My order is Zbar snack bar. Kai’s order was Pringles BBQ crisps, but Kai changed it to Chomps meat stick.",
+      "scenario": "Select my item. Kai’s correction does not change my order."
+    },
+    {
+      "id": "H107",
+      "kind": "drink",
+      "context": "For an indoor meeting, the host requests blue Gatorade. For a garden meeting, the host requests orange Gatorade. grapefruit sparkling water is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H108",
+      "kind": "snack",
+      "context": "The camera operator’s item is Oreo cookies. The visitor’s item is Zbar snack bar. The presenter’s item is Honey Maid crackers.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H109",
+      "kind": "snack",
+      "context": "Maya ordered Honey Maid crackers. Noor ordered Skittles candy. Leo ordered Oreo cookies.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H110",
+      "kind": "snack",
+      "context": "The old order was Oreo cookies. The customer replaced that order with Honey Maid crackers.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H111",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The order calls for a Chomps meat stick, not a cereal-style snack bar."
+    },
+    {
+      "id": "H112",
+      "kind": "drink",
+      "context": "The guest accepts Sprite or Coca-Cola. Today they do not want Coca-Cola. They have never requested orange Gatorade.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H113",
+      "kind": "snack",
+      "context": "The original request was Chomps meat stick. The customer explicitly approved replacing it with Skittles candy. Honey Maid crackers was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H114",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The adult host asked for the Cayman-branded drink for their own order. This is not the coffee or sports-drink order."
+    },
+    {
+      "id": "H115",
+      "kind": "snack",
+      "context": "For an indoor meeting, the host requests Chomps meat stick. For a garden meeting, the host requests Zbar snack bar. Pringles BBQ crisps is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H116",
+      "kind": "drink",
+      "context": "",
+      "scenario": "My sports-drink order is the blue version. Another drink with blue packaging would not satisfy it."
+    },
+    {
+      "id": "H117",
+      "kind": "snack",
+      "context": "The confirmed order has Honey Maid crackers and Oreo cookies. The suggestion Chomps meat stick was never ordered. Oreo cookies has already been handed over.",
+      "scenario": "Select the outstanding confirmed item, ignoring suggestions that were not accepted."
+    },
+    {
+      "id": "H118",
+      "kind": "snack",
+      "context": "The camera operator’s item is Zbar snack bar. The visitor’s item is Honey Maid crackers. The presenter’s item is Chomps meat stick.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H119",
+      "kind": "snack",
+      "context": "",
+      "scenario": "I need the Skittles packet for this order, not a similarly colourful drink."
+    },
+    {
+      "id": "H120",
+      "kind": "drink",
+      "context": "The visitor’s item is Coca-Cola. The camera operator’s item is blue Gatorade. The presenter’s item is Starbucks bottled coffee.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H121",
+      "kind": "snack",
+      "context": "The old order was Zbar snack bar. The customer replaced that order with Skittles candy.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H122",
+      "kind": "snack",
+      "context": "The guest accepts Zbar snack bar or Chomps meat stick. Today they do not want Chomps meat stick. They have never requested Pringles BBQ crisps.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H123",
+      "kind": "snack",
+      "context": "",
+      "scenario": "Choose the Pringles BBQ product; a different cylindrical container is not enough."
+    },
+    {
+      "id": "H124",
+      "kind": "snack",
+      "context": "For an indoor meeting, the host requests Zbar snack bar. For a garden meeting, the host requests Chomps meat stick. Honey Maid crackers is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H125",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The request is for Honey Maid crackers, not the sandwich cookies."
+    },
+    {
+      "id": "H126",
+      "kind": "snack",
+      "context": "The list contains Pringles BBQ crisps, Honey Maid crackers, and Oreo cookies. Oreo cookies has been provided. Honey Maid crackers has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H127",
+      "kind": "drink",
+      "context": "The list contains Cayman Jacked, orange Gatorade, and grapefruit sparkling water. grapefruit sparkling water has been provided. orange Gatorade has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H128",
+      "kind": "snack",
+      "context": "For an indoor meeting, the host requests Skittles candy. For a garden meeting, the host requests Honey Maid crackers. Chomps meat stick is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H129",
+      "kind": "snack",
+      "context": "",
+      "scenario": "Choose the Honey Maid product from the biscuit options. Oreo is for another order."
+    },
+    {
+      "id": "H130",
+      "kind": "snack",
+      "context": "The original request was Zbar snack bar. The customer explicitly approved replacing it with Chomps meat stick. Honey Maid crackers was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H131",
+      "kind": "drink",
+      "context": "The visitor’s item is grapefruit sparkling water. The presenter’s item is Good2Grow juice. The camera operator’s item is blue Gatorade.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H132",
+      "kind": "snack",
+      "context": "Leo ordered Pringles BBQ crisps. Noor ordered Oreo cookies. Maya ordered Chomps meat stick.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H133",
+      "kind": "snack",
+      "context": "The organizer ordered Skittles candy. The volunteer ordered Chomps meat stick. The visitor ordered Pringles BBQ crisps.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H134",
+      "kind": "drink",
+      "context": "Leo ordered blue Gatorade. Maya ordered orange Gatorade. Noor ordered Good2Grow juice.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H135",
+      "kind": "snack",
+      "context": "For an indoor meeting, the host requests Pringles BBQ crisps. For a garden meeting, the host requests Zbar snack bar. Chomps meat stick is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H136",
+      "kind": "snack",
+      "context": "The list contains Chomps meat stick, Zbar snack bar, and Honey Maid crackers. Honey Maid crackers has been provided. Zbar snack bar has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H137",
+      "kind": "drink",
+      "context": "The list contains blue Gatorade, orange Gatorade, and Good2Grow juice. Good2Grow juice has been provided. orange Gatorade has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H138",
+      "kind": "snack",
+      "context": "First I requested Pringles BBQ crisps. Then I considered Oreo cookies, but did not confirm the change. I have now explicitly confirmed my original request.",
+      "scenario": "Select the confirmed item, not the alternative I merely considered."
+    },
+    {
+      "id": "H139",
+      "kind": "drink",
+      "context": "The original request was blue Gatorade. The customer explicitly approved replacing it with orange Gatorade. Sprite was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H140",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The remaining snack request is a meat stick, not crisps or candy."
+    },
+    {
+      "id": "H141",
+      "kind": "drink",
+      "context": "The list contains grapefruit sparkling water, Sprite, and blue Gatorade. blue Gatorade has been provided. Sprite has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H142",
+      "kind": "drink",
+      "context": "The list contains orange Gatorade, blue Gatorade, and Sprite. Sprite has been provided. blue Gatorade has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H143",
+      "kind": "drink",
+      "context": "The camera operator’s item is blue Gatorade. The presenter’s item is orange Gatorade. The visitor’s item is Sprite.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H144",
+      "kind": "drink",
+      "context": "The guest accepts orange Gatorade or blue Gatorade. Today they do not want blue Gatorade. They have never requested Good2Grow juice.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H145",
+      "kind": "snack",
+      "context": "For an indoor meeting, the host requests Oreo cookies. For a garden meeting, the host requests Honey Maid crackers. Pringles BBQ crisps is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H146",
+      "kind": "snack",
+      "context": "The original request was Honey Maid crackers. The customer explicitly approved replacing it with Oreo cookies. Zbar snack bar was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H147",
+      "kind": "snack",
+      "context": "The visitor’s item is Chomps meat stick. The camera operator’s item is Zbar snack bar. The presenter’s item is Skittles candy.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H148",
+      "kind": "drink",
+      "context": "The visitor ordered orange Gatorade. The volunteer ordered Sprite. The organizer ordered blue Gatorade.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H149",
+      "kind": "snack",
+      "context": "If Rina attends, choose Oreo cookies; otherwise choose Honey Maid crackers. Zbar snack bar is the option for the separate afternoon session.",
+      "scenario": "Rina has confirmed attendance at this session. Apply the relevant condition."
+    },
+    {
+      "id": "H150",
+      "kind": "snack",
+      "context": "",
+      "scenario": "I need the cracker product for this order, not the wrapped bar."
+    },
+    {
+      "id": "H151",
+      "kind": "drink",
+      "context": "",
+      "scenario": "Select the lemon-lime soda branded Sprite. The Coca-Cola order is separate."
+    },
+    {
+      "id": "H152",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The guest ordered Sprite rather than cola. Choose the lemon-lime soda product."
+    },
+    {
+      "id": "H153",
+      "kind": "snack",
+      "context": "The confirmed order has Skittles candy and Chomps meat stick. The suggestion Zbar snack bar was never ordered. Chomps meat stick has already been handed over.",
+      "scenario": "Select the outstanding confirmed item, ignoring suggestions that were not accepted."
+    },
+    {
+      "id": "H154",
+      "kind": "drink",
+      "context": "The original request was Good2Grow juice. The customer explicitly approved replacing it with Cayman Jacked. Sprite was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H155",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The guest requested BBQ crisps. Cookies and candy are not substitutes for that snack."
+    },
+    {
+      "id": "H156",
+      "kind": "drink",
+      "context": "",
+      "scenario": "Find the grapefruit sparkling-water product; the coffee and cola requests have already been handled."
+    },
+    {
+      "id": "H157",
+      "kind": "snack",
+      "context": "",
+      "scenario": "I need the barbecue-flavoured Pringles package, not the wrapped snack bar."
+    },
+    {
+      "id": "H158",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I need the Good2Grow juice bottle from the shopping list, not coffee or soda."
+    },
+    {
+      "id": "H159",
+      "kind": "snack",
+      "context": "The visitor’s item is Honey Maid crackers. The camera operator’s item is Chomps meat stick. The presenter’s item is Zbar snack bar.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H160",
+      "kind": "snack",
+      "context": "The old order was Zbar snack bar. The customer replaced that order with Chomps meat stick.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H161",
+      "kind": "snack",
+      "context": "Noor ordered Pringles BBQ crisps. Leo ordered Zbar snack bar. Maya ordered Chomps meat stick.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H162",
+      "kind": "snack",
+      "context": "The guest ranks Oreo cookies first, Honey Maid crackers second, and Skittles candy third. The first choice is reserved for someone else.",
+      "scenario": "Select the guest’s highest-ranked unreserved option, even if the reserved item is still visible."
+    },
+    {
+      "id": "H163",
+      "kind": "drink",
+      "context": "For an indoor meeting, the host requests grapefruit sparkling water. For a garden meeting, the host requests Sprite. Cayman Jacked is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H164",
+      "kind": "drink",
+      "context": "The organizer ordered Sprite. The visitor ordered Coca-Cola. The volunteer ordered blue Gatorade.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H165",
+      "kind": "snack",
+      "context": "Leo ordered Chomps meat stick. Noor ordered Honey Maid crackers. Maya ordered Zbar snack bar.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H166",
+      "kind": "drink",
+      "context": "The guest accepts Good2Grow juice or Sprite. Today they do not want Sprite. They have never requested grapefruit sparkling water.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H167",
+      "kind": "drink",
+      "context": "The original request was orange Gatorade. The customer explicitly approved replacing it with blue Gatorade. Cayman Jacked was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H168",
+      "kind": "drink",
+      "context": "The guest accepts Coca-Cola or Sprite. Today they do not want Sprite. They have never requested grapefruit sparkling water.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H169",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The remaining order is the Coca-Cola brand. The sparkling-water order is already covered."
+    },
+    {
+      "id": "H170",
+      "kind": "drink",
+      "context": "The visitor ordered grapefruit sparkling water. The organizer ordered Cayman Jacked. The volunteer ordered orange Gatorade.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H171",
+      "kind": "drink",
+      "context": "",
+      "scenario": "Repeat the blue Gatorade order; the orange version is for a different person."
+    },
+    {
+      "id": "H172",
+      "kind": "drink",
+      "context": "",
+      "scenario": "Choose the Coca-Cola from the shelf; the Sprite request belongs to another guest."
+    },
+    {
+      "id": "H173",
+      "kind": "drink",
+      "context": "Leo ordered Cayman Jacked. Maya ordered Coca-Cola. Noor ordered Good2Grow juice.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H174",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The shopping note says Cayman Jacked. The similarly shaped soda containers belong to the other order."
+    },
+    {
+      "id": "H175",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The snack should be Oreo cookies, not candy or crisps."
+    },
+    {
+      "id": "H176",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The previous Good2Grow juice was the one requested again. Do not replace it with a different bottled drink."
+    },
+    {
+      "id": "H177",
+      "kind": "snack",
+      "context": "First I requested Honey Maid crackers. Then I considered Oreo cookies, but did not confirm the change. I have now explicitly confirmed my original request.",
+      "scenario": "Select the confirmed item, not the alternative I merely considered."
+    },
+    {
+      "id": "H178",
+      "kind": "snack",
+      "context": "If Rina attends, choose Pringles BBQ crisps; otherwise choose Skittles candy. Oreo cookies is the option for the separate afternoon session.",
+      "scenario": "Rina has confirmed attendance at this session. Apply the relevant condition."
+    },
+    {
+      "id": "H179",
+      "kind": "drink",
+      "context": "My order is Cayman Jacked. Kai’s order was Good2Grow juice, but Kai changed it to Coca-Cola.",
+      "scenario": "Select my item. Kai’s correction does not change my order."
+    },
+    {
+      "id": "H180",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I want the Starbucks bottled drink for my coffee order. The juice order is separate."
+    },
+    {
+      "id": "H181",
+      "kind": "drink",
+      "context": "The original request was Coca-Cola. The customer explicitly approved replacing it with Sprite. Starbucks bottled coffee was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H182",
+      "kind": "drink",
+      "context": "The volunteer ordered grapefruit sparkling water. The organizer ordered Coca-Cola. The visitor ordered Sprite.",
+      "scenario": "The organizer must be served before the other two people. Select the organizer’s item."
+    },
+    {
+      "id": "H183",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I need the orange version of the sports drink. An orange-looking juice bottle is not a substitute."
+    },
+    {
+      "id": "H184",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I want to repeat my orange Gatorade order. Do not switch to the blue version just because it is nearer."
+    },
+    {
+      "id": "H185",
+      "kind": "drink",
+      "context": "The old order was Coca-Cola. The customer replaced that order with Sprite.",
+      "scenario": "Select the item for the revised order, not the cancelled one."
+    },
+    {
+      "id": "H186",
+      "kind": "snack",
+      "context": "The list contains Honey Maid crackers, Oreo cookies, and Chomps meat stick. Chomps meat stick has been provided. Oreo cookies has also been provided.",
+      "scenario": "Select the one outstanding item. Do not duplicate an item already provided."
+    },
+    {
+      "id": "H187",
+      "kind": "snack",
+      "context": "The original request was Oreo cookies. The customer explicitly approved replacing it with Honey Maid crackers. Zbar snack bar was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H188",
+      "kind": "drink",
+      "context": "The guest accepts Starbucks bottled coffee or Sprite. Today they do not want Sprite. They have never requested blue Gatorade.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H189",
+      "kind": "drink",
+      "context": "Maya ordered Coca-Cola. Noor ordered grapefruit sparkling water. Leo ordered Starbucks bottled coffee.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H190",
+      "kind": "snack",
+      "context": "Noor ordered Pringles BBQ crisps. Leo ordered Skittles candy. Maya ordered Chomps meat stick.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H191",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The order names Good2Grow juice. A similarly coloured sports drink is not the requested product."
+    },
+    {
+      "id": "H192",
+      "kind": "drink",
+      "context": "The camera operator’s item is Sprite. The visitor’s item is Good2Grow juice. The presenter’s item is grapefruit sparkling water.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H193",
+      "kind": "drink",
+      "context": "The presenter’s item is Coca-Cola. The camera operator’s item is Sprite. The visitor’s item is Starbucks bottled coffee.",
+      "scenario": "Sam and Alex swapped roles. Sam is now the presenter. Select the item assigned to Sam’s current role."
+    },
+    {
+      "id": "H194",
+      "kind": "drink",
+      "context": "For an indoor meeting, the host requests Coca-Cola. For a garden meeting, the host requests Sprite. blue Gatorade is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H195",
+      "kind": "drink",
+      "context": "Noor ordered Good2Grow juice. Maya ordered Coca-Cola. Leo ordered Sprite.",
+      "scenario": "Maya has already been served. Leo is waiting; select his item, not the next person’s."
+    },
+    {
+      "id": "H196",
+      "kind": "drink",
+      "context": "The original request was Sprite. The customer explicitly approved replacing it with Coca-Cola. blue Gatorade was suggested but not approved.",
+      "scenario": "Follow the approved substitution, not the original order or the unapproved suggestion."
+    },
+    {
+      "id": "H197",
+      "kind": "drink",
+      "context": "The guest accepts blue Gatorade or orange Gatorade. Today they do not want orange Gatorade. They have never requested Sprite.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H198",
+      "kind": "drink",
+      "context": "For an indoor meeting, the host requests orange Gatorade. For a garden meeting, the host requests blue Gatorade. grapefruit sparkling water is reserved for a separate event.",
+      "scenario": "The meeting has moved from the garden to indoors. Select the item for the current venue."
+    },
+    {
+      "id": "H199",
+      "kind": "drink",
+      "context": "The guest accepts grapefruit sparkling water or Sprite. Today they do not want Sprite. They have never requested orange Gatorade.",
+      "scenario": "Respect the guest’s current restriction and choose one acceptable item."
+    },
+    {
+      "id": "H200",
+      "kind": "snack",
+      "context": "",
+      "scenario": "Choose the small candy product branded Skittles rather than the snack bar."
+    }
+  ]
+}

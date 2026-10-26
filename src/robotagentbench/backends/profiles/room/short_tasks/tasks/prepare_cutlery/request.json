@@ -1,0 +1,7 @@
+{
+  "schema": "openend.short_task.request.v1",
+  "task_name": "prepare_cutlery",
+  "rule_version": "openend.short_task.prepare_cutlery.v1",
+  "seed": 47,
+  "layout_id": null
+}

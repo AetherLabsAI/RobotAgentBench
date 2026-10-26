@@ -1,0 +1,94 @@
+{
+  "schema": "openend.short_task.component_sources.v1",
+  "source_commit": "ef47a69776d709047c35293c28cc0505d6c2b6f9",
+  "component_rule_version": "arena.coffee_machine.process.v4",
+  "files_sha256": {
+    "openend/tasks/scores.py": "ca4d61dda84422ae8dc0ca9bf91f49de0dfd301b0cacd69de4d38be0a8f77e07",
+    "openend/tasks/components.py": "11351362893c9e1a5df0f2f2684f86df7ce6c88ecadf8115595b2ac85ee6ec3a",
+    "openend/tasks/meal_tray/preparation.py": "4519077259d595bfefb2749c5652ce83df62faa691d58eb7bd8fc4b60e5efc68",
+    "evaluation/tasks/coffee_machine/process_rules.py": "e0abb8ef213b7dd35755637ede7e066f5dc919e24adfe19adf018ab6a4261fdc",
+    "evaluation/tasks/coffee_machine/facts.py": "737b643c8048be3f5bf5d1a8ffbf08277d898f7686d42c5b0a1b3e641a83c87c",
+    "evaluation/tasks/coffee_machine/openended_composite_v1/composite.py": "03410eefba6cef0c18ad746e6458f26930055d22ac54efca32618751b8ee0414",
+    "openend/tasks/holding_follow_v1/coffee.py": "5bed01b18fbc0acc1ef3ee34b9a5ce89b99232382f34ec54d714da189d962c57",
+    "openend/tasks/holding_follow_v1/detection.py": "11df2be850fe9c815c4b185d69bddcab47b03ca5109661eff81b5356ff8a54c6",
+    "openend/room.py": "ab98899c634002c339525b06fb9a1c91f52dfcd15525f8932cf152c7b7f34e03",
+    "openend/tasks/coffee_startup.py": "e073707032a4d2d34cf36ee4f3c799aa9d59346ff5ea41e2710ec56c67d0724b",
+    "openend/tasks/coffee_counter.py": "1322597cf87527501c9b016cdfcd5aa5b607ad72eeebdc4e0f867694b2cc5953",
+    "openend/tasks/all_objects_integration/idle_devices.py": "d90a7945cc0d252e1e87277397483cc30b4efdaee377d61b1a1fbe1721806d44",
+    "openend/tasks/meal_tray/nonmotion_closeout_v1/initial_windows.py": "1ca088609be6bf5468691c9c70deac99c66e395c71cce15a8be5918a44178f64",
+    "evaluation/tasks/coffee_machine/isaac_evidence.py": "62eb0ba1c373374033eb28c10258dbca7c98d0c3ad6657c7489d53d2e993b111",
+    "evaluation/tasks/coffee_machine/api_runtime.py": "183232bdb9d3c43a3f00d222d9152807d1e0919a034e45d6d3ac561494100d1d",
+    "short_tasks/tasks/interaction_progress_v1/__init__.py": "e227495daccffb435cd7c8edaf8fee2fb5d3788b533f587f28b751d7c7a9535f",
+    "short_tasks/tasks/interaction_progress_v1/scoring.py": "f31090a61d27adbc1d90efefacfec0fb00046621fc1cea90ebe7e004ecc9b29d",
+    "short_tasks/tasks/interaction_progress_v1/policy.py": "d6adb74ab7db6760480155eb6aaefd7f6b5de85501599a063bda72621265e237",
+    "short_tasks/tasks/interaction_progress_v1/bindings.py": "6c023d2560d68a05e660ec8690effd9f7750d49a8f385ba66f79dba626992f54",
+    "short_tasks/tasks/interaction_progress_v1/geometry.py": "4f4c454755831fd21c7d095efc6abb37ed06089b697e4235710dd358c0f89f03",
+    "short_tasks/tasks/interaction_progress_v1/contact.py": "d57f3eb9b6ecd2ba4da8e6ab864ff7e8bc8525e5269fb9ceb74750eef254a13d",
+    "short_tasks/tasks/interaction_progress_v1/native.py": "d448cc25c03cface7a0bed118fbb7a8072bf9caf864bb87a79f2a631fc055ebf",
+    "short_tasks/runtime.py": "edc288e06230a592a5bb0fd232727d8e377e4b52d9cf75e9028596a886764a3c",
+    "short_tasks/registry.py": "62bee79678f22b9b77cde9ff62dbd26cc8177346d41f31630e225ce5b86d2763",
+    "short_tasks/common/episode.py": "36b9c47865130a3d9ba3be1c0aebf33bc763fdb74863d5b099d099699f2f3030",
+    "short_tasks/tasks/no_deductions_v1/__init__.py": "4d369002d0423d256d835b9ab6eb2b93bc2ca2d0f6b6f95d76129fdbb58b50a6",
+    "short_tasks/tasks/no_deductions_v1/policy.py": "e3cc393f3d4bb4d6b376dd6c4edac90fdc14e9252bd0f02ad0c7fef56bb1be86",
+    "short_tasks/common/result.schema.json": "7a0ff76e78fd1483a300fb87ff0bb090c83f6eafd4aed5e7cc9052ebc5953be4",
+    "short_tasks/tasks/navigation_progress_v1/__init__.py": "8d92bda5fc390ecca30d82f7e96194bde0cef2078375349f73ef6bfc8d733169",
+    "short_tasks/tasks/navigation_progress_v1/rules.py": "cf8ea721b9095808bffe4aef3fe39cff33e5c5d113dc6d810306524c1a9c7d7d",
+    "arena_api/robot_drive_defaults.py": "1adb35f0f422d4dc6b0a9be43d786a46ef8d91dd9b3e38bc72e4161615733fe6",
+    "short_tasks/agent_probe_v1/robot_parameter_alignment.py": "224a176df609253478264de51e5506bfe8fce8733d16c75c50d96e08824b697c",
+    "short_tasks/agent_probe_v1/native_owner.py": "c4f8c6f812fde94c29234e7b859863cb5190aa19455d1cd9d19e16f4c11281f1"
+  },
+  "policy_overrides": [
+    "2026-10-15 user-approved stable_return_no_bean_count_gate_v1: remove the 70-bean prerequisite from phase advancement and final settlement. After measured pickup and the unchanged upright/released/counter-supported one-second bag hold, enable phase 1-3 at any measured count, including zero. Quantity only earns 3 * min(highest eligible count / 90, 1) points. Preserve real button events, liquid-result and retrieval conditions, timeouts, physics and maximum points. Supersedes earlier statements retaining a 70-bean gate. No historical result rewrite.",
+    "2026-10-15 user-approved independent_stable_bag_return_v1: after pickup, award the existing one return point once after the unchanged upright/released/counter-supported one-second hold, independent of bean count. The 70-bean brew phase gate, 90-bean full credit, timeout, physics and total maximum remain unchanged. Supersedes the earlier bag-return coupling statement; no historical score or clock injection.",
+    "User-approved hopper progress: 3 * min(highest eligible hopper count / 90, 1) points during bean phase after pickup; increases only, no duplicate credit on re-entry. Existing 70-bean phase gate, bag return and hold remain unchanged. Task-local evaluator only; old independent component unchanged.",
+    "User-approved receiving-region placement: after pickup, require actual tray support, release, upright cup, outlet over cup opening, cup not outside receiving bay, and existing 1 second stability. Anchor XY error remains raw telemetry, not a scoring gate. Task-local evaluator only; original independent component unchanged.",
+    "User-approved v2 includes phases 1-1 through 1-4, 21 process points; brewing alone cannot end the episode.",
+    "Current success requires completed retrieval and a currently held cup outside the bay; no final position points.",
+    "Recoverable physical or insufficient-bean conditions block milestones and clear unfinished holds, retaining exact existing once-only deductions without new penalties.",
+    "Episode-owned progress timeout; source stage and phase time limits are telemetry only.",
+    "User-approved 2026-10-11 early-button recovery: before phase 1-3, active device/events block milestones but preserve original deductions and raw counters; idle permits resuming prerequisites. No device reset or retroactive brewing credit; initial readiness and evidence-integrity checks remain strict."
+  ],
+  "interaction_progress": {
+    "version": "short_tasks.interaction_progress.v2",
+    "approach": 0.5,
+    "touch": 1.0,
+    "once_per_operation_target": true,
+    "success_unchanged": true,
+    "approach_tiers": [
+      {
+        "distance_m": 0.3,
+        "points": 0.1
+      },
+      {
+        "distance_m": 0.2,
+        "points": 0.2
+      },
+      {
+        "distance_m": 0.1,
+        "points": 0.2
+      }
+    ],
+    "initially_satisfied_tiers": "skipped_without_credit",
+    "public_maximum_unchanged": true
+  },
+  "deduction_policy": {
+    "version": "short_tasks.no_deductions.v1",
+    "enabled": false,
+    "final_state_revocation_preserved": true,
+    "success_unchanged": true,
+    "component_details": "legacy_diagnostic_only"
+  },
+  "scoring_notes": "Public scores are gross process plus current final, including interaction rewards; no punitive deductions. Component details are diagnostic only. Success, maxima and final-state revocation are unchanged.",
+  "navigation_progress": {
+    "version": "short_tasks.navigation_progress.v1",
+    "enabled": false,
+    "spacing_m": 0.2,
+    "points_per_segment": 0.2,
+    "operation_timeout_s": 60,
+    "navigation_timeout_s": 120,
+    "success_unchanged": true,
+    "route_budget": "bound_at_activation",
+    "stage_change_resets_clock": false
+  },
+  "bean_phase_policy": "stable_return_no_bean_count_gate_v1"
+}

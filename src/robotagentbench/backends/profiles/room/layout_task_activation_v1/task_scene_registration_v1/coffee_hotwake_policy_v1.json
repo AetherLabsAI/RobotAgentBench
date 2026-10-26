@@ -1,0 +1,21 @@
+{
+  "schema": "arena.openended.coffee_hotwake.v1",
+  "user_approved": true,
+  "authorization": "现有房间导航是60Hz，咖啡判分组件要求240Hz，和我们的热切换结合就ok",
+  "activation_source": "existing multi-activation.js: sector/object intersection, near wake, exit hysteresis, held/moving protection",
+  "scope": "one shared PhysX scene, not independent per-object timesteps",
+  "navigation_physics_hz": 60,
+  "coffee_physics_hz": 240,
+  "control_hz": 20,
+  "substeps_per_action": {"60": 3, "240": 12},
+  "arbitration": "maximum confirmed active-region demand; reject unknown rates",
+  "keep_240_while": ["coffee_region_active", "coffee_score_unfinished", "device_dispensing", "animated_coffee_airborne"],
+  "clock_switch_boundary": "between control actions; stopped native-base guard from probe_action22_l1_v9",
+  "moving_switch": "defer; do not alter robot action or claim coffee rate ready",
+  "state_reset_on_entry_or_exit": false,
+  "score_pause_on_exit": false,
+  "auto_task_success_or_initial_acceptance_on_wake": false,
+  "gpu_fluid": false,
+  "global_registration_modified": false,
+  "production_navigation_connected": false
+}

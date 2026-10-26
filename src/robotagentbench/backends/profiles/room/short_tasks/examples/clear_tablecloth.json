@@ -1,0 +1,12 @@
+{
+  "schema": "openend.short_task.request.draft.v1",
+  "task_name": "clear_tablecloth",
+  "seed": 47,
+  "layout_id": 4,
+  "rule_version": "openend.short_task.clear_tablecloth.v1",
+  "targets": [
+    {"category": "cloth_clear_bear", "quantity": 1},
+    {"category": "cloth_clear_small_bottle", "quantity": 1},
+    {"category": "cloth_clear_block", "quantity": 1}
+  ]
+}

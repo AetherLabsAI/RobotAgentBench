@@ -1,0 +1,2213 @@
+{
+ "captured_at": "2026-09-14 21:57",
+ "l1_head": "a6150e91dd3b761007352e8bd5699bd28f26dd50",
+ "purpose": "coffee-table place (benchmark 3.2…3.30 even) source snapshot: initializer/scorer/registry sources as reference only (never imported as runtime), plus two historical pass-labelled L1 episodes per benchmark as initial-state and existing-trajectory sources; historical pass labels are not current acceptance",
+ "episode_status_listing": "references/l1_place_20260914/episode_status.txt",
+ "files": [
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/action.npz",
+   "bytes": 14667,
+   "sha256": "763f7626b3a588d11a48970d4dc4fa025572c48ea9ac96a45cc2b863d51264bc"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/action_derivation.json",
+   "bytes": 720,
+   "sha256": "2b0b557a1ebaccd5b12d74dfa6eb2d1c49c1a997605b8644ad4b67ee2acbce7e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/episode.json",
+   "bytes": 4212,
+   "sha256": "8ce48e8a0e72dc3c69bf1f6f4076624199ca2132f6bfcbce1effa0295777b240"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/full_state.npz",
+   "bytes": 83539,
+   "sha256": "76facd436e0657cffd24e74bdb43f92ac5c521f054d3ccf462777816ec03b841"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/inject_meta.json",
+   "bytes": 3079,
+   "sha256": "9e1a453a95389f08f40df7db325623201f373588f3f1172862e7a148eabd0715"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 69171,
+   "sha256": "77277a6bf404f2bbd88f6bb0aca1e7d3ec9e7ab824ee47d8cfeec899211fb31f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/place_metrics.json",
+   "bytes": 7939,
+   "sha256": "469931f8a821139301a8666e20af8a41c3c525f151e73526e203a655a3061ff9"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/place_metrics.npz",
+   "bytes": 52541,
+   "sha256": "4e9e76dcc2b5f7efd16e7ec9cbc79704191f69617de404d5296063a73d5f1eb8"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/result.json",
+   "bytes": 2516,
+   "sha256": "7cb213562ba58ad20d014d2fd10ac57a1c734c2db05564977ca2a60e02c8e6fb"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/score.json",
+   "bytes": 4289,
+   "sha256": "e78c4d77de1c8781bc48d7007f2b3391239c9cd29575c34db369927bdd1a3759"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_000/validation.json",
+   "bytes": 2431,
+   "sha256": "f32d717ecd75806f1ca0e96da38cc640f5a91489f00619dc06d17c20d7873e13"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/action.npz",
+   "bytes": 13075,
+   "sha256": "85f46b910af1a7bc1f47cdd266e2e3e0de33ece457e5d0d23fe3e691f54e266e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/action_derivation.json",
+   "bytes": 720,
+   "sha256": "6b41286b75195203b82fd479fb4fd95858b9fa0a66f19788b9a3cb95cb2f1333"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/episode.json",
+   "bytes": 4210,
+   "sha256": "0056862c4b333b52b5ef843c345d082e382676a4cf11df875e1cad67518ee114"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/full_state.npz",
+   "bytes": 74784,
+   "sha256": "75220277b4ba6f3ae7a0c1842a841e11a6d3b78388a8f5faa5f3399a93c94ca9"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/inject_meta.json",
+   "bytes": 2994,
+   "sha256": "90c0d2167ed348745b5940a2a57266bf898d621896d592a687eee3d0bd1b58ff"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 66698,
+   "sha256": "1e95a4ec6c8a2ef2cfbb344725800dbd21fe56c904949a2b64b6f2e481053403"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/place_metrics.json",
+   "bytes": 7942,
+   "sha256": "5f5f4194a57ef24053f9fe80c2ea2ec8df0a536ed9de2dd015c931460dd07df4"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/place_metrics.npz",
+   "bytes": 52229,
+   "sha256": "8abc6d60d7f4b5d1690fd9cb093528369a50aba66b65d28a1aa0a275d13a834d"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/result.json",
+   "bytes": 2514,
+   "sha256": "39bf0490988f289146ab3834e83bfcd0fb67e2856940aeba40db9c90d600e094"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/score.json",
+   "bytes": 4288,
+   "sha256": "4875d15677d1b54bbfc2144fd54d774aa552da1e801abdd788281e6ca866f1c2"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_10/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_10/trajectories/episode_001/validation.json",
+   "bytes": 2432,
+   "sha256": "f23542b3939ff0fc31b298f27c30963c1e58760804d97bc40210b4ee76435531"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/action.npz",
+   "bytes": 11118,
+   "sha256": "e9e854541c26d7fe33530b85d55f4798ac2cf3a91757b59985dec7dd2ee608b4"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/action_derivation.json",
+   "bytes": 718,
+   "sha256": "3e9c7e73fde771b90caced8c842c0c19bdf2e48b075bb6a203d79d8e5e15631b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/episode.json",
+   "bytes": 4259,
+   "sha256": "53f9ed611380046ecc9c04fc7cd48fd045e3c03cc64ec202f7b784924616b31c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/full_state.npz",
+   "bytes": 61455,
+   "sha256": "db71f1288f63a0ec52d93ba3f844e449f965421056ba3a58e7381384fbd622da"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/inject_meta.json",
+   "bytes": 2883,
+   "sha256": "bf8a0f932047ab49171dd16316826225752f1efd4ff27556ddcd91b1d68e6bb2"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 55789,
+   "sha256": "b9804d5e6d76e73e62f6780e77c90f0cf4e30be60c5afe3aac9885ae2fd68f6c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/place_metrics.json",
+   "bytes": 7947,
+   "sha256": "2477b90e9fecc8d411e176b27947b44d40afb4f0eabd2a77a478ad392a854c4b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/place_metrics.npz",
+   "bytes": 43653,
+   "sha256": "2534767e47a635539b39c88e7e173035cd4801f7b39fd595d06ba526fcdc2573"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/result.json",
+   "bytes": 2604,
+   "sha256": "aa01cc9beb09e4b1ab527ac227b0cc198997388e88bbe47af3fba0188bf2aca1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/score.json",
+   "bytes": 4290,
+   "sha256": "7e5d23592d14b39f73a28add53a4ae248e53e5dd4bb69ae1364cfec4c94448dd"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_000/validation.json",
+   "bytes": 2420,
+   "sha256": "b9065225050d1fbe319ee3fb7d2a4720e515442d906f85c675633454fcf99d42"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/action.npz",
+   "bytes": 10391,
+   "sha256": "ebdc9e1aa3198689fad893bad93f88ab9b414d5d8b1b95db19029fa3040216b7"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/action_derivation.json",
+   "bytes": 720,
+   "sha256": "7c28de39e80d2651b119a14d5405619ec350a47a5e2a09760a07a9360b82d578"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/episode.json",
+   "bytes": 4261,
+   "sha256": "54d7e5e5fd29bd37cc4fece13de3ce9ec32652f65781fec5e8c1b286925cc77f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/full_state.npz",
+   "bytes": 56535,
+   "sha256": "60c2f88be6cfd6ce8a0df7c7952eb2a3da7a85ad4a164a95f09a21fd2d814a74"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/inject_meta.json",
+   "bytes": 2846,
+   "sha256": "b6798ff5be9035b420f7fcf01110e7acc0c20c8139c8a0f906db1f39fa42f055"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 54935,
+   "sha256": "dfd80dff83e9c4b588da4a2836ec6db37b3d66d5fde0e30cc4dbd5fb18cb01e1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/place_metrics.json",
+   "bytes": 7950,
+   "sha256": "6541c2f003a5977db7d3ecd6006b9e2f0faf0acb5b27cb8d832a283c8ac640ac"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/place_metrics.npz",
+   "bytes": 44423,
+   "sha256": "7a439560520e19fcf0f9260ee83b67c83d198b141153c3308212df1bbe0b0cb2"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/result.json",
+   "bytes": 2609,
+   "sha256": "0bc7a4d52e7b39c52750d4ff44e799331d99b8cb9983a3d386f66cdd3879e78b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/score.json",
+   "bytes": 4290,
+   "sha256": "9a0275a57562b2fc92ea710ecc556c105bc48a9421dcb6d8798a6e55cea048c1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_12/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_12/trajectories/episode_001/validation.json",
+   "bytes": 2437,
+   "sha256": "8ba1c40fdc990ccd833a996d70754eda9f49c61ed01f90f058f1ab4779eadfd4"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/action.npz",
+   "bytes": 22381,
+   "sha256": "de6f3968860d64fdea3ce04948e6a16a98769dfcffed518187be650e2d18bc83"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/action_derivation.json",
+   "bytes": 721,
+   "sha256": "6dd2ba38d2d3be95762f72e0f11071e4ac06c7728ecc62ed4b35154de6d85f9a"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/episode.json",
+   "bytes": 4308,
+   "sha256": "9125c32230c64f1b0fd7a74dfedabfa2c881572b1c3c097e5c7bee982df08ada"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/full_state.npz",
+   "bytes": 129765,
+   "sha256": "feb0d7a7f5218bd6bdce844ef50507e474b3d80bfb83ad2200716eae8082203e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/inject_meta.json",
+   "bytes": 3513,
+   "sha256": "1398803ab4f74bf7ca51f5a48d7f5c581294b91059ff0547b2536134440c008e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 92868,
+   "sha256": "e827cd777f2b09d1f072f383f6278a6fcd05a964f0b5c2d358858eb315006aa5"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/place_metrics.json",
+   "bytes": 7939,
+   "sha256": "12f2845f8ea7a5a43245fb625041546811185b2134523109c47b23e829948afa"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/place_metrics.npz",
+   "bytes": 66604,
+   "sha256": "c390701695acbfb1e0974f63929a71d8b7984e5103d68c062f182719df0f0d54"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/result.json",
+   "bytes": 2613,
+   "sha256": "7c1fe56ddbd76cfaf47e921251fa3a925762b600bd7dc8a2d8378afa2e78df06"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/score.json",
+   "bytes": 4288,
+   "sha256": "f0e61ab065db548ddd695ada7eae53cc8507fb3611acbd3f4ff9869f0761234a"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_000/validation.json",
+   "bytes": 2431,
+   "sha256": "cab0897a28b7fa4f454e1ee0c5c57d82ef1a1d018b4048f88191ece0b1a0f068"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/action.npz",
+   "bytes": 19869,
+   "sha256": "2f76244e0141f77d43573cf5c2ef095ba45f96ca22c23c290979e818e64f9452"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/action_derivation.json",
+   "bytes": 720,
+   "sha256": "faef2adcb5edfafff308491a30ab66c8497d74f3be1631f2ab2eb5ab7aa1b0dd"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/episode.json",
+   "bytes": 4307,
+   "sha256": "3938650dfb13cbd15dd9dcfaf2e918784fc049eb9cd74822e948b2d7c2ef8efc"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/full_state.npz",
+   "bytes": 113149,
+   "sha256": "31984c76579e1e08f1aae1559931582188b7c7cd6b8000cc0babb7dd2c499e4f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/inject_meta.json",
+   "bytes": 3397,
+   "sha256": "84a85bdc5d8ff50cdc21c5d05bbd87e0dc0dc0182c1c00ee4b8a4515cf843d62"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 82122,
+   "sha256": "38a0f9654d4a87db347f8826ccab8ba977ca358777e59f96fd33b9e30ff31e9c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/place_metrics.json",
+   "bytes": 7941,
+   "sha256": "ed79b66677ccf66767248482226204fdc928c1e7092e337d5c199f07a8ca423a"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/place_metrics.npz",
+   "bytes": 58893,
+   "sha256": "5f1af172b59074518b9f815b3d947ff234636a540496c3bca7f358b806089e8d"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/result.json",
+   "bytes": 2616,
+   "sha256": "596295c03437d99a4f5393df60ea728cfcfc9fc7d2f9e86681f71eeaa69223ab"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/score.json",
+   "bytes": 4288,
+   "sha256": "9510c878887c1b463f183f7d879088d6b64dd9608fb2636205dfa2d6401ffba3"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_14/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_14/trajectories/episode_001/validation.json",
+   "bytes": 2433,
+   "sha256": "f2ffbf5206d8d5b69ed5208dc3de81758de34f830c8790f5fd0b8728939a3a91"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/action.npz",
+   "bytes": 18579,
+   "sha256": "6b98ed92eaa096343848805e23c551e00158581a3eee6bb07c9df5632de3da87"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/action_derivation.json",
+   "bytes": 720,
+   "sha256": "bc9a445b53ab250eb4f035b5f65f7516c7b2c6f53916718a0be879a709f69cb5"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/episode.json",
+   "bytes": 4210,
+   "sha256": "d3741a215ca9fc82eafb64119670c7bb0f8aade1b386ae665f3911ab20574b23"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/full_state.npz",
+   "bytes": 107538,
+   "sha256": "52b5e62829cc715d621892e2bfc67b2d0bd4397c5385b9966f7dd3cbc0f9a426"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/inject_meta.json",
+   "bytes": 3335,
+   "sha256": "7caaa8500bedd08647ff70ecb488d6c9e285ac70233352a90dac74cda28cd817"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 77967,
+   "sha256": "6f55945491425a38871e4c8d403fb88e3900e3643c310c9f5cce0de566585a35"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/place_metrics.json",
+   "bytes": 7936,
+   "sha256": "4b74569da665b6f539780ca58b51bd1d1493e4607a96e4c15270dde168341eef"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/place_metrics.npz",
+   "bytes": 56408,
+   "sha256": "8c55e1c4beec2a9ef2bf481c5fe68502a93f359fa0487a336c8518416322dddd"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/result.json",
+   "bytes": 2618,
+   "sha256": "586e120ea38e9257c09547e78c5772a0c20294fda62c6f5b567c6ac4d53d353c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/score.json",
+   "bytes": 4285,
+   "sha256": "e11256c76f71cfe6aebadc4f5414a70abfea2c1e2717496c983abaeca340394f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_000/validation.json",
+   "bytes": 2433,
+   "sha256": "6505fe10b110d18fece5604d3e2eb4986a93f9c3faeb4554fec4b7ad9e26cedc"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/action.npz",
+   "bytes": 20337,
+   "sha256": "1fcda77df77ecbe11bdf4e656b05ecd8db6a426992da54d40bc2c56588cca6ad"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/action_derivation.json",
+   "bytes": 721,
+   "sha256": "8dfa0e71ea43120cc6a4ce673c0904825ba74d7e2630f267e5455c4f2b2bcbbb"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/episode.json",
+   "bytes": 4211,
+   "sha256": "11642c0486fe55ee1761cfdd372a21091fda87724cb3a87616ee16e9d39ca2ef"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/full_state.npz",
+   "bytes": 118721,
+   "sha256": "75e86c521b440879c7516942677b6e85b9c1e0cc5ca22d03e54cd72fb1368205"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/inject_meta.json",
+   "bytes": 3429,
+   "sha256": "0b2f0ae98449c662687cddd0e63ccf0d1cc34dc78b1a46e8de1658bf3376038c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 85211,
+   "sha256": "a14a7c59604c6066a511132be5be5ea7dfd3d74c627cfc53b0146ba0c5c13240"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/place_metrics.json",
+   "bytes": 7942,
+   "sha256": "f89c206654aec327179722679d27dcf4c7f988f05e067f6b18de8925e8ee4c56"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/place_metrics.npz",
+   "bytes": 60745,
+   "sha256": "26325307f326bca63602872c62a2f3a5f84e5aedf282860e2df9baa5b6342f6f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/result.json",
+   "bytes": 2611,
+   "sha256": "2057edd7cf34370bf9d23c74845444d02f5ad890b00839c7b4bc8808c36e4eb6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/score.json",
+   "bytes": 4285,
+   "sha256": "b7e22f8c3cf7c83f7b95b8b25909f8d9b61993d43f6887699b1862a4a96362b8"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_16/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_16/trajectories/episode_001/validation.json",
+   "bytes": 2414,
+   "sha256": "e889beeda3078ff2bea989801201c311cf8808968f7c514f675bf904f30cdf7d"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/action.npz",
+   "bytes": 10660,
+   "sha256": "505550252ca93876a56016b58f0745a3150e5b10610fcf10eedff669a05fafc1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/action_derivation.json",
+   "bytes": 721,
+   "sha256": "ceee7caa0c3cd803ea9cd469f017f0513e979a7915db3e9c1c97875bfa2ac936"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/episode.json",
+   "bytes": 4287,
+   "sha256": "54cdce4a77456ce8dd609b90887baa0e36873b7a64566a5704cd39b64320bdd7"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/full_state.npz",
+   "bytes": 59804,
+   "sha256": "f4533083aacd528753a0add18c4b913968f4aa5bf33bbd3938f844bcb4ca40e9"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/inject_meta.json",
+   "bytes": 2849,
+   "sha256": "22c43ce57d1f1985b4b7c2baa867e282862c6e439fc640ce076912b5f4859a4c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 57445,
+   "sha256": "752fb4ad206062fb0cc5521e0c8cd46118cc1dbfb4cf77b4fa67ca7e899816ec"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/place_metrics.json",
+   "bytes": 7947,
+   "sha256": "cf7aea5823b15fcccda86d34a780c9d8f7b395a76de6f146570403fcc8b18619"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/place_metrics.npz",
+   "bytes": 46294,
+   "sha256": "8858db7c3ead2e0e5292e93328e22152abf3e6729d1cda58d7b03b40611ae99a"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/result.json",
+   "bytes": 2608,
+   "sha256": "04414cf8d272786db59e4a8acebfe6015fe842bc6db899e5656fe16f0c888b00"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/score.json",
+   "bytes": 4291,
+   "sha256": "2738d7d8b5d22cc30b9b691e4be51388bf9948760d4c30f2433e4b9169a5bbdb"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_000/validation.json",
+   "bytes": 2435,
+   "sha256": "97287a46d61ae6bbe987c2e9d6457f1855e420c25f07fe04cc0e984c8bafc3f6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/action.npz",
+   "bytes": 10348,
+   "sha256": "aa1dc601c880e7df63a75d50bee44b485bd70280f7fcd50bca966949d764ec02"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/action_derivation.json",
+   "bytes": 721,
+   "sha256": "8491a7b6d567bf47f16753dfdd1e0efef0121399f3948d975b74261b96615cf1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/episode.json",
+   "bytes": 4289,
+   "sha256": "779c6ce307c897f8949ea872b554b0334056b28cbaa437d7b59cbdc86a03177c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/full_state.npz",
+   "bytes": 58255,
+   "sha256": "7f53f4606f328142a7b39da514f6e688759731b960ba560adf9d17e44b2c61de"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/inject_meta.json",
+   "bytes": 2840,
+   "sha256": "a97e36a1e86b34f3d27a66744d231c535f7603700ccb29fcefc1d86391e95535"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 58315,
+   "sha256": "4d496df24eaae5f26a49a78f6af7e6671c09af4027aadba3fd8a439f696db996"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/place_metrics.json",
+   "bytes": 7943,
+   "sha256": "c71c5ee2325859a0012a7cf36818c63dc49e54f94325267a3043448fbb3520ea"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/place_metrics.npz",
+   "bytes": 47635,
+   "sha256": "85c8e1feb204c8afe128a7761db187593ffff0773bc2ca104436abf01137f06c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/result.json",
+   "bytes": 2601,
+   "sha256": "7da1e6337ce22257fd1def5ec5864bf6f7d8195805412391efc45e02afd5f385"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/score.json",
+   "bytes": 4289,
+   "sha256": "7ce3a34c139e054a54b4a75717850e3e954b54e52e3841887bfee092598b6f69"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_2/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_2/trajectories/episode_001/validation.json",
+   "bytes": 2435,
+   "sha256": "ebf54280a810bdfa36c64f9e6da707de3264213f663e6895eef6f913d03fd628"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/action.npz",
+   "bytes": 11643,
+   "sha256": "d3efbf55f6c5665a6fccd2fb5d03d5b58275724315f051525f89494a313cea61"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/action_derivation.json",
+   "bytes": 720,
+   "sha256": "e02cbbe62fc81e461a1607afa16d50dda062ae144a44b8bf3c2a1338a4de459a"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/episode.json",
+   "bytes": 4210,
+   "sha256": "b6d0c111de247e10a5f8adca86436b2cbcb2aa9e51c6806a991976409deddd5f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/full_state.npz",
+   "bytes": 65751,
+   "sha256": "ad5d238033523c60387244b428807718c560935a2d75d29df9d0589144591bc9"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/inject_meta.json",
+   "bytes": 2928,
+   "sha256": "a3bdfe2cec6957e0451f6b21d117c6f14e6d406fa223526496a74227811b6691"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 62616,
+   "sha256": "250733bd3fdbc67a8881dbd57bf9d2dbafdd9e2521fcab66f75f764db830a952"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/place_metrics.json",
+   "bytes": 7941,
+   "sha256": "b76172ad52e60e52ccaacb2dae04b1746317a6c54103e3908bc401b6dd07fc49"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/place_metrics.npz",
+   "bytes": 50079,
+   "sha256": "9afd5a9b26652405a5cc12d1759499fcf3469492fb88785079f4c5c4f9ca0593"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/result.json",
+   "bytes": 2524,
+   "sha256": "a645b06a52b98803e5d0f363f14c1e95940abb64396b4b3cc52ff1379883cfce"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/score.json",
+   "bytes": 4286,
+   "sha256": "e6604ef718d2fe8a26145b2937e1ff9150b451e227f12e8d21a2f4e0091dd0d1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_000/validation.json",
+   "bytes": 2430,
+   "sha256": "ae39a5e74dee82e87f771781f3b2bfcf0a45a9dcafb3cd7828292f36f9cc1ef3"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/action.npz",
+   "bytes": 13981,
+   "sha256": "f88ecdf0b6b633c5b27909b32e9fe5f2a56adf834e10fe33a07bab23ad0f5b5c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/action_derivation.json",
+   "bytes": 721,
+   "sha256": "ee5ede4754d1401ffa192ef5a253167580d531a999c8f43b995edd9c48debf88"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/episode.json",
+   "bytes": 4210,
+   "sha256": "4e2de561be19a532ee75af6e5ca0ea7f14fb96627d8da36b7551856a301dd5ee"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/full_state.npz",
+   "bytes": 79246,
+   "sha256": "df5fc2de160dede220c2a06b1e84f80e736cf91072f10a195e3d7ce1fca36bbd"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/inject_meta.json",
+   "bytes": 3044,
+   "sha256": "18637d4d42f0755462dc6903ce28ab55360982ed1dc6183f7396cf8d3cb28f53"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/pick_contact_trace.npz",
+   "bytes": 67405,
+   "sha256": "71aec5cf5d2cc2e66b8cb34103012b89064bbe8b8af222bab6ec5e6dbc65a2cc"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/place_metrics.json",
+   "bytes": 7941,
+   "sha256": "ab5aa8cc0b8cf1646b497211888d61d052f55c48d0de037ad9232f1ca7e7bab1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/place_metrics.npz",
+   "bytes": 51340,
+   "sha256": "56befd819166039a61ff63260b1db69654df4bbcdab85bb8f4f39e2cdeba6dff"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/result.json",
+   "bytes": 2520,
+   "sha256": "e2098191b19508e44f4993c536b43e366466ce1dadcd451e340abced2aa0d39f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/score.json",
+   "bytes": 4293,
+   "sha256": "7c243bfa3a2b2caa598414d9778d1f8749806e0f983cfaa86bf347b49badde8c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_20/trajectories/episode_002/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_20/trajectories/episode_002/validation.json",
+   "bytes": 2412,
+   "sha256": "d743d3f3410f7b1edb3ca6652a1937e05a6fb87859708c42db9433ee4085778b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/action.npz",
+   "bytes": 14853,
+   "sha256": "9e975ad9c35e9075c08ac3f81b78d7bb2cffca0acdd630cbda86bdfdb0f0884e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/action_derivation.json",
+   "bytes": 704,
+   "sha256": "57af40ee63295b729f623eb550dcd5aff75792e3cb48fe1aad474651e08bfe9c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/episode.json",
+   "bytes": 4215,
+   "sha256": "e2d8b45721478f138d05bbac117d1a00dc75aa57162ef14c2d69b2ed0eeef7f7"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/full_state.npz",
+   "bytes": 83998,
+   "sha256": "5d54b6a5da62fbafcacdfeabc4a0f5db5cbb1167a4e6bda81a28f466e29d1c45"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/inject_meta.json",
+   "bytes": 3088,
+   "sha256": "d4fedf120dec4bf5ebdba8d0474d9fe47c7f4210ee8c43b2e47ee7d3ecd2157e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 70622,
+   "sha256": "366800f57b60bc39b2f68df3f32f6e21c9a38ea5568ccb9a99491c64c823e7fc"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/place_metrics.json",
+   "bytes": 7939,
+   "sha256": "0355d3a3d442246ff182ca816c06c9d49fb71bb15b57c781ee7b5c2920e61dca"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/place_metrics.npz",
+   "bytes": 53509,
+   "sha256": "4ef3b7f97ddae189471ed5f5f1c3a1712335e88bc3208130caaa7bb0a8967645"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/result.json",
+   "bytes": 2604,
+   "sha256": "97f6b0b77445c016127d674be921d8880e1a048be05161eb88e2cdddbfaa1741"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/score.json",
+   "bytes": 4289,
+   "sha256": "dd69da29bd506224bbea670de5ef4989354e458700fa93d27746ba535013a2a1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_000/validation.json",
+   "bytes": 2432,
+   "sha256": "6bf92619e9f5d596dfedec97f796051aaaca4fad786d78e553b7ec132eb24657"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/action.npz",
+   "bytes": 15694,
+   "sha256": "e310e37ff3e3470a60da4dba674d9d9f3e9146d163cec1a5e4a351bad983d348"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/action_derivation.json",
+   "bytes": 719,
+   "sha256": "1ad6a98839a0df23de9ab82a8f8996f5494d5d690325332c804b951d8ec2b56c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/episode.json",
+   "bytes": 4215,
+   "sha256": "0192c7ac4a92996f566d4a4eac786e5b8501dc73ed931862b675e61d603f7000"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/full_state.npz",
+   "bytes": 90835,
+   "sha256": "300a8d9677f22f201ba4d21cd570f3926209223a0c233f8355dbe06f54b0d7fd"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/inject_meta.json",
+   "bytes": 3116,
+   "sha256": "37935ec323159e4c5b2f05f07a79b6f8ff33db9ddd624f0a20bb91903269fb8d"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 75088,
+   "sha256": "f8c05f222d003b968319ccfae05dbfea28b5e49ad62d5a957cce3b7bb31a5be4"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/place_metrics.json",
+   "bytes": 7941,
+   "sha256": "183cb9e83207fb9e42850aa4b8e3176438cd1c48c69788eadf7b748665381bfc"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/place_metrics.npz",
+   "bytes": 57444,
+   "sha256": "d43010a0687416b46f3efea0d1362ef26bf6f28a096afbb184a12a8a4c528a3d"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/result.json",
+   "bytes": 2605,
+   "sha256": "10b081f41b1f670b99d29e58a4d8f20b4428d37e2c5d349f3d7481ebd7522449"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/score.json",
+   "bytes": 4296,
+   "sha256": "fb9f7b66e943c2ed0ae010d9951b9286048a4d478883b133736d2332fb7a54f3"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_22/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_22/trajectories/episode_001/validation.json",
+   "bytes": 2413,
+   "sha256": "4221b7b8b9a2bbc90457d7c2ecd3ddbc0e954313a64c59245ef0c847ab4ea496"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/action.npz",
+   "bytes": 15215,
+   "sha256": "4f2d978b66130b38971103e0fbe11acb9fea339a1bcaf820c6f64b066b8043a8"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/action_derivation.json",
+   "bytes": 740,
+   "sha256": "feeb27074bb55e0aeecfee9b3daba0fa517083e29a08387156d71acd7af6caa9"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/episode.json",
+   "bytes": 4210,
+   "sha256": "97e7d14e7ce31ceeb5037a3e5349860a2749efe8a08d6b69b9b2f3326a259ad1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/full_state.npz",
+   "bytes": 89435,
+   "sha256": "860fad92c2c751bfcec4c3a80bfa8932eaf99b49a3a9ca0dff3bb5a7129d9df6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/inject_meta.json",
+   "bytes": 3113,
+   "sha256": "d0eaa4eb739c006bfdec79e7d15b61a58ab82cd84eb6f927a61de248bc372441"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 75558,
+   "sha256": "c774bdb50663c25d4d092ea181984e9280c15aae1ad5d1a41b011f4e7c48820a"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/place_metrics.json",
+   "bytes": 7559,
+   "sha256": "9548c28cfd56d8c19d708ee1210cb0baaebfc1f52efde2e7c8db9a7e1577996c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/place_metrics.npz",
+   "bytes": 58260,
+   "sha256": "48343dbba114b449df5873a17a960c850cf795a3b474178cc29030b8c84fac5d"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/result.json",
+   "bytes": 2526,
+   "sha256": "10577c86bd7f3e3753b6edc32b7f1d9d92ccee4e3f9a8fba2689db91994427d7"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/score.json",
+   "bytes": 2799,
+   "sha256": "7711cf486c89b98f3e468087d366281e208562af3eea2ad3d2c6dc1e8e86edb9"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_000/validation.json",
+   "bytes": 2430,
+   "sha256": "f0524b40bd115575d9832aa64895f6fb6987e9d680778ecbaca443dba5c18f4b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/action.npz",
+   "bytes": 11323,
+   "sha256": "413ab996da34bd1573afc661b31ec490929905dc05a4aa2824d237d21414e9fa"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/action_derivation.json",
+   "bytes": 739,
+   "sha256": "05135cce8a233d12d9a622d3bf0102366bf91d0f6443ab4a7030b4f9a974f367"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/episode.json",
+   "bytes": 4213,
+   "sha256": "55478a885eaee6939db1edda46d3f6bdc892760bb12e4a31e20108fa8e6fc28d"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/full_state.npz",
+   "bytes": 66497,
+   "sha256": "4d863472325dc95053a180cdb162179cb29bbb7f9a02afaa38a034495d18bfcd"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/inject_meta.json",
+   "bytes": 2877,
+   "sha256": "ef01d444d96ea7b5bafef967163a6c51cd2ec190777af7509e61cb49a6f390df"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 64494,
+   "sha256": "97c0de31f492bb91a8df103312ae2025e2bd8fe617e411490c0373dba73688b4"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/place_metrics.json",
+   "bytes": 7555,
+   "sha256": "4739b4281baad6d5a58c942b811b76ea716a9dc7cca93e95567e7816078dec66"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/place_metrics.npz",
+   "bytes": 52364,
+   "sha256": "c4558bdc569c6ac5a27ade6cdf762878cdd02006551bb093f88681b102083a3e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/result.json",
+   "bytes": 2516,
+   "sha256": "00911a2a36e9f508dfb117438ccf3d74cef78ecdf140b922f4505b4848a6c5ba"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/score.json",
+   "bytes": 2797,
+   "sha256": "d2a5664e025cda5c44d00aab3e734c971421682e33524a083c861fb713524352"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_24/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_24/trajectories/episode_001/validation.json",
+   "bytes": 2412,
+   "sha256": "d97336ba6501e51ea3fcbb95d2a1dfd115dee0fa91f8ae9c72f9d2e2fc53acdd"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/action.npz",
+   "bytes": 21038,
+   "sha256": "ed696f6ac3a9cf1fd59eec26a26b9c678e7217058eed47ebb0f618fbdaa6aec3"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/action_derivation.json",
+   "bytes": 723,
+   "sha256": "e66bdcedfd4fbaac0df8c79ce6d9690118864b8be78b8282dc939460ab782262"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/episode.json",
+   "bytes": 4213,
+   "sha256": "ff54ddaa2a0d73b44b0793c358b04b3e64924ce623d08e5f456bfc6637d409b1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/full_state.npz",
+   "bytes": 127270,
+   "sha256": "abc98b3b1b43916a1f644895338cc9b1848b246dba795a9b534f4d3ca2dfd4b9"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/inject_meta.json",
+   "bytes": 3509,
+   "sha256": "99a8d08f63bd8e08f0e320f75e08b25f2354c2ce939e884d83ff7678faabf243"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 94967,
+   "sha256": "9e1ec0bfae78b9d7eaa0362b045b0a2330e117b3f306547a72d99de377d7e0b9"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/place_metrics.json",
+   "bytes": 7577,
+   "sha256": "1346aa73d21c40927142315e4632c7b10f6833be368b4f2e5c3cb6c8cf346529"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/place_metrics.npz",
+   "bytes": 68805,
+   "sha256": "7006f402a819b68f195e85bcb342433922216e4c8128ebfa86478c93da8f4de9"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/result.json",
+   "bytes": 2517,
+   "sha256": "24332f4c933910cc619f7e480036f4f5fb8bf33fc069ad45c6f9badd1cc44d04"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/score.json",
+   "bytes": 2801,
+   "sha256": "47038ccbdff84ca959e33f8dcb07c49944e77e318163e7f6282fa94865b1f0ba"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_000/validation.json",
+   "bytes": 2434,
+   "sha256": "2711eac81b86754f7dd62f85e9ed47cc178008fa94744ef3ab423493dee4a1c1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/action.npz",
+   "bytes": 16895,
+   "sha256": "c67296ed14d5d031cf9f337dcb99fbd448d36768cbe5f163c3f0ff1c5126bd7e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/action_derivation.json",
+   "bytes": 739,
+   "sha256": "ecb70ecffdb5b5b8b35499426b8e4fd27d1e81a42e1a5569b8ab6b4551de9769"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/episode.json",
+   "bytes": 4211,
+   "sha256": "0c5ca1a147905de0148212e60f2ecb26a4307c7197369028c031d27c88e1a811"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/full_state.npz",
+   "bytes": 99797,
+   "sha256": "3aae9e0ebb3d5492d36bd24470efd2ccea0ccef695f9e8f1eee3e3e6342007a6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/inject_meta.json",
+   "bytes": 3233,
+   "sha256": "3286f0df8a98f2c7314419f1a382e0f6f1f954d7b6e489a0bca3542ef823e51c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 80452,
+   "sha256": "f0ce063b71131efb96d905913ac54184d31b29220c58114a025d6589431750a6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/place_metrics.json",
+   "bytes": 7580,
+   "sha256": "32556f72f517afdb1675027a9ca818feff10315a07237d96f2b348c120e3dab7"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/place_metrics.npz",
+   "bytes": 59900,
+   "sha256": "2cb48bb3a845a5509c341f1530000d0840336d7ce2aef1520d20d3a5b7f9fc1e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/result.json",
+   "bytes": 2516,
+   "sha256": "bad9b2dd596c934c9b938328d119caf635a3dc26adc2e82468a684c69fa7bf05"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/score.json",
+   "bytes": 2799,
+   "sha256": "cf1dcbf0ea19376ccedb512edd4b29313fafc83714dfd320f3312a316233e48b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_26/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_26/trajectories/episode_001/validation.json",
+   "bytes": 2434,
+   "sha256": "176c602dab1fcb5e9ec9f068f0a0bf2ce09c4a717f1a7a1592b039ae3b81fb14"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/action.npz",
+   "bytes": 14482,
+   "sha256": "eda19c200b72de06866efdde6f509fc32f19d7d5f5ec9331d233ae797c7d5d11"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/action_derivation.json",
+   "bytes": 741,
+   "sha256": "48c6338b24b68ed2190bb530ddd62a24e034f8f50a4e585458237482e34c15fa"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/episode.json",
+   "bytes": 4214,
+   "sha256": "e4eb68124f093d15a25d5475c44c61a970364e64d5af0466bd47c523318077a6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/full_state.npz",
+   "bytes": 85619,
+   "sha256": "04b82a40b61748a8fe16dc156f6a26259d335cf5cc7e850636f9a87be91f8365"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/inject_meta.json",
+   "bytes": 3081,
+   "sha256": "60eb637c16bb33b733580d2c39ce76c369f2f5e08869c44dc718c6c3fd7e0cff"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 71156,
+   "sha256": "8ff66eeaea6a0313e642ca1e9cb9e32cde8b48d009454d6ed591049b04aa2b6a"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/place_metrics.json",
+   "bytes": 7938,
+   "sha256": "ee495b1f557eaf3c775a811ec884daccb670ccd02c6612347b35e2d2c31c8ffb"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/place_metrics.npz",
+   "bytes": 55213,
+   "sha256": "907314e89482abe1bc255a653c3c53ee8eb4a41071d23ed7c83dc6352398f19c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/result.json",
+   "bytes": 2613,
+   "sha256": "2a77f19f4f82fa101e6283758d5bbdbe04b162420ee8e3ea78c7b5b5d6d9f636"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/score.json",
+   "bytes": 4286,
+   "sha256": "282e2f6d01950f6a9808efb7097ab83fe84809dbde9bbd5b86207c8087308737"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_000/validation.json",
+   "bytes": 2430,
+   "sha256": "b53fc25bf329d0a838119e0754cc315eac455208dbbec0c5ca6f3517d597a5bb"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/action.npz",
+   "bytes": 15302,
+   "sha256": "40ef8ecbd883acab694026b4e9a3d6a90e3304f6f8b0f041ffb7ccace3a4ad58"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/action_derivation.json",
+   "bytes": 724,
+   "sha256": "b8bfa705bb437947b63e8acdf789f96bba64e1ab3e11d627bca52c74c80ec018"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/episode.json",
+   "bytes": 4216,
+   "sha256": "a8d7d9b3addd19404c6f9df4de0049c6ab3554e8b217edda6560968159aa4741"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/full_state.npz",
+   "bytes": 90770,
+   "sha256": "67077b72193fa1847430b22c7ac2b2c4de0aff158f30b72655f214ee507aff93"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/inject_meta.json",
+   "bytes": 3113,
+   "sha256": "091835d0f7a827ca59a9ddb1e2846c5ff0e78774e76b70740b58a3a1280f52a5"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 77912,
+   "sha256": "e51380e19977a0434e3daaf5a72643271646be3551817c87937cd846df7d09de"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/place_metrics.json",
+   "bytes": 7939,
+   "sha256": "7c91aa3a3637dbf082336c7cabd69f46aaac98f891b7e6413465d0cefe114610"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/place_metrics.npz",
+   "bytes": 60488,
+   "sha256": "9cf3838a6e3d351607c12624e24755f1158db51b55a142c07525692737aff0b0"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/result.json",
+   "bytes": 2609,
+   "sha256": "bbc660f8921f5da517dab3b66a9ab42032a60484fe2a7dcc40305739b7bc77c2"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/score.json",
+   "bytes": 4290,
+   "sha256": "55ddc47a9d412e198e04760971be97478a6bb13dfc9ae9ac57b780d2a2191b8f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_28/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_28/trajectories/episode_001/validation.json",
+   "bytes": 2428,
+   "sha256": "9fd31eeed7750ab980d0b9a5cabd6b7008425a201b5ed135ed8d415658b08e05"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/action.npz",
+   "bytes": 10373,
+   "sha256": "a3097451bc4fe47a3a58bc8b25551d2c9eb339d51e5410d32785e750ee6fff14"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/action_derivation.json",
+   "bytes": 724,
+   "sha256": "934c4daf2369df4599100782069d8713d1ac684d077d3fabd65f6be40876679e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/episode.json",
+   "bytes": 4210,
+   "sha256": "c0f17dd499d4839696067257cd44943933eac875a0e429932d0cf02222353c74"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/full_state.npz",
+   "bytes": 58884,
+   "sha256": "0ed27a63bdab4cac315b5fb43fa217e6604d76acce7e6d7e2b2a2b934403eb01"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/inject_meta.json",
+   "bytes": 2845,
+   "sha256": "0c160f9636cb999708baf35ba5291dcf73473cc338505e909dff29224cb33788"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 59289,
+   "sha256": "5f0bb52ef0abd3a8ac9de48dba56fa924878af9f515b98cd25b6b0bb7a726736"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/place_metrics.json",
+   "bytes": 7948,
+   "sha256": "90c14c207393c70fbd2cafa16d7de836472eefc57424bfd15682dc02e3659cbb"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/place_metrics.npz",
+   "bytes": 48391,
+   "sha256": "766711fb4c6325782def053ff6c500c89d3790ca67ae162b6b471acd24b25c51"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/result.json",
+   "bytes": 2608,
+   "sha256": "617106006a61a5edd25431c9361c8618b0702cb79078b409f46244b3a879138f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/score.json",
+   "bytes": 4288,
+   "sha256": "fd50d3f1e21da7ec6e28701f77d54040fa86518063e8c6a9217f57621d789223"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_000/validation.json",
+   "bytes": 2437,
+   "sha256": "4bd9d6b14e867d0a9f76bbc52ab15b45d837ed17a512d7bff96d4cf881d914ec"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/action.npz",
+   "bytes": 15577,
+   "sha256": "8094cfda6c87d68a0359a88d8b9e4f8d78cdfc363c65d06ac89e658e5b11b0cc"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/action_derivation.json",
+   "bytes": 741,
+   "sha256": "dd89478a8ae6377faa2e0e2e8a8232cb1c3147614dbf0bd7d42efbfb28821260"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/episode.json",
+   "bytes": 4214,
+   "sha256": "035a2fb79a4bac030469721a5043a9e1ab5a14355e4a6cd746dac3dd0531f3c6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/full_state.npz",
+   "bytes": 95710,
+   "sha256": "dc98aff95e10f7752185cce1709b1552402c8b999b5515900e7bc3ca6f30740b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/inject_meta.json",
+   "bytes": 3121,
+   "sha256": "61bf149fea39432902e951af5aeddc353a539b7f708c335e7c5bbf8e088e0204"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 80159,
+   "sha256": "b86b9a4ad34f63c416eb41910073e74e4d312e799493e13d2ae56782be63e5be"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/place_metrics.json",
+   "bytes": 7951,
+   "sha256": "0226f8c89727cee460a6e08f157eaaa8d39eeac17d0249cdcfb2ec364d50d54e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/place_metrics.npz",
+   "bytes": 62784,
+   "sha256": "d46246d646da17d1b7413812cb54ab68747ea627bfc9799edbabb79665ced567"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/result.json",
+   "bytes": 2609,
+   "sha256": "7f1488c00970ca59bb16eb0ec421608f2e68a266fed035fa6f336dc1ecb83822"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/score.json",
+   "bytes": 4294,
+   "sha256": "e7f0db5ae6200999516106964340de541e1588449030fab275467fb9af101858"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_30/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_30/trajectories/episode_001/validation.json",
+   "bytes": 2437,
+   "sha256": "eceded779811c38d4192f04bc54a17226e30ee962cc6092ca5f453e334df2e1c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/action.npz",
+   "bytes": 18865,
+   "sha256": "a841aa00ebd18173b0fc6fb0f1b4debb8e89cb0f8b9d2150ac665745f3288c33"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/action_derivation.json",
+   "bytes": 720,
+   "sha256": "ba60e457f5b445db55c257b51ef7006ec1acdaa6b146d6eb74751fa3c403df6d"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/episode.json",
+   "bytes": 4251,
+   "sha256": "171d361d6b555d57e6205e935a165db45d8312724d71257bfcf6346ba586b897"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/full_state.npz",
+   "bytes": 109879,
+   "sha256": "9519557649eaf38418f927477c2541c4791ffecee50e68dc4ce2e4615145cd66"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/inject_meta.json",
+   "bytes": 3333,
+   "sha256": "3ebe2edf7b5eed06ad1551d50fdd570a5fb666e0a1ca046f7a2b1f0437aa7449"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 77816,
+   "sha256": "21884aa9696864f83185c2d827be8d065ca89755edc2f7dea4f30f56c8567e54"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/place_metrics.json",
+   "bytes": 7569,
+   "sha256": "1512b9abab52cdbd3d327c7c21667dbf2d65b30e5b2b08d5573035ff11a7fb93"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/place_metrics.npz",
+   "bytes": 55959,
+   "sha256": "7bbe6e5a5173589ab4515955a593b600f4ac0e4b18e18aac4ff811e0c25a9798"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/result.json",
+   "bytes": 2613,
+   "sha256": "7cc7f0b7ae1e106e6a7db0396485190fcf7eb1d2f034de3f8f5d0ea7a545b63c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/score.json",
+   "bytes": 2802,
+   "sha256": "8c329341ca767add83ff392234808673b3ae8f11680773d0239e3ed47a3ab0d1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_000/validation.json",
+   "bytes": 2434,
+   "sha256": "8e08c3ff06b79148f34fc1e56072b42ea8564458ceeb248ea23a54fc47f645ba"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/action.npz",
+   "bytes": 18824,
+   "sha256": "5a40cdc9ecf01953025bb09a841a6aa07d2938447c44a146c3394e0edb7ef799"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/action_derivation.json",
+   "bytes": 719,
+   "sha256": "6602fc68d7c2a9dc2fc0729d75ad70423d1097ad13046d4159a2b27edfe475e6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/episode.json",
+   "bytes": 4252,
+   "sha256": "294fbb8b198ebd7b83f8df76f43c04c9e4dcfb56f234846a087b957418a685cb"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/full_state.npz",
+   "bytes": 108504,
+   "sha256": "3e4d3df564acc2e1b575cb4ff3b23bf3f2297d2332575ad9fe332f640cb7dbf9"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/inject_meta.json",
+   "bytes": 3355,
+   "sha256": "014016b085ce3551d09b0a5f6c2af3acfd2b65cbb793825f7dea01618267591a"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 77004,
+   "sha256": "142bfd4fb28636bba5955a75b9bd988193fa624c2c8f1dbf2892844d84c67d96"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/place_metrics.json",
+   "bytes": 7565,
+   "sha256": "dcdb3b81e04edcae395fc078bc4aac1e629e77c9fa1ce070fa7301ff058a932e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/place_metrics.npz",
+   "bytes": 54574,
+   "sha256": "994097fa73cbecdb8e9d781c344b15ffc175a7f809badb3d020d82249d13e11b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/result.json",
+   "bytes": 2611,
+   "sha256": "245e55969cebee4060c658d4eb8281ce7ee07a92a505c3291bd1b1cb5b9ec482"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/score.json",
+   "bytes": 2804,
+   "sha256": "0ab0b65630cda719e8800cd6c55d2eb5c23b5da1631a20556f29bb5fc4d448a6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_4/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_4/trajectories/episode_001/validation.json",
+   "bytes": 2433,
+   "sha256": "2c10662a4b34edbb47fac685b4d625efab307fb01e5d60af921ee0c0fb58f68b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/action.npz",
+   "bytes": 19241,
+   "sha256": "23183494b659bd9ed3bdce8422b54dccda17c2035a8ec28a8d637e491901a413"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/action_derivation.json",
+   "bytes": 719,
+   "sha256": "a852b1e499d740ce520483f0e6e1a0fe85db7ef4986c2fff645b8e8d122ec073"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/episode.json",
+   "bytes": 4200,
+   "sha256": "3cc8304a11ee0c23bb048a38faaa994bda408b98337375ae83e4f9b63a1e209f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/full_state.npz",
+   "bytes": 118949,
+   "sha256": "df2bc1f6fa314d4272980ecb943cbd04d711d790057eae481359af9cf140f5c6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/inject_meta.json",
+   "bytes": 3348,
+   "sha256": "111af19f0fa8b4ced5ac777725b3df7d34f93dad2b04f4b4c2421d8be9586b51"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 90324,
+   "sha256": "bbdfdcbaf8ea7e337193d60a8018b2a6843a5f12a3761ec7bdf1466242a7d54d"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/place_metrics.json",
+   "bytes": 7949,
+   "sha256": "500f2cebf52ceb2b0638de71c4f3bc1f2050485ec973741d80be2950f77100ad"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/place_metrics.npz",
+   "bytes": 69526,
+   "sha256": "f333c0e63c5265eeeb96c1ff4acaff3a70b2ceba0f4bc43ae3da014fcadad571"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/result.json",
+   "bytes": 2609,
+   "sha256": "feff719666adb2b265d015fc99dba4de9f930c8b14718d954ebba30d4c26c60b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/score.json",
+   "bytes": 4287,
+   "sha256": "5fb251e8efaf854ed5b775fe10709005ba906648d44f56051ebc0550a24be80d"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_000/validation.json",
+   "bytes": 2434,
+   "sha256": "fb90a4b5b9ef7a73c6a9c443c6aed54a7f36991b88485ecdb9862b277b483154"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/action.npz",
+   "bytes": 16812,
+   "sha256": "10ecde0de6535057d9161ebf0f4254a1b7b2a421be305f2263d406e53495bfdc"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/action_derivation.json",
+   "bytes": 719,
+   "sha256": "3b756d41243c84b300469dff48e1995eb9fd941b00c63c157d98a85676f01772"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/episode.json",
+   "bytes": 4198,
+   "sha256": "de2eeb166429ff408b8f865c8ae85cc80a94e0770a244f81ea2efec678737e77"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/full_state.npz",
+   "bytes": 98904,
+   "sha256": "b1e809080ed0ac4ccc8c2b0cb672f3718561c20a9b4fd414d154fd0eb3ae8eb5"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/inject_meta.json",
+   "bytes": 3206,
+   "sha256": "42a923a4529805271666a3b4354b8097dfb4f2a4b9e3a1f3a8a583724dc461a8"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 74156,
+   "sha256": "e5046e42f2fc8d6ea407351609f960095279e20de47d8b6c9d9298a5f2f6cebf"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/place_metrics.json",
+   "bytes": 7941,
+   "sha256": "089dc94558ca47d5ed5f105cd0ce99b91981dde60723517e4939910bac98e374"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/place_metrics.npz",
+   "bytes": 54898,
+   "sha256": "96b1f1cf4f67bae8c8176aba1a7f43c4b8f0163c722af04428baabea7e1dd0a2"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/result.json",
+   "bytes": 2605,
+   "sha256": "ecab105edb28b7c503337c164d4a22bf7cffc79863d98ec91ebdc8f0c4707a76"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/score.json",
+   "bytes": 4288,
+   "sha256": "46ecc7290ed6698f18791d794686fd22438d8d7dccd601581a4eed9f788e492c"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_6/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_6/trajectories/episode_001/validation.json",
+   "bytes": 2415,
+   "sha256": "0f2d7fae347ffa609d3801b09c94083babac1af30d93cebe307ef94501c2e8d8"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/action.npz",
+   "bytes": 8923,
+   "sha256": "2ed74911bee505df44eb0b4fdfad7e9ef06faae089c0eea2558422f704d3fa7a"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/action_derivation.json",
+   "bytes": 739,
+   "sha256": "17cdb1133dd72c988f935ead14d6186208180ec6f39492c96bcb461549956a40"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/episode.json",
+   "bytes": 4198,
+   "sha256": "a1d77e8683423df610ad0abb22332d10ec4608d674f754fdea37669e525ac7cd"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/full_state.npz",
+   "bytes": 48381,
+   "sha256": "71c430210bc7ec35368e421bcf2f5525f6b4c655e914a27eba9e1bc628df4d2b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/inject_meta.json",
+   "bytes": 2769,
+   "sha256": "2d0256b3dda6346d8cac9f05ece010159537a0d75949e76d362f98e9f66a4d21"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/pick_contact_trace.npz",
+   "bytes": 51892,
+   "sha256": "556a0c4d69688d11a9a2c0d229ec147a5dab58acf3e0f951eca872a7f2d287a1"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/place_metrics.json",
+   "bytes": 7941,
+   "sha256": "8cb5f52771263bbc4b8f94dea85ef8bd71cb65fb00c8adc779e6486260228df8"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/place_metrics.npz",
+   "bytes": 42865,
+   "sha256": "6e0ee39d311f9f1d58651792531b532e3f59db111241bc213af7d238cda7a586"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/result.json",
+   "bytes": 2613,
+   "sha256": "9b08aa8a6cf62de6b6c67741183f49b84555dd21812ca147ab03c530b78174f5"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/score.json",
+   "bytes": 4282,
+   "sha256": "c07b033a0e6d85576303af79c6e7b76947554cee79384024c44c750e3f62ac19"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_000/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_000/validation.json",
+   "bytes": 2429,
+   "sha256": "297d69bc27e683614a9eed22a2bc8dc8c03222ed68489519fbe7a83cf999e00e"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/action.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/action.npz",
+   "bytes": 15848,
+   "sha256": "24da85a88f563c171c6ffe8b6f585fb32ada6b65b4cf121a94c6b4533686ce26"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/action_derivation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/action_derivation.json",
+   "bytes": 740,
+   "sha256": "2c474ece0a276198d06cbeefbe2ec7763d246f83c025830495dd94112764438b"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/episode.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/episode.json",
+   "bytes": 4199,
+   "sha256": "9f5b140f96251b4d1d3d5a711098c229de077ba2e2b77e4e99247ecff396d47f"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/full_state.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/full_state.npz",
+   "bytes": 88985,
+   "sha256": "64461294171a1e0d04a8a5a8a2bfc55edb03cd1786cabc3543aaf5dd631c3223"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/inject_meta.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/inject_meta.json",
+   "bytes": 3157,
+   "sha256": "c72fd8ec066d2f04b83a4c027be976502c554cd12cea2af8c7aad514f26dc5d2"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/pick_contact_trace.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/pick_contact_trace.npz",
+   "bytes": 70460,
+   "sha256": "d55dc71a7ac7e31b1772eb136130aeff84e59ff5fc9444b2dd10053e5cd4ea57"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/place_metrics.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/place_metrics.json",
+   "bytes": 7940,
+   "sha256": "e14b4c87a49160fee793e6a380c6d43407712ffd6fe3f28208c6a5825018d972"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/place_metrics.npz",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/place_metrics.npz",
+   "bytes": 52323,
+   "sha256": "2823704d82114b5009ead76d32e2893f9cf6a782431dc2027c0583bc189f26be"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/result.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/result.json",
+   "bytes": 2608,
+   "sha256": "03a86a9ae85d65c91a3184f39d56a544684c0ccfaf1e11fb0ee59ccbf757d4a6"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/score.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/score.json",
+   "bytes": 4283,
+   "sha256": "07fff813aeac99e0fc0a2587e8e15420585d3fd0a1183cb5c045795841bc8cf5"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/dataset/sim_episodes_repro/task_owned_50x4/benchmark_3_8/trajectories/episode_001/validation.json",
+   "local_path": "references/l1_place_20260914/l1/benchmark_3_8/trajectories/episode_001/validation.json",
+   "bytes": 2432,
+   "sha256": "e4858cf29c0eeebdc84b92a6717f4dd3d2fa2097abe8611c5aa8fd2af1580985"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/real2sim/production/contract.py",
+   "local_path": "references/l1_place_20260914/l1/real2sim/production/contract.py",
+   "bytes": 8087,
+   "sha256": "6d0071af6ec83f3bf1fa91514f141fbbe906c5055a04869c9a6c9516ae80fbb3"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/real2sim/production/house_task_environment.py",
+   "local_path": "references/l1_place_20260914/l1/real2sim/production/house_task_environment.py",
+   "bytes": 14781,
+   "sha256": "ed052aa6a04750659dd77149b15882c52103f8e6d6dde4555def43bde0a5cc26"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/real2sim/production/score_place_episode.py",
+   "local_path": "references/l1_place_20260914/l1/real2sim/production/score_place_episode.py",
+   "bytes": 8427,
+   "sha256": "571346b0a2dafb23dbd260ebb5c481349f406b114c1166d89d64ee9a5e2a99b5"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/real2sim/teleop/check_success.py",
+   "local_path": "references/l1_place_20260914/l1/real2sim/teleop/check_success.py",
+   "bytes": 242714,
+   "sha256": "8dd25215eb01328e0fa6b47e3f24f7d4cb8ca4cff37d4d37272f36f63cead1c5"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/real2sim/teleop/init_place.py",
+   "local_path": "references/l1_place_20260914/l1/real2sim/teleop/init_place.py",
+   "bytes": 68800,
+   "sha256": "844b0a59af3a450b485cbd3e2126267729268b94c8b6a0b0b4d942d013482c32"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/real2sim/teleop/robot_positions.py",
+   "local_path": "references/l1_place_20260914/l1/real2sim/teleop/robot_positions.py",
+   "bytes": 12807,
+   "sha256": "3978cce302b07d9e012df4dfdb61407fe26ba4d90ad420628f6840d47f2fb9af"
+  },
+  {
+   "host": "arena-l1",
+   "remote_path": "/mnt/agent-bench-data/lingjun/workspace/agent_bench_0807/real2sim/teleop/task_registry.py",
+   "local_path": "references/l1_place_20260914/l1/real2sim/teleop/task_registry.py",
+   "bytes": 42077,
+   "sha256": "6da6e808ecb81d01751de6a4769a6cbb0610fd9102bbee8a0e2e4683c92a7704"
+  }
+ ]
+}

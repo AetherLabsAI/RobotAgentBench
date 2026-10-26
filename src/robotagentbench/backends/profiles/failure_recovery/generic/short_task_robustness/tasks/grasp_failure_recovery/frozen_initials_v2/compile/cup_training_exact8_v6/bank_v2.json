@@ -1,0 +1,2041 @@
+{
+  "schema": "failure_recovery.frozen_pose_bank.v1",
+  "cases": {
+    "shelf_drink": {
+      "profiles": [
+        {
+          "id": "shelf_drink_l_303",
+          "variant": "shelf_drink",
+          "active_hand": "l",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.40000054240226746,
+              "idx02_body_joint2": 1.401781135612623e-09,
+              "idx11_head_joint1": -2.0327926009144903e-09,
+              "idx12_head_joint2": 0.43632936477661133,
+              "idx21_arm_l_joint1": -1.2899829455688887,
+              "idx22_arm_l_joint2": 1.0467284923498796,
+              "idx23_arm_l_joint3": 1.0390322380058552,
+              "idx24_arm_l_joint4": -0.7504923472216782,
+              "idx25_arm_l_joint5": 0.9103150047481006,
+              "idx26_arm_l_joint6": 0.2252963882883029,
+              "idx27_arm_l_joint7": -0.521182697428385,
+              "idx61_arm_r_joint1": 1.056082897457825,
+              "idx62_arm_r_joint2": -0.5567462890171846,
+              "idx63_arm_r_joint3": -0.17764323276066113,
+              "idx64_arm_r_joint4": 1.3427778353792108,
+              "idx65_arm_r_joint5": -0.7712499361882772,
+              "idx66_arm_r_joint6": -1.446771994988959,
+              "idx67_arm_r_joint7": 0.2604124660433144,
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0,
+              "idx71_gripper_r_inner_joint1": -0.7844092845916748,
+              "idx72_gripper_r_inner_joint3": -0.06552468240261078,
+              "idx73_gripper_r_inner_joint4": -0.031381815671920776,
+              "idx79_gripper_r_inner_joint0": 0.4472809433937073,
+              "idx81_gripper_r_outer_joint1": 0.7843984365463257,
+              "idx82_gripper_r_outer_joint3": 0.08869274705648422,
+              "idx83_gripper_r_outer_joint4": -0.033230822533369064,
+              "idx89_gripper_r_outer_joint0": -0.3932376503944397
+            },
+            "hold_targets": {
+              "idx01_body_joint1": 0.40000054240226746,
+              "idx02_body_joint2": 1.401781135612623e-09,
+              "idx11_head_joint1": -2.0327926009144903e-09,
+              "idx12_head_joint2": 0.43632936477661133,
+              "idx21_arm_l_joint1": -1.2899829455688887,
+              "idx61_arm_r_joint1": 1.056082897457825,
+              "idx22_arm_l_joint2": 1.0467284923498796,
+              "idx62_arm_r_joint2": -0.5567462890171846,
+              "idx23_arm_l_joint3": 1.0390322380058552,
+              "idx63_arm_r_joint3": -0.17764323276066113,
+              "idx24_arm_l_joint4": -0.7504923472216782,
+              "idx64_arm_r_joint4": 1.3427778353792108,
+              "idx25_arm_l_joint5": 0.9103150047481006,
+              "idx65_arm_r_joint5": -0.7712499361882772,
+              "idx26_arm_l_joint6": 0.2252963882883029,
+              "idx66_arm_r_joint6": -1.446771994988959,
+              "idx27_arm_l_joint7": -0.521182697428385,
+              "idx67_arm_r_joint7": 0.2604124660433144,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.7843984365463257
+            },
+            "source": "fixed ready configuration plus target-relative CPU IK; no motion frames"
+          },
+          "initial_base_xyyaw": null,
+          "source_robot_base": {
+            "position_m": [
+              -2.341633610067318,
+              1.3788210742273175,
+              0.0013671815395355225
+            ],
+            "quaternion_wxyz": [
+              0.6939304618799823,
+              0.0,
+              0.0,
+              0.7200420224369092
+            ]
+          },
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": true,
+            "random_revalidation_required": true,
+            "native_template_hold_steps": 20,
+            "native_initial_score": 0,
+            "native_idle_score": 0,
+            "report": "procedural_v1/shelf_adopt303_native_r2/native/native_report.json",
+            "report_sha256": "80d254a550c0ce62e4d0fff9097c7469f7ccf20a1c8f0fc910ebb0175d019acb"
+          },
+          "source_record": "procedural_v1/shelf_adopt303_cpu/initial/initial.json",
+          "source_record_sha256": "4ca2c73e9b9b1a99abbe643abb823ab213ed8fae15551c4f4af375ec49a96161",
+          "source_motion_needed": false,
+          "maximum_score": 4,
+          "completion_policy": "original_pick_success_only"
+        }
+      ],
+      "online_ik_fallback": false,
+      "hand_coverage": [
+        "l"
+      ],
+      "fast_scene_generator_connected": false
+    },
+    "coffee_bag": {
+      "profiles": [
+        {
+          "id": "coffee_bag_r_301",
+          "variant": "coffee_bag",
+          "active_hand": "r",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.31994378566741943,
+              "idx02_body_joint2": 0.26180070638656616,
+              "idx11_head_joint1": 3.089133809863753e-11,
+              "idx12_head_joint2": 0.4363349676132202,
+              "idx21_arm_l_joint1": -0.9566915035247803,
+              "idx22_arm_l_joint2": 0.5711852312088013,
+              "idx23_arm_l_joint3": 0.27330246567726135,
+              "idx24_arm_l_joint4": -1.16752290725708,
+              "idx25_arm_l_joint5": 1.2575392723083496,
+              "idx26_arm_l_joint6": 1.3616100549697876,
+              "idx27_arm_l_joint7": -0.16790270805358887,
+              "idx61_arm_r_joint1": 1.047068388940697,
+              "idx62_arm_r_joint2": -0.9686911748357017,
+              "idx63_arm_r_joint3": -1.1758177758895478,
+              "idx64_arm_r_joint4": 0.816831670101582,
+              "idx65_arm_r_joint5": -2.1794348041467297,
+              "idx66_arm_r_joint6": 0.6214240170070924,
+              "idx67_arm_r_joint7": 1.60777420611765,
+              "idx31_gripper_l_inner_joint1": -0.7823523879051208,
+              "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+              "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+              "idx39_gripper_l_inner_joint0": 0.427589621193043,
+              "idx41_gripper_l_outer_joint1": 0.7823523879051208,
+              "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+              "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+              "idx49_gripper_l_outer_joint0": -0.4247991277133444,
+              "idx71_gripper_r_inner_joint1": 0.0,
+              "idx72_gripper_r_inner_joint3": 0.0,
+              "idx73_gripper_r_inner_joint4": 0.0,
+              "idx79_gripper_r_inner_joint0": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.0,
+              "idx82_gripper_r_outer_joint3": 0.0,
+              "idx83_gripper_r_outer_joint4": 0.0,
+              "idx89_gripper_r_outer_joint0": 0.0
+            },
+            "hold_targets": {
+              "idx21_arm_l_joint1": -0.9566915035247803,
+              "idx22_arm_l_joint2": 0.5711852312088013,
+              "idx23_arm_l_joint3": 0.27330246567726135,
+              "idx24_arm_l_joint4": -1.16752290725708,
+              "idx25_arm_l_joint5": 1.2575392723083496,
+              "idx26_arm_l_joint6": 1.3616100549697876,
+              "idx27_arm_l_joint7": -0.16790270805358887,
+              "idx61_arm_r_joint1": 1.047068388940697,
+              "idx62_arm_r_joint2": -0.9686911748357017,
+              "idx63_arm_r_joint3": -1.1758177758895478,
+              "idx64_arm_r_joint4": 0.816831670101582,
+              "idx65_arm_r_joint5": -2.1794348041467297,
+              "idx66_arm_r_joint6": 0.6214240170070924,
+              "idx67_arm_r_joint7": 1.60777420611765,
+              "idx01_body_joint1": 0.31994378566741943,
+              "idx02_body_joint2": 0.26180070638656616,
+              "idx11_head_joint1": 3.089133809863753e-11,
+              "idx12_head_joint2": 0.4363349676132202,
+              "idx41_gripper_l_outer_joint1": 0.7823523879051208,
+              "idx81_gripper_r_outer_joint1": 0.0
+            },
+            "source": "fixed ready configuration plus target-relative CPU IK; no motion frames"
+          },
+          "initial_base_xyyaw": null,
+          "source_robot_base": null,
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": true,
+            "random_revalidation_required": true,
+            "native_template_hold_steps": 20,
+            "native_initial_score": 0.0,
+            "native_idle_score": 0.0,
+            "report": "procedural_v1/bag_adopt301_native_r2/native/native_report.json",
+            "report_sha256": "4016ff3708a35d27aa9a221045886dad1115e8b30e83c06ae20b86cb52bd3c2a"
+          },
+          "source_record": "procedural_v1/bag_adopt301_cpu/initial/initial.json",
+          "source_record_sha256": "52b26230ac476100d94a900389d03717871db5f3902a8dbb247e91c9b59200ab",
+          "source_motion_needed": false,
+          "maximum_score": 6,
+          "completion_policy": "pour_beans_and_return_bag"
+        }
+      ],
+      "online_ik_fallback": false,
+      "hand_coverage": [
+        "r"
+      ],
+      "fast_scene_generator_connected": false
+    },
+    "sofa": {
+      "profiles": [
+        {
+          "id": "sofa_l_401",
+          "variant": "sofa",
+          "active_hand": "l",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.019999999552965164,
+              "idx02_body_joint2": 0.5235977172851562,
+              "idx11_head_joint1": -2.0471249695397375e-11,
+              "idx12_head_joint2": 0.4363403022289276,
+              "idx21_arm_l_joint1": -1.1331294292544762,
+              "idx22_arm_l_joint2": 0.988897085065469,
+              "idx23_arm_l_joint3": -0.4035726208714644,
+              "idx24_arm_l_joint4": 0.4956968724147588,
+              "idx25_arm_l_joint5": 1.6647844531583165,
+              "idx26_arm_l_joint6": 1.7677473175714364,
+              "idx27_arm_l_joint7": 1.1381966614904193,
+              "idx61_arm_r_joint1": 1.0405426025390625,
+              "idx62_arm_r_joint2": -0.6267315149307251,
+              "idx63_arm_r_joint3": -0.27722036838531494,
+              "idx64_arm_r_joint4": 1.3300338983535767,
+              "idx65_arm_r_joint5": -0.722590446472168,
+              "idx66_arm_r_joint6": -1.5444090366363525,
+              "idx67_arm_r_joint7": 0.20025941729545593,
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0,
+              "idx71_gripper_r_inner_joint1": -0.07843981683254242,
+              "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+              "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+              "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+              "idx81_gripper_r_outer_joint1": 0.07843981683254242,
+              "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+              "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+              "idx89_gripper_r_outer_joint0": -0.43470815091828396
+            },
+            "hold_targets": {
+              "idx21_arm_l_joint1": -1.1331294292544762,
+              "idx22_arm_l_joint2": 0.988897085065469,
+              "idx23_arm_l_joint3": -0.4035726208714644,
+              "idx24_arm_l_joint4": 0.4956968724147588,
+              "idx25_arm_l_joint5": 1.6647844531583165,
+              "idx26_arm_l_joint6": 1.7677473175714364,
+              "idx27_arm_l_joint7": 1.1381966614904193,
+              "idx61_arm_r_joint1": 1.0405426025390625,
+              "idx62_arm_r_joint2": -0.6267315149307251,
+              "idx63_arm_r_joint3": -0.27722036838531494,
+              "idx64_arm_r_joint4": 1.3300338983535767,
+              "idx65_arm_r_joint5": -0.722590446472168,
+              "idx66_arm_r_joint6": -1.5444090366363525,
+              "idx67_arm_r_joint7": 0.20025941729545593,
+              "idx01_body_joint1": 0.019999999552965164,
+              "idx02_body_joint2": 0.5235977172851562,
+              "idx11_head_joint1": -2.0471249695397375e-11,
+              "idx12_head_joint2": 0.4363403022289276,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.07843981683254242
+            }
+          },
+          "initial_base_xyyaw": [
+            -0.7995669555216955,
+            0.03504577395245545,
+            -1.871716561155323
+          ],
+          "source_robot_base": null,
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": false,
+            "random_revalidation_required": true
+          },
+          "source_record": "expansion_v2/candidates/sofa_empty401_operating_v8/initial.json",
+          "source_record_sha256": "cf39be4141ab0c31486ac5cc63667819f632019b22bc429d4fa6d14d861bbd4a",
+          "source_motion_needed": false,
+          "maximum_score": 7.5,
+          "completion_policy": "same_target_released_in_permitted_coffee_table_object_region"
+        }
+      ],
+      "online_ik_fallback": false,
+      "hand_coverage": [
+        "l"
+      ],
+      "fast_scene_generator_connected": false
+    },
+    "table_waste_tipped_cup": {
+      "profiles": [],
+      "online_ik_fallback": false,
+      "status": "blocked_missing_native_supported_rest_and_failure_history",
+      "candidate": "expansion_v2/candidates/tipped_side401_cpu_r3/initial.json",
+      "hand_coverage": [],
+      "fast_scene_generator_connected": false
+    },
+    "table_waste_empty_grasp": {
+      "profiles": [
+        {
+          "id": "train_ep1450_f70_l",
+          "variant": "table_waste_empty_grasp",
+          "active_hand": "l",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.020003223791718483,
+              "idx02_body_joint2": 0.5235854387283325,
+              "idx11_head_joint1": -1.2059363143634982e-06,
+              "idx12_head_joint2": 0.4362809360027313,
+              "idx21_arm_l_joint1": -0.5206230878829956,
+              "idx22_arm_l_joint2": 0.8318173885345459,
+              "idx23_arm_l_joint3": 0.07737541943788528,
+              "idx24_arm_l_joint4": -1.2594431638717651,
+              "idx25_arm_l_joint5": 1.01780104637146,
+              "idx26_arm_l_joint6": 1.2025412321090698,
+              "idx27_arm_l_joint7": 0.14963434636592865,
+              "idx61_arm_r_joint1": 1.4445663690567017,
+              "idx62_arm_r_joint2": -0.679683268070221,
+              "idx63_arm_r_joint3": 0.017536526545882225,
+              "idx64_arm_r_joint4": 1.5158690214157104,
+              "idx65_arm_r_joint5": -0.23235611617565155,
+              "idx66_arm_r_joint6": -1.5374177694320679,
+              "idx67_arm_r_joint7": 0.19126006960868835,
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0,
+              "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+              "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+              "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+              "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+              "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+              "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+              "idx89_gripper_r_outer_joint0": -0.43470815091828396
+            },
+            "hold_targets": {
+              "idx21_arm_l_joint1": -0.5206230878829956,
+              "idx22_arm_l_joint2": 0.8318173885345459,
+              "idx23_arm_l_joint3": 0.07737541943788528,
+              "idx24_arm_l_joint4": -1.2594431638717651,
+              "idx25_arm_l_joint5": 1.01780104637146,
+              "idx26_arm_l_joint6": 1.2025412321090698,
+              "idx27_arm_l_joint7": 0.14963434636592865,
+              "idx61_arm_r_joint1": 1.4445663690567017,
+              "idx62_arm_r_joint2": -0.679683268070221,
+              "idx63_arm_r_joint3": 0.017536526545882225,
+              "idx64_arm_r_joint4": 1.5158690214157104,
+              "idx65_arm_r_joint5": -0.23235611617565155,
+              "idx66_arm_r_joint6": -1.5374177694320679,
+              "idx67_arm_r_joint7": 0.19126006960868835,
+              "idx01_body_joint1": 0.020003223791718483,
+              "idx02_body_joint2": 0.5235854387283325,
+              "idx11_head_joint1": -1.2059363143634982e-06,
+              "idx12_head_joint2": 0.4362809360027313,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091
+            }
+          },
+          "base_canonical_column": [
+            [
+              -1.0000000000000004,
+              5.359585455961219e-16,
+              -1.7191815119845181e-16,
+              -1.1511755128898546
+            ],
+            [
+              6.818112618906271e-17,
+              -0.9999999999999996,
+              -1.5250340952160541e-18,
+              -0.1799440369622355
+            ],
+            [
+              -1.9778581020339762e-16,
+              4.026682339312598e-18,
+              1.0000000000000004,
+              -4.916999102499746e-18
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "initial_base_xyyaw": [
+            -1.059709898176706,
+            0.4557726594935412,
+            1.5707963267948963
+          ],
+          "supported_miss_signs": [
+            1
+          ],
+          "asset_id": "paper_cup",
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": false,
+            "random_revalidation_required": true,
+            "gap_probes_m": [
+              0.020001,
+              0.035,
+              0.049999
+            ],
+            "whole_target_in_original_camera_frustum": true
+          },
+          "source_motion_needed": false,
+          "maximum_score": 9.5,
+          "completion_policy": "same_target_released_inside_correct_bin",
+          "source_record": "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/frozen_initials_v2/inspect/cup_train_fk_v2/inspection.json",
+          "source_record_sha256": "4faf6946a07b8bb684948c33b073ca0e2d93ac633c74617e6e79a7f488006934",
+          "training_provenance": {
+            "episode_index": 1450,
+            "frame": 70,
+            "benchmark_task_id": "7.10",
+            "row": {
+              "episode_index": 1450,
+              "task": {
+                "task_index": 29,
+                "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "task_kind": "atomic",
+                "benchmark_task_id": "7.10"
+              },
+              "parquet_relative": "data/chunk-001/episode_001450.parquet",
+              "parquet_sha256": "cc17ba55114dfcbbb23543b6cf4ed51d243abc41ffb7b1464a85bd5734e6a94d",
+              "source_id": "atomic_7_10/batch_20261008_001:0",
+              "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_00",
+              "provenance_sha256": "4f2198065ef10d6c8edaaf3ec485b189c5fac1b3e2272540b4a13568a9587195",
+              "active_hand": "l",
+              "command_gripper_span_rad": [
+                0.5343981385231018,
+                0.0
+              ],
+              "close_transition_frame": 70,
+              "first_minimum_frame": 70,
+              "frames_examined": [
+                70,
+                75,
+                80
+              ],
+              "original_source_approval_not_inferred": true,
+              "base_pose_not_per_frame_telemetry": true
+            },
+            "measured_active_arm_q_rad": [
+              -0.5206230878829956,
+              0.8318173885345459,
+              0.07737541943788528,
+              -1.2594431638717651,
+              1.01780104637146,
+              1.2025412321090698,
+              0.14963434636592865
+            ],
+            "active_arm_copied_exactly": true,
+            "body_head_and_inactive_arm_from_same_measured_row": true,
+            "active_gripper_closed_empty": true,
+            "inactive_gripper": "current_native_ready_linkage",
+            "source_success_not_inferred": true
+          },
+          "gripper_closure": {
+            "hand": "l",
+            "source_coordinates": {
+              "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+              "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+              "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+              "idx39_gripper_l_inner_joint0": 0.427589621193043,
+              "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+              "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+              "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+              "idx49_gripper_l_outer_joint0": -0.4247991277133444
+            },
+            "reset_coordinates": {
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0
+            },
+            "asset_reset_inherited": [
+              "idx31_gripper_l_inner_joint1",
+              "idx32_gripper_l_inner_joint3",
+              "idx33_gripper_l_inner_joint4",
+              "idx39_gripper_l_inner_joint0",
+              "idx42_gripper_l_outer_joint3",
+              "idx43_gripper_l_outer_joint4",
+              "idx49_gripper_l_outer_joint0",
+              "idx71_gripper_r_inner_joint1",
+              "idx72_gripper_r_inner_joint3",
+              "idx73_gripper_r_inner_joint4",
+              "idx79_gripper_r_inner_joint0",
+              "idx82_gripper_r_outer_joint3",
+              "idx83_gripper_r_outer_joint4",
+              "idx89_gripper_r_outer_joint0"
+            ],
+            "other_gripper_unchanged": true,
+            "drive_parameters_changed": false,
+            "coordinates_measured": false
+          },
+          "anchor": "canonical_actual_coffee_table_geometry"
+        },
+        {
+          "id": "train_ep1472_f70_l",
+          "variant": "table_waste_empty_grasp",
+          "active_hand": "l",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.020000196993350983,
+              "idx02_body_joint2": 0.5235975980758667,
+              "idx11_head_joint1": -5.372086775423668e-08,
+              "idx12_head_joint2": 0.43633005023002625,
+              "idx21_arm_l_joint1": -1.144639492034912,
+              "idx22_arm_l_joint2": 0.754346489906311,
+              "idx23_arm_l_joint3": 0.2883845865726471,
+              "idx24_arm_l_joint4": -4.902247746940702e-05,
+              "idx25_arm_l_joint5": 0.974948525428772,
+              "idx26_arm_l_joint6": 1.7226762771606445,
+              "idx27_arm_l_joint7": 0.6485483050346375,
+              "idx61_arm_r_joint1": 1.4445672035217285,
+              "idx62_arm_r_joint2": -0.6796829700469971,
+              "idx63_arm_r_joint3": 0.017535699531435966,
+              "idx64_arm_r_joint4": 1.515869379043579,
+              "idx65_arm_r_joint5": -0.23235633969306946,
+              "idx66_arm_r_joint6": -1.537419319152832,
+              "idx67_arm_r_joint7": 0.19126008450984955,
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0,
+              "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+              "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+              "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+              "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+              "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+              "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+              "idx89_gripper_r_outer_joint0": -0.43470815091828396
+            },
+            "hold_targets": {
+              "idx21_arm_l_joint1": -1.144639492034912,
+              "idx22_arm_l_joint2": 0.754346489906311,
+              "idx23_arm_l_joint3": 0.2883845865726471,
+              "idx24_arm_l_joint4": -4.902247746940702e-05,
+              "idx25_arm_l_joint5": 0.974948525428772,
+              "idx26_arm_l_joint6": 1.7226762771606445,
+              "idx27_arm_l_joint7": 0.6485483050346375,
+              "idx61_arm_r_joint1": 1.4445672035217285,
+              "idx62_arm_r_joint2": -0.6796829700469971,
+              "idx63_arm_r_joint3": 0.017535699531435966,
+              "idx64_arm_r_joint4": 1.515869379043579,
+              "idx65_arm_r_joint5": -0.23235633969306946,
+              "idx66_arm_r_joint6": -1.537419319152832,
+              "idx67_arm_r_joint7": 0.19126008450984955,
+              "idx01_body_joint1": 0.020000196993350983,
+              "idx02_body_joint2": 0.5235975980758667,
+              "idx11_head_joint1": -5.372086775423668e-08,
+              "idx12_head_joint2": 0.43633005023002625,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091
+            }
+          },
+          "base_canonical_column": [
+            [
+              -1.0000000000000004,
+              5.359585455961219e-16,
+              -1.7191815119845181e-16,
+              -1.1511755128898546
+            ],
+            [
+              6.818112618906271e-17,
+              -0.9999999999999996,
+              -1.5250340952160541e-18,
+              -0.1799440369622355
+            ],
+            [
+              -1.9778581020339762e-16,
+              4.026682339312598e-18,
+              1.0000000000000004,
+              -4.916999102499746e-18
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "initial_base_xyyaw": [
+            -1.059709898176706,
+            0.4557726594935412,
+            1.5707963267948963
+          ],
+          "supported_miss_signs": [
+            1
+          ],
+          "asset_id": "paper_cup",
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": false,
+            "random_revalidation_required": true,
+            "gap_probes_m": [
+              0.020001,
+              0.035,
+              0.049999
+            ],
+            "whole_target_in_original_camera_frustum": true
+          },
+          "source_motion_needed": false,
+          "maximum_score": 9.5,
+          "completion_policy": "same_target_released_inside_correct_bin",
+          "source_record": "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/frozen_initials_v2/inspect/cup_train_fk_v2/inspection.json",
+          "source_record_sha256": "4faf6946a07b8bb684948c33b073ca0e2d93ac633c74617e6e79a7f488006934",
+          "training_provenance": {
+            "episode_index": 1472,
+            "frame": 70,
+            "benchmark_task_id": "7.10",
+            "row": {
+              "episode_index": 1472,
+              "task": {
+                "task_index": 29,
+                "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "task_kind": "atomic",
+                "benchmark_task_id": "7.10"
+              },
+              "parquet_relative": "data/chunk-001/episode_001472.parquet",
+              "parquet_sha256": "50109d924d9c211cfa4cf204cc42b080be02e52d76580796a3a80f427017e8da",
+              "source_id": "atomic_7_10/batch_20261008_001:22",
+              "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_27",
+              "provenance_sha256": "58cb2bd573e4755a144b99fbaede878d9ad8b40e507b33b73c3af7d15c402ed1",
+              "active_hand": "l",
+              "command_gripper_span_rad": [
+                0.5343981385231018,
+                0.0
+              ],
+              "close_transition_frame": 70,
+              "first_minimum_frame": 70,
+              "frames_examined": [
+                70,
+                75,
+                80
+              ],
+              "original_source_approval_not_inferred": true,
+              "base_pose_not_per_frame_telemetry": true
+            },
+            "measured_active_arm_q_rad": [
+              -1.144639492034912,
+              0.754346489906311,
+              0.2883845865726471,
+              -4.902247746940702e-05,
+              0.974948525428772,
+              1.7226762771606445,
+              0.6485483050346375
+            ],
+            "active_arm_copied_exactly": true,
+            "body_head_and_inactive_arm_from_same_measured_row": true,
+            "active_gripper_closed_empty": true,
+            "inactive_gripper": "current_native_ready_linkage",
+            "source_success_not_inferred": true
+          },
+          "gripper_closure": {
+            "hand": "l",
+            "source_coordinates": {
+              "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+              "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+              "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+              "idx39_gripper_l_inner_joint0": 0.427589621193043,
+              "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+              "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+              "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+              "idx49_gripper_l_outer_joint0": -0.4247991277133444
+            },
+            "reset_coordinates": {
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0
+            },
+            "asset_reset_inherited": [
+              "idx31_gripper_l_inner_joint1",
+              "idx32_gripper_l_inner_joint3",
+              "idx33_gripper_l_inner_joint4",
+              "idx39_gripper_l_inner_joint0",
+              "idx42_gripper_l_outer_joint3",
+              "idx43_gripper_l_outer_joint4",
+              "idx49_gripper_l_outer_joint0",
+              "idx71_gripper_r_inner_joint1",
+              "idx72_gripper_r_inner_joint3",
+              "idx73_gripper_r_inner_joint4",
+              "idx79_gripper_r_inner_joint0",
+              "idx82_gripper_r_outer_joint3",
+              "idx83_gripper_r_outer_joint4",
+              "idx89_gripper_r_outer_joint0"
+            ],
+            "other_gripper_unchanged": true,
+            "drive_parameters_changed": false,
+            "coordinates_measured": false
+          },
+          "anchor": "canonical_actual_coffee_table_geometry"
+        },
+        {
+          "id": "train_ep1465_f80_l",
+          "variant": "table_waste_empty_grasp",
+          "active_hand": "l",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.02001190185546875,
+              "idx02_body_joint2": 0.5235347747802734,
+              "idx11_head_joint1": -6.3147149376163725e-06,
+              "idx12_head_joint2": 0.43606096506118774,
+              "idx21_arm_l_joint1": -1.1140904426574707,
+              "idx22_arm_l_joint2": 0.9708302617073059,
+              "idx23_arm_l_joint3": 0.4495643973350525,
+              "idx24_arm_l_joint4": -0.6660928130149841,
+              "idx25_arm_l_joint5": 1.0277231931686401,
+              "idx26_arm_l_joint6": 1.387133240699768,
+              "idx27_arm_l_joint7": 0.28854531049728394,
+              "idx61_arm_r_joint1": 1.4445656538009644,
+              "idx62_arm_r_joint2": -0.679682731628418,
+              "idx63_arm_r_joint3": 0.017536377534270287,
+              "idx64_arm_r_joint4": 1.515870451927185,
+              "idx65_arm_r_joint5": -0.23235589265823364,
+              "idx66_arm_r_joint6": -1.5374218225479126,
+              "idx67_arm_r_joint7": 0.19125939905643463,
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0,
+              "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+              "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+              "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+              "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+              "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+              "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+              "idx89_gripper_r_outer_joint0": -0.43470815091828396
+            },
+            "hold_targets": {
+              "idx21_arm_l_joint1": -1.1140904426574707,
+              "idx22_arm_l_joint2": 0.9708302617073059,
+              "idx23_arm_l_joint3": 0.4495643973350525,
+              "idx24_arm_l_joint4": -0.6660928130149841,
+              "idx25_arm_l_joint5": 1.0277231931686401,
+              "idx26_arm_l_joint6": 1.387133240699768,
+              "idx27_arm_l_joint7": 0.28854531049728394,
+              "idx61_arm_r_joint1": 1.4445656538009644,
+              "idx62_arm_r_joint2": -0.679682731628418,
+              "idx63_arm_r_joint3": 0.017536377534270287,
+              "idx64_arm_r_joint4": 1.515870451927185,
+              "idx65_arm_r_joint5": -0.23235589265823364,
+              "idx66_arm_r_joint6": -1.5374218225479126,
+              "idx67_arm_r_joint7": 0.19125939905643463,
+              "idx01_body_joint1": 0.02001190185546875,
+              "idx02_body_joint2": 0.5235347747802734,
+              "idx11_head_joint1": -6.3147149376163725e-06,
+              "idx12_head_joint2": 0.43606096506118774,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091
+            }
+          },
+          "base_canonical_column": [
+            [
+              -1.0000000000000004,
+              5.359585455961219e-16,
+              -1.7191815119845181e-16,
+              -1.1511755128898546
+            ],
+            [
+              6.818112618906271e-17,
+              -0.9999999999999996,
+              -1.5250340952160541e-18,
+              -0.1799440369622355
+            ],
+            [
+              -1.9778581020339762e-16,
+              4.026682339312598e-18,
+              1.0000000000000004,
+              -4.916999102499746e-18
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "initial_base_xyyaw": [
+            -1.059709898176706,
+            0.4557726594935412,
+            1.5707963267948963
+          ],
+          "supported_miss_signs": [
+            1
+          ],
+          "asset_id": "paper_cup",
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": false,
+            "random_revalidation_required": true,
+            "gap_probes_m": [
+              0.020001,
+              0.035,
+              0.049999
+            ],
+            "whole_target_in_original_camera_frustum": true
+          },
+          "source_motion_needed": false,
+          "maximum_score": 9.5,
+          "completion_policy": "same_target_released_inside_correct_bin",
+          "source_record": "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/frozen_initials_v2/inspect/cup_train_fk_v2/inspection.json",
+          "source_record_sha256": "4faf6946a07b8bb684948c33b073ca0e2d93ac633c74617e6e79a7f488006934",
+          "training_provenance": {
+            "episode_index": 1465,
+            "frame": 80,
+            "benchmark_task_id": "7.10",
+            "row": {
+              "episode_index": 1465,
+              "task": {
+                "task_index": 29,
+                "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "task_kind": "atomic",
+                "benchmark_task_id": "7.10"
+              },
+              "parquet_relative": "data/chunk-001/episode_001465.parquet",
+              "parquet_sha256": "9921efadbdb7d65560c787c91ecac192357d1ccae25b17c5ba709d83a78dd249",
+              "source_id": "atomic_7_10/batch_20261008_001:15",
+              "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_16",
+              "provenance_sha256": "177fc3e394a613d7525e19d1cf31f67317b404e69880592d37c18a29c5a9bd7a",
+              "active_hand": "l",
+              "command_gripper_span_rad": [
+                0.5343981385231018,
+                0.0
+              ],
+              "close_transition_frame": 70,
+              "first_minimum_frame": 70,
+              "frames_examined": [
+                70,
+                75,
+                80
+              ],
+              "original_source_approval_not_inferred": true,
+              "base_pose_not_per_frame_telemetry": true
+            },
+            "measured_active_arm_q_rad": [
+              -1.1140904426574707,
+              0.9708302617073059,
+              0.4495643973350525,
+              -0.6660928130149841,
+              1.0277231931686401,
+              1.387133240699768,
+              0.28854531049728394
+            ],
+            "active_arm_copied_exactly": true,
+            "body_head_and_inactive_arm_from_same_measured_row": true,
+            "active_gripper_closed_empty": true,
+            "inactive_gripper": "current_native_ready_linkage",
+            "source_success_not_inferred": true
+          },
+          "gripper_closure": {
+            "hand": "l",
+            "source_coordinates": {
+              "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+              "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+              "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+              "idx39_gripper_l_inner_joint0": 0.427589621193043,
+              "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+              "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+              "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+              "idx49_gripper_l_outer_joint0": -0.4247991277133444
+            },
+            "reset_coordinates": {
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0
+            },
+            "asset_reset_inherited": [
+              "idx31_gripper_l_inner_joint1",
+              "idx32_gripper_l_inner_joint3",
+              "idx33_gripper_l_inner_joint4",
+              "idx39_gripper_l_inner_joint0",
+              "idx42_gripper_l_outer_joint3",
+              "idx43_gripper_l_outer_joint4",
+              "idx49_gripper_l_outer_joint0",
+              "idx71_gripper_r_inner_joint1",
+              "idx72_gripper_r_inner_joint3",
+              "idx73_gripper_r_inner_joint4",
+              "idx79_gripper_r_inner_joint0",
+              "idx82_gripper_r_outer_joint3",
+              "idx83_gripper_r_outer_joint4",
+              "idx89_gripper_r_outer_joint0"
+            ],
+            "other_gripper_unchanged": true,
+            "drive_parameters_changed": false,
+            "coordinates_measured": false
+          },
+          "anchor": "canonical_actual_coffee_table_geometry"
+        },
+        {
+          "id": "train_ep1491_f70_l",
+          "variant": "table_waste_empty_grasp",
+          "active_hand": "l",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.020000724121928215,
+              "idx02_body_joint2": 0.5235962867736816,
+              "idx11_head_joint1": -1.9960702957178e-07,
+              "idx12_head_joint2": 0.436323881149292,
+              "idx21_arm_l_joint1": -0.1992902159690857,
+              "idx22_arm_l_joint2": 0.7977779507637024,
+              "idx23_arm_l_joint3": -0.4517267942428589,
+              "idx24_arm_l_joint4": -0.985043466091156,
+              "idx25_arm_l_joint5": 0.9499402642250061,
+              "idx26_arm_l_joint6": 1.4903377294540405,
+              "idx27_arm_l_joint7": 0.3306017816066742,
+              "idx61_arm_r_joint1": 1.4445658922195435,
+              "idx62_arm_r_joint2": -0.6796832084655762,
+              "idx63_arm_r_joint3": 0.017535516992211342,
+              "idx64_arm_r_joint4": 1.5158690214157104,
+              "idx65_arm_r_joint5": -0.2323562502861023,
+              "idx66_arm_r_joint6": -1.5374219417572021,
+              "idx67_arm_r_joint7": 0.19125939905643463,
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0,
+              "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+              "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+              "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+              "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+              "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+              "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+              "idx89_gripper_r_outer_joint0": -0.43470815091828396
+            },
+            "hold_targets": {
+              "idx21_arm_l_joint1": -0.1992902159690857,
+              "idx22_arm_l_joint2": 0.7977779507637024,
+              "idx23_arm_l_joint3": -0.4517267942428589,
+              "idx24_arm_l_joint4": -0.985043466091156,
+              "idx25_arm_l_joint5": 0.9499402642250061,
+              "idx26_arm_l_joint6": 1.4903377294540405,
+              "idx27_arm_l_joint7": 0.3306017816066742,
+              "idx61_arm_r_joint1": 1.4445658922195435,
+              "idx62_arm_r_joint2": -0.6796832084655762,
+              "idx63_arm_r_joint3": 0.017535516992211342,
+              "idx64_arm_r_joint4": 1.5158690214157104,
+              "idx65_arm_r_joint5": -0.2323562502861023,
+              "idx66_arm_r_joint6": -1.5374219417572021,
+              "idx67_arm_r_joint7": 0.19125939905643463,
+              "idx01_body_joint1": 0.020000724121928215,
+              "idx02_body_joint2": 0.5235962867736816,
+              "idx11_head_joint1": -1.9960702957178e-07,
+              "idx12_head_joint2": 0.436323881149292,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091
+            }
+          },
+          "base_canonical_column": [
+            [
+              -1.0000000000000004,
+              5.359585455961219e-16,
+              -1.7191815119845181e-16,
+              -1.1511755128898546
+            ],
+            [
+              6.818112618906271e-17,
+              -0.9999999999999996,
+              -1.5250340952160541e-18,
+              -0.1799440369622355
+            ],
+            [
+              -1.9778581020339762e-16,
+              4.026682339312598e-18,
+              1.0000000000000004,
+              -4.916999102499746e-18
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "initial_base_xyyaw": [
+            -1.059709898176706,
+            0.4557726594935412,
+            1.5707963267948963
+          ],
+          "supported_miss_signs": [
+            1
+          ],
+          "asset_id": "paper_cup",
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": false,
+            "random_revalidation_required": true,
+            "gap_probes_m": [
+              0.020001,
+              0.035,
+              0.049999
+            ],
+            "whole_target_in_original_camera_frustum": true
+          },
+          "source_motion_needed": false,
+          "maximum_score": 9.5,
+          "completion_policy": "same_target_released_inside_correct_bin",
+          "source_record": "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/frozen_initials_v2/inspect/cup_train_fk_v2/inspection.json",
+          "source_record_sha256": "4faf6946a07b8bb684948c33b073ca0e2d93ac633c74617e6e79a7f488006934",
+          "training_provenance": {
+            "episode_index": 1491,
+            "frame": 70,
+            "benchmark_task_id": "7.10",
+            "row": {
+              "episode_index": 1491,
+              "task": {
+                "task_index": 29,
+                "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "task_kind": "atomic",
+                "benchmark_task_id": "7.10"
+              },
+              "parquet_relative": "data/chunk-001/episode_001491.parquet",
+              "parquet_sha256": "2b740f5693aa45bcd67ded7c96c147f35b7da412bf791c56a6f5c7937c1a0260",
+              "source_id": "atomic_7_10/batch_20261008_001:41",
+              "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_46",
+              "provenance_sha256": "995bb9cc4ffa74aba12137444e01cd26a0e6bdba2e6af8cbfb002da2492592a4",
+              "active_hand": "l",
+              "command_gripper_span_rad": [
+                0.5343981385231018,
+                0.0
+              ],
+              "close_transition_frame": 70,
+              "first_minimum_frame": 70,
+              "frames_examined": [
+                70,
+                75,
+                80
+              ],
+              "original_source_approval_not_inferred": true,
+              "base_pose_not_per_frame_telemetry": true
+            },
+            "measured_active_arm_q_rad": [
+              -0.1992902159690857,
+              0.7977779507637024,
+              -0.4517267942428589,
+              -0.985043466091156,
+              0.9499402642250061,
+              1.4903377294540405,
+              0.3306017816066742
+            ],
+            "active_arm_copied_exactly": true,
+            "body_head_and_inactive_arm_from_same_measured_row": true,
+            "active_gripper_closed_empty": true,
+            "inactive_gripper": "current_native_ready_linkage",
+            "source_success_not_inferred": true
+          },
+          "gripper_closure": {
+            "hand": "l",
+            "source_coordinates": {
+              "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+              "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+              "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+              "idx39_gripper_l_inner_joint0": 0.427589621193043,
+              "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+              "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+              "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+              "idx49_gripper_l_outer_joint0": -0.4247991277133444
+            },
+            "reset_coordinates": {
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0
+            },
+            "asset_reset_inherited": [
+              "idx31_gripper_l_inner_joint1",
+              "idx32_gripper_l_inner_joint3",
+              "idx33_gripper_l_inner_joint4",
+              "idx39_gripper_l_inner_joint0",
+              "idx42_gripper_l_outer_joint3",
+              "idx43_gripper_l_outer_joint4",
+              "idx49_gripper_l_outer_joint0",
+              "idx71_gripper_r_inner_joint1",
+              "idx72_gripper_r_inner_joint3",
+              "idx73_gripper_r_inner_joint4",
+              "idx79_gripper_r_inner_joint0",
+              "idx82_gripper_r_outer_joint3",
+              "idx83_gripper_r_outer_joint4",
+              "idx89_gripper_r_outer_joint0"
+            ],
+            "other_gripper_unchanged": true,
+            "drive_parameters_changed": false,
+            "coordinates_measured": false
+          },
+          "anchor": "canonical_actual_coffee_table_geometry"
+        },
+        {
+          "id": "train_ep1474_f71_l",
+          "variant": "table_waste_empty_grasp",
+          "active_hand": "l",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.02001071348786354,
+              "idx02_body_joint2": 0.5235691666603088,
+              "idx11_head_joint1": -2.789641939671128e-06,
+              "idx12_head_joint2": 0.4362155795097351,
+              "idx21_arm_l_joint1": -0.9132058620452881,
+              "idx22_arm_l_joint2": 0.694162905216217,
+              "idx23_arm_l_joint3": 0.3739873766899109,
+              "idx24_arm_l_joint4": -0.40780141949653625,
+              "idx25_arm_l_joint5": 0.7803863883018494,
+              "idx26_arm_l_joint6": 1.652435302734375,
+              "idx27_arm_l_joint7": 0.5472147464752197,
+              "idx61_arm_r_joint1": 1.444563388824463,
+              "idx62_arm_r_joint2": -0.6796831488609314,
+              "idx63_arm_r_joint3": 0.017530709505081177,
+              "idx64_arm_r_joint4": 1.5158696174621582,
+              "idx65_arm_r_joint5": -0.23235589265823364,
+              "idx66_arm_r_joint6": -1.537418007850647,
+              "idx67_arm_r_joint7": 0.1912594586610794,
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0,
+              "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+              "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+              "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+              "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+              "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+              "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+              "idx89_gripper_r_outer_joint0": -0.43470815091828396
+            },
+            "hold_targets": {
+              "idx21_arm_l_joint1": -0.9132058620452881,
+              "idx22_arm_l_joint2": 0.694162905216217,
+              "idx23_arm_l_joint3": 0.3739873766899109,
+              "idx24_arm_l_joint4": -0.40780141949653625,
+              "idx25_arm_l_joint5": 0.7803863883018494,
+              "idx26_arm_l_joint6": 1.652435302734375,
+              "idx27_arm_l_joint7": 0.5472147464752197,
+              "idx61_arm_r_joint1": 1.444563388824463,
+              "idx62_arm_r_joint2": -0.6796831488609314,
+              "idx63_arm_r_joint3": 0.017530709505081177,
+              "idx64_arm_r_joint4": 1.5158696174621582,
+              "idx65_arm_r_joint5": -0.23235589265823364,
+              "idx66_arm_r_joint6": -1.537418007850647,
+              "idx67_arm_r_joint7": 0.1912594586610794,
+              "idx01_body_joint1": 0.02001071348786354,
+              "idx02_body_joint2": 0.5235691666603088,
+              "idx11_head_joint1": -2.789641939671128e-06,
+              "idx12_head_joint2": 0.4362155795097351,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091
+            }
+          },
+          "base_canonical_column": [
+            [
+              -1.0000000000000004,
+              5.359585455961219e-16,
+              -1.7191815119845181e-16,
+              -1.1511755128898546
+            ],
+            [
+              6.818112618906271e-17,
+              -0.9999999999999996,
+              -1.5250340952160541e-18,
+              -0.1799440369622355
+            ],
+            [
+              -1.9778581020339762e-16,
+              4.026682339312598e-18,
+              1.0000000000000004,
+              -4.916999102499746e-18
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "initial_base_xyyaw": [
+            -1.059709898176706,
+            0.4557726594935412,
+            1.5707963267948963
+          ],
+          "supported_miss_signs": [
+            1
+          ],
+          "asset_id": "paper_cup",
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": false,
+            "random_revalidation_required": true,
+            "gap_probes_m": [
+              0.020001,
+              0.035,
+              0.049999
+            ],
+            "whole_target_in_original_camera_frustum": true
+          },
+          "source_motion_needed": false,
+          "maximum_score": 9.5,
+          "completion_policy": "same_target_released_inside_correct_bin",
+          "source_record": "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/frozen_initials_v2/inspect/cup_train_fk_v2/inspection.json",
+          "source_record_sha256": "4faf6946a07b8bb684948c33b073ca0e2d93ac633c74617e6e79a7f488006934",
+          "training_provenance": {
+            "episode_index": 1474,
+            "frame": 71,
+            "benchmark_task_id": "7.10",
+            "row": {
+              "episode_index": 1474,
+              "task": {
+                "task_index": 29,
+                "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "task_kind": "atomic",
+                "benchmark_task_id": "7.10"
+              },
+              "parquet_relative": "data/chunk-001/episode_001474.parquet",
+              "parquet_sha256": "44a8b5b38c5d07e40ede6411e6ee92619b147f443d3e8fed55f519c8ba9567fd",
+              "source_id": "atomic_7_10/batch_20261008_001:24",
+              "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_29",
+              "provenance_sha256": "6b13a2c2bfc09acc1ba25be8eeb58b2e6f61e74afa1e919bb599c841b8bce7ea",
+              "active_hand": "l",
+              "command_gripper_span_rad": [
+                0.5343981385231018,
+                0.0
+              ],
+              "close_transition_frame": 70,
+              "first_minimum_frame": 71,
+              "frames_examined": [
+                70,
+                71,
+                76,
+                81
+              ],
+              "original_source_approval_not_inferred": true,
+              "base_pose_not_per_frame_telemetry": true
+            },
+            "measured_active_arm_q_rad": [
+              -0.9132058620452881,
+              0.694162905216217,
+              0.3739873766899109,
+              -0.40780141949653625,
+              0.7803863883018494,
+              1.652435302734375,
+              0.5472147464752197
+            ],
+            "active_arm_copied_exactly": true,
+            "body_head_and_inactive_arm_from_same_measured_row": true,
+            "active_gripper_closed_empty": true,
+            "inactive_gripper": "current_native_ready_linkage",
+            "source_success_not_inferred": true
+          },
+          "gripper_closure": {
+            "hand": "l",
+            "source_coordinates": {
+              "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+              "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+              "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+              "idx39_gripper_l_inner_joint0": 0.427589621193043,
+              "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+              "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+              "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+              "idx49_gripper_l_outer_joint0": -0.4247991277133444
+            },
+            "reset_coordinates": {
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0
+            },
+            "asset_reset_inherited": [
+              "idx31_gripper_l_inner_joint1",
+              "idx32_gripper_l_inner_joint3",
+              "idx33_gripper_l_inner_joint4",
+              "idx39_gripper_l_inner_joint0",
+              "idx42_gripper_l_outer_joint3",
+              "idx43_gripper_l_outer_joint4",
+              "idx49_gripper_l_outer_joint0",
+              "idx71_gripper_r_inner_joint1",
+              "idx72_gripper_r_inner_joint3",
+              "idx73_gripper_r_inner_joint4",
+              "idx79_gripper_r_inner_joint0",
+              "idx82_gripper_r_outer_joint3",
+              "idx83_gripper_r_outer_joint4",
+              "idx89_gripper_r_outer_joint0"
+            ],
+            "other_gripper_unchanged": true,
+            "drive_parameters_changed": false,
+            "coordinates_measured": false
+          },
+          "anchor": "canonical_actual_coffee_table_geometry"
+        },
+        {
+          "id": "train_ep1481_f80_l",
+          "variant": "table_waste_empty_grasp",
+          "active_hand": "l",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.020010747015476227,
+              "idx02_body_joint2": 0.5235549211502075,
+              "idx11_head_joint1": -4.554357929009711e-06,
+              "idx12_head_joint2": 0.4361386001110077,
+              "idx21_arm_l_joint1": -0.6571940183639526,
+              "idx22_arm_l_joint2": 0.7099058032035828,
+              "idx23_arm_l_joint3": 0.057046499103307724,
+              "idx24_arm_l_joint4": -0.7340672016143799,
+              "idx25_arm_l_joint5": 0.8193225264549255,
+              "idx26_arm_l_joint6": 1.3716868162155151,
+              "idx27_arm_l_joint7": 0.3551720380783081,
+              "idx61_arm_r_joint1": 1.4445668458938599,
+              "idx62_arm_r_joint2": -0.6796829104423523,
+              "idx63_arm_r_joint3": 0.017536355182528496,
+              "idx64_arm_r_joint4": 1.5158717632293701,
+              "idx65_arm_r_joint5": -0.23235592246055603,
+              "idx66_arm_r_joint6": -1.5374224185943604,
+              "idx67_arm_r_joint7": 0.1912601888179779,
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0,
+              "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+              "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+              "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+              "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+              "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+              "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+              "idx89_gripper_r_outer_joint0": -0.43470815091828396
+            },
+            "hold_targets": {
+              "idx21_arm_l_joint1": -0.6571940183639526,
+              "idx22_arm_l_joint2": 0.7099058032035828,
+              "idx23_arm_l_joint3": 0.057046499103307724,
+              "idx24_arm_l_joint4": -0.7340672016143799,
+              "idx25_arm_l_joint5": 0.8193225264549255,
+              "idx26_arm_l_joint6": 1.3716868162155151,
+              "idx27_arm_l_joint7": 0.3551720380783081,
+              "idx61_arm_r_joint1": 1.4445668458938599,
+              "idx62_arm_r_joint2": -0.6796829104423523,
+              "idx63_arm_r_joint3": 0.017536355182528496,
+              "idx64_arm_r_joint4": 1.5158717632293701,
+              "idx65_arm_r_joint5": -0.23235592246055603,
+              "idx66_arm_r_joint6": -1.5374224185943604,
+              "idx67_arm_r_joint7": 0.1912601888179779,
+              "idx01_body_joint1": 0.020010747015476227,
+              "idx02_body_joint2": 0.5235549211502075,
+              "idx11_head_joint1": -4.554357929009711e-06,
+              "idx12_head_joint2": 0.4361386001110077,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091
+            }
+          },
+          "base_canonical_column": [
+            [
+              -1.0000000000000004,
+              5.359585455961219e-16,
+              -1.7191815119845181e-16,
+              -1.1511755128898546
+            ],
+            [
+              6.818112618906271e-17,
+              -0.9999999999999996,
+              -1.5250340952160541e-18,
+              -0.1799440369622355
+            ],
+            [
+              -1.9778581020339762e-16,
+              4.026682339312598e-18,
+              1.0000000000000004,
+              -4.916999102499746e-18
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "initial_base_xyyaw": [
+            -1.059709898176706,
+            0.4557726594935412,
+            1.5707963267948963
+          ],
+          "supported_miss_signs": [
+            1
+          ],
+          "asset_id": "paper_cup",
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": false,
+            "random_revalidation_required": true,
+            "gap_probes_m": [
+              0.020001,
+              0.035,
+              0.049999
+            ],
+            "whole_target_in_original_camera_frustum": true
+          },
+          "source_motion_needed": false,
+          "maximum_score": 9.5,
+          "completion_policy": "same_target_released_inside_correct_bin",
+          "source_record": "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/frozen_initials_v2/inspect/cup_train_fk_v2/inspection.json",
+          "source_record_sha256": "4faf6946a07b8bb684948c33b073ca0e2d93ac633c74617e6e79a7f488006934",
+          "training_provenance": {
+            "episode_index": 1481,
+            "frame": 80,
+            "benchmark_task_id": "7.10",
+            "row": {
+              "episode_index": 1481,
+              "task": {
+                "task_index": 29,
+                "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "task_kind": "atomic",
+                "benchmark_task_id": "7.10"
+              },
+              "parquet_relative": "data/chunk-001/episode_001481.parquet",
+              "parquet_sha256": "bc12db531f0a021449122d997271b5d34c5955984564f71247458bade508dd54",
+              "source_id": "atomic_7_10/batch_20261008_001:31",
+              "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_36",
+              "provenance_sha256": "94a035829d74ee2f9d2ca6dfb2a74f1e7253844ddc182c87ab11633c84e986e6",
+              "active_hand": "l",
+              "command_gripper_span_rad": [
+                0.5343981385231018,
+                0.0
+              ],
+              "close_transition_frame": 70,
+              "first_minimum_frame": 70,
+              "frames_examined": [
+                70,
+                75,
+                80
+              ],
+              "original_source_approval_not_inferred": true,
+              "base_pose_not_per_frame_telemetry": true
+            },
+            "measured_active_arm_q_rad": [
+              -0.6571940183639526,
+              0.7099058032035828,
+              0.057046499103307724,
+              -0.7340672016143799,
+              0.8193225264549255,
+              1.3716868162155151,
+              0.3551720380783081
+            ],
+            "active_arm_copied_exactly": true,
+            "body_head_and_inactive_arm_from_same_measured_row": true,
+            "active_gripper_closed_empty": true,
+            "inactive_gripper": "current_native_ready_linkage",
+            "source_success_not_inferred": true
+          },
+          "gripper_closure": {
+            "hand": "l",
+            "source_coordinates": {
+              "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+              "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+              "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+              "idx39_gripper_l_inner_joint0": 0.427589621193043,
+              "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+              "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+              "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+              "idx49_gripper_l_outer_joint0": -0.4247991277133444
+            },
+            "reset_coordinates": {
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0
+            },
+            "asset_reset_inherited": [
+              "idx31_gripper_l_inner_joint1",
+              "idx32_gripper_l_inner_joint3",
+              "idx33_gripper_l_inner_joint4",
+              "idx39_gripper_l_inner_joint0",
+              "idx42_gripper_l_outer_joint3",
+              "idx43_gripper_l_outer_joint4",
+              "idx49_gripper_l_outer_joint0",
+              "idx71_gripper_r_inner_joint1",
+              "idx72_gripper_r_inner_joint3",
+              "idx73_gripper_r_inner_joint4",
+              "idx79_gripper_r_inner_joint0",
+              "idx82_gripper_r_outer_joint3",
+              "idx83_gripper_r_outer_joint4",
+              "idx89_gripper_r_outer_joint0"
+            ],
+            "other_gripper_unchanged": true,
+            "drive_parameters_changed": false,
+            "coordinates_measured": false
+          },
+          "anchor": "canonical_actual_coffee_table_geometry"
+        },
+        {
+          "id": "train_ep1463_f80_l",
+          "variant": "table_waste_empty_grasp",
+          "active_hand": "l",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.020023949444293976,
+              "idx02_body_joint2": 0.5235153436660767,
+              "idx11_head_joint1": -8.58274597703712e-06,
+              "idx12_head_joint2": 0.435968816280365,
+              "idx21_arm_l_joint1": -0.8629017472267151,
+              "idx22_arm_l_joint2": 0.876666784286499,
+              "idx23_arm_l_joint3": 0.23208919167518616,
+              "idx24_arm_l_joint4": -0.9131566286087036,
+              "idx25_arm_l_joint5": 1.0337653160095215,
+              "idx26_arm_l_joint6": 1.307674765586853,
+              "idx27_arm_l_joint7": 0.20091792941093445,
+              "idx61_arm_r_joint1": 1.4445674419403076,
+              "idx62_arm_r_joint2": -0.6796825528144836,
+              "idx63_arm_r_joint3": 0.017535846680402756,
+              "idx64_arm_r_joint4": 1.5158700942993164,
+              "idx65_arm_r_joint5": -0.23235613107681274,
+              "idx66_arm_r_joint6": -1.5374174118041992,
+              "idx67_arm_r_joint7": 0.19126005470752716,
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0,
+              "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+              "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+              "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+              "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+              "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+              "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+              "idx89_gripper_r_outer_joint0": -0.43470815091828396
+            },
+            "hold_targets": {
+              "idx21_arm_l_joint1": -0.8629017472267151,
+              "idx22_arm_l_joint2": 0.876666784286499,
+              "idx23_arm_l_joint3": 0.23208919167518616,
+              "idx24_arm_l_joint4": -0.9131566286087036,
+              "idx25_arm_l_joint5": 1.0337653160095215,
+              "idx26_arm_l_joint6": 1.307674765586853,
+              "idx27_arm_l_joint7": 0.20091792941093445,
+              "idx61_arm_r_joint1": 1.4445674419403076,
+              "idx62_arm_r_joint2": -0.6796825528144836,
+              "idx63_arm_r_joint3": 0.017535846680402756,
+              "idx64_arm_r_joint4": 1.5158700942993164,
+              "idx65_arm_r_joint5": -0.23235613107681274,
+              "idx66_arm_r_joint6": -1.5374174118041992,
+              "idx67_arm_r_joint7": 0.19126005470752716,
+              "idx01_body_joint1": 0.020023949444293976,
+              "idx02_body_joint2": 0.5235153436660767,
+              "idx11_head_joint1": -8.58274597703712e-06,
+              "idx12_head_joint2": 0.435968816280365,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091
+            }
+          },
+          "base_canonical_column": [
+            [
+              -1.0000000000000004,
+              5.359585455961219e-16,
+              -1.7191815119845181e-16,
+              -1.1511755128898546
+            ],
+            [
+              6.818112618906271e-17,
+              -0.9999999999999996,
+              -1.5250340952160541e-18,
+              -0.1799440369622355
+            ],
+            [
+              -1.9778581020339762e-16,
+              4.026682339312598e-18,
+              1.0000000000000004,
+              -4.916999102499746e-18
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "initial_base_xyyaw": [
+            -1.059709898176706,
+            0.4557726594935412,
+            1.5707963267948963
+          ],
+          "supported_miss_signs": [
+            1
+          ],
+          "asset_id": "paper_cup",
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": false,
+            "random_revalidation_required": true,
+            "gap_probes_m": [
+              0.020001,
+              0.035,
+              0.049999
+            ],
+            "whole_target_in_original_camera_frustum": true
+          },
+          "source_motion_needed": false,
+          "maximum_score": 9.5,
+          "completion_policy": "same_target_released_inside_correct_bin",
+          "source_record": "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/frozen_initials_v2/inspect/cup_train_fk_v2/inspection.json",
+          "source_record_sha256": "4faf6946a07b8bb684948c33b073ca0e2d93ac633c74617e6e79a7f488006934",
+          "training_provenance": {
+            "episode_index": 1463,
+            "frame": 80,
+            "benchmark_task_id": "7.10",
+            "row": {
+              "episode_index": 1463,
+              "task": {
+                "task_index": 29,
+                "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "task_kind": "atomic",
+                "benchmark_task_id": "7.10"
+              },
+              "parquet_relative": "data/chunk-001/episode_001463.parquet",
+              "parquet_sha256": "2c072fcb6b19f1933066701f8d81fa4751b96ae995c6031bcd08ba5d89063136",
+              "source_id": "atomic_7_10/batch_20261008_001:13",
+              "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_14",
+              "provenance_sha256": "02654ad99e5aeb03b2498b337a1f8a2ebbb6a8c729ed43cbed5fc3e696831c80",
+              "active_hand": "l",
+              "command_gripper_span_rad": [
+                0.5343981385231018,
+                0.0
+              ],
+              "close_transition_frame": 70,
+              "first_minimum_frame": 70,
+              "frames_examined": [
+                70,
+                75,
+                80
+              ],
+              "original_source_approval_not_inferred": true,
+              "base_pose_not_per_frame_telemetry": true
+            },
+            "measured_active_arm_q_rad": [
+              -0.8629017472267151,
+              0.876666784286499,
+              0.23208919167518616,
+              -0.9131566286087036,
+              1.0337653160095215,
+              1.307674765586853,
+              0.20091792941093445
+            ],
+            "active_arm_copied_exactly": true,
+            "body_head_and_inactive_arm_from_same_measured_row": true,
+            "active_gripper_closed_empty": true,
+            "inactive_gripper": "current_native_ready_linkage",
+            "source_success_not_inferred": true
+          },
+          "gripper_closure": {
+            "hand": "l",
+            "source_coordinates": {
+              "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+              "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+              "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+              "idx39_gripper_l_inner_joint0": 0.427589621193043,
+              "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+              "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+              "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+              "idx49_gripper_l_outer_joint0": -0.4247991277133444
+            },
+            "reset_coordinates": {
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0
+            },
+            "asset_reset_inherited": [
+              "idx31_gripper_l_inner_joint1",
+              "idx32_gripper_l_inner_joint3",
+              "idx33_gripper_l_inner_joint4",
+              "idx39_gripper_l_inner_joint0",
+              "idx42_gripper_l_outer_joint3",
+              "idx43_gripper_l_outer_joint4",
+              "idx49_gripper_l_outer_joint0",
+              "idx71_gripper_r_inner_joint1",
+              "idx72_gripper_r_inner_joint3",
+              "idx73_gripper_r_inner_joint4",
+              "idx79_gripper_r_inner_joint0",
+              "idx82_gripper_r_outer_joint3",
+              "idx83_gripper_r_outer_joint4",
+              "idx89_gripper_r_outer_joint0"
+            ],
+            "other_gripper_unchanged": true,
+            "drive_parameters_changed": false,
+            "coordinates_measured": false
+          },
+          "anchor": "canonical_actual_coffee_table_geometry"
+        },
+        {
+          "id": "train_ep1476_f70_l",
+          "variant": "table_waste_empty_grasp",
+          "active_hand": "l",
+          "robot_initialization": {
+            "positions": {
+              "idx01_body_joint1": 0.020002566277980804,
+              "idx02_body_joint2": 0.5235857963562012,
+              "idx11_head_joint1": -1.130097530221974e-06,
+              "idx12_head_joint2": 0.4362839162349701,
+              "idx21_arm_l_joint1": -0.644294023513794,
+              "idx22_arm_l_joint2": 0.9296494126319885,
+              "idx23_arm_l_joint3": -0.0910767912864685,
+              "idx24_arm_l_joint4": -1.117817759513855,
+              "idx25_arm_l_joint5": 1.1788843870162964,
+              "idx26_arm_l_joint6": 1.0828229188919067,
+              "idx27_arm_l_joint7": 0.017696475610136986,
+              "idx61_arm_r_joint1": 1.4445658922195435,
+              "idx62_arm_r_joint2": -0.6796833276748657,
+              "idx63_arm_r_joint3": 0.017536532133817673,
+              "idx64_arm_r_joint4": 1.515869379043579,
+              "idx65_arm_r_joint5": -0.23235610127449036,
+              "idx66_arm_r_joint6": -1.5374219417572021,
+              "idx67_arm_r_joint7": 0.19125939905643463,
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0,
+              "idx71_gripper_r_inner_joint1": -0.7844094634056091,
+              "idx72_gripper_r_inner_joint3": -0.0648536775338271,
+              "idx73_gripper_r_inner_joint4": -0.034289416182612144,
+              "idx79_gripper_r_inner_joint0": 0.45031767043653814,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091,
+              "idx82_gripper_r_outer_joint3": 0.07150425240483828,
+              "idx83_gripper_r_outer_joint4": 0.015733399161132203,
+              "idx89_gripper_r_outer_joint0": -0.43470815091828396
+            },
+            "hold_targets": {
+              "idx21_arm_l_joint1": -0.644294023513794,
+              "idx22_arm_l_joint2": 0.9296494126319885,
+              "idx23_arm_l_joint3": -0.0910767912864685,
+              "idx24_arm_l_joint4": -1.117817759513855,
+              "idx25_arm_l_joint5": 1.1788843870162964,
+              "idx26_arm_l_joint6": 1.0828229188919067,
+              "idx27_arm_l_joint7": 0.017696475610136986,
+              "idx61_arm_r_joint1": 1.4445658922195435,
+              "idx62_arm_r_joint2": -0.6796833276748657,
+              "idx63_arm_r_joint3": 0.017536532133817673,
+              "idx64_arm_r_joint4": 1.515869379043579,
+              "idx65_arm_r_joint5": -0.23235610127449036,
+              "idx66_arm_r_joint6": -1.5374219417572021,
+              "idx67_arm_r_joint7": 0.19125939905643463,
+              "idx01_body_joint1": 0.020002566277980804,
+              "idx02_body_joint2": 0.5235857963562012,
+              "idx11_head_joint1": -1.130097530221974e-06,
+              "idx12_head_joint2": 0.4362839162349701,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx81_gripper_r_outer_joint1": 0.7844094634056091
+            }
+          },
+          "base_canonical_column": [
+            [
+              -1.0000000000000004,
+              5.359585455961219e-16,
+              -1.7191815119845181e-16,
+              -1.1511755128898546
+            ],
+            [
+              6.818112618906271e-17,
+              -0.9999999999999996,
+              -1.5250340952160541e-18,
+              -0.1799440369622355
+            ],
+            [
+              -1.9778581020339762e-16,
+              4.026682339312598e-18,
+              1.0000000000000004,
+              -4.916999102499746e-18
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "initial_base_xyyaw": [
+            -1.059709898176706,
+            0.4557726594935412,
+            1.5707963267948963
+          ],
+          "supported_miss_signs": [
+            1
+          ],
+          "asset_id": "paper_cup",
+          "cpu_accepted": true,
+          "validation": {
+            "cpu": true,
+            "native": false,
+            "random_revalidation_required": true,
+            "gap_probes_m": [
+              0.020001,
+              0.035,
+              0.049999
+            ],
+            "whole_target_in_original_camera_frustum": true
+          },
+          "source_motion_needed": false,
+          "maximum_score": 9.5,
+          "completion_policy": "same_target_released_inside_correct_bin",
+          "source_record": "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/frozen_initials_v2/inspect/cup_train_fk_v2/inspection.json",
+          "source_record_sha256": "4faf6946a07b8bb684948c33b073ca0e2d93ac633c74617e6e79a7f488006934",
+          "training_provenance": {
+            "episode_index": 1476,
+            "frame": 70,
+            "benchmark_task_id": "7.10",
+            "row": {
+              "episode_index": 1476,
+              "task": {
+                "task_index": 29,
+                "task": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "language_instruction": "Pick up the empty disposable cup and put it in the general waste bin.",
+                "task_kind": "atomic",
+                "benchmark_task_id": "7.10"
+              },
+              "parquet_relative": "data/chunk-001/episode_001476.parquet",
+              "parquet_sha256": "4e49a8b8b45a9e993bc4e8cfedcb84c25f2b18efbf2e778065675a1437013ca1",
+              "source_id": "atomic_7_10/batch_20261008_001:26",
+              "source_path": "/mnt/agent-bench-data/lingjun/archive/task7_final200_20260922/7.10_cup/7.10_new_31",
+              "provenance_sha256": "0bc30bef76f8a06c10eafac5e0b5a47ad27a25341a598170df2c3ef24a26b4c0",
+              "active_hand": "l",
+              "command_gripper_span_rad": [
+                0.5343981385231018,
+                0.0
+              ],
+              "close_transition_frame": 70,
+              "first_minimum_frame": 70,
+              "frames_examined": [
+                70,
+                75,
+                80
+              ],
+              "original_source_approval_not_inferred": true,
+              "base_pose_not_per_frame_telemetry": true
+            },
+            "measured_active_arm_q_rad": [
+              -0.644294023513794,
+              0.9296494126319885,
+              -0.0910767912864685,
+              -1.117817759513855,
+              1.1788843870162964,
+              1.0828229188919067,
+              0.017696475610136986
+            ],
+            "active_arm_copied_exactly": true,
+            "body_head_and_inactive_arm_from_same_measured_row": true,
+            "active_gripper_closed_empty": true,
+            "inactive_gripper": "current_native_ready_linkage",
+            "source_success_not_inferred": true
+          },
+          "gripper_closure": {
+            "hand": "l",
+            "source_coordinates": {
+              "idx31_gripper_l_inner_joint1": -0.7844085097312927,
+              "idx32_gripper_l_inner_joint3": -0.0745493440847485,
+              "idx33_gripper_l_inner_joint4": -0.007244033792354162,
+              "idx39_gripper_l_inner_joint0": 0.427589621193043,
+              "idx41_gripper_l_outer_joint1": 0.7844085097312927,
+              "idx42_gripper_l_outer_joint3": 0.07574543630933034,
+              "idx43_gripper_l_outer_joint4": 0.003910546213374923,
+              "idx49_gripper_l_outer_joint0": -0.4247991277133444
+            },
+            "reset_coordinates": {
+              "idx31_gripper_l_inner_joint1": 0.0,
+              "idx32_gripper_l_inner_joint3": 0.0,
+              "idx33_gripper_l_inner_joint4": 0.0,
+              "idx39_gripper_l_inner_joint0": 0.0,
+              "idx41_gripper_l_outer_joint1": 0.0,
+              "idx42_gripper_l_outer_joint3": 0.0,
+              "idx43_gripper_l_outer_joint4": 0.0,
+              "idx49_gripper_l_outer_joint0": 0.0
+            },
+            "asset_reset_inherited": [
+              "idx31_gripper_l_inner_joint1",
+              "idx32_gripper_l_inner_joint3",
+              "idx33_gripper_l_inner_joint4",
+              "idx39_gripper_l_inner_joint0",
+              "idx42_gripper_l_outer_joint3",
+              "idx43_gripper_l_outer_joint4",
+              "idx49_gripper_l_outer_joint0",
+              "idx71_gripper_r_inner_joint1",
+              "idx72_gripper_r_inner_joint3",
+              "idx73_gripper_r_inner_joint4",
+              "idx79_gripper_r_inner_joint0",
+              "idx82_gripper_r_outer_joint3",
+              "idx83_gripper_r_outer_joint4",
+              "idx89_gripper_r_outer_joint0"
+            ],
+            "other_gripper_unchanged": true,
+            "drive_parameters_changed": false,
+            "coordinates_measured": false
+          },
+          "anchor": "canonical_actual_coffee_table_geometry"
+        }
+      ],
+      "online_ik_fallback": false,
+      "hand_coverage": [
+        "l"
+      ],
+      "fast_scene_generator_connected": true
+    }
+  },
+  "source_tree": "full_only",
+  "runtime_joint_interpolation": false,
+  "scope": "frozen_initials_not_new_scoring",
+  "content_sha256": "ff49f80985c4ee9b1f865cfa366b1267ac6bf84620089809ad60ea076b7c9433",
+  "version": "training_expansion_v2",
+  "previous_bank_sha256": "48fda0e41959482ecb750dae079409acb787a15a71a260479e84941440d1b8ee",
+  "runtime_training_dataset_required": false,
+  "online_ik_fallback": false,
+  "selection_revision": "exact8_training_only_v6",
+  "selection_receipt": {
+    "user_decision": "Keep only the eight directly copied training arm/body snapshots",
+    "parent_sha256": "1c5fda4175aecef4ad7e91c9084ff57f7094311ca3b8353618e1c01ff0ec6a52",
+    "excluded": [
+      "table_waste_empty_grasp_r_401",
+      "table_waste_empty_grasp_l_403",
+      "trainseed_ep1018_f266_r_adapt1",
+      "trainseed_ep1473_f81_r_adapt2",
+      "trainseed_ep1000_f269_r_adapt3"
+    ],
+    "protected_scan_sha256": "408a7f0f3180a72fe30e746a02497b7ebeacc9b15a605a845de880a7ab4f6681",
+    "unchanged_profiles": true,
+    "training_dataset_read": false,
+    "solver_called": false,
+    "runtime_side_policy": "selected_frozen_profile_prevalidated_side",
+    "new_episode_native_acceptance_inherited": false
+  },
+  "historical_training_expansion": {
+    "requested_per_hand": 8,
+    "accepted_per_hand": {
+      "l": 8,
+      "r": 3
+    },
+    "source_inspection": "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/grasp_failure_recovery/frozen_initials_v2/inspect/cup_train_fk_v2/inspection.json",
+    "source_inspection_sha256": "4faf6946a07b8bb684948c33b073ca0e2d93ac633c74617e6e79a7f488006934",
+    "source_code_sha256": "8f1cafc6d38a795a9fe35a4cd929609c48d692c63e004a9819cb10e80b91c325",
+    "native_physics_tested": false
+  },
+  "historical_offline_right_adaptation": {
+    "previous_bank_sha256": "fdc215355f3fce53d800e1f5ffe4a2048a921353385f63dfd9bf52ee5b1942c0",
+    "source_code_sha256": "a17acfbb9e494490f5642b0c5cf60dc5a5062d550a1ca413a4029ee7a4904485",
+    "added": 3,
+    "offline_ik_attempts": 55,
+    "runtime_ik_required": false,
+    "native_physics_tested": false,
+    "workspace_region_unchanged": true,
+    "fixed_grasp_orientation_unchanged": true,
+    "original_base_station_unchanged": true
+  },
+  "training_expansion": {
+    "accepted_per_hand": {
+      "l": 8,
+      "r": 0
+    },
+    "profiles": [
+      "train_ep1450_f70_l",
+      "train_ep1472_f70_l",
+      "train_ep1465_f80_l",
+      "train_ep1491_f70_l",
+      "train_ep1474_f71_l",
+      "train_ep1481_f80_l",
+      "train_ep1463_f80_l",
+      "train_ep1476_f70_l"
+    ],
+    "active_arm_copied_exactly": true
+  }
+}

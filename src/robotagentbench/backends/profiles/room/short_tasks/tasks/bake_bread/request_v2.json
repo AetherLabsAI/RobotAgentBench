@@ -1,0 +1,8 @@
+{
+  "schema": "openend.short_task.request.v1",
+  "task_name": "bake_bread",
+  "rule_version": "openend.short_task.bake_bread.manipulation.v2",
+  "seed": 42,
+  "layout_id": null,
+  "options": {"bread_variant": "no_sugar"}
+}

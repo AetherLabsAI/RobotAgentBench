@@ -1,0 +1,22 @@
+{
+  "schema": "failure_recovery.tipped_cup.authored_open_start.v1",
+  "variant": "table_waste_tipped_cup",
+  "number": 4,
+  "original_task": "clear_table_trash",
+  "asset": "paper_cup",
+  "category": "cup",
+  "instruction": "Put the used cup in the correct bin.",
+  "completion": "same_cup_released_inside_correct_bin",
+  "initialization": "frozen_post_close_elevated_arm_open_native_gripper_and_authored_side_cup_below",
+  "cup_location": "on_original_coffee_table_under_active_fingertip_center_inside_original_placement_region",
+  "gripper_initial_state": "open_using_existing_task_native_ready_linkage",
+  "physical_history_required": false,
+  "physical_grasp_lift_release_claimed": false,
+  "initial_score_expected": 0,
+  "source_progress_inherited": false,
+  "scoring": "unchanged_original_disposal_task",
+  "runtime_training_dataset_required": false,
+  "online_ik_allowed": false,
+  "supersedes": "expansion_v2.catalog.CASES.table_waste_tipped_cup generation/history requirement only",
+  "human_decision": "Hand in the air in a post-lift pose with gripper open; place an empty cup on its side on the table below. A physical drop replay is no longer required."
+}

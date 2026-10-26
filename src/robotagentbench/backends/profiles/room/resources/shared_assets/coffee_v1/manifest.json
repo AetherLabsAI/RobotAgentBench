@@ -1,0 +1,80 @@
+{
+  "revision": "coffee_v1",
+  "source": "/home/lingjun/coffee-workspace/coffee_task_workbench_20260922",
+  "files": {
+    "bag.usda": "bae548e222539b2413591e84250cf422c5353caa935750df40f5453791ad3257",
+    "cluster.usda": "d57f24d333638a93db461a92096e0300c3c65e9ef4370af5ed9a1eed29f9b0a5",
+    "bean_c.usda": "f2878f04083b346eb65457ff53cce7eec666b6f651384060d8b794beb7fb6cc4",
+    "cup_cream_classic.usda": "ff66f25612b66842d59ccd307194d1f4265411bf1b438a54d6321b879ccad681",
+    "cup_green_tall.usda": "d6de3fb2bbda0fc57f79221bc7ebb2c6d3b65e199597c8b5dd3925b238ed2f43",
+    "machine.usda": "415597a6448a6b296809da0c396294c7e796c820b2a0fa886b6bb7e64a55bf01",
+    "scene_bindings.usda": "8f43d0706cf67d755e21d40f8c2153a1348368f4d1f1a0d979a50ceaae796bb7",
+    "README.md": "4c920d960d2c48d01c11275c179aa8a4cba67576ada4cbcea5b39a7ffe6484d6",
+    "bean_a.usda": "1c35f0bc65edff2ca189b46bc2aad12724cd63a5b4b707950d88e2cc8e7e5185",
+    "bean_b.usda": "baa53007836dc0384048e55f4d94043d5fc14aaeded1d7e6d26bcf11491105ab",
+    "cup_blue_compact.usda": "13484079142bef6bd5d2e82db8e24e78dbe88d69e6171c46f528d6ee25832923",
+    "textures/3b1680f6eee5_powder_normal.png": "3b1680f6eee51c3f166ffef3e6e89a7deb72ef8124847e7c0f5df3e9c4ba1e7c",
+    "textures/73d8a7425c9b_coffee_bean_B__n.jpg": "73d8a7425c9b2c5182d52739702570099c6576f0848dea2694e7337f1d75b23c",
+    "textures/59d6f5e0f1b3_kraft_paper_v1_color.png": "59d6f5e0f1b3d5df179c89e4d7cc6dd5ce165fe8fc1b550cbcb8a4ec00d6ae84",
+    "textures/fc544d5f1d7e_coffee_bean_C__d.jpg": "fc544d5f1d7edd44e375fe6e719ec233258228dcfcbc6d3e97e89cab2018d719",
+    "textures/b100aeb9bcb5_kraft_paper_v1_normal.png": "b100aeb9bcb5083bb1f31c200791ce3aad77b8e6d36310a78d8f6f5da3675b9d",
+    "textures/6dd60be0043a_powder_color.png": "6dd60be0043ad3f44b47b375fb68caaf701d5fa9208ad974e4cdf8b45d7b2246",
+    "textures/5abb704b209d_steel_roughness.png": "5abb704b209def3c71071c8c247a1b4cb631ed8fca33427bb161ea56a13a7cb6",
+    "textures/52edd370db71_original_green_coffee_v1.png": "52edd370db7139484b14c412a74bc9b87c8d51b258090788449a70ad6f4f2193",
+    "textures/6b0d9576dc90_powder_roughness.png": "6b0d9576dc906c716e05d3516055429792cf6b1d62a007dae6e8e97f6ea1adcb",
+    "textures/b7100b752a65_satin_normal.png": "b7100b752a65a34199ff9009c1fc83a9a1ee5cba59bc1ae666f683e913e044c4",
+    "textures/b605d0a2b2e7_coffee_bean_B__d.jpg": "b605d0a2b2e76a346b8595d68e1bf2a14af98590e5b0fa8f1d9f9ba0960d1335",
+    "textures/e36f692764e9_steel_normal.png": "e36f692764e9dbb32fc2d7d6117213cc658f14bb4f61b7608a25dc50ef3ae859",
+    "textures/f21084484890_satin_roughness.png": "f21084484890f84d56da66eb4526a95b1a9de77657f0f1292de27a75112f3314",
+    "textures/0a2b91250095_coffee_bean_C__n.jpg": "0a2b912500951adde183fbc357c250773fd4d15d933139c6eb59a6014064f2fb",
+    "textures/a4340fe44da4_coffee_bean_A__d.jpg": "a4340fe44da49be389e6de2acc47db5fc12a6ab78c30a080c9f766777e40d9d1",
+    "textures/5d8195439c66_coffee_bean_A__n.jpg": "5d8195439c6600ceebaac44cb7c2ed69f84673515cff237b47b1115a94cc23ec"
+  },
+  "assets": [
+    {
+      "asset": "machine.usda",
+      "root": "/World/CoffeeTaskPreview/Machine"
+    },
+    {
+      "asset": "bag.usda",
+      "root": "/World/CoffeeTaskPreview/BeanBag"
+    },
+    {
+      "asset": "cup_cream_classic.usda",
+      "root": "/CoffeeCup"
+    },
+    {
+      "asset": "cup_blue_compact.usda",
+      "root": "/CoffeeCup"
+    },
+    {
+      "asset": "cup_green_tall.usda",
+      "root": "/CoffeeCup"
+    },
+    {
+      "asset": "bean_a.usda",
+      "root": "/Bean"
+    },
+    {
+      "asset": "bean_b.usda",
+      "root": "/Bean"
+    },
+    {
+      "asset": "bean_c.usda",
+      "root": "/Bean"
+    }
+  ],
+  "machine_pose": [
+    2.914,
+    -0.099,
+    0.92
+  ],
+  "bag_pose": [
+    2.64,
+    0.05,
+    0.92
+  ],
+  "bean_count": 100,
+  "scope": "Shared assets only. No button dispensing runtime or task controller installed. Activation inherited from Task75.",
+  "bean_geometry_scale": 1.5
+}

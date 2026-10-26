@@ -1,0 +1,3711 @@
+{
+  "clusters": {
+    "coffee_table_cluster": {
+      "pivot_xy_m": [
+        -1.9500000008940699,
+        -0.12104358305158935
+      ],
+      "prim_roots": [
+        "/World/Assets/CoffeeTable",
+        "/World/Assets/TableclothBasket",
+        "/World/Assets/TrashBinTeal",
+        "/World/Assets/TrashBinRed"
+      ],
+      "station_keys": [
+        "shelf_place_table",
+        "table_pick",
+        "family7_paper_bin",
+        "family7_tidy_bin",
+        "table_place",
+        "coffee_table_drawer_bill",
+        "coffee_table_drawer_wallet",
+        "coffee_table_drawer_bill_two_hand"
+      ]
+    },
+    "side_table_cluster": {
+      "pivot_xy_m": [
+        -2.11505,
+        -1.98665
+      ],
+      "prim_roots": [
+        "/World/Assets/SmallCoffeeTable",
+        "/World/Assets/NightStand"
+      ],
+      "station_keys": [
+        "sidetable_pick"
+      ]
+    },
+    "sofa_cluster": {
+      "pivot_xy_m": [
+        0.05,
+        -0.871043533
+      ],
+      "prim_roots": [
+        "/World/Assets/Sofa",
+        "/World/Assets/SeatOverlay",
+        "/World/Assets/SeatRiser"
+      ],
+      "station_keys": [
+        "sofa_pick"
+      ]
+    },
+    "tv_cluster": {
+      "pivot_xy_m": [
+        -3.7097067168016444,
+        -0.29850629754082375
+      ],
+      "prim_roots": [
+        "/World/Assets/TvTable",
+        "/World/Assets/Tv"
+      ],
+      "station_keys": [
+        "tv_cabinet_pick"
+      ]
+    }
+  },
+  "frame_aliases": {
+    "coat_rack": null,
+    "coffee_table": "coffee_table_cluster",
+    "kitchen": null,
+    "shelf_beverage": null,
+    "shelf_snack": null,
+    "shelf_top": null,
+    "side_table": "side_table_cluster",
+    "snack_shelf": null,
+    "sofa": "sofa_cluster",
+    "tote": null,
+    "tv_cabinet": "tv_cluster"
+  },
+  "layout_count": 50,
+  "layout_kind": "explicit_manual_task_safe_recipes",
+  "layouts": [
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_01",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_01",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table with inward working edge",
+          "canonical media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SA",
+          "tv_cluster": "T0"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_01",
+      "name": "Reversed Sofa South / Inward End Table / Centered Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table with inward working edge; canonical media wall",
+      "ordinal": 1,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_02",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_02",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table with inward working edge",
+          "25 cm north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_02",
+      "name": "Reversed Sofa South / Inward End Table / North Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table with inward working edge; 25 cm north media wall",
+      "ordinal": 2,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            -0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_03",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_03",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table with inward working edge",
+          "25 cm south media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TS"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_03",
+      "name": "Reversed Sofa South / Inward End Table / South Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table with inward working edge; 25 cm south media wall",
+      "ordinal": 3,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_04",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_04",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table with inward working edge",
+          "15 cm east media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TE"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_04",
+      "name": "Reversed Sofa South / Inward End Table / East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table with inward working edge; 15 cm east media wall",
+      "ordinal": 4,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.3
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_05",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_05",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table with inward working edge",
+          "east-north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TEN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_05",
+      "name": "Reversed Sofa South / Inward End Table / North-East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table with inward working edge; east-north media wall",
+      "ordinal": 5,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_06",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_06",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "canonical media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SA",
+          "tv_cluster": "T0"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_06",
+      "name": "Reversed Sofa South / Outward End Table / Centered Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table, outward edge and 2 cm wall relief; canonical media wall",
+      "ordinal": 6,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_07",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_07",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "25 cm north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_07",
+      "name": "Reversed Sofa South / Outward End Table / North Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table, outward edge and 2 cm wall relief; 25 cm north media wall",
+      "ordinal": 7,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            -0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_08",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_08",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "25 cm south media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TS"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_08",
+      "name": "Reversed Sofa South / Outward End Table / South Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table, outward edge and 2 cm wall relief; 25 cm south media wall",
+      "ordinal": 8,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_09",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_09",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "15 cm east media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TE"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_09",
+      "name": "Reversed Sofa South / Outward End Table / East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table, outward edge and 2 cm wall relief; 15 cm east media wall",
+      "ordinal": 9,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.3
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_10",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_10",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "east-north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TEN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_10",
+      "name": "Reversed Sofa South / Outward End Table / North-East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table, outward edge and 2 cm wall relief; east-north media wall",
+      "ordinal": 10,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_11",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_11",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table, 20 cm wider north aisle",
+          "canonical media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SA",
+          "tv_cluster": "T0"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_11",
+      "name": "Reversed Sofa South / Wide-Aisle End Table / Centered Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table, 20 cm wider north aisle; canonical media wall",
+      "ordinal": 11,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_12",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_12",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table, 20 cm wider north aisle",
+          "25 cm north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_12",
+      "name": "Reversed Sofa South / Wide-Aisle End Table / North Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table, 20 cm wider north aisle; 25 cm north media wall",
+      "ordinal": 12,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            -0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_13",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_13",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table, 20 cm wider north aisle",
+          "25 cm south media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TS"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_13",
+      "name": "Reversed Sofa South / Wide-Aisle End Table / South Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table, 20 cm wider north aisle; 25 cm south media wall",
+      "ordinal": 13,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_14",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_14",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table, 20 cm wider north aisle",
+          "15 cm east media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TE"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_14",
+      "name": "Reversed Sofa South / Wide-Aisle End Table / East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table, 20 cm wider north aisle; 15 cm east media wall",
+      "ordinal": 14,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.3
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_15",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_15",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east, reversed conversational facing",
+          "east-side end table, 20 cm wider north aisle",
+          "east-north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SA",
+          "tv_cluster": "TEN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_15",
+      "name": "Reversed Sofa South / Wide-Aisle End Table / North-East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east, reversed conversational facing; east-side end table, 20 cm wider north aisle; east-north media wall",
+      "ordinal": 15,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_16",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_16",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, reversed facing",
+          "east-side end table with inward working edge",
+          "canonical media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SB",
+          "tv_cluster": "T0"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_16",
+      "name": "Reversed Sofa Mid / Inward End Table / Centered Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, reversed facing; east-side end table with inward working edge; canonical media wall",
+      "ordinal": 16,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_17",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_17",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, reversed facing",
+          "east-side end table with inward working edge",
+          "25 cm north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SB",
+          "tv_cluster": "TN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_17",
+      "name": "Reversed Sofa Mid / Inward End Table / North Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, reversed facing; east-side end table with inward working edge; 25 cm north media wall",
+      "ordinal": 17,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_18",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_18",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, reversed facing",
+          "east-side end table with inward working edge",
+          "15 cm east media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SB",
+          "tv_cluster": "TE"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_18",
+      "name": "Reversed Sofa Mid / Inward End Table / East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, reversed facing; east-side end table with inward working edge; 15 cm east media wall",
+      "ordinal": 18,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.3
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_19",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_19",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, reversed facing",
+          "east-side end table with inward working edge",
+          "east-north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SB",
+          "tv_cluster": "TEN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_19",
+      "name": "Reversed Sofa Mid / Inward End Table / North-East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, reversed facing; east-side end table with inward working edge; east-north media wall",
+      "ordinal": 19,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            -0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_20",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_20",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, reversed facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "25 cm south media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SB",
+          "tv_cluster": "TS"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_20",
+      "name": "Reversed Sofa Mid / Outward End Table / South Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, reversed facing; east-side end table, outward edge and 2 cm wall relief; 25 cm south media wall",
+      "ordinal": 20,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_21",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_21",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, reversed facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "15 cm east media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SB",
+          "tv_cluster": "TE"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_21",
+      "name": "Reversed Sofa Mid / Outward End Table / East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, reversed facing; east-side end table, outward edge and 2 cm wall relief; 15 cm east media wall",
+      "ordinal": 21,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.3
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_22",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_22",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, reversed facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "east-north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SB",
+          "tv_cluster": "TEN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_22",
+      "name": "Reversed Sofa Mid / Outward End Table / North-East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, reversed facing; east-side end table, outward edge and 2 cm wall relief; east-north media wall",
+      "ordinal": 22,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_23",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_23",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, reversed facing",
+          "east-side end table, 20 cm wider north aisle",
+          "canonical media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SB",
+          "tv_cluster": "T0"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_23",
+      "name": "Reversed Sofa Mid / Wide-Aisle End Table / Centered Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, reversed facing; east-side end table, 20 cm wider north aisle; canonical media wall",
+      "ordinal": 23,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_24",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_24",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, reversed facing",
+          "east-side end table, 20 cm wider north aisle",
+          "25 cm north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SB",
+          "tv_cluster": "TN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_24",
+      "name": "Reversed Sofa Mid / Wide-Aisle End Table / North Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, reversed facing; east-side end table, 20 cm wider north aisle; 25 cm north media wall",
+      "ordinal": 24,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            -0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_25",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_25",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, reversed facing",
+          "east-side end table, 20 cm wider north aisle",
+          "25 cm south media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SB",
+          "tv_cluster": "TS"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_25",
+      "name": "Reversed Sofa Mid / Wide-Aisle End Table / South Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, reversed facing; east-side end table, 20 cm wider north aisle; 25 cm south media wall",
+      "ordinal": 25,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_26",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_26",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, reversed facing",
+          "east-side end table with inward working edge",
+          "25 cm north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SC",
+          "tv_cluster": "TN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_26",
+      "name": "Reversed Sofa North / Inward End Table / North Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, reversed facing; east-side end table with inward working edge; 25 cm north media wall",
+      "ordinal": 26,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            -0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_27",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_27",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, reversed facing",
+          "east-side end table with inward working edge",
+          "25 cm south media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SC",
+          "tv_cluster": "TS"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_27",
+      "name": "Reversed Sofa North / Inward End Table / South Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, reversed facing; east-side end table with inward working edge; 25 cm south media wall",
+      "ordinal": 27,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.3
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_28",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_28",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, reversed facing",
+          "east-side end table with inward working edge",
+          "east-north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SC",
+          "tv_cluster": "TEN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_28",
+      "name": "Reversed Sofa North / Inward End Table / North-East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, reversed facing; east-side end table with inward working edge; east-north media wall",
+      "ordinal": 28,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_29",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_29",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, reversed facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "canonical media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SC",
+          "tv_cluster": "T0"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_29",
+      "name": "Reversed Sofa North / Outward End Table / Centered Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, reversed facing; east-side end table, outward edge and 2 cm wall relief; canonical media wall",
+      "ordinal": 29,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_30",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_30",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, reversed facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "15 cm east media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SC",
+          "tv_cluster": "TE"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_30",
+      "name": "Reversed Sofa North / Outward End Table / East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, reversed facing; east-side end table, outward edge and 2 cm wall relief; 15 cm east media wall",
+      "ordinal": 30,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.3
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_31",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_31",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, reversed facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "east-north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SC",
+          "tv_cluster": "TEN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_31",
+      "name": "Reversed Sofa North / Outward End Table / North-East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, reversed facing; east-side end table, outward edge and 2 cm wall relief; east-north media wall",
+      "ordinal": 31,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_32",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_32",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, reversed facing",
+          "east-side end table, 20 cm wider north aisle",
+          "canonical media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SC",
+          "tv_cluster": "T0"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_32",
+      "name": "Reversed Sofa North / Wide-Aisle End Table / Centered Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, reversed facing; east-side end table, 20 cm wider north aisle; canonical media wall",
+      "ordinal": 32,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_33",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_33",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, reversed facing",
+          "east-side end table, 20 cm wider north aisle",
+          "25 cm north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SC",
+          "tv_cluster": "TN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_33",
+      "name": "Reversed Sofa North / Wide-Aisle End Table / North Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, reversed facing; east-side end table, 20 cm wider north aisle; 25 cm north media wall",
+      "ordinal": 33,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            -0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_34",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_34",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, reversed facing",
+          "east-side end table, 20 cm wider north aisle",
+          "25 cm south media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SC",
+          "tv_cluster": "TS"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_34",
+      "name": "Reversed Sofa North / Wide-Aisle End Table / South Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, reversed facing; east-side end table, 20 cm wider north aisle; 25 cm south media wall",
+      "ordinal": 34,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 180.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_35",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_35",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, reversed facing",
+          "east-side end table, 20 cm wider north aisle",
+          "15 cm east media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SC",
+          "tv_cluster": "TE"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_35",
+      "name": "Reversed Sofa North / Wide-Aisle End Table / East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, reversed facing; east-side end table, 20 cm wider north aisle; 15 cm east media wall",
+      "ordinal": 35,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_36",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_36",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, forward facing",
+          "east-side end table, 20 cm wider north aisle",
+          "canonical media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SD",
+          "tv_cluster": "T0"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_36",
+      "name": "Forward Sofa Mid / Wide-Aisle End Table / Centered Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, forward facing; east-side end table, 20 cm wider north aisle; canonical media wall",
+      "ordinal": 36,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_37",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_37",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, forward facing",
+          "east-side end table, 20 cm wider north aisle",
+          "25 cm north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SD",
+          "tv_cluster": "TN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_37",
+      "name": "Forward Sofa Mid / Wide-Aisle End Table / North Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, forward facing; east-side end table, 20 cm wider north aisle; 25 cm north media wall",
+      "ordinal": 37,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            -0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_38",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_38",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, forward facing",
+          "east-side end table, 20 cm wider north aisle",
+          "25 cm south media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SD",
+          "tv_cluster": "TS"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_38",
+      "name": "Forward Sofa Mid / Wide-Aisle End Table / South Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, forward facing; east-side end table, 20 cm wider north aisle; 25 cm south media wall",
+      "ordinal": 38,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_39",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_39",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, forward facing",
+          "east-side end table, 20 cm wider north aisle",
+          "15 cm east media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SD",
+          "tv_cluster": "TE"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_39",
+      "name": "Forward Sofa Mid / Wide-Aisle End Table / East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, forward facing; east-side end table, 20 cm wider north aisle; 15 cm east media wall",
+      "ordinal": 39,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.5
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.2
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.3
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_40",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_40",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 20 cm north, forward facing",
+          "east-side end table, 20 cm wider north aisle",
+          "east-north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DC",
+          "sofa_cluster": "SD",
+          "tv_cluster": "TEN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_40",
+      "name": "Forward Sofa Mid / Wide-Aisle End Table / North-East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 20 cm north, forward facing; east-side end table, 20 cm wider north aisle; east-north media wall",
+      "ordinal": 40,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_41",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_41",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, forward facing",
+          "east-side end table with inward working edge",
+          "canonical media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SE",
+          "tv_cluster": "T0"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_41",
+      "name": "Forward Sofa North / Inward End Table / Centered Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, forward facing; east-side end table with inward working edge; canonical media wall",
+      "ordinal": 41,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_42",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_42",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, forward facing",
+          "east-side end table with inward working edge",
+          "25 cm north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SE",
+          "tv_cluster": "TN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_42",
+      "name": "Forward Sofa North / Inward End Table / North Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, forward facing; east-side end table with inward working edge; 25 cm north media wall",
+      "ordinal": 42,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            -0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_43",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_43",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, forward facing",
+          "east-side end table with inward working edge",
+          "25 cm south media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SE",
+          "tv_cluster": "TS"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_43",
+      "name": "Forward Sofa North / Inward End Table / South Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, forward facing; east-side end table with inward working edge; 25 cm south media wall",
+      "ordinal": 43,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_44",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_44",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, forward facing",
+          "east-side end table with inward working edge",
+          "15 cm east media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SE",
+          "tv_cluster": "TE"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_44",
+      "name": "Forward Sofa North / Inward End Table / East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, forward facing; east-side end table with inward working edge; 15 cm east media wall",
+      "ordinal": 44,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.7
+          ],
+          "yaw_deg": 90.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.3
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_45",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_45",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, forward facing",
+          "east-side end table with inward working edge",
+          "east-north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DA",
+          "sofa_cluster": "SE",
+          "tv_cluster": "TEN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_45",
+      "name": "Forward Sofa North / Inward End Table / North-East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, forward facing; east-side end table with inward working edge; east-north media wall",
+      "ordinal": 45,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_46",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_46",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, forward facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "canonical media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SE",
+          "tv_cluster": "T0"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_46",
+      "name": "Forward Sofa North / Outward End Table / Centered Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, forward facing; east-side end table, outward edge and 2 cm wall relief; canonical media wall",
+      "ordinal": 46,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_47",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_47",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, forward facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "25 cm north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SE",
+          "tv_cluster": "TN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_47",
+      "name": "Forward Sofa North / Outward End Table / North Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, forward facing; east-side end table, outward edge and 2 cm wall relief; 25 cm north media wall",
+      "ordinal": 47,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.0,
+            -0.25
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_48",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_48",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, forward facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "25 cm south media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SE",
+          "tv_cluster": "TS"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_48",
+      "name": "Forward Sofa North / Outward End Table / South Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, forward facing; east-side end table, outward edge and 2 cm wall relief; 25 cm south media wall",
+      "ordinal": 48,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_49",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_49",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, forward facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "15 cm east media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SE",
+          "tv_cluster": "TE"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_49",
+      "name": "Forward Sofa North / Outward End Table / East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, forward facing; east-side end table, outward edge and 2 cm wall relief; 15 cm east media wall",
+      "ordinal": 49,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    },
+    {
+      "cluster_transforms": {
+        "coffee_table_cluster": {
+          "translate_xy_m": [
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        "side_table_cluster": {
+          "translate_xy_m": [
+            1.6,
+            0.72
+          ],
+          "yaw_deg": 270.0
+        },
+        "sofa_cluster": {
+          "translate_xy_m": [
+            0.75,
+            0.4
+          ],
+          "yaw_deg": 0.0
+        },
+        "tv_cluster": {
+          "translate_xy_m": [
+            0.15,
+            0.3
+          ],
+          "yaw_deg": 0.0
+        }
+      },
+      "design": "manual_fixed_task_zone_recipe_50",
+      "design_review": {
+        "candidate_id": "manual_candidate_b04_50",
+        "catalog_status_after_review": "2d_candidate",
+        "fixed_distractor_realization": "benchmark_7_2-fixed-source-core-000",
+        "intent": [
+          "keep the mature Task-7.2 manipulation cluster at zero degrees",
+          "75 cm east and 40 cm north, forward facing",
+          "east-side end table, outward edge and 2 cm wall relief",
+          "east-north media wall"
+        ],
+        "method": "explicit_fixed_task_zone_whole_room_review",
+        "official_catalog_replay": "passed",
+        "physics_canary_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+        "physics_status": "passed_task_7_2_fixed_core0",
+        "pose_codes": {
+          "side_table_cluster": "DB",
+          "sofa_cluster": "SE",
+          "tv_cluster": "TEN"
+        },
+        "task_zone_pose": "translate=(0.00,0.00)_yaw=0"
+      },
+      "id": "house_layout_50",
+      "name": "Forward Sofa North / Outward End Table / North-East Media",
+      "notes": "keep the mature Task-7.2 manipulation cluster at zero degrees; 75 cm east and 40 cm north, forward facing; east-side end table, outward edge and 2 cm wall relief; east-north media wall",
+      "ordinal": 50,
+      "preflight": {
+        "grid_navigation": "passed",
+        "live_usd_collision": "not_run",
+        "physics_replay": "not_run",
+        "planar_geometry": "passed"
+      },
+      "status": "2d_candidate",
+      "theme": "manual_functional_living_room"
+    }
+  ],
+  "not_validated": [
+    "live robot navigation",
+    "exhaustive live USD collision geometry",
+    "physics replay outside Task 7.2",
+    "manipulation success outside Task 7.2"
+  ],
+  "preflight_geometry": {
+    "fixtures": [
+      {
+        "center_xy_m": [
+          2.7,
+          -0.86
+        ],
+        "cluster": null,
+        "id": "dining_table",
+        "layout_movable": true,
+        "size_xy_m": [
+          0.9,
+          2.8
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          0.05,
+          -0.871043533
+        ],
+        "cluster": "sofa_cluster",
+        "id": "sofa",
+        "layout_movable": true,
+        "size_xy_m": [
+          0.8,
+          2.699999922
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          -1.95,
+          -0.121043583
+        ],
+        "cluster": "coffee_table_cluster",
+        "id": "coffee_table",
+        "layout_movable": true,
+        "size_xy_m": [
+          0.8,
+          1.200000022
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          -3.709706717,
+          -0.2985062975
+        ],
+        "cluster": "tv_cluster",
+        "id": "tv_cabinet",
+        "layout_movable": true,
+        "size_xy_m": [
+          0.300000004,
+          1.679999899
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          -2.369021151,
+          2.2529566045
+        ],
+        "cluster": null,
+        "id": "shelving_unit",
+        "layout_movable": true,
+        "size_xy_m": [
+          1.000004312,
+          0.500000353
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          -2.24,
+          -0.8750841202700184
+        ],
+        "cluster": "coffee_table_cluster",
+        "id": "tablecloth_basket",
+        "layout_movable": true,
+        "size_xy_m": [
+          0.3980000002086159,
+          0.3180000002086162
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          -1.936,
+          -0.8140841202700185
+        ],
+        "cluster": "coffee_table_cluster",
+        "id": "trash_bin_teal",
+        "layout_movable": true,
+        "size_xy_m": [
+          0.19,
+          0.24
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          -1.736,
+          -0.8140841202700185
+        ],
+        "cluster": "coffee_table_cluster",
+        "id": "trash_bin_red",
+        "layout_movable": true,
+        "size_xy_m": [
+          0.19,
+          0.24
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          4.678965,
+          -0.2408
+        ],
+        "cluster": null,
+        "id": "east_counter",
+        "layout_movable": false,
+        "size_xy_m": [
+          0.61953,
+          4.0
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          4.0038,
+          2.0592
+        ],
+        "cluster": null,
+        "id": "north_counter",
+        "layout_movable": false,
+        "size_xy_m": [
+          0.75,
+          0.6
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          3.173564261,
+          2.0315666665
+        ],
+        "cluster": null,
+        "id": "refrigerator",
+        "layout_movable": false,
+        "size_xy_m": [
+          0.912607604,
+          0.909216331
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          -1.85517765,
+          -2.22030005
+        ],
+        "cluster": null,
+        "id": "fireplace",
+        "layout_movable": false,
+        "size_xy_m": [
+          1.4430043,
+          0.0793999
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          -2.11505,
+          -1.98665
+        ],
+        "cluster": "side_table_cluster",
+        "id": "small_side_table",
+        "layout_movable": true,
+        "size_xy_m": [
+          0.9671,
+          1.2709
+        ],
+        "yaw_deg": 0.0
+      },
+      {
+        "center_xy_m": [
+          -1.4,
+          -2.04
+        ],
+        "cluster": "side_table_cluster",
+        "id": "nightstand",
+        "layout_movable": true,
+        "size_xy_m": [
+          0.46,
+          0.3
+        ],
+        "yaw_deg": 0.0
+      }
+    ],
+    "floor_polygon_xy_m": [
+      [
+        -3.95,
+        -2.26
+      ],
+      [
+        4.9788,
+        -2.26
+      ],
+      [
+        4.9788,
+        2.3688
+      ],
+      [
+        2.7,
+        2.3688
+      ],
+      [
+        2.7,
+        1.7592
+      ],
+      [
+        0.45,
+        1.7592
+      ],
+      [
+        0.45,
+        2.5056568
+      ],
+      [
+        -3.95,
+        2.5056568
+      ]
+    ],
+    "navigation_portals_xy_m": {
+      "east_kitchen_aisle": [
+        3.75,
+        -0.8
+      ],
+      "living_north": [
+        -1.0,
+        1.2
+      ],
+      "living_west": [
+        -3.1,
+        1.2
+      ],
+      "main_hub": [
+        1.2,
+        -0.8
+      ],
+      "north_kitchen_aisle": [
+        3.75,
+        1.15
+      ],
+      "sofa_table_corridor": [
+        -1.0,
+        -0.3
+      ]
+    },
+    "rules": {
+      "carried_object_margin_m": 0.04,
+      "grid_resolution_m": 0.05,
+      "minimum_fixture_gap_m": 0.01,
+      "minimum_route_clearance_m": 0.03,
+      "portal_snap_radius_m": 0.45,
+      "robot_base_radius_m": 0.3,
+      "station_bridge_radius_m": 0.65
+    }
+  },
+  "preflight_report": {
+    "carried_object_margin_m": 0.04,
+    "checked_clusters": [
+      "coffee_table_cluster",
+      "sofa_cluster",
+      "side_table_cluster",
+      "tv_cluster"
+    ],
+    "evaluated_layouts": 50,
+    "fixture_source": "canonical scene_room_baseline.usda footprints; room shell is fixed",
+    "grid_navigation_passed": 50,
+    "grid_resolution_m": 0.05,
+    "live_usd_collision": "not_run",
+    "minimum_route_clearance_m": 0.03,
+    "physics_replay": "not_run",
+    "planar_geometry_passed": 50,
+    "production_acceptance": "pending",
+    "recompute_command": "python real2sim/production/house_layout.py preflight",
+    "report_semantics": "This stored summary mirrors the executable conservative 2D/grid audit. It is not a live USD collision or physics acceptance record.",
+    "result": "passed_2d_navigation_candidates",
+    "robot_base_radius_m": 0.3,
+    "schema": "real2sim.house_layout_preflight.v1",
+    "usd_authoring_smoke": {
+      "author_save_reopen_passed": 50,
+      "authored_prims_per_layout": 11,
+      "evaluated_layouts": 50,
+      "recompute_command": "python real2sim/production/house_layout.py usd-smoke",
+      "semantics": "Confirms that every existing cluster root and /World/Robot can be authored in a disposable root layer that sublayers the canonical baseline read-only; this is not collision or physics validation."
+    }
+  },
+  "recipe_policy": "Every row is an explicit human-reviewed whole-room recipe. There is no procedural layout generator or Cartesian expansion. The mature Task-7.2 coffee-table operation zone is fixed; only the sofa, side-table, and media zones vary.",
+  "scene_policy": "one canonical House baseline plus one disposable per-render coordinate overlay",
+  "schema": "real2sim.house_layouts.v1",
+  "selection_basis": "Fifty explicit living-room arrangements with at least 0.10 m inter-cluster fixture clearance. All passed conservative planar geometry, grid navigation, USD author/save/reopen, and the isolated fixed-action Task-7.2 manipulation canary.",
+  "status": "2d_candidate",
+  "task_canary_evidence": {
+    "acceptance": "passed_all_50",
+    "candidate_batch": 4,
+    "candidate_batch_status": "real2sim/work/house_layout_manual_design_v1/batch_04/physics_canary_isolated_v2/BATCH_STATUS.json",
+    "catalog": "real2sim/work/house_layout_manual_design_v1/batch_04/candidate_catalog.json",
+    "completed_layout_count": 50,
+    "distractor_seed_keys": [
+      "benchmark_7_2-fixed-source-core-000"
+    ],
+    "official_batch_status": "real2sim/work/house_layout_manual_design_v1/final_official/physics_canary/BATCH_STATUS.json",
+    "official_catalog_replay": true,
+    "schema": "real2sim.house_layout_manual_promotion.v1",
+    "scope": "Task-7.2 only; catalog status remains 2d_candidate",
+    "source_core_ordinal": 0,
+    "strict_layout_pass_count": 50,
+    "task_key": "benchmark_7_2"
+  },
+  "validation_scope": "candidate planar separation, floor containment, station reachability, 0.05 m grid connectivity, USD author/save/reopen, and Task-7.2 fixed-core/fixed-distractor live manipulation"
+}

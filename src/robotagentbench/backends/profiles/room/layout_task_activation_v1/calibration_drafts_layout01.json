@@ -1,0 +1,1968 @@
+{
+  "schema": "arena.multi_object_activation.design.v1",
+  "layout_id": 1,
+  "source_scene": "/mnt/agent-bench-data/lingjun/releases/living50-candidate-20260919/layouts/ID_01_LIVING_STRAIGHT.usdc",
+  "source_sha256": "6fdd127abad4a44ba67bc79aa2b69698d2513251ec859237ddcd5c5a05c2fa92",
+  "approved": false,
+  "runtime_enabled": false,
+  "reach_calibration_status": "not_calibrated",
+  "activation_rule": "robot_sector_intersects_object_XY_AABB",
+  "limitations": [
+    "No height, occlusion, collision or reachability validation",
+    "support_proxy and identity_unverified do not enable task readiness",
+    "Front direction guides interaction pose, not physics wake",
+    "No physical attributes or runtime state modified"
+  ],
+  "entries": [
+    {
+      "id": "sofa",
+      "number": 1,
+      "name": "沙发正面",
+      "config": {
+        "target": [
+          0.04999999999999999,
+          -0.8710435330537515
+        ],
+        "targetPolygon": [
+          [
+            -0.34999999004138027,
+            -2.221043494158536
+          ],
+          [
+            0.44999999004138025,
+            -2.221043494158536
+          ],
+          [
+            0.44999999004138025,
+            0.47895642805103317
+          ],
+          [
+            -0.34999999004138027,
+            0.47895642805103317
+          ]
+        ],
+        "center": [
+          0.04999999999999999,
+          -0.8710435330537515
+        ],
+        "pose": [
+          -0.9683563938127571,
+          -1.0500000000000003
+        ],
+        "poseYaw": 0,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": -180,
+      "front_source": "published_station_direction",
+      "pose_source": "catalog:sofa_pick",
+      "target": {
+        "anchor": "/World/Assets/Sofa",
+        "bounds": {
+          "min": [
+            -0.34999999004138027,
+            -2.221043494158536,
+            -1.232595164407831e-32
+          ],
+          "max": [
+            0.44999999004138025,
+            0.47895642805103317,
+            0.8495421381667251
+          ]
+        },
+        "world_transform": [
+          [
+            -1.8167287014145452e-20,
+            -0.00008181818702723831,
+            0,
+            0
+          ],
+          [
+            1.9649609212124683e-20,
+            -4.363089714437481e-36,
+            0.00008849397272570059,
+            0
+          ],
+          [
+            -0.00008163265738403425,
+            1.8126091157818324e-20,
+            1.8126091157818324e-20,
+            0
+          ],
+          [
+            0.44999999004138014,
+            0.478956428051033,
+            0,
+            1
+          ]
+        ],
+        "bodies": [],
+        "joints": [],
+        "collider_count": 1,
+        "features": []
+      },
+      "binding": "layout_object",
+      "stations": [
+        {
+          "key": "catalog:sofa_pick",
+          "anchor": "/World/Assets/Sofa",
+          "xy": [
+            -0.9683563938127571,
+            -1.0500000000000003
+          ],
+          "yaw_deg": 6.361109362927032e-15,
+          "tasks": [
+            "4.1",
+            "4.7",
+            "4.13",
+            "5.5",
+            "5.11",
+            "6.1",
+            "6.4",
+            "6.6",
+            "6.8",
+            "6.11",
+            "6.14",
+            "6.17"
+          ],
+          "origin": "catalog furniture-relative station",
+          "full_height_fits": true,
+          "chassis_fits": true
+        },
+        {
+          "key": "owner:6.1",
+          "anchor": "/World/Assets/Sofa",
+          "xy": [
+            -1.025,
+            -1.0370399999999997
+          ],
+          "yaw_deg": 3.999999999999986,
+          "tasks": [
+            "6.1"
+          ],
+          "origin": "delivered action state mapped using runtime anchor transform",
+          "full_height_fits": true,
+          "chassis_fits": true
+        },
+        {
+          "key": "owner:6.6",
+          "anchor": "/World/Assets/Sofa",
+          "xy": [
+            -0.7439999999999999,
+            -0.37903999999999993
+          ],
+          "yaw_deg": 2.999999999999986,
+          "tasks": [
+            "6.6"
+          ],
+          "origin": "delivered action state mapped using runtime anchor transform",
+          "full_height_fits": true,
+          "chassis_fits": true
+        }
+      ],
+      "task_ids": [
+        "4.1",
+        "4.7",
+        "4.13",
+        "5.5",
+        "5.11",
+        "6.1",
+        "6.4",
+        "6.6",
+        "6.8",
+        "6.11",
+        "6.14",
+        "6.17"
+      ],
+      "dependency_note": "保留书、帽子等不同取物站位；家具本体与任务物品分开登记。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "table",
+      "number": 2,
+      "name": "茶几",
+      "config": {
+        "target": [
+          -1.9452818086588048,
+          -0.07863935765180075
+        ],
+        "targetPolygon": [
+          [
+            -2.345281803751619,
+            -0.6786393687544233
+          ],
+          [
+            -1.5452818135659907,
+            -0.6786393687544233
+          ],
+          [
+            -1.5452818135659907,
+            0.5213606534508218
+          ],
+          [
+            -2.345281803751619,
+            0.5213606534508218
+          ]
+        ],
+        "center": [
+          -1.9452818086588048,
+          -0.07863935765180075
+        ],
+        "pose": [
+          -1.0302667927974993,
+          -0.3466798948702299
+        ],
+        "poseYaw": -180,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": 0,
+      "front_source": "published_station_direction",
+      "pose_source": "catalog:table_pick",
+      "target": {
+        "anchor": "/World/Assets/CoffeeTable",
+        "bounds": {
+          "min": [
+            -2.345281803751619,
+            -0.6786393687544233,
+            -8.006718143650649e-18
+          ],
+          "max": [
+            -1.5452818135659907,
+            0.5213606534508218,
+            0.45000000670552276
+          ]
+        },
+        "world_transform": [
+          [
+            2.2580805171902097e-16,
+            1.0169490575790405,
+            0,
+            0
+          ],
+          [
+            -0.9940386414527893,
+            2.2072091742159945e-16,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            -1.9576062917332195,
+            -0.0786393576518007,
+            9.71445146547012e-17,
+            1
+          ]
+        ],
+        "bodies": [
+          {
+            "path": "/World/Assets/CoffeeTable/black_box_1",
+            "enabled": true,
+            "kinematic": true
+          },
+          {
+            "path": "/World/Assets/CoffeeTable/black_box_2",
+            "enabled": true,
+            "kinematic": true
+          },
+          {
+            "path": "/World/Assets/CoffeeTable/black_box_3",
+            "enabled": true,
+            "kinematic": false
+          },
+          {
+            "path": "/World/Assets/CoffeeTable/black_box_4",
+            "enabled": true,
+            "kinematic": false
+          }
+        ],
+        "joints": [],
+        "collider_count": 9,
+        "features": []
+      },
+      "binding": "layout_object",
+      "stations": [
+        {
+          "key": "catalog:table_pick",
+          "anchor": "/World/Assets/CoffeeTable",
+          "xy": [
+            -1.0302667927974993,
+            -0.3466798948702299
+          ],
+          "yaw_deg": 180,
+          "tasks": [
+            "4.2",
+            "4.8",
+            "5.1",
+            "5.9",
+            "6.2",
+            "6.9"
+          ],
+          "origin": "catalog furniture-relative station",
+          "full_height_fits": true,
+          "chassis_fits": true
+        },
+        {
+          "key": "catalog:coffee_table_drawer",
+          "anchor": "/World/Assets/CoffeeTable",
+          "xy": [
+            -0.9077818077647353,
+            -0.5811957746002113
+          ],
+          "yaw_deg": 179.7629,
+          "tasks": [
+            "4.4",
+            "4.10",
+            "6.15",
+            "6.5"
+          ],
+          "origin": "catalog furniture-relative station",
+          "full_height_fits": true,
+          "chassis_fits": true
+        },
+        {
+          "key": "owner:6.2",
+          "anchor": "/World/Assets/CoffeeTable",
+          "xy": [
+            -1.02928,
+            -0.42664000000000024
+          ],
+          "yaw_deg": 175.29999999999998,
+          "tasks": [
+            "6.2"
+          ],
+          "origin": "delivered action state mapped using runtime anchor transform",
+          "full_height_fits": true,
+          "chassis_fits": true
+        },
+        {
+          "key": "catalog:shelf_place_table",
+          "anchor": "/World/Assets/CoffeeTable",
+          "xy": [
+            -1.9302667927974995,
+            0.9683201051297702
+          ],
+          "yaw_deg": -90,
+          "tasks": [
+            "3.2",
+            "3.4",
+            "3.6",
+            "3.8",
+            "3.10",
+            "3.12",
+            "3.14",
+            "3.16",
+            "3.20",
+            "3.22",
+            "3.24",
+            "3.26",
+            "3.28",
+            "3.30"
+          ],
+          "origin": "robot_positions.shelf_place_table, CoffeeTable-relative (2026-09-22)",
+          "full_height_fits": true,
+          "chassis_fits": true
+        }
+      ],
+      "task_ids": [
+        "3.2",
+        "3.4",
+        "3.6",
+        "3.8",
+        "3.10",
+        "3.12",
+        "3.14",
+        "3.16",
+        "3.20",
+        "3.22",
+        "3.24",
+        "3.26",
+        "3.28",
+        "3.30",
+        "4.2",
+        "4.4",
+        "4.8",
+        "4.10",
+        "5.1",
+        "5.9",
+        "6.2",
+        "6.5",
+        "6.9",
+        "6.15",
+        "7.13",
+        "7.15",
+        "8.1",
+        "8.2",
+        "8.3",
+        "8.4",
+        "8.8",
+        "8.10",
+        "10.3",
+        "10.6",
+        "10.9"
+      ],
+      "dependency_note": "桌面、抽屉与放物侧分别保留；抽屉扫掠和桌上物品仍需适配。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "side",
+      "number": 3,
+      "name": "小茶几",
+      "config": {
+        "target": [
+          -2.115033684951505,
+          -1.9866492246218144
+        ],
+        "targetPolygon": [
+          [
+            -2.5985710506250475,
+            -2.622115872725699
+          ],
+          [
+            -1.6314963192779621,
+            -2.622115872725699
+          ],
+          [
+            -1.6314963192779621,
+            -1.35118257651793
+          ],
+          [
+            -2.5985710506250475,
+            -1.35118257651793
+          ]
+        ],
+        "center": [
+          -2.115033684951505,
+          -1.9866492246218144
+        ],
+        "pose": [
+          -2.7800000000000002,
+          -1.3799999999999994
+        ],
+        "poseYaw": -45,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": 135,
+      "front_source": "published_station_direction",
+      "pose_source": "catalog:sidetable_pick",
+      "target": {
+        "anchor": "/World/Assets/SmallCoffeeTable",
+        "bounds": {
+          "min": [
+            -2.5985710506250475,
+            -2.622115872725699,
+            0.006988783010899189
+          ],
+          "max": [
+            -1.6314963192779621,
+            -1.35118257651793,
+            0.4572000012693597
+          ]
+        },
+        "world_transform": [
+          [
+            -0.7457099337269262,
+            0.08010427417425056,
+            0,
+            0
+          ],
+          [
+            -0.09612512646265436,
+            -0.8948518967668311,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1.0719314813613892,
+            0
+          ],
+          [
+            -2.1150336877895617,
+            -1.986649216518093,
+            0.006988783005601297,
+            1
+          ]
+        ],
+        "bodies": [],
+        "joints": [],
+        "collider_count": 19,
+        "features": []
+      },
+      "binding": "layout_object",
+      "stations": [
+        {
+          "key": "catalog:sidetable_pick",
+          "anchor": "/World/Assets/SmallCoffeeTable",
+          "xy": [
+            -2.7800000000000002,
+            -1.3799999999999994
+          ],
+          "yaw_deg": -44.99999999999999,
+          "tasks": [
+            "4.3",
+            "4.9",
+            "4.14",
+            "6.3"
+          ],
+          "origin": "catalog furniture-relative station",
+          "full_height_fits": true,
+          "chassis_fits": true
+        },
+        {
+          "key": "owner:6.3",
+          "anchor": "/World/Assets/SmallCoffeeTable",
+          "xy": [
+            -2.69786757889002,
+            -1.2956884875252719
+          ],
+          "yaw_deg": 315.26878940560937,
+          "tasks": [
+            "6.3"
+          ],
+          "origin": "delivered action state mapped using runtime anchor transform",
+          "full_height_fits": true,
+          "chassis_fits": true
+        }
+      ],
+      "task_ids": [
+        "4.3",
+        "4.9",
+        "4.14",
+        "6.3",
+        "7.17"
+      ],
+      "dependency_note": "沿用斜向接近参考；需核实台面物品与边柜任务映射。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "tv",
+      "number": 4,
+      "name": "电视柜",
+      "config": {
+        "target": [
+          -3.729706716801644,
+          -0.26550629754573923
+        ],
+        "targetPolygon": [
+          [
+            -3.879706718931999,
+            -1.1055062473688606
+          ],
+          [
+            -3.5797067146712895,
+            -1.1055062473688606
+          ],
+          [
+            -3.5797067146712895,
+            0.5744936522773821
+          ],
+          [
+            -3.879706718931999,
+            0.5744936522773821
+          ]
+        ],
+        "center": [
+          -3.729706716801644,
+          -0.26550629754573923
+        ],
+        "pose": [
+          -3.08,
+          -1.5870000000000002
+        ],
+        "poseYaw": 135.94000000000005,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": -44.06,
+      "front_source": "published_station_direction",
+      "pose_source": "catalog:tv_cabinet_diagonal",
+      "target": {
+        "anchor": "/World/Assets/TvTable",
+        "bounds": {
+          "min": [
+            -3.879706718931999,
+            -1.1055062473688606,
+            4.741336458971253e-12
+          ],
+          "max": [
+            -3.5797067146712895,
+            0.5744936522773821,
+            0.4500000171283664
+          ]
+        },
+        "world_transform": [
+          [
+            2.0764133822538335e-18,
+            0.009351334534585476,
+            0,
+            0
+          ],
+          [
+            -1.4877532978601919e-18,
+            3.3034759324927873e-34,
+            0.006700245197862387,
+            0
+          ],
+          [
+            0.004776062909513712,
+            -1.0604990018400677e-18,
+            1.0604990018400677e-18,
+            0
+          ],
+          [
+            -3.74774284954667,
+            -0.26555565380690493,
+            -0.00006822143641545264,
+            1
+          ]
+        ],
+        "bodies": [],
+        "joints": [],
+        "collider_count": 1,
+        "features": []
+      },
+      "binding": "layout_object",
+      "stations": [
+        {
+          "key": "catalog:tv_cabinet_diagonal",
+          "anchor": "/World/Assets/TvTable",
+          "xy": [
+            -3.08,
+            -1.5870000000000002
+          ],
+          "yaw_deg": 135.94,
+          "tasks": [
+            "4.17",
+            "6.10"
+          ],
+          "origin": "tv_diagonal_002 accepted candidate, TvTable-relative",
+          "full_height_fits": true,
+          "chassis_fits": true
+        }
+      ],
+      "task_ids": [
+        "4.17",
+        "6.10"
+      ],
+      "dependency_note": "斜向站位来自发布计划；需检查电视柜前沿及遥控器放置面。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "shelf",
+      "number": 5,
+      "name": "零食架正面",
+      "config": {
+        "target": [
+          -2.3690211510017996,
+          2.2529566046186336
+        ],
+        "targetPolygon": [
+          [
+            -2.869023307458252,
+            2.0029564280510335
+          ],
+          [
+            -1.8690189945453473,
+            2.0029564280510335
+          ],
+          [
+            -1.8690189945453473,
+            2.502956781186233
+          ],
+          [
+            -2.869023307458252,
+            2.502956781186233
+          ]
+        ],
+        "center": [
+          -2.3690211510017996,
+          2.2529566046186336
+        ],
+        "pose": [
+          -2.369,
+          1.3606552699470327
+        ],
+        "poseYaw": 90,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": -90,
+      "front_source": "published_station_direction",
+      "pose_source": "catalog:shelf_pick",
+      "target": {
+        "anchor": "/World/Assets/ShelvingUnit",
+        "bounds": {
+          "min": [
+            -2.869023307458252,
+            2.0029564280510335,
+            -5.643814676575819e-7
+          ],
+          "max": [
+            -1.8690189945453473,
+            2.502956781186233,
+            1.9225004740152387
+          ]
+        },
+        "world_transform": [
+          [
+            0.007112099789083004,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2.2204459996194763e-18,
+            0.009999999776482582,
+            0
+          ],
+          [
+            0,
+            -0.009156499989330769,
+            2.033151422627004e-18,
+            0
+          ],
+          [
+            -2.3690211510018,
+            2.252956604618633,
+            0,
+            1
+          ]
+        ],
+        "bodies": [],
+        "joints": [],
+        "collider_count": 5,
+        "features": []
+      },
+      "binding": "layout_object",
+      "stations": [
+        {
+          "key": "catalog:shelf_pick",
+          "anchor": "/World/Assets/ShelvingUnit",
+          "xy": [
+            -2.369,
+            1.3606552699470327
+          ],
+          "yaw_deg": 90,
+          "tasks": [
+            "4.16",
+            "3.1",
+            "3.3",
+            "3.5",
+            "3.7",
+            "3.9",
+            "3.11",
+            "3.13",
+            "3.15",
+            "3.19",
+            "3.21",
+            "3.23",
+            "3.25",
+            "3.27",
+            "3.29"
+          ],
+          "origin": "catalog metric station mapped through actual ShelvingUnit/o geometry orientation",
+          "full_height_fits": true,
+          "chassis_fits": true
+        }
+      ],
+      "task_ids": [
+        "3.1",
+        "3.3",
+        "3.5",
+        "3.7",
+        "3.9",
+        "3.11",
+        "3.13",
+        "3.15",
+        "3.19",
+        "3.21",
+        "3.23",
+        "3.25",
+        "3.27",
+        "3.29",
+        "4.16"
+      ],
+      "dependency_note": "正面朝南；按不同层高另做可达、遮挡与抓取验证。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "coat",
+      "number": 6,
+      "name": "衣架",
+      "config": {
+        "target": [
+          -0.008274436204406155,
+          1.825159070151228
+        ],
+        "targetPolygon": [
+          [
+            -0.472061916588854,
+            1.3648232134708587
+          ],
+          [
+            0.4555130441800417,
+            1.3648232134708587
+          ],
+          [
+            0.4555130441800417,
+            2.285494926831597
+          ],
+          [
+            -0.472061916588854,
+            2.285494926831597
+          ]
+        ],
+        "center": [
+          -0.008274436204406155,
+          1.825159070151228
+        ],
+        "pose": [
+          0.5263620909832092,
+          1.372394654530861
+        ],
+        "poseYaw": 120,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": -60,
+      "front_source": "published_station_direction",
+      "pose_source": "catalog:coat_rack_hang",
+      "target": {
+        "anchor": "/World/Assets/CoatRack",
+        "bounds": {
+          "min": [
+            -0.472061916588854,
+            1.3648232134708587,
+            -0.006150419852009696
+          ],
+          "max": [
+            0.4555130441800417,
+            2.285494926831597,
+            1.777999996471405
+          ]
+        },
+        "world_transform": [
+          [
+            0.8191520442889915,
+            -0.5735764363510465,
+            0,
+            0
+          ],
+          [
+            0.5735764363510465,
+            0.8191520442889915,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0.0015120046022820688,
+            1.896449670499541,
+            0,
+            1
+          ]
+        ],
+        "bodies": [],
+        "joints": [],
+        "collider_count": 24,
+        "features": []
+      },
+      "binding": "layout_object",
+      "stations": [
+        {
+          "key": "catalog:coat_rack_hang",
+          "anchor": "/World/Assets/CoatRack",
+          "xy": [
+            0.5263620909832092,
+            1.372394654530861
+          ],
+          "yaw_deg": 120,
+          "tasks": [
+            "6.7"
+          ],
+          "origin": "catalog furniture-relative station",
+          "full_height_fits": true,
+          "chassis_fits": true
+        },
+        {
+          "key": "owner:6.7",
+          "anchor": "/World/Assets/CoatRack",
+          "xy": [
+            0.6420497273014873,
+            0.9972763076292868
+          ],
+          "yaw_deg": 123.29999999999998,
+          "tasks": [
+            "6.7"
+          ],
+          "origin": "delivered action state mapped using runtime anchor transform",
+          "full_height_fits": true,
+          "chassis_fits": true
+        }
+      ],
+      "task_ids": [
+        "6.7"
+      ],
+      "dependency_note": "钩子高度及帽子碰撞独立验证，不把底座轮廓当作可抓区域。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "bag",
+      "number": 7,
+      "name": "装包柜",
+      "config": {
+        "target": [
+          -1.265,
+          2.1946569973773955
+        ],
+        "targetPolygon": [
+          [
+            -1.552000000476837,
+            1.9036569887943267
+          ],
+          [
+            -0.9779999995231627,
+            1.9036569887943267
+          ],
+          [
+            -0.9779999995231627,
+            2.4856570059604643
+          ],
+          [
+            -1.552000000476837,
+            2.4856570059604643
+          ]
+        ],
+        "center": [
+          -1.265,
+          2.1946569973773955
+        ],
+        "pose": [
+          -1.2999999999999998,
+          1.4056569999999997
+        ],
+        "poseYaw": 90,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": -90,
+      "front_source": "published_station_direction",
+      "pose_source": "task5:bag_station",
+      "target": {
+        "anchor": "/World/Assets/Task5PackStation",
+        "bounds": {
+          "min": [
+            -1.552000000476837,
+            1.9036569887943267,
+            0
+          ],
+          "max": [
+            -0.9779999995231627,
+            2.4856570059604643,
+            0.9200000166893005
+          ]
+        },
+        "world_transform": [
+          [
+            -1,
+            -1.2246467991473532e-16,
+            0,
+            0
+          ],
+          [
+            1.2246467991473532e-16,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            -1.265,
+            2.210657,
+            0,
+            1
+          ]
+        ],
+        "bodies": [],
+        "joints": [],
+        "collider_count": 1,
+        "features": []
+      },
+      "binding": "layout_object",
+      "stations": [
+        {
+          "key": "task5:bag_station",
+          "anchor": "/World/Assets/Task5PackStation",
+          "xy": [
+            -1.2999999999999998,
+            1.4056569999999997
+          ],
+          "yaw_deg": 90,
+          "tasks": [
+            "5.2",
+            "5.4",
+            "5.6",
+            "5.10",
+            "5.12",
+            "6.16"
+          ],
+          "origin": "Task5 shoe cabinet (canonical Task73 tote -> station)",
+          "full_height_fits": true,
+          "chassis_fits": true
+        }
+      ],
+      "task_ids": [
+        "5.2",
+        "5.4",
+        "5.6",
+        "5.10",
+        "5.12",
+        "6.16"
+      ],
+      "dependency_note": "柜体、收纳容器、投入物体及承托面应纳入同一依赖组。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "cloth",
+      "number": 8,
+      "name": "桌布篮",
+      "config": {
+        "target": [
+          -2.2352818077647347,
+          -0.8326798979179542
+        ],
+        "targetPolygon": [
+          [
+            -2.4342818059448526,
+            -0.9916798974988293
+          ],
+          [
+            -2.036281809584617,
+            -0.9916798974988293
+          ],
+          [
+            -2.036281809584617,
+            -0.6736798983370791
+          ],
+          [
+            -2.4342818059448526,
+            -0.6736798983370791
+          ]
+        ],
+        "center": [
+          -2.2352818077647347,
+          -0.8326798979179542
+        ],
+        "pose": [
+          -2.2352818077647347,
+          -1.5416798974988293
+        ],
+        "poseYaw": 90,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": -90,
+      "front_source": "design_proposal",
+      "pose_source": "front_edge_plus_0.55m_draft",
+      "target": {
+        "anchor": "/World/Assets/TableclothBasket",
+        "bounds": {
+          "min": [
+            -2.4342818059448526,
+            -0.9916798974988293,
+            4.768371586472142e-9
+          ],
+          "max": [
+            -2.036281809584617,
+            -0.6736798983370791,
+            0.45000001118271554
+          ]
+        },
+        "world_transform": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0.00471819223526504,
+            0.32332010512977005,
+            0,
+            1
+          ]
+        ],
+        "bodies": [],
+        "joints": [],
+        "collider_count": 2,
+        "features": [
+          {
+            "path": "/World/Assets/TableclothBasket",
+            "bounds": {
+              "min": [
+                -2.4342818059448526,
+                -0.9916798974988293,
+                4.768371586472142e-9
+              ],
+              "max": [
+                -2.036281809584617,
+                -0.6736798983370791,
+                0.45000001118271554
+              ]
+            }
+          }
+        ]
+      },
+      "binding": "layout_object",
+      "stations": [],
+      "task_ids": [
+        "8.8",
+        "8.10"
+      ],
+      "dependency_note": "先从篮子南侧接近；只是设计假设，需检查茶几和通道。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "prep",
+      "number": 9,
+      "name": "便当取物位",
+      "config": {
+        "target": [
+          2.6999999991059305,
+          -0.8600000333786011
+        ],
+        "targetPolygon": [
+          [
+            2.2500000110268594,
+            -2.260000009536743
+          ],
+          [
+            3.1499999871850015,
+            -2.260000009536743
+          ],
+          [
+            3.1499999871850015,
+            0.539999942779541
+          ],
+          [
+            2.2500000110268594,
+            0.539999942779541
+          ]
+        ],
+        "center": [
+          2.6999999991059305,
+          -0.8600000333786011
+        ],
+        "pose": [
+          1.82238692572874,
+          -0.34320134770510463
+        ],
+        "poseYaw": 2.3817875263538326,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": -177.61821247364617,
+      "front_source": "published_station_direction",
+      "pose_source": "owner:5.3",
+      "target": {
+        "anchor": "/World/Background/Shell/CounterTop_17",
+        "bounds": {
+          "min": [
+            2.2500000110268594,
+            -2.260000009536743,
+            0.8800000004470349
+          ],
+          "max": [
+            3.1499999871850015,
+            0.539999942779541,
+            0.9199999995529652
+          ]
+        },
+        "world_transform": [
+          [
+            0.8999999761581421,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2.799999952316284,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0.03999999910593033,
+            0
+          ],
+          [
+            2.6999999991059305,
+            -0.8600000333786011,
+            0.9,
+            1
+          ]
+        ],
+        "bodies": [],
+        "joints": [],
+        "collider_count": 1,
+        "features": []
+      },
+      "binding": "support_proxy",
+      "stations": [
+        {
+          "key": "owner:5.3",
+          "anchor": "kitchen",
+          "xy": [
+            1.82238692572874,
+            -0.34320134770510463
+          ],
+          "yaw_deg": 2.381787526353807,
+          "tasks": [
+            "5.3"
+          ],
+          "origin": "task5_bentopick_20260925 FINAL_MANIFEST_bento_v1",
+          "full_height_fits": true,
+          "chassis_fits": true
+        },
+        {
+          "key": "catalog:kitchen_table_place",
+          "anchor": "/World/Background/Shell/CounterTop_17",
+          "xy": [
+            2.82,
+            0.6699999999999999
+          ],
+          "yaw_deg": -90,
+          "tasks": [
+            "5.3"
+          ],
+          "origin": "catalog furniture-relative station",
+          "full_height_fits": false,
+          "chassis_fits": true
+        }
+      ],
+      "task_ids": [
+        "5.3"
+      ],
+      "dependency_note": "只有台面代理与历史便当站位；未找到便当操作物体，禁止把整块台面当成便当已绑定。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "coffee",
+      "number": 10,
+      "name": "咖啡机",
+      "config": {
+        "target": [
+          4.63996238170232,
+          -1.7000004006636291
+        ],
+        "targetPolygon": [
+          [
+            4.543283980787922,
+            -1.780014486615302
+          ],
+          [
+            4.736640782616719,
+            -1.780014486615302
+          ],
+          [
+            4.736640782616719,
+            -1.619986314711956
+          ],
+          [
+            4.543283980787922,
+            -1.619986314711956
+          ]
+        ],
+        "center": [
+          4.63996238170232,
+          -1.7000004006636291
+        ],
+        "pose": [
+          3.993283980787921,
+          -1.7000004006636291
+        ],
+        "poseYaw": 0,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": 180,
+      "front_source": "design_proposal",
+      "pose_source": "front_edge_plus_0.55m_draft",
+      "target": {
+        "anchor": "/World/Assets/CoffeeGrinder",
+        "bounds": {
+          "min": [
+            4.543283980787922,
+            -1.780014486615302,
+            0.9199999999999992
+          ],
+          "max": [
+            4.736640782616719,
+            -1.619986314711956,
+            1.2339499956846227
+          ]
+        },
+        "world_transform": [
+          [
+            -2.553512903698301e-16,
+            -1.149999976158142,
+            0,
+            0
+          ],
+          [
+            2.553512903698301e-16,
+            -5.669937638726587e-32,
+            1.149999976158142,
+            0
+          ],
+          [
+            -1.149999976158142,
+            2.553512903698301e-16,
+            2.553512903698301e-16,
+            0
+          ],
+          [
+            4.639999758350855,
+            -1.700000399683118,
+            0.92,
+            1
+          ]
+        ],
+        "bodies": [],
+        "joints": [],
+        "collider_count": 12,
+        "features": []
+      },
+      "binding": "identity_unverified",
+      "stations": [],
+      "task_ids": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4"
+      ],
+      "dependency_note": "当前资产名是 CoffeeGrinder；不能证明为任务咖啡机，需核对或绑定正确模型。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "fryer",
+      "number": 11,
+      "name": "炸锅",
+      "config": {
+        "target": [
+          2.7507099218666555,
+          -0.7000000095367431
+        ],
+        "targetPolygon": [
+          [
+            2.5984198305010797,
+            -0.8240000075101852
+          ],
+          [
+            2.9030000132322313,
+            -0.8240000075101852
+          ],
+          [
+            2.9030000132322313,
+            -0.576000011563301
+          ],
+          [
+            2.5984198305010797,
+            -0.576000011563301
+          ]
+        ],
+        "center": [
+          2.7507099218666555,
+          -0.7000000095367431
+        ],
+        "pose": [
+          2.0484198305010795,
+          -0.700000009536743
+        ],
+        "poseYaw": 0,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": 180,
+      "front_source": "door_or_handle_bounds_inference",
+      "pose_source": "front_edge_plus_0.55m_draft",
+      "target": {
+        "anchor": "/World/Assets/AirFryer",
+        "bounds": {
+          "min": [
+            2.5984198305010797,
+            -0.8240000075101852,
+            0.92
+          ],
+          "max": [
+            2.9030000132322313,
+            -0.576000011563301,
+            1.1739999862201511
+          ]
+        },
+        "world_transform": [
+          [
+            -0.9999999999999999,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -0.9999999999999999,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            2.8100000110268595,
+            -0.7000000095367431,
+            0.9159999998100102,
+            1
+          ]
+        ],
+        "bodies": [
+          {
+            "path": "/World/Assets/AirFryer/Centered/Body",
+            "enabled": true,
+            "kinematic": true
+          },
+          {
+            "path": "/World/Assets/AirFryer/Centered/Tray",
+            "enabled": true,
+            "kinematic": false
+          }
+        ],
+        "joints": [
+          {
+            "path": "/World/Assets/AirFryer/Centered/Joints/DrawerSlideOldParams",
+            "type": "PhysicsJoint",
+            "body0": [
+              "/World/Assets/AirFryer/Centered/Body"
+            ],
+            "body1": [
+              "/World/Assets/AirFryer/Centered/Tray"
+            ]
+          }
+        ],
+        "collider_count": 53,
+        "features": [
+          {
+            "path": "/World/Assets/AirFryer/Centered/Tray",
+            "bounds": {
+              "min": [
+                2.5984198305010797,
+                -0.8225000119209289,
+                0.9259999995864928
+              ],
+              "max": [
+                2.890500010251999,
+                -0.5775000071525573,
+                1.0570617975480854
+              ]
+            }
+          },
+          {
+            "path": "/World/Assets/AirFryer/Centered/Tray/HandleLegacyClosure",
+            "bounds": {
+              "min": [
+                2.5984198305010797,
+                -0.7185000097751617,
+                0.9384483365155757
+              ],
+              "max": [
+                2.69400001347065,
+                -0.6815000092983245,
+                1.0570617975480854
+              ]
+            }
+          }
+        ]
+      },
+      "binding": "layout_object",
+      "stations": [],
+      "task_ids": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4"
+      ],
+      "dependency_note": "把手在西侧；保持机身/炸篮及滑轨原属性，蛋糕与承托面依赖待补。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "fridge",
+      "number": 12,
+      "name": "冰箱",
+      "config": {
+        "target": [
+          3.173564260656851,
+          2.031566666683507
+        ],
+        "targetPolygon": [
+          [
+            2.717260458555397,
+            1.5769585008902427
+          ],
+          [
+            3.629868062758305,
+            1.5769585008902427
+          ],
+          [
+            3.629868062758305,
+            2.4861748324767707
+          ],
+          [
+            2.717260458555397,
+            2.4861748324767707
+          ]
+        ],
+        "center": [
+          3.173564260656851,
+          2.031566666683507
+        ],
+        "pose": [
+          3.173564260656851,
+          1.0269585008902427
+        ],
+        "poseYaw": 90,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": -90,
+      "front_source": "door_or_handle_bounds_inference",
+      "pose_source": "front_edge_plus_0.55m_draft",
+      "target": {
+        "anchor": "/World/Background/Shell/KitchenRefrigerator",
+        "bounds": {
+          "min": [
+            2.717260458555397,
+            1.5769585008902427,
+            -9.587892761761215e-17
+          ],
+          "max": [
+            3.629868062758305,
+            2.4861748324767707,
+            1.75648560737761
+          ]
+        },
+        "world_transform": [
+          [
+            0.9993707676865341,
+            -0.03546926406943858,
+            0,
+            0
+          ],
+          [
+            7.875758727280098e-18,
+            2.219048872845817e-16,
+            1,
+            0
+          ],
+          [
+            -0.03546926406943858,
+            -0.9993707676865341,
+            2.220446049250313e-16,
+            0
+          ],
+          [
+            3.1730380596772965,
+            2.038976182815812,
+            0,
+            1
+          ]
+        ],
+        "bodies": [
+          {
+            "path": "/World/Background/Shell/KitchenRefrigerator/body",
+            "enabled": false,
+            "kinematic": true
+          },
+          {
+            "path": "/World/Background/Shell/KitchenRefrigerator/left_door",
+            "enabled": false,
+            "kinematic": true
+          },
+          {
+            "path": "/World/Background/Shell/KitchenRefrigerator/right_door",
+            "enabled": false,
+            "kinematic": true
+          }
+        ],
+        "joints": [],
+        "collider_count": 17,
+        "features": [
+          {
+            "path": "/World/Background/Shell/KitchenRefrigerator/left_door",
+            "bounds": {
+              "min": [
+                2.7193723689895535,
+                1.594569585105683,
+                3.5738590518626616e-17
+              ],
+              "max": [
+                3.104785617943989,
+                1.8936637584547398,
+                1.751131642357517
+              ]
+            }
+          },
+          {
+            "path": "/World/Background/Shell/KitchenRefrigerator/left_door/geo_s/geo/SM_refrigerator_01_left_door",
+            "bounds": {
+              "min": [
+                2.719372368989555,
+                1.5945695851056834,
+                3.5738621223570884e-17
+              ],
+              "max": [
+                3.1047856179439903,
+                1.8936637584547402,
+                1.7511316423575174
+              ]
+            }
+          },
+          {
+            "path": "/World/Background/Shell/KitchenRefrigerator/right_door",
+            "bounds": {
+              "min": [
+                3.0960513025511722,
+                1.5769585008902425,
+                4.040781050529818e-17
+              ],
+              "max": [
+                3.6002322816341614,
+                1.8609281047347204,
+                1.751131275561701
+              ]
+            }
+          },
+          {
+            "path": "/World/Background/Shell/KitchenRefrigerator/right_door/geo_s/geo/SM_refrigerator_01_right_door",
+            "bounds": {
+              "min": [
+                3.0960513025511722,
+                1.5769585008902431,
+                4.0407853915736654e-17
+              ],
+              "max": [
+                3.6002322816341614,
+                1.8592796967000043,
+                1.7511312755617015
+              ]
+            }
+          }
+        ]
+      },
+      "binding": "layout_object",
+      "stations": [],
+      "task_ids": [
+        "9.1",
+        "9.3",
+        "9.5"
+      ],
+      "dependency_note": "门位于南侧；现有子树未提取到关节，门约束与任务冰箱适配仍需核实。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "microwave",
+      "number": 13,
+      "name": "微波炉",
+      "config": {
+        "target": [
+          2.531505018023294,
+          -1.3399724240380726
+        ],
+        "targetPolygon": [
+          [
+            2.2972600248409147,
+            -1.64019875321816
+          ],
+          [
+            2.765750011205673,
+            -1.64019875321816
+          ],
+          [
+            2.765750011205673,
+            -1.039746094857985
+          ],
+          [
+            2.2972600248409147,
+            -1.039746094857985
+          ]
+        ],
+        "center": [
+          2.531505018023294,
+          -1.3399724240380726
+        ],
+        "pose": [
+          1.747260024840915,
+          -1.3399724240380726
+        ],
+        "poseYaw": 0,
+        "poseRadius": 0.3,
+        "preload": 2,
+        "wake": 1.2,
+        "exit": 1.7,
+        "wakeHalfAngle": 45,
+        "poseYawTolerance": 20,
+        "nearWake": 0.45
+      },
+      "front_deg": 180,
+      "front_source": "door_or_handle_bounds_inference",
+      "pose_source": "front_edge_plus_0.55m_draft",
+      "target": {
+        "anchor": "/World/Assets/DiningTableMicrowave",
+        "bounds": {
+          "min": [
+            2.2972600248409147,
+            -1.64019875321816,
+            0.9199999999999999
+          ],
+          "max": [
+            2.765750011205673,
+            -1.039746094857985,
+            1.2174330702587763
+          ]
+        },
+        "world_transform": [
+          [
+            2.220446049250313e-16,
+            -1,
+            0,
+            0
+          ],
+          [
+            1,
+            2.220446049250313e-16,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            2.3300000110268595,
+            -1.3400000095367433,
+            0.92,
+            1
+          ]
+        ],
+        "bodies": [
+          {
+            "path": "/World/Assets/DiningTableMicrowave/Asset/body",
+            "enabled": true,
+            "kinematic": true
+          },
+          {
+            "path": "/World/Assets/DiningTableMicrowave/Asset/door",
+            "enabled": true,
+            "kinematic": false
+          }
+        ],
+        "joints": [
+          {
+            "path": "/World/Assets/DiningTableMicrowave/Asset/door_hinge",
+            "type": "PhysicsRevoluteJoint",
+            "body0": [
+              "/World/Assets/DiningTableMicrowave/Asset/body"
+            ],
+            "body1": [
+              "/World/Assets/DiningTableMicrowave/Asset/door"
+            ]
+          }
+        ],
+        "collider_count": 9,
+        "features": [
+          {
+            "path": "/World/Assets/DiningTableMicrowave/Asset/door",
+            "bounds": {
+              "min": [
+                2.2972600248409147,
+                -1.535414819037253,
+                0.9431495810463827
+              ],
+              "max": [
+                2.3727501270128126,
+                -1.039746094857985,
+                1.2174330702587763
+              ]
+            }
+          }
+        ]
+      },
+      "binding": "layout_object",
+      "stations": [],
+      "task_ids": [
+        "9.2",
+        "9.4",
+        "10.1",
+        "10.4"
+      ],
+      "dependency_note": "门位于西侧；门扫掠、盘盒整体出炉及双臂持物路径仍需验证。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    },
+    {
+      "id": "dining",
+      "number": 14,
+      "name": "餐桌上菜位",
+      "config": null,
+      "front_deg": null,
+      "front_source": "unbound",
+      "pose_source": "unbound",
+      "target": null,
+      "binding": "missing",
+      "stations": [],
+      "task_ids": [
+        "10.2",
+        "10.5",
+        "10.8"
+      ],
+      "dependency_note": "未绑定餐桌及上菜放置面；不自动复用茶几、微波炉或厨房台面。",
+      "review_status": "pending_review",
+      "reach_calibration_status": "not_calibrated",
+      "physical_validation_status": "not_performed",
+      "runtime_enabled": false
+    }
+  ]
+}

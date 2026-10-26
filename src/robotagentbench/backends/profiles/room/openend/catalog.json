@@ -1,0 +1,575 @@
+{
+  "schema": "openend.task_catalog.v1",
+  "registration_scope": "unified_room_in_process_not_public_HTTP_registry",
+  "tasks": {
+    "meal_tray_transfer": {
+      "name": "搬运大餐盘到茶几",
+      "parameters": {},
+      "maximum_score": 5,
+      "operation_maximum": 2,
+      "final_state_points": 3,
+      "empty_tray_allowed": true,
+      "requires_registered_preparation": null,
+      "destination": "coffee_table.table_objects",
+      "final_state_rule": "current_whole_tray_footprint_in_region_and_actual_tabletop_support_after_lift",
+      "final_state_reversible": true,
+      "initialization_owner": "unified_scene",
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "physics_rate_owner": "single_frontal_workspace",
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ],
+      "binding_status": "runtime_connected_native_validation_pending",
+      "full_physical_trajectory_verified": false
+    },
+    "microwave_box_to_meal_tray": {
+      "name": "微波炉旋钮亮灯、取盒摆盘",
+      "parameters": {
+        "payload_variant": [
+          "beef_box",
+          "leftover_box"
+        ]
+      },
+      "maximum_score": 13,
+      "operation_maximum": 10,
+      "illumination_points": 2,
+      "final_state_points": 3,
+      "required_preparation": "measured_knob_contact_rotation_and_completed_lamp_return_cycle",
+      "requires_registered_preparation": "fridge_to_microwave",
+      "preparation_identity": "same_episode_same_box_same_payload_variant",
+      "handoff_rule": "parent_success_and_current_supported_box_inside_closed_oven",
+      "illumination_rule": "contact_rotation_begins_after_fridge_handoff",
+      "initial_source": "refrigerator",
+      "initialization_owner": "unified_scene",
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "physics_rate_owner": "single_frontal_workspace",
+      "binding_status": "fridge_handoff_bound_native_idle_verified",
+      "native_idle_variants_verified": [
+        "beef_box",
+        "leftover_box"
+      ],
+      "native_idle_scope": "same_box_initialization_and_waiting_gate_only_no_manipulation",
+      "historical_standalone_oven_idle_variants_verified": [
+        "beef_box",
+        "leftover_box"
+      ],
+      "full_physical_trajectory_verified": false,
+      "small_plate_on_large_meal_tray_allowed": false,
+      "pending": [
+        "physical_fridge_put_handoff_transition_validation",
+        "compatible_full_fridge_put_knob_extract_close_meal_action_replay"
+      ],
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "coffee_to_meal_tray": {
+      "name": "咖啡摆盘",
+      "parameters": {},
+      "requires_registered_preparation": "coffee",
+      "operation_maximum": 5,
+      "final_state_points": 3,
+      "maximum_score": 8,
+      "initialization_owner": "unified_scene",
+      "binding_status": "runtime_connected_native_validation_pending",
+      "full_physical_trajectory_verified": false,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "bread_to_meal_tray": {
+      "name": "面包摆盘",
+      "parameters": {},
+      "requires_registered_preparation": "fryer",
+      "operation_maximum": 4,
+      "final_state_points": 3,
+      "maximum_score": 7,
+      "initialization_owner": "unified_scene",
+      "binding_status": "runtime_connected_native_validation_pending",
+      "full_physical_trajectory_verified": false,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "cutlery_to_meal_tray": {
+      "name": "餐具摆盘",
+      "parameters": {
+        "asset": [
+          "meal_fork",
+          "meal_knife"
+        ],
+        "target_path": "required_exact_scene_instance"
+      },
+      "multiple_distinct_targets": true,
+      "operation_maximum": 2,
+      "final_state_points": 3,
+      "maximum_score": 5,
+      "initialization_owner": "unified_scene",
+      "binding_status": "runtime_connected_native_validation_pending",
+      "full_physical_trajectory_verified": false,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "snack_drink_to_tray": {
+      "name": "零食架取物放木托盘",
+      "parameters": {
+        "product": [
+          "cayman_jacked",
+          "gatorade_m",
+          "gatorade_t",
+          "starbucks",
+          "good2grow",
+          "grapefruit_can",
+          "coke_c3",
+          "sprite_c1",
+          "chomps_r",
+          "pring_bbq",
+          "oreo_gf",
+          "honeymaid",
+          "zbar_t",
+          "skit_littles"
+        ]
+      },
+      "maximum_score": 7,
+      "component_phases": "4-i -> 5-i (same product)",
+      "initialization_owner": "unified_scene",
+      "workspaces": {
+        "shelf": 60,
+        "table_wooden_tray": 60
+      },
+      "physics_rate_owner": "single_frontal_workspace",
+      "binding_status": "runtime_connected_native_validation_pending",
+      "full_physical_trajectory_verified": false,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "fridge_to_microwave": {
+      "name": "冰箱取盒放入微波炉",
+      "parameters": {
+        "payload_variant": [
+          "beef_box",
+          "leftover_box"
+        ]
+      },
+      "maximum_score": 18,
+      "component_phases": {
+        "beef_box": [
+          "26-1",
+          "27-1"
+        ],
+        "leftover_box": [
+          "26-2",
+          "27-2"
+        ]
+      },
+      "workspaces": {
+        "fridge": 60,
+        "microwave": 240
+      },
+      "initialization_owner": "unified_scene",
+      "phase_handoff": "same_actual_payload_no_reset",
+      "binding_status": "runtime_connected_native_validation_pending",
+      "full_physical_trajectory_verified": false,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "trash_transfer": {
+      "name": "扔垃圾",
+      "parameters": {
+        "auto_bind": true
+      },
+      "multiple_distinct_targets": true,
+      "registration": "one_instance_per_scene_marked_garbage",
+      "categories": [
+        "paper",
+        "snack",
+        "can",
+        "cup"
+      ],
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "physics_rate_owner": "single_frontal_workspace",
+      "source_location_constraint": null,
+      "binding_status": "implemented",
+      "maximum_score": 8,
+      "pickup_rule_template": "13-7_user_approved_reuse",
+      "disposal_components": {
+        "paper": "18-1",
+        "snack": "18-2",
+        "can": "18-3",
+        "cup": "18-4"
+      },
+      "pending": "native_static_and_full_physical_validation",
+      "legacy_paper_cup_transfer_unchanged": true,
+      "full_physical_trajectory_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "powerbank_transfer": {
+      "name": "充电宝放入固定开口包",
+      "maximum_score": 9,
+      "component_phases": [
+        "13-3",
+        "14-3"
+      ],
+      "physics_hz": 240,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "full_physical_trajectory_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "umbrella_transfer": {
+      "name": "折叠雨伞放入固定开口包",
+      "parameters": {},
+      "maximum_score": 9,
+      "additive_contact_credit": 1,
+      "maximum_with_contact_credit": 10,
+      "component_phases": ["13-1", "14-1"],
+      "source": "sofa",
+      "destination": "fixed_cpu_bag",
+      "source_asset": "original_dynamic_folded_umbrella",
+      "pickup_operation_points": 5,
+      "placement_operation_points": 2,
+      "reversible_final_state_points": 2,
+      "placement_policy": "existing_openend_object_transfer_bag_process_and_live_final_state",
+      "atomic_soft_tote_not_used": true,
+      "physics_hz": 240,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "supported_workspace_physics_hz": [60, 240],
+      "initialization_owner": "unified_scene",
+      "binding_status": "runtime_connected_native_validation_pending",
+      "full_physical_trajectory_verified": false
+    },
+    "water_bottle_transfer": {
+      "name": "水瓶放入固定开口包",
+      "maximum_score": 9,
+      "component_phases": [
+        "13-5",
+        "14-5"
+      ],
+      "physics_hz": 240,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "full_physical_trajectory_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "book_transfer": {
+      "name": "书籍放到小茶几",
+      "maximum_score": 9,
+      "component_phases": [
+        "15-1",
+        "10-5"
+      ],
+      "physics_hz": 240,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "full_physical_trajectory_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "cap_transfer": {
+      "name": "帽子挂到衣架",
+      "maximum_score": 9,
+      "component_phases": [
+        "15-2",
+        "17-1"
+      ],
+      "physics_hz": 240,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "full_physical_trajectory_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "notebook_transfer": {
+      "name": "绿色笔记本放入抽屉并关上",
+      "maximum_score": 11,
+      "component_phases": [
+        "13-6",
+        "16-1"
+      ],
+      "physics_hz": 240,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "requires": "existing_drawer_slide_and_scene_frame_calibration",
+      "full_physical_trajectory_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "paper_cup_transfer": {
+      "name": "空杯投入普通垃圾桶",
+      "maximum_score": 8,
+      "component_phases": [
+        "13-7",
+        "18-4"
+      ],
+      "physics_hz": 240,
+      "parameters": {
+        "target_path": "required_exact_scene_instance"
+      },
+      "multiple_distinct_targets": true,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "full_physical_trajectory_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "wallet_transfer": {
+      "name": "钱包归位（固定开口包或收纳篮）",
+      "maximum_score": 7,
+      "component_phases": [
+        "7-2",
+        "basket_place"
+      ],
+      "drawer_source_guard": "9-2_native_target_above_current_drawer_rim",
+      "physics_hz": 240,
+      "parameters": {
+        "destination": [
+          "fixed_cpu_bag",
+          "storage_basket"
+        ]
+      },
+      "default_destination": "fixed_cpu_bag",
+      "physical_failures": "recoverable",
+      "full_physical_trajectory_verified": false,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "sector_role": "workspace_rate_only",
+      "selection_awards_points": false,
+      "source_location_constraint": null,
+      "destination": "selected_fixed_cpu_bag_or_storage_basket",
+      "basket_geometry_rule": "legacy_14_4_origin_zone_transformed_to_current_basket_and_actual_mesh_support_not_riser",
+      "whole_object_containment_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "glasses_transfer": {
+      "name": "墨镜盒归位（固定开口包或收纳篮）",
+      "maximum_score": 7,
+      "component_phases": [
+        "7-1",
+        "basket_place"
+      ],
+      "drawer_source_guard": "9-1_native_target_above_current_drawer_rim",
+      "physics_hz": 240,
+      "parameters": {
+        "destination": [
+          "fixed_cpu_bag",
+          "storage_basket"
+        ]
+      },
+      "default_destination": "fixed_cpu_bag",
+      "physical_failures": "recoverable",
+      "full_physical_trajectory_verified": false,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "sector_role": "workspace_rate_only",
+      "selection_awards_points": false,
+      "destination": "selected_fixed_cpu_bag_or_storage_basket",
+      "basket_geometry_rule": "legacy_14_4_origin_zone_transformed_to_current_basket_and_actual_mesh_support_not_riser",
+      "whole_object_containment_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "remote_transfer": {
+      "name": "小茶几拿遥控器并放到电视柜",
+      "maximum_score": 7,
+      "component_phases": [
+        "11-2",
+        "10-3"
+      ],
+      "physics_hz": 240,
+      "parameters": {},
+      "physical_failures": "recoverable",
+      "full_physical_trajectory_verified": false,
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "sector_role": "workspace_rate_only",
+      "selection_awards_points": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "coffee": {
+      "name": "制作并取走咖啡",
+      "maximum_score": 21,
+      "component_phases": [
+        "1-1",
+        "1-2",
+        "1-3",
+        "1-4"
+      ],
+      "physics_hz": 240,
+      "when_coffee_meal_registered": {
+        "component_phases": [
+          "1-1",
+          "1-2",
+          "1-3"
+        ],
+        "maximum_score": 16,
+        "extraction_score_owner": "coffee_to_meal_tray",
+        "scene_reset_at_handoff": false
+      },
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "fryer": {
+      "name": "放入蛋糕、取出炸篮、取走蛋糕",
+      "maximum_score": 12,
+      "component_phases": [
+        "2.1 or 2.2",
+        "2.3",
+        "2.5"
+      ],
+      "physics_hz": 240,
+      "when_bread_meal_registered": {
+        "component_phases": [
+          "2.1 or 2.2",
+          "2.3"
+        ],
+        "maximum_score": 8,
+        "extraction_score_owner": "bread_to_meal_tray",
+        "scene_reset_at_handoff": false
+      },
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "salad_to_meal_tray": {
+      "name": "沙拉盒摆盘",
+      "parameters": {},
+      "operation_maximum": 8,
+      "final_state_points": 3,
+      "maximum_score": 11,
+      "initialization_owner": "unified_scene",
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "physics_rate_owner": "single_frontal_workspace",
+      "binding_status": "runtime_and_scene_connected_native_validation_pending",
+      "full_physical_trajectory_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "drink_to_meal_tray": {
+      "name": "饮料摆盘",
+      "parameters": {
+        "product": [
+          "cayman_jacked",
+          "gatorade_m",
+          "gatorade_t",
+          "starbucks",
+          "good2grow",
+          "grapefruit_can",
+          "coke_c3",
+          "sprite_c1"
+        ]
+      },
+      "operation_maximum": 4,
+      "final_state_points": 3,
+      "maximum_score": 7,
+      "initialization_owner": "unified_scene",
+      "selection_mode": "contact_starts_process_then_live_destination",
+      "physics_rate_owner": "single_frontal_workspace",
+      "binding_status": "runtime_and_scene_connected_native_validation_pending",
+      "full_physical_trajectory_verified": false,
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ]
+    },
+    "wipe_table": {
+      "name": "擦拭茶几污渍",
+      "instruction": "拿起茶几上的刷子，把污渍擦干净，然后把刷子放回原处。",
+      "parameters": {},
+      "maximum_score": 6,
+      "grasp_points": 1,
+      "wipe_points_maximum": 4,
+      "return_points": 1,
+      "wiping_reward": "4 * clamp((initial_coverage - coverage) / (initial_coverage - 0.05), 0, 1)",
+      "clean_remaining_coverage_maximum": 0.05,
+      "stain_progress": "real tool-table contact; face <= 5mm; 3 passes; >=4 uncovered control steps to rearm",
+      "initialization_owner": "unified_scene",
+      "selection_mode": "contact_starts_persistent_process",
+      "physics_rate_owner": "single_frontal_workspace",
+      "supported_workspace_physics_hz": [
+        60,
+        240
+      ],
+      "timeout_owner": "room",
+      "binding_status": "runtime_connected_native_validation_pending",
+      "full_physical_trajectory_verified": false,
+      "replaces_exposed_family": "cloth_clear",
+      "score_schema": "arena.wipe_table.score.v2"
+    }
+  },
+  "legacy_API_ids_are_selectable_tasks": false,
+  "initialization_owner": "unified_scene",
+  "selection": "real_contact_starts_persistent_process_and_current_final_monitoring",
+  "final_state_policy": "required_process_milestones_then_current_destination_only",
+  "final_state_recheck_hz": 20,
+  "final_state_reversible": true,
+  "preparation_tasks_have_final_state_points": false,
+  "physics_rate_owner": "single_frontal_workspace",
+  "sector_role": "workspace_rate_only",
+  "fixed_rate_reader_policy": "registered_ports_accept_actual_workspace_60_or_240_hz_unknown_readers_fail_closed",
+  "control_hz": 20,
+  "idle_physics_hz": 60,
+  "timeout": {
+    "owner": "room",
+    "kind": "no_net_score_increase",
+    "seconds": 120,
+    "clock": "simulation_time",
+    "pause_when_away": false,
+    "reset_on_task_switch": false,
+    "old_stage_budgets_enforced": false,
+    "old_API_time_limits_enforced": false
+  },
+  "physical_failures_and_deductions": "unchanged_component_rules",
+  "unfinished_hold_on_task_switch": "clear_not_accumulate",
+  "legacy_sources_modified": false,
+  "nonmotion_verification": {
+    "status": "tested_fixture_ready_for_motion",
+    "evidence": "/home/lingjun/robot_agent_arena/openend/tasks/meal_tray/nonmotion_closeout_v1/status.json",
+    "current_rules_tests": 171,
+    "static_contract_tests": 36,
+    "runtime_task_types": 21,
+    "web_task_types": 20,
+    "legacy_compatibility_only": [
+      "paper_cup_transfer"
+    ],
+    "all_50_layouts_native_verified": false,
+    "full_physical_trajectory_verified": false
+  }
+}

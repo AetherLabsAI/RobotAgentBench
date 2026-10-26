@@ -1,0 +1,17 @@
+{
+  "schema": "openend.short_task.request.draft.v1",
+  "task_name": "stock_wooden_tray",
+  "seed": 47,
+  "layout_id": 4,
+  "rule_version": "openend.short_task.stock_wooden_tray.v1",
+  "targets": [
+    {
+      "category": "sprite_c1",
+      "quantity": 2
+    },
+    {
+      "category": "oreo_gf",
+      "quantity": 1
+    }
+  ]
+}

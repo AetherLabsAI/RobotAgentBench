@@ -1,0 +1,10 @@
+{
+  "layout_id": 1,
+  "seed": 7,
+  "tasks": [
+    {"key": "coffee.place_cup"},
+    {"key": "coffee.press_button"},
+    {"key": "microwave.take_plate", "payload_variant": "beef_box"}
+  ],
+  "initial_task_by_station": {"coffee": "coffee.place_cup", "microwave": "microwave.take_plate"}
+}

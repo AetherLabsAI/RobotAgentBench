@@ -1,0 +1,59 @@
+# Local credentials. These rules complement, but do not replace, release scanning.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials*.json
+service_account*.json
+service-account*.json
+secrets*.json
+private/
+.private/
+
+# Local environments and build caches.
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Research history and runtime-generated outputs are not source releases.
+outputs/
+runs/
+artifacts/
+logs/
+tmp/
+*.log
+
+# Large data, recordings and model weights require separate review/distribution.
+data/
+datasets/
+downloads/
+weights/
+checkpoints/
+*.mp4
+# Reviewed project overview video supplied for the README; not rollout data.
+!docs/media/overview.mp4
+*.mov
+*.avi
+*.mkv
+*.pt
+*.pth
+*.ckpt
+*.safetensors

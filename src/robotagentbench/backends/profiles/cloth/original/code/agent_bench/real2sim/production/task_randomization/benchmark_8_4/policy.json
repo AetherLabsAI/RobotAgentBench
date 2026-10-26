@@ -1,0 +1,9 @@
+{
+  "schema": "real2sim.task8_clear_physx_policy.v1",
+  "status": "physics_candidate_pending",
+  "asset_pool": [
+    "/World/Assets/Book",
+    "/World/Assets/Note"
+  ],
+  "robot_initial_state_sampler": "real2sim/production/task_randomization/benchmark_8_10/inject_robot_initial_state.py"
+}

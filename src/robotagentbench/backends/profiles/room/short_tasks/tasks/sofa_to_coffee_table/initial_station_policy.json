@@ -1,0 +1,29 @@
+{
+  "schema": "short_tasks.sofa_to_coffee_table.initial_station.v1",
+  "assets": [
+    "book_red",
+    "remote_tv",
+    "wallet",
+    "glasses_case"
+  ],
+  "sampling": "one_shared_uniform_rectangle_independent_of_asset",
+  "front_distance_m": [
+    0.366,
+    0.698
+  ],
+  "right_offset_m": [
+    -0.08,
+    0.461
+  ],
+  "yaw_deviation_deg": [
+    -5,
+    5
+  ],
+  "canonical_seat_front_x_m": -0.3503563938,
+  "canonical_sofa_centerline_y_m": -0.871,
+  "frame": "canonical sofa faces inward +X; right while facing sofa is -Y; row-vector rigid transform to layout",
+  "measurement": "robot base origin, not chassis clearance",
+  "approval": "User approved a single merged rectangle for all four objects; not per-object ranges or mixture of groups",
+  "evidence": "station_position_measurements_20261011.json",
+  "native_physics_validated": false
+}

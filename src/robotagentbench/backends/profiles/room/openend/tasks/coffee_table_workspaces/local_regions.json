@@ -1,0 +1,100 @@
+{
+  "schema": "openend.table_local_regions.v1",
+  "support_path": "/World/Assets/CoffeeTable",
+  "regions": [
+    {
+      "id": "table_wooden_tray",
+      "polygon_local_m": [
+        [
+          0.5605387540343882,
+          0.17279709928184328,
+          0.4509999999999999
+        ],
+        [
+          0.5605387540343882,
+          -0.19755728710559595,
+          0.4509999999999999
+        ],
+        [
+          0.2983544998350225,
+          -0.19755728710559595,
+          0.4509999999999999
+        ],
+        [
+          0.2983544998350224,
+          0.17279709928184328,
+          0.4509999999999999
+        ]
+      ],
+      "anchor_asset_id": "japanese_tray",
+      "anchor_center_local_m": [
+        0.42944662693470537,
+        -0.012380093911876333,
+        0.4509999999999999
+      ]
+    },
+    {
+      "id": "table_cloth",
+      "polygon_local_m": [
+        [
+          -0.5326288572044732,
+          0.3401030107133809,
+          0.4509999999999999
+        ],
+        [
+          -0.5326288572044731,
+          -0.003948008399478953,
+          0.4509999999999999
+        ],
+        [
+          -0.031128819751890913,
+          -0.003948008399478731,
+          0.4509999999999999
+        ],
+        [
+          -0.031128819751890968,
+          0.3401030107133809,
+          0.4509999999999999
+        ]
+      ],
+      "anchor_asset_id": "tablecloth_dirty",
+      "anchor_center_local_m": [
+        -0.28187883847818196,
+        0.16807750115695103,
+        0.4509999999999999
+      ]
+    },
+    {
+      "id": "table_objects",
+      "polygon_local_m": [
+        [
+          0.2983544998350225,
+          -0.003948008399478731,
+          0.4509999999999999
+        ],
+        [
+          0.2983544998350226,
+          -0.3856050215241331,
+          0.4509999999999999
+        ],
+        [
+          -0.5899613534000138,
+          -0.38560502152413334,
+          0.4509999999999999
+        ],
+        [
+          -0.5899613534000139,
+          -0.003948008399478953,
+          0.4509999999999999
+        ]
+      ]
+    }
+  ],
+  "provenance": {
+    "plan": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/room_preview_plan_seed42.json",
+    "plan_sha256": "341a521c272751c6e5763439eda7c316b1f9d7fcb1180f2034a6a7fe6e081e48",
+    "reference_scene": "/mnt/agent-bench-data/lingjun/releases/living50-candidate-20260919/layouts/ID_01_LIVING_STRAIGHT.usdc",
+    "scene_sha256": "6fdd127abad4a44ba67bc79aa2b69698d2513251ec859237ddcd5c5a05c2fa92"
+  },
+  "status": "approved_polygon_mapping_not_robot_stance_or_reachability_validation"
+}

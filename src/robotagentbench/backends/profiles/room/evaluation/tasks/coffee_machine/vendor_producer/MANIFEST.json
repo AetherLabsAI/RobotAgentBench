@@ -1,0 +1,84 @@
+{
+ "note": "Byte-identical copies of the data producer's coffee machine device logic (bean counting, button state machine, liquid emitter, machine anchors, cup inner profile, cup variants, button layout proposal). They define how the task objects behave; they contain no robot, gripper or solver parameters. Copied 2026-09-29 from 202. 2026-09-30: added the data producer's synced sources (producer_sources_20260930): liquid prefill, 1-2 chooser, 1-1 / 1-4 samplers, all byte-identical to the synced files and to their manifest hashes.",
+ "files": {
+  "coffee_logic.py": {
+   "source": "/home/lingjun/coffee-workspace/coffee_task_workbench_20260922/coffee_logic.py",
+   "sha256": "d047e50a6743962adac764945b2651186abad81de7807d53450bf43a28f49bb2",
+   "identical_to_source": true
+  },
+  "machine_contract.py": {
+   "source": "/home/lingjun/coffee-workspace/coffee_task_workbench_20260922/machine_contract.py",
+   "sha256": "7aa591c27cbb42dd990fa7dfe3c6a94e1f834348512cadf068f37d9867be181a",
+   "identical_to_source": true
+  },
+  "cup_metrics.py": {
+   "source": "/home/lingjun/coffee-workspace/coffee_task_workbench_20260922/cup_metrics.py",
+   "sha256": "f0dfeedafca6cb613625e0c497cd586942eaa0e39c50ef629e2a91f7411b6716",
+   "identical_to_source": true
+  },
+  "cup_variants.json": {
+   "source": "/home/lingjun/coffee-workspace/coffee_task_workbench_20260922/cup_place/cup_variants.json",
+   "sha256": "64fc9ffffe073039eb5ff95952e0a1cc44604b57eea30fa2f9f607d13b00ea02",
+   "identical_to_source": true
+  },
+  "coffee_fluid_visible.py": {
+   "source": "/home/lingjun/coffee-workspace/render-workers/gpu2/coffee_task_workbench_20260922/button_task/coffee_fluid_visible.py",
+   "sha256": "dbf9e9c507e814d814434c8f2b6343e3d0e8ad5a1358bca225d33c9573cdf2d5",
+   "identical_to_source": true
+  },
+  "button_batch_common.py": {
+   "source": "/home/lingjun/coffee-workspace/render-workers/gpu2/coffee_task_workbench_20260922/button_task/batch_common.py",
+   "sha256": "81f1890164a5e18a84314807d0b5aee057213ae7326460aaf1ea938d010344d6",
+   "identical_to_source": true
+  },
+  "filled_coffee.py": {
+   "source": "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/coffee_v1/producer_sources_20260930/1-4/liquid/filled_coffee.py",
+   "producer_manifest": "resources/shared_assets/coffee_v1/producer_sources_20260930/manifest.json",
+   "sha256": "47a0d5954550bbf8abd58dc3236ab2630ab0c19f28c6bcdc6f1d9203fffc4668",
+   "identical_to_source": true,
+   "role": "1-4 liquid prefill (fill/inspect)"
+  },
+  "coffee_fluid.py": {
+   "source": "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/coffee_v1/producer_sources_20260930/1-4/liquid/coffee_fluid.py",
+   "producer_manifest": "resources/shared_assets/coffee_v1/producer_sources_20260930/manifest.json",
+   "sha256": "67f6e5a25bd28eafe865a1e5beb494ae4324e0054992835c90c9a271dacd35f4",
+   "identical_to_source": true,
+   "role": "CoffeeFluid dependency of filled_coffee (202 copy; visual parameters differ from coffee_fluid_visible.py, physics identical)"
+  },
+  "success_coverage.py": {
+   "source": "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/coffee_v1/producer_sources_20260930/1-2/bag_task/success_coverage.py",
+   "producer_manifest": "resources/shared_assets/coffee_v1/producer_sources_20260930/manifest.json",
+   "sha256": "4d5ebf85c6f7c926186fb9ee2fa03d957f40ac48e6b600a226de3bb009455ff9",
+   "identical_to_source": true,
+   "role": "1-2 machine pose / seed chooser (choose)"
+  },
+  "build_cycle_initial_reference.py": {
+   "source": "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/coffee_v1/producer_sources_20260930/1-2/bag_task/build_cycle_initial.py",
+   "producer_manifest": "resources/shared_assets/coffee_v1/producer_sources_20260930/manifest.json",
+   "sha256": "38285dc8f16ea1db5f2a4ebc998dad66807e0b7e8134a07a8643f53fb02323c4",
+   "identical_to_source": true,
+   "role": "1-2 initial author; only its 7-draw block (lines 31-37) is re-expressed in randomization.py"
+  },
+  "generate_until_50_reference.py": {
+   "source": "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/coffee_v1/producer_sources_20260930/1-2/bag_task/generate_until_50.py",
+   "producer_manifest": "resources/shared_assets/coffee_v1/producer_sources_20260930/manifest.json",
+   "sha256": "cad910a881530a77112761fd17f79110d1f206af41a087a58d61d27b7872d961",
+   "identical_to_source": true,
+   "role": "1-2 production scheduler; documents choose(root, state, 0.1, 20.0)"
+  },
+  "cup_randomize.py": {
+   "source": "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/coffee_v1/producer_sources_20260930/1-1/left_study_reference/randomize.py",
+   "producer_manifest": "resources/shared_assets/coffee_v1/producer_sources_20260930/manifest.json",
+   "sha256": "7891d6fd83089a41f43da3a3d51630543c4b4a800f9140148a500c8d7d3ce838",
+   "identical_to_source": true,
+   "role": "1-1 sampler (large_xy, large_yaw, scene_proposals) loaded by AST extraction"
+  },
+  "randomize_retrieval_pose_reference.py": {
+   "source": "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/coffee_v1/producer_sources_20260930/1-4/local_development/randomize_retrieval_pose.py",
+   "producer_manifest": "resources/shared_assets/coffee_v1/producer_sources_20260930/manifest.json",
+   "sha256": "0778dcf1370c2eb3003532c4ead62bc49353ee2dd5f4b36fce039607fd3cdb3e",
+   "identical_to_source": true,
+   "role": "1-4 sampler; its 3-draw rule (line 13) is re-expressed in randomization.py"
+  }
+ }
+}

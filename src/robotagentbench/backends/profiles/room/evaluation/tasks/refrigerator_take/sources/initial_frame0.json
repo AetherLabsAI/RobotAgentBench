@@ -1,0 +1,171 @@
+{
+  "source_file": "/mnt/agent-bench-data/lingjun/runs/recovered-l1-kitchen-20260909/trajs/task95_6a5473c4.npz",
+  "source_sha256": "df723aa13db30d28add7f7875b4cdab63f76c63948dacea7103fdd9166b63c3d",
+  "source_frame": 0,
+  "source_episode_uuid": null,
+  "source_episode_uuid_status": "unresolved; short filename is not a full UUID",
+  "raw_arrays": {
+    "arm.npy": {
+      "shape": [
+        1457,
+        14
+      ],
+      "dtype": "<f4",
+      "fortran_order": false,
+      "first_flat": [
+        -1.071534276008606,
+        0.6120080351829529,
+        0.2834835648536682,
+        -1.2855781316757202,
+        0.7316716909408569,
+        1.4826910495758057,
+        -0.1892598420381546,
+        1.074326753616333,
+        -0.6110466122627258,
+        -0.2795490026473999,
+        1.2838836908340454,
+        -0.7304570078849792,
+        -1.4953951835632324,
+        0.18760496377944946
+      ]
+    },
+    "lgrip.npy": {
+      "shape": [
+        1457
+      ],
+      "dtype": "<f4",
+      "fortran_order": false,
+      "first_flat": [
+        0
+      ]
+    },
+    "rgrip.npy": {
+      "shape": [
+        1457
+      ],
+      "dtype": "<f4",
+      "fortran_order": false,
+      "first_flat": [
+        0
+      ]
+    },
+    "waist.npy": {
+      "shape": [
+        1457,
+        2
+      ],
+      "dtype": "<f4",
+      "fortran_order": false,
+      "first_flat": [
+        0,
+        0.3195756673812866
+      ]
+    },
+    "head.npy": {
+      "shape": [
+        1457,
+        2
+      ],
+      "dtype": "<f4",
+      "fortran_order": false,
+      "first_flat": [
+        0,
+        0.4363349676132202
+      ]
+    },
+    "base_xyyaw.npy": {
+      "shape": [
+        1457,
+        3
+      ],
+      "dtype": "<f4",
+      "fortran_order": false,
+      "first_flat": [
+        0.003000000026077032,
+        0,
+        3.1415927410125732
+      ]
+    },
+    "fps.npy": {
+      "shape": [],
+      "dtype": "<f4",
+      "fortran_order": false,
+      "first_flat": [
+        20
+      ]
+    }
+  },
+  "positions": {
+    "idx21_arm_l_joint1": -1.071534276008606,
+    "idx61_arm_r_joint1": 1.074326753616333,
+    "idx22_arm_l_joint2": 0.6120080351829529,
+    "idx62_arm_r_joint2": -0.6110466122627258,
+    "idx23_arm_l_joint3": 0.2834835648536682,
+    "idx63_arm_r_joint3": -0.2795490026473999,
+    "idx24_arm_l_joint4": -1.2855781316757202,
+    "idx64_arm_r_joint4": 1.2838836908340454,
+    "idx25_arm_l_joint5": 0.7316716909408569,
+    "idx65_arm_r_joint5": -0.7304570078849792,
+    "idx26_arm_l_joint6": 1.4826910495758057,
+    "idx66_arm_r_joint6": -1.4953951835632324,
+    "idx27_arm_l_joint7": -0.1892598420381546,
+    "idx67_arm_r_joint7": 0.18760496377944946,
+    "idx01_body_joint1": 0.3195756673812866,
+    "idx02_body_joint2": 0,
+    "idx11_head_joint1": 0,
+    "idx12_head_joint2": 0.5235987755982988,
+    "idx41_gripper_l_outer_joint1": 0.785,
+    "idx81_gripper_r_outer_joint1": 0.785
+  },
+  "hold_targets": {
+    "idx21_arm_l_joint1": -1.071534276008606,
+    "idx61_arm_r_joint1": 1.074326753616333,
+    "idx22_arm_l_joint2": 0.6120080351829529,
+    "idx62_arm_r_joint2": -0.6110466122627258,
+    "idx23_arm_l_joint3": 0.2834835648536682,
+    "idx63_arm_r_joint3": -0.2795490026473999,
+    "idx24_arm_l_joint4": -1.2855781316757202,
+    "idx64_arm_r_joint4": 1.2838836908340454,
+    "idx25_arm_l_joint5": 0.7316716909408569,
+    "idx65_arm_r_joint5": -0.7304570078849792,
+    "idx26_arm_l_joint6": 1.4826910495758057,
+    "idx66_arm_r_joint6": -1.4953951835632324,
+    "idx27_arm_l_joint7": -0.1892598420381546,
+    "idx67_arm_r_joint7": 0.18760496377944946,
+    "idx01_body_joint1": 0.3195756673812866,
+    "idx02_body_joint2": 0,
+    "idx11_head_joint1": 0,
+    "idx12_head_joint2": 0.5235987755982988,
+    "idx41_gripper_l_outer_joint1": 0.785,
+    "idx81_gripper_r_outer_joint1": 0.785
+  },
+  "units": "native rad, except idx01_body_joint1 in meters",
+  "mapping_notes": [
+    "waist source [pitch, lift] -> idx01 lift, idx02 pitch",
+    "HEAD_FIX source on=1 yaw=0 pitch=30 degrees",
+    "PHYS gripper mapping GRIP_OPEN_RAD(0.785)*(1-signal)",
+    "R_TUCK interpolation is zero at frame 0",
+    "path95_raw2 left arm first frame is identical; no future waypoints are changed"
+  ],
+  "target_local_position_m": [
+    0.289,
+    0.815,
+    0.217
+  ],
+  "target_local_quaternion_raw_wxyz": [
+    -0.606235718195961,
+    0.45917882432366275,
+    0.3886831294726162,
+    0.5198494841197208
+  ],
+  "target_local_quaternion_wxyz": [
+    -0.606331222885152,
+    0.459251162078737,
+    0.3887443615319619,
+    0.519931379761823
+  ],
+  "target_frame": "RefrigeratorRecovered/right_door local (Y up)",
+  "orientation_source": "ep_run.py LEAN_LQ_RAW.low -> existing LEAN_TARGET=14.0, layout_gen.py seed1 yaw10.5 pitch6.1*0.30 roll6.9*0.25; normalized for USD rotation",
+  "physics_parameters_changed": false,
+  "physical_initial_state_accepted": false
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "openend.scene_requirements.request.v2",
+  "seed": 43,
+  "layout_id": 26,
+  "tasks": [
+    {"id": "fridge", "type": "fridge_to_microwave", "payload_variant": "leftover_box"},
+    {"id": "wallet", "type": "wallet_transfer", "source": "coffee_table.drawer"}
+  ],
+  "extras": []
+}

@@ -1,0 +1,9 @@
+{
+  "tasks": [
+    {"instance_id": "coffee", "type": "coffee", "parameters": {}},
+    {"instance_id": "fryer", "type": "fryer", "parameters": {"bread_variant": "no_sugar"}},
+    {"instance_id": "snack", "type": "snack_drink_to_tray", "parameters": {"product": "coke_c3"}}
+  ],
+  "no_progress_timeout_s": 120,
+  "selection_order": "front_then_distance"
+}

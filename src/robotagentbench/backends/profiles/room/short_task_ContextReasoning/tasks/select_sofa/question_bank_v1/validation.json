@@ -1,0 +1,26 @@
+{
+  "status": "structural_checks_passed",
+  "question_count": 200,
+  "unique_scenarios": 200,
+  "unique_ids": 200,
+  "per_target": {
+    "remote_tv": 25,
+    "wallet": 25,
+    "glasses_case": 25,
+    "power_bank": 25,
+    "cap": 25,
+    "umbrella": 25,
+    "water_bottle": 25,
+    "bill": 25
+  },
+  "per_family": {
+    "functional": 64,
+    "distractor_context": 72,
+    "request_revision": 64
+  },
+  "public_answer_fields_present": false,
+  "semantic_ambiguity_review": "draft_author_review_only_not_independently_validated",
+  "runtime_integrated": false,
+  "native_physics_tested": false,
+  "model_evaluated": false
+}

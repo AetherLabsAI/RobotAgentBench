@@ -1,0 +1,40 @@
+{
+  "version": "protocol_v14_real_rim_support",
+  "purpose": "User-fixed diagnostic start for removal and subsequent placement / teleoperation preparation",
+  "joint_targets": {
+    "idx21_arm_l_joint1": -1.2216323447610236,
+    "idx22_arm_l_joint2": 0.6097308712288059,
+    "idx23_arm_l_joint3": 0.052165432528339356,
+    "idx24_arm_l_joint4": -1.6259125422440033,
+    "idx25_arm_l_joint5": 0.3112718528659512,
+    "idx26_arm_l_joint6": 1.8856979813185528,
+    "idx27_arm_l_joint7": -0.18952543833542318,
+    "idx61_arm_r_joint1": 1.239712874600851,
+    "idx62_arm_r_joint2": -0.622418657938455,
+    "idx63_arm_r_joint3": -0.057592962152473254,
+    "idx64_arm_r_joint4": 1.6442985300394417,
+    "idx65_arm_r_joint5": -0.32315815431859357,
+    "idx66_arm_r_joint6": -1.8711210580159985,
+    "idx67_arm_r_joint7": 0.19121638316801068,
+    "idx01_body_joint1": 0.02,
+    "idx02_body_joint2": 0.65,
+    "idx11_head_joint1": 0.0,
+    "idx12_head_joint2": 0.43634
+  },
+  "arm_reference": "FK-adjusted from FAMILY4_STANDARD_ARM_RAD to chest mouth targets z=0.88 m; native limits unchanged",
+  "grip_commands": {
+    "L": 0.0,
+    "R": 0.0
+  },
+  "settle_seconds": 3.0,
+  "benchmark_eligible": false,
+  "randomization": {
+    "enabled": false,
+    "reason": "explicit fixed initial-state diagnostic requested by user; production remains fully randomized"
+  },
+  "episode": "Both cloths present from start; remove old cloth into original basket, then pick clean cloth and lay it. No reset between tasks.",
+  "robot_asset": "/home/aether/workspace/genie_sim_demo/genie_sim/source/geniesim/assets/robot/G1_omnipicker/robot.usda",
+  "review_status": "current user protocol; first physical left brush experiment",
+  "clean_cloth_edge": "y_min (v2 restored)",
+  "clean_cloth_fold": "v=L/2 long-edge midpoint; crease horizontal at basket floor"
+}

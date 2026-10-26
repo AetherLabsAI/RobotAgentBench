@@ -1,0 +1,93 @@
+{
+  "profiles": {
+    "atomic_coffee": {
+      "entry_module": "short_task_robustness.tasks.coffee_machine_push_interference.public_integration_v1.adapter",
+      "manifest_owner": "RobotAgentBench-special-variants-v19",
+      "manifest_schema": "robotagentbench.special_variants.assembly.v19",
+      "manifest_sha256": "3d0c7ed98c14ff149913df139b4f9655a6e3dfbaa018c1ca151ddbc303591595",
+      "release_identity": "unchanged_selected_atomic_source",
+      "required_startup_resources": {
+        "fridge_controller": {
+          "kind": "source",
+          "sha256": "6f07cdd0fcc3741756f56be4d6fe5cb225db8a72cb376ccd0951a8a971e22aee"
+        },
+        "fridge_environment": {
+          "kind": "asset",
+          "sha256": "778435c4e1162be9260510527309d0ce2831d0b7ac848eeec76a8e3711a0c257"
+        },
+        "fridge_hull": {
+          "kind": "asset",
+          "sha256": "5b45c85b058f9f1f4b8b13552c3e92e4ad7b31e9ec9de3bb8e9f87d7bc5b527e"
+        },
+        "fridge_manifest": {
+          "kind": "asset",
+          "sha256": "38b553fa7a25082a5b011892208032fbd9fa16b41e8250cd7cf4e65de0db9561"
+        },
+        "fridge_tuning": {
+          "kind": "asset",
+          "sha256": "c5112d3a84ffdae3ed0855f9e0da01c3670a1072bdd1186feb10307962f1a48d"
+        },
+        "salad_model": {
+          "kind": "asset",
+          "sha256": "54ddec2b13865d4b11e7cbd073385ca06c0ffd919b9d7bdb5d713a9460cc0256"
+        },
+        "salad_texture_bottom": {
+          "kind": "asset",
+          "sha256": "984f42b418d6dfc66b1b414c0704062cf4d832f4e0caa878299511bf2463d13a"
+        },
+        "salad_texture_end_a": {
+          "kind": "asset",
+          "sha256": "2942c641b8280f3a425cc693458e17677e575da9be4241afcb769916a4d7a9f9"
+        },
+        "salad_texture_end_b": {
+          "kind": "asset",
+          "sha256": "b7a85459651c42f7e93eb60e11eb5cdca3565a3458e73e62463b2ef267669fb3"
+        },
+        "salad_texture_front": {
+          "kind": "asset",
+          "sha256": "0715081da39b0f7cc9bd16c294d9cfa0e50edae4526e2acb28369c0ae5f206b8"
+        },
+        "salad_texture_side_b": {
+          "kind": "asset",
+          "sha256": "b85a6cda30ebf679a72742f2cb5511bfe2110973fee056f8546916912a6850f3"
+        },
+        "salad_texture_top": {
+          "kind": "asset",
+          "sha256": "45bb01bca73ddbd86f26dd939739d2461fcca08346a85004db9881f5374f4f30"
+        },
+        "shelf_support_collisions": {
+          "kind": "asset",
+          "sha256": "c7f926c1eaf99a73cd85072089c65b058ff4a3c1ed1ec98aa93f25049e627c1f"
+        },
+        "shelf_support_alignment": {
+          "kind": "asset",
+          "sha256": "c221fc6fad6dabd133fc88504bee3742b87cfb202f2787c805ef7c1f963e4207"
+        }
+      },
+      "source_file_count": 567,
+      "tasks": [
+        "coffee_bag_interference",
+        "coffee_bag_then_machine_interference",
+        "coffee_button_lighting_interference",
+        "coffee_machine_push_interference"
+      ]
+    },
+    "failure_recovery": {
+      "entry_module": "short_task_robustness.tasks.grasp_failure_recovery.public_adapter",
+      "manifest_owner": "RobotAgentBench-recovery-current-v20",
+      "manifest_schema": "robotagentbench.recovery_current_release_audit.v20",
+      "manifest_sha256": "7e35dfbaecb80af748aee82eec9baa5c210adf971f68c5926a2e9c571c0d4441",
+      "release_identity": "derived_current_release_not_original_frozen_reproduction",
+      "required_startup_resources": {},
+      "source_file_count": 644,
+      "tasks": [
+        "failure_recovery_coffee_bag",
+        "failure_recovery_shelf_drink",
+        "failure_recovery_sofa",
+        "failure_recovery_table_waste_empty_grasp",
+        "failure_recovery_table_waste_tipped_cup"
+      ]
+    }
+  },
+  "schema": "robotagentbench.specialized_identity_anchors.v1"
+}

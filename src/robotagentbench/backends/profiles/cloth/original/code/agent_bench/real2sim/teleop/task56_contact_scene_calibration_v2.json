@@ -1,0 +1,168 @@
+{
+  "schema": "real2sim.task56_contact_scene_calibration.v2",
+  "task_label": "small Task 56 (pick Remote from long CoffeeTable)",
+  "current_runtime_normalization": {
+    "schema": "real2sim.current_coffee_table_normalization.v1",
+    "support_prim": "/World/Assets/CoffeeTable",
+    "required_top_m": 0.45,
+    "source_episode_depth_planes_are_evidence_only": true,
+    "preserve_support_height_above_table": true
+  },
+  "episodes": {
+    "003d1033-5f4f-4030-9484-0f2aa53495e6": {
+      "source_episode_uuid": "003d1033-5f4f-4030-9484-0f2aa53495e6",
+      "active_hand": "r",
+      "target_initial_pose": {
+        "yaw_offset_deg": -0.8,
+        "yaw_reference_deg": -89.8
+      },
+      "source_frame": {
+        "camera": "head_color",
+        "sample_index": 0
+      },
+      "depth_plane": {
+        "method": "episode depth-only dominant horizontal plane; common head transform offset is anchored to the previously exact 003d episode CAMMAT solution",
+        "rgb_depth_pixel_correspondence_used": false,
+        "depth_frame_index": 0,
+        "depth_timestamp_ns": 1784240500843410973,
+        "common_transform_table_plane_median_m": 0.497128534,
+        "episode_calibrated_top_m": 0.461601128,
+        "table_plane_inliers": 34248,
+        "table_plane_mad_m": 0.001267196
+      },
+      "contact_context": [
+        {
+          "prim": "Note",
+          "asset": "note_green.usdz",
+          "label": "Green Sales Order notepad",
+          "relation": "supports_target",
+          "required": true,
+          "kinematic": true,
+          "real_size_m": [0.15, 0.22, 0.011],
+          "yaw_deg": -45.0,
+          "center_offset_from_target_xy_m": [-0.105, -0.043],
+          "bottom_m": 0.461601128,
+          "top_m": 0.472601128,
+          "robot_facing_overhang_m": 0.076
+        }
+      ],
+      "scene_surface": {
+        "prim": "/World/Assets/CoffeeTable",
+        "sim_authored_top_m": 0.422941977,
+        "episode_calibrated_top_m": 0.461601128,
+        "task_local_z_delta_m": 0.038659151
+      }
+    },
+    "07ec98c4-9e86-4abe-a301-43ec193068e6": {
+      "source_episode_uuid": "07ec98c4-9e86-4abe-a301-43ec193068e6",
+      "active_hand": "r",
+      "target_initial_pose": {
+        "yaw_offset_deg": -0.8,
+        "yaw_reference_deg": -89.8
+      },
+      "source_frame": {
+        "camera": "head_color",
+        "sample_index": 0
+      },
+      "depth_plane": {
+        "method": "episode depth-only dominant horizontal plane; common head transform offset is anchored to the previously exact 003d episode CAMMAT solution",
+        "rgb_depth_pixel_correspondence_used": false,
+        "depth_frame_index": 0,
+        "depth_timestamp_ns": 1784240617882156577,
+        "common_transform_table_plane_median_m": 0.497237906,
+        "episode_calibrated_top_m": 0.4617105,
+        "table_plane_inliers": 29958,
+        "table_plane_mad_m": 0.001360547
+      },
+      "contact_context": [
+        {
+          "prim": "Wallet",
+          "asset": "wallet.usda",
+          "label": "Herringbone zip wallet directly below the manipulated Remote",
+          "relation": "supports_target",
+          "required": true,
+          "kinematic": true,
+          "real_size_m": [0.165, 0.13, 0.04],
+          "yaw_deg": 97.0,
+          "center_offset_from_target_xy_m": [-0.13, 0.043],
+          "bottom_m": 0.4617105,
+          "top_m": 0.5017105,
+          "robot_facing_overhang_m": null
+        }
+      ],
+      "scene_surface": {
+        "prim": "/World/Assets/CoffeeTable",
+        "sim_authored_top_m": 0.422941977,
+        "episode_calibrated_top_m": 0.4617105,
+        "task_local_z_delta_m": 0.038768523
+      }
+    },
+    "0a5c5dba-3cf7-4f9f-9d18-8117670e37cd": {
+      "source_episode_uuid": "0a5c5dba-3cf7-4f9f-9d18-8117670e37cd",
+      "active_hand": "l",
+      "target_initial_pose": {
+        "yaw_offset_deg": -0.8,
+        "yaw_reference_deg": -89.8
+      },
+      "source_frame": {
+        "camera": "head_color",
+        "sample_index": 0
+      },
+      "depth_plane": {
+        "method": "episode depth-only dominant horizontal plane; common head transform offset is anchored to the previously exact 003d episode CAMMAT solution",
+        "rgb_depth_pixel_correspondence_used": false,
+        "depth_frame_index": 0,
+        "depth_timestamp_ns": 1784242001852385960,
+        "common_transform_table_plane_median_m": 0.496603398,
+        "episode_calibrated_top_m": 0.461075992,
+        "table_plane_inliers": 27040,
+        "table_plane_mad_m": 0.001114462
+      },
+      "contact_context": [
+        {
+          "prim": "Book",
+          "asset": "book_pink.usdz",
+          "label": "Pink I Totally Got This book directly below the manipulated Remote",
+          "relation": "supports_target",
+          "required": true,
+          "kinematic": true,
+          "real_size_m": [0.18, 0.25, 0.018],
+          "yaw_deg": -58.0,
+          "center_offset_from_target_xy_m": [0.105, -0.06],
+          "bottom_m": 0.461075992,
+          "top_m": 0.479075992,
+          "robot_facing_overhang_m": null
+        }
+      ],
+      "scene_surface": {
+        "prim": "/World/Assets/CoffeeTable",
+        "sim_authored_top_m": 0.422941977,
+        "episode_calibrated_top_m": 0.461075992,
+        "task_local_z_delta_m": 0.038134015
+      }
+    }
+  },
+  "target_contact_physics": {
+    "asset": "remote_tv.usdz",
+    "collision_approximation": "convexHull",
+    "visual_mesh_unchanged": true,
+    "scope_task_ids": ["56"],
+    "reason": "The Remote is a thin, nearly convex body. Its 256-resolution SDF produced changing contact normals and visible penetration/depenetration; a convex collision proxy preserves the rendered mesh and gives a stable pad contact manifold."
+  },
+  "pose_review": {
+    "identity_status": "reviewed_from_all_three_frame-0 head/left/right views",
+    "support_pose_status": "accepted_from_each_episode real-vs-sim frame-0 and contact/lift/final keyframes",
+    "publication_state": "legacy_acceptance_quarantined_current_table_rerender_pending_2026-07-27",
+    "acceptance_audit": "diagnostics/legacy_pre_current_coffee_table_contract_20260727/task56_contact_physics_audit_v2.json"
+  },
+  "policy": {
+    "rule": "Every object in direct support, clamping, occluding, or containment contact with the primary interaction object is required scene context.",
+    "contact_context_scope": "per_episode",
+    "missing_episode_policy": "fail_closed",
+    "forbid_cross_episode_pose_reuse": true,
+    "forbid_invisible_replacement_support": true,
+    "must_emit_contact_context_in_init_result": true,
+    "scope_task_ids": ["56"],
+    "must_not_authorize_camera_mount_edits": true
+  }
+}

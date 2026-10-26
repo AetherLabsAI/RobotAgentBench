@@ -1,0 +1,95 @@
+{
+  "upstream_commit": "ef47a69776d709047c35293c28cc0505d6c2b6f9",
+  "rule_version": "openend.short_task.fridge_to_heated_box.v3",
+  "files_sha256": {
+    "layout_task_activation_v1/task_scene_registration_v1/fridge_to_microwave_v1/composite.py": "5dcb33c0ab3a4d0d4b41821e3c924acab0fdecb009e835c387076a6e0a10eaa8",
+    "layout_task_activation_v1/task_scene_registration_v1/fridge_to_microwave_v1/room_port.py": "437c01b657a790aa5a38baddc14f66145f5cfb6962aa9ebfc83c8625262211a5",
+    "layout_task_activation_v1/task_scene_registration_v1/fridge_to_microwave_v1/native_source.py": "f3dbf9ac278bb34f6a6133a1a02f9112ed2532f0aaee8f79cf62187b46a34ea7",
+    "layout_task_activation_v1/task_scene_registration_v1/fridge_to_microwave_v1/scene.py": "f933b19fafe7b8c777d53b2826aa3469fa940f0e17a1a1eb60ce5a6bc3c6901e",
+    "openend/tasks/scene_requirements/runtime_ports.py": "06eeda388312d8972e9ce225a9698aabe8b71bb49f37c8befd266e0e357c1eba",
+    "openend/tasks/holding_follow_v1/fridge.py": "b70c94c2df50f87a48762663c55dbff326c539f07677207777fb7de9422df632",
+    "openend/tasks/holding_follow_v1/detection.py": "11df2be850fe9c815c4b185d69bddcab47b03ca5109661eff81b5356ff8a54c6",
+    "evaluation/tasks/microwave_put/standards.py": "5ad9ef5afcb024bd217cbc22938c071cdb5ad952d5c25a9671fe791de003c1f2",
+    "evaluation/tasks/microwave_put/scoring.py": "e884dce68cd8e097c3a1b6a518dd3aee8307df0666b6a340de81d17011e66e67",
+    "evaluation/tasks/microwave_put/process_rules.py": "77dedd8d1b93f108737c5c63abc1b18854dfeaf72ea69f23dc8dc602384f6476",
+    "evaluation/tasks/microwave_put/openended_fridge_to_microwave_v1/fridge_rules.py": "2a575e9e51de591f2d299e555943e7f41171747140ef5c2023bb1d54ddac77e7",
+    "openend/tasks/meal_tray/microwave_illumination.py": "1c3a7054b12643bf8be87eb94abcc3b2bbfd6e429399352cb8642413c1020c42",
+    "openend/tasks/meal_tray/fridge_handoff_v1/handoff.py": "ba868160b9a92faa37ff9514b92e63e6c05c7e4853e7013fa6efc039d1043003",
+    "openend/tasks/meal_tray/microwave_device.py": "3d85b2368d59934637d8c4aee232fd6dde57bbe2fd536ff7964f6b44b845ed86",
+    "openend/tasks/meal_tray/rotary_component/rotary_return_runtime.py": "241cefa56a6ac2d480c6491519d3a7f9b23ed8fd540b8345b198737071221948",
+    "openend/tasks/meal_tray/rotary_component/rotary_start_runtime.py": "c94e454a61fe3d3897c6a636d24402f8669111c491d51c2ed3e5b4ffc84b7a4a",
+    "openend/tasks/meal_tray/rotary_component/rotary_start_cycle.py": "b86b00df1c48bffa69a7e232f94126993d6088d210c2939aa9b6ac532a2f18b9",
+    "openend/tasks/meal_tray/microwave_initialization.py": "002a8deaa870fa6a5014ccdca4fe3ed52f0f8c880aaef2c421f813ee9d4d1670",
+    "openend/tasks/meal_tray/rotary_pack_v1.json": "d1cd85a2d426db6e45bd8af2bebe8ca0d41dfd57d99cc6efaa07295542022ff6",
+    "openend/tasks/meal_tray/prepare_microwave_mechanism.py": "d6c41e1f15a854b7ddf1679717b4ffc26cebb186f111953ab7868bdcf8338836",
+    "layout_task_activation_v1/task_scene_registration_v1/room_fridge_helper_v1.py": "6dc193c0a002b63d00b36407ddaa9e113c3cd8bf22c814ec3b03d4808ad75639",
+    "arena_api/l1_fridge.py": "3493e23fe9fbd242bc63e70651056ecd650dad88cf5ab3327cfe6aba4beb3d79",
+    "openend/tasks/meal_tray/fridge_helper_dependencies.py": "cdb26f1f2b80e7682cd54b983bbfbb311a033e9ae7b76dc0f27ce037c9647515",
+    "arena_api/l1_scene.py": "344fe517c078b7f2abee58ecb36688beefa13381d7b61680da3e0451a35f74ab",
+    "vendor/l1_scene/original_fridge/fridge_only.py": "6f07cdd0fcc3741756f56be4d6fe5cb225db8a72cb376ccd0951a8a971e22aee",
+    "vendor/l1_scene/original_fridge/environment.json": "778435c4e1162be9260510527309d0ce2831d0b7ac848eeec76a8e3711a0c257",
+    "vendor/l1_scene/original_fridge/fr_tune.json": "c5112d3a84ffdae3ed0855f9e0da01c3670a1072bdd1186feb10307962f1a48d",
+    "short_tasks/tasks/interaction_progress_v1/__init__.py": "e227495daccffb435cd7c8edaf8fee2fb5d3788b533f587f28b751d7c7a9535f",
+    "short_tasks/tasks/interaction_progress_v1/scoring.py": "f31090a61d27adbc1d90efefacfec0fb00046621fc1cea90ebe7e004ecc9b29d",
+    "short_tasks/tasks/interaction_progress_v1/policy.py": "d6adb74ab7db6760480155eb6aaefd7f6b5de85501599a063bda72621265e237",
+    "short_tasks/tasks/interaction_progress_v1/bindings.py": "6c023d2560d68a05e660ec8690effd9f7750d49a8f385ba66f79dba626992f54",
+    "short_tasks/tasks/interaction_progress_v1/geometry.py": "4f4c454755831fd21c7d095efc6abb37ed06089b697e4235710dd358c0f89f03",
+    "short_tasks/tasks/interaction_progress_v1/contact.py": "d57f3eb9b6ecd2ba4da8e6ab864ff7e8bc8525e5269fb9ceb74750eef254a13d",
+    "short_tasks/tasks/interaction_progress_v1/native.py": "d448cc25c03cface7a0bed118fbb7a8072bf9caf864bb87a79f2a631fc055ebf",
+    "short_tasks/runtime.py": "edc288e06230a592a5bb0fd232727d8e377e4b52d9cf75e9028596a886764a3c",
+    "short_tasks/registry.py": "62bee79678f22b9b77cde9ff62dbd26cc8177346d41f31630e225ce5b86d2763",
+    "short_tasks/common/episode.py": "36b9c47865130a3d9ba3be1c0aebf33bc763fdb74863d5b099d099699f2f3030",
+    "short_tasks/tasks/no_deductions_v1/__init__.py": "4d369002d0423d256d835b9ab6eb2b93bc2ca2d0f6b6f95d76129fdbb58b50a6",
+    "short_tasks/tasks/no_deductions_v1/policy.py": "e3cc393f3d4bb4d6b376dd6c4edac90fdc14e9252bd0f02ad0c7fef56bb1be86",
+    "short_tasks/common/result.schema.json": "7a0ff76e78fd1483a300fb87ff0bb090c83f6eafd4aed5e7cc9052ebc5953be4",
+    "short_tasks/tasks/navigation_progress_v1/__init__.py": "8d92bda5fc390ecca30d82f7e96194bde0cef2078375349f73ef6bfc8d733169",
+    "short_tasks/tasks/navigation_progress_v1/rules.py": "cf8ea721b9095808bffe4aef3fe39cff33e5c5d113dc6d810306524c1a9c7d7d",
+    "short_tasks/tasks/navigation_progress_v1/native.py": "96a382ce71f22781258c89c1e1906663b0490378cb7fca0dce297869d77f4880",
+    "short_tasks/tasks/navigation_progress_v1/episode.py": "a75a76f3cf10ace71e03e0c24ed3f85e967306398bfe7d94a298eaac9f6432f4",
+    "arena_api/robot_drive_defaults.py": "1adb35f0f422d4dc6b0a9be43d786a46ef8d91dd9b3e38bc72e4161615733fe6",
+    "short_tasks/agent_probe_v1/robot_parameter_alignment.py": "224a176df609253478264de51e5506bfe8fce8733d16c75c50d96e08824b697c",
+    "short_tasks/agent_probe_v1/native_owner.py": "c4f8c6f812fde94c29234e7b859863cb5190aa19455d1cd9d19e16f4c11281f1"
+  },
+  "interaction_progress": {
+    "version": "short_tasks.interaction_progress.v2",
+    "approach": 0.5,
+    "touch": 1.0,
+    "once_per_operation_target": true,
+    "success_unchanged": true,
+    "approach_tiers": [
+      {
+        "distance_m": 0.3,
+        "points": 0.1
+      },
+      {
+        "distance_m": 0.2,
+        "points": 0.2
+      },
+      {
+        "distance_m": 0.1,
+        "points": 0.2
+      }
+    ],
+    "initially_satisfied_tiers": "skipped_without_credit",
+    "public_maximum_unchanged": true
+  },
+  "deduction_policy": {
+    "version": "short_tasks.no_deductions.v1",
+    "enabled": false,
+    "final_state_revocation_preserved": true,
+    "success_unchanged": true,
+    "component_details": "legacy_diagnostic_only"
+  },
+  "scoring_notes": "Public scores are gross process plus current final, including interaction rewards; no punitive deductions. Component details are diagnostic only. Success, maxima and final-state revocation are unchanged.",
+  "navigation_progress": {
+    "version": "short_tasks.navigation_progress.v1",
+    "enabled": true,
+    "spacing_m": 0.2,
+    "points_per_segment": 0.2,
+    "operation_timeout_s": 60,
+    "navigation_timeout_s": 120,
+    "success_unchanged": true,
+    "route_budget": "bound_at_activation",
+    "stage_change_resets_clock": false
+  }
+}

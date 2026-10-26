@@ -1,0 +1,37 @@
+{
+  "status": "existing_recorded_ready_pose_no_generated_joint_angles",
+  "api": "1-1",
+  "episode": "042_right_239.7deg",
+  "step_index": 0,
+  "time_s": 1.0083333859220147,
+  "targets_rad": {
+    "idx21_arm_l_joint1": -0.956702470779419,
+    "idx22_arm_l_joint2": 0.5711846947669983,
+    "idx23_arm_l_joint3": 0.2733040153980255,
+    "idx24_arm_l_joint4": -1.1674968004226685,
+    "idx25_arm_l_joint5": 1.2575404644012451,
+    "idx26_arm_l_joint6": 1.3616355657577515,
+    "idx27_arm_l_joint7": -0.16790248453617096,
+    "idx61_arm_r_joint1": 1.0736992359161377,
+    "idx62_arm_r_joint2": -0.6114763021469116,
+    "idx63_arm_r_joint3": -0.2806917130947113,
+    "idx64_arm_r_joint4": 1.285297155380249,
+    "idx65_arm_r_joint5": -0.7304286956787109,
+    "idx66_arm_r_joint6": -1.4810552597045898,
+    "idx67_arm_r_joint7": 0.1875089854001999,
+    "idx01_body_joint1": 0.31994080543518066,
+    "idx02_body_joint2": 0.2617996037006378,
+    "idx11_head_joint1": -3.531404613177358e-10,
+    "idx12_head_joint2": 0.4363294541835785,
+    "idx41_gripper_l_outer_joint1": 0.781633734703064,
+    "idx81_gripper_r_outer_joint1": 0.7816319465637207
+  },
+  "units": "radians except idx01_body_joint1 in meters",
+  "source": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-3/run/episode/trace.json",
+  "source_sha256": {
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-3/run/episode/trace.json": "f5be6f50de66a63225c7998430a9ece8c1528de12ed2003e16d89b941d858f7a",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/artifacts/batch-20260930-r4/1-1/source-run-3/run/report.json": "9567938e795249c14592028c4efba45dba9b4e7a4d69358d0b10d37a29085a19"
+  },
+  "provenance": "initial measured settled observation of successful public replay; not invented IK",
+  "new_room_collision_validated": false
+}

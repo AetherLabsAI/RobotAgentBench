@@ -1,0 +1,30 @@
+{
+  "schema": "arena.sofa_placement_policy.v1",
+  "authority": "user_explicit_request",
+  "user_request": "4块座垫都放，但边上两块的外侧一半不用",
+  "scope": "layout placement design; not yet connected to scene generation",
+  "seat_count": 4,
+  "seat_order": "left to right when facing the sofa",
+  "allowed_lateral_fractions_per_seat": [
+    {"seat": 1, "interval": [0.5, 1.0]},
+    {"seat": 2, "interval": [0.0, 1.0]},
+    {"seat": 3, "interval": [0.0, 1.0]},
+    {"seat": 4, "interval": [0.0, 0.5]}
+  ],
+  "edge_margin_m": 0.03,
+  "edge_margin_measurement": "complete object footprint to the outer boundary of the combined permitted region, not object center or each internal seat division",
+  "depth_policy": "retain source usable seat depth; do not expand into back cushions",
+  "reference_depth_m": 0.68,
+  "reference_approximate_width_m": 1.835,
+  "dimension_note": "reference dimensions only; derive each seat interval from the actual layout seat geometry and transform",
+  "arm_sweep_exclusion_included": false,
+  "require_structural_obstacles": true,
+  "structural_obstacles_file": "sofa-structural-obstacles-v2.json",
+  "ordinary_object_boxes": "sofa-object-boxes-v1.json",
+  "ordinary_object_padding_xy_m": 0.10,
+  "ordinary_object_pair_rule": "other object body may not enter an object's expanded XY box; protection boxes may overlap; do not double the requested clearance to 20 cm",
+  "other_constraints": "physical support and cushion policies unchanged; all ordinary sofa task objects receive the same 10 cm XY padding, regardless of target/distractor role",
+  "scene_generation_connected": false,
+  "physics_validated": false,
+  "historical_randomization_scripts_modified": false
+}

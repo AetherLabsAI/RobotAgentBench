@@ -1,0 +1,98 @@
+{
+  "schema": "robotagentbench.native_files.v1",
+  "python": [
+    3,
+    11
+  ],
+  "platform": "linux",
+  "machine": "x86_64",
+  "packages": {
+    "isaacsim": "5.1.0.0",
+    "numpy": "1.26.0",
+    "scipy": "1.15.3",
+    "pillow": "11.3.0"
+  },
+  "collision_distribution": "python-fcl==0.7.0.11",
+  "files": {
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl-0.7.0.11.dist-info/top_level.txt": {
+      "site_relative": "python_fcl-0.7.0.11.dist-info/top_level.txt",
+      "sha256": "36beda781b6f4597933cd0e1f1d0556b871674ea644bf34e820bf34b6a0b9c8b"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl-0.7.0.11.dist-info/REQUESTED": {
+      "site_relative": "python_fcl-0.7.0.11.dist-info/REQUESTED",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl-0.7.0.11.dist-info/RECORD": {
+      "site_relative": "python_fcl-0.7.0.11.dist-info/RECORD",
+      "sha256": "301814265a14b6e50ddc297ccbb8f3b8d555faf68b72bf3bb5048e3e39d97744"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl-0.7.0.11.dist-info/WHEEL": {
+      "site_relative": "python_fcl-0.7.0.11.dist-info/WHEEL",
+      "sha256": "08cb62e2d3caaaf2a84e901acb7d64c9bbead1f633e2233a45ffc33d395c3e82"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl-0.7.0.11.dist-info/METADATA": {
+      "site_relative": "python_fcl-0.7.0.11.dist-info/METADATA",
+      "sha256": "d4411855c56fcdc39c50ad40ea93766fccf214866c5087c3a72228bbdf725a84"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl-0.7.0.11.dist-info/INSTALLER": {
+      "site_relative": "python_fcl-0.7.0.11.dist-info/INSTALLER",
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl.libs/liboctomap-18b406fe.so.1.9.8": {
+      "site_relative": "python_fcl.libs/liboctomap-18b406fe.so.1.9.8",
+      "sha256": "537dbe883c36949dfff90a58c92f5a826af5e2a8888bb32d5240f552e2880e2c"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl.libs/libfcl-9f362718.so.0.7.0": {
+      "site_relative": "python_fcl.libs/libfcl-9f362718.so.0.7.0",
+      "sha256": "d538a28822f2c99becb0fc3100af8948af78c55b6b96801d66c2c470246b6540"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl.libs/liboctomath-7b3fdef0.so.1.9.8": {
+      "site_relative": "python_fcl.libs/liboctomath-7b3fdef0.so.1.9.8",
+      "sha256": "51d9cef7905bdabb1bf0712563b14cdc415de97b46e1f3c66959a4ade9ff4ea3"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl.libs/libccd-894a431f.so.2.0": {
+      "site_relative": "python_fcl.libs/libccd-894a431f.so.2.0",
+      "sha256": "74cb915d8274fb3b3585c11d43f5668750aee871dec08ab311ed4125e26d57c8"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/fcl/octomap_defs.pxd": {
+      "site_relative": "fcl/octomap_defs.pxd",
+      "sha256": "7f27d1251f76da9f10d24b648d6bf5d434edbbc21c06f140f310fc8a3edf1cca"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/fcl/fcl_defs.pxd": {
+      "site_relative": "fcl/fcl_defs.pxd",
+      "sha256": "47e2deb27dac1d578619ff4d47fac411ae2ca06eef8393578206356d53068433"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/fcl/collision_data.py": {
+      "site_relative": "fcl/collision_data.py",
+      "sha256": "88580bb441d2846a81629be690f5fbc746d508ddd87724fa118d86601a9d5794"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/fcl/fcl.cpp": {
+      "site_relative": "fcl/fcl.cpp",
+      "sha256": "1fcc84dcabe0835388be29b4916151d8fdd0c440dcce2109590070c08bca9e86"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/fcl/version.py": {
+      "site_relative": "fcl/version.py",
+      "sha256": "505cd62e951b8e25da44e4a5605614185f59bcb553438d6496f05e8f0696fc32"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/fcl/fcl.pyx": {
+      "site_relative": "fcl/fcl.pyx",
+      "sha256": "72f7bdd4234e1c1b2cfd24c79b21f88a2ab62ce8729157d805ed4362c58ce928"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/fcl/__init__.py": {
+      "site_relative": "fcl/__init__.py",
+      "sha256": "a4c883ce5446fcd7e02fd73f162823cd24349b6804900ff66798372a6b159c34"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/fcl/std_defs.pxd": {
+      "site_relative": "fcl/std_defs.pxd",
+      "sha256": "4775638d44c06724b72a6bbaaf8cf85fcebae6e724975f0691597677277c49be"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/fcl/fcl.cpython-311-x86_64-linux-gnu.so": {
+      "site_relative": "fcl/fcl.cpython-311-x86_64-linux-gnu.so",
+      "sha256": "4b03e4f757c5040c06f554e00f29fbba07270e60ac6ee7c42b78948348afb2d4"
+    },
+    "short_tasks/agent_probe_v1/collision_guard/vendor/python_fcl-0.7.0.11.dist-info/licenses/LICENSE": {
+      "site_relative": "python_fcl-0.7.0.11.dist-info/licenses/LICENSE",
+      "sha256": "54396e87dee4d29282d9664ef011d07f152609c51de51c95cf8cd53454dd752e"
+    }
+  }
+}

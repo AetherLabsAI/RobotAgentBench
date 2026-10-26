@@ -1,0 +1,56 @@
+{
+  "status": "connected_to_unified_room_host",
+  "registration_scope": "task_owned_unified_room_host_not_shared_HTTP_registry",
+  "factories": [
+    "coffee",
+    "fridge_to_microwave",
+    "fryer",
+    "snack_drink_to_tray"
+  ],
+  "request": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/multi_task_episode_task9_v1.json",
+  "tests": {
+    "rule_tests.log": 68,
+    "box_tests.log": 8
+  },
+  "cpu_geometry_bindings": 6,
+  "native": {
+    "beef_box": {
+      "path": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/fridge_to_microwave_v1/native.QgwRzD/result.json",
+      "sha256": "6998b2f8ece43cc7c2b864caf09290605c8d882d295cb7bf05050ca3329421ef",
+      "physics_hz": 60,
+      "control_hz": 20,
+      "selected_controls": 20,
+      "simulation_time_s": 2.016666666666661,
+      "native_evidence": true,
+      "selection_pose_source": "contract_fixture_not_native_navigation"
+    },
+    "leftover_box": {
+      "path": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/fridge_to_microwave_v1/native.NLNCgS/result.json",
+      "sha256": "ffbaad7ef256dc10920607587e2c6cd6868cbbf0d18c04f2b27d97b0b3f2a688",
+      "physics_hz": 60,
+      "control_hz": 20,
+      "selected_controls": 20,
+      "simulation_time_s": 2.016666666666661,
+      "native_evidence": true,
+      "selection_pose_source": "contract_fixture_not_native_navigation"
+    }
+  },
+  "phase_handoff": "rule_and_host_contract_tested_not_native_action_verified",
+  "full_trajectory_verified": false,
+  "all_four_tasks_native_rollout_verified": false,
+  "files": {
+    "fridge_to_microwave_v1/__init__.py": "66db95fecadfdf8d48c0785d856e54b58a10a7dcb90cb197b17599e0ffe3c4f9",
+    "fridge_to_microwave_v1/audit_rooms.py": "f5ef237964179caeeee7d2e04cd92a066b4122e052fab65b27e9c464fa0a7f58",
+    "fridge_to_microwave_v1/check_binding.py": "aaefc31b4f6f5e7367f3c597ce3600fd2431789d2cdedaa6af2a7b34e7c9aebd",
+    "fridge_to_microwave_v1/composite.py": "5dcb33c0ab3a4d0d4b41821e3c924acab0fdecb009e835c387076a6e0a10eaa8",
+    "fridge_to_microwave_v1/deploy.py": "b154c89ce0f44731fc234f4be984bfa106cd587952858b7c2dfacd1d5660d4c0",
+    "fridge_to_microwave_v1/native_source.py": "f3dbf9ac278bb34f6a6133a1a02f9112ed2532f0aaee8f79cf62187b46a34ea7",
+    "fridge_to_microwave_v1/probe_native.py": "2b028438fb9819656effa05d660a88a80503c5fe1f19d458f708f6f5c0eb7800",
+    "fridge_to_microwave_v1/room_port.py": "437c01b657a790aa5a38baddc14f66145f5cfb6962aa9ebfc83c8625262211a5",
+    "fridge_to_microwave_v1/scene.py": "f933b19fafe7b8c777d53b2826aa3469fa940f0e17a1a1eb60ce5a6bc3c6901e",
+    "fridge_to_microwave_v1/support.py": "637e0248fbdc2770d5a568542268e19b5d4bca0d7a281b45a54207b5c3286a2e",
+    "fridge_to_microwave_v1/test_composite.py": "8552eef5354bed181202581535bd4bd428ae18928bccfb32ff77f24a79f8f70b",
+    "fridge_to_microwave_v1/test_room.py": "7e4275cda8b23822e0ba5baa02f81aa8855dd65422a86f4665f1020f98c30070",
+    "fridge_to_microwave_v1/verify_deployment.py": "c41600ac9605cdf15019355606871c3c2a17786a7d018aea3888a8180e8526b5"
+  }
+}

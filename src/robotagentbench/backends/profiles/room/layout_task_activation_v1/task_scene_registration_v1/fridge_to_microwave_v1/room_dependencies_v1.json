@@ -1,0 +1,143 @@
+[
+  {
+    "manifest": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/room_demo_v6/composition.json",
+    "scene": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/room_demo_v6/room_refrigerator_v1.usda",
+    "canonical_paths": {
+      "/World/Background/Shell/RefrigeratorRecovered": true,
+      "/World/Background/Shell/RefrigeratorRecovered/left_door_hinge": true,
+      "/World/Background/Shell/RefrigeratorRecovered/right_door_hinge": true,
+      "/World/Assets/DiningTableMicrowave/Asset/body": true,
+      "/World/Assets/DiningTableMicrowave/Asset/door_hinge": true,
+      "/World/Assets/MicrowaveTakePlate/Asset": false,
+      "/World/Assets/MicrowavePlateStand": false,
+      "/World/Assets/MicrowaveBeefbox": false,
+      "/World/Assets/MicrowaveFoodbox": false,
+      "/World/Assets/BinFoodR/Asset": false
+    },
+    "manifest_food": [],
+    "all_candidate_rigid_bodies": [
+      {
+        "path": "/World/Assets/DiningTableMicrowave/Asset/body",
+        "enabled": true,
+        "kinematic": true
+      },
+      {
+        "path": "/World/Assets/DiningTableMicrowave/Asset/door",
+        "enabled": true,
+        "kinematic": false
+      },
+      {
+        "path": "/World/Background/Shell/RefrigeratorRecovered/body",
+        "enabled": true,
+        "kinematic": false
+      },
+      {
+        "path": "/World/Background/Shell/RefrigeratorRecovered/left_door",
+        "enabled": true,
+        "kinematic": false
+      },
+      {
+        "path": "/World/Background/Shell/RefrigeratorRecovered/right_door",
+        "enabled": true,
+        "kinematic": false
+      }
+    ],
+    "sources_unchanged": true,
+    "reset_performed": false,
+    "physical_acceptance": false
+  },
+  {
+    "manifest": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/coffee_initialized_rooms_v1/layout03/composition.json",
+    "scene": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/coffee_initialized_rooms_v1/layout03/room_tote_v1.usda",
+    "canonical_paths": {
+      "/World/Background/Shell/RefrigeratorRecovered": true,
+      "/World/Background/Shell/RefrigeratorRecovered/left_door_hinge": true,
+      "/World/Background/Shell/RefrigeratorRecovered/right_door_hinge": true,
+      "/World/Assets/DiningTableMicrowave/Asset/body": true,
+      "/World/Assets/DiningTableMicrowave/Asset/door_hinge": true,
+      "/World/Assets/MicrowaveTakePlate/Asset": false,
+      "/World/Assets/MicrowavePlateStand": false,
+      "/World/Assets/MicrowaveBeefbox": false,
+      "/World/Assets/MicrowaveFoodbox": false,
+      "/World/Assets/BinFoodR/Asset": false
+    },
+    "manifest_food": [],
+    "all_candidate_rigid_bodies": [
+      {
+        "path": "/World/Assets/DiningTableMicrowave/Asset/body",
+        "enabled": true,
+        "kinematic": true
+      },
+      {
+        "path": "/World/Assets/DiningTableMicrowave/Asset/door",
+        "enabled": true,
+        "kinematic": false
+      },
+      {
+        "path": "/World/Background/Shell/RefrigeratorRecovered/body",
+        "enabled": true,
+        "kinematic": false
+      },
+      {
+        "path": "/World/Background/Shell/RefrigeratorRecovered/left_door",
+        "enabled": true,
+        "kinematic": false
+      },
+      {
+        "path": "/World/Background/Shell/RefrigeratorRecovered/right_door",
+        "enabled": true,
+        "kinematic": false
+      }
+    ],
+    "sources_unchanged": true,
+    "reset_performed": false,
+    "physical_acceptance": false
+  },
+  {
+    "manifest": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/coffee_initialized_rooms_v1/layout04/composition.json",
+    "scene": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/coffee_initialized_rooms_v1/layout04/room_tote_v1.usda",
+    "canonical_paths": {
+      "/World/Background/Shell/RefrigeratorRecovered": true,
+      "/World/Background/Shell/RefrigeratorRecovered/left_door_hinge": true,
+      "/World/Background/Shell/RefrigeratorRecovered/right_door_hinge": true,
+      "/World/Assets/DiningTableMicrowave/Asset/body": true,
+      "/World/Assets/DiningTableMicrowave/Asset/door_hinge": true,
+      "/World/Assets/MicrowaveTakePlate/Asset": false,
+      "/World/Assets/MicrowavePlateStand": false,
+      "/World/Assets/MicrowaveBeefbox": false,
+      "/World/Assets/MicrowaveFoodbox": false,
+      "/World/Assets/BinFoodR/Asset": false
+    },
+    "manifest_food": [],
+    "all_candidate_rigid_bodies": [
+      {
+        "path": "/World/Assets/DiningTableMicrowave/Asset/body",
+        "enabled": true,
+        "kinematic": true
+      },
+      {
+        "path": "/World/Assets/DiningTableMicrowave/Asset/door",
+        "enabled": true,
+        "kinematic": false
+      },
+      {
+        "path": "/World/Background/Shell/RefrigeratorRecovered/body",
+        "enabled": true,
+        "kinematic": false
+      },
+      {
+        "path": "/World/Background/Shell/RefrigeratorRecovered/left_door",
+        "enabled": true,
+        "kinematic": false
+      },
+      {
+        "path": "/World/Background/Shell/RefrigeratorRecovered/right_door",
+        "enabled": true,
+        "kinematic": false
+      }
+    ],
+    "sources_unchanged": true,
+    "reset_performed": false,
+    "physical_acceptance": false
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "schema":"openend.scene_requirements.request.v2",
+  "seed":43,
+  "layout_id":26,
+  "tasks":[
+    {"id":"shelf","type":"snack_drink_to_tray","product":"zbar_t"},
+    {"id":"garbage","type":"trash_transfer","source":"coffee_table.objects","items":[{"kind":"snack","count":2}]}
+  ],
+  "extras":[]
+}

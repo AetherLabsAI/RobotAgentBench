@@ -1,0 +1,1085 @@
+{
+ "1-1": {
+  "task_no": "1.1",
+  "pool": 50,
+  "method": "确定性选择：位姿特征按范围归一化后做最远点贪心，每覆盖一个新的类别值（手臂、杯款、扰动档、配色、灯光、起点类型）加 0.35；第一条取最接近中位数的 episode",
+  "feature_ranges_in_batch": {
+   "handle_yaw_deg": [
+    94.32939,
+    249.20014
+   ],
+   "cup_x": [
+    2.36808,
+    2.43509
+   ],
+   "cup_y": [
+    -0.17028,
+    -0.02163
+   ],
+   "machine_x": [
+    2.50268,
+    2.64778
+   ],
+   "machine_y": [
+    0.08939,
+    0.24488
+   ]
+  },
+  "episodes": [
+   {
+    "label": "044_right_241.3deg",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/044_right_241.3deg",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/044_right_241.3deg/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/044_right_241.3deg/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/044_right_241.3deg/right.mp4"
+    },
+    "data_list": {
+     "id": "59f3eb453bd220474b1de73a",
+     "title": "1.1 · 044_right_241.3deg",
+     "collection": "coffee_cup_selected50_20260925",
+     "source_path": "182：/opt/dlami/nvme/lukun/coffee-workspace/cup-workers/gpu3/coffee_task_workbench_20260922/runs/cup_182_until50_v1_seed_3189",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/044_right_241.3deg",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/dataset_manifest.json"
+     ]
+    },
+    "features": {
+     "handle_yaw_deg": 241.31117,
+     "cup_x": 2.39805,
+     "cup_y": -0.07873,
+     "machine_x": 2.57737,
+     "machine_y": 0.18843
+    },
+    "categories": {
+     "arm": "right",
+     "cup_style": "green_tall",
+     "group": "random",
+     "palette": "canonical",
+     "lighting": "neutral_day"
+    },
+    "appearance": {
+     "palette": "canonical",
+     "lighting": "neutral_day",
+     "appearance_seed": 3189,
+     "central_table": "worktopmat_warmwhite"
+    },
+    "producer": {
+     "producer_run": "cup_182_until50_v1_seed_3189",
+     "producer_checks": 16,
+     "manifest_sha256": {
+      "head": {
+       "sha256": "f2a8867a781ca9ecff5f560f578cb4c3ea75da2afea0c2f9a4b9cfb7615dd7e3",
+       "bytes": 2317651,
+       "video": {
+        "width": 1280,
+        "height": 800,
+        "duration": "35.550000",
+        "nb_frames": "711"
+       }
+      },
+      "left": {
+       "sha256": "d02e0c5881a0d451ee4b3df031f4d472efa0c95ceba6e274ba56cef9ade89f9f",
+       "bytes": 972913,
+       "video": {
+        "width": 848,
+        "height": 480,
+        "duration": "35.550000",
+        "nb_frames": "711"
+       }
+      },
+      "right": {
+       "sha256": "ffd47aabee49432ddeea4bcec3ae30109a5279fd4872f1c2e1a5705f5c74d294",
+       "bytes": 2227704,
+       "video": {
+        "width": 848,
+        "height": 480,
+        "duration": "35.550000",
+        "nb_frames": "711"
+       }
+      }
+     }
+    }
+   },
+   {
+    "label": "013_left_135.0deg",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/013_left_135.0deg",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/013_left_135.0deg/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/013_left_135.0deg/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/013_left_135.0deg/right.mp4"
+    },
+    "data_list": {
+     "id": "440b0fb9370acf95b355dcd3",
+     "title": "1.1 · 013_left_135.0deg",
+     "collection": "coffee_cup_selected50_20260925",
+     "source_path": "182：/opt/dlami/nvme/lukun/coffee-workspace/coffee_task_workbench_20260922/runs/cup_boundary_left_135_route_v2",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/013_left_135.0deg",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/dataset_manifest.json"
+     ]
+    },
+    "features": {
+     "handle_yaw_deg": 134.99992,
+     "cup_x": 2.3801,
+     "cup_y": -0.10025,
+     "machine_x": 2.5691,
+     "machine_y": 0.16675
+    },
+    "categories": {
+     "arm": "left",
+     "cup_style": "cream_classic",
+     "group": "targeted",
+     "palette": "warm_oak_linen",
+     "lighting": "mixed_bright"
+    },
+    "appearance": {
+     "palette": "warm_oak_linen",
+     "lighting": "mixed_bright",
+     "appearance_seed": 920135,
+     "central_table": "oak_medium_matte_warmwhite"
+    },
+    "producer": {
+     "producer_run": "cup_boundary_left_135_route_v2",
+     "producer_checks": 17,
+     "manifest_sha256": {
+      "head": {
+       "sha256": "b77f6abddac6796c32629dbc871d5d6ca7a4e741937aca99e4b4e29cd4d43b30",
+       "bytes": 1481339,
+       "video": {
+        "width": 1280,
+        "height": 800,
+        "duration": "23.850000",
+        "nb_frames": "477"
+       }
+      },
+      "left": {
+       "sha256": "0800c44d43e89bbc608b2b876b3126e7ee65184eb503d06fce37d38df15e2f4b",
+       "bytes": 1533085,
+       "video": {
+        "width": 848,
+        "height": 480,
+        "duration": "23.850000",
+        "nb_frames": "477"
+       }
+      },
+      "right": {
+       "sha256": "b66810d54d9b484d55009c1b11070ecfbe08fff11690d4921dd3c9f05b02c602",
+       "bytes": 951143,
+       "video": {
+        "width": 848,
+        "height": 480,
+        "duration": "23.850000",
+        "nb_frames": "477"
+       }
+      }
+     }
+    }
+   },
+   {
+    "label": "042_right_239.7deg",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/042_right_239.7deg",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/042_right_239.7deg/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/042_right_239.7deg/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/042_right_239.7deg/right.mp4"
+    },
+    "data_list": {
+     "id": "6d410605d2566b0ccb4c8e3c",
+     "title": "1.1 · 042_right_239.7deg",
+     "collection": "coffee_cup_selected50_20260925",
+     "source_path": "182：/opt/dlami/nvme/lukun/coffee-workspace/cup-workers/gpu3/coffee_task_workbench_20260922/runs/cup_182_until50_v1_seed_3242",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/042_right_239.7deg",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/dataset_manifest.json"
+     ]
+    },
+    "features": {
+     "handle_yaw_deg": 239.7459,
+     "cup_x": 2.36808,
+     "cup_y": -0.07217,
+     "machine_x": 2.56335,
+     "machine_y": 0.12222
+    },
+    "categories": {
+     "arm": "right",
+     "cup_style": "blue_compact",
+     "group": "random",
+     "palette": "dark_walnut",
+     "lighting": "mixed_soft"
+    },
+    "appearance": {
+     "palette": "dark_walnut",
+     "lighting": "mixed_soft",
+     "appearance_seed": 3242,
+     "central_table": "walnut_dark_satin_all"
+    },
+    "producer": {
+     "producer_run": "cup_182_until50_v1_seed_3242",
+     "producer_checks": 16,
+     "manifest_sha256": {
+      "head": {
+       "sha256": "89588cff917fe94d4a9ea71272a0c04f7ce03297b8a6fbe12fa8655df0c23cb8",
+       "bytes": 1465246,
+       "video": {
+        "width": 1280,
+        "height": 800,
+        "duration": "34.250000",
+        "nb_frames": "685"
+       }
+      },
+      "left": {
+       "sha256": "fe37ee968e9e121e9e141b89f3461edf45299a493ca25a3f332c5ef111d5819f",
+       "bytes": 690003,
+       "video": {
+        "width": 848,
+        "height": 480,
+        "duration": "34.250000",
+        "nb_frames": "685"
+       }
+      },
+      "right": {
+       "sha256": "9ef007266efa40e4d167fe40afd54056eaa10fe41abea016108b094442c86580",
+       "bytes": 2031635,
+       "video": {
+        "width": 848,
+        "height": 480,
+        "duration": "34.250000",
+        "nb_frames": "685"
+       }
+      }
+     }
+    }
+   },
+   {
+    "label": "028_right_204.2deg",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/028_right_204.2deg",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/028_right_204.2deg/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/028_right_204.2deg/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/028_right_204.2deg/right.mp4"
+    },
+    "data_list": {
+     "id": "286f4b579f0f2b14d496315f",
+     "title": "1.1 · 028_right_204.2deg",
+     "collection": "coffee_cup_selected50_20260925",
+     "source_path": "182：/opt/dlami/nvme/lukun/coffee-workspace/coffee_task_workbench_20260922/runs/cup_182_until50_v1_seed_7233",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/028_right_204.2deg",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/dataset_manifest.json"
+     ]
+    },
+    "features": {
+     "handle_yaw_deg": 204.17678,
+     "cup_x": 2.43388,
+     "cup_y": -0.13851,
+     "machine_x": 2.51577,
+     "machine_y": 0.24237
+    },
+    "categories": {
+     "arm": "right",
+     "cup_style": "cream_classic",
+     "group": "random",
+     "palette": "light_scandi",
+     "lighting": "cool_day"
+    },
+    "appearance": {
+     "palette": "light_scandi",
+     "lighting": "cool_day",
+     "appearance_seed": 7233,
+     "central_table": "light_worktop_warmwhite"
+    },
+    "producer": {
+     "producer_run": "cup_182_until50_v1_seed_7233",
+     "producer_checks": 16,
+     "manifest_sha256": {
+      "head": {
+       "sha256": "c88df71193c329f1971073b15122b3a42d66adcfdd30b17b0a12c5a658381aeb",
+       "bytes": 1624876,
+       "video": {
+        "width": 1280,
+        "height": 800,
+        "duration": "34.300000",
+        "nb_frames": "686"
+       }
+      },
+      "left": {
+       "sha256": "bcc4418faa1254887278322a0ef797ec12f3bb61138a0408eef514edc642d0ab",
+       "bytes": 709698,
+       "video": {
+        "width": 848,
+        "height": 480,
+        "duration": "34.300000",
+        "nb_frames": "686"
+       }
+      },
+      "right": {
+       "sha256": "008ba295ebfd8a2f7eb8969c7429a11d654aeda2b42ad1b519f1ca228d72494c",
+       "bytes": 2241339,
+       "video": {
+        "width": 848,
+        "height": 480,
+        "duration": "34.300000",
+        "nb_frames": "686"
+       }
+      }
+     }
+    }
+   },
+   {
+    "label": "017_right_197.9deg",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/017_right_197.9deg",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/017_right_197.9deg/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/017_right_197.9deg/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/017_right_197.9deg/right.mp4"
+    },
+    "data_list": {
+     "id": "7ade9adfbd25c9c84a876dd9",
+     "title": "1.1 · 017_right_197.9deg",
+     "collection": "coffee_cup_selected50_20260925",
+     "source_path": "182：/opt/dlami/nvme/lukun/coffee-workspace/cup-workers/gpu3/coffee_task_workbench_20260922/runs/cup_182_until50_v1_seed_5063",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/017_right_197.9deg",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_cup_left15_right35_20260925/dataset_manifest.json"
+     ]
+    },
+    "features": {
+     "handle_yaw_deg": 197.88717,
+     "cup_x": 2.43441,
+     "cup_y": -0.16704,
+     "machine_x": 2.64374,
+     "machine_y": 0.24416
+    },
+    "categories": {
+     "arm": "right",
+     "cup_style": "green_tall",
+     "group": "random",
+     "palette": "warm_oak_linen",
+     "lighting": "warm_evening"
+    },
+    "appearance": {
+     "palette": "warm_oak_linen",
+     "lighting": "warm_evening",
+     "appearance_seed": 5063,
+     "central_table": "oak_medium_matte_warmwhite"
+    },
+    "producer": {
+     "producer_run": "cup_182_until50_v1_seed_5063",
+     "producer_checks": 16,
+     "manifest_sha256": {
+      "head": {
+       "sha256": "e23956b5f69ec696ff2b02afa7dafa2aa9aa38ce2dfcd609c91688a70cb01fa3",
+       "bytes": 1863098,
+       "video": {
+        "width": 1280,
+        "height": 800,
+        "duration": "34.300000",
+        "nb_frames": "686"
+       }
+      },
+      "left": {
+       "sha256": "034b04b854ece6a2d602554d59ad429b95484d35e5bad87a0b77a769707b04e6",
+       "bytes": 740264,
+       "video": {
+        "width": 848,
+        "height": 480,
+        "duration": "34.300000",
+        "nb_frames": "686"
+       }
+      },
+      "right": {
+       "sha256": "2d4c065c534f596fdfda704da836adf33355f440dfa24935e58869e5e00a2035",
+       "bytes": 1966427,
+       "video": {
+        "width": 848,
+        "height": 480,
+        "duration": "34.300000",
+        "nb_frames": "686"
+       }
+      }
+     }
+    }
+   }
+  ]
+ },
+ "1-2": {
+  "task_no": "1.2",
+  "pool": 50,
+  "method": "确定性选择：位姿特征按范围归一化后做最远点贪心，每覆盖一个新的类别值（手臂、杯款、扰动档、配色、灯光、起点类型）加 0.35；第一条取最接近中位数的 episode",
+  "feature_ranges_in_batch": {
+   "machine_dx": [
+    -0.09926,
+    0.09961
+   ],
+   "machine_dy": [
+    -0.07185,
+    0.09922
+   ],
+   "machine_yaw_deg": [
+    -19.50242,
+    19.23543
+   ],
+   "bag_dx": [
+    -0.0437,
+    0.04885
+   ],
+   "bag_dy": [
+    -0.04912,
+    0.04997
+   ],
+   "bag_yaw_deg": [
+    3.51832,
+    88.86828
+   ]
+  },
+  "episodes": [
+   {
+    "label": "bag_small30_seed_4126_episode_0000",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_small30_seed_4126_episode_0000",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_small30_seed_4126_episode_0000/pour_complete.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_small30_seed_4126_episode_0000/pour_complete_left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_small30_seed_4126_episode_0000/pour_complete_right.mp4"
+    },
+    "data_list": {
+     "id": "1ae518e90013ae61ee1dec7a",
+     "title": "1.2 · 小扰动 · bag_small30_seed_4126_episode_0000",
+     "collection": "coffee_pour_20260924",
+     "source_path": "/home/lingjun/coffee-workspace/render-workers/gpu3/coffee_task_workbench_20260922/runs/bag_small30_seed_4126/episode_0000/motion",
+     "source_exists_on_202": true,
+     "source_status": "来源任务自动通过",
+     "local_artifacts": [
+      "/home/lingjun/coffee-workspace/render-workers/gpu3/coffee_task_workbench_20260922/runs/bag_small30_seed_4126/episode_0000/motion",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_small30_seed_4126_episode_0000"
+     ]
+    },
+    "features": {
+     "machine_dx": -0.03234,
+     "machine_dy": 0.00812,
+     "machine_yaw_deg": 2.73843,
+     "bag_dx": 0.01664,
+     "bag_dy": -0.01367,
+     "bag_yaw_deg": 51.00876
+    },
+    "categories": {
+     "group": "小扰动",
+     "cup_style": "blue_compact"
+    },
+    "appearance": {},
+    "producer": {
+     "producer_passed": true,
+     "bean_outcome": {
+      "in_hopper": 99,
+      "in_bag": 0,
+      "outside": 1
+     },
+     "duration_s": 40.666667
+    }
+   },
+   {
+    "label": "bag_until50_seed_2130_episode_0000",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_until50_seed_2130_episode_0000",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_until50_seed_2130_episode_0000/pour_complete.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_until50_seed_2130_episode_0000/pour_complete_left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_until50_seed_2130_episode_0000/pour_complete_right.mp4"
+    },
+    "data_list": {
+     "id": "081a1b762f1e6c691ae286e9",
+     "title": "1.2 · 大扰动 · bag_until50_seed_2130_episode_0000",
+     "collection": "coffee_pour_20260924",
+     "source_path": "/home/lingjun/coffee-workspace/coffee_task_workbench_20260922/runs/bag_until50_seed_2130/episode_0000/motion",
+     "source_exists_on_202": true,
+     "source_status": "来源任务自动通过",
+     "local_artifacts": [
+      "/home/lingjun/coffee-workspace/coffee_task_workbench_20260922/runs/bag_until50_seed_2130/episode_0000/motion",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_until50_seed_2130_episode_0000"
+     ]
+    },
+    "features": {
+     "machine_dx": 0.05345,
+     "machine_dy": 0.09825,
+     "machine_yaw_deg": -19.50242,
+     "bag_dx": -0.00711,
+     "bag_dy": 0.02114,
+     "bag_yaw_deg": 57.31032
+    },
+    "categories": {
+     "group": "大扰动",
+     "cup_style": "cream_classic"
+    },
+    "appearance": {},
+    "producer": {
+     "producer_passed": true,
+     "bean_outcome": {
+      "in_hopper": 97,
+      "in_bag": 0,
+      "outside": 3
+     },
+     "duration_s": 42.866667
+    }
+   },
+   {
+    "label": "bag_large_extra_gpu4_seed_140045_episode_0000",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_large_extra_gpu4_seed_140045_episode_0000",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_large_extra_gpu4_seed_140045_episode_0000/pour_complete.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_large_extra_gpu4_seed_140045_episode_0000/pour_complete_left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_large_extra_gpu4_seed_140045_episode_0000/pour_complete_right.mp4"
+    },
+    "data_list": {
+     "id": "8ecff6ecd32fc6168e8c1042",
+     "title": "1.2 · 大扰动 · bag_large_extra_gpu4_seed_140045_episode_0000",
+     "collection": "coffee_pour_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/coffee_small_expand_20260924/gpu4/coffee_task_workbench_20260922/runs/bag_large_extra_gpu4_seed_140045/episode_0000/motion",
+     "source_exists_on_202": true,
+     "source_status": "来源任务自动通过",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/coffee_small_expand_20260924/gpu4/coffee_task_workbench_20260922/runs/bag_large_extra_gpu4_seed_140045/episode_0000/motion",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_large_extra_gpu4_seed_140045_episode_0000"
+     ]
+    },
+    "features": {
+     "machine_dx": 0.09455,
+     "machine_dy": -0.05239,
+     "machine_yaw_deg": -3.92081,
+     "bag_dx": 0.00254,
+     "bag_dy": 0.04098,
+     "bag_yaw_deg": 37.55392
+    },
+    "categories": {
+     "group": "大扰动",
+     "cup_style": "green_tall"
+    },
+    "appearance": {},
+    "producer": {
+     "producer_passed": true,
+     "bean_outcome": {
+      "in_hopper": 98,
+      "in_bag": 0,
+      "outside": 2
+     },
+     "duration_s": 42.933333
+    }
+   },
+   {
+    "label": "coffee_wide_machine_2100_v1_episode_0002",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/coffee_wide_machine_2100_v1_episode_0002",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/coffee_wide_machine_2100_v1_episode_0002/pour_complete.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/coffee_wide_machine_2100_v1_episode_0002/pour_complete_left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/coffee_wide_machine_2100_v1_episode_0002/pour_complete_right.mp4"
+    },
+    "data_list": {
+     "id": "357d87810cc215fcbd84ba81",
+     "title": "1.2 · 大扰动 · coffee_wide_machine_2100_v1_episode_0002",
+     "collection": "coffee_pour_20260924",
+     "source_path": "/home/lingjun/coffee-workspace/coffee_task_workbench_20260922/runs/coffee_wide_machine_2100_v1/episode_0002/motion",
+     "source_exists_on_202": true,
+     "source_status": "来源任务自动通过",
+     "local_artifacts": [
+      "/home/lingjun/coffee-workspace/coffee_task_workbench_20260922/runs/coffee_wide_machine_2100_v1/episode_0002/motion",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/coffee_wide_machine_2100_v1_episode_0002"
+     ]
+    },
+    "features": {
+     "machine_dx": -0.09256,
+     "machine_dy": 0.03454,
+     "machine_yaw_deg": -16.48735,
+     "bag_dx": 0.00724,
+     "bag_dy": 0.0463,
+     "bag_yaw_deg": 58.16268
+    },
+    "categories": {
+     "group": "大扰动",
+     "cup_style": "blue_compact"
+    },
+    "appearance": {},
+    "producer": {
+     "producer_passed": true,
+     "bean_outcome": {
+      "in_hopper": 99,
+      "in_bag": 0,
+      "outside": 1
+     },
+     "duration_s": 44.033333
+    }
+   },
+   {
+    "label": "bag_small_extra_gpu5_seed_70005_episode_0000",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_small_extra_gpu5_seed_70005_episode_0000",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_small_extra_gpu5_seed_70005_episode_0000/pour_complete.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_small_extra_gpu5_seed_70005_episode_0000/pour_complete_left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_small_extra_gpu5_seed_70005_episode_0000/pour_complete_right.mp4"
+    },
+    "data_list": {
+     "id": "bbd0290071e3f4a80e3027cf",
+     "title": "1.2 · 小扰动 · bag_small_extra_gpu5_seed_70005_episode_0000",
+     "collection": "coffee_pour_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/coffee_small_expand_20260924/gpu5/coffee_task_workbench_20260922/runs/bag_small_extra_gpu5_seed_70005/episode_0000/motion",
+     "source_exists_on_202": true,
+     "source_status": "来源任务自动通过",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/coffee_small_expand_20260924/gpu5/coffee_task_workbench_20260922/runs/bag_small_extra_gpu5_seed_70005/episode_0000/motion",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_pour_final50_20260924/bag_small_extra_gpu5_seed_70005_episode_0000"
+     ]
+    },
+    "features": {
+     "machine_dx": -0.02032,
+     "machine_dy": 0.0383,
+     "machine_yaw_deg": 1.40314,
+     "bag_dx": 0.04885,
+     "bag_dy": 0.04997,
+     "bag_yaw_deg": 20.97611
+    },
+    "categories": {
+     "group": "小扰动",
+     "cup_style": "cream_classic"
+    },
+    "appearance": {},
+    "producer": {
+     "producer_passed": true,
+     "bean_outcome": {
+      "in_hopper": 100,
+      "in_bag": 0,
+      "outside": 0
+     },
+     "duration_s": 39.466667
+    }
+   }
+  ]
+ },
+ "1-3": {
+  "task_no": "1.3",
+  "pool": 50,
+  "method": "确定性选择：位姿特征按范围归一化后做最远点贪心，每覆盖一个新的类别值（手臂、杯款、扰动档、配色、灯光、起点类型）加 0.35；第一条取最接近中位数的 episode",
+  "feature_ranges_in_batch": {
+   "machine_dx": [
+    -0.0974,
+    0.13187
+   ],
+   "machine_dy": [
+    -0.11311,
+    0.13941
+   ],
+   "machine_dyaw_deg": [
+    -19.95929,
+    29.83769
+   ]
+  },
+  "episodes": [
+   {
+    "label": "button_two_press_seed5058_v2",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5058_v2",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5058_v2/motion/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5058_v2/motion/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5058_v2/motion/right.mp4"
+    },
+    "data_list": {
+     "id": "01ca58ab0bf0b5e934fc5179",
+     "title": "1.3 · button_two_press_seed5058_v2",
+     "collection": "coffee_button_v2_20260925",
+     "source_path": "202：/home/lingjun/coffee-workspace/render-workers/gpu2/coffee_task_workbench_20260922/runs/button_two_press_seed5058_v2",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5058_v2/motion",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/manifest.json"
+     ]
+    },
+    "features": {
+     "machine_dx": 0.01253,
+     "machine_dy": -0.06436,
+     "machine_dyaw_deg": 7.82849
+    },
+    "categories": {
+     "palette": "dark_walnut",
+     "lighting": "warm_evening"
+    },
+    "appearance": {
+     "palette": "dark_walnut",
+     "lighting": "warm_evening",
+     "appearance_seed": 5058,
+     "central_table": "dark_worktop_lower_cabinet_charcoal"
+    },
+    "producer": {
+     "seed": 5058,
+     "producer_status": "passed",
+     "source_run": "button_batch_seed5058_v1"
+    }
+   },
+   {
+    "label": "button_two_press_seed5021_v2",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5021_v2",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5021_v2/motion/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5021_v2/motion/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5021_v2/motion/right.mp4"
+    },
+    "data_list": {
+     "id": "a4cd352dc51f558860ee8b2a",
+     "title": "1.3 · button_two_press_seed5021_v2",
+     "collection": "coffee_button_v2_20260925",
+     "source_path": "202：/home/lingjun/coffee-workspace/render-workers/gpu2/coffee_task_workbench_20260922/runs/button_two_press_seed5021_v2",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5021_v2/motion",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/manifest.json"
+     ]
+    },
+    "features": {
+     "machine_dx": 0.02539,
+     "machine_dy": 0.13941,
+     "machine_dyaw_deg": -10.13118
+    },
+    "categories": {
+     "palette": "canonical",
+     "lighting": "neutral_day"
+    },
+    "appearance": {
+     "palette": "canonical",
+     "lighting": "neutral_day",
+     "appearance_seed": 5021,
+     "central_table": "light_worktop_warmwhite"
+    },
+    "producer": {
+     "seed": 5021,
+     "producer_status": "passed",
+     "source_run": "button_batch_seed5021_v1"
+    }
+   },
+   {
+    "label": "button_two_press_seed5121_v2",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5121_v2",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5121_v2/motion/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5121_v2/motion/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5121_v2/motion/right.mp4"
+    },
+    "data_list": {
+     "id": "32b54bdb954926ca802fb962",
+     "title": "1.3 · button_two_press_seed5121_v2",
+     "collection": "coffee_button_v2_20260925",
+     "source_path": "202：/home/lingjun/coffee-workspace/render-workers/gpu2/coffee_task_workbench_20260922/runs/button_two_press_seed5121_v2",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5121_v2/motion",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/manifest.json"
+     ]
+    },
+    "features": {
+     "machine_dx": 0.11552,
+     "machine_dy": 0.06562,
+     "machine_dyaw_deg": 12.9721
+    },
+    "categories": {
+     "palette": "light_scandi",
+     "lighting": "mixed_soft"
+    },
+    "appearance": {
+     "palette": "light_scandi",
+     "lighting": "mixed_soft",
+     "appearance_seed": 5121,
+     "central_table": "light_oak_warmwhite"
+    },
+    "producer": {
+     "seed": 5121,
+     "producer_status": "passed",
+     "source_run": "button_batch_seed5121_v1"
+    }
+   },
+   {
+    "label": "button_two_press_seed5078_v2",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5078_v2",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5078_v2/motion/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5078_v2/motion/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5078_v2/motion/right.mp4"
+    },
+    "data_list": {
+     "id": "c4cfb2d8fb37a0d760cabfa9",
+     "title": "1.3 · button_two_press_seed5078_v2",
+     "collection": "coffee_button_v2_20260925",
+     "source_path": "202：/home/lingjun/coffee-workspace/render-workers/gpu2/coffee_task_workbench_20260922/runs/button_two_press_seed5078_v2",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5078_v2/motion",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/manifest.json"
+     ]
+    },
+    "features": {
+     "machine_dx": -0.01569,
+     "machine_dy": 0.01621,
+     "machine_dyaw_deg": 29.83769
+    },
+    "categories": {
+     "palette": "cool_gray_black",
+     "lighting": "cool_day"
+    },
+    "appearance": {
+     "palette": "cool_gray_black",
+     "lighting": "cool_day",
+     "appearance_seed": 5078,
+     "central_table": "dark_worktop_lower_cabinet_charcoal"
+    },
+    "producer": {
+     "seed": 5078,
+     "producer_status": "passed",
+     "source_run": "button_batch_seed5078_v1"
+    }
+   },
+   {
+    "label": "button_two_press_seed5107_v2",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5107_v2",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5107_v2/motion/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5107_v2/motion/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5107_v2/motion/right.mp4"
+    },
+    "data_list": {
+     "id": "7b73a3f3177a477af98fc796",
+     "title": "1.3 · button_two_press_seed5107_v2",
+     "collection": "coffee_button_v2_20260925",
+     "source_path": "202：/home/lingjun/coffee-workspace/render-workers/gpu2/coffee_task_workbench_20260922/runs/button_two_press_seed5107_v2",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/button_two_press_seed5107_v2/motion",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_button_v2_20260925/manifest.json"
+     ]
+    },
+    "features": {
+     "machine_dx": -0.03219,
+     "machine_dy": 0.00026,
+     "machine_dyaw_deg": 16.3636
+    },
+    "categories": {
+     "palette": "warm_oak_linen",
+     "lighting": "mixed_bright"
+    },
+    "appearance": {
+     "palette": "warm_oak_linen",
+     "lighting": "mixed_bright",
+     "appearance_seed": 5107,
+     "central_table": "light_oak_warmwhite"
+    },
+    "producer": {
+     "seed": 5107,
+     "producer_status": "passed",
+     "source_run": "button_batch_seed5107_v1"
+    }
+   }
+  ]
+ },
+ "1-4": {
+  "task_no": "1.4",
+  "pool": 50,
+  "method": "确定性选择：位姿特征按范围归一化后做最远点贪心，每覆盖一个新的类别值（手臂、杯款、扰动档、配色、灯光、起点类型）加 0.35；第一条取最接近中位数的 episode",
+  "feature_ranges_in_batch": {
+   "machine_dx": [
+    -0.11086,
+    0.14646
+   ],
+   "machine_dy": [
+    -0.10629,
+    0.08371
+   ],
+   "machine_yaw_deg": [
+    -20.26924,
+    15.09305
+   ],
+   "handle_yaw_deg": [
+    124.42972,
+    241.25949
+   ]
+  },
+  "episodes": [
+   {
+    "label": "cup_retrieve_prefix50_044_v1",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_044_v1",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_044_v1/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_044_v1/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_044_v1/right.mp4"
+    },
+    "data_list": {
+     "id": "1811f9f16c2c8cca47a41aea",
+     "title": "1.4 · cup_retrieve_prefix50_044_v1",
+     "collection": "coffee_retrieve50_20260925",
+     "source_path": "182：/opt/dlami/nvme/lukun/coffee-workspace/coffee_task_workbench_20260922/runs/cup_retrieve_prefix50_044_v1",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_044_v1",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/dataset_manifest.json"
+     ]
+    },
+    "features": {
+     "machine_dx": 0.01968,
+     "machine_dy": -0.00635,
+     "machine_yaw_deg": -2.22191,
+     "handle_yaw_deg": 223.09291
+    },
+    "categories": {
+     "arm": "right",
+     "cup_style": "cream_classic",
+     "start": "full_initial"
+    },
+    "appearance": {},
+    "producer": {}
+   },
+   {
+    "label": "cup_retrieve_initial43_v3",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_initial43_v3",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_initial43_v3/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_initial43_v3/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_initial43_v3/right.mp4"
+    },
+    "data_list": {
+     "id": "89c81c205021c3332fcad4a3",
+     "title": "1.4 · cup_retrieve_initial43_v3",
+     "collection": "coffee_retrieve50_20260925",
+     "source_path": "182：/home/lukun/coffee-workspace/cup-workers/gpu3/coffee_task_workbench_20260922/runs/cup_retrieve_initial43_v3",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅 · 旧起点保留",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_initial43_v3",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/dataset_manifest.json"
+     ]
+    },
+    "features": {
+     "machine_dx": -0.03869,
+     "machine_dy": -0.00833,
+     "machine_yaw_deg": -2.5869,
+     "handle_yaw_deg": 132.93196
+    },
+    "categories": {
+     "arm": "left",
+     "cup_style": "cream_classic",
+     "start": "legacy_initial"
+    },
+    "appearance": {},
+    "producer": {}
+   },
+   {
+    "label": "cup_retrieve_initial_repair_right_v2",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_initial_repair_right_v2",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_initial_repair_right_v2/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_initial_repair_right_v2/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_initial_repair_right_v2/right.mp4"
+    },
+    "data_list": {
+     "id": "8842f855b10f4819c50aaa3d",
+     "title": "1.4 · cup_retrieve_initial_repair_right_v2",
+     "collection": "coffee_retrieve50_20260925",
+     "source_path": "182：/opt/dlami/nvme/lukun/coffee-workspace/cup-workers/gpu2/coffee_task_workbench_20260922/runs/cup_retrieve_initial_repair_right_v2",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_initial_repair_right_v2",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/dataset_manifest.json"
+     ]
+    },
+    "features": {
+     "machine_dx": -0.11086,
+     "machine_dy": -0.05926,
+     "machine_yaw_deg": 15.09305,
+     "handle_yaw_deg": 241.25949
+    },
+    "categories": {
+     "arm": "right",
+     "cup_style": "blue_compact",
+     "start": "full_initial"
+    },
+    "appearance": {},
+    "producer": {}
+   },
+   {
+    "label": "cup_retrieve_prefix50_006_v1",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_006_v1",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_006_v1/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_006_v1/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_006_v1/right.mp4"
+    },
+    "data_list": {
+     "id": "b221e241966a5cbecaa6220a",
+     "title": "1.4 · cup_retrieve_prefix50_006_v1",
+     "collection": "coffee_retrieve50_20260925",
+     "source_path": "182：/opt/dlami/nvme/lukun/coffee-workspace/cup-workers/gpu1/coffee_task_workbench_20260922/runs/cup_retrieve_prefix50_006_v1",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_006_v1",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/dataset_manifest.json"
+     ]
+    },
+    "features": {
+     "machine_dx": 0.14186,
+     "machine_dy": -0.07838,
+     "machine_yaw_deg": 9.39163,
+     "handle_yaw_deg": 143.81085
+    },
+    "categories": {
+     "arm": "left",
+     "cup_style": "cream_classic",
+     "start": "full_initial"
+    },
+    "appearance": {},
+    "producer": {}
+   },
+   {
+    "label": "cup_retrieve_prefix50_038_v1",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_038_v1",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_038_v1/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_038_v1/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_038_v1/right.mp4"
+    },
+    "data_list": {
+     "id": "df6c3cc4025cc9eb075ea823",
+     "title": "1.4 · cup_retrieve_prefix50_038_v1",
+     "collection": "coffee_retrieve50_20260925",
+     "source_path": "182：/opt/dlami/nvme/lukun/coffee-workspace/cup-workers/gpu3/coffee_task_workbench_20260922/runs/cup_retrieve_prefix50_038_v1",
+     "source_exists_on_202": false,
+     "source_status": "来源任务自动通过 · 人工待审阅",
+     "local_artifacts": [
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/cup_retrieve_prefix50_038_v1",
+      "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/coffee_retrieve_mixed_original11_20260926/dataset_manifest.json"
+     ]
+    },
+    "features": {
+     "machine_dx": 0.11559,
+     "machine_dy": -0.06947,
+     "machine_yaw_deg": -2.70192,
+     "handle_yaw_deg": 220.85341
+    },
+    "categories": {
+     "arm": "right",
+     "cup_style": "green_tall",
+     "start": "full_initial"
+    },
+    "appearance": {},
+    "producer": {}
+   }
+  ]
+ }
+}

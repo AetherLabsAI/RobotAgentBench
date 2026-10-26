@@ -1,0 +1,193 @@
+{
+ "schema": "arena.coffee_table_place.initial_state.v2",
+ "api_id": "5-3",
+ "source": {
+  "episode_id": "2e1b2c41-e192-5485-838c-6400cae544d5",
+  "lerobot_episode_index": 19,
+  "sim_info_dir": "/mnt/agent-bench-data/lingjun/ziche/data/place_tray_lerobot_20260918/sim_info/episode_000019",
+  "dataset": "/mnt/agent-bench-data/lingjun/ziche/data/place_tray_lerobot_20260918",
+  "hand": "r",
+  "clutter_count": 2,
+  "coffee_table_variant": "cool_gray_black",
+  "tray_color": "white",
+  "seed": 933700002,
+  "slot": 157,
+  "attempt": 2,
+  "case": "/mnt/agent-bench-data/lingjun/ziche/work/place_training_tray_20260918/cases/gatorade_t/slot_157_attempt_002",
+  "asset_release": "/mnt/agent-bench-data/lingjun/ziche/assets/shelf_pick/releases/20260916_oreo_v10",
+  "benchmark_task": "benchmark_3_6",
+  "physics_hz": 60,
+  "control_hz": 20,
+  "release_frame": 203,
+  "world_geometry_status": "CLEAR_AT_CHECKED_SAMPLES",
+  "robot_frame": "/World/Robot",
+  "sha256": {
+   "episode_json": "1fc7292986af1770e6ef3cb2b8eb74765e009b8bfd63119166815807bcc4fa05",
+   "sim_info_json": "cc5b3f226d3b22d7d3159d628d22c0ec613e0b1058d76113062314c59f34f373",
+   "appearance_json": "7af5e2666d26e1a121f8c23f5d387c9bd2593cd83fcf999bda6455a6edd5ffaf",
+   "scene_usda": "2ca89005bd1bab0915aca8d4fa15929aab054623e95692dfb00fa99506c2dc8d",
+   "initial_state_npz": "3180152378583e7c6cd3c50a40ee0db57329a3fb1242776a969493083bd732a6",
+   "recording_20hz_npz": "d6c408099dc2024eae50f4786f0769e1e37f4510eb359e8b0354895df920923b"
+  },
+  "local_recording": "references/newdata_recordings_20260918/5-3/fixed/recording_20hz.npz",
+  "scope": "held-object start, tray pose, in-tray clutter and robot station of one accepted source episode; source physics (60 Hz) and controller are NOT reproduced",
+  "role": "fixed"
+ },
+ "target_path": "/World/Assets/ShelfItems/gatorade_t",
+ "held": {
+  "position_m": [
+   -2.0917201042175293,
+   0.298880934715271,
+   0.7048876881599426
+  ],
+  "quaternion_wxyz": [
+   0.7167408006657244,
+   0.003813506790795301,
+   0.01804597001268911,
+   0.6970957070541419
+  ]
+ },
+ "robot": {
+  "prim_path": "/World/Robot",
+  "position_m": [
+   -1.965139627456665,
+   0.8621165752410889,
+   0.012377019971609116
+  ],
+  "quaternion_wxyz": [
+   -0.7057863473892211,
+   0.0,
+   0.0,
+   0.7084247538299193
+  ]
+ },
+ "joint_positions": {
+  "idx01_body_joint1": 0.007586578838527203,
+  "idx02_body_joint2": 0.5236265063285828,
+  "idx11_head_joint1": 2.843381707862136e-06,
+  "idx12_head_joint2": 0.43645334243774414,
+  "idx21_arm_l_joint1": -1.0427099466323853,
+  "idx61_arm_r_joint1": 0.9752696752548218,
+  "idx22_arm_l_joint2": 0.6117514967918396,
+  "idx62_arm_r_joint2": -0.6606429815292358,
+  "idx23_arm_l_joint3": 0.19139090180397034,
+  "idx63_arm_r_joint3": -0.23690415918827057,
+  "idx24_arm_l_joint4": -1.2196522951126099,
+  "idx64_arm_r_joint4": 1.4281697273254395,
+  "idx25_arm_l_joint5": 0.6207931041717529,
+  "idx65_arm_r_joint5": -0.6418672800064087,
+  "idx26_arm_l_joint6": 1.3757152557373047,
+  "idx66_arm_r_joint6": -1.5324292182922363,
+  "idx27_arm_l_joint7": -0.12601836025714874,
+  "idx67_arm_r_joint7": 0.17202147841453552,
+  "idx31_gripper_l_inner_joint1": -0.7844040393829346,
+  "idx41_gripper_l_outer_joint1": 0.7844040393829346,
+  "idx71_gripper_r_inner_joint1": -0.3750186562538147,
+  "idx81_gripper_r_outer_joint1": 0.3708791434764862,
+  "idx32_gripper_l_inner_joint3": -0.0891469195485115,
+  "idx42_gripper_l_outer_joint3": 0.08875255286693573,
+  "idx72_gripper_r_inner_joint3": 0.04110734164714813,
+  "idx82_gripper_r_outer_joint3": -0.040347859263420105,
+  "idx33_gripper_l_inner_joint4": 0.03454357013106346,
+  "idx43_gripper_l_outer_joint4": -0.033450573682785034,
+  "idx73_gripper_r_inner_joint4": 0.03491497412323952,
+  "idx83_gripper_r_outer_joint4": -0.03490662947297096,
+  "idx39_gripper_l_inner_joint0": 0.3921380937099457,
+  "idx49_gripper_l_outer_joint0": -0.393045574426651,
+  "idx79_gripper_r_inner_joint0": 0.1547834724187851,
+  "idx89_gripper_r_outer_joint0": -0.15098290145397186
+ },
+ "tray": {
+  "prim_path": "/World/Assets/Tray",
+  "floor_z_m": 0.45490211957462423,
+  "position_m": [
+   -2.1128317343859506,
+   0.22314113642476371,
+   0.45000002653844173
+  ],
+  "quaternion_wxyz": [
+   0.7069764699780717,
+   0.7069764699780716,
+   -0.013574641702258711,
+   -0.013574641702258713
+  ]
+ },
+ "clutter": [
+  {
+   "prim_path": "/World/Assets/Tier2Items/skit_littles",
+   "product": "skit_littles",
+   "position_m": [
+    -2.022127389907837,
+    0.24630023539066315,
+    0.45490214228630066
+   ],
+   "quaternion_wxyz": [
+    0.36418159818567725,
+    -3.3061947805763816e-08,
+    7.943753235653955e-08,
+    0.931327957028521
+   ]
+  },
+  {
+   "prim_path": "/World/Assets/ShelfItems/gatorade_m",
+   "product": "gatorade_m",
+   "position_m": [
+    -2.2179994583129883,
+    0.16505703330039978,
+    0.4549027681350708
+   ],
+   "quaternion_wxyz": [
+    -0.5121067884454923,
+    2.2353808695621588e-05,
+    -3.103046475493122e-05,
+    0.8589217867567811
+   ]
+  }
+ ],
+ "verification": {
+  "state_reference": "recording_20hz.npz frame 0",
+  "plan_reference": "episode.json",
+  "authored_state_kind": "AUTHORED_INITIAL_STATE_ONLY_NOT_ACTUAL",
+  "authored_npz_is_a_spawn_seed": true,
+  "held_vs_authored_seed_m": 0.32572682910503997,
+  "held_min_distance_from_seed_m": 0.05,
+  "posture_joints": [
+   "idx01_body_joint1",
+   "idx02_body_joint2",
+   "idx11_head_joint1",
+   "idx12_head_joint2",
+   "idx21_arm_l_joint1",
+   "idx61_arm_r_joint1",
+   "idx22_arm_l_joint2",
+   "idx62_arm_r_joint2",
+   "idx23_arm_l_joint3",
+   "idx63_arm_r_joint3",
+   "idx24_arm_l_joint4",
+   "idx64_arm_r_joint4",
+   "idx25_arm_l_joint5",
+   "idx65_arm_r_joint5",
+   "idx26_arm_l_joint6",
+   "idx66_arm_r_joint6",
+   "idx27_arm_l_joint7",
+   "idx67_arm_r_joint7"
+  ],
+  "max_posture_joint_deviation_rad": 0.0032080019127334047,
+  "posture_joint_tolerance_rad": 0.01,
+  "max_gripper_joint_deviation_rad": 0.05140191316604614,
+  "gripper_joints_excluded": "the clamp loop closes the gripper before frame 0",
+  "max_base_position_deviation_m": 2.6933470786971725e-08,
+  "base_position_tolerance_m": 1e-06,
+  "max_base_quaternion_deviation": 1.2370189317323366e-09,
+  "base_quaternion_tolerance": 1e-06,
+  "max_clutter_position_deviation_m": 0.000499977288323572,
+  "clutter_position_tolerance_m": 0.005,
+  "max_clutter_quaternion_deviation": 3.103046475493122e-05,
+  "clutter_quaternion_tolerance": 0.005,
+  "tray_position_deviation_m": 0.0,
+  "tray_orientation_matches_baseline": true,
+  "coffee_table_xform_matches_baseline": true,
+  "baseline": "assets/house_scene_l1/demo_sim/scene_room_baseline.usda",
+  "baseline_sha256": "3d7e4924c41d0316b501d0643b45af4cf8e6783e928ec890fee2709904a5fb19"
+ },
+ "physical_acceptance": false
+}

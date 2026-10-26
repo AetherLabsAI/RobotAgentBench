@@ -1,0 +1,33 @@
+{
+  "schema": "arena.personal_item_pick.grouped_definitions.v2",
+  "status": "registered_partial_initial_state_physics_pending",
+  "families": {
+    "sofa_pick": {
+      "title": "沙发抓取",
+      "source_location": "sofa",
+      "existing_api_ids": ["15-1", "13-6", "15-2", "6-3", "13-7", "6-2", "6-1"],
+      "added_api_ids": ["13-1", "13-5"],
+      "reuse_candidate": "evaluation.tasks.tidy_sofa.api_runtime.LivingroomRuntime",
+      "implementation_status": "umbrella_fixed_trajectory_api_validated_bottle_fixed_reset_validated"
+    },
+    "kitchen_counter_pick": {
+      "title": "厨房长台面抓取",
+      "source_location": "kitchen_counter",
+      "existing_api_ids": [],
+      "added_api_ids": ["13-2", "13-3"],
+      "reuse_candidate": null,
+      "implementation_status": "powerbank_fixed_reset_validated_lunchbox_source_blocked"
+    }
+  },
+  "scoring": {"grasp": 3, "lift": 2, "maximum_score": 5, "reuse": "evaluation.tasks.tidy_sofa.process_rules.PickScorer", "approval": "user_confirmed_20260917"},
+  "lift_threshold_m": 0.05,
+  "hold_duration_s": 1.0,
+  "task_timeout_s": 30.0,
+  "local_randomization": null,
+  "tasks": [
+    {"api_id": "13-1", "family": "sofa_pick", "instruction": "从沙发上抓起折叠雨伞。", "benchmark_id": "5.1", "object": "umbrella", "source_location": "sofa", "target_prim": "/World/Assets/Umbrella", "support_prim": null, "station": "sofa_pick", "initial_state_validated": true, "initial_validation_evidence": "artifacts/umbrella_probe_20260917_v3/probe/probe.json", "full_grasp_validated": true, "grasp_validation_evidence": "artifacts/umbrella-e2e-20260917-v3/run/runner/report.json", "validation_scope": "one_fixed_recording_via_public_api_until_success", "randomization_validated": false, "vla_validated": false},
+    {"api_id": "13-2", "family": "kitchen_counter_pick", "instruction": "从厨房长台面上抓起便当盒。", "benchmark_id": "5.3", "object": "salad_box", "source_alias": "lunchbox", "source_location": "kitchen_counter", "target_prim": "/World/Assets/Task108Saladbox", "support_prim": "/World/Background/Shell/CounterTop_17", "station": "kitchen_table_place", "initial_state_validated": false},
+    {"api_id": "13-3", "family": "kitchen_counter_pick", "instruction": "从厨房长台面上抓起移动电源。", "benchmark_id": "5.5", "object": "power_bank", "source_location": "kitchen_counter", "target_prim": "/World/Assets/PowerBank", "support_prim": "/World/Background/Shell/CounterTop_17", "station": "kitchen_table_place", "initial_state_validated": true, "initial_validation_evidence": "artifacts/powerbank-probe-20260917-v1/run/probe.json", "full_grasp_validated": false},
+    {"api_id": "13-5", "family": "sofa_pick", "instruction": "从沙发上抓起水瓶。", "benchmark_id": "5.11", "object": "bottle", "source_location": "sofa", "target_prim": "/World/Task73/Bottle", "support_prim": "/World/Assets/Sofa", "station": "sofa_pick", "initial_state_validated": true, "initial_validation_evidence": "artifacts/bottle_probe_20260917_v1/probe/probe.json", "full_grasp_validated": false, "randomization_validated": false, "vla_validated": false}
+  ]
+}

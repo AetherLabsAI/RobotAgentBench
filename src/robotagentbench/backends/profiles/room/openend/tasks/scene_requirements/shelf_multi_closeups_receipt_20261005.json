@@ -1,0 +1,23 @@
+{
+  "scope": "scene_requirements task-local UI, scene generation and preview rendering",
+  "web_category_limit": 4,
+  "limit_scope": "drinks_and_snacks_combined",
+  "browser_checks": ["four selections disable unchecked categories", "deselect re-enables categories"],
+  "inventory_policy": "existing shelf_required_categories_v1; each tier 4–10 stock items",
+  "published_episode": "room_207b0d0c8041",
+  "published_inventory": {"drinks": 5, "snacks": 6, "targets": 1, "background_stock": 10},
+  "non_shelf_object_bounds_equal_to_previous_episode": true,
+  "static_render": {"gpu": 0, "image_count": 20, "directory": "renders_v2", "scene_and_image_hashes_verified": true},
+  "four_category_cpu_scene": "binding_2d2a75747a55",
+  "four_category_bindings": {"distinct_explicit_targets": 4, "total_stock": 11, "background_stock": 7},
+  "runtime_registration_for_multiple_categories": "pending_user_approval_to_modify_shared_openend_room_validation",
+  "shared_files_modified": false,
+  "native_physics_validated": false,
+  "synthetic_runtime_regression": {"tests": 161, "passed": 161, "skipped": 0},
+  "local_tests": {"tests": 85, "passed": 76, "skipped": 9},
+  "visual_review": {
+    "method": "actual static render inspection, not physics or full trajectory validation",
+    "shelf_and_stock_closeups": "visually inspected",
+    "known_existing_issue": "Coffee area closeup reveals overlap with fixed layout microwave; non-shelf scene unchanged. Not repaired or hidden for preview."
+  }
+}

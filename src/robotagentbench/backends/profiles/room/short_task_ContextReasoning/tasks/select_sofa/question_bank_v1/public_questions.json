@@ -1,0 +1,809 @@
+{
+  "schema": "sofa_context_question_bank.v1",
+  "version": "draft_1",
+  "language": "en",
+  "shared_context": "There are eight distinct personal objects on the sofa: a TV remote, a wallet, a sunglasses case, a power bank, a cap, an umbrella, a water bottle, and a green notebook. In this household, the green notebook holds the household utility bills and payment records. The wallet is where cash and payment cards are kept. The water bottle contains drinking water. The power bank is charged and compatible with the user's phone; a suitable cable is available whenever needed. The sunglasses case is intended for protecting folded eyewear. These are scenario facts, not claims that hidden contents can be inferred from appearance.",
+  "shared_instruction": "Use the user's situation to select one object on the sofa. Touch it with either gripper; do not pick it up or carry it. A correct candidate touch earns 1 point and ends the episode. Touching any wrong candidate ends the episode at 0 points. If correct and wrong candidates are touched simultaneously, the episode fails. Ignore superseded requests and satisfy the latest request. Contacts with the sofa or room are not candidate selections.",
+  "questions": [
+    {
+      "id": "S001",
+      "scenario": "My payment cards are packed. The remaining problem is the rainy walk from the taxi."
+    },
+    {
+      "id": "S002",
+      "scenario": "I no longer need the household charge record. I need to recharge my phone without a wall socket."
+    },
+    {
+      "id": "S003",
+      "scenario": "Sunshine is not the issue. I need something that opens overhead to block falling rain."
+    },
+    {
+      "id": "S004",
+      "scenario": "I need the record showing the total for our household water service."
+    },
+    {
+      "id": "S005",
+      "scenario": "The television works normally. My phone is the device that needs extra electricity."
+    },
+    {
+      "id": "S006",
+      "scenario": "I want shade for my forehead, but both hands must stay available."
+    },
+    {
+      "id": "S007",
+      "scenario": "My phone is charged, but the stall does not take phone payments. I need my physical card holder."
+    },
+    {
+      "id": "S008",
+      "scenario": "Covering only the top of my head is insufficient. I need rain protection over my shoulders too."
+    },
+    {
+      "id": "S009",
+      "scenario": "The television is too loud for the person sleeping next door. I need to lower it from the sofa."
+    },
+    {
+      "id": "S010",
+      "scenario": "My phone battery is fine. I need to protect my folded glasses, not power a device."
+    },
+    {
+      "id": "S011",
+      "scenario": "I no longer need to pack my glasses. I need to refill my drinking-water container."
+    },
+    {
+      "id": "S012",
+      "scenario": "I am no longer staying inside. Before leaving, I want the item I can wear on my head."
+    },
+    {
+      "id": "S013",
+      "scenario": "I am not reviewing expenses today. I am taking my payment cards to the shop."
+    },
+    {
+      "id": "S014",
+      "scenario": "I want a sip of water before leaving."
+    },
+    {
+      "id": "S015",
+      "scenario": "The sun has gone down, so I am taking my sunglasses off. I need their protective container."
+    },
+    {
+      "id": "S016",
+      "scenario": "The cable is already in my pocket. I need a portable supply to connect it to without an outlet."
+    },
+    {
+      "id": "S017",
+      "scenario": "My lenses are protected. I now need the different holder that keeps my payment cards together."
+    },
+    {
+      "id": "S018",
+      "scenario": "I have been given change and want to put it back where I keep my money."
+    },
+    {
+      "id": "S019",
+      "scenario": "The online payment failed. I will pay cash at the counter and need my usual money holder."
+    },
+    {
+      "id": "S020",
+      "scenario": "I need to keep my phone running on a long bus ride with no electrical socket."
+    },
+    {
+      "id": "S021",
+      "scenario": "I wanted a drink earlier, but I have one now. The phone battery is the urgent problem."
+    },
+    {
+      "id": "S022",
+      "scenario": "The bus stop has no roof. I need something to hold over myself while waiting in the rain."
+    },
+    {
+      "id": "S023",
+      "scenario": "Cancel the television request. I am leaving and need the holder with my money."
+    },
+    {
+      "id": "S024",
+      "scenario": "I finished checking the household charges. My next need is mobile power, not financial information."
+    },
+    {
+      "id": "S025",
+      "scenario": "I want to put loose banknotes into the holder I normally use for money."
+    },
+    {
+      "id": "S026",
+      "scenario": "Heavy showers are forecast, and the path to the station has no shelter. I need an overhead rain shield."
+    },
+    {
+      "id": "S027",
+      "scenario": "I am putting my sunglasses away for the evening and need their protective container."
+    },
+    {
+      "id": "S028",
+      "scenario": "It is raining, but I am indoors. I am simply thirsty and want drinking water."
+    },
+    {
+      "id": "S029",
+      "scenario": "I want to refill the container I use for drinking water before a trip."
+    },
+    {
+      "id": "S030",
+      "scenario": "I planned to stay indoors, but I must go out in the rain. I need a portable overhead cover."
+    },
+    {
+      "id": "S031",
+      "scenario": "I am not packing for an outing. I need to review our household utility payment details."
+    },
+    {
+      "id": "S032",
+      "scenario": "We are leaving the shade. I want something on my head that keeps my hands free."
+    },
+    {
+      "id": "S033",
+      "scenario": "I want to consult the record showing the amount due for our household utilities."
+    },
+    {
+      "id": "S034",
+      "scenario": "I missed the last line. I want to rewind the television playback."
+    },
+    {
+      "id": "S035",
+      "scenario": "I need to bring drinking water for a long journey."
+    },
+    {
+      "id": "S036",
+      "scenario": "I can hold a cover overhead. I need it to shield me and my parcel from the rain."
+    },
+    {
+      "id": "S037",
+      "scenario": "Cancel packing my glasses. I will wear them along with something on my head with a brim."
+    },
+    {
+      "id": "S038",
+      "scenario": "I thought I needed rain protection, but I am staying in. I now want my drinking-water container."
+    },
+    {
+      "id": "S039",
+      "scenario": "I thought my phone needed charging, but it is full. Now I want something to wear over my hair."
+    },
+    {
+      "id": "S040",
+      "scenario": "I thought I wanted drinking water, but I meant our water-service charge. I need the household record."
+    },
+    {
+      "id": "S041",
+      "scenario": "My physical cards are ready. I still need backup power for my nearly empty phone."
+    },
+    {
+      "id": "S042",
+      "scenario": "My throat is dry after talking. I need the container I can drink water from."
+    },
+    {
+      "id": "S043",
+      "scenario": "I will use phone navigation all afternoon and need an extra portable source of electricity."
+    },
+    {
+      "id": "S044",
+      "scenario": "I changed my mind about the news. I want to return the television to the movie channel."
+    },
+    {
+      "id": "S045",
+      "scenario": "I found my money holder. The remaining thing I want is a wearable brim for the walk."
+    },
+    {
+      "id": "S046",
+      "scenario": "I have money for the journey. I need to keep my phone powered to show my electronic ticket."
+    },
+    {
+      "id": "S047",
+      "scenario": "I need to verify a household electricity charge, not supply electricity to my phone."
+    },
+    {
+      "id": "S048",
+      "scenario": "My glasses are protected in their holder. Now I need protection from the rain outside."
+    },
+    {
+      "id": "S049",
+      "scenario": "I found the household charge record. Before we discuss it, I need the television sound turned down."
+    },
+    {
+      "id": "S050",
+      "scenario": "The outdoor trip is canceled, but I still need drinking water for this long indoor meeting."
+    },
+    {
+      "id": "S051",
+      "scenario": "I want to change the television from the sports channel to the news."
+    },
+    {
+      "id": "S052",
+      "scenario": "Cancel the plan for a walk. I want to stop the show currently playing on the television."
+    },
+    {
+      "id": "S053",
+      "scenario": "I do not want folded glasses loose in my luggage. I need their fitted holder."
+    },
+    {
+      "id": "S054",
+      "scenario": "My phone has plenty of battery. It is me who needs a drink after the walk."
+    },
+    {
+      "id": "S055",
+      "scenario": "I planned to watch television, but first I need the deadline in our household payment record."
+    },
+    {
+      "id": "S056",
+      "scenario": "I need water to drink during a long meeting."
+    },
+    {
+      "id": "S057",
+      "scenario": "I already have my bank card. I need the record showing how much the household payment should be."
+    },
+    {
+      "id": "S058",
+      "scenario": "I am leaving for the market and need the personal item that carries my cash."
+    },
+    {
+      "id": "S059",
+      "scenario": "Rain protection is sorted. My immediate concern is lenses rubbing against things in my bag."
+    },
+    {
+      "id": "S060",
+      "scenario": "The sun is bright, but I am in the shade. I need the container I can take a drink from."
+    },
+    {
+      "id": "S061",
+      "scenario": "Rain preparations are finished. Now I need to keep my eyewear from rubbing against my keys."
+    },
+    {
+      "id": "S062",
+      "scenario": "My payment cards are packed. I need the other small holder, designed for folded eyewear."
+    },
+    {
+      "id": "S063",
+      "scenario": "Forget the request for something to shade my head. I now need to put my sunglasses safely away."
+    },
+    {
+      "id": "S064",
+      "scenario": "The household charge is already checked. I need my payment card now, not the record of the amount."
+    },
+    {
+      "id": "S065",
+      "scenario": "I will take photographs using both hands. Any shade for my forehead must be worn on my head."
+    },
+    {
+      "id": "S066",
+      "scenario": "We have enough cash. The missing information is the deadline in our household payment record."
+    },
+    {
+      "id": "S067",
+      "scenario": "My glasses are stored safely. The remaining problem is keeping my phone powered on the train."
+    },
+    {
+      "id": "S068",
+      "scenario": "I no longer need household paperwork. I need something to open above me for the rainy walk."
+    },
+    {
+      "id": "S069",
+      "scenario": "I asked for rain protection earlier, but I am taking a taxi. First I need my cash in its usual holder."
+    },
+    {
+      "id": "S070",
+      "scenario": "We are going out in the rain. Before leaving, I need to turn the television off."
+    },
+    {
+      "id": "S071",
+      "scenario": "I need a wearable covering for the top of my head during a sunny walk."
+    },
+    {
+      "id": "S072",
+      "scenario": "I no longer need phone power. I want to review the household electricity charges instead."
+    },
+    {
+      "id": "S073",
+      "scenario": "I would like a wearable covering for my hair and the top of my head."
+    },
+    {
+      "id": "S074",
+      "scenario": "Forget the television request. I need to recharge my phone during a journey without outlets."
+    },
+    {
+      "id": "S075",
+      "scenario": "I found my payment cards. Now I need to open the television settings."
+    },
+    {
+      "id": "S076",
+      "scenario": "I do not need drinking water. Water is falling from the sky, and I need an overhead shield."
+    },
+    {
+      "id": "S077",
+      "scenario": "I planned to wear sunglasses, but we are staying indoors. I need their protective holder instead."
+    },
+    {
+      "id": "S078",
+      "scenario": "The television can wait. I need the record where I can check the household amount due."
+    },
+    {
+      "id": "S079",
+      "scenario": "Phone charging is sorted. Now I need protection from rain on the way to the station."
+    },
+    {
+      "id": "S080",
+      "scenario": "My phone is nearly empty, and I will be away from wall outlets. I need portable electrical power."
+    },
+    {
+      "id": "S081",
+      "scenario": "My glasses are protected and my money is packed. I still need drinking water for the trip."
+    },
+    {
+      "id": "S082",
+      "scenario": "I found my bank cards. I still need the protective holder for my folded glasses."
+    },
+    {
+      "id": "S083",
+      "scenario": "It is sunny outside, but I am indoors now. I need storage that protects my eyewear."
+    },
+    {
+      "id": "S084",
+      "scenario": "I need drinking water with me during outdoor exercise."
+    },
+    {
+      "id": "S085",
+      "scenario": "I decided not to wear sunglasses on the train. I need their protective container in my bag."
+    },
+    {
+      "id": "S086",
+      "scenario": "I do not need electricity. I need to refill the container I have been drinking water from."
+    },
+    {
+      "id": "S087",
+      "scenario": "My phone battery is low, but that can wait. First mute the television so I can answer a call."
+    },
+    {
+      "id": "S088",
+      "scenario": "Lunch is already paid for. I now need the container I can drink water from."
+    },
+    {
+      "id": "S089",
+      "scenario": "I must cross an uncovered courtyard in the rain and need overhead protection."
+    },
+    {
+      "id": "S090",
+      "scenario": "Someone is at the door. I want to pause the television show before answering."
+    },
+    {
+      "id": "S091",
+      "scenario": "It has started raining. I need the item designed to shield me while walking home."
+    },
+    {
+      "id": "S092",
+      "scenario": "The waiting area has no working outlets. I have a cable and need to recharge my phone."
+    },
+    {
+      "id": "S093",
+      "scenario": "My phone is charged and my drink is packed. I still want a brim I can wear."
+    },
+    {
+      "id": "S094",
+      "scenario": "The ticket machine requires a payment card. I need the holder where I keep mine."
+    },
+    {
+      "id": "S095",
+      "scenario": "I know the route and have enough phone power. I need rain protection for the walk."
+    },
+    {
+      "id": "S096",
+      "scenario": "I already have sunglasses. I also want something on my head to cover my hair and shade my forehead."
+    },
+    {
+      "id": "S097",
+      "scenario": "It is not raining. I want something worn on my head rather than held overhead."
+    },
+    {
+      "id": "S098",
+      "scenario": "The television is not the problem. I put my sunglasses down and need their protective container."
+    },
+    {
+      "id": "S099",
+      "scenario": "The television is showing the wrong input. I need to select the game console."
+    },
+    {
+      "id": "S100",
+      "scenario": "I am going outside and want a brim above my eyes without holding anything."
+    },
+    {
+      "id": "S101",
+      "scenario": "I was going to check the weather, but my phone is dying. First I need its portable power source."
+    },
+    {
+      "id": "S102",
+      "scenario": "I want something that opens above me when it rains and folds away indoors."
+    },
+    {
+      "id": "S103",
+      "scenario": "My drink is packed. I still need the item that carries my money."
+    },
+    {
+      "id": "S104",
+      "scenario": "I am not paying yet. First I need to read the itemized household charges."
+    },
+    {
+      "id": "S105",
+      "scenario": "I asked for phone power earlier, but that is sorted. Now I am thirsty."
+    },
+    {
+      "id": "S106",
+      "scenario": "Cancel the television request. I want a sip of water first."
+    },
+    {
+      "id": "S107",
+      "scenario": "I have finished wearing my eyewear outside and need its protective container."
+    },
+    {
+      "id": "S108",
+      "scenario": "I want my hair covered for the outing, not my glasses protected in a container."
+    },
+    {
+      "id": "S109",
+      "scenario": "The holder for money is unsuitable for my glasses. I need the one specifically made to protect them."
+    },
+    {
+      "id": "S110",
+      "scenario": "Cancel the request for payment cards. I need to check the itemized household total before paying."
+    },
+    {
+      "id": "S111",
+      "scenario": "I am not thirsty. What is running low is my phone battery, and I have its cable."
+    },
+    {
+      "id": "S112",
+      "scenario": "My sunglasses are going into a bag with keys. I need their protective container."
+    },
+    {
+      "id": "S113",
+      "scenario": "I am taking off my sunglasses. I need their protective holder to prevent scratched lenses."
+    },
+    {
+      "id": "S114",
+      "scenario": "I found enough cash. Now I need the record telling me the household amount owed."
+    },
+    {
+      "id": "S115",
+      "scenario": "My ticket is on my phone, which is about to shut down. There are no sockets nearby."
+    },
+    {
+      "id": "S116",
+      "scenario": "I want to enable subtitles through the television menu."
+    },
+    {
+      "id": "S117",
+      "scenario": "The taxi was canceled. I must walk through rain and need portable overhead shelter."
+    },
+    {
+      "id": "S118",
+      "scenario": "I want my hair tucked under something I wear on my head."
+    },
+    {
+      "id": "S119",
+      "scenario": "I planned to leave my glasses on the table, but now I must pack them. I need their fitted holder."
+    },
+    {
+      "id": "S120",
+      "scenario": "My phone battery is fine. I need the household charge record, not a power supply."
+    },
+    {
+      "id": "S121",
+      "scenario": "The television picture is fine, but the dialogue is too quiet. I need to raise its volume."
+    },
+    {
+      "id": "S122",
+      "scenario": "We changed a short ride into a long journey without sockets. I have my cable and need extra electricity."
+    },
+    {
+      "id": "S123",
+      "scenario": "I am thirsty after the walk. I need the container holding drinking water."
+    },
+    {
+      "id": "S124",
+      "scenario": "The phone has enough power now. I need the holder with my physical card for the deposit."
+    },
+    {
+      "id": "S125",
+      "scenario": "I want water to drink, not something that keeps falling rain off me."
+    },
+    {
+      "id": "S126",
+      "scenario": "I need reserve electrical power for my phone during today's journey."
+    },
+    {
+      "id": "S127",
+      "scenario": "The household paperwork can wait. I am leaving and want a wearable covering for my head."
+    },
+    {
+      "id": "S128",
+      "scenario": "I need a portable cover that opens above me and keeps rain off my shoulders."
+    },
+    {
+      "id": "S129",
+      "scenario": "I want to read the latest household payment notice in our designated record."
+    },
+    {
+      "id": "S130",
+      "scenario": "The screen has gone quiet because I accidentally muted it. The television still has power."
+    },
+    {
+      "id": "S131",
+      "scenario": "I was going to check the amount due, but I confirmed it on my phone. Now I need my cash-and-card holder."
+    },
+    {
+      "id": "S132",
+      "scenario": "I need to take my cash and cards out together in their usual holder."
+    },
+    {
+      "id": "S133",
+      "scenario": "We were about to check expenses, but first pause the program so we can talk."
+    },
+    {
+      "id": "S134",
+      "scenario": "My phone is charged and my drink is ready. I still need an overhead shield against rain."
+    },
+    {
+      "id": "S135",
+      "scenario": "I need to compare the itemized household charges before paying anything."
+    },
+    {
+      "id": "S136",
+      "scenario": "I planned to go out, but I am staying for a film. I now need to start the television playback."
+    },
+    {
+      "id": "S137",
+      "scenario": "Rain is forecast, but my immediate need is my cash holder so I can pay the taxi driver."
+    },
+    {
+      "id": "S138",
+      "scenario": "I need to keep rain off my head and the bag I carry during a short walk."
+    },
+    {
+      "id": "S139",
+      "scenario": "I am going to the checkout and need the personal holder containing my payment cards."
+    },
+    {
+      "id": "S140",
+      "scenario": "I need to check which household service a charge was for."
+    },
+    {
+      "id": "S141",
+      "scenario": "I know how much I owe. I need access to my cash, not the written charge."
+    },
+    {
+      "id": "S142",
+      "scenario": "I know where my payment cards are. I need the written record explaining the household charge."
+    },
+    {
+      "id": "S143",
+      "scenario": "I have put my cash away. Now I want to resume the paused program."
+    },
+    {
+      "id": "S144",
+      "scenario": "I am not trying to shade my head. I am taking my sunglasses off and protecting the lenses."
+    },
+    {
+      "id": "S145",
+      "scenario": "The television volume is fine. My dry throat needs a sip of water."
+    },
+    {
+      "id": "S146",
+      "scenario": "I prepared for sunshine, but showers are forecast now. I need rain protection that opens above me."
+    },
+    {
+      "id": "S147",
+      "scenario": "The film has ended. I want to switch the television off without getting up."
+    },
+    {
+      "id": "S148",
+      "scenario": "The shop only accepts cash. I need the holder where I keep my banknotes."
+    },
+    {
+      "id": "S149",
+      "scenario": "I must walk through rain. I need something I can open and hold above me to stay dry."
+    },
+    {
+      "id": "S150",
+      "scenario": "I need the holder containing my bank card before visiting the cash machine."
+    },
+    {
+      "id": "S151",
+      "scenario": "I do not want to reach the buttons on the television. I need to select another channel from here."
+    },
+    {
+      "id": "S152",
+      "scenario": "The household charges can wait. I now want a wearable covering for my hair before going out."
+    },
+    {
+      "id": "S153",
+      "scenario": "It is raining outside, but I will be indoors. The immediate problem is my nearly empty phone."
+    },
+    {
+      "id": "S154",
+      "scenario": "Forget the rain preparations. My next step is to switch off the television before bed."
+    },
+    {
+      "id": "S155",
+      "scenario": "The phone battery problem is sorted. Please help me mute the television instead."
+    },
+    {
+      "id": "S156",
+      "scenario": "I want the item I can put directly on my head before leaving."
+    },
+    {
+      "id": "S157",
+      "scenario": "Other things in my bag might crush my glasses. I need their protective holder."
+    },
+    {
+      "id": "S158",
+      "scenario": "I thought it would stay dry, but it is pouring. I now need something that opens above me."
+    },
+    {
+      "id": "S159",
+      "scenario": "The walk is canceled, but there is a power outage indoors. I need portable power for my phone."
+    },
+    {
+      "id": "S160",
+      "scenario": "The covered path is closed. I now need an overhead rain shield for the exposed route."
+    },
+    {
+      "id": "S161",
+      "scenario": "I want to protect the glasses themselves, not shade the top of my head."
+    },
+    {
+      "id": "S162",
+      "scenario": "The sky is clear, and both hands will carry bags. I need head-worn shade, not a handheld cover."
+    },
+    {
+      "id": "S163",
+      "scenario": "I thought I needed cash, but payment is done. Now my nearly empty phone needs backup power."
+    },
+    {
+      "id": "S164",
+      "scenario": "I do not need television settings changed. I need electricity for my phone away from a socket."
+    },
+    {
+      "id": "S165",
+      "scenario": "I do not need to store my eyewear. I need something to wear above it, on my head."
+    },
+    {
+      "id": "S166",
+      "scenario": "I want something to wear on my head that shades my forehead and leaves both hands free."
+    },
+    {
+      "id": "S167",
+      "scenario": "The lenses have just been cleaned. I need their protective holder before packing them."
+    },
+    {
+      "id": "S168",
+      "scenario": "I planned to pay immediately, but now I want to inspect the recorded household charge breakdown first."
+    },
+    {
+      "id": "S169",
+      "scenario": "Forget shading just my forehead. I now need rain kept off my shoulders and bag."
+    },
+    {
+      "id": "S170",
+      "scenario": "The outing is canceled. I will use the time to check our written household utility charges."
+    },
+    {
+      "id": "S171",
+      "scenario": "The phone charging can wait. The television is disturbing our conversation right now."
+    },
+    {
+      "id": "S172",
+      "scenario": "I am staying indoors to watch a match. The sunshine outside is irrelevant; I need the sports channel."
+    },
+    {
+      "id": "S173",
+      "scenario": "I was about to pay, but the amount looks wrong. First I need the household charge record."
+    },
+    {
+      "id": "S174",
+      "scenario": "The household charge record can wait. I need the holder containing the card I will pay with."
+    },
+    {
+      "id": "S175",
+      "scenario": "I have water and money for the journey. I still need a protective holder for my eyewear."
+    },
+    {
+      "id": "S176",
+      "scenario": "I want to review the written breakdown of our recent household utility expenses."
+    },
+    {
+      "id": "S177",
+      "scenario": "I want to find the due date recorded for our latest household utility payment."
+    },
+    {
+      "id": "S178",
+      "scenario": "The video call has ended. I want to undo the television mute setting I used during it."
+    },
+    {
+      "id": "S179",
+      "scenario": "My phone has signal but almost no battery. I have its cable and need a portable power supply."
+    },
+    {
+      "id": "S180",
+      "scenario": "I thought I had forgotten my drink, but it is packed. I still need my cash-and-card holder."
+    },
+    {
+      "id": "S181",
+      "scenario": "There is no drinking fountain along the route. I need my portable water container."
+    },
+    {
+      "id": "S182",
+      "scenario": "I expected rain, but the forecast is now clear. I want head-worn shade with my hands free."
+    },
+    {
+      "id": "S183",
+      "scenario": "Cancel the charging request. My next step is packing my glasses in their protective holder."
+    },
+    {
+      "id": "S184",
+      "scenario": "My phone is charging. The next thing I need is drinking water for myself."
+    },
+    {
+      "id": "S185",
+      "scenario": "I want to recharge my phone while walking rather than plug it into a wall."
+    },
+    {
+      "id": "S186",
+      "scenario": "The cashier told me the total. I do not need a record; I need the holder containing my banknotes."
+    },
+    {
+      "id": "S187",
+      "scenario": "I want to check the charge for water service, not drink water."
+    },
+    {
+      "id": "S188",
+      "scenario": "I want to store my folded sunglasses in the holder designed for them."
+    },
+    {
+      "id": "S189",
+      "scenario": "I planned to pay by phone, but the terminal only accepts a physical card. I need its usual holder."
+    },
+    {
+      "id": "S190",
+      "scenario": "I need to check how much we were charged for household electricity last month."
+    },
+    {
+      "id": "S191",
+      "scenario": "The television can stay on. I am looking for the holder containing my cash and cards."
+    },
+    {
+      "id": "S192",
+      "scenario": "The sun is bright, but I am in a covered car. I need to keep my phone charged without a socket."
+    },
+    {
+      "id": "S193",
+      "scenario": "The television is plugged in and working. I only need to adjust its volume, not charge anything."
+    },
+    {
+      "id": "S194",
+      "scenario": "I need a head-worn item with a brim for an outdoor walk."
+    },
+    {
+      "id": "S195",
+      "scenario": "I planned to review household charges, but my throat is dry. I need to take a sip of water."
+    },
+    {
+      "id": "S196",
+      "scenario": "I need my hair covered with my hands free. I am not looking for a drink or electricity."
+    },
+    {
+      "id": "S197",
+      "scenario": "I found my cards, so payment is no longer the issue. I need something to drink water from."
+    },
+    {
+      "id": "S198",
+      "scenario": "I no longer want a handheld cover. I want the item that sits on my head and frees both hands."
+    },
+    {
+      "id": "S199",
+      "scenario": "The household charges are settled. I now need a drink before continuing."
+    },
+    {
+      "id": "S200",
+      "scenario": "I need a folding overhead rain shield, not something worn only on the head."
+    }
+  ]
+}

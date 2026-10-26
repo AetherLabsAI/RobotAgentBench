@@ -1,0 +1,8 @@
+{
+  "tasks": [
+    {"instance_id": "coffee", "type": "coffee", "parameters": {}},
+    {"instance_id": "fryer", "type": "fryer", "parameters": {"bread_variant": "no_sugar"}}
+  ],
+  "no_progress_timeout_s": 120,
+  "selection_order": "distance_then_front"
+}

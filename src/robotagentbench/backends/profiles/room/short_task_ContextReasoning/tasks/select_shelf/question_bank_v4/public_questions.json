@@ -1,0 +1,1209 @@
+{
+  "schema": "shelf_context_questions.v4",
+  "status": "reasoning_draft",
+  "language": "en",
+  "shared_instruction": "Use the situation and the latest confirmed request to select one shelf product. Touch it with either gripper. A correct touch earns 1 point and ends the episode. Touching any other stocked product fails immediately at 0 points; simultaneous correct and wrong touches also fail. Do not pick up, carry, or place the product. Shelf/frame contact is not product selection.",
+  "shared_context": "Resolve the current request and infer the needed properties. Choose the one matching item present on this shelf. Preferences and schedules are fictional; they are not medical advice.",
+  "questions": [
+    {
+      "id": "R001",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The editor has a late deadline and requested a drink containing caffeine. They have no preference about flavour, milk, or bubbles. Choose for the editor, not the colleague who requested a caffeine-free drink."
+    },
+    {
+      "id": "R002",
+      "kind": "drink",
+      "context": "An earlier request said: The runner's usual zero-sugar recovery drink has an ice-themed flavour name. A fruit juice or a fizzy drink will not match that routine. A proposed alternative said: The night-shift colleague rejected coffee and cola. Their updated request is a berry-flavoured drink specifically labelled as an energy drink; sugar is acceptable.",
+      "scenario": "The requester accepted the alternative and cancelled the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R003",
+      "kind": "snack",
+      "context": "",
+      "scenario": "We already have chewy snacks for movie night. The missing item is potato crisps for the guest who wants a crunchy change; they are happy with any seasoning."
+    },
+    {
+      "id": "R004",
+      "kind": "drink",
+      "context": "",
+      "scenario": "Two work sessions are planned: a late shift whose participant requested caffeine, and an evening wind-down whose participant avoids it. The late shift starts first. Choose its requested drink."
+    },
+    {
+      "id": "R005",
+      "kind": "snack",
+      "context": "Two people need items. The person at the window says: We already have chewy snacks. Add the crisp, savoury option with barbecue seasoning so the texture and flavour are different. The person at the door says: My hiking partner prefers a savoury, chewy meat snack. They do not want a sweet oat bar even if that also advertises protein.",
+      "scenario": "The person at the window has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R006",
+      "kind": "snack",
+      "context": "The participant wrote two plans. For the work session: My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead. For the leisure session: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar.",
+      "scenario": "The schedule now puts the work session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R007",
+      "kind": "snack",
+      "context": "My original need was: The game-night snack should crunch and taste smoky. The sweet dipping kit belongs to dessert, not this request. My colleague's need was: We are making a rainbow pattern on dessert plates. Find the miniature multicoloured candies rather than a single large sweet snack.",
+      "scenario": "I changed my request to match my colleague's original need. Select for me, not my cancelled preference."
+    },
+    {
+      "id": "R008",
+      "kind": "snack",
+      "context": "",
+      "scenario": "Maya requested potato crisps without a flavour preference; Leo requested a sweet treat. Leo has already been served. Choose for the outstanding request."
+    },
+    {
+      "id": "R009",
+      "kind": "drink",
+      "context": "The participant wrote two plans. For the work session: My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request. For the leisure session: For a non-alcoholic party drink, I want the lemon-and-lime bubbles with sweetness. The lime cocktail and the unsweetened water are not suitable substitutes.",
+      "scenario": "The schedule now puts the work session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R010",
+      "kind": "snack",
+      "context": "Maya left this note: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Leo left this note: My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead.",
+      "scenario": "Maya has already been served. Select the item for Leo's outstanding request."
+    },
+    {
+      "id": "R011",
+      "kind": "drink",
+      "context": "Two people need items. The person at the window says: There is no kettle in the editing room. I still want my usual roasted-bean pick-me-up with a creamy finish, ready to drink straight away. The person at the door says: The gym order is for the sports drink whose flavour evokes a frozen landscape. Do not substitute a blue snack package or a zero-sugar soda.",
+      "scenario": "The person at the door has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R012",
+      "kind": "drink",
+      "context": "",
+      "scenario": "My training partner asked for a sugar-free sports drink after practice. Either flavour is welcome. The fruit drink is for the picnic tomorrow, not this request."
+    },
+    {
+      "id": "R013",
+      "kind": "drink",
+      "context": "Maya left this note: For the workout bag, pack the sugar-free sports drink matching the orange flavour we agreed on, not something selected just because its bottle looks orange. Leo left this note: For the overnight design session, my favourite flavour is roasted beans softened with cream. I want the ready-made drink, not equipment or a snack.",
+      "scenario": "Maya has already been served. Select the item for Leo's outstanding request."
+    },
+    {
+      "id": "R014",
+      "kind": "drink",
+      "context": "Maya left this note: I enjoy sweet-tasting cola, but my current preference is zero sugar. Do not confuse that with water that has no sweet taste at all. Leo left this note: My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request.",
+      "scenario": "Maya has already been served. Select the item for Leo's outstanding request."
+    },
+    {
+      "id": "R015",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The host originally requested candy, then changed the order to potato crisps. Any seasoning is fine. Follow the latest request rather than the cancelled one."
+    },
+    {
+      "id": "R016",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The athlete first requested a fruit drink, then changed the order to a zero-sugar sports drink. They did not specify a flavour. Follow the updated request."
+    },
+    {
+      "id": "R017",
+      "kind": "drink",
+      "context": "An earlier request said: The adult host is off duty and explicitly wants an alcoholic lime drink for a toast, not a soft-drink substitute. A proposed alternative said: The guest likes the flavours of both yellow lemons and green limes. They want a sweet soda without alcohol, not an unsweetened citrus water.",
+      "scenario": "The requester accepted the alternative and cancelled the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R018",
+      "kind": "drink",
+      "context": "Maya left this note: For the workout bag, pack the sugar-free sports drink matching the orange flavour we agreed on, not something selected just because its bottle looks orange. Leo left this note: For the overnight design session, my favourite flavour is roasted beans softened with cream. I want the ready-made drink, not equipment or a snack.",
+      "scenario": "Leo has already been served. Select the item for Maya's outstanding request."
+    },
+    {
+      "id": "R019",
+      "kind": "drink",
+      "context": "My original need was: My teammate likes the citrus sports drink; I prefer the zero-sugar version named for ice. Choose for me, not for my teammate. My colleague's need was: I want bubbles with dinner, but no sweet taste from sugar or sweeteners. A citrus-scented water would fit better than a diet soft drink.",
+      "scenario": "My colleague asked to receive my original choice instead. I did not change my own request. Select for me."
+    },
+    {
+      "id": "R020",
+      "kind": "snack",
+      "context": "The coordinator's personal request: My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead. The photographer's personal request: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the photographer, using that person's original preference."
+    },
+    {
+      "id": "R021",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The guest who wants potato crisps leaves in five minutes; the guest who wants a sweet oat bar leaves in twenty. Serve the earlier departure first. No particular crisp seasoning was requested."
+    },
+    {
+      "id": "R022",
+      "kind": "drink",
+      "context": "",
+      "scenario": "My friend likes the aroma of the large citrus fruit with pink flesh. They want it in unsweetened fizzy water, not juice or a cocktail. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R023",
+      "kind": "drink",
+      "context": "",
+      "scenario": "For the painting corner, the parent prefers a fruit drink in a reusable bottle with a drinking spout. An ordinary sports-drink cap is not the requested feature. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R024",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I have late work to finish and want a caffeinated drink with bubbles. It must have no sugar; I still enjoy a sweet taste. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R025",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The night-shift colleague rejected coffee and cola. Their updated request is a berry-flavoured drink specifically labelled as an energy drink; sugar is acceptable. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R026",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I want bubbles with dinner, but no sweet taste from sugar or sweeteners. A citrus-scented water would fit better than a diet soft drink. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R027",
+      "kind": "snack",
+      "context": "An earlier request said: The tea guest prefers cream-filled chocolate sandwich biscuits and asked for a package labelled gluten-free. The oat bar is for somebody else. A proposed alternative said: The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets.",
+      "scenario": "The requester rejected the alternative and reconfirmed the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R028",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R029",
+      "kind": "drink",
+      "context": "The coordinator's personal request: My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request. The photographer's personal request: For the painting corner, the parent prefers a fruit drink in a reusable bottle with a drinking spout. An ordinary sports-drink cap is not the requested feature. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the photographer, using that person's original preference."
+    },
+    {
+      "id": "R030",
+      "kind": "snack",
+      "context": "Maya left this note: For my cycling break, I want an oat-based bar that advertises protein. I like cookies-and-cream flavour, but do not want actual sandwich biscuits. Leo left this note: My guest likes chocolate that melts around a soft filling. They want round chocolate treats, not two biscuit halves with cream between them.",
+      "scenario": "Maya has already been served. Select the item for Leo's outstanding request."
+    },
+    {
+      "id": "R031",
+      "kind": "drink",
+      "context": "Two people need items. The person at the window says: I am packing a fruit drink for a bumpy stroller trip. A drinking spout is more useful here than an open can, and the child likes strawberry with kiwi. The person at the door says: My training partner asked for electrolytes, not a stimulant. They chose an orange flavour and do not want sugar in today's drink.",
+      "scenario": "The person at the window has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R032",
+      "kind": "drink",
+      "context": "The participant wrote two plans. For the work session: The editor wants a fizzy pick-me-up without sugar, not the creamy non-fizzy option. Artificial sweetness is acceptable to them. For the leisure session: For an adult's cocktail hamper, the item must already contain alcohol and have lime flavour. A mixer alone would leave the hamper incomplete.",
+      "scenario": "The schedule now puts the work session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R033",
+      "kind": "snack",
+      "context": "My original need was: The commuter asked for a sweet oat bar with a protein claim on the pack, not the savoury meat snack offered by their colleague. My colleague's need was: We are making a rainbow pattern on dessert plates. Find the miniature multicoloured candies rather than a single large sweet snack.",
+      "scenario": "My colleague asked to receive my original choice instead. I did not change my own request. Select for me."
+    },
+    {
+      "id": "R034",
+      "kind": "snack",
+      "context": "My original need was: The tea guest prefers cream-filled chocolate sandwich biscuits and asked for a package labelled gluten-free. The oat bar is for somebody else. My colleague's need was: Pack the snack for the person who prefers oats and cookies-and-cream flavour in a bar. The person who likes twisting biscuits is not the recipient.",
+      "scenario": "My colleague asked to receive my original choice instead. I did not change my own request. Select for me."
+    },
+    {
+      "id": "R035",
+      "kind": "snack",
+      "context": "The coordinator's personal request: I want the taste of cookies and cream in a bar-shaped oat snack. A package of loose filled biscuits is the wrong form. The photographer's personal request: My friend likes the campfire dessert made with graham crackers and a marshmallow-chocolate flavour. Find the ready-made dipping version, with no cooking needed. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the photographer, using that person's original preference."
+    },
+    {
+      "id": "R036",
+      "kind": "snack",
+      "context": "Maya's request: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Leo's request: My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in twenty minutes; Leo leaves in five. Select the item that must be served first."
+    },
+    {
+      "id": "R037",
+      "kind": "drink",
+      "context": "The coordinator's personal request: My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request. The photographer's personal request: The adults have finished dinner and requested the alcoholic option; the citrus sodas are being saved for people who do not drink alcohol. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the coordinator, using that person's original preference."
+    },
+    {
+      "id": "R038",
+      "kind": "snack",
+      "context": "Maya left this note: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Leo left this note: My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead.",
+      "scenario": "Leo has already been served. Select the item for Maya's outstanding request."
+    },
+    {
+      "id": "R039",
+      "kind": "snack",
+      "context": "The coordinator's personal request: For the snack activity, each child should dip a crunchy stick into a separate sweet compartment. A pre-filled sandwich biscuit would skip that activity. The photographer's personal request: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the photographer, using that person's original preference."
+    },
+    {
+      "id": "R040",
+      "kind": "drink",
+      "context": "Two people need items. The person at the window says: The gym order is for the sports drink whose flavour evokes a frozen landscape. Do not substitute a blue snack package or a zero-sugar soda. The person at the door says: The athlete's note says: replace electrolytes; skip sugar; use the citrus flavour, not the one named after ice. Find the drink that meets all three.",
+      "scenario": "The person at the door has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R041",
+      "kind": "snack",
+      "context": "Maya left this note: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Leo left this note: My guest likes chocolate that melts around a soft filling. They want round chocolate treats, not two biscuit halves with cream between them.",
+      "scenario": "Leo has already been served. Select the item for Maya's outstanding request."
+    },
+    {
+      "id": "R042",
+      "kind": "drink",
+      "context": "Maya's request: The adult host is off duty and explicitly wants an alcoholic lime drink for a toast, not a soft-drink substitute. Leo's request: The runner wants a zero-sugar sports drink and dislikes the icy-flavour version. Their usual choice tastes of oranges. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in twenty minutes; Leo leaves in five. Select the item that must be served first."
+    },
+    {
+      "id": "R043",
+      "kind": "snack",
+      "context": "Maya's request: We cannot light a campfire indoors, but the guest wants that graham-and-s'mores dessert flavour. They enjoy dipping the sticks themselves. Leo's request: My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in five minutes; Leo leaves in twenty. Select the item that must be served first."
+    },
+    {
+      "id": "R044",
+      "kind": "drink",
+      "context": "",
+      "scenario": "My teammate likes the citrus sports drink; I prefer the zero-sugar version named for ice. Choose for me, not for my teammate. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R045",
+      "kind": "drink",
+      "context": "The participant wrote two plans. For the work session: I have late work to finish and want a caffeinated drink with bubbles. It must have no sugar; I still enjoy a sweet taste. For the leisure session: The runner's usual zero-sugar recovery drink has an ice-themed flavour name. A fruit juice or a fizzy drink will not match that routine.",
+      "scenario": "The schedule now puts the leisure session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R046",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The runner wants a zero-sugar sports drink and dislikes the icy-flavour version. Their usual choice tastes of oranges. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R047",
+      "kind": "drink",
+      "context": "",
+      "scenario": "There is no kettle in the editing room. I still want my usual roasted-bean pick-me-up with a creamy finish, ready to drink straight away. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R048",
+      "kind": "drink",
+      "context": "Maya left this note: I want bubbles with dinner, but no sweet taste from sugar or sweeteners. A citrus-scented water would fit better than a diet soft drink. Leo left this note: I like the dark caramel-style soda taste, but I am choosing the zero-sugar option today. A citrus water would change the flavour too much.",
+      "scenario": "Maya has already been served. Select the item for Leo's outstanding request."
+    },
+    {
+      "id": "R049",
+      "kind": "snack",
+      "context": "Maya left this note: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Leo left this note: My guest likes chocolate that melts around a soft filling. They want round chocolate treats, not two biscuit halves with cream between them.",
+      "scenario": "Maya has already been served. Select the item for Leo's outstanding request."
+    },
+    {
+      "id": "R050",
+      "kind": "snack",
+      "context": "An earlier request said: The tea guest prefers cream-filled chocolate sandwich biscuits and asked for a package labelled gluten-free. The oat bar is for somebody else. A proposed alternative said: The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets.",
+      "scenario": "The requester accepted the alternative and cancelled the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R051",
+      "kind": "snack",
+      "context": "Two people need items. The person at the window says: We are making a rainbow pattern on dessert plates. Find the miniature multicoloured candies rather than a single large sweet snack. The person at the door says: I want to twist two dark chocolate biscuit halves apart and eat the pale filling first. A bar that merely has a similar flavour will not work.",
+      "scenario": "The person at the door has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R052",
+      "kind": "drink",
+      "context": "",
+      "scenario": "For the overnight design session, my favourite flavour is roasted beans softened with cream. I want the ready-made drink, not equipment or a snack. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R053",
+      "kind": "drink",
+      "context": "Two people need items. The person at the window says: I am packing a fruit drink for a bumpy stroller trip. A drinking spout is more useful here than an open can, and the child likes strawberry with kiwi. The person at the door says: My training partner asked for electrolytes, not a stimulant. They chose an orange flavour and do not want sugar in today's drink.",
+      "scenario": "The person at the door has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R054",
+      "kind": "drink",
+      "context": "The visitor gave two needs. First option: I have a thesis deadline tonight and want something caffeinated to help me stay alert. I dislike fizz and prefer a creamy drink. Backup option: An adult guest wants a ready-mixed bar-style drink with agave and lime. There is no time to make one from separate ingredients. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is reserved for another person. Both remain physically present; select the allowed backup."
+    },
+    {
+      "id": "R055",
+      "kind": "drink",
+      "context": "My original need was: My friend likes the aroma of the large citrus fruit with pink flesh. They want it in unsweetened fizzy water, not juice or a cocktail. My colleague's need was: For a non-alcoholic party drink, I want the lemon-and-lime bubbles with sweetness. The lime cocktail and the unsweetened water are not suitable substitutes.",
+      "scenario": "I changed my request to match my colleague's original need. Select for me, not my cancelled preference."
+    },
+    {
+      "id": "R056",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The child wants to imitate the twist-and-dunk biscuit game at the table. Pick the dark sandwich biscuits, not the separate sticks-and-dip kit. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R057",
+      "kind": "snack",
+      "context": "",
+      "scenario": "My friend likes the taste associated with a barbecue, but wants thin crunchy pieces rather than meat or sweet biscuits. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R058",
+      "kind": "snack",
+      "context": "The participant wrote two plans. For the work session: The party game needs edible counters in several colours. Choose small fruit-flavoured sweets, not crumbs from a biscuit. For the leisure session: My friend likes the campfire dessert made with graham crackers and a marshmallow-chocolate flavour. Find the ready-made dipping version, with no cooking needed.",
+      "scenario": "The schedule now puts the leisure session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R059",
+      "kind": "snack",
+      "context": "My original need was: The tea guest prefers cream-filled chocolate sandwich biscuits and asked for a package labelled gluten-free. The oat bar is for somebody else. My colleague's need was: The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets.",
+      "scenario": "I changed my request to match my colleague's original need. Select for me, not my cancelled preference."
+    },
+    {
+      "id": "R060",
+      "kind": "snack",
+      "context": "Maya's request: For my cycling break, I want an oat-based bar that advertises protein. I like cookies-and-cream flavour, but do not want actual sandwich biscuits. Leo's request: My guest likes chocolate that melts around a soft filling. They want round chocolate treats, not two biscuit halves with cream between them. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in twenty minutes; Leo leaves in five. Select the item that must be served first."
+    },
+    {
+      "id": "R061",
+      "kind": "drink",
+      "context": "The visitor gave two needs. First option: The gym order is for the sports drink whose flavour evokes a frozen landscape. Do not substitute a blue snack package or a zero-sugar soda. Backup option: An adult visitor liked the lime-and-agave drink at yesterday's bar. They want that style again, including the alcohol, not merely a lime-flavoured refreshment. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is reserved for another person. Both remain physically present; select the allowed backup."
+    },
+    {
+      "id": "R062",
+      "kind": "snack",
+      "context": "",
+      "scenario": "My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R063",
+      "kind": "snack",
+      "context": "",
+      "scenario": "My guest likes chocolate that melts around a soft filling. They want round chocolate treats, not two biscuit halves with cream between them. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R064",
+      "kind": "drink",
+      "context": "An earlier request said: The adult host is off duty and explicitly wants an alcoholic lime drink for a toast, not a soft-drink substitute. A proposed alternative said: The guest likes the flavours of both yellow lemons and green limes. They want a sweet soda without alcohol, not an unsweetened citrus water.",
+      "scenario": "The requester rejected the alternative and reconfirmed the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R065",
+      "kind": "snack",
+      "context": "An earlier request said: We already have crunchy snacks. Add the individually wrapped milk-chocolate option with a smooth filling for people who prefer a softer sweet. A proposed alternative said: One guest prefers barbecue seasoning; I prefer tangy cream with onion on my crisps. Choose for me, not the other guest.",
+      "scenario": "The requester rejected the alternative and reconfirmed the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R066",
+      "kind": "drink",
+      "context": "The participant wrote two plans. For the work session: My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request. For the leisure session: After practice, I want an electrolyte drink without sugar. I prefer the flavour of the citrus fruit normally squeezed into orange breakfast juice.",
+      "scenario": "The schedule now puts the work session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R067",
+      "kind": "drink",
+      "context": "The visitor gave two needs. First option: The gym order is for the sports drink whose flavour evokes a frozen landscape. Do not substitute a blue snack package or a zero-sugar soda. Backup option: An adult visitor liked the lime-and-agave drink at yesterday's bar. They want that style again, including the alcohol, not merely a lime-flavoured refreshment. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is not reserved. Select the visitor's first choice."
+    },
+    {
+      "id": "R068",
+      "kind": "snack",
+      "context": "",
+      "scenario": "We have enough sweet snacks. The missing savoury choice should be crisp and onion-flavoured with a sour-cream note, not chewy meat. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R069",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I have a thesis deadline tonight and want something caffeinated to help me stay alert. I dislike fizz and prefer a creamy drink. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R070",
+      "kind": "drink",
+      "context": "The coordinator's personal request: I want bubbles with dinner, but no sweet taste from sugar or sweeteners. A citrus-scented water would fit better than a diet soft drink. The photographer's personal request: An adult guest wants a ready-mixed bar-style drink with agave and lime. There is no time to make one from separate ingredients. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the coordinator, using that person's original preference."
+    },
+    {
+      "id": "R071",
+      "kind": "snack",
+      "context": "Maya's request: My hiking partner prefers a savoury, chewy meat snack. They do not want a sweet oat bar even if that also advertises protein. Leo's request: I want the taste of cookies and cream in a bar-shaped oat snack. A package of loose filled biscuits is the wrong form. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in five minutes; Leo leaves in twenty. Select the item that must be served first."
+    },
+    {
+      "id": "R072",
+      "kind": "snack",
+      "context": "The coordinator's personal request: My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead. The photographer's personal request: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the coordinator, using that person's original preference."
+    },
+    {
+      "id": "R073",
+      "kind": "drink",
+      "context": "An earlier request said: My training partner asked for electrolytes, not a stimulant. They chose an orange flavour and do not want sugar in today's drink. A proposed alternative said: For my late-night game, I want the familiar dark soda flavour and caffeine, but none of the sugar of a regular soft drink.",
+      "scenario": "The requester accepted the alternative and cancelled the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R074",
+      "kind": "drink",
+      "context": "Maya left this note: I enjoy sweet-tasting cola, but my current preference is zero sugar. Do not confuse that with water that has no sweet taste at all. Leo left this note: My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request.",
+      "scenario": "Leo has already been served. Select the item for Maya's outstanding request."
+    },
+    {
+      "id": "R075",
+      "kind": "snack",
+      "context": "The visitor gave two needs. First option: We already have chewy snacks. Add the crisp, savoury option with barbecue seasoning so the texture and flavour are different. Backup option: My hiking partner prefers a savoury, chewy meat snack. They do not want a sweet oat bar even if that also advertises protein. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is not reserved. Select the visitor's first choice."
+    },
+    {
+      "id": "R076",
+      "kind": "snack",
+      "context": "Maya left this note: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Leo left this note: I want the taste of cookies and cream in a bar-shaped oat snack. A package of loose filled biscuits is the wrong form.",
+      "scenario": "Maya has already been served. Select the item for Leo's outstanding request."
+    },
+    {
+      "id": "R077",
+      "kind": "snack",
+      "context": "An earlier request said: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar. A proposed alternative said: The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets.",
+      "scenario": "The requester accepted the alternative and cancelled the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R078",
+      "kind": "snack",
+      "context": "Maya left this note: For my cycling break, I want an oat-based bar that advertises protein. I like cookies-and-cream flavour, but do not want actual sandwich biscuits. Leo left this note: My guest likes chocolate that melts around a soft filling. They want round chocolate treats, not two biscuit halves with cream between them.",
+      "scenario": "Leo has already been served. Select the item for Maya's outstanding request."
+    },
+    {
+      "id": "R079",
+      "kind": "snack",
+      "context": "An earlier request said: The commuter asked for a sweet oat bar with a protein claim on the pack, not the savoury meat snack offered by their colleague. A proposed alternative said: One guest prefers barbecue seasoning; I prefer tangy cream with onion on my crisps. Choose for me, not the other guest.",
+      "scenario": "The requester rejected the alternative and reconfirmed the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R080",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The guest enjoys citrus and carbonation but rejects both sugary and artificially sweet-tasting soft drinks. Choose the plain-water style of refreshment. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R081",
+      "kind": "drink",
+      "context": "An earlier request said: The runner's usual zero-sugar recovery drink has an ice-themed flavour name. A fruit juice or a fizzy drink will not match that routine. A proposed alternative said: The night-shift colleague rejected coffee and cola. Their updated request is a berry-flavoured drink specifically labelled as an energy drink; sugar is acceptable.",
+      "scenario": "The requester rejected the alternative and reconfirmed the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R082",
+      "kind": "snack",
+      "context": "An earlier request said: We already have crunchy snacks. Add the individually wrapped milk-chocolate option with a smooth filling for people who prefer a softer sweet. A proposed alternative said: One guest prefers barbecue seasoning; I prefer tangy cream with onion on my crisps. Choose for me, not the other guest.",
+      "scenario": "The requester accepted the alternative and cancelled the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R083",
+      "kind": "snack",
+      "context": "",
+      "scenario": "We already have chewy snacks. Add the crisp, savoury option with barbecue seasoning so the texture and flavour are different. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R084",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The editor wants a fizzy pick-me-up without sugar, not the creamy non-fizzy option. Artificial sweetness is acceptable to them. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R085",
+      "kind": "drink",
+      "context": "The visitor gave two needs. First option: I have a thesis deadline tonight and want something caffeinated to help me stay alert. I dislike fizz and prefer a creamy drink. Backup option: An adult guest wants a ready-mixed bar-style drink with agave and lime. There is no time to make one from separate ingredients. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is not reserved. Select the visitor's first choice."
+    },
+    {
+      "id": "R086",
+      "kind": "snack",
+      "context": "Two people need items. The person at the window says: The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets. The person at the door says: We cannot light a campfire indoors, but the guest wants that graham-and-s'mores dessert flavour. They enjoy dipping the sticks themselves.",
+      "scenario": "The person at the window has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R087",
+      "kind": "snack",
+      "context": "An earlier request said: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar. A proposed alternative said: The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets.",
+      "scenario": "The requester rejected the alternative and reconfirmed the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R088",
+      "kind": "snack",
+      "context": "",
+      "scenario": "For movie night, I want crunchy savoury crisps with a tangy cream-and-onion flavour. The smoky barbecue version is for someone else. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R089",
+      "kind": "snack",
+      "context": "The visitor gave two needs. First option: The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets. Backup option: For decorating the cupcakes, I need lots of tiny colourful sweet pieces, not large biscuits or bars. A fruit-flavoured candy would fit. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is not reserved. Select the visitor's first choice."
+    },
+    {
+      "id": "R090",
+      "kind": "snack",
+      "context": "The visitor gave two needs. First option: One guest prefers barbecue seasoning; I prefer tangy cream with onion on my crisps. Choose for me, not the other guest. Backup option: I want to twist two dark chocolate biscuit halves apart and eat the pale filling first. A bar that merely has a similar flavour will not work. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is not reserved. Select the visitor's first choice."
+    },
+    {
+      "id": "R091",
+      "kind": "drink",
+      "context": "My original need was: My friend likes the aroma of the large citrus fruit with pink flesh. They want it in unsweetened fizzy water, not juice or a cocktail. My colleague's need was: For a non-alcoholic party drink, I want the lemon-and-lime bubbles with sweetness. The lime cocktail and the unsweetened water are not suitable substitutes.",
+      "scenario": "My colleague asked to receive my original choice instead. I did not change my own request. Select for me."
+    },
+    {
+      "id": "R092",
+      "kind": "snack",
+      "context": "My original need was: The game-night snack should crunch and taste smoky. The sweet dipping kit belongs to dessert, not this request. My colleague's need was: We are making a rainbow pattern on dessert plates. Find the miniature multicoloured candies rather than a single large sweet snack.",
+      "scenario": "My colleague asked to receive my original choice instead. I did not change my own request. Select for me."
+    },
+    {
+      "id": "R093",
+      "kind": "drink",
+      "context": "Two people need items. The person at the window says: The gym order is for the sports drink whose flavour evokes a frozen landscape. Do not substitute a blue snack package or a zero-sugar soda. The person at the door says: The athlete's note says: replace electrolytes; skip sugar; use the citrus flavour, not the one named after ice. Find the drink that meets all three.",
+      "scenario": "The person at the window has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R094",
+      "kind": "drink",
+      "context": "My original need was: For my next training session I need electrolytes, but I am tired of the orange version. Keep the sugar-free type and change to the icy-flavour option. My colleague's need was: My friend avoids evening caffeine but does not mind sugar. Their favourite drink is a sweet citrus soda, rather than a milk-based pick-me-up.",
+      "scenario": "My colleague asked to receive my original choice instead. I did not change my own request. Select for me."
+    },
+    {
+      "id": "R095",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The gym order is for the sports drink whose flavour evokes a frozen landscape. Do not substitute a blue snack package or a zero-sugar soda. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R096",
+      "kind": "drink",
+      "context": "An earlier request said: The guest enjoys citrus and carbonation but rejects both sugary and artificially sweet-tasting soft drinks. Choose the plain-water style of refreshment. A proposed alternative said: The night-shift colleague rejected coffee and cola. Their updated request is a berry-flavoured drink specifically labelled as an energy drink; sugar is acceptable.",
+      "scenario": "The requester accepted the alternative and cancelled the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R097",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I like the dark caramel-style soda taste, but I am choosing the zero-sugar option today. A citrus water would change the flavour too much. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R098",
+      "kind": "drink",
+      "context": "My original need was: For my next training session I need electrolytes, but I am tired of the orange version. Keep the sugar-free type and change to the icy-flavour option. My colleague's need was: My friend avoids evening caffeine but does not mind sugar. Their favourite drink is a sweet citrus soda, rather than a milk-based pick-me-up.",
+      "scenario": "I changed my request to match my colleague's original need. Select for me, not my cancelled preference."
+    },
+    {
+      "id": "R099",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The tea guest prefers cream-filled chocolate sandwich biscuits and asked for a package labelled gluten-free. The oat bar is for somebody else. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R100",
+      "kind": "drink",
+      "context": "The coordinator's personal request: I want bubbles with dinner, but no sweet taste from sugar or sweeteners. A citrus-scented water would fit better than a diet soft drink. The photographer's personal request: An adult guest wants a ready-mixed bar-style drink with agave and lime. There is no time to make one from separate ingredients. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the photographer, using that person's original preference."
+    },
+    {
+      "id": "R101",
+      "kind": "drink",
+      "context": "",
+      "scenario": "An adult visitor liked the lime-and-agave drink at yesterday's bar. They want that style again, including the alcohol, not merely a lime-flavoured refreshment. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R102",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The guest likes beef and wants a ready-to-eat snack with a mild flavour. Dessert biscuits and smoky crisps would not satisfy that preference. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R103",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The party game needs edible counters in several colours. Choose small fruit-flavoured sweets, not crumbs from a biscuit. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R104",
+      "kind": "snack",
+      "context": "The participant wrote two plans. For the work session: I want the taste of cookies and cream in a bar-shaped oat snack. A package of loose filled biscuits is the wrong form. For the leisure session: My friend likes the campfire dessert made with graham crackers and a marshmallow-chocolate flavour. Find the ready-made dipping version, with no cooking needed.",
+      "scenario": "The schedule now puts the work session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R105",
+      "kind": "drink",
+      "context": "Maya's request: My teammate likes the citrus sports drink; I prefer the zero-sugar version named for ice. Choose for me, not for my teammate. Leo's request: My little cousin keeps tipping open cups over. Their parent requested a fruit drink with a spill-resistant drinking spout for the drawing table. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in twenty minutes; Leo leaves in five. Select the item that must be served first."
+    },
+    {
+      "id": "R106",
+      "kind": "snack",
+      "context": "Maya left this note: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Leo left this note: For dessert decoration, I need dark biscuit discs with a white centre that can be split into halves. Candy pieces and oat bars have the wrong shape.",
+      "scenario": "Maya has already been served. Select the item for Leo's outstanding request."
+    },
+    {
+      "id": "R107",
+      "kind": "snack",
+      "context": "",
+      "scenario": "The game-night snack should crunch and taste smoky. The sweet dipping kit belongs to dessert, not this request. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R108",
+      "kind": "snack",
+      "context": "Maya's request: We cannot light a campfire indoors, but the guest wants that graham-and-s'mores dessert flavour. They enjoy dipping the sticks themselves. Leo's request: My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in twenty minutes; Leo leaves in five. Select the item that must be served first."
+    },
+    {
+      "id": "R109",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The athlete's note says: replace electrolytes; skip sugar; use the citrus flavour, not the one named after ice. Find the drink that meets all three. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R110",
+      "kind": "snack",
+      "context": "",
+      "scenario": "I want the taste of cookies and cream in a bar-shaped oat snack. A package of loose filled biscuits is the wrong form. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R111",
+      "kind": "drink",
+      "context": "My original need was: My teammate likes the citrus sports drink; I prefer the zero-sugar version named for ice. Choose for me, not for my teammate. My colleague's need was: I want bubbles with dinner, but no sweet taste from sugar or sweeteners. A citrus-scented water would fit better than a diet soft drink.",
+      "scenario": "I changed my request to match my colleague's original need. Select for me, not my cancelled preference."
+    },
+    {
+      "id": "R112",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The runner's usual zero-sugar recovery drink has an ice-themed flavour name. A fruit juice or a fizzy drink will not match that routine. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R113",
+      "kind": "drink",
+      "context": "",
+      "scenario": "For an adult's cocktail hamper, the item must already contain alcohol and have lime flavour. A mixer alone would leave the hamper incomplete. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R114",
+      "kind": "drink",
+      "context": "The visitor gave two needs. First option: The night-shift colleague rejected coffee and cola. Their updated request is a berry-flavoured drink specifically labelled as an energy drink; sugar is acceptable. Backup option: I am proofreading late and want a stimulant in my drink, but carbonation bothers my taste preference. Milk and cream are welcome. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is not reserved. Select the visitor's first choice."
+    },
+    {
+      "id": "R115",
+      "kind": "snack",
+      "context": "The visitor gave two needs. First option: One guest prefers barbecue seasoning; I prefer tangy cream with onion on my crisps. Choose for me, not the other guest. Backup option: For decorating the cupcakes, I need lots of tiny colourful sweet pieces, not large biscuits or bars. A fruit-flavoured candy would fit. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is reserved for another person. Both remain physically present; select the allowed backup."
+    },
+    {
+      "id": "R116",
+      "kind": "snack",
+      "context": "The participant wrote two plans. For the work session: The party game needs edible counters in several colours. Choose small fruit-flavoured sweets, not crumbs from a biscuit. For the leisure session: My friend likes the campfire dessert made with graham crackers and a marshmallow-chocolate flavour. Find the ready-made dipping version, with no cooking needed.",
+      "scenario": "The schedule now puts the work session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R117",
+      "kind": "snack",
+      "context": "Maya's request: My hiking partner prefers a savoury, chewy meat snack. They do not want a sweet oat bar even if that also advertises protein. Leo's request: I want the taste of cookies and cream in a bar-shaped oat snack. A package of loose filled biscuits is the wrong form. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in twenty minutes; Leo leaves in five. Select the item that must be served first."
+    },
+    {
+      "id": "R118",
+      "kind": "snack",
+      "context": "The participant wrote two plans. For the work session: The party game needs edible counters in several colours. Choose small fruit-flavoured sweets, not crumbs from a biscuit. For the leisure session: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar.",
+      "scenario": "The schedule now puts the work session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R119",
+      "kind": "snack",
+      "context": "The visitor gave two needs. First option: One guest prefers barbecue seasoning; I prefer tangy cream with onion on my crisps. Choose for me, not the other guest. Backup option: I want to twist two dark chocolate biscuit halves apart and eat the pale filling first. A bar that merely has a similar flavour will not work. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is reserved for another person. Both remain physically present; select the allowed backup."
+    },
+    {
+      "id": "R120",
+      "kind": "snack",
+      "context": "The visitor gave two needs. First option: The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets. Backup option: For decorating the cupcakes, I need lots of tiny colourful sweet pieces, not large biscuits or bars. A fruit-flavoured candy would fit. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is reserved for another person. Both remain physically present; select the allowed backup."
+    },
+    {
+      "id": "R121",
+      "kind": "drink",
+      "context": "The participant wrote two plans. For the work session: My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request. For the leisure session: For a non-alcoholic party drink, I want the lemon-and-lime bubbles with sweetness. The lime cocktail and the unsweetened water are not suitable substitutes.",
+      "scenario": "The schedule now puts the leisure session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R122",
+      "kind": "drink",
+      "context": "",
+      "scenario": "For the workout bag, pack the sugar-free sports drink matching the orange flavour we agreed on, not something selected just because its bottle looks orange. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R123",
+      "kind": "drink",
+      "context": "Maya left this note: The runner wants a zero-sugar sports drink and dislikes the icy-flavour version. Their usual choice tastes of oranges. Leo left this note: I already have a sweet dessert. For the drink, keep the fizz but remove the sweetness entirely; fruit aroma is fine.",
+      "scenario": "Leo has already been served. Select the item for Maya's outstanding request."
+    },
+    {
+      "id": "R124",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I am winding down for bed and do not want caffeine. I still want a sweet, fizzy lemon-and-lime drink, not plain flavoured water. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R125",
+      "kind": "drink",
+      "context": "The coordinator's personal request: My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request. The photographer's personal request: The adults have finished dinner and requested the alcoholic option; the citrus sodas are being saved for people who do not drink alcohol. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the photographer, using that person's original preference."
+    },
+    {
+      "id": "R126",
+      "kind": "snack",
+      "context": "",
+      "scenario": "My guest likes fruity sweets that can be eaten a few tiny pieces at a time. They are not asking for a fruit drink or a chocolate biscuit. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R127",
+      "kind": "snack",
+      "context": "The visitor gave two needs. First option: We already have chewy snacks. Add the crisp, savoury option with barbecue seasoning so the texture and flavour are different. Backup option: My hiking partner prefers a savoury, chewy meat snack. They do not want a sweet oat bar even if that also advertises protein. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is reserved for another person. Both remain physically present; select the allowed backup."
+    },
+    {
+      "id": "R128",
+      "kind": "drink",
+      "context": "Maya's request: The adult host is off duty and explicitly wants an alcoholic lime drink for a toast, not a soft-drink substitute. Leo's request: The runner wants a zero-sugar sports drink and dislikes the icy-flavour version. Their usual choice tastes of oranges. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in five minutes; Leo leaves in twenty. Select the item that must be served first."
+    },
+    {
+      "id": "R129",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The guest likes the flavours of both yellow lemons and green limes. They want a sweet soda without alcohol, not an unsweetened citrus water. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R130",
+      "kind": "drink",
+      "context": "",
+      "scenario": "My friend avoids evening caffeine but does not mind sugar. Their favourite drink is a sweet citrus soda, rather than a milk-based pick-me-up. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R131",
+      "kind": "snack",
+      "context": "",
+      "scenario": "We have plates but no time to melt chocolate. I need the packaged sweet snack that already keeps the graham sticks and their s'mores-style dip together. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R132",
+      "kind": "drink",
+      "context": "",
+      "scenario": "For my late-night game, I want the familiar dark soda flavour and caffeine, but none of the sugar of a regular soft drink. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R133",
+      "kind": "snack",
+      "context": "My original need was: The tea guest prefers cream-filled chocolate sandwich biscuits and asked for a package labelled gluten-free. The oat bar is for somebody else. My colleague's need was: Pack the snack for the person who prefers oats and cookies-and-cream flavour in a bar. The person who likes twisting biscuits is not the recipient.",
+      "scenario": "I changed my request to match my colleague's original need. Select for me, not my cancelled preference."
+    },
+    {
+      "id": "R134",
+      "kind": "drink",
+      "context": "Two people need items. The person at the window says: There is no kettle in the editing room. I still want my usual roasted-bean pick-me-up with a creamy finish, ready to drink straight away. The person at the door says: The gym order is for the sports drink whose flavour evokes a frozen landscape. Do not substitute a blue snack package or a zero-sugar soda.",
+      "scenario": "The person at the window has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R135",
+      "kind": "drink",
+      "context": "Two people need items. The person at the window says: At the tasting table, I need a fizzy drink that will not add sweetness between bites. The pink-fleshed citrus aroma is the one I like. The person at the door says: I have a thesis deadline tonight and want something caffeinated to help me stay alert. I dislike fizz and prefer a creamy drink.",
+      "scenario": "The person at the window has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R136",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The child likes the pairing of a red berry and the green fruit with black seeds. Their parent asked for that flavour in a drink, not candy. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R137",
+      "kind": "drink",
+      "context": "",
+      "scenario": "An adult guest wants a ready-mixed bar-style drink with agave and lime. There is no time to make one from separate ingredients. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R138",
+      "kind": "snack",
+      "context": "The participant wrote two plans. For the work session: For dessert decoration, I need dark biscuit discs with a white centre that can be split into halves. Candy pieces and oat bars have the wrong shape. For the leisure session: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar.",
+      "scenario": "The schedule now puts the leisure session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R139",
+      "kind": "drink",
+      "context": "",
+      "scenario": "For my next training session I need electrolytes, but I am tired of the orange version. Keep the sugar-free type and change to the icy-flavour option. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R140",
+      "kind": "drink",
+      "context": "Two people need items. The person at the window says: At the tasting table, I need a fizzy drink that will not add sweetness between bites. The pink-fleshed citrus aroma is the one I like. The person at the door says: I have a thesis deadline tonight and want something caffeinated to help me stay alert. I dislike fizz and prefer a creamy drink.",
+      "scenario": "The person at the door has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R141",
+      "kind": "snack",
+      "context": "",
+      "scenario": "For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R142",
+      "kind": "snack",
+      "context": "The participant wrote two plans. For the work session: I want the taste of cookies and cream in a bar-shaped oat snack. A package of loose filled biscuits is the wrong form. For the leisure session: My friend likes the campfire dessert made with graham crackers and a marshmallow-chocolate flavour. Find the ready-made dipping version, with no cooking needed.",
+      "scenario": "The schedule now puts the leisure session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R143",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I already have a sweet dessert. For the drink, keep the fizz but remove the sweetness entirely; fruit aroma is fine. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R144",
+      "kind": "snack",
+      "context": "Maya's request: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Leo's request: My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in five minutes; Leo leaves in twenty. Select the item that must be served first."
+    },
+    {
+      "id": "R145",
+      "kind": "snack",
+      "context": "",
+      "scenario": "For dessert decoration, I need dark biscuit discs with a white centre that can be split into halves. Candy pieces and oat bars have the wrong shape. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R146",
+      "kind": "drink",
+      "context": "",
+      "scenario": "We are sorting supplies by purpose: a sports drink for practice and a caffeinated berry energy drink for the late work session. Choose for the work session. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R147",
+      "kind": "snack",
+      "context": "The participant wrote two plans. For the work session: My friend changed their mind about the smoky grill seasoning. Keep the crunchy potato snack, but choose the sour-cream-and-onion flavour instead. For the leisure session: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar.",
+      "scenario": "The schedule now puts the leisure session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R148",
+      "kind": "snack",
+      "context": "The coordinator's personal request: For the snack activity, each child should dip a crunchy stick into a separate sweet compartment. A pre-filled sandwich biscuit would skip that activity. The photographer's personal request: The tea guest prefers cream-filled chocolate sandwich biscuits and asked for a package labelled gluten-free. The oat bar is for somebody else. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the coordinator, using that person's original preference."
+    },
+    {
+      "id": "R149",
+      "kind": "snack",
+      "context": "Two people need items. The person at the window says: We have plates but no time to melt chocolate. I need the packaged sweet snack that already keeps the graham sticks and their s'mores-style dip together. The person at the door says: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind.",
+      "scenario": "The person at the door has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R150",
+      "kind": "snack",
+      "context": "The coordinator's personal request: For the snack activity, each child should dip a crunchy stick into a separate sweet compartment. A pre-filled sandwich biscuit would skip that activity. The photographer's personal request: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the coordinator, using that person's original preference."
+    },
+    {
+      "id": "R151",
+      "kind": "snack",
+      "context": "",
+      "scenario": "We already have crunchy snacks. Add the individually wrapped milk-chocolate option with a smooth filling for people who prefer a softer sweet. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R152",
+      "kind": "snack",
+      "context": "",
+      "scenario": "For decorating the cupcakes, I need lots of tiny colourful sweet pieces, not large biscuits or bars. A fruit-flavoured candy would fit. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R153",
+      "kind": "drink",
+      "context": "Maya's request: My training partner asked for electrolytes, not a stimulant. They chose an orange flavour and do not want sugar in today's drink. Leo's request: My friend avoids evening caffeine but does not mind sugar. Their favourite drink is a sweet citrus soda, rather than a milk-based pick-me-up. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in five minutes; Leo leaves in twenty. Select the item that must be served first."
+    },
+    {
+      "id": "R154",
+      "kind": "snack",
+      "context": "",
+      "scenario": "For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R155",
+      "kind": "drink",
+      "context": "",
+      "scenario": "For a non-alcoholic party drink, I want the lemon-and-lime bubbles with sweetness. The lime cocktail and the unsweetened water are not suitable substitutes. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R156",
+      "kind": "drink",
+      "context": "The participant wrote two plans. For the work session: The editor wants a fizzy pick-me-up without sugar, not the creamy non-fizzy option. Artificial sweetness is acceptable to them. For the leisure session: For an adult's cocktail hamper, the item must already contain alcohol and have lime flavour. A mixer alone would leave the hamper incomplete.",
+      "scenario": "The schedule now puts the leisure session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R157",
+      "kind": "drink",
+      "context": "Maya left this note: The runner wants a zero-sugar sports drink and dislikes the icy-flavour version. Their usual choice tastes of oranges. Leo left this note: I already have a sweet dessert. For the drink, keep the fizz but remove the sweetness entirely; fruit aroma is fine.",
+      "scenario": "Maya has already been served. Select the item for Leo's outstanding request."
+    },
+    {
+      "id": "R158",
+      "kind": "snack",
+      "context": "Maya left this note: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Leo left this note: For dessert decoration, I need dark biscuit discs with a white centre that can be split into halves. Candy pieces and oat bars have the wrong shape.",
+      "scenario": "Leo has already been served. Select the item for Maya's outstanding request."
+    },
+    {
+      "id": "R159",
+      "kind": "drink",
+      "context": "Maya's request: My teammate likes the citrus sports drink; I prefer the zero-sugar version named for ice. Choose for me, not for my teammate. Leo's request: My little cousin keeps tipping open cups over. Their parent requested a fruit drink with a spill-resistant drinking spout for the drawing table. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in five minutes; Leo leaves in twenty. Select the item that must be served first."
+    },
+    {
+      "id": "R160",
+      "kind": "drink",
+      "context": "An earlier request said: My training partner asked for electrolytes, not a stimulant. They chose an orange flavour and do not want sugar in today's drink. A proposed alternative said: For my late-night game, I want the familiar dark soda flavour and caffeine, but none of the sugar of a regular soft drink.",
+      "scenario": "The requester rejected the alternative and reconfirmed the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R161",
+      "kind": "snack",
+      "context": "",
+      "scenario": "Pack the snack for the person who prefers oats and cookies-and-cream flavour in a bar. The person who likes twisting biscuits is not the recipient. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R162",
+      "kind": "snack",
+      "context": "",
+      "scenario": "We are making a rainbow pattern on dessert plates. Find the miniature multicoloured candies rather than a single large sweet snack. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R163",
+      "kind": "snack",
+      "context": "Maya's request: For my cycling break, I want an oat-based bar that advertises protein. I like cookies-and-cream flavour, but do not want actual sandwich biscuits. Leo's request: My guest likes chocolate that melts around a soft filling. They want round chocolate treats, not two biscuit halves with cream between them. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in five minutes; Leo leaves in twenty. Select the item that must be served first."
+    },
+    {
+      "id": "R164",
+      "kind": "drink",
+      "context": "",
+      "scenario": "The adult host is off duty and explicitly wants an alcoholic lime drink for a toast, not a soft-drink substitute. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R165",
+      "kind": "snack",
+      "context": "Two people need items. The person at the window says: We are making a rainbow pattern on dessert plates. Find the miniature multicoloured candies rather than a single large sweet snack. The person at the door says: I want to twist two dark chocolate biscuit halves apart and eat the pale filling first. A bar that merely has a similar flavour will not work.",
+      "scenario": "The person at the window has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R166",
+      "kind": "drink",
+      "context": "Maya's request: My training partner asked for electrolytes, not a stimulant. They chose an orange flavour and do not want sugar in today's drink. Leo's request: My friend avoids evening caffeine but does not mind sugar. Their favourite drink is a sweet citrus soda, rather than a milk-based pick-me-up. Serve the person who leaves sooner; ignore the order in which they spoke.",
+      "scenario": "Maya leaves in twenty minutes; Leo leaves in five. Select the item that must be served first."
+    },
+    {
+      "id": "R167",
+      "kind": "snack",
+      "context": "The visitor gave two needs. First option: One guest prefers barbecue seasoning; I prefer tangy cream with onion on my crisps. Choose for me, not the other guest. Backup option: For decorating the cupcakes, I need lots of tiny colourful sweet pieces, not large biscuits or bars. A fruit-flavoured candy would fit. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is not reserved. Select the visitor's first choice."
+    },
+    {
+      "id": "R168",
+      "kind": "snack",
+      "context": "",
+      "scenario": "For the snack activity, each child should dip a crunchy stick into a separate sweet compartment. A pre-filled sandwich biscuit would skip that activity. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R169",
+      "kind": "snack",
+      "context": "Two people need items. The person at the window says: We already have chewy snacks. Add the crisp, savoury option with barbecue seasoning so the texture and flavour are different. The person at the door says: My hiking partner prefers a savoury, chewy meat snack. They do not want a sweet oat bar even if that also advertises protein.",
+      "scenario": "The person at the door has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R170",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I have already bought the unsweetened fizzy water. Now I need the sweet lemon-and-lime soft drink for the guest who dislikes bitter citrus flavours. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R171",
+      "kind": "snack",
+      "context": "The participant wrote two plans. For the work session: For dessert decoration, I need dark biscuit discs with a white centre that can be split into halves. Candy pieces and oat bars have the wrong shape. For the leisure session: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar.",
+      "scenario": "The schedule now puts the work session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R172",
+      "kind": "snack",
+      "context": "",
+      "scenario": "I have enough sweet snacks for the afternoon. My own choice should be the beef-based, mildly seasoned option instead. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R173",
+      "kind": "drink",
+      "context": "",
+      "scenario": "After practice, I want a sugar-free electrolyte drink. The orange flavour belongs to my teammate; I want the other sports-drink flavour. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R174",
+      "kind": "snack",
+      "context": "Two people need items. The person at the window says: The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets. The person at the door says: We cannot light a campfire indoors, but the guest wants that graham-and-s'mores dessert flavour. They enjoy dipping the sticks themselves.",
+      "scenario": "The person at the door has received their item. Fill the other person's request without duplicating the completed one."
+    },
+    {
+      "id": "R175",
+      "kind": "drink",
+      "context": "The participant wrote two plans. For the work session: I have late work to finish and want a caffeinated drink with bubbles. It must have no sugar; I still enjoy a sweet taste. For the leisure session: The runner's usual zero-sugar recovery drink has an ice-themed flavour name. A fruit juice or a fizzy drink will not match that routine.",
+      "scenario": "The schedule now puts the work session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R176",
+      "kind": "drink",
+      "context": "The participant wrote two plans. For the work session: My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request. For the leisure session: After practice, I want an electrolyte drink without sugar. I prefer the flavour of the citrus fruit normally squeezed into orange breakfast juice.",
+      "scenario": "The schedule now puts the leisure session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R177",
+      "kind": "drink",
+      "context": "The coordinator's personal request: My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request. The photographer's personal request: For the painting corner, the parent prefers a fruit drink in a reusable bottle with a drinking spout. An ordinary sports-drink cap is not the requested feature. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the coordinator, using that person's original preference."
+    },
+    {
+      "id": "R178",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I am proofreading late and want a stimulant in my drink, but carbonation bothers my taste preference. Milk and cream are welcome. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R179",
+      "kind": "snack",
+      "context": "The participant wrote two plans. For the work session: The party game needs edible counters in several colours. Choose small fruit-flavoured sweets, not crumbs from a biscuit. For the leisure session: For the road trip, I want something savoury I can nibble in stick form. I mean actual meat, not a grain-based bar.",
+      "scenario": "The schedule now puts the leisure session first. Choose for that session, not the later one."
+    },
+    {
+      "id": "R180",
+      "kind": "snack",
+      "context": "",
+      "scenario": "We cannot light a campfire indoors, but the guest wants that graham-and-s'mores dessert flavour. They enjoy dipping the sticks themselves. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R181",
+      "kind": "drink",
+      "context": "The visitor gave two needs. First option: The night-shift colleague rejected coffee and cola. Their updated request is a berry-flavoured drink specifically labelled as an energy drink; sugar is acceptable. Backup option: I am proofreading late and want a stimulant in my drink, but carbonation bothers my taste preference. Milk and cream are welcome. Use the backup only if the first option is reserved.",
+      "scenario": "The first option is reserved for another person. Both remain physically present; select the allowed backup."
+    },
+    {
+      "id": "R182",
+      "kind": "drink",
+      "context": "",
+      "scenario": "After practice, I want an electrolyte drink without sugar. I prefer the flavour of the citrus fruit normally squeezed into orange breakfast juice. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R183",
+      "kind": "snack",
+      "context": "The coordinator's personal request: I want the taste of cookies and cream in a bar-shaped oat snack. A package of loose filled biscuits is the wrong form. The photographer's personal request: My friend likes the campfire dessert made with graham crackers and a marshmallow-chocolate flavour. Find the ready-made dipping version, with no cooking needed. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the coordinator, using that person's original preference."
+    },
+    {
+      "id": "R184",
+      "kind": "snack",
+      "context": "An earlier request said: The commuter asked for a sweet oat bar with a protein claim on the pack, not the savoury meat snack offered by their colleague. A proposed alternative said: One guest prefers barbecue seasoning; I prefer tangy cream with onion on my crisps. Choose for me, not the other guest.",
+      "scenario": "The requester accepted the alternative and cancelled the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R185",
+      "kind": "drink",
+      "context": "",
+      "scenario": "My little cousin keeps tipping open cups over. Their parent requested a fruit drink with a spill-resistant drinking spout for the drawing table. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R186",
+      "kind": "snack",
+      "context": "",
+      "scenario": "For my cycling break, I want an oat-based bar that advertises protein. I like cookies-and-cream flavour, but do not want actual sandwich biscuits. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R187",
+      "kind": "snack",
+      "context": "My original need was: The commuter asked for a sweet oat bar with a protein claim on the pack, not the savoury meat snack offered by their colleague. My colleague's need was: We are making a rainbow pattern on dessert plates. Find the miniature multicoloured candies rather than a single large sweet snack.",
+      "scenario": "I changed my request to match my colleague's original need. Select for me, not my cancelled preference."
+    },
+    {
+      "id": "R188",
+      "kind": "snack",
+      "context": "My original need was: The tea guest prefers cream-filled chocolate sandwich biscuits and asked for a package labelled gluten-free. The oat bar is for somebody else. My colleague's need was: The host wants to put a wrapped chocolate treat at each place setting. Choose milk-chocolate truffles, not a package of loose colourful sweets.",
+      "scenario": "My colleague asked to receive my original choice instead. I did not change my own request. Select for me."
+    },
+    {
+      "id": "R189",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I enjoy sweet-tasting cola, but my current preference is zero sugar. Do not confuse that with water that has no sweet taste at all. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R190",
+      "kind": "snack",
+      "context": "The coordinator's personal request: For the snack activity, each child should dip a crunchy stick into a separate sweet compartment. A pre-filled sandwich biscuit would skip that activity. The photographer's personal request: The tea guest prefers cream-filled chocolate sandwich biscuits and asked for a package labelled gluten-free. The oat bar is for somebody else. These requests stay with the people, not their job titles.",
+      "scenario": "They have swapped jobs. Serve the person who is now the photographer, using that person's original preference."
+    },
+    {
+      "id": "R191",
+      "kind": "drink",
+      "context": "",
+      "scenario": "My friend asked for the berry-flavoured energy drink for their overnight project. The electrolyte drink is for tomorrow's training, not tonight's request. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R192",
+      "kind": "snack",
+      "context": "",
+      "scenario": "I want to twist two dark chocolate biscuit halves apart and eat the pale filling first. A bar that merely has a similar flavour will not work. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R193",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I am packing a fruit drink for a bumpy stroller trip. A drinking spout is more useful here than an open can, and the child likes strawberry with kiwi. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R194",
+      "kind": "drink",
+      "context": "Maya left this note: I want bubbles with dinner, but no sweet taste from sugar or sweeteners. A citrus-scented water would fit better than a diet soft drink. Leo left this note: I like the dark caramel-style soda taste, but I am choosing the zero-sugar option today. A citrus water would change the flavour too much.",
+      "scenario": "Leo has already been served. Select the item for Maya's outstanding request."
+    },
+    {
+      "id": "R195",
+      "kind": "drink",
+      "context": "",
+      "scenario": "My training partner asked for electrolytes, not a stimulant. They chose an orange flavour and do not want sugar in today's drink. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R196",
+      "kind": "snack",
+      "context": "",
+      "scenario": "For a small thank-you gift, I want individually wrapped milk-chocolate treats with a smooth centre, not chocolate biscuits or fruity candy. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R197",
+      "kind": "drink",
+      "context": "",
+      "scenario": "I have a late editing deadline and want a caffeinated energy drink. I prefer berry flavour and do not mind sugar; a creamy coffee or a cola is not my choice. Select one shelf item that fits this situation."
+    },
+    {
+      "id": "R198",
+      "kind": "snack",
+      "context": "Maya left this note: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind. Leo left this note: I want the taste of cookies and cream in a bar-shaped oat snack. A package of loose filled biscuits is the wrong form.",
+      "scenario": "Leo has already been served. Select the item for Maya's outstanding request."
+    },
+    {
+      "id": "R199",
+      "kind": "drink",
+      "context": "An earlier request said: The guest enjoys citrus and carbonation but rejects both sugary and artificially sweet-tasting soft drinks. Choose the plain-water style of refreshment. A proposed alternative said: The night-shift colleague rejected coffee and cola. Their updated request is a berry-flavoured drink specifically labelled as an energy drink; sugar is acceptable.",
+      "scenario": "The requester rejected the alternative and reconfirmed the earlier request. Select for the confirmed need."
+    },
+    {
+      "id": "R200",
+      "kind": "snack",
+      "context": "Two people need items. The person at the window says: We have plates but no time to melt chocolate. I need the packaged sweet snack that already keeps the graham sticks and their s'mores-style dip together. The person at the door says: For movie night, I want a crunchy savoury snack with a smoky grill-like flavour. A chewy meat stick is not what I have in mind.",
+      "scenario": "The person at the window has received their item. Fill the other person's request without duplicating the completed one."
+    }
+  ]
+}

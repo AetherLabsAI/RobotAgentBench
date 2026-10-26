@@ -1,0 +1,25 @@
+{
+  "schema": "openend.short_task.request.draft.v1",
+  "task_name": "retrieve_from_drawer",
+  "seed": 42,
+  "layout_id": null,
+  "rule_version": "openend.short_task.retrieve_from_drawer.v1",
+  "options": {
+    "close_drawer": false
+  },
+  "targets": [
+    {
+      "category": "wallet",
+      "quantity": 1
+    }
+  ],
+  "source": {
+    "role": "coffee_table",
+    "variant": "drawer"
+  },
+  "destination": {
+    "role": "fixed_cpu_bag"
+  },
+  "background": [],
+  "position_constraints": {}
+}

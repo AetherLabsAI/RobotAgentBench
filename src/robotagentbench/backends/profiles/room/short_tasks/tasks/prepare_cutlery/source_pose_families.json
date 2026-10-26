@@ -1,0 +1,185 @@
+{
+  "schema": "short_tasks.prepare_cutlery.source_pose_families.v1",
+  "source": "dataset task_index=88, episodes 3928..3977; read-only audit 2026-10-11",
+  "frame": "canonical holder coordinates; orientation deltas relative to canonical source geometry, NOT current already-tilted instances",
+  "runtime_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+  "selection": "Explicit family required. No uniform sampling across combined global extrema.",
+  "families": [
+    {
+      "spec": {
+        "template_id": "legacy_original",
+        "halfwidths": {
+          "tilt_deg": 5,
+          "lean_azimuth_deg": 10,
+          "long_axis_yaw_deg": 10,
+          "xy_m": 0.005
+        },
+        "tools": {
+          "knife_0": {
+            "tilt_magnitude_deg": 0,
+            "lean_azimuth_holder_deg": 0,
+            "long_axis_yaw_deg": 0,
+            "sampled_root_xy_shift_holder_m": [
+              0,
+              0
+            ]
+          },
+          "fork_1": {
+            "tilt_magnitude_deg": 0,
+            "lean_azimuth_holder_deg": 0,
+            "long_axis_yaw_deg": 0,
+            "sampled_root_xy_shift_holder_m": [
+              0,
+              0
+            ]
+          },
+          "fork_2": {
+            "tilt_magnitude_deg": 0,
+            "lean_azimuth_holder_deg": 0,
+            "long_axis_yaw_deg": 0,
+            "sampled_root_xy_shift_holder_m": [
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "episodes": [
+        3928,
+        3931,
+        3933,
+        3935,
+        3936,
+        3937,
+        3938,
+        3942,
+        3945,
+        3948,
+        3949,
+        3950,
+        3951,
+        3952,
+        3953,
+        3954,
+        3955,
+        3956,
+        3957,
+        3958,
+        3959,
+        3960,
+        3961,
+        3962,
+        3965,
+        3966,
+        3967,
+        3968,
+        3969,
+        3970,
+        3971,
+        3972,
+        3973,
+        3975,
+        3976,
+        3977
+      ]
+    },
+    {
+      "spec": {
+        "template_id": "legacy_original",
+        "halfwidths": {
+          "tilt_deg": 2,
+          "lean_azimuth_deg": 5,
+          "long_axis_yaw_deg": 5,
+          "xy_m": 0.003
+        },
+        "tools": {
+          "knife_0": {
+            "tilt_magnitude_deg": 0,
+            "lean_azimuth_holder_deg": 0,
+            "long_axis_yaw_deg": 0,
+            "sampled_root_xy_shift_holder_m": [
+              0,
+              0
+            ]
+          },
+          "fork_1": {
+            "tilt_magnitude_deg": 0,
+            "lean_azimuth_holder_deg": 0,
+            "long_axis_yaw_deg": 0,
+            "sampled_root_xy_shift_holder_m": [
+              0,
+              0
+            ]
+          },
+          "fork_2": {
+            "tilt_magnitude_deg": 0,
+            "lean_azimuth_holder_deg": 0,
+            "long_axis_yaw_deg": 0,
+            "sampled_root_xy_shift_holder_m": [
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "episodes": [
+        3929,
+        3930,
+        3932,
+        3934,
+        3939,
+        3941,
+        3943,
+        3944,
+        3946,
+        3947,
+        3963,
+        3964,
+        3974
+      ]
+    },
+    {
+      "spec": {
+        "template_id": "17",
+        "halfwidths": {
+          "tilt_deg": 2,
+          "lean_azimuth_deg": 5,
+          "long_axis_yaw_deg": 5,
+          "xy_m": 0.003
+        },
+        "tools": {
+          "knife_0": {
+            "tilt_magnitude_deg": 17.108324072106235,
+            "lean_azimuth_holder_deg": -137.3870503209698,
+            "long_axis_yaw_deg": 51.288796452317285,
+            "sampled_root_xy_shift_holder_m": [
+              0.02351290727408267,
+              0.024646735375612374
+            ]
+          },
+          "fork_1": {
+            "tilt_magnitude_deg": 13.878462048581248,
+            "lean_azimuth_holder_deg": -151.06866371802832,
+            "long_axis_yaw_deg": -83.56817996261786,
+            "sampled_root_xy_shift_holder_m": [
+              0.027591279762821247,
+              -0.007520464507142413
+            ]
+          },
+          "fork_2": {
+            "tilt_magnitude_deg": 15.00802645142152,
+            "lean_azimuth_holder_deg": -63.45491778932944,
+            "long_axis_yaw_deg": -164.04647208013967,
+            "sampled_root_xy_shift_holder_m": [
+              -0.010251742433991969,
+              0.001016679060598033
+            ]
+          }
+        }
+      },
+      "episodes": [
+        3940
+      ]
+    }
+  ]
+}

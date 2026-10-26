@@ -1,0 +1,5 @@
+{
+  "layout_id": 3,
+  "seed": 42,
+  "task_types": ["fryer", "microwave", "coffee", "tray"]
+}

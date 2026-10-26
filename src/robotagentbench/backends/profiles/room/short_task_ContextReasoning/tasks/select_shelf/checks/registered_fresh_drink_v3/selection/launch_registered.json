@@ -1,0 +1,23 @@
+{
+  "schema": "openend.short_task.launch.v1",
+  "task_name": "select_drink",
+  "manifest": "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_ContextReasoning/tasks/select_shelf/checks/registered_fresh_drink_v3/selection/manifest_registered.json",
+  "request": "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_ContextReasoning/tasks/select_shelf/checks/registered_fresh_drink_v3/selection/request_registered.json",
+  "ready_pose": "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_ContextReasoning/tasks/select_shelf/checks/registered_fresh_drink_v3/selection/ready_pose_registered.json",
+  "initial_base_xyyaw": [
+    -2.385146164946642,
+    1.3183357818879515,
+    1.6173236117628704
+  ],
+  "sensor": {
+    "range": 1.32,
+    "halfAngle": 45
+  },
+  "startup_spawn_scope": "source_task_range_reset_requires_native_acceptance",
+  "source_robot_pose_preserved_in_scene": true,
+  "startup_physics_hz": 60,
+  "control_hz": 20,
+  "physics_backend": "cpu",
+  "physics_frequency_owner": "selected_workspace",
+  "preparation_receipt": "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_ContextReasoning/tasks/select_shelf/checks/registered_fresh_drink_v3/selection/preparation_registered.json"
+}

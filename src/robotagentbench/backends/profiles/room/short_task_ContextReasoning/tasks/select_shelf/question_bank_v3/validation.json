@@ -1,0 +1,72 @@
+{
+  "count": 200,
+  "by_kind": {
+    "drink": 100,
+    "snack": 100
+  },
+  "by_family": {
+    "implicit_need_and_constraints": 76,
+    "latest_plan": 16,
+    "remaining_need": 16,
+    "schedule_branch": 18,
+    "correction_scope": 14,
+    "recipient_binding": 18,
+    "role_swap": 14,
+    "deadline_priority": 14,
+    "conditional_fallback": 14
+  },
+  "by_product": {
+    "starbucks": 10,
+    "red_bull_pink": 12,
+    "pringles_green": 13,
+    "good2grow": 8,
+    "chomps_r": 13,
+    "skit_littles": 11,
+    "honeymaid": 12,
+    "grapefruit_can": 12,
+    "cayman_jacked": 12,
+    "sprite_c1": 10,
+    "gatorade_m": 13,
+    "gatorade_t": 13,
+    "zbar_t": 13,
+    "coke_c3": 10,
+    "oreo_gf": 12,
+    "lindt": 13,
+    "pring_bbq": 13
+  },
+  "brand_names_in_prompts": 0,
+  "contrastive_pairs": 62,
+  "authored_feature_keys_unique_across_full_catalog": true,
+  "semantic_ambiguity_independently_validated": false,
+  "rendered_label_readability_verified": false,
+  "caveats": [
+    "76 implicit-need cases plus 124 questions from 62 contrastive pairs.",
+    "Context structures repeat. These are not 200 independent reasoning patterns.",
+    "Feature-key uniqueness checks are not an independent natural-language review.",
+    "Split by scenario/need family and keep both members of each pair in one split.",
+    "No allergy safety, medical advice, caffeine dose or guaranteed physiological effect is claimed.",
+    "No verified peanut-flavour snack exists in the current pool; those questions are excluded."
+  ],
+  "evidence_sha256": {
+    "cayman_jacked.png": "797f2f6d885f559e151a5795ed6e1ecdbc72f06f1dd1458fabb56cf9dbd0cd05",
+    "chomps_r.png": "5e334779495abdc308556eda0f6cec330e199e857fc517ba3d5dae7d1056bf1e",
+    "coke_c3.png": "106f2d2dd8e2a875453375bbd8cf6a08bc1c805ef4931c03af5aaaad2f1da072",
+    "gatorade_m.png": "04912ed87ad9c5dec4e809817104ab5fa47446e04e0af6552c2cdff13dc8c94d",
+    "gatorade_t.png": "2b7b7887b1c3cfd8e2c85d73dbab9f30df53cfd803211caf91661f03811ddb4e",
+    "good2grow.png": "0b1b622452fdec60e0b895121a0cc85909d599ae5c1e7bb48df0942ae19255df",
+    "grapefruit_can.png": "ba25b032d15c3c00ffe844a38c28ab715777e99a32b6470d13f9ecadf1eb57d9",
+    "honeymaid.png": "3eb19d6f441aa8681204b05b7ed73d0e21e2723b97502ac13bb4199c08f53d8e",
+    "oreo_gf.png": "a5e8b23de2082ceca8aa34b487840107ecc09013dea5fcc4daa0f33c36bfe8bd",
+    "pring_bbq.png": "8693d24aeead7fba4f3058cd3c5565adfd21b1e7461a3cb5a312b833e921b5e9",
+    "skit_littles.png": "24496a9a384d501d210658749030e9ef8b92d0f10624969058d3b54b1b19f672",
+    "sprite_c1.png": "c1d91757532386abdf18421390c3807302418081b7ff3fdbfac3e13e78e2dbe6",
+    "starbucks.png": "1bf009ee94710eb336ed06a079ba4c89f0c13d2eb9fa816a3c20d0ef413418fa",
+    "zbar_t.png": "49e171f2dbc00507b6cf57d03b45c15d9dd4d8989893b95fd07ece1460798b83"
+  },
+  "sha256": {
+    "public_questions.json": "5b5f797c0e4497a4512a351a064e5e5c2790bf82ad24fa08bb3f567d8c2a92c4",
+    "product_identities.json": "f3b7d5a6c202a7bd0cc25ae14ea1d70db7ec7ed1303409dc3a27af0bcb221cf3",
+    "question_bank_review.md": "8fa3e474b2d10c33d46028cce57310d68b69b44990c0285b2522fb45177ad977",
+    "answers_private.json": "64c68c6a88b8f690cb53065bdf3bfe9643e7a22d6989b43e34dce10bb9d5039b"
+  }
+}

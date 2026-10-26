@@ -1,0 +1,7 @@
+{
+  "schema": "openend.scene_requirements.request.v2",
+  "seed": 42,
+  "layout_id": 26,
+  "tasks": [{"id":"shelf","type":"snack_drink_to_tray","product":"coke_c3"}],
+  "extras": []
+}

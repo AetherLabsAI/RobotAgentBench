@@ -1,0 +1,193 @@
+{
+ "schema": "arena.coffee_table_place.initial_state.v2",
+ "api_id": "5-6",
+ "source": {
+  "episode_id": "ce6db991-3160-52a1-bf7d-a3c0198ad07b",
+  "lerobot_episode_index": 114,
+  "sim_info_dir": "/mnt/agent-bench-data/lingjun/ziche/data/place_tray_lerobot_20260918/sim_info/episode_000114",
+  "dataset": "/mnt/agent-bench-data/lingjun/ziche/data/place_tray_lerobot_20260918",
+  "hand": "r",
+  "clutter_count": 2,
+  "coffee_table_variant": "light_scandi",
+  "tray_color": "gray",
+  "seed": 938200006,
+  "slot": 202,
+  "attempt": 6,
+  "case": "/mnt/agent-bench-data/lingjun/ziche/work/place_training_tray_20260918/cases/grapefruit_can/slot_202_attempt_006",
+  "asset_release": "/mnt/agent-bench-data/lingjun/ziche/assets/shelf_pick/releases/20260916_oreo_v10",
+  "benchmark_task": "benchmark_3_12",
+  "physics_hz": 60,
+  "control_hz": 20,
+  "release_frame": 203,
+  "world_geometry_status": "CLEAR_AT_CHECKED_SAMPLES",
+  "robot_frame": "/World/Robot",
+  "sha256": {
+   "episode_json": "cb26de5faf7398c23eb83e819d3a30a2daf9a0a5081067b94ea157b157cf4d67",
+   "sim_info_json": "b9427f2b856b47000d994a4501c639801f0ee1f363c27b9d501fdad3a5daba9c",
+   "appearance_json": "0b9d3b4c26d3720dc985fdcc3f205eeefb7ee7297748657ea115e6c1dd812b4d",
+   "scene_usda": "5590c7f43f4e6c3cede9be2cfd6030ae7fb44840f72d0fbc5828d130a9b00f64",
+   "initial_state_npz": "dfe56bb3185d829eabb34400d2bcca836ce019e330f37eadbfa531e603e2ed0a",
+   "recording_20hz_npz": "7dcd4d598c2ea327c2399667585ff10a38fbb81e27ebaa0cc78087605607b4e2"
+  },
+  "local_recording": "references/newdata_recordings_20260918/5-6/fixed/recording_20hz.npz",
+  "scope": "held-object start, tray pose, in-tray clutter and robot station of one accepted source episode; source physics (60 Hz) and controller are NOT reproduced",
+  "role": "fixed"
+ },
+ "target_path": "/World/Assets/ShelfItems/grapefruit_can",
+ "held": {
+  "position_m": [
+   -2.1064751148223877,
+   0.2922269403934479,
+   0.7351373434066772
+  ],
+  "quaternion_wxyz": [
+   0.7950454116303203,
+   -0.0330289840672297,
+   0.03416276131946715,
+   0.6046856914100833
+  ]
+ },
+ "robot": {
+  "prim_path": "/World/Robot",
+  "position_m": [
+   -1.9074498414993286,
+   0.9259489178657532,
+   0.012377019971609116
+  ],
+  "quaternion_wxyz": [
+   -0.6891035437583927,
+   0.0,
+   0.0,
+   0.7246628912671222
+  ]
+ },
+ "joint_positions": {
+  "idx01_body_joint1": 0.00758823286741972,
+  "idx02_body_joint2": 0.5236246585845947,
+  "idx11_head_joint1": 2.621008661662927e-06,
+  "idx12_head_joint2": 0.43644464015960693,
+  "idx21_arm_l_joint1": -1.0036593675613403,
+  "idx61_arm_r_joint1": 1.066781759262085,
+  "idx22_arm_l_joint2": 0.5965942144393921,
+  "idx62_arm_r_joint2": -0.5905113816261292,
+  "idx23_arm_l_joint3": 0.2705540060997009,
+  "idx63_arm_r_joint3": -0.2330300211906433,
+  "idx24_arm_l_joint4": -1.214639663696289,
+  "idx64_arm_r_joint4": 1.338907241821289,
+  "idx25_arm_l_joint5": 0.5694617629051208,
+  "idx65_arm_r_joint5": -0.6921964287757874,
+  "idx26_arm_l_joint6": 1.3879315853118896,
+  "idx66_arm_r_joint6": -1.430525302886963,
+  "idx27_arm_l_joint7": -0.12426012009382248,
+  "idx67_arm_r_joint7": 0.1557615101337433,
+  "idx31_gripper_l_inner_joint1": -0.7843995690345764,
+  "idx41_gripper_l_outer_joint1": 0.7843995690345764,
+  "idx71_gripper_r_inner_joint1": -0.3679288923740387,
+  "idx81_gripper_r_outer_joint1": 0.36628448963165283,
+  "idx32_gripper_l_inner_joint3": -0.08909037709236145,
+  "idx42_gripper_l_outer_joint3": 0.08879304677248001,
+  "idx72_gripper_r_inner_joint3": 0.04234550893306732,
+  "idx82_gripper_r_outer_joint3": -0.03870833292603493,
+  "idx33_gripper_l_inner_joint4": 0.03438512608408928,
+  "idx43_gripper_l_outer_joint4": -0.03356592729687691,
+  "idx73_gripper_r_inner_joint4": 0.034910134971141815,
+  "idx83_gripper_r_outer_joint4": -0.034906670451164246,
+  "idx39_gripper_l_inner_joint0": 0.3922675549983978,
+  "idx49_gripper_l_outer_joint0": -0.3929496705532074,
+  "idx79_gripper_r_inner_joint0": 0.14916817843914032,
+  "idx89_gripper_r_outer_joint0": -0.14760366082191467
+ },
+ "tray": {
+  "prim_path": "/World/Assets/Tray",
+  "floor_z_m": 0.45490211957462423,
+  "position_m": [
+   -2.116366908825214,
+   0.22433413517765294,
+   0.45000002653844173
+  ],
+  "quaternion_wxyz": [
+   0.7069764699780717,
+   0.7069764699780716,
+   -0.013574641702258711,
+   -0.013574641702258713
+  ]
+ },
+ "clutter": [
+  {
+   "prim_path": "/World/Assets/ShelfItems/gatorade_m",
+   "product": "gatorade_m",
+   "position_m": [
+    -2.035890579223633,
+    0.22645629942417145,
+    0.4549073576927185
+   ],
+   "quaternion_wxyz": [
+    0.9300492342783829,
+    0.00036513941929645634,
+    0.0004463441406824056,
+    0.3674344693524359
+   ]
+  },
+  {
+   "prim_path": "/World/Assets/ShelfItems/cayman_jacked",
+   "product": "cayman_jacked",
+   "position_m": [
+    -1.9980860948562622,
+    0.15730640292167664,
+    0.454856812953949
+   ],
+   "quaternion_wxyz": [
+    -0.329012813904471,
+    3.993988717695102e-06,
+    5.9293281573512434e-05,
+    0.9443254548909591
+   ]
+  }
+ ],
+ "verification": {
+  "state_reference": "recording_20hz.npz frame 0",
+  "plan_reference": "episode.json",
+  "authored_state_kind": "AUTHORED_INITIAL_STATE_ONLY_NOT_ACTUAL",
+  "authored_npz_is_a_spawn_seed": true,
+  "held_vs_authored_seed_m": 0.3592598128894172,
+  "held_min_distance_from_seed_m": 0.05,
+  "posture_joints": [
+   "idx01_body_joint1",
+   "idx02_body_joint2",
+   "idx11_head_joint1",
+   "idx12_head_joint2",
+   "idx21_arm_l_joint1",
+   "idx61_arm_r_joint1",
+   "idx22_arm_l_joint2",
+   "idx62_arm_r_joint2",
+   "idx23_arm_l_joint3",
+   "idx63_arm_r_joint3",
+   "idx24_arm_l_joint4",
+   "idx64_arm_r_joint4",
+   "idx25_arm_l_joint5",
+   "idx65_arm_r_joint5",
+   "idx26_arm_l_joint6",
+   "idx66_arm_r_joint6",
+   "idx27_arm_l_joint7",
+   "idx67_arm_r_joint7"
+  ],
+  "max_posture_joint_deviation_rad": 0.0032449308629456663,
+  "posture_joint_tolerance_rad": 0.01,
+  "max_gripper_joint_deviation_rad": 0.04680725932121277,
+  "gripper_joints_excluded": "the clamp loop closes the gripper before frame 0",
+  "max_base_position_deviation_m": 2.6114533868693002e-08,
+  "base_position_tolerance_m": 1e-06,
+  "max_base_quaternion_deviation": 8.093038683654186e-09,
+  "base_quaternion_tolerance": 1e-06,
+  "max_clutter_position_deviation_m": 0.0005453066206752566,
+  "clutter_position_tolerance_m": 0.005,
+  "max_clutter_quaternion_deviation": 0.00044634414068240555,
+  "clutter_quaternion_tolerance": 0.005,
+  "tray_position_deviation_m": 0.0,
+  "tray_orientation_matches_baseline": true,
+  "coffee_table_xform_matches_baseline": true,
+  "baseline": "assets/house_scene_l1/demo_sim/scene_room_baseline.usda",
+  "baseline_sha256": "3d7e4924c41d0316b501d0643b45af4cf8e6783e928ec890fee2709904a5fb19"
+ },
+ "physical_acceptance": false
+}

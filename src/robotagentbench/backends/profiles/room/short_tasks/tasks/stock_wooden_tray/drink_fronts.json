@@ -1,0 +1,382 @@
+{
+  "policy": "all_drinks_label_forward.v1",
+  "shelf_front_direction_xy": [
+    0,
+    -1
+  ],
+  "source_label_regions_sha256": "50120a40f4276e4594a05405723d7f739550a9e5dfc48aa16cb93b83af5d0326",
+  "calibration": "Brand region manually located on canonical texture, barycentrically mapped through actual USD st coordinates; no assumed universal front axis.",
+  "products": {
+    "coke_c3": {
+      "wrapper_yaw_deg": 34.6507516607123,
+      "label_normal_asset_local": [
+        -0.5685472637001185,
+        -0.8225963394429368,
+        -0.009448347696228192
+      ],
+      "label_normal_before_wrapper": [
+        -0.5685472637001185,
+        -0.8225963394429368,
+        -0.009448347696228192
+      ],
+      "asset_root_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verified_label_meshes": [
+        "/Asset/Can/body"
+      ],
+      "asset_entry_sha256": "30f4759f40e15bc6606dfd7557b95a7844454dfc99032e36ba8c7d9e979bb5fa",
+      "asset_manifest_sha256": "32d5d7cdb3c088dc57c32fcf5bee28fe82e25a604cb7a8cb0062eeabe7b485d2",
+      "asset_payload_sha256": "0c9bb003de4fe8bc48dd1340f235e23162e0c0f67476fbde02d92dfdbb8a2749"
+    },
+    "sprite_c1": {
+      "wrapper_yaw_deg": 18.762537620918664,
+      "label_normal_asset_local": [
+        -0.3216184606258804,
+        -0.9467767335522931,
+        -0.013243209153727073
+      ],
+      "label_normal_before_wrapper": [
+        -0.3216184606258804,
+        -0.9467767335522931,
+        -0.013243209153727073
+      ],
+      "asset_root_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verified_label_meshes": [
+        "/Asset/Can/body"
+      ],
+      "asset_entry_sha256": "c8b1fccdaaaf7921ee29a85e5fbd1327164cbed7177e1c390b79e31fadf195e2",
+      "asset_manifest_sha256": "1168fbc351d3699dbca147afbcf7ff7d95c06ee7bbe6b849473d2381132f1989",
+      "asset_payload_sha256": "745c92c69eb23740bd9aa9d19ef1d89a71b7d0661095472ac7a5e55b42dadae3"
+    },
+    "starbucks": {
+      "wrapper_yaw_deg": -3.757813218811094,
+      "label_normal_asset_local": [
+        0.06542410715079341,
+        -0.9960976327494234,
+        0.05923843544959848
+      ],
+      "label_normal_before_wrapper": [
+        0.06542410715079341,
+        -0.9960976327494234,
+        0.05923843544959848
+      ],
+      "asset_root_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verified_label_meshes": [
+        "/Asset/Can/body"
+      ],
+      "asset_entry_sha256": "e156b51e74c0cbc46729fe2aa86e338e41f30e67626da1dd9e4b7d7859541afd",
+      "asset_manifest_sha256": "475df8a3be8c2068399ec23602782ccfa101c9525762cb8c4489dfd40892f847",
+      "asset_payload_sha256": "36c33a5b72d0994c7ecab92f3d12bbc9b80dd854e0c594b11cf57893e9713794"
+    },
+    "good2grow": {
+      "wrapper_yaw_deg": 32.75089308106135,
+      "label_normal_asset_local": [
+        0.09655449119858894,
+        -0.9803352151563788,
+        0.172104898691693
+      ],
+      "label_normal_before_wrapper": [
+        -0.532915303948425,
+        -0.8284812506411234,
+        0.17210489869169301
+      ],
+      "asset_root_matrix": [
+        [
+          0.7839547954984099,
+          -0.6208179109972959,
+          0.0,
+          0.0
+        ],
+        [
+          0.6208179109972959,
+          0.7839547954984099,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verified_label_meshes": [
+        "/Asset/label_body"
+      ],
+      "asset_entry_sha256": "17a2e1b5f7cb57c11f840f5c2d92131f8014ffb4a62934835ae419c908509794",
+      "asset_manifest_sha256": "88bb54ae2ed2271bc69b84141332a5098da58b36a94975c24dd55e941a86ee79",
+      "asset_payload_sha256": "242759b8b732e4c2f485042cdff25939cfc32cc74cadde7a37382b5742771bf1"
+    },
+    "gatorade_m": {
+      "wrapper_yaw_deg": -28.733973193185108,
+      "label_normal_asset_local": [
+        0.4787408422034303,
+        -0.873208456913106,
+        0.09118221746471424
+      ],
+      "label_normal_before_wrapper": [
+        0.47874084220343033,
+        -0.8732084569131061,
+        0.09118221746471425
+      ],
+      "asset_root_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verified_label_meshes": [
+        "/Asset/Bottle/body"
+      ],
+      "asset_entry_sha256": "ee3923dffa7e9e285fc5b5838590a3156f98c25348c38d9521cd253bcde88d4d",
+      "asset_manifest_sha256": "0fdc25b3f2b5d27ec69f3c1f4aa5bf6824158e94bf86a8722c21f092478e7ba9",
+      "asset_payload_sha256": "c7442cea796cd39e8a53c35793962840a6d9dcd174d6dd12061f910f8658be64"
+    },
+    "gatorade_t": {
+      "wrapper_yaw_deg": -28.733973193185108,
+      "label_normal_asset_local": [
+        0.4787408422034303,
+        -0.873208456913106,
+        0.09118221746471424
+      ],
+      "label_normal_before_wrapper": [
+        0.47874084220343033,
+        -0.8732084569131061,
+        0.09118221746471425
+      ],
+      "asset_root_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verified_label_meshes": [
+        "/Asset/Bottle/body"
+      ],
+      "asset_entry_sha256": "c52584212ee2d1f3d27e4b5052e13f97072cfead7b86a0e219d2465fdcb103f7",
+      "asset_manifest_sha256": "362cf34d2c7f308985a4460302c3f14d90171c55d4a3a9a823b6bfb6a272af82",
+      "asset_payload_sha256": "141f18f670931334348cca09a88a7414d806afaf9d95f0e94b8122be75aba92a"
+    },
+    "grapefruit_can": {
+      "wrapper_yaw_deg": -165.8190848279027,
+      "label_normal_asset_local": [
+        -0.9091399016841214,
+        -0.4161944011399904,
+        -0.015711767103382134
+      ],
+      "label_normal_before_wrapper": [
+        0.2449542164827691,
+        0.9694073303837772,
+        -0.01571176710338214
+      ],
+      "asset_root_matrix": [
+        [
+          -0.626314167300841,
+          -0.7795707561461339,
+          0.0,
+          0.0
+        ],
+        [
+          0.7795707561461339,
+          -0.626314167300841,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verified_label_meshes": [
+        "/Asset/Can/body"
+      ],
+      "asset_entry_sha256": "74605130c2e42fbd64827240cd92e966a984e95e9303ed405b3a29975f0d6ed7",
+      "asset_manifest_sha256": "b705089978d55359206d3cbc5863723fca2069d578af102056da710087723baf",
+      "asset_payload_sha256": "1ebf969c23de0edb834b9db72e34eea46a38db00b1e6cb990f7717fcab9bc301",
+      "front_feature_calibration": {
+        "front_feature": "upper large red grapefruit slice",
+        "image_rect": [
+          0.27,
+          0.23,
+          0.37,
+          0.36
+        ],
+        "sample_count": 63,
+        "method": "actual body mesh UV barycentric mapping"
+      }
+    },
+    "cayman_jacked": {
+      "wrapper_yaw_deg": 133.6167374768889,
+      "label_normal_asset_local": [
+        0.13935112944801126,
+        -0.9902292776529047,
+        -0.005219233714850559
+      ],
+      "label_normal_before_wrapper": [
+        -0.7239605153776265,
+        0.6898216666455116,
+        -0.005219233714850559
+      ],
+      "asset_root_matrix": [
+        [
+          -0.7839876823038523,
+          -0.6207763800241064,
+          0.0,
+          0.0
+        ],
+        [
+          0.6207763800241064,
+          -0.7839876823038523,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verified_label_meshes": [
+        "/Asset/Can/body"
+      ],
+      "asset_entry_sha256": "86e6a77afd770225c8f8f8e7026f4330000877cf99e50d713d24d6e7d2e5fadf",
+      "asset_manifest_sha256": "7729756c383a4b167127b4cc7d941b3bdf463c1f877bdb65968e5c8dacdc533e",
+      "asset_payload_sha256": "0f14f64945350157b47c9e1738e3f8cff1a0a43369fb62640d015b2652cba502"
+    }
+  }
+}

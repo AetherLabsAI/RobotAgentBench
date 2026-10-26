@@ -1,0 +1,9 @@
+{
+  "host": "64.62.194.202",
+  "selection": "fixed_gpu1_reclaim",
+  "allowed_indices": [1],
+  "max_memory_used_mib": 1024,
+  "max_utilization_percent": 5,
+  "busy_policy": "user_authorized_gpu1_exact_process_term_then_kill",
+  "scope": "scene_requirements room preview rendering"
+}

@@ -1,0 +1,1661 @@
+{
+  "schema": "short_tasks.hang_cap.geometry_frames.v1",
+  "mesh_suffix": "/Obj/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/baseballcap_Scene_Node_0/Cloth_1/BindedTrim_5217763_20/StitchMatShape_5217769_Node_21/Object_43/Object_18",
+  "reference_vertices_zlib_base64": "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",
+  "reference_shape": [
+    636,
+    3
+  ],
+  "rows": [
+    {
+      "source_id": "short_6/batch_20261008_001:0",
+      "geometry_delta": [
+        [
+          0.9999999999999994,
+          2.412226125842718e-16,
+          1.1068547419608084e-16,
+          0
+        ],
+        [
+          3.173179493109436e-16,
+          0.9999999999999994,
+          -1.177916017524755e-16,
+          0
+        ],
+        [
+          6.368875420227337e-19,
+          -1.0340509056881897e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -1.2116903504194741e-27,
+          2.4233807008389483e-27,
+          4.796274303743752e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 8.326672684688674e-17,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l05_l_fb03_p9_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "ec6309f0818777d182ed68748c077c022b03ab808e6de20f26ff2c35e3942bd0"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:1",
+      "geometry_delta": [
+        [
+          0.9999999999999994,
+          2.412226125842718e-16,
+          1.1068547419608084e-16,
+          0
+        ],
+        [
+          3.173179493109436e-16,
+          0.9999999999999994,
+          -1.177916017524755e-16,
+          0
+        ],
+        [
+          6.368875420227337e-19,
+          -1.0340509056881897e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -1.2116903504194741e-27,
+          2.4233807008389483e-27,
+          4.796274303743752e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 8.326672684688674e-17,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l08_l_fb03_p13_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "ff1b4389f1c6e781deeb287952cf4123ce5648402a6a7bf3b007a0ce321f63fe"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:2",
+      "geometry_delta": [
+        [
+          0.9999999999999994,
+          2.412226125842718e-16,
+          1.1068547419608084e-16,
+          0
+        ],
+        [
+          3.061015119510515e-16,
+          0.9999999999999994,
+          -6.662943560860494e-17,
+          0
+        ],
+        [
+          2.839246315765165e-17,
+          -1.0340509056881897e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -1.1107161545511846e-27,
+          -7.935310457096718e-18,
+          2.271919407036514e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 9.71445146547012e-17,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l40_l_fb03_p9_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "efdbb4355caabc36fd88af12393a8754f812766a4e50eac445ad80762d50f9ed"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:3",
+      "geometry_delta": [
+        [
+          0.9999999999999994,
+          2.412226125842718e-16,
+          1.1068547419608084e-16,
+          0
+        ],
+        [
+          3.061015119510515e-16,
+          0.9999999999999994,
+          -6.662943560860494e-17,
+          0
+        ],
+        [
+          2.839246315765165e-17,
+          -1.0340509056881897e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -1.1107161545511846e-27,
+          -7.935310457096718e-18,
+          2.271919407036514e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 9.71445146547012e-17,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l42_l_fb03_p15_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "0f7447e27ce0321c20a8c708228c2dfd142a8c45c9b0f70eb1cfc51fdfad22dc"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:4",
+      "geometry_delta": [
+        [
+          0.9999999999999993,
+          -2.368635781364038e-16,
+          4.578840350720066e-17,
+          0
+        ],
+        [
+          2.366560621581895e-16,
+          0.9999999999999996,
+          -2.2312536320610914e-16,
+          0
+        ],
+        [
+          -2.433277646504045e-16,
+          -2.0873885202245257e-16,
+          1,
+          0
+        ],
+        [
+          -4.488263734653418e-18,
+          -3.471792919373552e-18,
+          1.0349855076499675e-27,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.942890293094024e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l21_l_fb13_p18_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "da0c925e2117f14f799521f6db4ef4019d1cd0e8fa18645392a98602c03bdc7a"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:5",
+      "geometry_delta": [
+        [
+          0.9999999999999997,
+          2.4965700987700722e-17,
+          6.919499403544233e-17,
+          0
+        ],
+        [
+          1.7148600475426273e-16,
+          0.9999999999999994,
+          -3.254496954938503e-16,
+          0
+        ],
+        [
+          -4.280102423553086e-17,
+          1.3801922896687733e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -1.98382761548587e-18,
+          -3.471792919373552e-18,
+          -6.925907677099119e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.6653345369377348e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l41_l_fb13_p18_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "34864a1ccd758101d425d97fcdabc2f108f1f806a661e97aabf2116bdb9eafe7"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:6",
+      "geometry_delta": [
+        [
+          0.9999999999999992,
+          5.3012434640476627e-17,
+          -8.211701185247578e-17,
+          0
+        ],
+        [
+          1.1379071217033257e-17,
+          0.9999999999999994,
+          -1.294990010931425e-16,
+          0
+        ],
+        [
+          -1.376281630837336e-16,
+          -7.398784986188467e-17,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -4.511541806761527e-18,
+          -1.2411904884238006e-17,
+          6.310887241768094e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.220446049250313e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l21_l_r12_p13_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "194cab25c9402ae235195fae965240689966f4d1709136d516418f06fe8cf233"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:7",
+      "geometry_delta": [
+        [
+          0.9999999999999992,
+          5.3012434640476627e-17,
+          -8.211701185247578e-17,
+          0
+        ],
+        [
+          1.1379071217033257e-17,
+          0.9999999999999994,
+          -1.294990010931425e-16,
+          0
+        ],
+        [
+          -1.376281630837336e-16,
+          -7.398784986188467e-17,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -4.511541806761527e-18,
+          -1.2411904884238006e-17,
+          6.310887241768094e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.220446049250313e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l23_l_r12_p4_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "8f779d592a4fd92c471ca7e533561f1b3b8589b3df27dd393d8a81bb8abefdd8"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:8",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          1.7900506366541446e-16,
+          5.952330805221028e-17,
+          0
+        ],
+        [
+          1.9675406431743763e-16,
+          0.9999999999999996,
+          -1.7330275298373333e-16,
+          0
+        ],
+        [
+          -9.951295220202479e-17,
+          -5.22429244249484e-17,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -1.4878593604487126e-18,
+          4.476533887052413e-18,
+          7.825500179792437e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.6653345369377348e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_l_v607_p11_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "44a7ebb33a74b9aedb93bbc46709daf2b2715f32c0738fbd52d3e6a3aa8d6473"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:9",
+      "geometry_delta": [
+        [
+          0.9999999999999999,
+          -2.0580782524476868e-16,
+          7.57184716665232e-17,
+          0
+        ],
+        [
+          -2.43605557423628e-17,
+          0.9999999999999996,
+          -3.3849665075601204e-16,
+          0
+        ],
+        [
+          -3.2659449149729126e-16,
+          -5.5252353590840835e-17,
+          1,
+          0
+        ],
+        [
+          -4.488172922096725e-18,
+          -1.2411904884238006e-17,
+          1.5651000359584874e-27,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.942890293094024e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l01_l_v608_p18_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "e8f8257d3a325815395f5bf003db543825530bf08e7d50e56fb6b180f202577c"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:10",
+      "geometry_delta": [
+        [
+          0.9999999999999999,
+          -2.0580782524476868e-16,
+          7.57184716665232e-17,
+          0
+        ],
+        [
+          -2.43605557423628e-17,
+          0.9999999999999996,
+          -3.3849665075601204e-16,
+          0
+        ],
+        [
+          -3.2659449149729126e-16,
+          -5.5252353590840835e-17,
+          1,
+          0
+        ],
+        [
+          -4.488172922096725e-18,
+          -1.2411904884238006e-17,
+          1.5651000359584874e-27,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.942890293094024e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_l_v608_p15_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "f44c699da5062da205ae9261a4c11add0ac65e5509117aef8319700ba4e4f631"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:11",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          -1.5949058775356435e-16,
+          1.0129955473845849e-16,
+          0
+        ],
+        [
+          2.2867201081442232e-16,
+          0.9999999999999998,
+          -3.7661186163772088e-16,
+          0
+        ],
+        [
+          -1.9313931431499142e-16,
+          1.4805675506314664e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -4.517353758590109e-18,
+          4.467392172073606e-18,
+          -8.391003540948055e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.5959455978986625e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l02_l_v609_p18_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "284be7f6db76c7b83b1fc8b54c2d823db95b8cbd76af6c37d71c71e7956d98f8"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:12",
+      "geometry_delta": [
+        [
+          0.9999999999999994,
+          -2.881408466086559e-17,
+          1.2974307963693525e-16,
+          0
+        ],
+        [
+          2.325997344124207e-16,
+          0.9999999999999996,
+          -4.889737200217313e-16,
+          0
+        ],
+        [
+          -1.4128919888827301e-16,
+          2.0657733546029692e-16,
+          0.9999999999999998,
+          0
+        ],
+        [
+          -8.077935669463161e-28,
+          -1.244919823410546e-17,
+          -6.393145466535413e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 3.0531133177191805e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l40_l_v609_p17_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "38d11ac2980654aa53b11672a3e696fea6c95a8be81a15ff1c0d1b2f79a72b21"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:13",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          -1.3890640225815036e-16,
+          6.919499403544233e-17,
+          0
+        ],
+        [
+          1.566217213274277e-16,
+          0.9999999999999997,
+          -3.722628765503336e-16,
+          0
+        ],
+        [
+          -2.5397316644209403e-16,
+          2.446925463420057e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          1.059464681954317e-22,
+          4.500871430102876e-18,
+          -6.925907654379925e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.220446049250313e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l18_l_v613_p15_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "c723f97812753dc715b8ffe65d879d34003452e278d8eada2a6a65e38aa1e634"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:14",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          -1.3890640225815036e-16,
+          6.919499403544233e-17,
+          0
+        ],
+        [
+          1.566217213274277e-16,
+          0.9999999999999997,
+          -3.722628765503336e-16,
+          0
+        ],
+        [
+          -2.5397316644209403e-16,
+          2.446925463420057e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          1.059464681954317e-22,
+          4.500871430102876e-18,
+          -6.925907654379925e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.220446049250313e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l18_l_v613_p9_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "34b3aa9ef23f8e4ac9a222a27556080c2fdc1dc608b5621294293c336c7a1acb"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:15",
+      "geometry_delta": [
+        [
+          0.9999999999999997,
+          -4.9163622872922365e-17,
+          -4.4462689326836216e-17,
+          0
+        ],
+        [
+          1.975102147872001e-16,
+          0.9999999999999993,
+          -1.9069869333328236e-16,
+          0
+        ],
+        [
+          9.093991947237859e-17,
+          -1.847669863062684e-17,
+          0.9999999999999999,
+          0
+        ],
+        [
+          2.5180427423402857e-18,
+          4.476594429564668e-18,
+          -1.53048032179427e-19,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.5673907444456745e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l18_l_p8_h7_ps/prepared/initial_scene.usda",
+      "scene_sha256": "d8abd52986d02b0001685e4af9cc5249963704f8b60b8622f193899b97b7651f"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:16",
+      "geometry_delta": [
+        [
+          0.9999999999999999,
+          -1.0762728258924955e-16,
+          -1.8781661341914666e-16,
+          0
+        ],
+        [
+          9.151945518338221e-17,
+          0.9999999999999994,
+          -2.0873885202245257e-16,
+          0
+        ],
+        [
+          7.57184716665232e-17,
+          -1.7196319706223856e-16,
+          1,
+          0
+        ],
+        [
+          1.5134921244502047e-23,
+          -1.2399857194910008e-17,
+          -6.925907717488797e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.457167719820518e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l01_l_rb01_p15_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "484cb756170991b8188aa8fbc1a3310b5f021cd3ab718918b5bf5706aef9fcbc"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:17",
+      "geometry_delta": [
+        [
+          0.9999999999999999,
+          -1.0762728258924955e-16,
+          -1.8781661341914666e-16,
+          0
+        ],
+        [
+          9.151945518338221e-17,
+          0.9999999999999994,
+          -2.0873885202245257e-16,
+          0
+        ],
+        [
+          7.57184716665232e-17,
+          -1.7196319706223856e-16,
+          1,
+          0
+        ],
+        [
+          1.5134921244502047e-23,
+          -1.2399857194910008e-17,
+          -6.925907717488797e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.457167719820518e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_l_rb01_p9_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "3919d265bcf03b515d23f534842d0a8130db38eb4a3f869ecd9c731dbd9d03b4"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:18",
+      "geometry_delta": [
+        [
+          0.9999999999999999,
+          -1.2584127567388813e-16,
+          -1.1542234929072804e-16,
+          0
+        ],
+        [
+          7.451532449502992e-17,
+          0.9999999999999997,
+          -3.622253504540643e-16,
+          0
+        ],
+        [
+          1.1509350260490867e-17,
+          1.0559255909405058e-16,
+          1,
+          0
+        ],
+        [
+          -2.0194839173657902e-28,
+          4.476533887052413e-18,
+          -8.391003535899345e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.5265566588595902e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l01_l_rb06_p12_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "a961dfb6d89eec9fa8718026f6548f3e73f687a9ba827c6d2a9c949959120528"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:19",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          9.49256755949755e-17,
+          -4.1827308427073334e-17,
+          0
+        ],
+        [
+          1.1832783143557145e-17,
+          0.9999999999999994,
+          -2.1007840794394737e-16,
+          0
+        ],
+        [
+          -1.2097211111335136e-16,
+          -2.8362971786437543e-16,
+          1.0000000000000002,
+          0
+        ],
+        [
+          2.485078085668742e-18,
+          -1.2411965425134674e-17,
+          1.0602290566170399e-27,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.220446049250313e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l23_r_fb06_p39_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "a06951cd8c7c8e50e54a1a2810ce622c76a6e6c12bebf3383c713a70ab9452e2"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:20",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          1.9039533542077493e-16,
+          5.2999830421129387e-17,
+          0
+        ],
+        [
+          2.3220253323968666e-16,
+          0.9999999999999996,
+          -1.1118284377347117e-17,
+          0
+        ],
+        [
+          7.423192840567741e-17,
+          -6.662943560860494e-17,
+          0.9999999999999998,
+          0
+        ],
+        [
+          2.4835645558809167e-18,
+          -1.1902935417216227e-17,
+          6.18730576657943e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.1102230246251565e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l05_r_fb07_p27_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "587e0304857a0349d953746ffa824c6de081918f2f7785e7c67bbff9643e728f"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:21",
+      "geometry_delta": [
+        [
+          0.9999999999999997,
+          -4.801457336452486e-17,
+          -5.922324877662234e-17,
+          0
+        ],
+        [
+          -5.969600315703239e-17,
+          0.9999999999999998,
+          -2.0572942285656012e-16,
+          0
+        ],
+        [
+          -1.4054254400659394e-16,
+          -2.281185666331176e-16,
+          1.0000000000000002,
+          0
+        ],
+        [
+          -4.6834181380035684e-18,
+          -1.190293541802402e-17,
+          2.0476228551784476e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 3.0531133177191805e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l41_r_fb07_p36_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "9d12ba6dc8526d4609bb2351b6473f4d22b9e1c68ae49496e26682de92b292d6"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:22",
+      "geometry_delta": [
+        [
+          0.9999999999999999,
+          6.884495480824837e-17,
+          -1.3665444727527608e-16,
+          0
+        ],
+        [
+          4.005335119180151e-17,
+          0.9999999999999996,
+          -1.4452973061642025e-16,
+          0
+        ],
+        [
+          4.3613910963507037e-17,
+          -2.6124057408781792e-16,
+          1.0000000000000002,
+          0
+        ],
+        [
+          1.5135123192893783e-23,
+          4.476594428756875e-18,
+          1.9219394226968827e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.8041124150158794e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l18_r_fb08_p36_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "dbf404bb25289e58be5b56094d791ab464573556db4b519bdeac4d18b900717b"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:23",
+      "geometry_delta": [
+        [
+          0.9999999999999998,
+          7.613901508411643e-18,
+          9.597685384261371e-17,
+          0
+        ],
+        [
+          1.0273589254327428e-16,
+          0.9999999999999997,
+          -7.532740578337946e-17,
+          0
+        ],
+        [
+          -9.081498202725028e-17,
+          -2.187763781187219e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -4.470843017824961e-18,
+          -1.1407950955485976e-17,
+          6.187305794347334e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 7.632783294297951e-17,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l06_r_fb11_p39_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "f7a4e3a18d142fcc382d2f18e4d2c013722a782c76a91ab24199e3e35e8e2f10"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:24",
+      "geometry_delta": [
+        [
+          0.9999999999999998,
+          7.613901508411643e-18,
+          9.597685384261371e-17,
+          0
+        ],
+        [
+          1.0273589254327428e-16,
+          0.9999999999999997,
+          -7.532740578337946e-17,
+          0
+        ],
+        [
+          -9.081498202725028e-17,
+          -2.187763781187219e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -4.470843017824961e-18,
+          -1.1407950955485976e-17,
+          6.187305794347334e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 7.632783294297951e-17,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l07_r_fb11_p27_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "c0487d51ad2dc8e8c33e4d99971521542adfcc8b841ed0c073e7768d4e41d5b6"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:25",
+      "geometry_delta": [
+        [
+          0.9999999999999998,
+          7.613901508411643e-18,
+          9.597685384261371e-17,
+          0
+        ],
+        [
+          1.0273589254327428e-16,
+          0.9999999999999997,
+          -7.532740578337946e-17,
+          0
+        ],
+        [
+          -9.081498202725028e-17,
+          -2.187763781187219e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -4.470843017824961e-18,
+          -1.1407950955485976e-17,
+          6.187305794347334e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 7.632783294297951e-17,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l08_r_fb11_p36_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "1257c0cc9f64a14f1090c6b2a071b35d93779aeff4097ebdbd3e45cf5f487d4f"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:26",
+      "geometry_delta": [
+        [
+          0.9999999999999994,
+          -2.728265718730656e-16,
+          -2.2769702986218927e-17,
+          0
+        ],
+        [
+          2.679916925808801e-16,
+          0.9999999999999999,
+          -4.277740277815914e-16,
+          0
+        ],
+        [
+          -1.5067511834589536e-16,
+          2.6342804261304957e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -1.0097419586828951e-27,
+          4.968006967082376e-19,
+          -8.391003510655796e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.6653345369377348e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l05_r_fb17_p27_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "4b43a818394e50815619d0930decd79d51e32a2c59697390150c4f5a88d73c64"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:27",
+      "geometry_delta": [
+        [
+          1,
+          -1.205863660379247e-16,
+          7.136948657913595e-17,
+          0
+        ],
+        [
+          4.594708765584879e-17,
+          1,
+          -1.502182716253023e-16,
+          0
+        ],
+        [
+          -1.1227414093857689e-16,
+          -2.237695815457304e-16,
+          1.0000000000000002,
+          0
+        ],
+        [
+          2.4836250976863528e-18,
+          -3.9676855002083835e-18,
+          1.921939422621152e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 5.551115123125783e-17,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l07_r_fb22_p31_h8_c2/prepared/initial_scene.usda",
+      "scene_sha256": "2933bb6d23ce76fb3a9e2437a3ebb7e8c07aa7923523e38f65b895b3be53cd08"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:28",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          -1.110335030008429e-16,
+          -5.3160659501610735e-17,
+          0
+        ],
+        [
+          2.187332271106979e-16,
+          0.9999999999999991,
+          -3.0606998088318527e-16,
+          0
+        ],
+        [
+          -2.2256875533830694e-17,
+          -1.3384798618052974e-16,
+          0.9999999999999998,
+          0
+        ],
+        [
+          2.8838021140634742e-18,
+          4.513887780239916e-18,
+          1.921939423353215e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 3.608224830031759e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l41_r_fb22_p28_h8_c2/prepared/initial_scene.usda",
+      "scene_sha256": "7559cabeffb6e0987945ba2cc6c80b6c538e4006699ea311c5ff21c440ed87e7"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:29",
+      "geometry_delta": [
+        [
+          0.9999999999999998,
+          7.168013965163915e-17,
+          -3.747832333968608e-17,
+          0
+        ],
+        [
+          2.0005424159344387e-16,
+          0.9999999999999998,
+          -5.659190951233565e-17,
+          0
+        ],
+        [
+          1.3683842804184493e-17,
+          -2.655895591752052e-16,
+          1,
+          0
+        ],
+        [
+          -4.4708430182288575e-18,
+          4.513827236112074e-18,
+          6.187305794347334e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.498001805406602e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l01_r_pc01_p46_h8_c2/prepared/initial_scene.usda",
+      "scene_sha256": "9bdae6031d4914a39f676a6e1d7e69e91736b92b4fc71ec03b74a5b88ee61436"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:30",
+      "geometry_delta": [
+        [
+          0.9999999999999999,
+          -3.806052078133649e-16,
+          3.129845243974099e-16,
+          0
+        ],
+        [
+          3.309088812157101e-16,
+          0.9999999999999998,
+          -5.050301044497855e-16,
+          0
+        ],
+        [
+          -3.024480125898827e-16,
+          2.229476209050694e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -4.488263735461212e-18,
+          -3.4717929201813455e-18,
+          -6.744284151532572e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.6306400674181987e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l23_r_v620_p43_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "689b9cad2fbad265be524bb385579eb39426e83b52f73028a28640e692ddda9e"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:31",
+      "geometry_delta": [
+        [
+          0.9999999999999999,
+          -3.806052078133649e-16,
+          3.129845243974099e-16,
+          0
+        ],
+        [
+          3.309088812157101e-16,
+          0.9999999999999998,
+          -5.050301044497855e-16,
+          0
+        ],
+        [
+          -3.024480125898827e-16,
+          2.229476209050694e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -4.488263735461212e-18,
+          -3.4717929201813455e-18,
+          -6.744284151532572e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.6306400674181987e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l23_r_v620_p46_h8_c2/prepared/initial_scene.usda",
+      "scene_sha256": "920156bf3c4eaf034e6d632d7ed8dacd94d6a0e37c55092350ffe84eb5ce3977"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:32",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          3.692700831126366e-17,
+          -2.5917911338370095e-17,
+          0
+        ],
+        [
+          1.3875539703372582e-16,
+          0.9999999999999997,
+          -1.6895376789634608e-16,
+          0
+        ],
+        [
+          -1.0603642983310567e-16,
+          -9.470712039404447e-17,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -1.487874495369957e-18,
+          4.476533887052413e-18,
+          8.077935669463161e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.6653345369377348e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_r_v621_p39_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "b9dbb855d9c8d9f88871754713ba1851793542f3bd25508edee8efe5b40a87e0"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:33",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          3.692700831126366e-17,
+          -2.5917911338370095e-17,
+          0
+        ],
+        [
+          1.3875539703372582e-16,
+          0.9999999999999997,
+          -1.6895376789634608e-16,
+          0
+        ],
+        [
+          -1.0603642983310567e-16,
+          -9.470712039404447e-17,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -1.487874495369957e-18,
+          4.476533887052413e-18,
+          8.077935669463161e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.6653345369377348e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_r_v621_p49_h7_o1/prepared/initial_scene.usda",
+      "scene_sha256": "4b897bfa3d24a2fe801d4b36f0a8c52421924f79460c3ea4cb4e0a942e2fe712"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:34",
+      "geometry_delta": [
+        [
+          0.9999999999999997,
+          -1.5955837901344567e-16,
+          -3.9652815883379704e-17,
+          0
+        ],
+        [
+          1.6882465430634036e-16,
+          0.9999999999999998,
+          -1.5456725671268954e-16,
+          0
+        ],
+        [
+          -6.523389895531499e-17,
+          -1.5456725671268954e-16,
+          1,
+          0
+        ],
+        [
+          -4.5076520386005586e-18,
+          -3.96768549940059e-18,
+          2.04774393722422e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.3877787807814457e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_r_v623_p35_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "bd7d2e573e08d18138ee55b5fa9dfcfbf2ad404ea81e767f6f9434a905176054"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:35",
+      "geometry_delta": [
+        [
+          0.9999999999999997,
+          1.0740244388949448e-17,
+          5.4486373681975167e-17,
+          0
+        ],
+        [
+          -5.9727282622557965e-18,
+          0.9999999999999997,
+          -1.7196319706223856e-16,
+          0
+        ],
+        [
+          -1.8879032922760417e-16,
+          -6.528987968711016e-17,
+          1,
+          0
+        ],
+        [
+          1.5135426115481388e-23,
+          3.4716718408113895e-18,
+          1.9219394226968827e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 8.326672684688674e-17,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_r_v626_p44_h8_c2/prepared/initial_scene.usda",
+      "scene_sha256": "416e9039066cbbc1404b58698b6e9dc0c21a638dff94c591af4a6df6fd84a61c"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:36",
+      "geometry_delta": [
+        [
+          0.9999999999999997,
+          1.0740244388949448e-17,
+          5.4486373681975167e-17,
+          0
+        ],
+        [
+          -5.9727282622557965e-18,
+          0.9999999999999997,
+          -1.7196319706223856e-16,
+          0
+        ],
+        [
+          -1.8879032922760417e-16,
+          -6.528987968711016e-17,
+          1,
+          0
+        ],
+        [
+          1.5135426115481388e-23,
+          3.4716718408113895e-18,
+          1.9219394226968827e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 8.326672684688674e-17,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l23_r_v626_p44_h8_c2/prepared/initial_scene.usda",
+      "scene_sha256": "9e3ab021445b10f7264ddf54d384fd83e38b372229adcc85e07cb7063458b79c"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:37",
+      "geometry_delta": [
+        [
+          0.9999999999999997,
+          -1.636034262531228e-16,
+          -1.2870956076208316e-17,
+          0
+        ],
+        [
+          1.7599604442655529e-16,
+          0.9999999999999998,
+          -6.662943560860494e-17,
+          0
+        ],
+        [
+          -8.864048948355666e-17,
+          -1.6326522688746406e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -4.534789610137863e-18,
+          4.476594427141288e-18,
+          3.0292258760486853e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.5265566588595902e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_r_v627_p35_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "308a927a77b0e50178cdeec7c1f3f430ec9606fcd8e5eadec64ed55a67a7fa6b"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:38",
+      "geometry_delta": [
+        [
+          0.9999999999999994,
+          1.6535064263486575e-16,
+          -2.604966440731749e-16,
+          0
+        ],
+        [
+          -1.7759853770261592e-16,
+          0.9999999999999996,
+          -1.7330275298373333e-16,
+          0
+        ],
+        [
+          6.461894802127654e-17,
+          -4.371162162959872e-16,
+          1,
+          0
+        ],
+        [
+          2.5561836701127296e-18,
+          4.476594427949081e-18,
+          9.592548607487504e-28,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.3592239273284576e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l02_r_v629_p27_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "865db48c938b1efb0ee79123ac5b6569a6ffa5bec64d314fb7e8fefe23b75cc8"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:39",
+      "geometry_delta": [
+        [
+          0.9999999999999994,
+          2.1220066381856676e-16,
+          2.5757082257888746e-17,
+          0
+        ],
+        [
+          -7.721035652569824e-17,
+          0.9999999999999994,
+          -8.402537595815398e-17,
+          0
+        ],
+        [
+          -1.653837386993625e-16,
+          -1.4127713543239587e-17,
+          0.9999999999999999,
+          0
+        ],
+        [
+          1.513593098646073e-23,
+          -4.959531176925321e-19,
+          1.921939422292986e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.1102230246251565e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_r_v630_p37_h6_o1/prepared/initial_scene.usda",
+      "scene_sha256": "dd8dc7fd2817add0f736841f9d8cdbcffa83b8599794163592375328fa640037"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:40",
+      "geometry_delta": [
+        [
+          0.9999999999999994,
+          -1.241664208449864e-16,
+          -1.653837386993625e-16,
+          0
+        ],
+        [
+          1.3482767343572734e-16,
+          0.9999999999999992,
+          -3.341476656686248e-16,
+          0
+        ],
+        [
+          -5.7509644588998e-17,
+          -2.4186085947715294e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          -4.959077143424373e-19,
+          -1.2411965423519087e-17,
+          1.921939423580407e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.498001805406602e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l01_r_v638_p35_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "302455902c943d6479009601d4c504e402d80a80dcb6a757752c89c8d54f8568"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:41",
+      "geometry_delta": [
+        [
+          0.9999999999999999,
+          -2.9282844129418563e-16,
+          2.8957793386916823e-16,
+          0
+        ],
+        [
+          2.252092796490392e-16,
+          0.9999999999999994,
+          -4.0270577216204436e-16,
+          0
+        ],
+        [
+          -3.579591638211405e-16,
+          1.1192531844255377e-16,
+          0.9999999999999998,
+          0
+        ],
+        [
+          -4.468754348811967e-18,
+          -1.2411904884238006e-17,
+          1.921939423630894e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.220446049250313e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l01_r_v639_p36_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "2568273901b07a4ccf4c53dffd1d6483fb6217f694c571d4ca155a4fb1895975"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:42",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          1.51714480482401e-16,
+          1.2710126995726968e-17,
+          0
+        ],
+        [
+          1.8472496573399335e-16,
+          0.9999999999999994,
+          -3.909983728213774e-16,
+          0
+        ],
+        [
+          -7.27310923948534e-17,
+          1.9787936528552243e-16,
+          0.9999999999999999,
+          0
+        ],
+        [
+          2.551007399819623e-18,
+          -1.244919823410546e-17,
+          -6.925907644282505e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 3.3306690738754696e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l02_r_v641_p36_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "921ea7dd0b142e17f16e69c1b652c242e5b2a8998b202cf67c3b8e6326f5a902"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:43",
+      "geometry_delta": [
+        [
+          0.9999999999999997,
+          -1.250286144503359e-16,
+          1.3683842804184493e-17,
+          0
+        ],
+        [
+          1.7620476472017374e-17,
+          0.9999999999999998,
+          -2.274743482934964e-16,
+          0
+        ],
+        [
+          -4.497551677922449e-17,
+          2.2647941416974413e-17,
+          0.9999999999999998,
+          0
+        ],
+        [
+          -4.47084301732009e-18,
+          -1.2415840061100701e-17,
+          -6.744284267652897e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 1.3877787807814457e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l01_r_v644_p35_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "82debcc73739c7c383429d044a60ea511663eb39defa176e4e2f105e3dc389c6"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:44",
+      "geometry_delta": [
+        [
+          0.9999999999999991,
+          1.640234565969007e-16,
+          -3.4615881513144613e-17,
+          0
+        ],
+        [
+          2.2954118279176426e-16,
+          0.9999999999999994,
+          -6.769299289959858e-18,
+          0
+        ],
+        [
+          -1.435749933705414e-17,
+          -1.833402790800026e-16,
+          0.9999999999999997,
+          0
+        ],
+        [
+          2.8217171625020342e-18,
+          -4.463578077004247e-18,
+          2.0512553232916414e-18,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 3.469446951953614e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l01_r_v647_p39_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "06dd239a8bb8cb26bde90d01445a2748180d88f7a7f9789bb43016f5ac8bb2ab"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:45",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          1.7119484671711567e-16,
+          -2.1923322483931495e-16,
+          0
+        ],
+        [
+          -1.944633652534369e-17,
+          0.9999999999999992,
+          -5.22429244249484e-17,
+          0
+        ],
+        [
+          -7.535970679210406e-17,
+          -5.381009926622336e-16,
+          1.0000000000000002,
+          0
+        ],
+        [
+          -4.8675237824753035e-18,
+          -1.2436242426480675e-17,
+          6.187305806969109e-20,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.498001805406602e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_r_v648_p31_h8_o1/prepared/initial_scene.usda",
+      "scene_sha256": "ae6f3030348aaadb6c6552913e70f30703e476147df726dba588bdab91b6fb9d"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:46",
+      "geometry_delta": [
+        [
+          0.9999999999999998,
+          -2.0257543922864378e-16,
+          5.860829784258384e-17,
+          0
+        ],
+        [
+          1.995327384070387e-16,
+          0.9999999999999998,
+          -1.8565437066402152e-16,
+          0
+        ],
+        [
+          -2.1654590484323309e-16,
+          -1.1210306074359348e-16,
+          1.0000000000000002,
+          0
+        ],
+        [
+          -8.077935669463161e-28,
+          4.513827236112074e-18,
+          -1.210814146834827e-22,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.498001805406602e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l01_r_v650_p39_h6_c2/prepared/initial_scene.usda",
+      "scene_sha256": "6e89721ebea110d7942e66991275834bd7c055d70d0ca80cfb2e3fd25622e3a5"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:47",
+      "geometry_delta": [
+        [
+          0.9999999999999998,
+          -2.0257543922864378e-16,
+          5.860829784258384e-17,
+          0
+        ],
+        [
+          1.995327384070387e-16,
+          0.9999999999999998,
+          -1.8565437066402152e-16,
+          0
+        ],
+        [
+          -2.1654590484323309e-16,
+          -1.1210306074359348e-16,
+          1.0000000000000002,
+          0
+        ],
+        [
+          -8.077935669463161e-28,
+          4.513827236112074e-18,
+          -1.210814146834827e-22,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.498001805406602e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l04_r_v650_p35_h7_c2/prepared/initial_scene.usda",
+      "scene_sha256": "29f068d72e5e1e913e49516b109ebff9f4c1ffd044ce081319119eb21aae648c"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:48",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          9.49256755949755e-17,
+          -4.1827308427073334e-17,
+          0
+        ],
+        [
+          1.1832783143557145e-17,
+          0.9999999999999994,
+          -2.1007840794394737e-16,
+          0
+        ],
+        [
+          -1.2097211111335136e-16,
+          -2.8362971786437543e-16,
+          1.0000000000000002,
+          0
+        ],
+        [
+          2.485078085668742e-18,
+          -1.2411965425134674e-17,
+          1.0602290566170399e-27,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.220446049250313e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l02_r_p27_h7_ps/prepared/initial_scene.usda",
+      "scene_sha256": "22aa5ba0c62bba62c4a47ce589de1ea8781204969ad86fdcc9fd3dabf2e6d3e3"
+    },
+    {
+      "source_id": "short_6/batch_20261008_001:49",
+      "geometry_delta": [
+        [
+          0.9999999999999996,
+          9.49256755949755e-17,
+          -4.1827308427073334e-17,
+          0
+        ],
+        [
+          1.1832783143557145e-17,
+          0.9999999999999994,
+          -2.1007840794394737e-16,
+          0
+        ],
+        [
+          -1.2097211111335136e-16,
+          -2.8362971786437543e-16,
+          1.0000000000000002,
+          0
+        ],
+        [
+          2.485078085668742e-18,
+          -1.2411965425134674e-17,
+          1.0602290566170399e-27,
+          1
+        ]
+      ],
+      "all_visual_vertices_max_error_m": 2.220446049250313e-16,
+      "vertex_count": 229229,
+      "scene": "/mnt/data2/lingjun/short_takeover_20261006/jobs/tk_l21_r_p28_h8_ps/prepared/initial_scene.usda",
+      "scene_sha256": "a281e64675eed879b7b3e54aba32385a15ea662a55ef1723a320c625976253c0"
+    }
+  ]
+}

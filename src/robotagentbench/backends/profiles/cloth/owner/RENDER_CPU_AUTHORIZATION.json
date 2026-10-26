@@ -1,0 +1,12 @@
+{
+  "schema": "robotagentbench.task_local_runtime_authorization.v1",
+  "user_answer": "允许，仅限制渲染子进程 CPU 线程",
+  "scope": "Only the independent visual-only renderer subprocess of the existing private cloth validation job",
+  "cpu_thread_budget": 8,
+  "implementation": "visual_only_v18/worker.py SimulationApp limit_cpu_threads=8",
+  "original_physics_process_modified": false,
+  "native_camera_intrinsics_or_mounts_modified": false,
+  "scoring_or_simulation_parameters_modified": false,
+  "shared_environment_or_resource_caps_modified": false,
+  "push_authorized": false
+}

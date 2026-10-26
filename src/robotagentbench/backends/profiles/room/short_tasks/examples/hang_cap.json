@@ -1,0 +1,23 @@
+{
+  "schema": "openend.short_task.request.draft.v1",
+  "task_name": "hang_cap",
+  "seed": 42,
+  "layout_id": null,
+  "rule_version": "openend.short_task.hang_cap.v1",
+  "options": {},
+  "targets": [
+    {
+      "category": "baseball_cap",
+      "quantity": 1
+    }
+  ],
+  "source": {
+    "role": "sofa"
+  },
+  "destination": {
+    "role": "coat_rack",
+    "variant": "hooks"
+  },
+  "background": [],
+  "position_constraints": {}
+}

@@ -1,0 +1,28 @@
+{
+  "scope": "Read-only selection admissibility; never authored into assets",
+  "measured_from_launch": "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/agent_probe_v1/completion_fridge_to_heated_box_43_v3/native/launch.json",
+  "robot_joint_parent": "/World/Robot/joints",
+  "units": "prismatic metres; revolute radians",
+  "limits": {
+    "idx01_body_joint1": [0.0, 0.550000011920929],
+    "idx02_body_joint2": [0.0, 1.5707963267948966],
+    "idx11_head_joint1": [-1.5707963267948966, 1.5707963267948966],
+    "idx12_head_joint2": [-0.3490658171093523, 0.5235987755982988],
+    "idx21_arm_l_joint1": [-3.141592653589793, 3.141592653589793],
+    "idx22_arm_l_joint2": [-3.141592653589793, 3.141592653589793],
+    "idx23_arm_l_joint3": [-3.141592653589793, 3.141592653589793],
+    "idx24_arm_l_joint4": [-3.141592653589793, 3.141592653589793],
+    "idx25_arm_l_joint5": [-3.141592653589793, 3.141592653589793],
+    "idx26_arm_l_joint6": [-3.141592653589793, 3.141592653589793],
+    "idx27_arm_l_joint7": [-3.141592653589793, 3.141592653589793],
+    "idx61_arm_r_joint1": [-3.141592653589793, 3.141592653589793],
+    "idx62_arm_r_joint2": [-3.141592653589793, 3.141592653589793],
+    "idx63_arm_r_joint3": [-3.141592653589793, 3.141592653589793],
+    "idx64_arm_r_joint4": [-3.141592653589793, 3.141592653589793],
+    "idx65_arm_r_joint5": [-3.141592653589793, 3.141592653589793],
+    "idx66_arm_r_joint6": [-3.141592653589793, 3.141592653589793],
+    "idx67_arm_r_joint7": [-3.141592653589793, 3.141592653589793],
+    "idx41_gripper_l_outer_joint1": [0.0, 0.7853981633974483],
+    "idx81_gripper_r_outer_joint1": [0.0, 0.7853981633974483]
+  }
+}

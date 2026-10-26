@@ -1,0 +1,24 @@
+{
+  "schema": "robotagentbench.cloth_process_score.approved.v1",
+  "status": "user_approved_rules_native_binding_pending",
+  "human_confirmation": "按这套启用",
+  "rules_enabled_in_task_local_engine": true,
+  "benchmark_scoring_connected": false,
+  "maximum_per_task": 5,
+  "points_per_stage": 1,
+  "stages": {
+    "spread_tablecloth": ["contact", "grasp_lift", "clear_source", "placed", "released"],
+    "collect_tablecloth": ["contact", "grasp_lift", "folded", "placed", "released"]
+  },
+  "spread_designated_region_coverage_minimum": 0.9,
+  "released_stability_duration_simulation_s": 1.0,
+  "collection_minimum_folds": 1,
+  "floor_drop_penalty_once_per_episode": 1,
+  "floor_drop_is_immediate_terminal_failure": false,
+  "no_new_net_progress_timeout_simulation_s": 120,
+  "timeout_owner": "existing_shared_episode_lifecycle_not_local_scorer",
+  "current_state_rechecked_and_revocable": ["placed", "released"],
+  "folding_on_the_table_before_lifting_is_allowed": true,
+  "missing_native_geometry_and_contact_definitions_may_be_invented": false,
+  "existing_scoring_implementation_changed": false
+}

@@ -1,0 +1,22 @@
+{
+  "purpose": "Read-only legacy components of new complete Openend tasks; not Openend registrations",
+  "host": "64.62.194.202",
+  "root": "/home/lingjun/robot_agent_arena/api-protocol",
+  "files_sha256": {
+    "evaluation/tasks/coffee_machine/process_rules.py": "e0abb8ef213b7dd35755637ede7e066f5dc919e24adfe19adf018ab6a4261fdc",
+    "evaluation/tasks/coffee_machine/openended_composite_v1/composite.py": "03410eefba6cef0c18ad746e6458f26930055d22ac54efca32618751b8ee0414",
+    "evaluation/tasks/air_fryer/process_rules.py": "ee9326540ef5637aec57fa354c6786830f3b40883cd0978f366305ceb705b5b3",
+    "evaluation/tasks/air_fryer/continuous_openended_v1/composite.py": "129db505759f26f2de9cc408e00245b2ad014e012ddee7371940b65dad35d9f4"
+  },
+  "openend_only_changes": [
+    "Start-time catalog exposes complete coffee and fryer tasks, never component API IDs",
+    "Ignore only original stage-budget terminal verdict before commit; shared room owns all time-based termination",
+    "Preserve original physical failures, deductions, ordered progress and continuous holds",
+    "Final settlement occurs once for every registered task when the shared room ends"
+  ],
+  "scene_owner": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1",
+  "scene_owner_usage": "Read-only initialized room manifests, calibrated navigation and source assets; no import of obsolete room dispatcher",
+  "shared_API_registry_modified": false,
+  "legacy_source_files_modified": false,
+  "assets_modified": false
+}

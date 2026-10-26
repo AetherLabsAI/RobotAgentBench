@@ -1,0 +1,66 @@
+{
+  "schema": "robotagentbench.cloth_source_setting.v1",
+  "task_name": "collect_tablecloth",
+  "paper_entry": 18,
+  "source_sheet_ids": [
+    "8.7",
+    "8.8"
+  ],
+  "episode": "remove_v179",
+  "reference": "reference_removal_initial_geometry",
+  "target_cloth_id": 0,
+  "initial_cloth_state": "spread_on_table",
+  "goal_cloth_state": "folded_in_basket",
+  "folding_required": true,
+  "minimum_folds": 1,
+  "source_role": "coffee_table",
+  "destination_role": "cloth_basket",
+  "instruction": "Collect the tablecloth from the coffee table, fold it at least once, place the entire folded cloth inside the designated cloth basket, and release it.",
+  "source_material_frame": "original source House world, metres, Z-up",
+  "target_vertices": 7957,
+  "target_triangles": 15552,
+  "material_surface_area_m2": 0.17441999912261963,
+  "material_extent_m": [
+    0.34200000762939453,
+    0.5099999904632568
+  ],
+  "target_initial_bounds_m": [
+    [
+      -2.3299999237060547,
+      -0.6800000071525574,
+      0.4555000066757202
+    ],
+    [
+      -1.9880000352859497,
+      -0.17000001668930054,
+      0.4555000066757202
+    ]
+  ],
+  "retained_cloth_ids": [
+    0,
+    1
+  ],
+  "clean_initial_recipe": {
+    "model": "analytic_isometric_tilted_folded_sheet",
+    "fold_radius_m": 0.012,
+    "fold_material_v_m": 0.29277777671813965,
+    "outside_material_strip_m": 0.05,
+    "layer_edge_stagger_m": 0.07555556297302246,
+    "initialization_only": true,
+    "stored_physical_state_imported": false,
+    "metric_projection": false,
+    "interior_drape": "gravity and actual basket contacts during fresh settling",
+    "rigid_initial_tilt_deg": -35.0,
+    "front_rim_center_z_m": 0.47
+  },
+  "source_recipe_reconstructed": true,
+  "physics_parameters_applied": false,
+  "robot_initial_state_applied": false,
+  "scene_composed": false,
+  "native_admission": false,
+  "scoring_available": false,
+  "source_physical_success": false,
+  "source_diagnostic_only": true,
+  "source_requires_separate_physics_profile_review": true,
+  "note": "Authored initial geometry and original reset targets only; not a settled scene or a running task."
+}

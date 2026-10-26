@@ -1,0 +1,2154 @@
+{
+  "status": "corrected_initialization_requires_native_validation",
+  "scene": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/room_demo_v6/room_task9_support_v1.usda",
+  "source": "/mnt/agent-bench-data/lingjun/releases/living50-candidate-20260919/layouts/ID_01_LIVING_STRAIGHT.usdc",
+  "source_sha256": "6fdd127abad4a44ba67bc79aa2b69698d2513251ec859237ddcd5c5a05c2fa92",
+  "asset_entry_hashes": {
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/scene_room_baseline.usda": "3d7e4924c41d0316b501d0643b45af4cf8e6783e928ec890fee2709904a5fb19",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/snack_shelf/asset.usda": "a76846986fe3a577020b2e8142032d637b15254e830f6dfedc5c1b1ad8dd4c60",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/gatorade_m/asset.usda": "ee3923dffa7e9e285fc5b5838590a3156f98c25348c38d9521cd253bcde88d4d",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/gatorade_t/asset.usda": "c52584212ee2d1f3d27e4b5052e13f97072cfead7b86a0e219d2465fdcb103f7",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/starbucks/asset.usda": "e156b51e74c0cbc46729fe2aa86e338e41f30e67626da1dd9e4b7d7859541afd",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/sprite_c1/asset.usda": "c8b1fccdaaaf7921ee29a85e5fbd1327164cbed7177e1c390b79e31fadf195e2",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/grapefruit_can/asset.usda": "74605130c2e42fbd64827240cd92e966a984e95e9303ed405b3a29975f0d6ed7",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/good2grow/asset.usda": "17a2e1b5f7cb57c11f840f5c2d92131f8014ffb4a62934835ae419c908509794",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coke_c3/asset.usda": "30f4759f40e15bc6606dfd7557b95a7844454dfc99032e36ba8c7d9e979bb5fa",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cayman_jacked/asset.usda": "86e6a77afd770225c8f8f8e7026f4330000877cf99e50d713d24d6e7d2e5fadf",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/pring_bbq/asset.usda": "d2eb276334a6190373f997e9120f6325c1dee8706fc085bb8f854a80619a0338",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/honeymaid/asset.usda": "aad560312fe6015581a3f2f7c7038a2425fc9a9c16266516d18a2d89b930c6f5",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/chomps_r/asset.usda": "493aa0de302e3960d5a398fdc1aa6d83a5bef080da07ca3da59f7383bbf5758a",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/skit_littles/asset.usda": "37ee242e6cdfa97e4757863faf3e9a86ab643b04fe7b190a3a3e5b94083296d7",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/zbar_t/asset.usda": "2712e1d74db88680d45391f2e2fdf229354ac8d2ef8ad1507308546e00f4da08",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/oreo_gf/asset.usda": "da57ce1c2f8ae794a69a518634da0edc2a442372e336ad637d7e6b248e2e680a",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/book_red/asset.usda": "51eec72e59abcad17411ffdda8c1b6b278438c1b326397a10c143d4ed0504026",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/baseball_cap/asset.usda": "b56ebadc414ec1fcde71945ea6e93d5719b583f93eeae369b4e7c120ee17ceea",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/power_bank/asset.usda": "479d23e54d1f94795909625f1cc81930e6146f9cf01c9464a7fb87de4b68cf18",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/water_bottle/asset.usda": "efffe11962e63b4e02079abb938bf940e6e062c1820ffea219cb2aa4bcb5a17f",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/notebook_green/asset.usda": "5464b511a6c0f1c129d59d939ddf40fddf4e1acb93079d510456553eb8db67c5",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_cup/asset.usda": "ccc9470d208fba48cd9845d6bc73ff7b1caf6ff593f40495fc6a61059a15a0d6",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/glasses_case/asset.usda": "4079251ce47ee46896457f5afce29feb0c7ce5826d3ff4c219d09c2951525a06",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/remote_tv/asset.usda": "58435180c299721e0750f9bb6b85fa09ab286a78c5e50582d0f9c6d34e0a8c60",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/wallet/asset.usda": "25bb9146e2824ee04f06de2fe4ac6bf6574c3202d0760457e27136ae0fb2112f",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_ball/asset.usda": "82c6cb8011bd10b2e7f0c7a310c53cd1050f2f132c924063edc0a3d20b950636",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/empty_can/asset.usda": "380a5ab6f90c69f8e867dba4ab8ade3230575bc3f2339e84f9a62fcc15d0ad21",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/tablecloth_dirty/asset.usda": "20da48d186874f84a80bcee3e5ff932ee803845b18339b8932e8e543e6f3a0e8",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/japanese_tray/asset.usda": "27b22ac3c4fc10e5c0ac6abaa55f85b87df5dd98e9cabb57c09c4348d6de728c",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/air_fryer/asset.usda": "7a28c9f7d762aecc27695ef6e7d5f8eb5a8329597462988b499ef07489524925",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_plate_task2/asset.usda": "3035689bae4d08482ac48f98a7cb315036b5b657a58b9edb56ebb0a98967e512",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cake_plain_yellow/asset.usda": "91e482ee1d0eb51b101b1a4b59a8bdad3adaa414c29fac9761846c190ba7f14c",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cake_frosted_white/asset.usda": "2076a36dcba7c6ca936ed90dca43db7167b84ab3c0df21c3ec3d3bc4c2ac5e88",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_machine/asset.usda": "a34479319950d239ff8a66de29abed4cbd660918fc77651a3ab4befbe9085ae7",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda": "7dc189ca8a4624b7fdce016dc8584428425a5041e6ecda61564d38fd88dcd62a",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda": "1f94a6ffa1f970a44b33a43539fad565f0d2931bbd1ef19f7cf8ccbba1a447de",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/meal_tray_large/asset.usda": "e6cf4447e898f14638b364199965c10fbb11ed3555db61aeecb41ffb4338e043",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cutlery_holder/asset.usda": "a834e426ae759c2a61f9304fffe4f6588df04a81960230b1ae63ac0a4bb1191e",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/meal_knife/asset.usda": "c9ccacf2461708f47aab6d1b19577c05fe5b3a03d1c9dbbba82f68a6ace591ef",
+    "/home/lingjun/robot_agent_arena/api-protocol/all_assets/meal_fork/asset.usda": "45faadb0c1627cc09ef6126b689e4a7f6dc5b27f114991631f598e08c3111fe9",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-1/042_right_239.7deg/public_binding.json": "ab8cb5c55c25d52150fa9a619fc846b18683729522bb7448e649eb59ffc17740"
+  },
+  "all_added_assets_from_all_assets": false,
+  "source_unchanged": true,
+  "shelf_source": "all_assets/snack_shelf",
+  "removed_episode_only": [
+    "/World/Assets/ShelvingUnit",
+    "/World/Assets/ShelfItems",
+    "/World/Assets/Tier2Items",
+    "/World/Assets/CoffeeGrinder",
+    "/World/Assets/AirFryer",
+    "/World/FoodTray",
+    "/World/Cutlery",
+    "/World/MealDiverse"
+  ],
+  "objects": [
+    {
+      "id": "snack_shelf",
+      "path": "/World/RoomEpisode/Shelf",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/snack_shelf/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.969019448738026,
+          2.0029564280510335,
+          -5.643814676571483e-07
+        ],
+        [
+          -1.7690228532655738,
+          2.502956781186233,
+          1.858609899080695
+        ]
+      ]
+    },
+    {
+      "id": "gatorade_m",
+      "path": "/World/RoomEpisode/Shelf_tier3_0",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/gatorade_m/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.3673950276730906,
+          2.0963223675905547,
+          1.1830000976808348
+        ],
+        [
+          -2.2973990727491955,
+          2.16631832251445,
+          1.3942000965364256
+        ]
+      ]
+    },
+    {
+      "id": "gatorade_t",
+      "path": "/World/RoomEpisode/Shelf_tier3_1",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/gatorade_t/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.768926671288468,
+          2.050696545094538,
+          1.1830000976808348
+        ],
+        [
+          -2.698998339437007,
+          2.1206248769459988,
+          1.3942000965364256
+        ]
+      ]
+    },
+    {
+      "id": "starbucks",
+      "path": "/World/RoomEpisode/Shelf_tier3_2",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/starbucks/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.1822741177360045,
+          2.071905476455964,
+          1.1830000976808348
+        ],
+        [
+          -2.1283105927241124,
+          2.1258690014678563,
+          1.286000097800044
+        ]
+      ]
+    },
+    {
+      "id": "sprite_c1",
+      "path": "/World/RoomEpisode/Shelf_tier3_3",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/sprite_c1/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.9391072198502826,
+          2.1302452833083123,
+          1.18313098360008
+        ],
+        [
+          -1.8731964740840945,
+          2.1961560290745004,
+          1.305130984970987
+        ]
+      ]
+    },
+    {
+      "id": "grapefruit_can",
+      "path": "/World/RoomEpisode/Shelf_tier3_4",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/grapefruit_can/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.8111044167105637,
+          2.2714901730662604,
+          1.18313098360008
+        ],
+        [
+          -2.745129738488068,
+          2.337464851288756,
+          1.305130984970987
+        ]
+      ]
+    },
+    {
+      "id": "good2grow",
+      "path": "/World/RoomEpisode/Shelf_tier3_5",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/good2grow/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.5503472274693735,
+          2.2753602046806214,
+          1.1830000976808348
+        ],
+        [
+          -2.4803659608466244,
+          2.3453414713033705,
+          1.3470001022107878
+        ]
+      ]
+    },
+    {
+      "id": "coke_c3",
+      "path": "/World/RoomEpisode/Shelf_tier3_6",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coke_c3/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.0194277616587293,
+          2.2916749947230217,
+          1.18313098360008
+        ],
+        [
+          -1.9535817645455889,
+          2.3575209918361617,
+          1.305130984970987
+        ]
+      ]
+    },
+    {
+      "id": "cayman_jacked",
+      "path": "/World/RoomEpisode/Shelf_tier3_7",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cayman_jacked/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.658373022862855,
+          2.359105875011698,
+          1.1831964265597028
+        ],
+        [
+          -2.5923970255093574,
+          2.4250818723651957,
+          1.3661964248907728
+        ]
+      ]
+    },
+    {
+      "id": "pring_bbq",
+      "path": "/World/RoomEpisode/Shelf_tier2_0",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/pring_bbq/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.714189147049531,
+          2.0428792361919097,
+          0.7514999704733489
+        ],
+        [
+          -2.6392060244089945,
+          2.117862358832446,
+          0.9814999746456741
+        ]
+      ]
+    },
+    {
+      "id": "honeymaid",
+      "path": "/World/RoomEpisode/Shelf_tier2_1",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/honeymaid/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.93254354427932,
+          2.324349060806687,
+          0.7514999704733489
+        ],
+        [
+          -2.8025892467055256,
+          2.428449662611492,
+          0.9864999698773025
+        ]
+      ]
+    },
+    {
+      "id": "chomps_r",
+      "path": "/World/RoomEpisode/Shelf_tier2_2",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/chomps_r/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.3187778667716543,
+          2.0406073043076556,
+          0.7514999704733489
+        ],
+        [
+          -2.196482229197464,
+          2.103700858814585,
+          0.961499963916838
+        ]
+      ]
+    },
+    {
+      "id": "skit_littles",
+      "path": "/World/RoomEpisode/Shelf_tier2_3",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/skit_littles/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.406898927932714,
+          2.261378079611477,
+          0.7514999704733489
+        ],
+        [
+          -2.2580870249770197,
+          2.3470446376809697,
+          0.9514999734535812
+        ]
+      ]
+    },
+    {
+      "id": "zbar_t",
+      "path": "/World/RoomEpisode/Shelf_tier2_4",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/zbar_t/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.9450751603171414,
+          2.0602636921501483,
+          0.7514999731555579
+        ],
+        [
+          -2.882584693082333,
+          2.2001145906814474,
+          0.886499978519976
+        ]
+      ]
+    },
+    {
+      "id": "oreo_gf",
+      "path": "/World/RoomEpisode/Shelf_tier2_5",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/oreo_gf/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.208675413594095,
+          2.17811635777428,
+          0.7514999704733489
+        ],
+        [
+          -2.0144037359676443,
+          2.2788331452008603,
+          0.886499975837767
+        ]
+      ]
+    },
+    {
+      "id": "book_red",
+      "path": "/World/RoomEpisode/Sofa_book_red",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/book_red/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -0.2427553589474707,
+          -0.7232211325677653,
+          0.46478842851920926
+        ],
+        [
+          -0.016162329678883425,
+          -0.44213329470658724,
+          0.4827884277443489
+        ]
+      ]
+    },
+    {
+      "id": "baseball_cap",
+      "path": "/World/RoomEpisode/Sofa_baseball_cap",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/baseball_cap/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -0.3092054267788974,
+          -1.1150735932440412,
+          0.4643420407930958
+        ],
+        [
+          -0.042778345488023076,
+          -0.9183524024538432,
+          0.6299526235252233
+        ]
+      ]
+    },
+    {
+      "id": "power_bank",
+      "path": "/World/RoomEpisode/Sofa_power_bank",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/power_bank/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -0.2537892937151581,
+          -1.4682022667379202,
+          0.4613680665725328
+        ],
+        [
+          -0.18578929001967015,
+          -1.3230972688247142,
+          0.4775480668404557
+        ]
+      ]
+    },
+    {
+      "id": "water_bottle",
+      "path": "/World/RoomEpisode/Sofa_water_bottle",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/water_bottle/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -0.23282642755455357,
+          -1.7391832747372868,
+          0.46391264177976227
+        ],
+        [
+          -0.1469816492112441,
+          -1.6533384963939772,
+          0.7183973941606593
+        ]
+      ]
+    },
+    {
+      "id": "notebook_green",
+      "path": "/World/RoomEpisode/Sofa_notebook_green",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/notebook_green/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -0.24792422983719536,
+          -0.24795025012558053,
+          0.4624630500160901
+        ],
+        [
+          -0.01799666906607017,
+          -0.08296921339384473,
+          0.47346304995648547
+        ]
+      ]
+    },
+    {
+      "id": "paper_cup",
+      "path": "/World/RoomEpisode/Sofa_paper_cup",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_cup/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -0.08136383196957961,
+          -1.493272179542358,
+          0.4569452469707991
+        ],
+        [
+          0.04863616326204885,
+          -1.4042721779926373,
+          0.5459452485205198
+        ]
+      ]
+    },
+    {
+      "id": "glasses_case",
+      "path": "/World/RoomEpisode/SmallTable_glasses_case",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/glasses_case/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.211226640816823,
+          -2.05237799417016,
+          0.45719999511003573
+        ],
+        [
+          -2.04114721126328,
+          -1.9865499157676292,
+          0.4922107515132893
+        ]
+      ]
+    },
+    {
+      "id": "remote_tv",
+      "path": "/World/RoomEpisode/SmallTable_remote_tv",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/remote_tv/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.0021055280300635,
+          -2.2186701303403766,
+          0.45719999511003573
+        ],
+        [
+          -1.9561024232622732,
+          -2.0191134927883425,
+          0.4843589408647448
+        ]
+      ]
+    },
+    {
+      "id": "wallet",
+      "path": "/World/RoomEpisode/SmallTable_wallet",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/wallet/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.0356741906499862,
+          -1.976982456416112,
+          0.45719999511003573
+        ],
+        [
+          -1.8567669573062398,
+          -1.8287997311737443,
+          0.49719999421596606
+        ]
+      ]
+    },
+    {
+      "id": "paper_cup",
+      "path": "/World/RoomEpisode/Table_0_paper_cup",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_cup/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.8012614834790357,
+          -0.3524688538386902,
+          0.451
+        ],
+        [
+          -1.6830900177224721,
+          -0.2044099440260682,
+          0.5400000015497208
+        ]
+      ]
+    },
+    {
+      "id": "paper_cup",
+      "path": "/World/RoomEpisode/Table_1_paper_cup",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_cup/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.935318444418238,
+          -0.1444512575479134,
+          0.451
+        ],
+        [
+          -1.8463193663974353,
+          -0.055452179527110707,
+          0.5809999952316285
+        ]
+      ]
+    },
+    {
+      "id": "paper_cup",
+      "path": "/World/RoomEpisode/Table_2_paper_cup",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_cup/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.9169231053911984,
+          -0.45402923330233236,
+          0.451
+        ],
+        [
+          -1.8279252800668357,
+          -0.36503140797796985,
+          0.5809999952316285
+        ]
+      ]
+    },
+    {
+      "id": "zbar_t",
+      "path": "/World/RoomEpisode/Table_3_zbar_t",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/zbar_t/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.7558877550772924,
+          -0.15756468530509574,
+          0.451
+        ],
+        [
+          -1.6309794947672407,
+          -0.0350239972603023,
+          0.5860000053644181
+        ]
+      ]
+    },
+    {
+      "id": "zbar_t",
+      "path": "/World/RoomEpisode/Table_4_zbar_t",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/zbar_t/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.7101407081472013,
+          -0.6307881665650316,
+          0.451
+        ],
+        [
+          -1.5756763205346695,
+          -0.5225126881361836,
+          0.5860000053644181
+        ]
+      ]
+    },
+    {
+      "id": "paper_ball",
+      "path": "/World/RoomEpisode/Table_5_paper_ball",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_ball/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.742618526229117,
+          -0.49818840762724914,
+          0.45100000000000007
+        ],
+        [
+          -1.659256270413512,
+          -0.44340364877567695,
+          0.6063880516754659
+        ]
+      ]
+    },
+    {
+      "id": "paper_ball",
+      "path": "/World/RoomEpisode/Table_6_paper_ball",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_ball/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.6358902314937096,
+          0.0059276822662652565,
+          0.45100000000000007
+        ],
+        [
+          -1.5783143376915039,
+          0.09125784326559067,
+          0.6063880516754659
+        ]
+      ]
+    },
+    {
+      "id": "empty_can",
+      "path": "/World/RoomEpisode/Table_7_empty_can",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/empty_can/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.6619740790180169,
+          -0.376861513911803,
+          0.451
+        ],
+        [
+          -1.5960538838683407,
+          -0.31094131876212694,
+          0.5730000013709069
+        ]
+      ]
+    },
+    {
+      "id": "empty_can",
+      "path": "/World/RoomEpisode/Table_8_empty_can",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/empty_can/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.9444422851557241,
+          -0.28368720822561255,
+          0.451
+        ],
+        [
+          -1.8785621321830253,
+          -0.21780705525291388,
+          0.5730000013709069
+        ]
+      ]
+    },
+    {
+      "id": "empty_can",
+      "path": "/World/RoomEpisode/Table_9_empty_can",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/empty_can/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -1.668154009476219,
+          0.14722427553016465,
+          0.451
+        ],
+        [
+          -1.6022393869533167,
+          0.21313889805306724,
+          0.5730000013709069
+        ]
+      ]
+    },
+    {
+      "id": "tablecloth_dirty",
+      "path": "/World/RoomEpisode/Tablecloth",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/tablecloth_dirty/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.295681826456752,
+          -0.6202957720252908,
+          0.452
+        ],
+        [
+          -1.9536818188273575,
+          -0.11029578156203401,
+          0.4524999935626984
+        ]
+      ]
+    },
+    {
+      "id": "japanese_tray",
+      "path": "/World/RoomEpisode/WoodenTray",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/japanese_tray/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          -2.129373285550326,
+          0.22477196977989136,
+          0.451
+        ],
+        [
+          -1.7612267144496743,
+          0.4914,
+          0.4705652568339937
+        ]
+      ]
+    },
+    {
+      "id": "air_fryer",
+      "path": "/World/RoomEpisode/Fryer",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/air_fryer/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          2.492908411848819,
+          -0.02271109466882626,
+          0.9240000001899898
+        ],
+        [
+          2.740908407795703,
+          0.28186908806232536,
+          1.177999986410141
+        ]
+      ]
+    },
+    {
+      "id": "paper_plate_task2",
+      "path": "/World/RoomEpisode/FryerPlate",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/paper_plate_task2/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          2.8017509660093127,
+          0.02049848595877285,
+          0.9230000000260771
+        ],
+        [
+          3.0617317582794144,
+          0.28047927822887414,
+          0.9419999998807908
+        ]
+      ]
+    },
+    {
+      "id": "cake_plain_yellow",
+      "path": "/World/RoomEpisode/CakeYellow",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cake_plain_yellow/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          2.8498333023041202,
+          0.09011969948088094,
+          0.923
+        ],
+        [
+          2.9294139767233394,
+          0.16970037390009984,
+          0.9820000003576279
+        ]
+      ]
+    },
+    {
+      "id": "cake_frosted_white",
+      "path": "/World/RoomEpisode/CakeWhite",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cake_frosted_white/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          2.9224576973283187,
+          0.16670569385349762,
+          0.923
+        ],
+        [
+          3.002044860168209,
+          0.24881519080961717,
+          0.9820000003576279
+        ]
+      ]
+    },
+    {
+      "id": "coffee_machine",
+      "path": "/World/RoomEpisode/CoffeeMachine",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_machine/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          4.492399329333264,
+          0.7016386605277931,
+          0.92
+        ],
+        [
+          4.774174335681088,
+          0.9311386727086328,
+          1.2199999821186065
+        ]
+      ]
+    },
+    {
+      "id": "coffee_cup_blue_compact",
+      "path": "/World/RoomEpisode/CoffeeCup",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_cup_blue_compact/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          4.412368417124594,
+          0.5389904875156706,
+          0.9199999368832533
+        ],
+        [
+          4.516383531319732,
+          0.6688004442962033,
+          1.0123297779577658
+        ]
+      ]
+    },
+    {
+      "id": "coffee_bag",
+      "path": "/World/RoomEpisode/CoffeeBag",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/coffee_bag/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          4.645619247311303,
+          0.5401987537406157,
+          0.9199999975124633
+        ],
+        [
+          4.771135287870782,
+          0.6422429107787836,
+          1.143282568128447
+        ]
+      ]
+    },
+    {
+      "id": "meal_tray_large",
+      "path": "/World/RoomEpisode/MealTray",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/meal_tray_large/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          4.377072641498584,
+          -1.4618754126291844,
+          0.92
+        ],
+        [
+          4.727070528670665,
+          -0.7314763323104498,
+          0.9696633835136891
+        ]
+      ]
+    },
+    {
+      "id": "cutlery_holder",
+      "path": "/World/RoomEpisode/CutleryHolder",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/cutlery_holder/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          4.758819162169138,
+          -1.0626633780397174,
+          0.9203
+        ],
+        [
+          4.857485912320842,
+          -0.7462966514682431,
+          1.0454441836357118
+        ]
+      ]
+    },
+    {
+      "id": "meal_knife",
+      "path": "/World/RoomEpisode/Cutlery_knife_0",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/meal_knife/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          4.80197638940229,
+          -1.007873867945219,
+          0.9486648101488694
+        ],
+        [
+          4.814044626653165,
+          -0.9852626604099733,
+          1.1668704548707078
+        ]
+      ]
+    },
+    {
+      "id": "meal_fork",
+      "path": "/World/RoomEpisode/Cutlery_fork_1",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/meal_fork/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          4.793198575764495,
+          -0.9226500034935168,
+          0.9479500845468762
+        ],
+        [
+          4.815021161031582,
+          -0.8858079468327399,
+          1.1375251578189254
+        ]
+      ]
+    },
+    {
+      "id": "meal_fork",
+      "path": "/World/RoomEpisode/Cutlery_fork_2",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/meal_fork/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          4.804882483306256,
+          -0.8433886697214474,
+          0.9479500845468762
+        ],
+        [
+          4.826705068573342,
+          -0.8065466130606705,
+          1.1375251578189254
+        ]
+      ]
+    },
+    {
+      "id": "refrigerator",
+      "path": "/World/Background/Shell/RefrigeratorRecovered",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/refrigerator/asset.usda",
+      "visible_bounds_world_m": [
+        [
+          2.717260458555397,
+          1.5769585008902427,
+          -9.587892761761215e-17
+        ],
+        [
+          3.629868062758305,
+          2.4861748324767707,
+          1.75648560737761
+        ]
+      ],
+      "replaced": "/World/Background/Shell/KitchenRefrigerator",
+      "world_pose_preserved": true,
+      "helper_runtime": "arena_api.l1_fridge.Controller",
+      "helper_required_before_physics": true,
+      "native_physics_validated": false
+    },
+    {
+      "key": "beef",
+      "slot": "low_out",
+      "door_local_position_m": [
+        0.098,
+        0.815,
+        0.213
+      ],
+      "door_local_quaternion_wxyz": [
+        -0.5783434494516324,
+        0.4281050859636869,
+        0.41397344483628357,
+        0.5575579582597596
+      ],
+      "yaw_deg": 3.6,
+      "tilt_jitter_deg": 2.88,
+      "roll_jitter_deg": 0.275,
+      "current_asset_length_m": 0.24300001561641693,
+      "id": "beef_box",
+      "path": "/World/Assets/MicrowaveBeefbox",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/beef_box_standard243_v1/beefbox.usda",
+      "source_sha256": "d1f612cca6bde9f6bb91fea98cc685e79475ff1d88564b4c247b5afba86271f3",
+      "seed": 42,
+      "initialization_owner": "unified_scene_fridge_boxes_v1",
+      "door_path": "/World/Background/Shell/RefrigeratorRecovered/right_door",
+      "door_relative_matrix_error": 3.0531133177191805e-16,
+      "instance_scale": 1,
+      "physics_parameters_unchanged": true,
+      "initial_state": "sampled_requires_native_settling",
+      "native_physics_validated": false
+    },
+    {
+      "key": "salad",
+      "slot": "up_in",
+      "door_local_position_m": [
+        0.305,
+        1.168,
+        0.237
+      ],
+      "door_local_quaternion_wxyz": [
+        -0.5478203437604455,
+        0.46703960269203226,
+        0.43263786413482125,
+        0.5427627096589412
+      ],
+      "yaw_deg": 14.0,
+      "tilt_jitter_deg": -3.2099999999999995,
+      "roll_jitter_deg": 0.6,
+      "current_asset_length_m": 0.19246360467077572,
+      "id": "salad_box",
+      "path": "/World/Assets/SaladBoxR/Asset",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/fridge_food_boxes_v1/saladbox.usda",
+      "source_sha256": "b63e2154e79b2d180bf3fa7feccd2760908cda7113bb33f2c794254b36589b99",
+      "seed": 42,
+      "initialization_owner": "unified_scene_fridge_boxes_v1",
+      "door_path": "/World/Background/Shell/RefrigeratorRecovered/right_door",
+      "door_relative_matrix_error": 2.7755575615628914e-16,
+      "instance_scale": 1,
+      "physics_parameters_unchanged": true,
+      "initial_state": "sampled_requires_native_settling",
+      "native_physics_validated": false
+    },
+    {
+      "key": "food",
+      "slot": "low_in",
+      "door_local_position_m": [
+        0.308,
+        0.815,
+        0.224
+      ],
+      "door_local_quaternion_wxyz": [
+        -0.6036552390721789,
+        0.5026973809879871,
+        0.37068495461770345,
+        0.49546781924621563
+      ],
+      "yaw_deg": 15.5,
+      "tilt_jitter_deg": -0.96,
+      "roll_jitter_deg": -0.3,
+      "current_asset_length_m": 0.23539028453826905,
+      "id": "leftover_box",
+      "path": "/World/Assets/BinFoodR/Asset",
+      "entry": "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/fridge_food_boxes_v1/foodbox.usda",
+      "source_sha256": "b2d028a9a268c700e3446246cfa6a2d5b5538decffec4a59a48192f5055bcbc7",
+      "seed": 42,
+      "initialization_owner": "unified_scene_fridge_boxes_v1",
+      "door_path": "/World/Background/Shell/RefrigeratorRecovered/right_door",
+      "door_relative_matrix_error": 2.7755575615628914e-16,
+      "instance_scale": 1,
+      "physics_parameters_unchanged": true,
+      "initial_state": "sampled_requires_native_settling",
+      "native_physics_validated": false
+    },
+    {
+      "id": "microwave_support_plate",
+      "path": "/World/Assets/MicrowaveTakePlate",
+      "entry": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/fridge_to_microwave_v1/plate_stand_source_v2.usda",
+      "initialization_owner": "unified_scene_task9_support_v1",
+      "visible_bounds_world_m": [
+        [
+          2.3709056203713517,
+          -0.9902957330595112,
+          0.98887299219
+        ],
+        [
+          2.6959056358080233,
+          -0.6652957176228396,
+          1.0188729936149237
+        ]
+      ],
+      "physical_parameters_unchanged": true,
+      "native_physics_validated": false
+    },
+    {
+      "id": "microwave_plate_stand",
+      "path": "/World/Assets/MicrowavePlateStand",
+      "entry": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/fridge_to_microwave_v1/plate_stand_source_v2.usda",
+      "initialization_owner": "unified_scene_task9_support_v1",
+      "visible_bounds_world_m": [
+        [
+          2.468513323101787,
+          -0.9281924944961668,
+          0.9726729916200204
+        ],
+        [
+          2.642405628193996,
+          -0.7273989561861842,
+          0.9886729923799796
+        ]
+      ],
+      "physical_parameters_unchanged": true,
+      "native_physics_validated": false
+    }
+  ],
+  "restored_physics_material_bindings": [],
+  "restored_support": {
+    "source": "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/scene_room_baseline.usda",
+    "prim": "/World/Assets/SeatOverlay",
+    "dimensions_unchanged": true
+  },
+  "control_hz": 20,
+  "physics_validation": false,
+  "video_created": false,
+  "limitations": [
+    "Not manipulation success; coffee accessory counter positions require task-specific continuation validation",
+    "Cloth is the approved static source asset, not a deformable cloth simulation",
+    "zbar_t is the previously displayed packaging template, not an empty-wrapper simulation"
+  ],
+  "placement_repair": {
+    "previous_scene": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/room_demo_v5/room.usda",
+    "previous_sha256": "61723e3f8c85acb65ca9a2bf3520b9dd0066512703e12c999dc5c9abed6e39b9",
+    "shared_assets_modified": false,
+    "unrelated_placements_modified": false,
+    "coffee": {
+      "binding": "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/coffee_machine/resources/source_episodes/1-1/042_right_239.7deg/public_binding.json",
+      "sha256": "ab8cb5c55c25d52150fa9a619fc846b18683729522bb7448e649eb59ffc17740",
+      "objects": {
+        "cup": {
+          "source_relative_row_matrix": [
+            [
+              0.8770879537934746,
+              -2.7734523823996946e-06,
+              0.4803298047203449,
+              0.0
+            ],
+            [
+              2.625779114115007e-06,
+              0.9999999999960734,
+              9.793544926074943e-07,
+              0.0
+            ],
+            [
+              -0.4803298047211746,
+              4.022599406459646e-07,
+              0.8770879537973126,
+              0.0
+            ],
+            [
+              0.1995955397925659,
+              -0.0012199711799623092,
+              0.18994826737494197,
+              1.0
+            ]
+          ],
+          "world_matrix": [
+            [
+              -0.48032980998425584,
+              -0.8770879509107383,
+              -2.7734523823996946e-06,
+              0.0
+            ],
+            [
+              -9.793545083663098e-07,
+              -2.6257791082373356e-06,
+              0.9999999999960734,
+              0.0
+            ],
+            [
+              -0.8770879509145764,
+              0.4803298099850855,
+              4.022599406459646e-07,
+              0.0
+            ],
+            [
+              4.464376064241376,
+              0.6167931278483054,
+              0.9187800288200377,
+              1.0
+            ]
+          ],
+          "relative_transform_max_error": 1.1102230246251565e-16
+        },
+        "bag": {
+          "source_relative_row_matrix": [
+            [
+              -0.887908933176002,
+              -1.6954624468405456e-07,
+              0.4600192674076006,
+              0.0
+            ],
+            [
+              -3.126643481722486e-08,
+              0.9999999999999523,
+              3.082142590248279e-07,
+              0.0
+            ],
+            [
+              -0.46001926740763077,
+              2.592830313149479e-07,
+              -0.8879089331759649,
+              0.0
+            ],
+            [
+              0.22587145033896466,
+              1.6689300497141346e-08,
+              -0.05542141282241708,
+              1.0
+            ]
+          ],
+          "world_matrix": [
+            [
+              -0.4600192620787467,
+              0.8879089359368431,
+              -1.6954624468405456e-07,
+              0.0
+            ],
+            [
+              -3.0821425883717996e-07,
+              3.1266436666996475e-08,
+              0.9999999999999523,
+              0.0
+            ],
+            [
+              0.887908935936806,
+              0.4600192620787769,
+              2.592830313149479e-07,
+              0.0
+            ],
+            [
+              4.709745744281038,
+              0.5905172158293016,
+              0.9200000166893005,
+              1.0
+            ]
+          ],
+          "relative_transform_max_error": 1.1102230246251565e-16
+        }
+      },
+      "method": "Full original cup/bag-to-machine transforms; source 1.1 placement initial state, not continuous cycle validation"
+    },
+    "shelf": {
+      "source": "/mnt/agent-bench-data/lingjun/ziche/work/shelf_training_visible360_20260916/random_shelf_scene.py",
+      "source_sha256": "688f4bcc17a2b6ff9467349ccffdcf3fc47b683bf0280171e797f82d66526a58",
+      "source_inventory_sha256": "93b9e67ad02fca411e17b876b363dedc09740afbbd28fb52edfb221d69060533",
+      "seed": 42,
+      "metrics": {
+        "policy": "scene_first_visible360_v1",
+        "packing_round": 0,
+        "rounds": [
+          {
+            "round": 0,
+            "inventory": {
+              "tier3": [
+                "sprite_c1",
+                "grapefruit_can",
+                "starbucks",
+                "cayman_jacked",
+                "coke_c3",
+                "gatorade_t",
+                "good2grow",
+                "gatorade_m"
+              ],
+              "tier2": [
+                "pring_bbq",
+                "chomps_r",
+                "oreo_gf",
+                "honeymaid",
+                "zbar_t",
+                "skit_littles"
+              ]
+            },
+            "placed": 14,
+            "complete": true
+          }
+        ],
+        "layer_counts": {
+          "tier3": 8,
+          "tier2": 6
+        },
+        "spacing_metrics": {
+          "tier3": {
+            "objects": 8,
+            "required_edge_gap_m": 0.055,
+            "minimum_edge_gap_m": 0.06900131676174182,
+            "median_nearest_edge_gap_m": 0.11375456426359251
+          },
+          "tier2": {
+            "objects": 6,
+            "required_edge_gap_m": 0.055,
+            "minimum_edge_gap_m": 0.07643427777545757,
+            "median_nearest_edge_gap_m": 0.10079094253623015
+          }
+        },
+        "rejections": {
+          "support": 197,
+          "object": 207,
+          "fixture": 0,
+          "target_visibility_or_corridor": 0
+        },
+        "package_yaw_deg": [
+          -180.0,
+          180.0
+        ],
+        "container_yaw_deg": [
+          -180.0,
+          180.0
+        ],
+        "uses_target": false,
+        "uses_robot": false,
+        "reserves_grasp_corridor": false,
+        "targeted_sampling": null
+      },
+      "placements": [
+        {
+          "product_family": "oreo_gf",
+          "prim_path": "/World/RoomEpisode/Shelf_tier2_5",
+          "support_id": "tier2",
+          "xyz_m": [
+            -2.1115395747808696,
+            2.2284747514875702,
+            0.7514999704733489
+          ],
+          "wxyz": [
+            0.9853327574776412,
+            0.0,
+            0.0,
+            0.17064394815377437
+          ],
+          "yaw_deg": 19.650523325700533,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier2_5#visible",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy0",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy1",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy2",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy3",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy4",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy5",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy6",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy7",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy8",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy9",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy10",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy11",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy12",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy13",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy14",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy15",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy16",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy17",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy18",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy19",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy20",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy21",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy22",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy23",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy24",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy25",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy26",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy27",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy28",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy29",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy30",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy31",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy32",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy33",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy34",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy35",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy36",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy37",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy38",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy39",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy40",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy41",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy42",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy43",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy44",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy45",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy46",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy47",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy48",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy49",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy50",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy51",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy52",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy53",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy54",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy55",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy56",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy57",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy58",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy59",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy60",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy61",
+            "/World/RoomEpisode/Shelf_tier2_5#proxy62"
+          ],
+          "bounds_world_m": [
+            [
+              -2.208675413594095,
+              2.17811635777428,
+              0.7514999704733489
+            ],
+            [
+              -2.0144037359676443,
+              2.2788331452008603,
+              0.886499975837767
+            ]
+          ],
+          "placement_zone": "front",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "skit_littles",
+          "prim_path": "/World/RoomEpisode/Shelf_tier2_3",
+          "support_id": "tier2",
+          "xyz_m": [
+            -2.332492976454867,
+            2.3042113586462234,
+            0.7514999704733489
+          ],
+          "wxyz": [
+            0.9792845996066447,
+            0.0,
+            0.0,
+            -0.2024886983840174
+          ],
+          "yaw_deg": -23.365058398906342,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier2_3#visible",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy0",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy1",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy2",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy3",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy4",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy5",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy6",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy7",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy8",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy9",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy10",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy11",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy12",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy13",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy14",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy15",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy16",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy17",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy18",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy19",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy20",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy21",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy22",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy23",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy24",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy25",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy26",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy27",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy28",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy29",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy30",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy31",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy32",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy33",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy34",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy35",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy36",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy37",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy38",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy39",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy40",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy41",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy42",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy43",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy44",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy45",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy46",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy47",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy48",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy49",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy50",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy51",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy52",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy53",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy54",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy55",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy56",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy57",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy58",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy59",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy60",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy61",
+            "/World/RoomEpisode/Shelf_tier2_3#proxy62"
+          ],
+          "bounds_world_m": [
+            [
+              -2.406898927932714,
+              2.261378079611477,
+              0.7514999704733489
+            ],
+            [
+              -2.2580870249770197,
+              2.3470446376809697,
+              0.9514999734535812
+            ]
+          ],
+          "placement_zone": "rear",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "pring_bbq",
+          "prim_path": "/World/RoomEpisode/Shelf_tier2_0",
+          "support_id": "tier2",
+          "xyz_m": [
+            -2.6766975857292628,
+            2.080370797512178,
+            0.7514999704733489
+          ],
+          "wxyz": [
+            0.8185142194860552,
+            0.0,
+            0.0,
+            0.5744862683294822
+          ],
+          "yaw_deg": 70.12732637465936,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier2_0#visible",
+            "/World/RoomEpisode/Shelf_tier2_0#proxy0"
+          ],
+          "bounds_world_m": [
+            [
+              -2.714189147049531,
+              2.0428792361919097,
+              0.7514999704733489
+            ],
+            [
+              -2.6392060244089945,
+              2.117862358832446,
+              0.9814999746456741
+            ]
+          ],
+          "placement_zone": "front",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "honeymaid",
+          "prim_path": "/World/RoomEpisode/Shelf_tier2_1",
+          "support_id": "tier2",
+          "xyz_m": [
+            -2.867566395492423,
+            2.3763993617090895,
+            0.7514999704733489
+          ],
+          "wxyz": [
+            0.9617646172024782,
+            0.0,
+            0.0,
+            0.27387738332576983
+          ],
+          "yaw_deg": 31.79024942724297,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier2_1#visible",
+            "/World/RoomEpisode/Shelf_tier2_1#proxy0"
+          ],
+          "bounds_world_m": [
+            [
+              -2.93254354427932,
+              2.324349060806687,
+              0.7514999704733489
+            ],
+            [
+              -2.8025892467055256,
+              2.428449662611492,
+              0.9864999701753256
+            ]
+          ],
+          "placement_zone": "rear",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "zbar_t",
+          "prim_path": "/World/RoomEpisode/Shelf_tier2_4",
+          "support_id": "tier2",
+          "xyz_m": [
+            -2.913829926699737,
+            2.130189141415798,
+            0.7514999731555579
+          ],
+          "wxyz": [
+            0.6438330392112227,
+            0.0,
+            0.0,
+            0.765166006576377
+          ],
+          "yaw_deg": 99.8435259105043,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier2_4#visible",
+            "/World/RoomEpisode/Shelf_tier2_4#proxy0"
+          ],
+          "bounds_world_m": [
+            [
+              -2.9450751603171414,
+              2.0602636921501483,
+              0.7514999704733489
+            ],
+            [
+              -2.882584693082333,
+              2.2001145906814474,
+              0.886499978519976
+            ]
+          ],
+          "placement_zone": "front",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "chomps_r",
+          "prim_path": "/World/RoomEpisode/Shelf_tier2_2",
+          "support_id": "tier2",
+          "xyz_m": [
+            -2.2576300479845592,
+            2.0721540815611204,
+            0.7514999704733489
+          ],
+          "wxyz": [
+            0.14828104291518981,
+            0.0,
+            0.0,
+            -0.9889452625459023
+          ],
+          "yaw_deg": -162.94535279802653,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier2_2#visible",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy0",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy1",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy2",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy3",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy4",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy5",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy6",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy7",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy8",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy9",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy10",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy11",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy12",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy13",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy14",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy15",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy16",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy17",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy18",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy19",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy20",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy21",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy22",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy23",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy24",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy25",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy26",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy27",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy28",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy29",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy30",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy31",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy32",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy33",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy34",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy35",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy36",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy37",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy38",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy39",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy40",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy41",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy42",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy43",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy44",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy45",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy46",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy47",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy48",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy49",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy50",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy51",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy52",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy53",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy54",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy55",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy56",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy57",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy58",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy59",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy60",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy61",
+            "/World/RoomEpisode/Shelf_tier2_2#proxy62"
+          ],
+          "bounds_world_m": [
+            [
+              -2.3187778667716543,
+              2.0406073043076556,
+              0.7514999704733489
+            ],
+            [
+              -2.196482229197464,
+              2.103700858814585,
+              0.961499963916838
+            ]
+          ],
+          "placement_zone": "front",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "gatorade_m",
+          "prim_path": "/World/RoomEpisode/Shelf_tier3_0",
+          "support_id": "tier3",
+          "xyz_m": [
+            -2.332397050211143,
+            2.1313203450525022,
+            1.1830000976808348
+          ],
+          "wxyz": [
+            0.37771242015426554,
+            0.0,
+            0.0,
+            0.9259229598952645
+          ],
+          "yaw_deg": 135.61588701526296,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier3_0#visible",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy0",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy1",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy2",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy3",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy4",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy5",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy6",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy7",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy8",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy9",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy10",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy11",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy12",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy13",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy14",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy15",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy16",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy17",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy18",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy19",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy20",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy21",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy22",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy23",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy24",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy25",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy26",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy27",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy28",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy29",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy30",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy31",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy32",
+            "/World/RoomEpisode/Shelf_tier3_0#proxy33"
+          ],
+          "bounds_world_m": [
+            [
+              -2.3673950276730906,
+              2.0963223675905547,
+              1.1830000976808348
+            ],
+            [
+              -2.2973990727491955,
+              2.16631832251445,
+              1.3942000965364256
+            ]
+          ],
+          "placement_zone": "front",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "gatorade_t",
+          "prim_path": "/World/RoomEpisode/Shelf_tier3_1",
+          "support_id": "tier3",
+          "xyz_m": [
+            -2.7339625053627374,
+            2.0856607110202683,
+            1.1830000976808348
+          ],
+          "wxyz": [
+            0.9149846692870346,
+            0.0,
+            0.0,
+            0.4034886057495253
+          ],
+          "yaw_deg": 47.59290004135045,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier3_1#visible",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy0",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy1",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy2",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy3",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy4",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy5",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy6",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy7",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy8",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy9",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy10",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy11",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy12",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy13",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy14",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy15",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy16",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy17",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy18",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy19",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy20",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy21",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy22",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy23",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy24",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy25",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy26",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy27",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy28",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy29",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy30",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy31",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy32",
+            "/World/RoomEpisode/Shelf_tier3_1#proxy33"
+          ],
+          "bounds_world_m": [
+            [
+              -2.768926671288468,
+              2.050696545094538,
+              1.1830000976808348
+            ],
+            [
+              -2.698998339437007,
+              2.1206248769459988,
+              1.3942000965364256
+            ]
+          ],
+          "placement_zone": "front",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "good2grow",
+          "prim_path": "/World/RoomEpisode/Shelf_tier3_5",
+          "support_id": "tier3",
+          "xyz_m": [
+            -2.515356594157999,
+            2.310350837991996,
+            1.1830000976808348
+          ],
+          "wxyz": [
+            0.42497783550578816,
+            0.0,
+            0.0,
+            0.9052037556974757
+          ],
+          "yaw_deg": 129.70147903881872,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier3_5#visible",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy0",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy1",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy2",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy3",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy4",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy5",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy6",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy7",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy8",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy9",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy10",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy11",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy12",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy13",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy14",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy15",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy16",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy17",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy18",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy19",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy20",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy21",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy22",
+            "/World/RoomEpisode/Shelf_tier3_5#proxy23"
+          ],
+          "bounds_world_m": [
+            [
+              -2.5503472274693735,
+              2.2753602046806214,
+              1.1830000976808348
+            ],
+            [
+              -2.4803659608466244,
+              2.3453414713033705,
+              1.3610001007802763
+            ]
+          ],
+          "placement_zone": "rear",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "coke_c3",
+          "prim_path": "/World/RoomEpisode/Shelf_tier3_6",
+          "support_id": "tier3",
+          "xyz_m": [
+            -1.986504763102159,
+            2.3245979932795917,
+            1.18313098360008
+          ],
+          "wxyz": [
+            0.09800988267110228,
+            0.0,
+            0.0,
+            0.9951854414624426
+          ],
+          "yaw_deg": 168.75083569017556,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier3_6#visible",
+            "/World/RoomEpisode/Shelf_tier3_6#proxy0"
+          ],
+          "bounds_world_m": [
+            [
+              -2.0197047948374003,
+              2.2913979615443503,
+              1.1830000976808348
+            ],
+            [
+              -1.9533047313669176,
+              2.357798025014833,
+              1.3052618695193254
+            ]
+          ],
+          "placement_zone": "rear",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "sprite_c1",
+          "prim_path": "/World/RoomEpisode/Shelf_tier3_3",
+          "support_id": "tier3",
+          "xyz_m": [
+            -1.9061518469671885,
+            2.1632006561914063,
+            1.18313098360008
+          ],
+          "wxyz": [
+            0.6772871301987573,
+            0.0,
+            0.0,
+            0.7357187936074023
+          ],
+          "yaw_deg": 94.73597633516414,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier3_3#visible",
+            "/World/RoomEpisode/Shelf_tier3_3#proxy0"
+          ],
+          "bounds_world_m": [
+            [
+              -1.9393843759302534,
+              2.1299681272283415,
+              1.1830000976808348
+            ],
+            [
+              -1.8729193180041237,
+              2.196433185154471,
+              1.3052618695193254
+            ]
+          ],
+          "placement_zone": "front",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "cayman_jacked",
+          "prim_path": "/World/RoomEpisode/Shelf_tier3_7",
+          "support_id": "tier3",
+          "xyz_m": [
+            -2.625385024186106,
+            2.392093873688447,
+            1.1831964265597028
+          ],
+          "wxyz": [
+            0.38111833289581926,
+            0.0,
+            0.0,
+            0.9245262658955188
+          ],
+          "yaw_deg": 135.19405602980504,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier3_7#visible",
+            "/World/RoomEpisode/Shelf_tier3_7#proxy0"
+          ],
+          "bounds_world_m": [
+            [
+              -2.658450097939263,
+              2.35902879993529,
+              1.1830000976808348
+            ],
+            [
+              -2.592319950432949,
+              2.425158947441604,
+              1.3663927554385706
+            ]
+          ],
+          "placement_zone": "rear",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "grapefruit_can",
+          "prim_path": "/World/RoomEpisode/Shelf_tier3_4",
+          "support_id": "tier3",
+          "xyz_m": [
+            -2.778117077599316,
+            2.3044775121775083,
+            1.18313098360008
+          ],
+          "wxyz": [
+            0.7080682032234911,
+            0.0,
+            0.0,
+            -0.7061440501653024
+          ],
+          "yaw_deg": -89.84408877652024,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier3_4#visible",
+            "/World/RoomEpisode/Shelf_tier3_4#proxy0"
+          ],
+          "bounds_world_m": [
+            [
+              -2.81118153495558,
+              2.271413054821244,
+              1.1830000976808348
+            ],
+            [
+              -2.7450526202430514,
+              2.3375419695337727,
+              1.3052618695193254
+            ]
+          ],
+          "placement_zone": "rear",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        },
+        {
+          "product_family": "starbucks",
+          "prim_path": "/World/RoomEpisode/Shelf_tier3_2",
+          "support_id": "tier3",
+          "xyz_m": [
+            -2.1552923552300585,
+            2.09888723896191,
+            1.1830000976808348
+          ],
+          "wxyz": [
+            0.8898704631152609,
+            0.0,
+            0.0,
+            0.4562132822211899
+          ],
+          "yaw_deg": 54.286052298385215,
+          "collision_paths": [
+            "/World/RoomEpisode/Shelf_tier3_2#visible",
+            "/World/RoomEpisode/Shelf_tier3_2#proxy0"
+          ],
+          "bounds_world_m": [
+            [
+              -2.1822741177360045,
+              2.071905476455964,
+              1.1830000976808348
+            ],
+            [
+              -2.1283105927241124,
+              2.1258690014678563,
+              1.286000097800044
+            ]
+          ],
+          "placement_zone": "front",
+          "orientation_sampling": {
+            "reference": "fixed shelf frame",
+            "nominal_yaw_deg": null,
+            "uniform_range_deg": [
+              -180.0,
+              180.0
+            ]
+          }
+        }
+      ],
+      "all_required_present": true,
+      "support_geometry": "current all_assets/snack_shelf",
+      "fixtures_checked": 14,
+      "method": "Original generic sampler, no focus/targeted override; current shared-asset visible and collider geometry"
+    }
+  },
+  "refrigerator_replacement": {
+    "id": "refrigerator",
+    "path": "/World/Background/Shell/RefrigeratorRecovered",
+    "entry": "/home/lingjun/robot_agent_arena/api-protocol/all_assets/refrigerator/asset.usda",
+    "visible_bounds_world_m": [
+      [
+        2.717260458555397,
+        1.5769585008902427,
+        -9.587892761761215e-17
+      ],
+      [
+        3.629868062758305,
+        2.4861748324767707,
+        1.75648560737761
+      ]
+    ],
+    "replaced": "/World/Background/Shell/KitchenRefrigerator",
+    "world_pose_preserved": true,
+    "helper_runtime": "arena_api.l1_fridge.Controller",
+    "helper_required_before_physics": true,
+    "native_physics_validated": false
+  },
+  "fridge_box_asset_source": "existing_api_resources/shared_assets_standard_packages",
+  "fridge_box_initialization": {
+    "owner": "unified_scene_fridge_boxes_v1",
+    "seed": 42,
+    "box_count": 3,
+    "available_slots": 4,
+    "source_scene": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/room_demo_v6/room_refrigerator_v1.usda",
+    "source_scene_sha256": "f704e8128c552afe8aece4afbd3d623224d820f94a684344d812c4f071b651a5",
+    "native_settling_validated": false,
+    "runtime_docking": false,
+    "physics_parameter_overrides": false
+  },
+  "task9_support_initialization": {
+    "owner": "unified_scene_task9_support_v1",
+    "plate": "/World/Assets/MicrowaveTakePlate",
+    "stand": "/World/Assets/MicrowavePlateStand",
+    "physics_modified": false
+  }
+}

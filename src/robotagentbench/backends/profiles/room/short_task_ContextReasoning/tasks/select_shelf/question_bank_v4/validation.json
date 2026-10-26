@@ -1,0 +1,8 @@
+{
+  "questions": 200,
+  "drinks": 100,
+  "snacks": 100,
+  "multiple_catalog_answers": 8,
+  "answer_uniqueness_scope": "generated_scene",
+  "natural_language_independently_reviewed": false
+}

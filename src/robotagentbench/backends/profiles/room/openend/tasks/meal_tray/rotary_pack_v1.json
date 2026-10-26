@@ -1,0 +1,54 @@
+{
+  "pack_sha256": "b82f8ba5fbd71c0ef424909be48bbe34e232483e993bd4b6fe27277fac5f3a4f",
+  "source": "/home/lingjun/robot_agent_arena/openend/tasks/meal_tray/mechanism_8wpqe6jn/layer/room.usda",
+  "source_sha256": "f10d4b163c4b26acaebf6efd613b1984a3ac95ac35b4aa8a32f0d71d53580bfa",
+  "parts": [
+    "/body/visual_shell",
+    "/StartKnob",
+    "/StartKnobJoint",
+    "/OpenendCavityLamp"
+  ],
+  "body_relative": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.25,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "root_gram": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ]
+}

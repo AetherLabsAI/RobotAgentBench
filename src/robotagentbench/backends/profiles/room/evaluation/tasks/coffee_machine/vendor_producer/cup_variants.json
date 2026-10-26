@@ -1,0 +1,5 @@
+{
+  "cream_classic": {"label": "Cream classic", "radius_scale": 1.0, "height_scale": 1.0, "color": [0.72, 0.63, 0.48], "roughness": 0.32, "mass_kg": 0.25},
+  "blue_compact": {"label": "Blue compact", "radius_scale": 1.04, "height_scale": 0.88, "color": [0.025, 0.20, 0.42], "roughness": 0.22, "mass_kg": 0.24},
+  "green_tall": {"label": "Green tall", "radius_scale": 0.93, "height_scale": 1.10, "color": [0.10, 0.31, 0.18], "roughness": 0.28, "mass_kg": 0.26}
+}

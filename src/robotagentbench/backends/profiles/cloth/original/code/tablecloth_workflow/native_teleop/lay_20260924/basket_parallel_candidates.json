@@ -1,0 +1,482 @@
+[
+  {
+    "uv": [
+      0.285,
+      0
+    ],
+    "edge": [
+      -2.4662961959838867,
+      -1.0740958452224731,
+      0.4630025029182434
+    ],
+    "position_error": 0.050953063692866375,
+    "orientation_error_deg": 43.04737252463732,
+    "forearm_elevation_deg": -13.547493750000337,
+    "upper_out_m": 0.16586230121629075,
+    "camera_mount_outward_m": -0.049137813994840164,
+    "score": 0.29061587174456627,
+    "values": {
+      "idx01_body_joint1": 0.02,
+      "idx02_body_joint2": 0.65,
+      "idx11_head_joint1": 0.0,
+      "idx12_head_joint2": 0.43634,
+      "idx21_arm_l_joint1": -1.2216323447610236,
+      "idx22_arm_l_joint2": 0.6097308712288059,
+      "idx23_arm_l_joint3": 0.052165432528339356,
+      "idx24_arm_l_joint4": -1.6259125422440033,
+      "idx25_arm_l_joint5": 0.3112718528659512,
+      "idx26_arm_l_joint6": 1.8856979813185528,
+      "idx27_arm_l_joint7": -0.18952543833542318,
+      "idx31_gripper_l_inner_joint1": -0.75,
+      "idx32_gripper_l_inner_joint3": -0.059397651350925326,
+      "idx33_gripper_l_inner_joint4": -0.012915166798059945,
+      "idx39_gripper_l_inner_joint0": 0.41121720660522243,
+      "idx41_gripper_l_outer_joint1": 0.75,
+      "idx42_gripper_l_outer_joint3": 0.059403211893258985,
+      "idx43_gripper_l_outer_joint4": 0.012899877757313142,
+      "idx49_gripper_l_outer_joint0": -0.4112044217761799,
+      "idx61_arm_r_joint1": 3.1084604656293533,
+      "idx62_arm_r_joint2": 0.9958249042553624,
+      "idx63_arm_r_joint3": 0.41666881531768,
+      "idx64_arm_r_joint4": -0.789132119371748,
+      "idx65_arm_r_joint5": -3.1415926535883707,
+      "idx66_arm_r_joint6": -1.0297442586766543,
+      "idx67_arm_r_joint7": -3.1326614597909335,
+      "idx71_gripper_r_inner_joint1": -0.6,
+      "idx72_gripper_r_inner_joint3": -0.015606860991598907,
+      "idx73_gripper_r_inner_joint4": -0.0011146725636040087,
+      "idx79_gripper_r_inner_joint0": 0.31319347493514427,
+      "idx81_gripper_r_outer_joint1": 0.6,
+      "idx82_gripper_r_outer_joint3": 0.014718305384295114,
+      "idx83_gripper_r_outer_joint4": 0.0034163228556652434,
+      "idx89_gripper_r_outer_joint0": -0.31508773349897434
+    },
+    "mouth_rotation": [
+      [
+        0.0027261648739937178,
+        0.30523814837391544,
+        0.9522721463963667
+      ],
+      [
+        0.7728294689633031,
+        0.6036808142665175,
+        -0.195714297864037
+      ],
+      [
+        -0.6346078946302027,
+        0.7364775266522244,
+        -0.23425130268419764
+      ]
+    ],
+    "mouth_direction": [
+      0.9522721463963667,
+      -0.195714297864037,
+      -0.23425130268419764
+    ],
+    "parallel_heading_error_deg": 17.773224518238777,
+    "elbow_wrist_deg": [
+      -45.21393991821503,
+      -58.99999999999999
+    ]
+  },
+  {
+    "uv": [
+      0.304,
+      0
+    ],
+    "edge": [
+      -2.4659392833709717,
+      -1.077454686164856,
+      0.444292277097702
+    ],
+    "position_error": 0.05515236956099781,
+    "orientation_error_deg": 42.886481837750836,
+    "forearm_elevation_deg": -14.735418007000568,
+    "upper_out_m": 0.1656879107457666,
+    "camera_mount_outward_m": -0.049716159183712284,
+    "score": 0.312785540843074,
+    "values": {
+      "idx01_body_joint1": 0.02,
+      "idx02_body_joint2": 0.65,
+      "idx11_head_joint1": 0.0,
+      "idx12_head_joint2": 0.43634,
+      "idx21_arm_l_joint1": -1.2216323447610236,
+      "idx22_arm_l_joint2": 0.6097308712288059,
+      "idx23_arm_l_joint3": 0.052165432528339356,
+      "idx24_arm_l_joint4": -1.6259125422440033,
+      "idx25_arm_l_joint5": 0.3112718528659512,
+      "idx26_arm_l_joint6": 1.8856979813185528,
+      "idx27_arm_l_joint7": -0.18952543833542318,
+      "idx31_gripper_l_inner_joint1": -0.75,
+      "idx32_gripper_l_inner_joint3": -0.059397651350925326,
+      "idx33_gripper_l_inner_joint4": -0.012915166798059945,
+      "idx39_gripper_l_inner_joint0": 0.41121720660522243,
+      "idx41_gripper_l_outer_joint1": 0.75,
+      "idx42_gripper_l_outer_joint3": 0.059403211893258985,
+      "idx43_gripper_l_outer_joint4": 0.012899877757313142,
+      "idx49_gripper_l_outer_joint0": -0.4112044217761799,
+      "idx61_arm_r_joint1": 0.005847038631620893,
+      "idx62_arm_r_joint2": -0.9965060740611935,
+      "idx63_arm_r_joint3": 0.38739910654036547,
+      "idx64_arm_r_joint4": 0.7361475349727361,
+      "idx65_arm_r_joint5": 3.1415621364547657,
+      "idx66_arm_r_joint6": 1.0297442586766543,
+      "idx67_arm_r_joint7": 0.007002303489471535,
+      "idx71_gripper_r_inner_joint1": -0.6,
+      "idx72_gripper_r_inner_joint3": -0.015606860991598907,
+      "idx73_gripper_r_inner_joint4": -0.0011146725636040087,
+      "idx79_gripper_r_inner_joint0": 0.31319347493514427,
+      "idx81_gripper_r_outer_joint1": 0.6,
+      "idx82_gripper_r_outer_joint3": 0.014718305384295114,
+      "idx83_gripper_r_outer_joint4": 0.0034163228556652434,
+      "idx89_gripper_r_outer_joint0": -0.31508773349897434
+    },
+    "mouth_rotation": [
+      [
+        0.0022871345426321594,
+        0.3271948957685244,
+        0.9449541095728444
+      ],
+      [
+        0.781500241524298,
+        0.5889758284041531,
+        -0.20582722379001345
+      ],
+      [
+        -0.6239007465238737,
+        0.7389526194139003,
+        -0.2543558231067008
+      ]
+    ],
+    "mouth_direction": [
+      0.9449541095728444,
+      -0.20582722379001345,
+      -0.2543558231067008
+    ],
+    "parallel_heading_error_deg": 19.09908991289046,
+    "elbow_wrist_deg": [
+      42.178146852896944,
+      58.99999999999999
+    ]
+  },
+  {
+    "uv": [
+      0.323,
+      0.03777778
+    ],
+    "edge": [
+      -2.433176279067993,
+      -1.101487636566162,
+      0.43971094489097595
+    ],
+    "position_error": 0.056780118743261374,
+    "orientation_error_deg": 44.088957376947285,
+    "forearm_elevation_deg": -14.434356647324377,
+    "upper_out_m": 0.18035331440308777,
+    "camera_mount_outward_m": -0.04829831638215839,
+    "score": 0.31562218890442945,
+    "values": {
+      "idx01_body_joint1": 0.02,
+      "idx02_body_joint2": 0.65,
+      "idx11_head_joint1": 0.0,
+      "idx12_head_joint2": 0.43634,
+      "idx21_arm_l_joint1": -1.2216323447610236,
+      "idx22_arm_l_joint2": 0.6097308712288059,
+      "idx23_arm_l_joint3": 0.052165432528339356,
+      "idx24_arm_l_joint4": -1.6259125422440033,
+      "idx25_arm_l_joint5": 0.3112718528659512,
+      "idx26_arm_l_joint6": 1.8856979813185528,
+      "idx27_arm_l_joint7": -0.18952543833542318,
+      "idx31_gripper_l_inner_joint1": -0.75,
+      "idx32_gripper_l_inner_joint3": -0.059397651350925326,
+      "idx33_gripper_l_inner_joint4": -0.012915166798059945,
+      "idx39_gripper_l_inner_joint0": 0.41121720660522243,
+      "idx41_gripper_l_outer_joint1": 0.75,
+      "idx42_gripper_l_outer_joint3": 0.059403211893258985,
+      "idx43_gripper_l_outer_joint4": 0.012899877757313142,
+      "idx49_gripper_l_outer_joint0": -0.4112044217761799,
+      "idx61_arm_r_joint1": 0.11510177315497228,
+      "idx62_arm_r_joint2": -0.9380987393869463,
+      "idx63_arm_r_joint3": -2.80457506946455,
+      "idx64_arm_r_joint4": -0.6310111204879552,
+      "idx65_arm_r_joint5": 3.141574750308579,
+      "idx66_arm_r_joint6": -1.0297442586766543,
+      "idx67_arm_r_joint7": -3.132408558916187,
+      "idx71_gripper_r_inner_joint1": -0.6,
+      "idx72_gripper_r_inner_joint3": -0.015606860991598907,
+      "idx73_gripper_r_inner_joint4": -0.0011146725636040087,
+      "idx79_gripper_r_inner_joint0": 0.31319347493514427,
+      "idx81_gripper_r_outer_joint1": 0.6,
+      "idx82_gripper_r_outer_joint3": 0.014718305384295114,
+      "idx83_gripper_r_outer_joint4": 0.0034163228556652434,
+      "idx89_gripper_r_outer_joint0": -0.31508773349897434
+    },
+    "mouth_rotation": [
+      [
+        0.0030042252766599186,
+        0.3275110994367714,
+        0.9448425553372393
+      ],
+      [
+        0.7666636029394507,
+        0.6058797128507042,
+        -0.21245397968465501
+      ],
+      [
+        -0.642041972583091,
+        0.7250146573012611,
+        -0.24927064034889448
+      ]
+    ],
+    "mouth_direction": [
+      0.9448425553372393,
+      -0.21245397968465501,
+      -0.24927064034889448
+    ],
+    "parallel_heading_error_deg": 19.118614323325154,
+    "elbow_wrist_deg": [
+      -36.1542740297809,
+      -58.99999999999999
+    ]
+  },
+  {
+    "uv": [
+      0.323,
+      0.01888889
+    ],
+    "edge": [
+      -2.44973087310791,
+      -1.0953037738800049,
+      0.4332250654697418
+    ],
+    "position_error": 0.05877286327505499,
+    "orientation_error_deg": 43.79015703771598,
+    "forearm_elevation_deg": -15.237831238440467,
+    "upper_out_m": 0.17439496536355859,
+    "camera_mount_outward_m": -0.048923568874634414,
+    "score": 0.3284789910049559,
+    "values": {
+      "idx01_body_joint1": 0.02,
+      "idx02_body_joint2": 0.65,
+      "idx11_head_joint1": 0.0,
+      "idx12_head_joint2": 0.43634,
+      "idx21_arm_l_joint1": -1.2216323447610236,
+      "idx22_arm_l_joint2": 0.6097308712288059,
+      "idx23_arm_l_joint3": 0.052165432528339356,
+      "idx24_arm_l_joint4": -1.6259125422440033,
+      "idx25_arm_l_joint5": 0.3112718528659512,
+      "idx26_arm_l_joint6": 1.8856979813185528,
+      "idx27_arm_l_joint7": -0.18952543833542318,
+      "idx31_gripper_l_inner_joint1": -0.75,
+      "idx32_gripper_l_inner_joint3": -0.059397651350925326,
+      "idx33_gripper_l_inner_joint4": -0.012915166798059945,
+      "idx39_gripper_l_inner_joint0": 0.41121720660522243,
+      "idx41_gripper_l_outer_joint1": 0.75,
+      "idx42_gripper_l_outer_joint3": 0.059403211893258985,
+      "idx43_gripper_l_outer_joint4": 0.012899877757313142,
+      "idx49_gripper_l_outer_joint0": -0.4112044217761799,
+      "idx61_arm_r_joint1": -3.061553067851506,
+      "idx62_arm_r_joint2": 0.9621142082501424,
+      "idx63_arm_r_joint3": 0.35124603076033895,
+      "idx64_arm_r_joint4": -0.6514568185244163,
+      "idx65_arm_r_joint5": -3.141568938699532,
+      "idx66_arm_r_joint6": -1.0297442586766543,
+      "idx67_arm_r_joint7": -3.1339916503004113,
+      "idx71_gripper_r_inner_joint1": -0.6,
+      "idx72_gripper_r_inner_joint3": -0.015606860991598907,
+      "idx73_gripper_r_inner_joint4": -0.0011146725636040087,
+      "idx79_gripper_r_inner_joint0": 0.31319347493514427,
+      "idx81_gripper_r_outer_joint1": 0.6,
+      "idx82_gripper_r_outer_joint3": 0.014718305384295114,
+      "idx83_gripper_r_outer_joint4": 0.0034163228556652434,
+      "idx89_gripper_r_outer_joint0": -0.31508773349897434
+    },
+    "mouth_rotation": [
+      [
+        0.0025976258863866695,
+        0.34118651361292696,
+        0.9399920293642974
+      ],
+      [
+        0.7748490834511078,
+        0.5935247073873673,
+        -0.21757141263437593
+      ],
+      [
+        -0.6321409259134646,
+        0.7289171315378695,
+        -0.26282630221473585
+      ]
+    ],
+    "mouth_direction": [
+      0.9399920293642974,
+      -0.21757141263437593,
+      -0.26282630221473585
+    ],
+    "parallel_heading_error_deg": 19.949782109607547,
+    "elbow_wrist_deg": [
+      -37.32572623646904,
+      -58.99999999999999
+    ]
+  },
+  {
+    "uv": [
+      0.323,
+      0
+    ],
+    "edge": [
+      -2.4680049419403076,
+      -1.090921401977539,
+      0.4311393201351166
+    ],
+    "position_error": 0.060496384077689154,
+    "orientation_error_deg": 43.33871562197945,
+    "forearm_elevation_deg": -15.926716758312391,
+    "upper_out_m": 0.1690991247315068,
+    "camera_mount_outward_m": -0.04966093060196384,
+    "score": 0.3403397902267646,
+    "values": {
+      "idx01_body_joint1": 0.02,
+      "idx02_body_joint2": 0.65,
+      "idx11_head_joint1": 0.0,
+      "idx12_head_joint2": 0.43634,
+      "idx21_arm_l_joint1": -1.2216323447610236,
+      "idx22_arm_l_joint2": 0.6097308712288059,
+      "idx23_arm_l_joint3": 0.052165432528339356,
+      "idx24_arm_l_joint4": -1.6259125422440033,
+      "idx25_arm_l_joint5": 0.3112718528659512,
+      "idx26_arm_l_joint6": 1.8856979813185528,
+      "idx27_arm_l_joint7": -0.18952543833542318,
+      "idx31_gripper_l_inner_joint1": -0.75,
+      "idx32_gripper_l_inner_joint3": -0.059397651350925326,
+      "idx33_gripper_l_inner_joint4": -0.012915166798059945,
+      "idx39_gripper_l_inner_joint0": 0.41121720660522243,
+      "idx41_gripper_l_outer_joint1": 0.75,
+      "idx42_gripper_l_outer_joint3": 0.059403211893258985,
+      "idx43_gripper_l_outer_joint4": 0.012899877757313142,
+      "idx49_gripper_l_outer_joint0": -0.4112044217761799,
+      "idx61_arm_r_joint1": 0.03597036566820117,
+      "idx62_arm_r_joint2": -0.9831264148453378,
+      "idx63_arm_r_joint3": 0.37261109500428036,
+      "idx64_arm_r_joint4": 0.679282697887555,
+      "idx65_arm_r_joint5": 3.1415579646436695,
+      "idx66_arm_r_joint6": 1.0297442586766543,
+      "idx67_arm_r_joint7": 0.0159669212300002,
+      "idx71_gripper_r_inner_joint1": -0.6,
+      "idx72_gripper_r_inner_joint3": -0.015606860991598907,
+      "idx73_gripper_r_inner_joint4": -0.0011146725636040087,
+      "idx79_gripper_r_inner_joint0": 0.31319347493514427,
+      "idx81_gripper_r_outer_joint1": 0.6,
+      "idx82_gripper_r_outer_joint3": 0.014718305384295114,
+      "idx83_gripper_r_outer_joint4": 0.0034163228556652434,
+      "idx89_gripper_r_outer_joint0": -0.31508773349897434
+    },
+    "mouth_rotation": [
+      [
+        0.0056472764933115475,
+        0.35396940401703186,
+        0.9352399527864679
+      ],
+      [
+        0.7844584266160963,
+        0.5784447264222587,
+        -0.22366643777123918
+      ],
+      [
+        -0.620155694305233,
+        0.7349199680877533,
+        -0.2744076444392337
+      ]
+    ],
+    "mouth_direction": [
+      0.9352399527864679,
+      -0.22366643777123918,
+      -0.2744076444392337
+    ],
+    "parallel_heading_error_deg": 20.73305438077677,
+    "elbow_wrist_deg": [
+      38.92003168521706,
+      58.99999999999999
+    ]
+  },
+  {
+    "uv": [
+      0.342,
+      0
+    ],
+    "edge": [
+      -2.4709205627441406,
+      -1.107392430305481,
+      0.4221251308917999
+    ],
+    "position_error": 0.0658917290277011,
+    "orientation_error_deg": 44.917478330631475,
+    "forearm_elevation_deg": -16.952372721562227,
+    "upper_out_m": 0.17363452551441227,
+    "camera_mount_outward_m": -0.04840780382095878,
+    "score": 0.3672806758711077,
+    "values": {
+      "idx01_body_joint1": 0.02,
+      "idx02_body_joint2": 0.65,
+      "idx11_head_joint1": 0.0,
+      "idx12_head_joint2": 0.43634,
+      "idx21_arm_l_joint1": -1.2216323447610236,
+      "idx22_arm_l_joint2": 0.6097308712288059,
+      "idx23_arm_l_joint3": 0.052165432528339356,
+      "idx24_arm_l_joint4": -1.6259125422440033,
+      "idx25_arm_l_joint5": 0.3112718528659512,
+      "idx26_arm_l_joint6": 1.8856979813185528,
+      "idx27_arm_l_joint7": -0.18952543833542318,
+      "idx31_gripper_l_inner_joint1": -0.75,
+      "idx32_gripper_l_inner_joint3": -0.059397651350925326,
+      "idx33_gripper_l_inner_joint4": -0.012915166798059945,
+      "idx39_gripper_l_inner_joint0": 0.41121720660522243,
+      "idx41_gripper_l_outer_joint1": 0.75,
+      "idx42_gripper_l_outer_joint3": 0.059403211893258985,
+      "idx43_gripper_l_outer_joint4": 0.012899877757313142,
+      "idx49_gripper_l_outer_joint0": -0.4112044217761799,
+      "idx61_arm_r_joint1": 0.059268891941219086,
+      "idx62_arm_r_joint2": -0.9651500552050646,
+      "idx63_arm_r_joint3": 0.3646693075532827,
+      "idx64_arm_r_joint4": 0.6272971484744155,
+      "idx65_arm_r_joint5": -3.1415610709066444,
+      "idx66_arm_r_joint6": 1.0297442586766543,
+      "idx67_arm_r_joint7": 0.01016426923114796,
+      "idx71_gripper_r_inner_joint1": -0.6,
+      "idx72_gripper_r_inner_joint3": -0.015606860991598907,
+      "idx73_gripper_r_inner_joint4": -0.0011146725636040087,
+      "idx79_gripper_r_inner_joint0": 0.31319347493514427,
+      "idx81_gripper_r_outer_joint1": 0.6,
+      "idx82_gripper_r_outer_joint3": 0.014718305384295114,
+      "idx83_gripper_r_outer_joint4": 0.0034163228556652434,
+      "idx89_gripper_r_outer_joint0": -0.31508773349897434
+    },
+    "mouth_rotation": [
+      [
+        0.0038636059629484406,
+        0.3796041891211432,
+        0.9251409255625013
+      ],
+      [
+        0.7740569874489558,
+        0.5845840131569202,
+        -0.24309938655372146
+      ],
+      [
+        -0.6331041405096078,
+        0.7170510380461262,
+        -0.29157667277503835
+      ]
+    ],
+    "mouth_direction": [
+      0.9251409255625013,
+      -0.24309938655372146,
+      -0.29157667277503835
+    ],
+    "parallel_heading_error_deg": 22.310385040765258,
+    "elbow_wrist_deg": [
+      35.94147910817538,
+      58.99999999999999
+    ]
+  }
+]

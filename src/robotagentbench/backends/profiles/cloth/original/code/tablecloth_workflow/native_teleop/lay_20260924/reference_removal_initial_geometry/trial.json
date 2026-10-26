@@ -1,0 +1,357 @@
+{
+  "schema": "real2sim.tablecloth_rule_trial.v1",
+  "benchmark_task_id": "8.7",
+  "mode": "remove",
+  "initial_state_model": "flat cloth fully supported within table",
+  "source": {
+    "repository": "/home/aether/workspace/agent_bench",
+    "commit": "51068088261a516c3e1feb075e7601a35b9cd491",
+    "scene": "arena_scene/v1_2/demo_sim/scene_room_baseline.usda",
+    "robot": "arena_scene/v1_2/source/geniesim/assets/robot/G1_omnipicker/robot.usda"
+  },
+  "config": {
+    "geometry": "/media/aether/OS/agent_bench_runs/tablecloth_gripper_actuator_20260922/native_teleop/lay_20260924/local_scene_collision_geometry.npz",
+    "robot": "/home/aether/workspace/agent_bench/.codex-tmp/tablecloth-action-loop-20260905/robot_native_collision.json",
+    "output": "/media/aether/OS/agent_bench_runs/tablecloth_gripper_actuator_20260922/trials/live_reference_inward_v1",
+    "task": "8.7",
+    "mode": "remove",
+    "diagnostic_kinematic_robot": true,
+    "initial": null,
+    "gripper_contact_meshes": "/media/aether/My Passport3/agent_bench_runs/tablecloth_real_motion_repair_20260910/deep_side_grasp/detailed_fingers_union.npz",
+    "replay_action": null,
+    "start_held": false,
+    "grasp_edge": "long",
+    "pickup_corner": 0,
+    "folds": 2,
+    "clamp_vertices": 1,
+    "policy": "/media/aether/OS/agent_bench_runs/tablecloth_gripper_actuator_20260922/protocol_v14/scene_policy.json",
+    "physics_profile": "/home/aether/workspace/agent_bench/experiments/physics_fluid/tablecloth_canvas_physics.json",
+    "self_contact": true,
+    "robot_body_collisions": true,
+    "strain_contact_guard": true,
+    "contact_filter_rings": 1,
+    "nx": 36,
+    "ny": 54,
+    "fps": 20,
+    "substeps": 128,
+    "iterations": 24,
+    "max_frames": 0,
+    "strain_iters": 8,
+    "collision_refresh": 4,
+    "strain_contact_interval": 8,
+    "density": 0.35,
+    "stretch": 5000.0,
+    "stretch_damping": 1.0,
+    "bend": 0.15,
+    "bend_damping": 0.01,
+    "radius": 0.0015,
+    "self_radius": 0.001,
+    "self_margin": 0.0,
+    "friction": 0.35,
+    "friction_epsilon": 0.001,
+    "contact_stiffness": 100000.0,
+    "damping": 0.8,
+    "clamp_radius": 0.018,
+    "grasp_depth": 0.004,
+    "settle": 1.5,
+    "max_ik_error": 0.01,
+    "waist_pitch": 0.65,
+    "max_joint_speed": 1.5,
+    "max_stretch": 1.025,
+    "linen_support_top": 0.0
+  },
+  "policy": {
+    "cloth_initialization": {
+      "size_m": [
+        0.342,
+        0.51
+      ],
+      "origin_xy_m": [
+        -2.33,
+        -0.68
+      ],
+      "basis": "User-required supported old cloth entirely within tablecloth half; friction must expose the hem",
+      "require_on_table": true,
+      "table_margin_m": 0.005
+    },
+    "additional_cloth": {
+      "role": "clean",
+      "initialization": "owner_rounded_upright_wall_supported_fold_before_first_step",
+      "no_hidden_support": true
+    }
+  },
+  "frames": 60,
+  "fps": 20,
+  "failure": null,
+  "grasp_model": "contact_and_friction_only_no_attachments; native single-DOF gripper drive",
+  "diagnostic_only": true,
+  "eligible_for_production": false,
+  "fully_physical_robot": false,
+  "attachment_count": 0,
+  "particle_mass_invariant": true,
+  "fixed_material": true,
+  "linen_support": null,
+  "events": [],
+  "initial_bounds": [
+    [
+      -2.410999771118164,
+      -1.0580840816497803,
+      0.2874999904632597
+    ],
+    [
+      -1.9880000352859497,
+      -0.17000001668930054,
+      0.46399971690800407
+    ]
+  ],
+  "final_bounds": [
+    [
+      -2.4128189086914062,
+      -1.045792579650879,
+      0.2865625023841858
+    ],
+    [
+      -1.987999677658081,
+      -0.17000028491020203,
+      0.45253539085388184
+    ]
+  ],
+  "stretch_p99_max": 1.000827670097351,
+  "stretch_max": 1.006901741027832,
+  "ik_error_max_m": 0.0,
+  "final_table_contact_fraction": 0.5,
+  "final_basket_xy_fraction": 0.38181818181818183,
+  "final_below_basket_floor_fraction": 0.0,
+  "numerical_determinism": "not_guaranteed; repeatability requires tolerance checks",
+  "grasp_event_timing": "geometry observations at two-substep boundaries; no state changes",
+  "strain_contact_guard": "Newton 1.4 conservative self-contact truncation",
+  "rigid_body_control": "arm prescribed kinematics; gripper joint dynamic (robot.usda drive) coupled to cloth contact",
+  "robot_cloth_collision_model": "current USD closed gripper contact surfaces plus nonhand CAD primitives with hull fallback",
+  "gripper_contact_meshes": [
+    {
+      "link": "gripper_l_base_link",
+      "parts": 1,
+      "vertices": 223,
+      "triangles": 442,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_l_inner_link1",
+      "parts": 1,
+      "vertices": 512,
+      "triangles": 1020,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_l_inner_link3",
+      "parts": 1,
+      "vertices": 448,
+      "triangles": 892,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_l_inner_link4",
+      "parts": 1,
+      "vertices": 26651,
+      "triangles": 53210,
+      "approximation": "detailed closed CAD surface union"
+    },
+    {
+      "link": "gripper_l_inner_link2",
+      "parts": 1,
+      "vertices": 528,
+      "triangles": 1052,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_l_outer_link1",
+      "parts": 1,
+      "vertices": 524,
+      "triangles": 1044,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_l_outer_link3",
+      "parts": 1,
+      "vertices": 448,
+      "triangles": 892,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_l_outer_link4",
+      "parts": 1,
+      "vertices": 42438,
+      "triangles": 85284,
+      "approximation": "detailed closed CAD surface union"
+    },
+    {
+      "link": "gripper_l_outer_link2",
+      "parts": 1,
+      "vertices": 485,
+      "triangles": 966,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_r_base_link",
+      "parts": 1,
+      "vertices": 223,
+      "triangles": 442,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_r_inner_link1",
+      "parts": 1,
+      "vertices": 512,
+      "triangles": 1020,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_r_inner_link3",
+      "parts": 1,
+      "vertices": 448,
+      "triangles": 892,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_r_inner_link4",
+      "parts": 1,
+      "vertices": 26651,
+      "triangles": 53210,
+      "approximation": "detailed closed CAD surface union"
+    },
+    {
+      "link": "gripper_r_inner_link2",
+      "parts": 1,
+      "vertices": 528,
+      "triangles": 1052,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_r_outer_link1",
+      "parts": 1,
+      "vertices": 524,
+      "triangles": 1044,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_r_outer_link3",
+      "parts": 1,
+      "vertices": 448,
+      "triangles": 892,
+      "approximation": "closed outward convex hull of current CAD vertices"
+    },
+    {
+      "link": "gripper_r_outer_link4",
+      "parts": 1,
+      "vertices": 42438,
+      "triangles": 85284,
+      "approximation": "detailed closed CAD surface union"
+    }
+  ],
+  "nonhand_collision_shape_count": 23,
+  "nonhand_native_primitive_count": 23,
+  "retimed_frames": 0,
+  "motion_retiming": "joint-space minimum-jerk interpolation with additional physical simulation steps; intermediate EEF commands are FK of commanded joints",
+  "owner_review": "pending",
+  "automatic_benchmark_success": null,
+  "robot_mode": "kinematic_arm_dynamic_gripper",
+  "gripper_actuator": {
+    "model": "native_single_dof_gripper_actuator_v1",
+    "robot_mode": "kinematic_arm_dynamic_gripper",
+    "asset": "arena_scene/v1_2/source/geniesim/assets/robot/G1_omnipicker/robot.usda",
+    "unit_convention": "USD angular drive gains per degree converted to per radian (Isaac/PhysX)",
+    "drive": {
+      "L": {
+        "joint": "idx41_gripper_l_outer_joint1",
+        "stiffness_usd_per_deg": 500.0,
+        "damping_usd_per_deg": 100.0,
+        "stiffness": 28647.88975654116,
+        "damping": 5729.5779513082325,
+        "max_torque": 80.0,
+        "lower": 0.0,
+        "upper": 0.7853981633974483,
+        "armature": 0.0010000000474974513
+      },
+      "R": {
+        "joint": "idx81_gripper_r_outer_joint1",
+        "stiffness_usd_per_deg": 500.0,
+        "damping_usd_per_deg": 100.0,
+        "stiffness": 28647.88975654116,
+        "damping": 5729.5779513082325,
+        "max_torque": 80.0,
+        "lower": 0.0,
+        "upper": 0.7853981633974483,
+        "armature": 0.0010000000474974513
+      }
+    },
+    "effective_inertia": {
+      "L": 0.0022837898528180844,
+      "R": 0.0022837739382921248
+    },
+    "grip_command_to_target": "theta* = 0.75 * (1 - grip), clipped to joint limits",
+    "linkage_table": {
+      "samples": 81,
+      "theta_max_rad": 0.7853981633974483,
+      "method": "robot.calibrate_loops continuation over outer joint1; inner = -outer"
+    },
+    "finger_bodies": [
+      "gripper_l_inner_link1",
+      "gripper_l_inner_link3",
+      "gripper_l_inner_link4",
+      "gripper_l_inner_link2",
+      "gripper_l_outer_link1",
+      "gripper_l_outer_link3",
+      "gripper_l_outer_link4",
+      "gripper_l_outer_link2",
+      "gripper_r_inner_link1",
+      "gripper_r_inner_link3",
+      "gripper_r_inner_link4",
+      "gripper_r_inner_link2",
+      "gripper_r_outer_link1",
+      "gripper_r_outer_link3",
+      "gripper_r_outer_link4"
+    ],
+    "cloth_coupling": "Q = sum over VBD body-particle contacts on finger bodies of (-f_particle) . dx/dtheta; implicit contact stiffness sum ke*(n.dx/dtheta)^2; one-substep lag",
+    "arm": "prescribed kinematic joint trajectory (native kinematics); no arm dynamics"
+  },
+  "pad_friction": {
+    "effective_pad_cloth_mu": 2.2,
+    "pad_shape_mu": 13.828571428571431,
+    "cloth_soft_contact_mu": 0.35,
+    "pad_shapes": 4,
+    "mixing": "geometric mean (Newton 1.4)",
+    "source": "robot.usda GripMat staticFriction 2.2 / dynamicFriction 2.0, combine max"
+  },
+  "trajectory_patches": [],
+  "closed_loop_segments": [],
+  "resumed_from_checkpoint": null,
+  "replay_rows_original_frame": [],
+  "gripper_summary": {
+    "max_normal_force_N": [
+      0.0,
+      0.0
+    ],
+    "saturated_frame_fraction": [
+      0.0,
+      0.0
+    ],
+    "theta_min_rad": [
+      0.75,
+      0.75
+    ]
+  },
+  "fixed_initial_state": true,
+  "benchmark_eligible": false,
+  "task_action_executed": true,
+  "teleop_connected": false,
+  "cloth_material_variant": {
+    "name": "soft_draped_fold_with_intrinsic_crease",
+    "readback": "material_bending_readback.json",
+    "calibrated": false
+  },
+  "trial_scope": "persistent diagnostic episode; robot commands only",
+  "session_completed": false,
+  "complete_removal": false,
+  "complete_spreading": false,
+  "reference_scope": "Authored pre-episode geometry and native joint command initialization only; historical clamped episode states excluded"
+}

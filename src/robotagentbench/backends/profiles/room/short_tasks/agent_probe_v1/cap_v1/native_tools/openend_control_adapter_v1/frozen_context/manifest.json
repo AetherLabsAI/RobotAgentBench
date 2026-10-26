@@ -1,0 +1,25 @@
+{
+  "schema": "openend.fixed_context.bundle.v1",
+  "version": "1.0.0",
+  "language": "en",
+  "status": "content_frozen_local_not_runtime_integrated",
+  "context_file": "context.txt",
+  "prompt_bank_file": "prompts.json",
+  "same_complete_context_for_all_prompts": true,
+  "authoring_direction": [
+    "fixed_context_and_selected_prompt",
+    "select_semantically_compatible_existing_tasks_and_quantities",
+    "register_selected_tasks_with_existing_dependencies",
+    "generate_room_from_registered_tasks",
+    "provide_context_prompt_and_room_observations_to_model"
+  ],
+  "fixed_prompt_to_task_lookup": false,
+  "automatic_semantic_selector_implemented": false,
+  "shared_entry_modified": false,
+  "generator_modified": false,
+  "scoring_modified": false,
+  "sha256": {
+    "context.txt": "da900c4f65330533f8aba7753d3badcd0fed1bac838a3e7bf19c55327a6ac1fc",
+    "prompts.json": "3860fe2a47dbe9888fb1c8271139468c202f372d6208a08356d2ac145d97c40c"
+  }
+}

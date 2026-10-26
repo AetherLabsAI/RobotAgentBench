@@ -1,0 +1,360 @@
+{
+  "schema": "openend.umbrella.source_audit.v1",
+  "target": "/World/Assets/Umbrella",
+  "source": "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/scene_room_baseline.usda",
+  "source_layers": {
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/scene_room_baseline.usda": "3d7e4924c41d0316b501d0643b45af4cf8e6783e928ec890fee2709904a5fb19",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/house_task73_objects_v1.usda": "d9ce91432ec205afe04e4b482c106a8da4dead6867dc3758665d110dc1b259ec",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/usdz/umbrella.usdz": "831a5bc6d0f35d7a4e837771310508debb844518a3fa4924c735114c0444040b",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/shelf_support_alignment.usda": "b2f41e2af9752a267d159381e95e35d6765624a381380af33360209189cf26b7",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/kitchen_dining_objects_v1.usda": "ee251b79684686a8dc1b79093163c4e95fe4a9e7038715938abd5bf1b847d5af",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/shelf_support_collisions.usda": "c7f926c1eaf99a73cd85072089c65b058ff4a3c1ed1ec98aa93f25049e627c1f",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/kitchen_task75_objects_v1.usda": "4b73cd18446b7fd8849f423a4643ff077d6090af3831af5549391319d4c0d7bb"
+  },
+  "prototype": "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/agent_probe_v1/cap_v1/native_tools/openend_control_adapter_v1/umbrella_openend_v1/umbrella_with_material.usda",
+  "prototype_sha256": "8c3eb630a243541e6f73a4dd5fdf54ef804f6b36c006d0869a4528e42bc822fd",
+  "root_world_matrix": [
+    [
+      2.220446049250313e-16,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      -1.0,
+      2.220446049250313e-16,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      -0.7199999991523651,
+      -0.883999999949114,
+      0.5085496998562886,
+      1.0
+    ]
+  ],
+  "root_scale": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "body_count": 1,
+  "visible_vertices": 12941,
+  "body_bounds_m": {
+    "min": [
+      -0.03272515270954912,
+      -0.12500000070811357,
+      9.601182071605763e-10
+    ],
+    "max": [
+      0.03272515260777742,
+      0.12500000240338327,
+      0.06545030014371145
+    ]
+  },
+  "body_size_m": [
+    0.06545030531732654,
+    0.25000000311149684,
+    0.06545029918359324
+  ],
+  "original_physics": {
+    "/World/Assets/Umbrella": {
+      "schemas": [
+        "PhysicsRigidBodyAPI",
+        "PhysicsMassAPI"
+      ],
+      "attributes": {
+        "physics:angularVelocity": "(0, 0, 0)",
+        "physics:centerOfMass": "(-inf, -inf, -inf)",
+        "physics:density": "0.0",
+        "physics:diagonalInertia": "(0, 0, 0)",
+        "physics:kinematicEnabled": "False",
+        "physics:mass": "0.3499999940395355",
+        "physics:principalAxes": "(0, 0, 0, 0)",
+        "physics:rigidBodyEnabled": "True",
+        "physics:startsAsleep": "False",
+        "physics:velocity": "(0, 0, 0)"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/Helix001/Helix001": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/Helix002/Helix002": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/Helix003/Helix003": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/Helix004/Helix004": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/Helix005/Helix005": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/Helix006/Helix006": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/Helix007/Helix007": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/Helix008/Helix008": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/Cylinder015/Cylinder015": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/arch49_059_obj_00/arch49_059_obj_00": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/arch49_059_obj_00/arch49_059_obj_00/lambert1": {
+      "schemas": [
+        "MaterialBindingAPI"
+      ],
+      "attributes": {}
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/arch49_059_obj_00/arch49_059_obj_00/lambert5": {
+      "schemas": [
+        "MaterialBindingAPI"
+      ],
+      "attributes": {}
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/Cylinder016/Cylinder016": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/pSphere1/pSphere1": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/group2/pSphere2/pSphere2": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/group2/pSphere3/pSphere3": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/group2/pSphere4/pSphere4": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/group2/pSphere5/pSphere5": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/group2/pSphere6/pSphere6": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/group2/pSphere7/pSphere7": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/group2/pSphere8/pSphere8": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Umbrella/umbrella/pDisc3/pDisc3": {
+      "schemas": [
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "MaterialBindingAPI"
+      ],
+      "attributes": {
+        "physics:approximation": "convexHull",
+        "physics:collisionEnabled": "True"
+      }
+    },
+    "/World/Assets/Umbrella/Obj/Looks/fabric/pbr": {
+      "schemas": [
+        "NodeDefAPI"
+      ],
+      "attributes": {}
+    },
+    "/World/Assets/Umbrella/Obj/Looks/metal/pbr": {
+      "schemas": [
+        "NodeDefAPI"
+      ],
+      "attributes": {}
+    },
+    "/World/Assets/Umbrella/Obj/Looks/cap/pbr": {
+      "schemas": [
+        "NodeDefAPI"
+      ],
+      "attributes": {}
+    },
+    "/World/Assets/Umbrella/Obj/Looks/handle/pbr": {
+      "schemas": [
+        "NodeDefAPI"
+      ],
+      "attributes": {}
+    }
+  },
+  "source_physics_changed": false,
+  "original_pickup_api": "13-1",
+  "original_placement_api": "14-1",
+  "approved_destination": "fixed_cpu_bag",
+  "native_physics_verified": false,
+  "physics_material": "/World/PhysicsMaterials/GripMat",
+  "physics_material_attributes": {
+    "outputs:displacement": "None",
+    "outputs:surface": "None",
+    "outputs:volume": "None",
+    "physics:density": "0.0",
+    "physics:dynamicFriction": "2.0",
+    "physics:restitution": "0.0",
+    "physics:staticFriction": "2.200000047683716",
+    "physxMaterial:compliantContactDamping": "0.0",
+    "physxMaterial:compliantContactStiffness": "0.0",
+    "physxMaterial:frictionCombineMode": "max"
+  }
+}

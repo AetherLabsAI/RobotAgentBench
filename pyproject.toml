@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robotagentbench"
+version = "0.1.0"
+description = "Evaluation tooling for household robot agents"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/AetherLabsAI/RobotAgentBench"
+
+[project.scripts]
+robotagentbench = "robotagentbench.cli:main"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["robotagentbench*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"robotagentbench.tasks" = ["catalogs.json"]
+"robotagentbench.simulation.specialized" = ["identities.json"]
+"robotagentbench.backends" = ["manifest.json", "native-files.json", "profiles/**/*"]
+"robotagentbench" = ["example_data/*.json"]

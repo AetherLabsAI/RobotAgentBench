@@ -1,0 +1,7 @@
+{
+  "schema": "openend.short_task.request.v1",
+  "task_name": "wipe_table",
+  "rule_version": "openend.short_task.wipe_table.v1",
+  "seed": 1,
+  "options": {}
+}

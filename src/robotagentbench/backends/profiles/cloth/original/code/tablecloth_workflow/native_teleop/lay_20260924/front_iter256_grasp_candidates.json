@@ -1,0 +1,156 @@
+[
+  {
+    "body_pitch": 0.65,
+    "spin": 0,
+    "edge": [
+      -2.452742576599121,
+      -1.1043418645858765,
+      0.4623734652996063
+    ],
+    "uv": [
+      0.323,
+      0.01888889
+    ],
+    "normal": [
+      0.5798494956152753,
+      -0.061691902161014625,
+      0.81238455896359
+    ],
+    "orientation": [
+      [
+        0.20339700900921434,
+        0.5780604373887621,
+        0.7902378043677853
+      ],
+      [
+        0.9771417838114141,
+        -0.06887298383301818,
+        -0.2011229634521713
+      ],
+      [
+        -0.06183519269762407,
+        0.8130821870043947,
+        -0.5788555658540375
+      ]
+    ],
+    "values": {
+      "idx01_body_joint1": 0.02,
+      "idx02_body_joint2": 0.65,
+      "idx11_head_joint1": 0.0,
+      "idx12_head_joint2": 0.43634,
+      "idx21_arm_l_joint1": -1.2216323447610236,
+      "idx22_arm_l_joint2": 0.6097308712288059,
+      "idx23_arm_l_joint3": 0.052165432528339356,
+      "idx24_arm_l_joint4": -1.6259125422440033,
+      "idx25_arm_l_joint5": 0.3112718528659512,
+      "idx26_arm_l_joint6": 1.8856979813185528,
+      "idx27_arm_l_joint7": -0.18952543833542318,
+      "idx31_gripper_l_inner_joint1": -0.75,
+      "idx32_gripper_l_inner_joint3": -0.059397651350925326,
+      "idx33_gripper_l_inner_joint4": -0.012915166798059945,
+      "idx39_gripper_l_inner_joint0": 0.41121720660522243,
+      "idx41_gripper_l_outer_joint1": 0.75,
+      "idx42_gripper_l_outer_joint3": 0.059403211893258985,
+      "idx43_gripper_l_outer_joint4": 0.012899877757313142,
+      "idx49_gripper_l_outer_joint0": -0.4112044217761799,
+      "idx61_arm_r_joint1": -0.21347340827547642,
+      "idx62_arm_r_joint2": -0.7765200083437735,
+      "idx63_arm_r_joint3": 0.4159281589470586,
+      "idx64_arm_r_joint4": 0.9665492222034431,
+      "idx65_arm_r_joint5": -0.18825517765194952,
+      "idx66_arm_r_joint6": -0.6272308958197809,
+      "idx67_arm_r_joint7": -2.0965698308968315,
+      "idx71_gripper_r_inner_joint1": -0.3,
+      "idx72_gripper_r_inner_joint3": 0.030831844619275052,
+      "idx73_gripper_r_inner_joint4": 0.0017712252801430077,
+      "idx79_gripper_r_inner_joint0": 0.14678852011564425,
+      "idx81_gripper_r_outer_joint1": 0.3,
+      "idx82_gripper_r_outer_joint3": -0.03263161640697675,
+      "idx83_gripper_r_outer_joint4": 0.002352659636505731,
+      "idx89_gripper_r_outer_joint0": -0.15009722075823717
+    },
+    "errors": [
+      2.934068767142773e-05
+    ],
+    "angles": [
+      0.03303473066914496
+    ]
+  },
+  {
+    "body_pitch": 0.65,
+    "spin": 285,
+    "edge": [
+      -2.452742576599121,
+      -1.1043418645858765,
+      0.4623734652996063
+    ],
+    "uv": [
+      0.323,
+      0.01888889
+    ],
+    "normal": [
+      0.5798494956152753,
+      -0.061691902161014625,
+      0.81238455896359
+    ],
+    "orientation": [
+      [
+        0.8189152045906912,
+        0.5737811331935371,
+        0.012373313271965117
+      ],
+      [
+        0.05832378235377818,
+        -0.06175462422023024,
+        -0.9963858202520584
+      ],
+      [
+        -0.5709432757307285,
+        0.8166771562732476,
+        -0.0840368866588155
+      ]
+    ],
+    "values": {
+      "idx01_body_joint1": 0.02,
+      "idx02_body_joint2": 0.65,
+      "idx11_head_joint1": 0.0,
+      "idx12_head_joint2": 0.43634,
+      "idx21_arm_l_joint1": -1.2216323447610236,
+      "idx22_arm_l_joint2": 0.6097308712288059,
+      "idx23_arm_l_joint3": 0.052165432528339356,
+      "idx24_arm_l_joint4": -1.6259125422440033,
+      "idx25_arm_l_joint5": 0.3112718528659512,
+      "idx26_arm_l_joint6": 1.8856979813185528,
+      "idx27_arm_l_joint7": -0.18952543833542318,
+      "idx31_gripper_l_inner_joint1": -0.75,
+      "idx32_gripper_l_inner_joint3": -0.059397651350925326,
+      "idx33_gripper_l_inner_joint4": -0.012915166798059945,
+      "idx39_gripper_l_inner_joint0": 0.41121720660522243,
+      "idx41_gripper_l_outer_joint1": 0.75,
+      "idx42_gripper_l_outer_joint3": 0.059403211893258985,
+      "idx43_gripper_l_outer_joint4": 0.012899877757313142,
+      "idx49_gripper_l_outer_joint0": -0.4112044217761799,
+      "idx61_arm_r_joint1": 1.2614322802035203,
+      "idx62_arm_r_joint2": -1.533672527341573,
+      "idx63_arm_r_joint3": -0.60662057832414,
+      "idx64_arm_r_joint4": -0.8552059387322587,
+      "idx65_arm_r_joint5": -1.2021463811355584,
+      "idx66_arm_r_joint6": 1.0182541573870327,
+      "idx67_arm_r_joint7": -0.43755324498616094,
+      "idx71_gripper_r_inner_joint1": -0.3,
+      "idx72_gripper_r_inner_joint3": 0.030831844619275052,
+      "idx73_gripper_r_inner_joint4": 0.0017712252801430077,
+      "idx79_gripper_r_inner_joint0": 0.14678852011564425,
+      "idx81_gripper_r_outer_joint1": 0.3,
+      "idx82_gripper_r_outer_joint3": -0.03263161640697675,
+      "idx83_gripper_r_outer_joint4": 0.002352659636505731,
+      "idx89_gripper_r_outer_joint0": -0.15009722075823717
+    },
+    "errors": [
+      2.3273339995730546e-09
+    ],
+    "angles": [
+      4.207127930538948e-06
+    ]
+  }
+]

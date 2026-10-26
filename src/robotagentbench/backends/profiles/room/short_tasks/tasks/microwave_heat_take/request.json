@@ -1,0 +1,7 @@
+{
+  "schema": "openend.short_task.request.v1",
+  "task_name": "microwave_heat_take",
+  "rule_version": "openend.short_task.microwave_heat_take.v1",
+  "seed": 1,
+  "options": {"payload_variant": "beef_box"}
+}

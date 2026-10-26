@@ -1,0 +1,269 @@
+{
+  "schema": "arena.sofa_structural_obstacles.v2",
+  "source_scene": "/mnt/agent-bench-data/lingjun/releases/living50-candidate-20260919/layouts/ID_01_LIVING_STRAIGHT.usdc",
+  "source_sha256": "6fdd127abad4a44ba67bc79aa2b69698d2513251ec859237ddcd5c5a05c2fa92",
+  "source_mesh": "/World/Assets/Sofa/Obj/Meshes/FAB_converted_model/root/GLTF_SceneRootNode/__seat_sofa_0/Object_4/Object_0",
+  "component_method": "mesh connectivity after 10 micron vertex welding",
+  "collision_method": "conservative XY AABB projection of complete backrest and armrest mesh components; all heights",
+  "scope": "layout01 sofa only; not automatically transferable to other sofas",
+  "support_excluded": true,
+  "physics_validated": false,
+  "components": [
+    {
+      "component": 0,
+      "role": "support_or_base_excluded",
+      "vertices": 3816,
+      "world_min": [
+        -0.34999999004138094,
+        -2.098029820000372,
+        0.2673797632163369
+      ],
+      "world_max": [
+        0.33732069330302933,
+        0.35594280851239785,
+        0.4600648867838121
+      ]
+    },
+    {
+      "component": 1,
+      "role": "armrest",
+      "vertices": 1027,
+      "world_min": [
+        -0.30051548536818373,
+        -2.2210434941585397,
+        0.053245035982564526
+      ],
+      "world_max": [
+        0.4499999900413797,
+        -2.0983162136176823,
+        0.6707285724283808
+      ]
+    },
+    {
+      "component": 2,
+      "role": "support_or_base_excluded",
+      "vertices": 1329,
+      "world_min": [
+        -0.30051548536818373,
+        -2.0983162136176823,
+        0.05324501488395732
+      ],
+      "world_max": [
+        0.3373206933030294,
+        0.3562291475101757,
+        0.2673798138529944
+      ]
+    },
+    {
+      "component": 3,
+      "role": "armrest",
+      "vertices": 1025,
+      "world_min": [
+        -0.3005154853681832,
+        0.3562291397073852,
+        0.053245035982564526
+      ],
+      "world_max": [
+        0.4499999900413803,
+        0.47895642805103317,
+        0.6707285724283808
+      ]
+    },
+    {
+      "component": 4,
+      "role": "support_or_base_excluded",
+      "vertices": 671,
+      "world_min": [
+        -0.26017049758122823,
+        -2.1842253099962825,
+        1.4671088527615748e-16
+      ],
+      "world_max": [
+        -0.21068593062725594,
+        -2.1351343977799395,
+        0.053245035982564685
+      ]
+    },
+    {
+      "component": 5,
+      "role": "support_or_base_excluded",
+      "vertices": 671,
+      "world_min": [
+        -0.2601704975812281,
+        -1.32513434621028,
+        1.4671088527615748e-16
+      ],
+      "world_max": [
+        -0.2106859306272557,
+        -1.276043433993937,
+        0.053245035982564685
+      ]
+    },
+    {
+      "component": 6,
+      "role": "support_or_base_excluded",
+      "vertices": 671,
+      "world_min": [
+        -0.2601704975812279,
+        -0.46604350726892363,
+        1.4671088527615748e-16
+      ],
+      "world_max": [
+        -0.2106859306272556,
+        -0.41695259505258064,
+        0.053245035982564685
+      ]
+    },
+    {
+      "component": 7,
+      "role": "support_or_base_excluded",
+      "vertices": 671,
+      "world_min": [
+        -0.2601704975812277,
+        0.38895641451828067,
+        1.4671088527615748e-16
+      ],
+      "world_max": [
+        -0.21068593062725538,
+        0.4380473189318333,
+        0.053245035982564685
+      ]
+    },
+    {
+      "component": 8,
+      "role": "backrest",
+      "vertices": 3314,
+      "world_min": [
+        0.17108606473673843,
+        -2.1051035176275743,
+        0.36199339541037323
+      ],
+      "world_max": [
+        0.3743050104719714,
+        0.3614943612048779,
+        0.8495421381667256
+      ]
+    },
+    {
+      "component": 9,
+      "role": "backrest",
+      "vertices": 1572,
+      "world_min": [
+        0.33732072444341626,
+        -2.0983162136176823,
+        0.053245035982564526
+      ],
+      "world_max": [
+        0.44999999004138025,
+        0.3562292957631924,
+        0.6707285724283807
+      ]
+    },
+    {
+      "component": 10,
+      "role": "support_or_base_excluded",
+      "vertices": 671,
+      "world_min": [
+        0.3583862000885818,
+        -2.1842253099962825,
+        9.36370771833247e-18
+      ],
+      "world_max": [
+        0.4078707553649088,
+        -2.1351343977799395,
+        0.05324503598256455
+      ]
+    },
+    {
+      "component": 11,
+      "role": "support_or_base_excluded",
+      "vertices": 671,
+      "world_min": [
+        0.358386200088582,
+        -1.3251343462102803,
+        9.36370771833247e-18
+      ],
+      "world_max": [
+        0.407870755364909,
+        -1.2760434339939373,
+        0.05324503598256455
+      ]
+    },
+    {
+      "component": 12,
+      "role": "support_or_base_excluded",
+      "vertices": 671,
+      "world_min": [
+        0.3583862000885822,
+        -0.46604350726892374,
+        9.36370771833247e-18
+      ],
+      "world_max": [
+        0.4078707553649092,
+        -0.41695259505258075,
+        0.05324503598256455
+      ]
+    },
+    {
+      "component": 13,
+      "role": "support_or_base_excluded",
+      "vertices": 671,
+      "world_min": [
+        0.3583862000885824,
+        0.3889564145182805,
+        9.36370771833247e-18
+      ],
+      "world_max": [
+        0.4078707553649094,
+        0.43804731893183313,
+        0.05324503598256455
+      ]
+    }
+  ],
+  "obstacles": [
+    {
+      "id": "armrest_1",
+      "kind": "armrest",
+      "bounds": [
+        1.2273162136176823,
+        0.049840908431816267,
+        1.3500434941585397,
+        0.8003563838413796
+      ],
+      "component": 1
+    },
+    {
+      "id": "armrest_3",
+      "kind": "armrest",
+      "bounds": [
+        -1.3499564280510332,
+        0.04984090843181682,
+        -1.2272291397073851,
+        0.8003563838413803
+      ],
+      "component": 3
+    },
+    {
+      "id": "backrest_8",
+      "kind": "backrest",
+      "bounds": [
+        -1.232494361204878,
+        0.5214424585367384,
+        1.2341035176275743,
+        0.7246614042719715
+      ],
+      "component": 8
+    },
+    {
+      "id": "backrest_9",
+      "kind": "backrest",
+      "bounds": [
+        -1.2272292957631925,
+        0.6876771182434163,
+        1.2273162136176823,
+        0.8003563838413803
+      ],
+      "component": 9
+    }
+  ]
+}

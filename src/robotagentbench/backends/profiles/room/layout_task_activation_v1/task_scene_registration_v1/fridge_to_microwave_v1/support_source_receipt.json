@@ -1,0 +1,25 @@
+{
+  "source_layers": {
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/scene_room_baseline.usda": "3d7e4924c41d0316b501d0643b45af4cf8e6783e928ec890fee2709904a5fb19",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/microwave_take/resources/plate_filled_recess_override_v12.usda": "f6d32565103e4a027351557c7568dd889731b63aafda1a69ec0b7e8d9085f25a",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/house_task73_objects_v1.usda": "d9ce91432ec205afe04e4b482c106a8da4dead6867dc3758665d110dc1b259ec",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/microwave_take/resources/stand_level_override_v1.usda": "d1fd1d6892b15c825bc991221b64d37b6d039ff89b7dc2335539541ac679857a",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/microwave_take/resources/plate_v10_override.usda": "635f313693a90e598e642c72d4bfe8a4d37fc313ff8ff6701fede759090391cf",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/microwave_take/resources/contact_surface_override_v1.usda": "aa8c5e42be6e3950b241f5dd4de8c58b09f460f5092c22d20e654d6d9a7e310b",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/microwave_take/resources/standard_beef_plate_override_v13.usda": "f80d02e9be152d12408651550978f6ae3da0aee5f73b4e7e5165828ce49b6079",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/shelf_support_collisions.usda": "c7f926c1eaf99a73cd85072089c65b058ff4a3c1ed1ec98aa93f25049e627c1f",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/house_scene_l1/approved_microwave.usda": "bf6c3940a7166820ab76ad07c16e6713d2d8eb447ba777ba2c700390d4e8c184",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/kitchen_dining_objects_v1.usda": "ee251b79684686a8dc1b79093163c4e95fe4a9e7038715938abd5bf1b847d5af",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/shelf_support_alignment.usda": "b2f41e2af9752a267d159381e95e35d6765624a381380af33360209189cf26b7",
+    "/home/lingjun/robot_agent_arena/api-protocol/assets/house_scene_l1/demo_sim/kitchen_task75_objects_v1.usda": "4b73cd18446b7fd8849f423a4643ff077d6090af3831af5549391319d4c0d7bb",
+    "/home/lingjun/robot_agent_arena/api-protocol/resources/shared_assets/beef_box_standard243_v1/scene_bindings.usda": "c1059823793cac54c5b5eb26905f6ef2f4e2e58114062d9ecba973ff7db0a7f1",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/microwave_take/resources/black_plate_325mm_filled_recess_v12.usda": "e2d9595695529549f69607dda85fccb4f9768052b981bc480a8f19f188d40746",
+    "/home/lingjun/robot_agent_arena/api-protocol/evaluation/tasks/microwave_take/resources/plate_filled_recess_contact_v12.usda": "e13ddbf9af93a2435a48eef1b03ddff938e2ed9cbb317a9bbd45a23de6255e5e"
+  },
+  "copied_subtrees": [
+    "/World/Assets/MicrowaveTakePlate",
+    "/World/Assets/MicrowavePlateStand"
+  ],
+  "pack_sha256": "979dea15dc43a095ab5f9b9e6e03eb94dc3993ecbf4d34056526e0ac3e95995b",
+  "physical_parameters_unchanged": true
+}

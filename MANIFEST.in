@@ -1,0 +1,23 @@
+include README.md LICENSE pyproject.toml
+recursive-include docs *.md
+recursive-include docs/images *.svg *.png
+include docs/media/overview.mp4
+recursive-include src/robotagentbench *.py
+include src/robotagentbench/tasks/catalogs.json
+include src/robotagentbench/simulation/specialized/identities.json
+recursive-include src/robotagentbench/backends/profiles *.py *.json *.js *.cjs *.mjs *.txt
+include src/robotagentbench/backends/manifest.json
+include src/robotagentbench/backends/native-files.json
+include src/robotagentbench/example_data/sensor.json
+include resources/assets-0.1.0.json
+include .dockerignore
+recursive-include docker Dockerfile *.txt
+recursive-include tests *.py
+global-exclude *.pyc *.pyo .DS_Store ._*
+prune .git
+prune build
+prune dist
+prune outputs
+prune runs
+prune private
+prune quarantine

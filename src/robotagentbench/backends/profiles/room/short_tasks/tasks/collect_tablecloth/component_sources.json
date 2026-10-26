@@ -1,0 +1,16 @@
+{
+  "upstream_commit": "ef47a69776d709047c35293c28cc0505d6c2b6f9",
+  "execution_mode": "gpu_cloth_preview",
+  "benchmark_scoring_available": false,
+  "files_sha256": {
+    "evaluation/tasks/tabletop_pick/soft_cloth/native.py": "b59db5cb896ccea05343c753a71b553a595e72db4319d93cc810352f212151b3",
+    "evaluation/tasks/tabletop_pick/soft_cloth/config.json": "f55af2e0ea94c064f449f8a787ede71869eb5b3d2cbaec3d54f7009ca6f3499d",
+    "evaluation/tasks/tabletop_pick/soft_cloth/live_surface.py": "9074d86d6942f1521ad5418d12534a6199946cbe064a39c54cd9adfacf6c039a",
+    "evaluation/tasks/tabletop_pick/soft_cloth/clearance_transition.py": "12ebcd34807425ee0a135ef6f0dc2a4ed012445600da01dc9e04766fc6385e8a",
+    "arena_api/scene_transitions.py": "a5e5459a61cf6633f1b83bf0f9b0321f50a253f4a1037209fd32b0dbd09e865b",
+    "arena_api/robot_drive_defaults.py": "1adb35f0f422d4dc6b0a9be43d786a46ef8d91dd9b3e38bc72e4161615733fe6",
+    "short_tasks/agent_probe_v1/robot_parameter_alignment.py": "224a176df609253478264de51e5506bfe8fce8733d16c75c50d96e08824b697c",
+    "short_tasks/agent_probe_v1/native_owner.py": "c4f8c6f812fde94c29234e7b859863cb5190aa19455d1cd9d19e16f4c11281f1"
+  },
+  "rule_version": "openend.short_task.collect_tablecloth.gpu_preview.v1"
+}

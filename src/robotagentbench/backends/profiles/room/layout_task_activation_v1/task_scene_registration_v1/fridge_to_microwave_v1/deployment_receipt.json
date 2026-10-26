@@ -1,0 +1,17 @@
+{
+  "status": "deployed",
+  "scope": "task_owned_unified_room_host_not_shared_HTTP_registry",
+  "files": {
+    "multi_task_room_v2.py": "b6d048ba099839b1bcdd02ceb7baf9675857b81d5d53dba545cfe2627e14aa3f",
+    "build_room_demo_v1.py": "713e41017c84f3ae75acc1f1fa2e30c9516a350283d1c7b61b1762fdc37ff7fd",
+    "build_other_layouts_v1.py": "c3b7baeb69204785978a4a5f8d52a80bf5a3dce6f56a3c9b1997b775149e38a3",
+    "initialize_room_fridge_boxes_v1.py": "39f57016740c3372a017f27c17e3eb20e7d154845f495f25c71160d453933784"
+  },
+  "manifests": {
+    "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/room_demo_v6/composition.json": "3815d8dcc17f286d8c033d91699f1493f108949fe1c5fddf51bfd0e70e9b7f6a",
+    "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/coffee_initialized_rooms_v1/layout03/composition.json": "c2e740e2711d83f5c931d10c0144e5c03028710a04d19edadd1ed02dc23d3d7e",
+    "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/coffee_initialized_rooms_v1/layout04/composition.json": "fb122baf82eb8328ef41c89e782e7348ffec6660b6d7f45e33110947f638fc23"
+  },
+  "request": "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/multi_task_episode_task9_v1.json",
+  "full_trajectory_verified": false
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "arena.openended.multi_task_policy.v1",
+  "scope": "unified_room_in_process_task_dispatch",
+  "registration": "task list selected once at episode start; independent persistent scores",
+  "selection": {
+    "candidates": "registered operation objects whose actual footprint intersects robot sector",
+    "priority": "front_then_distance",
+    "front_metric": "absolute heading error from robot forward direction to operation object target",
+    "tie_break": ["smaller distance", "stable instance ID"],
+    "selected_task_count_maximum": 1,
+    "current_selection_uses_exit_hysteresis": false
+  },
+  "timeout": {
+    "kind": "no_score_increase",
+    "seconds": 120.0,
+    "configurable": true,
+    "clock": "simulation_time",
+    "starts": "after unified scene initial acceptance",
+    "progress": "net sum of all registered task scores increases between valid score observations",
+    "reset_on_actual_increase": true,
+    "reset_on_switch_or_reentry": false,
+    "reset_on_duplicate_score": false,
+    "reset_on_deduction": false,
+    "pause_when_no_object_selected": false,
+    "fixed_total_time_limit": null,
+    "exact_deadline": "evaluate current-frame score before timeout",
+    "late_evidence": "cannot revive an expired room"
+  },
+  "control_hz": 20,
+  "requested_physics_hz": "selected task approved rate; 60 when none selected",
+  "score_reset_on_switch": false,
+  "original_task_score_rules_modified": false,
+  "verification": {
+    "policy_unit_tests": 30,
+    "policy_unit_tests_passed": 30,
+    "selected_score_tests_passed": 10,
+    "unchanged_source_composite_tests_passed": 52,
+    "native_selected_scoring_integration_complete": true,
+    "native_probe": "multitask_native.htAiB1",
+    "native_control_frames": 2400,
+    "native_layout_id": 4,
+    "independent_audit": "multitask_native.htAiB1/independent_audit.json",
+    "full_continuous_manipulation_verified": false,
+    "note": "Use multi_task_room_v2 with start-time task declarations. Native coffee/fryer initial acceptance, selected scoring, reentry, stopped 60/240 clock switching and 120s inactivity passed on layout04. No manipulation trajectory, VLA, video or full-room collision certification. Original per-stage budget terminal failures remain distinct from shared room timeout; they were not silently removed."
+  }
+}

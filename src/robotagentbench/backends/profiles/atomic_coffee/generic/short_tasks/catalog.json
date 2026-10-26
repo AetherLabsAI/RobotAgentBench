@@ -1,0 +1,527 @@
+{
+  "schema": "openend.short_tasks.catalog.draft.v1",
+  "definition_schema": "openend.short_task.definition.draft.v1",
+  "status": "registry_and_current_rules_synchronized_not_all_native_accepted",
+  "document_title": "Openend Short Tasks \u2014 \u4efb\u52a1\u5b9a\u4e49\u4e0e\u4ea4\u63a5",
+  "document_version": "v1",
+  "document_date": "2026-10-08",
+  "document_sha256": "bd324abf1a4824d080248e793554fda626cb445fa73d07b7e26d4b1d4519f158",
+  "document_digest_scope": "Original attached DOCX bytes",
+  "upstream_commit": "ef47a69776d709047c35293c28cc0505d6c2b6f9",
+  "task_count": 27,
+  "one_top_level_task_per_episode": true,
+  "old_api_registration": "internal_components_only",
+  "all_implementation_pending": false,
+  "native_validation": "per_task_receipts_required; rule_registration_is_not_native_completion",
+  "completion_validation_20261011": {
+    "report": "tasks/sofa_to_drawer/completion_validation_v1/completion_report.json",
+    "scope": "specific layout 3 examples; rule tests and native initialization plus hold actions, not full task execution",
+    "regression_tests_passed": 51,
+    "native_initialization_tasks": [
+      "sofa_to_drawer",
+      "sofa_to_coffee_table",
+      "retrieve_from_drawer",
+      "clear_table_trash",
+      "hang_cap",
+      "pack_object"
+    ],
+    "full_actions_validated": false,
+    "generic_initialization_consolidation_remaining": [
+      "bake_bread"
+    ],
+    "sofa_distractor_public_wiring_complete": false
+  },
+  "specialized_initialization_20261011": {
+    "report": "tasks/stock_wooden_tray/generic_completion_v1/specialized_report.json",
+    "generic_entry_connected": [
+      "stock_wooden_tray",
+      "fridge_to_heated_box"
+    ],
+    "regression_tests_passed": 49,
+    "synthetic_geometry_tests_passed": 1,
+    "native_validation": "see per-sample report; initialization and hold only",
+    "full_actions_validated": false,
+    "scoring_and_physical_parameters_changed": false
+  },
+  "tasks": [
+    {
+      "index": 1,
+      "name": "prepare_coffee",
+      "title_zh": "\u51c6\u5907\u5496\u5561",
+      "definition": "tasks/prepare_coffee/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "initial_acceptance_passed_attempt_unsuccessful_full_task_not_passed",
+      "request_example": "tasks/prepare_coffee/request_v2.json",
+      "adapter": "tasks/prepare_coffee/adapter.py",
+      "rule_version": "openend.short_task.prepare_coffee.v2",
+      "rule_adapter_available": true,
+      "maximum_for_example": 21,
+      "source_components": [
+        "coffee"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "bake_bread",
+      "title_zh": "\u70e4\u9762\u5305",
+      "definition": "tasks/bake_bread/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "historical_mechanical_initial_acceptance; current_full_native_task_not_verified",
+      "request_example": "tasks/bake_bread/request_v2.json",
+      "adapter": "tasks/bake_bread/adapter.py",
+      "rule_version": "openend.short_task.bake_bread.manipulation.v2",
+      "rule_adapter_available": true,
+      "maximum_for_example": 12,
+      "source_components": [
+        "fryer"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "stock_wooden_tray",
+      "title_zh": "\u96f6\u98df\u996e\u6599\u88c5\u76d8",
+      "definition": "tasks/stock_wooden_tray/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "not_run",
+      "request_example": "examples/stock_wooden_tray.json",
+      "adapter": "tasks/stock_wooden_tray/adapter.py",
+      "rule_version": "openend.short_task.stock_wooden_tray.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 21,
+      "source_components": [
+        "snack_drink_to_tray",
+        "snack_drink_to_tray",
+        "snack_drink_to_tray"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "retrieve_from_drawer",
+      "title_zh": "\u4ece\u62bd\u5c49\u53d6\u7269\u5e76\u653e\u7f6e",
+      "definition": "tasks/retrieve_from_drawer/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "not_run",
+      "request_example": "examples/retrieve_from_drawer.json",
+      "adapter": "tasks/retrieve_from_drawer/adapter.py",
+      "rule_version": "openend.short_task.retrieve_from_drawer.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 7,
+      "source_components": [
+        "wallet_transfer"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "hang_cap",
+      "title_zh": "\u62ff\u5e3d\u5b50\u6302\u8863\u67b6",
+      "definition": "tasks/hang_cap/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "not_run",
+      "request_example": "examples/hang_cap.json",
+      "adapter": "tasks/hang_cap/adapter.py",
+      "rule_version": "openend.short_task.hang_cap.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 9,
+      "source_components": [
+        "cap_transfer"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "clear_table_trash",
+      "title_zh": "\u6536\u62fe\u684c\u9762\u5783\u573e",
+      "definition": "tasks/clear_table_trash/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "not_run",
+      "request_example": "tasks/clear_table_trash/request.json",
+      "adapter": "tasks/clear_table_trash/adapter.py",
+      "rule_version": "openend.short_task.clear_table_trash.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": null,
+      "source_components": [
+        "trash_transfer"
+      ],
+      "maximum_policy": "8 per scene-selected instance, seeded 2\u20134 instances"
+    },
+    {
+      "index": 7,
+      "name": "fridge_to_heated_box",
+      "title_zh": "\u4ece\u51b0\u7bb1\u53d6\u7269\u52a0\u70ed",
+      "definition": "tasks/fridge_to_heated_box/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "see_task_receipts; no_new_native_validation_claim",
+      "request_example": "tasks/fridge_to_heated_box/request.json",
+      "adapter": "tasks/fridge_to_heated_box/adapter.py",
+      "rule_version": "openend.short_task.fridge_to_heated_box.v3",
+      "rule_adapter_available": true,
+      "maximum_for_example": 18,
+      "source_components": [
+        "fridge_to_microwave"
+      ],
+      "scene_runtime_available": false,
+      "required_artifacts": [
+        {
+          "path": "/root/gao/robot_agent_arena_friend_short_tests/openend/tasks/meal_tray/rotary_pack_v1.usda",
+          "exists": false,
+          "sha256": "b82f8ba5fbd71c0ef424909be48bbe34e232483e993bd4b6fe27277fac5f3a4f",
+          "status": "missing",
+          "role": "measured_microwave_rotary_mechanism"
+        }
+      ],
+      "completion_scope": "fridge_pickup_and_microwave_closed_no_rotary_light"
+    },
+    {
+      "index": 8,
+      "name": "microwave_to_meal_tray",
+      "title_zh": "\u5fae\u6ce2\u7089\u53d6\u51fa\u5e76\u6446\u5165\u9910\u76d8",
+      "definition": "tasks/microwave_to_meal_tray/definition.json",
+      "adapter_status": "registered_typed_unavailable",
+      "native_validation": "not_run",
+      "request_example": "examples/microwave_to_meal_tray.json",
+      "adapter": "tasks/microwave_to_meal_tray/adapter.py",
+      "rule_version": "openend.short_task.microwave_to_meal_tray.pending.v1",
+      "rule_adapter_available": false,
+      "maximum_for_example": null,
+      "source_components": [],
+      "unavailable": {
+        "kind": "load",
+        "reason": "independent_heated_microwave_initial_state_not_supported",
+        "message": "\u5f53\u524d\u7edf\u4e00\u573a\u666f\u53ca\u5fae\u6ce2\u7089\u7aef\u53e3\u8981\u6c42\u51b0\u7bb1\u771f\u5b9e\u4ea4\u63a5\uff1b\u72ec\u7acb\u5df2\u52a0\u70ed\u3001\u706f\u706d\u3001\u95e8\u5173\u95ed\u521d\u6001\u548c\u53ef\u9009\u5c0f\u76d8\u7684\u51c6\u5165\u5951\u7ea6\u5c1a\u672a\u63a5\u5165\u3002\u4e0d\u80fd\u4f2a\u9020\u5df2\u5b8c\u6210\u51b0\u7bb1\u4efb\u52a1\u6216\u706f\u5468\u671f\u3002"
+      }
+    },
+    {
+      "index": 9,
+      "name": "spread_tablecloth",
+      "title_zh": "\u94fa\u684c\u5e03",
+      "definition": "tasks/spread_tablecloth/definition.json",
+      "adapter_status": "registered_typed_unavailable",
+      "native_validation": "not_run",
+      "request_example": "examples/spread_tablecloth.json",
+      "adapter": "tasks/spread_tablecloth/adapter.py",
+      "rule_version": "openend.short_task.spread_tablecloth.pending.v1",
+      "rule_adapter_available": false,
+      "maximum_for_example": null,
+      "source_components": [],
+      "unavailable": {
+        "kind": "rules",
+        "reason": "live_cloth_spread_rules_not_bound",
+        "message": "\u4ed3\u5e93\u6709\u52a8\u6001\u684c\u5e03\u5019\u9009\uff0c\u4f46\u670b\u53cb\u7684\u7edf\u4e00\u623f\u95f4\u5c1a\u672a\u7ed1\u5b9a\u5176\u6a21\u62df\u3001\u6293\u5e03\u53ca\u94fa\u5f00/\u8986\u76d6\u89c4\u5219\u7248\u672c\u3002\u9759\u6001 tablecloth_dirty \u8d34\u56fe\u4e0d\u80fd\u4f5c\u4e3a\u94fa\u5e03\u5b8c\u6210\u8bc1\u636e\u3002"
+      },
+      "runtime_variants": [
+        {
+          "rule_version": "openend.short_task.spread_tablecloth.gpu_preview.v1",
+          "execution_mode": "gpu_cloth_preview",
+          "scoring_available": false,
+          "physics_policy": "physx_gpu_fixed_240hz",
+          "request_example": "examples/spread_tablecloth.gpu_preview.json",
+          "native_validation": "isolated_gpu_gravity_and_source_support_passed_20261009",
+          "full_native_action_validated": false,
+          "shared_room_validated": false,
+          "validation_doc": "docs/GPU_TABLECLOTH_ZH.md"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "name": "collect_tablecloth",
+      "title_zh": "\u6536\u684c\u5e03",
+      "definition": "tasks/collect_tablecloth/definition.json",
+      "adapter_status": "registered_typed_unavailable",
+      "native_validation": "not_run",
+      "request_example": "examples/collect_tablecloth.json",
+      "adapter": "tasks/collect_tablecloth/adapter.py",
+      "rule_version": "openend.short_task.collect_tablecloth.pending.v1",
+      "rule_adapter_available": false,
+      "maximum_for_example": null,
+      "source_components": [],
+      "unavailable": {
+        "kind": "rules",
+        "reason": "live_cloth_collection_rules_not_bound",
+        "message": "\u73b0\u6709\u8f6f\u5e03\u79fb\u9664/\u4ea4\u4e92\u6765\u6e90\u672a\u63a5\u6210\u7edf\u4e00\u623f\u95f4\u6536\u5e03\u4efb\u52a1\uff1b\u6574\u5f20\u5e03\u5f53\u524d\u5165\u7bee\u3001\u8131\u79bb\u684c\u9762\u3001\u653e\u624b\u53ca\u6298\u53e0\u5bb9\u5dee\u7684\u7248\u672c\u672a\u51bb\u7ed3\u3002\u684c\u5e03\u7bee\u4e0d\u80fd\u6309\u540d\u5b57\u66ff\u6362\u6210\u7269\u54c1\u7bee\u6216\u5783\u573e\u6876\u3002"
+      },
+      "runtime_variants": [
+        {
+          "rule_version": "openend.short_task.collect_tablecloth.gpu_preview.v1",
+          "execution_mode": "gpu_cloth_preview",
+          "scoring_available": false,
+          "physics_policy": "physx_gpu_fixed_240hz",
+          "request_example": "examples/collect_tablecloth.gpu_preview.json",
+          "native_validation": "isolated_gpu_gravity_and_source_support_passed_20261009",
+          "interaction_diagnostic_validation": "isolated_velocity_probe_v2_pass_observed_repeatability_unvalidated_20261009",
+          "interaction_diagnostic_repeatability_validated": false,
+          "material_calibrated": false,
+          "robot_grasp_validated": false,
+          "full_native_action_validated": false,
+          "shared_room_validated": false,
+          "validation_doc": "docs/GPU_TABLECLOTH_ZH.md"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "name": "clear_tablecloth",
+      "title_zh": "\u6e05\u7406\u684c\u5e03\u4e0a\u7684\u7269\u4f53",
+      "definition": "tasks/clear_tablecloth/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "not_run",
+      "request_example": "examples/clear_tablecloth.json",
+      "adapter": "tasks/clear_tablecloth/adapter.py",
+      "rule_version": "openend.short_task.clear_tablecloth.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 9,
+      "source_components": [
+        "cloth_clear"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "pack_object",
+      "title_zh": "\u6293\u7269\u4f53\u6536\u5305\u91cc",
+      "definition": "tasks/pack_object/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "not_run",
+      "request_example": "examples/pack_object.json",
+      "adapter": "tasks/pack_object/adapter.py",
+      "rule_version": "openend.short_task.pack_object.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 7,
+      "source_components": [
+        "wallet_transfer"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "prepare_cutlery",
+      "title_zh": "\u51c6\u5907\u9910\u5177",
+      "definition": "tasks/prepare_cutlery/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "not_run",
+      "request_example": "tasks/prepare_cutlery/request.json",
+      "adapter": "tasks/prepare_cutlery/adapter.py",
+      "rule_version": "openend.short_task.prepare_cutlery.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 15,
+      "source_components": [
+        "cutlery_to_meal_tray"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "carry_meal_tray",
+      "title_zh": "\u79fb\u52a8\u98df\u76d8\u5230\u8336\u51e0",
+      "definition": "tasks/carry_meal_tray/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "not_run",
+      "request_example": "examples/carry_meal_tray.json",
+      "adapter": "tasks/carry_meal_tray/adapter.py",
+      "rule_version": "openend.short_task.carry_meal_tray.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 5,
+      "source_components": [
+        "meal_tray_transfer"
+      ]
+    },
+    {
+      "index": 15,
+      "name": "sofa_to_coffee_table",
+      "title_zh": "\u4ece\u6c99\u53d1\u6293\u8d77\u653e\u8336\u51e0",
+      "definition": "tasks/sofa_to_coffee_table/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "not_run",
+      "request_example": "examples/sofa_to_coffee_table.json",
+      "adapter": "tasks/sofa_to_coffee_table/adapter.py",
+      "rule_version": "openend.short_task.sofa_to_coffee_table.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 6,
+      "source_components": [
+        "legacy_per_asset_pickup",
+        "approved_table_current_final_3"
+      ],
+      "initialization": "approved_shared_station_and_source_domain; explicitly_generic_folded_posture"
+    },
+    {
+      "index": 16,
+      "name": "table_to_storage_basket",
+      "title_zh": "\u4ece\u8336\u51e0\u53d6\u7269\u5230\u6536\u7eb3\u7bee",
+      "definition": "tasks/table_to_storage_basket/definition.json",
+      "adapter_status": "implemented_rule_adapter",
+      "native_validation": "not_run",
+      "request_example": "examples/table_to_storage_basket.json",
+      "adapter": "tasks/table_to_storage_basket/adapter.py",
+      "rule_version": "openend.short_task.table_to_storage_basket.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 7,
+      "source_components": [
+        "wallet_transfer"
+      ]
+    },
+    {
+      "index": null,
+      "name": "sofa_to_drawer",
+      "title_zh": "\u4ece\u6c99\u53d1\u53d6\u7269\u653e\u56de\u62bd\u5c49",
+      "definition": "tasks/sofa_to_drawer/definition.json",
+      "adapter": "tasks/sofa_to_drawer/adapter.py",
+      "request_example": "tasks/sofa_to_drawer/request.json",
+      "rule_version": "openend.short_task.sofa_to_drawer.v1",
+      "adapter_status": "implemented_rule_adapter",
+      "rule_adapter_available": true,
+      "maximum_for_example": 7,
+      "source_components": [
+        "7-2",
+        "13-6",
+        "16-1",
+        "16-2"
+      ],
+      "native_validation": "not_run",
+      "initialization": "continuous_source_ranges_and_existing_drawer_slide"
+    },
+    {
+      "index": null,
+      "name": "stock_wooden_tray_interference",
+      "title_zh": "\u96f6\u98df\u67b6\u5e72\u6270\u53d8\u4f53",
+      "definition": "tasks/stock_wooden_tray_interference/definition.json",
+      "adapter": "tasks/stock_wooden_tray_interference/adapter.py",
+      "rule_version": "openend.short_task.stock_wooden_tray_interference.v1",
+      "adapter_status": "registered_task_owned_actor",
+      "rule_adapter_available": true,
+      "maximum_for_example": 7,
+      "native_validation": "see_task_owned_receipts_not_full_public_rollout"
+    },
+    {
+      "index": null,
+      "name": "select_trash",
+      "title_zh": "\u5783\u573e\u7c7b\u522b\u9009\u62e9",
+      "adapter": "../short_task_ContextReasoning/tasks/select_trash/adapter.py",
+      "rule_version": "context_reasoning.select_trash.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 1,
+      "adapter_status": "registered_contact_selection",
+      "native_validation": "see_per_task_evidence_not_claiming_unified_native_rollout"
+    },
+    {
+      "index": null,
+      "name": "select_sofa",
+      "title_zh": "\u6c99\u53d1\u4e2a\u4eba\u7269\u54c1\u9009\u62e9",
+      "adapter": "../short_task_ContextReasoning/tasks/select_sofa/adapter.py",
+      "rule_version": "context_reasoning.select_sofa.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 1,
+      "adapter_status": "registered_contact_selection",
+      "native_validation": "see_per_task_evidence_not_claiming_unified_native_rollout"
+    },
+    {
+      "index": null,
+      "name": "select_drink",
+      "title_zh": "\u8d27\u67b6\u996e\u6599\u9009\u62e9",
+      "adapter": "../short_task_ContextReasoning/tasks/select_shelf/adapter.py",
+      "rule_version": "context_reasoning.select_shelf.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 1,
+      "adapter_status": "registered_contact_selection",
+      "native_validation": "see_per_task_evidence_not_claiming_unified_native_rollout"
+    },
+    {
+      "index": null,
+      "name": "select_snack",
+      "title_zh": "\u8d27\u67b6\u96f6\u98df\u9009\u62e9",
+      "adapter": "../short_task_ContextReasoning/tasks/select_shelf/adapter.py",
+      "rule_version": "context_reasoning.select_shelf.v1",
+      "rule_adapter_available": true,
+      "maximum_for_example": 1,
+      "adapter_status": "registered_contact_selection",
+      "native_validation": "see_per_task_evidence_not_claiming_unified_native_rollout"
+    },
+    {
+      "index": null,
+      "name": "stock_wooden_tray_lighting",
+      "title_zh": "\u8d27\u67b6\u53d6\u7269\u4eae\u6697\u6270\u52a8",
+      "adapter": "tasks/stock_wooden_tray_lighting/adapter.py",
+      "rule_adapter_available": true,
+      "adapter_status": "registered_task_owned_lighting",
+      "native_validation": "see_task_owned_receipts_not_full_public_rollout"
+    },
+    {
+      "index": null,
+      "name": "coffee_bag_interference",
+      "rule_version": "openend.short_task.coffee_bag_interference.v1",
+      "source_api": "1-2",
+      "variant": "bag_only",
+      "adapter": "/mnt/agent-bench-data/lingjun/coffee_machine_push_interference/public_integration_v1/adapter.py",
+      "rule_adapter_available": true,
+      "maximum_for_example": 6,
+      "adapter_status": "registered_atomic_source_owner",
+      "layout_scope": "atomic_source",
+      "native_validation": "public_owner_pending_native_smoke",
+      "full_actions_validated": false
+    },
+    {
+      "index": null,
+      "name": "coffee_machine_push_interference",
+      "rule_version": "openend.short_task.coffee_machine_push_interference.v1",
+      "source_api": "1-2",
+      "variant": "machine_only",
+      "adapter": "/mnt/agent-bench-data/lingjun/coffee_machine_push_interference/public_integration_v1/adapter.py",
+      "rule_adapter_available": true,
+      "maximum_for_example": 6,
+      "adapter_status": "registered_atomic_source_owner",
+      "layout_scope": "atomic_source",
+      "native_validation": "public_owner_pending_native_smoke",
+      "full_actions_validated": false
+    },
+    {
+      "index": null,
+      "name": "coffee_bag_then_machine_interference",
+      "rule_version": "openend.short_task.coffee_bag_then_machine_interference.v1",
+      "source_api": "1-2",
+      "variant": "bag_then_machine",
+      "adapter": "/mnt/agent-bench-data/lingjun/coffee_machine_push_interference/public_integration_v1/adapter.py",
+      "rule_adapter_available": true,
+      "maximum_for_example": 6,
+      "adapter_status": "registered_atomic_source_owner",
+      "layout_scope": "atomic_source",
+      "native_validation": "public_owner_pending_native_smoke",
+      "full_actions_validated": false
+    },
+    {
+      "index": null,
+      "name": "coffee_button_lighting_interference",
+      "rule_version": "openend.short_task.coffee_button_lighting_interference.v1",
+      "source_api": "1-3",
+      "variant": "button_lighting",
+      "adapter": "/mnt/agent-bench-data/lingjun/coffee_machine_push_interference/public_integration_v1/adapter.py",
+      "rule_adapter_available": true,
+      "maximum_for_example": 5,
+      "adapter_status": "registered_atomic_source_owner",
+      "layout_scope": "atomic_source",
+      "native_validation": "public_owner_pending_native_smoke",
+      "full_actions_validated": false
+    }
+  ],
+  "extracted_text_sha256": "5115db9959eb9515b29b95f5327e527e1a52440d625dd08b498a595d632dc127",
+  "source_blocks_scope": "Zero-based paragraph/table block indices in extracted text",
+  "pending_adapter_count": 0,
+  "implemented_rule_adapter_count": 14,
+  "unavailable_complete_task_count": 4,
+  "known_asset_blocked_rule_adapter_count": 1,
+  "public_entrypoints": {
+    "python": "short_tasks.registry.resolve/bind/normalize; short_tasks.runtime.build_session",
+    "cli": "python -m short_tasks list|resolve|plan|bind|compose",
+    "http": "not_installed_in_production_host"
+  },
+  "scene_composition": "friend_cpu_usd_provider; explicit_gpu_cloth_scene_owner",
+  "unscored_gpu_cloth_preview_count": 2,
+  "context_reasoning_task_count": 4,
+  "robustness_task_count": 6,
+  "integration_20261014": {
+    "added": [
+      "coffee_bag_interference",
+      "coffee_machine_push_interference",
+      "coffee_bag_then_machine_interference",
+      "coffee_button_lighting_interference"
+    ],
+    "public_protocol": "short_tasks.gpt.robot22.v1",
+    "scope": "atomic_source_scene_not_50_layouts",
+    "physical_parameters_changed": false,
+    "historical_summary_counts_not_recomputed": true
+  }
+}

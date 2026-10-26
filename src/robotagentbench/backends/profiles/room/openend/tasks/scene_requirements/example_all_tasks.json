@@ -1,0 +1,19 @@
+{
+  "schema":"openend.scene_requirements.request.v2",
+  "seed":42,
+  "tasks":[
+    {"id":"coffee","type":"coffee"},
+    {"id":"fryer","type":"fryer"},
+    {"id":"remote_transfer","type":"remote_transfer"},
+    {"id":"glasses_transfer","type":"glasses_transfer"},
+    {"id":"wallet_transfer","type":"wallet_transfer"},
+    {"id":"powerbank_transfer","type":"powerbank_transfer"},
+    {"id":"water_bottle_transfer","type":"water_bottle_transfer"},
+    {"id":"book_transfer","type":"book_transfer","count":1},
+    {"id":"cap_transfer","type":"cap_transfer"},
+    {"id":"notebook_transfer","type":"notebook_transfer"},
+    {"id":"trash_transfer","type":"trash_transfer"},
+    {"id":"cloth_clear","type":"cloth_clear"}
+  ],
+  "extras":[]
+}

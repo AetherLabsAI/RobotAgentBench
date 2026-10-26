@@ -1,0 +1,29 @@
+[
+  {
+    "candidate": 0,
+    "uv": [
+      0.3230000138282776,
+      0.028333334252238274
+    ],
+    "closed_clearance_m": 0.009770597687073942,
+    "input": "/media/aether/OS/agent_bench_runs/tablecloth_gripper_actuator_20260922/native_teleop/lay_20260924/closed_candidate_clearance_c0.json"
+  },
+  {
+    "candidate": 1,
+    "uv": [
+      0.31349998712539673,
+      0.028333334252238274
+    ],
+    "closed_clearance_m": 0.007083156996646609,
+    "input": "/media/aether/OS/agent_bench_runs/tablecloth_gripper_actuator_20260922/native_teleop/lay_20260924/closed_candidate_clearance_c1.json"
+  },
+  {
+    "candidate": 2,
+    "uv": [
+      0.30399999022483826,
+      0.028333334252238274
+    ],
+    "closed_clearance_m": 0.0034980462411162696,
+    "input": "/media/aether/OS/agent_bench_runs/tablecloth_gripper_actuator_20260922/native_teleop/lay_20260924/closed_candidate_clearance_c2.json"
+  }
+]

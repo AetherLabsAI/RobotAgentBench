@@ -1,0 +1,36 @@
+{
+  "task_kind": "fridge_to_microwave",
+  "instruction": "从冰箱取出指定盒子，关好冰箱，将同一个盒子放入微波炉并关门。",
+  "registration_scope": "task-owned MultiTaskRoom in-process factory, not public standalone HTTP registration",
+  "request_file": "multi_task_episode_task9_v1.json",
+  "parameters": {"payload_variant": ["beef_box", "leftover_box"]},
+  "source_api_ids": {"beef_box": ["26-1", "27-1"], "leftover_box": ["26-2", "27-2"]},
+  "initialization_owner": "unified room initializer; task only binds an existing box",
+  "phase_handoff": "Only after refrigerator success. Preserve target prim, physical state and score; no reset, respawn or hand transfer.",
+  "refrigerator": {
+    "maximum_score": 8,
+    "stages": {"open": 3, "grasp": 1, "take": 3, "close": 1},
+    "physics_hz": 60,
+    "final_hold_seconds": 5,
+    "helper": "existing approved room refrigerator helper, unchanged"
+  },
+  "microwave": {
+    "maximum_score": 10,
+    "stages": {"open": 3, "place_and_release": 6, "close": 1},
+    "physics_hz": 240,
+    "final_hold_seconds": 2,
+    "placement": "Original full-geometry containment, actual plate contact load, native COM over plate, actual release"
+  },
+  "deductions": "Original refrigerator and microwave scorers retained without threshold changes",
+  "control_hz": 20,
+  "activation": "Existing room sector intersects source refrigerator; after take success targets microwave. Existing stopped-switch and fridge 60-Hz reservation remain.",
+  "initial_pose_gates": false,
+  "initial_right_hand_hold_gate": false,
+  "outside_workspace_failure_gate": false,
+  "evidence_validation": "Actual identity, complete native timestamps/substeps and valid contact reports remain mandatory",
+  "support_assets": "Approved plate and stand in task-owned plate_stand_source_v2.usda; original relative initialization, no physical tuning",
+  "material_binding_repair": "Restore existing room GripMat references for salad/food meshes; restore original stand appearance binding; do not alter values",
+  "completed_layers": ["parameterized composite scorer", "unified-room factory", "native evidence adapter", "scene initialization support", "short native binding tests"],
+  "not_verified": ["continuous take-carry-put action trajectory", "four-task simultaneous full-room native rollout", "native navigation between refrigerator and microwave", "VLA success rate"],
+  "native_test_limitations": "Sector position/velocity inputs are labeled test fixtures. Native physics state is real and read-only. No robot navigation or manipulation success is claimed. Existing dynamic mesh fallback and standalone Kit time-storage warnings retained in logs."
+}

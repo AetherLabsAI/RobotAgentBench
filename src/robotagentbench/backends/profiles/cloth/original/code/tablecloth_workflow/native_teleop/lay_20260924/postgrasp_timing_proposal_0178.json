@@ -1,0 +1,471 @@
+{
+  "source": "/media/aether/OS/agent_bench_runs/tablecloth_gripper_actuator_20260922/native_teleop/lay_20260924/feasible_mouth_fast_removal_0178.action.npz",
+  "proposal": "/media/aether/OS/agent_bench_runs/tablecloth_gripper_actuator_20260922/native_teleop/lay_20260924/postgrasp_timing_proposal_0178.action.npz",
+  "old_template_seconds": 265.25,
+  "proposed_template_seconds": 235.1,
+  "saved_seconds": 30.15,
+  "maximum_retimed_segment_arm_rate_rad_s": 0.6868331595724455,
+  "first985_frames_identical": true,
+  "initial_brush_grasp_close_unchanged": true,
+  "physics_unchanged": true,
+  "unexecuted": true,
+  "physical_success_not_assumed": true,
+  "rate_preserving_insertions": 7,
+  "phases": [
+    {
+      "phase": "initial_settle",
+      "original_frames": 60,
+      "proposed_frames": 60
+    },
+    {
+      "phase": "chest_to_reference_approach",
+      "original_frames": 45,
+      "proposed_frames": 45
+    },
+    {
+      "phase": "L_friction_touch",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "L_friction_pull",
+      "original_frames": 60,
+      "proposed_frames": 60
+    },
+    {
+      "phase": "L_friction_clear",
+      "original_frames": 20,
+      "proposed_frames": 20
+    },
+    {
+      "phase": "L_brush2_raised_return",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "L_brush2_L_friction_touch",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "L_brush2_L_friction_pull",
+      "original_frames": 60,
+      "proposed_frames": 60
+    },
+    {
+      "phase": "L_brush2_L_friction_clear",
+      "original_frames": 20,
+      "proposed_frames": 20
+    },
+    {
+      "phase": "L_brush3_raised_return",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "L_brush3_L_friction_touch",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "L_brush3_L_friction_pull",
+      "original_frames": 60,
+      "proposed_frames": 60
+    },
+    {
+      "phase": "L_brush3_L_friction_clear",
+      "original_frames": 20,
+      "proposed_frames": 20
+    },
+    {
+      "phase": "L_match_reference_entry_start",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "L_below_edge_joint_pregrasp",
+      "original_frames": 180,
+      "proposed_frames": 180
+    },
+    {
+      "phase": "L_drooping_corner_enter_32mm",
+      "original_frames": 80,
+      "proposed_frames": 80
+    },
+    {
+      "phase": "L_drooping_corner_depth_preserving_close",
+      "original_frames": 60,
+      "proposed_frames": 60
+    },
+    {
+      "phase": "L_drooping_corner_physical_micro_lift",
+      "original_frames": 60,
+      "proposed_frames": 60
+    },
+    {
+      "phase": "L_drooping_corner_hold",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "L_vertical_clear_before_fold",
+      "original_frames": 160,
+      "proposed_frames": 80
+    },
+    {
+      "phase": "L_elevated_grasp_check",
+      "original_frames": 40,
+      "proposed_frames": 10
+    },
+    {
+      "phase": "L_fold_right_over_table",
+      "original_frames": 360,
+      "proposed_frames": 247
+    },
+    {
+      "phase": "L_lower_folded_corner",
+      "original_frames": 140,
+      "proposed_frames": 80
+    },
+    {
+      "phase": "L_fold_on_table_hold",
+      "original_frames": 40,
+      "proposed_frames": 10
+    },
+    {
+      "phase": "L_release_after_table_fold",
+      "original_frames": 80,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "fold_relaxation_after_left_release",
+      "original_frames": 40,
+      "proposed_frames": 10
+    },
+    {
+      "phase": "L_withdraw_open_hand",
+      "original_frames": 180,
+      "proposed_frames": 60
+    },
+    {
+      "phase": "L_retract_after_release",
+      "original_frames": 180,
+      "proposed_frames": 90
+    },
+    {
+      "phase": "R_bundle_brush_safe_approach",
+      "original_frames": 160,
+      "proposed_frames": 160
+    },
+    {
+      "phase": "R_bundle_brush1_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush1_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush1_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush1_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush2_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush2_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush2_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush2_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush3_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush3_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush3_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush3_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush4_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush4_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush4_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush4_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush5_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush5_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush5_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush5_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush6_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush6_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush6_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush6_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush7_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush7_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush7_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush7_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush8_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush8_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush8_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush8_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush9_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush9_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush9_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush9_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush10_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush10_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush10_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush10_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush11_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush11_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush11_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush11_raised_return",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush12_touch",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_bundle_brush12_pull",
+      "original_frames": 40,
+      "proposed_frames": 40
+    },
+    {
+      "phase": "R_bundle_brush12_clear",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_edge_joint_pregrasp",
+      "original_frames": 160,
+      "proposed_frames": 160
+    },
+    {
+      "phase": "R_lower_outside_to_table_height",
+      "original_frames": 100,
+      "proposed_frames": 100
+    },
+    {
+      "phase": "R_horizontal_sweep_into_layers",
+      "original_frames": 100,
+      "proposed_frames": 100
+    },
+    {
+      "phase": "R_edge_physical_close",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_edge_physical_hold",
+      "original_frames": 20,
+      "proposed_frames": 20
+    },
+    {
+      "phase": "R_vertical_clear_table",
+      "original_frames": 100,
+      "proposed_frames": 100
+    },
+    {
+      "phase": "R_lift_folded_cloth",
+      "original_frames": 100,
+      "proposed_frames": 100
+    },
+    {
+      "phase": "R_higher_clearance_after_outward_lift",
+      "original_frames": 140,
+      "proposed_frames": 140
+    },
+    {
+      "phase": "R_hold_lifted_cloth",
+      "original_frames": 20,
+      "proposed_frames": 20
+    },
+    {
+      "phase": "R_transfer_over_original_basket",
+      "original_frames": 160,
+      "proposed_frames": 160
+    },
+    {
+      "phase": "R_lower_into_basket",
+      "original_frames": 120,
+      "proposed_frames": 120
+    },
+    {
+      "phase": "R_release_in_original_basket",
+      "original_frames": 30,
+      "proposed_frames": 30
+    },
+    {
+      "phase": "R_withdraw_open_hand",
+      "original_frames": 100,
+      "proposed_frames": 100
+    },
+    {
+      "phase": "R_raise_after_release",
+      "original_frames": 80,
+      "proposed_frames": 80
+    },
+    {
+      "phase": "basket_settle_after_release",
+      "original_frames": 40,
+      "proposed_frames": 40
+    }
+  ]
+}

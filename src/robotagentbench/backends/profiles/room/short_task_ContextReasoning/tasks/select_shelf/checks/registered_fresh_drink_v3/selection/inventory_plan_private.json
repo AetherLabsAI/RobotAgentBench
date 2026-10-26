@@ -1,0 +1,324 @@
+{
+  "question_id": "R001",
+  "seed": 2,
+  "inventory": {
+    "policy": "context_shelf_scene_unique.v5",
+    "status": "inventory_plan_ready",
+    "seed": 2,
+    "layers": [
+      {
+        "support_id": "tier3",
+        "count": 7,
+        "drawn_count": 7,
+        "count_range": [
+          6,
+          8
+        ],
+        "feasible_count_range": [
+          6,
+          7
+        ],
+        "count_raised_for_required_categories": false,
+        "required_categories": [
+          "gatorade_m",
+          "grapefruit_can",
+          "red_bull_pink"
+        ],
+        "required_counts": {
+          "gatorade_m": 1,
+          "grapefruit_can": 1,
+          "red_bull_pink": 1
+        },
+        "minimum_footprint_gap_m": 0.055,
+        "objects": [
+          {
+            "instance_id": "shelf/tier3/sprite_c1/01",
+            "product_family": "sprite_c1",
+            "label": "雪碧",
+            "support_id": "tier3",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "sprite_c1/asset.usda",
+            "required_instance": false
+          },
+          {
+            "instance_id": "shelf/tier3/cayman_jacked/01",
+            "product_family": "cayman_jacked",
+            "label": "Cayman Jacked",
+            "support_id": "tier3",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "cayman_jacked/asset.usda",
+            "required_instance": false
+          },
+          {
+            "instance_id": "shelf/tier3/good2grow/01",
+            "product_family": "good2grow",
+            "label": "Good2Grow",
+            "support_id": "tier3",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "good2grow/asset.usda",
+            "required_instance": false
+          },
+          {
+            "instance_id": "shelf/tier3/gatorade_m/01",
+            "product_family": "gatorade_m",
+            "label": "橙色佳得乐",
+            "support_id": "tier3",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "gatorade_m/asset.usda",
+            "required_instance": true
+          },
+          {
+            "instance_id": "shelf/tier3/gatorade_t/01",
+            "product_family": "gatorade_t",
+            "label": "蓝色佳得乐",
+            "support_id": "tier3",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "gatorade_t/asset.usda",
+            "required_instance": false
+          },
+          {
+            "instance_id": "shelf/tier3/red_bull_pink/01",
+            "product_family": "red_bull_pink",
+            "label": "红牛莓果味能量饮料",
+            "support_id": "tier3",
+            "asset_scope": "task_expansion",
+            "asset_relative_path": "red_bull_pink/asset.usda",
+            "required_instance": true
+          },
+          {
+            "instance_id": "shelf/tier3/grapefruit_can/01",
+            "product_family": "grapefruit_can",
+            "label": "西柚气泡水",
+            "support_id": "tier3",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "grapefruit_can/asset.usda",
+            "required_instance": true
+          }
+        ]
+      },
+      {
+        "support_id": "tier2",
+        "count": 7,
+        "drawn_count": 7,
+        "count_range": [
+          6,
+          8
+        ],
+        "feasible_count_range": [
+          6,
+          8
+        ],
+        "count_raised_for_required_categories": false,
+        "required_categories": [],
+        "required_counts": {},
+        "minimum_footprint_gap_m": 0.055,
+        "objects": [
+          {
+            "instance_id": "shelf/tier2/zbar_t/01",
+            "product_family": "zbar_t",
+            "label": "Zbar 能量棒",
+            "support_id": "tier2",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "zbar_t/asset.usda",
+            "required_instance": false
+          },
+          {
+            "instance_id": "shelf/tier2/oreo_gf/01",
+            "product_family": "oreo_gf",
+            "label": "奥利奥",
+            "support_id": "tier2",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "oreo_gf/asset.usda",
+            "required_instance": false
+          },
+          {
+            "instance_id": "shelf/tier2/lindt/01",
+            "product_family": "lindt",
+            "label": "Lindt 牛奶巧克力球",
+            "support_id": "tier2",
+            "asset_scope": "task_expansion",
+            "asset_relative_path": "lindt/asset.usda",
+            "required_instance": false
+          },
+          {
+            "instance_id": "shelf/tier2/pringles_green/01",
+            "product_family": "pringles_green",
+            "label": "品客酸奶油洋葱味薯片",
+            "support_id": "tier2",
+            "asset_scope": "task_expansion",
+            "asset_relative_path": "pringles_green/asset.usda",
+            "required_instance": false
+          },
+          {
+            "instance_id": "shelf/tier2/honeymaid/01",
+            "product_family": "honeymaid",
+            "label": "Honey Maid 饼干",
+            "support_id": "tier2",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "honeymaid/asset.usda",
+            "required_instance": false
+          },
+          {
+            "instance_id": "shelf/tier2/skit_littles/01",
+            "product_family": "skit_littles",
+            "label": "彩虹糖",
+            "support_id": "tier2",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "skit_littles/asset.usda",
+            "required_instance": false
+          },
+          {
+            "instance_id": "shelf/tier2/chomps_r/01",
+            "product_family": "chomps_r",
+            "label": "Chomps 牛肉棒",
+            "support_id": "tier2",
+            "asset_scope": "all_assets",
+            "asset_relative_path": "chomps_r/asset.usda",
+            "required_instance": false
+          }
+        ]
+      }
+    ],
+    "required_categories": [
+      "gatorade_m",
+      "grapefruit_can",
+      "red_bull_pink"
+    ],
+    "excluded_products": [
+      "coke_c3",
+      "starbucks"
+    ],
+    "required_counts": {
+      "gatorade_m": 1,
+      "grapefruit_can": 1,
+      "red_bull_pink": 1
+    },
+    "all_products_unique": true,
+    "task_product_background_duplicates": false,
+    "required_category_coverage_passed": true,
+    "poses_sampled": false,
+    "usd_written": false,
+    "runtime_ready": false,
+    "placement_contract": {
+      "full_footprint_on_support": true,
+      "missing_required_action": "reject_scene_and_resample_never_silently_drop",
+      "inventory_shortfall_action": "reject_scene_and_resample",
+      "geometry_collision_visibility_and_reachability": "not_checked"
+    }
+  },
+  "target_instance_id": "shelf/tier3/red_bull_pink/01",
+  "target_product": "red_bull_pink",
+  "acceptable_products": [
+    "coke_c3",
+    "red_bull_pink",
+    "starbucks"
+  ],
+  "access_candidates": [
+    "gatorade_m",
+    "grapefruit_can",
+    "red_bull_pink",
+    "sprite_c1"
+  ],
+  "placement_policy": {
+    "task_name": "select_shelf",
+    "version": "three_four_candidates_rear204.v6"
+  },
+  "geometry_only_reservations": [
+    {
+      "id": "placement_item_0",
+      "type": "snack_drink_to_tray",
+      "product": "gatorade_m"
+    },
+    {
+      "id": "placement_item_1",
+      "type": "snack_drink_to_tray",
+      "product": "grapefruit_can"
+    },
+    {
+      "id": "placement_item_2",
+      "type": "snack_drink_to_tray",
+      "product": "red_bull_pink"
+    },
+    {
+      "id": "placement_item_3",
+      "type": "snack_drink_to_tray",
+      "product": "sprite_c1"
+    }
+  ],
+  "robot_initial": {
+    "policy": "context_shelf.atomic_robot_initial.v1",
+    "variant": "drink",
+    "source_apis": [
+      "4-1",
+      "4-2",
+      "4-3",
+      "4-4",
+      "4-5",
+      "4-6",
+      "4-7",
+      "4-8"
+    ],
+    "joint_positions": {
+      "idx01_body_joint1": 0.4,
+      "idx02_body_joint2": 0,
+      "idx11_head_joint1": 0,
+      "idx12_head_joint2": 0.4363323129985824,
+      "idx21_arm_l_joint1": -1.0463638945234317,
+      "idx61_arm_r_joint1": 1.0146817505343473,
+      "idx22_arm_l_joint2": 0.5553795243153509,
+      "idx62_arm_r_joint2": -0.5544810046463908,
+      "idx23_arm_l_joint3": 0.30598837290307634,
+      "idx63_arm_r_joint3": -0.22207068727428536,
+      "idx24_arm_l_joint4": -1.2477034506751763,
+      "idx64_arm_r_joint4": 1.3224151316068253,
+      "idx25_arm_l_joint5": 0.7315242756431548,
+      "idx65_arm_r_joint5": -0.7628240431105453,
+      "idx26_arm_l_joint6": 1.450414316002107,
+      "idx66_arm_r_joint6": -1.435793949834476,
+      "idx27_arm_l_joint7": -0.17955661248719887,
+      "idx67_arm_r_joint7": 0.19283131129064382,
+      "idx31_gripper_l_inner_joint1": -0.7844060659408569,
+      "idx41_gripper_l_outer_joint1": 0.7844061851501465,
+      "idx71_gripper_r_inner_joint1": -0.7844092845916748,
+      "idx81_gripper_r_outer_joint1": 0.78440922498703,
+      "idx32_gripper_l_inner_joint3": -0.06586175411939621,
+      "idx42_gripper_l_outer_joint3": 0.08891744911670685,
+      "idx72_gripper_r_inner_joint3": -0.06552468240261078,
+      "idx82_gripper_r_outer_joint3": 0.08869274705648422,
+      "idx33_gripper_l_inner_joint4": -0.03039488196372986,
+      "idx43_gripper_l_outer_joint4": -0.0339159332215786,
+      "idx73_gripper_r_inner_joint4": -0.031381815671920776,
+      "idx83_gripper_r_outer_joint4": -0.033230822533369064,
+      "idx39_gripper_l_inner_joint0": 0.4464392364025116,
+      "idx49_gripper_l_outer_joint0": -0.39266160130500793,
+      "idx79_gripper_r_inner_joint0": 0.4472809433937073,
+      "idx89_gripper_r_outer_joint0": -0.3932376503944397
+    },
+    "recorded_source_robot": {
+      "position_m": [
+        -2.3779150350476974,
+        1.338354698211161,
+        0.0013671815395355225
+      ],
+      "quaternion_wxyz": [
+        0.7079967493571234,
+        0,
+        0,
+        0.7062156914850778
+      ]
+    },
+    "station_mapper": "short_tasks.tasks.stock_wooden_tray.initial_station.world_pose",
+    "station_rule": "Map the source station relative to the actual shelf front; never copy source world XY into another layout.",
+    "target_dependent": false,
+    "native_validated_here": false
+  },
+  "scoring_task_count": 1,
+  "wrong_touch_scope": "all_stocked_product_instances",
+  "accessibility_scope": "three_or_four_same_kind_candidates",
+  "background_access_guaranteed": false,
+  "source": "user-approved unique inventory; existing shelf short-task geometry and gap policy",
+  "shared_runtime_registered": false,
+  "geometry_checked": false,
+  "native_physics_validated": false,
+  "caveat": "Run stock_wooden_tray.sample_stock with these reservations before scene admission; never treat inventory-only success as a valid pose."
+}

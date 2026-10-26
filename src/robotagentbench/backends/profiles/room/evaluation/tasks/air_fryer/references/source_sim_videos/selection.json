@@ -1,0 +1,854 @@
+{
+ "2.1": {
+  "pool": 50,
+  "method": "确定性选择：位姿特征按范围归一化后做最远点贪心，每覆盖一个新的类别值（目标槽位、规则批次、配色、灯光）加 0.35；第一条取最接近中位数的 episode",
+  "feature_ranges_in_batch": {
+   "fryer_dx": [
+    -0.12309,
+    0.03582
+   ],
+   "fryer_dy": [
+    -0.19844,
+    0.03981
+   ],
+   "fryer_yaw_deg": [
+    -13.15456,
+    10.86302
+   ],
+   "plate_dx": [
+    -0.11739,
+    0.01463
+   ],
+   "plate_dy": [
+    -0.16033,
+    0.05985
+   ],
+   "target_dx": [
+    -0.06039,
+    0.06871
+   ],
+   "target_dy": [
+    -0.06141,
+    0.07395
+   ]
+  },
+  "episodes": [
+   {
+    "label": "ruleyellowinner-42032",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowinner-42032",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowinner-42032/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowinner-42032/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowinner-42032/right.mp4"
+    },
+    "data_list": {
+     "id": "82ab37ed2f2dd48f70a3c456",
+     "title": "2.1 · 黄色蛋糕放入炸篮 · #09 · 里侧",
+     "collection": "airfryer_insert_diverse_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/varied_runs/ruleyellowinner-42032",
+     "source_status": "数值通过 · 人工待审阅"
+    },
+    "features": {
+     "fryer_dx": -0.0473,
+     "fryer_dy": -0.09024,
+     "fryer_yaw_deg": 0.14177,
+     "plate_dx": -0.04743,
+     "plate_dy": -0.02685,
+     "target_dx": -0.01668,
+     "target_dy": 0.04381
+    },
+    "categories": {
+     "目标槽位": "inner",
+     "规则批次": "ruleyellowinner",
+     "配色": "dark_walnut",
+     "灯光": "warm_evening"
+    },
+    "producer": {
+     "seed": 80000032,
+     "final_stroke_mm": 0.0925,
+     "final_tilt_deg": 0.03036
+    }
+   },
+   {
+    "label": "ruleyellowind-00001",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00001",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00001/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00001/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00001/right.mp4"
+    },
+    "data_list": {
+     "id": "ec2076a9e268a34382ceedd6",
+     "title": "2.1 · 黄色蛋糕放入炸篮 · #50 · 外侧",
+     "collection": "airfryer_insert_diverse_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/varied_runs/ruleyellowind-00001",
+     "source_status": "数值通过 · 人工待审阅"
+    },
+    "features": {
+     "fryer_dx": -0.12309,
+     "fryer_dy": 0.00856,
+     "fryer_yaw_deg": 3.11852,
+     "plate_dx": -0.10336,
+     "plate_dy": 0.04591,
+     "target_dx": 0.03797,
+     "target_dy": -0.05439
+    },
+    "categories": {
+     "目标槽位": "outer",
+     "规则批次": "ruleyellowind",
+     "配色": "cool_gray_black",
+     "灯光": "cool_day"
+    },
+    "producer": {
+     "seed": 60000001,
+     "final_stroke_mm": -0.00029,
+     "final_tilt_deg": 0.01111
+    }
+   },
+   {
+    "label": "ruleyellowind-00067",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00067",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00067/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00067/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00067/right.mp4"
+    },
+    "data_list": {
+     "id": "54942fc2aba0e5b086531054",
+     "title": "2.1 · 黄色蛋糕放入炸篮 · #27 · 外侧",
+     "collection": "airfryer_insert_diverse_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/varied_runs/ruleyellowind-00067",
+     "source_status": "数值通过 · 人工待审阅"
+    },
+    "features": {
+     "fryer_dx": -0.05637,
+     "fryer_dy": -0.18299,
+     "fryer_yaw_deg": -3.43873,
+     "plate_dx": -0.11361,
+     "plate_dy": -0.12058,
+     "target_dx": 0.03629,
+     "target_dy": -0.05802
+    },
+    "categories": {
+     "目标槽位": "outer",
+     "规则批次": "ruleyellowind",
+     "配色": "canonical",
+     "灯光": "neutral_day"
+    },
+    "producer": {
+     "seed": 60000067,
+     "final_stroke_mm": 0.07532,
+     "final_tilt_deg": 0.00437
+    }
+   },
+   {
+    "label": "ruleyellowinner-42004",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowinner-42004",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowinner-42004/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowinner-42004/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowinner-42004/right.mp4"
+    },
+    "data_list": {
+     "id": "4702788129d090e2ba2dc4be",
+     "title": "2.1 · 黄色蛋糕放入炸篮 · #13 · 里侧",
+     "collection": "airfryer_insert_diverse_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/varied_runs/ruleyellowinner-42004",
+     "source_status": "数值通过 · 人工待审阅"
+    },
+    "features": {
+     "fryer_dx": 0.0289,
+     "fryer_dy": -0.1446,
+     "fryer_yaw_deg": -13.15456,
+     "plate_dx": -0.0355,
+     "plate_dy": -0.10036,
+     "target_dx": 0.02001,
+     "target_dy": 0.0685
+    },
+    "categories": {
+     "目标槽位": "inner",
+     "规则批次": "ruleyellowinner",
+     "配色": "light_scandi",
+     "灯光": "mixed_soft"
+    },
+    "producer": {
+     "seed": 80000004,
+     "final_stroke_mm": -0.00059,
+     "final_tilt_deg": 0.00574
+    }
+   },
+   {
+    "label": "ruleyellowind-00000",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00000",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00000/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00000/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/yellow50/ruleyellowind-00000/right.mp4"
+    },
+    "data_list": {
+     "id": "7519ce33921e8af15b0bccce",
+     "title": "2.1 · 黄色蛋糕放入炸篮 · #40 · 外侧",
+     "collection": "airfryer_insert_diverse_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/varied_runs/ruleyellowind-00000",
+     "source_status": "数值通过 · 人工待审阅"
+    },
+    "features": {
+     "fryer_dx": -0.03339,
+     "fryer_dy": 0.03981,
+     "fryer_yaw_deg": 10.86302,
+     "plate_dx": -0.0578,
+     "plate_dy": 0.05985,
+     "target_dx": 0.02952,
+     "target_dy": -0.04268
+    },
+    "categories": {
+     "目标槽位": "outer",
+     "规则批次": "ruleyellowind",
+     "配色": "warm_oak_linen",
+     "灯光": "mixed_bright"
+    },
+    "producer": {
+     "seed": 60000000,
+     "final_stroke_mm": 0.00439,
+     "final_tilt_deg": 0.00378
+    }
+   }
+  ]
+ },
+ "2.2": {
+  "pool": 50,
+  "method": "确定性选择：位姿特征按范围归一化后做最远点贪心，每覆盖一个新的类别值（目标槽位、规则批次、配色、灯光）加 0.35；第一条取最接近中位数的 episode",
+  "feature_ranges_in_batch": {
+   "fryer_dx": [
+    -0.1368,
+    0.03702
+   ],
+   "fryer_dy": [
+    -0.18907,
+    0.05057
+   ],
+   "fryer_yaw_deg": [
+    -11.46728,
+    6.35427
+   ],
+   "plate_dx": [
+    -0.12675,
+    0.01358
+   ],
+   "plate_dy": [
+    -0.14951,
+    0.07544
+   ],
+   "target_dx": [
+    -0.06197,
+    0.06565
+   ],
+   "target_dy": [
+    -0.07092,
+    0.0737
+   ]
+  },
+  "episodes": [
+   {
+    "label": "rulewide4-var-92035",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewide4-var-92035",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewide4-var-92035/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewide4-var-92035/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewide4-var-92035/right.mp4"
+    },
+    "data_list": {
+     "id": "ff68fdf090b304db6325de9b",
+     "title": "2.2 · 白色蛋糕放入炸篮 · #25 · 外侧",
+     "collection": "airfryer_insert_diverse_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/varied_runs/rulewide4-var-92035",
+     "source_status": "数值通过 · 人工待审阅"
+    },
+    "features": {
+     "fryer_dx": -0.00827,
+     "fryer_dy": -0.05635,
+     "fryer_yaw_deg": 0.79432,
+     "plate_dx": -0.0619,
+     "plate_dy": -0.00305,
+     "target_dx": 0.01537,
+     "target_dy": -0.0298
+    },
+    "categories": {
+     "目标槽位": "outer",
+     "规则批次": "rulewide4-var",
+     "配色": "warm_oak_linen",
+     "灯光": "warm_evening"
+    },
+    "producer": {
+     "seed": 3092035,
+     "final_stroke_mm": 1e-05,
+     "final_tilt_deg": 0.00038
+    }
+   },
+   {
+    "label": "rulewhiteinner-72001",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewhiteinner-72001",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewhiteinner-72001/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewhiteinner-72001/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewhiteinner-72001/right.mp4"
+    },
+    "data_list": {
+     "id": "9844bba479d99d52da7e964f",
+     "title": "2.2 · 白色蛋糕放入炸篮 · #16 · 里侧",
+     "collection": "airfryer_insert_diverse_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/varied_runs/rulewhiteinner-72001",
+     "source_status": "数值通过 · 人工待审阅"
+    },
+    "features": {
+     "fryer_dx": -0.03641,
+     "fryer_dy": -0.18907,
+     "fryer_yaw_deg": -6.95867,
+     "plate_dx": -0.08448,
+     "plate_dy": -0.13292,
+     "target_dx": 0.02037,
+     "target_dy": 0.07169
+    },
+    "categories": {
+     "目标槽位": "inner",
+     "规则批次": "rulewhiteinner",
+     "配色": "cool_gray_black",
+     "灯光": "cool_day"
+    },
+    "producer": {
+     "seed": 92072001,
+     "final_stroke_mm": 0.22957,
+     "final_tilt_deg": 0.00609
+    }
+   },
+   {
+    "label": "ruleclear5-var-92021",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/ruleclear5-var-92021",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/ruleclear5-var-92021/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/ruleclear5-var-92021/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/ruleclear5-var-92021/right.mp4"
+    },
+    "data_list": {
+     "id": "c1f5e251d713c1898e6ce54c",
+     "title": "2.2 · 白色蛋糕放入炸篮 · #24 · 外侧",
+     "collection": "airfryer_insert_diverse_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/varied_runs/ruleclear5-var-92021",
+     "source_status": "数值通过 · 人工待审阅"
+    },
+    "features": {
+     "fryer_dx": -0.04379,
+     "fryer_dy": -0.17629,
+     "fryer_yaw_deg": -8.90587,
+     "plate_dx": -0.09813,
+     "plate_dy": -0.14228,
+     "target_dx": 0.04557,
+     "target_dy": -0.04783
+    },
+    "categories": {
+     "目标槽位": "outer",
+     "规则批次": "ruleclear5-var",
+     "配色": "dark_walnut",
+     "灯光": "mixed_soft"
+    },
+    "producer": {
+     "seed": 13092021,
+     "final_stroke_mm": -0.00028,
+     "final_tilt_deg": 0.02014
+    }
+   },
+   {
+    "label": "rulebatch-orig-92042",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulebatch-orig-92042",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulebatch-orig-92042/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulebatch-orig-92042/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulebatch-orig-92042/right.mp4"
+    },
+    "data_list": {
+     "id": "b42505eea83d4c8a61cb184d",
+     "title": "2.2 · 白色蛋糕放入炸篮 · #37 · 外侧",
+     "collection": "airfryer_insert_diverse_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/varied_runs/rulebatch-orig-92042",
+     "source_status": "数值通过 · 人工待审阅"
+    },
+    "features": {
+     "fryer_dx": 0.00847,
+     "fryer_dy": -0.15493,
+     "fryer_yaw_deg": -11.46728,
+     "plate_dx": -0.02351,
+     "plate_dy": -0.1256,
+     "target_dx": 0.05842,
+     "target_dy": -0.00887
+    },
+    "categories": {
+     "目标槽位": "outer",
+     "规则批次": "rulebatch-orig",
+     "配色": "light_scandi",
+     "灯光": "neutral_day"
+    },
+    "producer": {
+     "seed": 92042,
+     "final_stroke_mm": 0.03197,
+     "final_tilt_deg": 0.00925
+    }
+   },
+   {
+    "label": "rulewhiteinner-70004",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewhiteinner-70004",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewhiteinner-70004/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewhiteinner-70004/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_insert_diverse_20260924/white50/rulewhiteinner-70004/right.mp4"
+    },
+    "data_list": {
+     "id": "f404341c91f431f3c5fc6596",
+     "title": "2.2 · 白色蛋糕放入炸篮 · #03 · 里侧",
+     "collection": "airfryer_insert_diverse_20260924",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_insert_two_new_one_target_20260922/varied_runs/rulewhiteinner-70004",
+     "source_status": "数值通过 · 人工待审阅"
+    },
+    "features": {
+     "fryer_dx": -0.01962,
+     "fryer_dy": -0.03079,
+     "fryer_yaw_deg": -1.12357,
+     "plate_dx": -0.09473,
+     "plate_dy": 0.00567,
+     "target_dx": 0.02066,
+     "target_dy": 0.07074
+    },
+    "categories": {
+     "目标槽位": "inner",
+     "规则批次": "rulewhiteinner",
+     "配色": "canonical",
+     "灯光": "neutral_day"
+    },
+    "producer": {
+     "seed": 92070004,
+     "final_stroke_mm": 0.00012,
+     "final_tilt_deg": 0.00738
+    }
+   }
+  ]
+ },
+ "2.3": {
+  "pool": 50,
+  "method": "确定性选择：位姿特征按范围归一化后做最远点贪心，每覆盖一个新的类别值（篮内蛋糕颜色、配色、灯光）加 0.35；第一条取最接近中位数的 episode",
+  "feature_ranges_in_batch": {
+   "fryer_dx": [
+    -0.01293,
+    0.04813
+   ],
+   "fryer_dy": [
+    -0.04889,
+    0.03225
+   ],
+   "fryer_yaw_deg": [
+    -4.44782,
+    4.97679
+   ],
+   "plate_dx": [
+    -0.0093,
+    0.04988
+   ],
+   "plate_dy": [
+    -0.03494,
+    0.04899
+   ],
+   "plate_yaw_deg": [
+    -2.7116,
+    2.7966
+   ]
+  },
+  "episodes": [
+   {
+    "label": "basket_front_v8_fifty_v1_case_00029_motion_v8",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00029/motion_v8/replay",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00029/motion_v8/replay/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00029/motion_v8/replay/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00029/motion_v8/replay/right.mp4"
+    },
+    "data_list": {
+     "id": "718eb1ca14a6a6b09228cfc5",
+     "title": "2.3 · 拉出炸篮 · #27",
+     "collection": "airfryer_basket_pull_20260922",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00029/motion_v8",
+     "source_status": "完成条件通过 · 人工审阅另记"
+    },
+    "features": {
+     "fryer_dx": 0.01546,
+     "fryer_dy": -0.0222,
+     "fryer_yaw_deg": 1.53399,
+     "plate_dx": 0.0175,
+     "plate_dy": 0.0426,
+     "plate_yaw_deg": -0.99255
+    },
+    "categories": {
+     "篮内蛋糕颜色": "white",
+     "配色": "light_scandi",
+     "灯光": "mixed_soft"
+    },
+    "producer": {
+     "seed": 2026092430,
+     "batch": "basket_front_v8_fifty_v1",
+     "max_stroke_mm": 319.28678,
+     "final_stroke_mm": 250.8117
+    }
+   },
+   {
+    "label": "basket_front_v8_fifty_v1_case_00020_motion_v8",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00020/motion_v8/replay",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00020/motion_v8/replay/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00020/motion_v8/replay/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00020/motion_v8/replay/right.mp4"
+    },
+    "data_list": {
+     "id": "d68147a0c47d10aa2551cc39",
+     "title": "2.3 · 拉出炸篮 · #19",
+     "collection": "airfryer_basket_pull_20260922",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00020/motion_v8",
+     "source_status": "完成条件通过 · 人工审阅另记"
+    },
+    "features": {
+     "fryer_dx": 0.03516,
+     "fryer_dy": -0.04659,
+     "fryer_yaw_deg": 3.69027,
+     "plate_dx": -0.00726,
+     "plate_dy": -0.03494,
+     "plate_yaw_deg": -1.85753
+    },
+    "categories": {
+     "篮内蛋糕颜色": "yellow",
+     "配色": "cool_gray_black",
+     "灯光": "neutral_day"
+    },
+    "producer": {
+     "seed": 2026092421,
+     "batch": "basket_front_v8_fifty_v1",
+     "max_stroke_mm": 319.35202,
+     "final_stroke_mm": 265.70803
+    }
+   },
+   {
+    "label": "basket_front_v8_fifty_v1_case_00024_motion_v8",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00024/motion_v8/replay",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00024/motion_v8/replay/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00024/motion_v8/replay/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00024/motion_v8/replay/right.mp4"
+    },
+    "data_list": {
+     "id": "061f409e90b592864c30488c",
+     "title": "2.3 · 拉出炸篮 · #22",
+     "collection": "airfryer_basket_pull_20260922",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00024/motion_v8",
+     "source_status": "完成条件通过 · 人工审阅另记"
+    },
+    "features": {
+     "fryer_dx": 0.01709,
+     "fryer_dy": -0.00497,
+     "fryer_yaw_deg": -0.29241,
+     "plate_dx": 0.04574,
+     "plate_dy": 0.02076,
+     "plate_yaw_deg": 2.242
+    },
+    "categories": {
+     "篮内蛋糕颜色": "white",
+     "配色": "dark_walnut",
+     "灯光": "warm_evening"
+    },
+    "producer": {
+     "seed": 2026092425,
+     "batch": "basket_front_v8_fifty_v1",
+     "max_stroke_mm": 319.18112,
+     "final_stroke_mm": 255.62328
+    }
+   },
+   {
+    "label": "basket_front_v8_fifty_v1_case_00041_motion_v8",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00041/motion_v8/replay",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00041/motion_v8/replay/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00041/motion_v8/replay/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00041/motion_v8/replay/right.mp4"
+    },
+    "data_list": {
+     "id": "04c856a5a666627477484b0e",
+     "title": "2.3 · 拉出炸篮 · #38",
+     "collection": "airfryer_basket_pull_20260922",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00041/motion_v8",
+     "source_status": "完成条件通过 · 人工审阅另记"
+    },
+    "features": {
+     "fryer_dx": 0.02399,
+     "fryer_dy": -0.04889,
+     "fryer_yaw_deg": -1.05092,
+     "plate_dx": -0.00227,
+     "plate_dy": -0.00447,
+     "plate_yaw_deg": -0.34484
+    },
+    "categories": {
+     "篮内蛋糕颜色": "yellow",
+     "配色": "warm_oak_linen",
+     "灯光": "mixed_bright"
+    },
+    "producer": {
+     "seed": 2026092442,
+     "batch": "basket_front_v8_fifty_v1",
+     "max_stroke_mm": 319.2454,
+     "final_stroke_mm": 266.42807
+    }
+   },
+   {
+    "label": "basket_front_v8_fifty_v1_case_00035_motion_v8",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00035/motion_v8/replay",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00035/motion_v8/replay/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00035/motion_v8/replay/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00035/motion_v8/replay/right.mp4"
+    },
+    "data_list": {
+     "id": "5b428b07dbcbc9ccac9182d3",
+     "title": "2.3 · 拉出炸篮 · #32",
+     "collection": "airfryer_basket_pull_20260922",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/basket_front_v8_fifty_v1/case_00035/motion_v8",
+     "source_status": "完成条件通过 · 人工审阅另记"
+    },
+    "features": {
+     "fryer_dx": -0.01293,
+     "fryer_dy": 0.03085,
+     "fryer_yaw_deg": 4.72505,
+     "plate_dx": 0.00476,
+     "plate_dy": 0.04728,
+     "plate_yaw_deg": -1.75249
+    },
+    "categories": {
+     "篮内蛋糕颜色": "yellow",
+     "配色": "light_scandi",
+     "灯光": "cool_day"
+    },
+    "producer": {
+     "seed": 2026092436,
+     "batch": "basket_front_v8_fifty_v1",
+     "max_stroke_mm": 319.22065,
+     "final_stroke_mm": 216.86718
+    }
+   }
+  ]
+ },
+ "2.5": {
+  "pool": 50,
+  "method": "确定性选择：位姿特征按范围归一化后做最远点贪心，每覆盖一个新的类别值（蛋糕颜色、篮内位置、用手、配色、灯光）加 0.35；第一条取最接近中位数的 episode",
+  "feature_ranges_in_batch": {
+   "basket_dx": [
+    -0.00449,
+    0.01098
+   ],
+   "basket_dy": [
+    -0.01483,
+    0.0146
+   ],
+   "basket_yaw_deg": [
+    -2.77045,
+    2.99378
+   ],
+   "cake_tray_x": [
+    -0.03025,
+    0.06516
+   ],
+   "cake_tray_y": [
+    -0.05347,
+    0.05169
+   ]
+  },
+  "episodes": [
+   {
+    "label": "sim-202-t63-s802609220020-fcfb4d25",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220020-fcfb4d25",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220020-fcfb4d25/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220020-fcfb4d25/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220020-fcfb4d25/right.mp4"
+    },
+    "data_list": {
+     "id": "c1cbe6827a87c21ccee9bad0",
+     "title": "2.5 · 00020_middle · 白色",
+     "collection": "airfryer_front50_20260922",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_grasp_batch_handle_front50_20260922",
+     "source_status": "数值检查通过 · 人工待审阅"
+    },
+    "features": {
+     "basket_dx": 0.00262,
+     "basket_dy": -0.00613,
+     "basket_yaw_deg": 0.74519,
+     "cake_tray_x": 0.01605,
+     "cake_tray_y": -0.01498
+    },
+    "categories": {
+     "蛋糕颜色": "white",
+     "篮内位置": "middle",
+     "用手": "left",
+     "配色": "cool_gray_black",
+     "灯光": "cool_day"
+    },
+    "producer": {
+     "seed": 2026092819,
+     "case_id": "00020_middle",
+     "final_lift_m": 0.25868,
+     "final_tilt_deg": 7.33224,
+     "released": false
+    }
+   },
+   {
+    "label": "sim-202-t63-s802609220006-af142d7a",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220006-af142d7a",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220006-af142d7a/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220006-af142d7a/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220006-af142d7a/right.mp4"
+    },
+    "data_list": {
+     "id": "b4b58fe8d73922595229b0a2",
+     "title": "2.5 · 00006_right · 黄色",
+     "collection": "airfryer_front50_20260922",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_grasp_batch_handle_front50_20260922",
+     "source_status": "数值检查通过 · 人工待审阅"
+    },
+    "features": {
+     "basket_dx": 0.00931,
+     "basket_dy": 0.01276,
+     "basket_yaw_deg": -0.5292,
+     "cake_tray_x": 0.00276,
+     "cake_tray_y": 0.04511
+    },
+    "categories": {
+     "蛋糕颜色": "yellow",
+     "篮内位置": "right",
+     "用手": "right",
+     "配色": "warm_oak_linen",
+     "灯光": "mixed_soft"
+    },
+    "producer": {
+     "seed": 2026092805,
+     "case_id": "00006_right",
+     "final_lift_m": 0.25818,
+     "final_tilt_deg": 1.55149,
+     "released": false
+    }
+   },
+   {
+    "label": "sim-202-t63-s802609220037-ce7ebd9a",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220037-ce7ebd9a",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220037-ce7ebd9a/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220037-ce7ebd9a/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220037-ce7ebd9a/right.mp4"
+    },
+    "data_list": {
+     "id": "a64906dae8aded5e6fcf755a",
+     "title": "2.5 · 00037_left · 黄色",
+     "collection": "airfryer_front50_20260922",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_grasp_batch_handle_front50_20260922",
+     "source_status": "数值检查通过 · 人工待审阅"
+    },
+    "features": {
+     "basket_dx": -0.00319,
+     "basket_dy": 0.0146,
+     "basket_yaw_deg": 0.21659,
+     "cake_tray_x": -0.0022,
+     "cake_tray_y": -0.03112
+    },
+    "categories": {
+     "蛋糕颜色": "yellow",
+     "篮内位置": "left",
+     "用手": "left",
+     "配色": "canonical",
+     "灯光": "neutral_day"
+    },
+    "producer": {
+     "seed": 2026092836,
+     "case_id": "00037_left",
+     "final_lift_m": 0.25789,
+     "final_tilt_deg": 5.17966,
+     "released": false
+    }
+   },
+   {
+    "label": "sim-202-t63-s802609220002-72ce6622",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220002-72ce6622",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220002-72ce6622/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220002-72ce6622/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220002-72ce6622/right.mp4"
+    },
+    "data_list": {
+     "id": "76867b16d335071002b145ac",
+     "title": "2.5 · 00002_middle · 白色",
+     "collection": "airfryer_front50_20260922",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_grasp_batch_handle_front50_20260922",
+     "source_status": "数值检查通过 · 人工待审阅"
+    },
+    "features": {
+     "basket_dx": 0.00297,
+     "basket_dy": 0.01119,
+     "basket_yaw_deg": 2.90592,
+     "cake_tray_x": 0.06516,
+     "cake_tray_y": 0.01377
+    },
+    "categories": {
+     "蛋糕颜色": "white",
+     "篮内位置": "middle",
+     "用手": "right",
+     "配色": "dark_walnut",
+     "灯光": "warm_evening"
+    },
+    "producer": {
+     "seed": 2026092801,
+     "case_id": "00002_middle",
+     "final_lift_m": 0.2713,
+     "final_tilt_deg": 4.8299,
+     "released": false
+    }
+   },
+   {
+    "label": "sim-202-t63-s802609220048-66ad2e49",
+    "episode_dir": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220048-66ad2e49",
+    "videos": {
+     "head": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220048-66ad2e49/head.mp4",
+     "left": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220048-66ad2e49/left.mp4",
+     "right": "/mnt/agent-bench-data/lingjun/arena-data-review-20260920/datasets/airfryer_front50_20260922/sim-202-t63-s802609220048-66ad2e49/right.mp4"
+    },
+    "data_list": {
+     "id": "be2639a1c9b54ae1d9112df8",
+     "title": "2.5 · 00048_right · 白色",
+     "collection": "airfryer_front50_20260922",
+     "source_path": "/mnt/agent-bench-data/lingjun/airfryer_insert240_20260920/cake_grasp_batch_handle_front50_20260922",
+     "source_status": "数值检查通过 · 人工待审阅"
+    },
+    "features": {
+     "basket_dx": 0.00353,
+     "basket_dy": -0.00749,
+     "basket_yaw_deg": -1.93188,
+     "cake_tray_x": -0.02971,
+     "cake_tray_y": 0.01523
+    },
+    "categories": {
+     "蛋糕颜色": "white",
+     "篮内位置": "right",
+     "用手": "left",
+     "配色": "light_scandi",
+     "灯光": "neutral_day"
+    },
+    "producer": {
+     "seed": 2026092847,
+     "case_id": "00048_right",
+     "final_lift_m": 0.25496,
+     "final_tilt_deg": 2.16337,
+     "released": false
+    }
+   }
+  ]
+ }
+}

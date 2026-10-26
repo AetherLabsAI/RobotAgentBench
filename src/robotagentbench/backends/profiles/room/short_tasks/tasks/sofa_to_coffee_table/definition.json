@@ -1,0 +1,85 @@
+{
+  "schema": "openend.short_task.definition.draft.v1",
+  "index": 15,
+  "name": "sofa_to_coffee_table",
+  "title_zh": "从沙发抓起放茶几",
+  "source_blocks": [
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147
+  ],
+  "initial_state": [
+    "明确目标实例初态必须由沙发有效承托。",
+    "来源摆放继承沙发既定随机规则，避开靠背、扶手和其他不允许区。",
+    "统一场景提供茶几合法物品区并避开桌布和固定木托盘等保留占位。",
+    "茶几与小茶几分别绑定角色。"
+  ],
+  "stages": [
+    "按对象类型判定合格拿取。",
+    "使目标离开沙发承托。",
+    "搬运到茶几合法物品区。",
+    "有效放下并放开。"
+  ],
+  "completion_requirements": [
+    "目标当前由茶几合法区域承托。",
+    "目标不压桌布，不占固定木托盘等保留区域，机器人不再持有。",
+    "此显式来源/目的地组合覆盖对象平时的归位目的地。",
+    "例如遥控器在本任务中无需同时放回电视柜。"
+  ],
+  "component_candidates": [
+    "evaluation/tasks/tidy_sofa/process_rules.py",
+    "evaluation/tasks/tidy_sofa/specs.py",
+    "openend/tasks/object_transfers/scoring.py",
+    "openend/tasks/all_objects_integration/geometry.py",
+    "openend/tasks/coffee_table_workspaces/binding.py",
+    "openend/tasks/scene_requirements/source_geometry.py"
+  ],
+  "target_count": {
+    "min": 1,
+    "max": 1,
+    "default_random_or_null": null
+  },
+  "points": {
+    "process_per_target": {
+      "book_red": 5,
+      "remote_tv": 3,
+      "wallet": 3,
+      "glasses_case": 3
+    },
+    "final_per_target": 3,
+    "maximum_by_asset": {
+      "book_red": 8,
+      "remote_tv": 6,
+      "wallet": 6,
+      "glasses_case": 6
+    },
+    "notes": [
+      "User-approved existing per-object pickup plus three reversible table-region points. Old APIs unchanged."
+    ]
+  },
+  "open_decisions": [],
+  "adapter_status": "implemented_rule_adapter",
+  "native_validation": "not_run",
+  "rule_version": "openend.short_task.sofa_to_coffee_table.v1",
+  "resolved_points_by_supported_variant": {
+    "maxima": [
+      6,
+      8
+    ],
+    "process_maxima": [
+      3,
+      5
+    ],
+    "final_maximum": 3
+  },
+  "compatibility_note": "Original document decisions retained; adapter supports only explicitly approved variants. Rule tests are not native complete actions.",
+  "posture": {
+    "remote_tv": "remote_task119_first_state_continuous_ranges",
+    "other_variants": "approved_generic_folded_ready_not_dataset_fit"
+  }
+}

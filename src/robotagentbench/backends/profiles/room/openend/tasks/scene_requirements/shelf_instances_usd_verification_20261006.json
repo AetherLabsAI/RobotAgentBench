@@ -1,0 +1,98 @@
+{
+  "scope": "actual_cpu_usd_binding_not_native_manipulation",
+  "rooms": [
+    {
+      "episode": "room_0592566103f4",
+      "tasks": [
+        {
+          "instance_id": "shelf_gatorade_m",
+          "target_bodies": [
+            "/World/RoomEpisode/Shelf_tier3_2/Asset"
+          ],
+          "peer_bodies": [
+            "/World/RoomEpisode/Shelf_tier3_4/Asset"
+          ],
+          "maximum_score": 7
+        },
+        {
+          "instance_id": "shelf_sprite_c1",
+          "target_bodies": [
+            "/World/RoomEpisode/Shelf_tier3_4/Asset"
+          ],
+          "peer_bodies": [
+            "/World/RoomEpisode/Shelf_tier3_2/Asset"
+          ],
+          "maximum_score": 7
+        }
+      ],
+      "source_hashes": {
+        "/home/lingjun/robot_agent_arena/openend/tasks/scene_requirements/generated_rooms/room_0592566103f4/composition.json": "6b161e1bb5d384b6bdbe53f0496cd08f3dd872c3a33298b0d91dc3b5127b7d67",
+        "/home/lingjun/robot_agent_arena/openend/tasks/scene_requirements/generated_rooms/room_0592566103f4/runtime_request.json": "467e9e4c04900ac378c76814140ae8925d2c2099a075f955dd55b788032d028a",
+        "/home/lingjun/robot_agent_arena/openend/tasks/scene_requirements/generated_rooms/room_0592566103f4/room.usda": "913877f014af7cf0a3b49d5999cdcecb7818da6092104eec318b02fb385b5f6e"
+      },
+      "unchanged": true
+    },
+    {
+      "episode": "room_03356b86b5fc",
+      "tasks": [
+        {
+          "instance_id": "shelf_gatorade_m",
+          "target_bodies": [
+            "/World/RoomEpisode/Shelf_tier3_3/Asset"
+          ],
+          "peer_bodies": [
+            "/World/RoomEpisode/Shelf_tier2_2/Asset",
+            "/World/RoomEpisode/Shelf_tier2_3/Asset",
+            "/World/RoomEpisode/Shelf_tier3_1/Asset"
+          ],
+          "maximum_score": 7
+        },
+        {
+          "instance_id": "shelf_sprite_c1",
+          "target_bodies": [
+            "/World/RoomEpisode/Shelf_tier3_1/Asset"
+          ],
+          "peer_bodies": [
+            "/World/RoomEpisode/Shelf_tier2_2/Asset",
+            "/World/RoomEpisode/Shelf_tier2_3/Asset",
+            "/World/RoomEpisode/Shelf_tier3_3/Asset"
+          ],
+          "maximum_score": 7
+        },
+        {
+          "instance_id": "shelf_pring_bbq",
+          "target_bodies": [
+            "/World/RoomEpisode/Shelf_tier2_3/Asset"
+          ],
+          "peer_bodies": [
+            "/World/RoomEpisode/Shelf_tier2_2/Asset",
+            "/World/RoomEpisode/Shelf_tier3_1/Asset",
+            "/World/RoomEpisode/Shelf_tier3_3/Asset"
+          ],
+          "maximum_score": 7
+        },
+        {
+          "instance_id": "shelf_skit_littles",
+          "target_bodies": [
+            "/World/RoomEpisode/Shelf_tier2_2/Asset"
+          ],
+          "peer_bodies": [
+            "/World/RoomEpisode/Shelf_tier2_3/Asset",
+            "/World/RoomEpisode/Shelf_tier3_1/Asset",
+            "/World/RoomEpisode/Shelf_tier3_3/Asset"
+          ],
+          "maximum_score": 7
+        }
+      ],
+      "source_hashes": {
+        "/home/lingjun/robot_agent_arena/openend/tasks/scene_requirements/generated_rooms/room_03356b86b5fc/composition.json": "fdd918657ea7f1e4fdb09d6381dd09d37eae80b58d2e606a52d126f5094020df",
+        "/home/lingjun/robot_agent_arena/openend/tasks/scene_requirements/generated_rooms/room_03356b86b5fc/runtime_request.json": "89fa727036238557b4bf3d3ed67972eaf64246b8270136421c68f55f79d10f38",
+        "/home/lingjun/robot_agent_arena/openend/tasks/scene_requirements/generated_rooms/room_03356b86b5fc/room.usda": "e83ac2e7ce368491ea71e81e2b53959e5c689d9a4526338d3a69641433e3ea5b"
+      },
+      "unchanged": true
+    }
+  ],
+  "physics_started": false,
+  "render_started": false,
+  "existing_rooms_modified": false
+}

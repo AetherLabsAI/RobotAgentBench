@@ -1,0 +1,128 @@
+{
+  "assemblies": {
+    "coffee": [
+      {
+        "id": "coffee_machine",
+        "path": "/World/RoomEpisode/CoffeeMachine",
+        "min": [
+          -0.11475000530481339,
+          -0.11985000222921371,
+          0.0
+        ],
+        "max": [
+          0.11475000530481339,
+          0.16192500293254852,
+          0.29999998211860657
+        ]
+      },
+      {
+        "id": "coffee_cup_blue_compact",
+        "path": "/World/RoomEpisode/CoffeeCup",
+        "min": [
+          -0.27739818036334507,
+          0.13794080030363065,
+          -6.311674675268941e-08
+        ],
+        "max": [
+          -0.1475882233517138,
+          0.24195591448467751,
+          0.09232977795776567
+        ]
+      },
+      {
+        "id": "coffee_bag",
+        "path": "/World/RoomEpisode/CoffeeBag",
+        "min": [
+          -0.2761899126146687,
+          -0.11681095637976822,
+          -2.487536687176105e-09
+        ],
+        "max": [
+          -0.17414575521940584,
+          0.008705084050997194,
+          0.22328256812844707
+        ]
+      }
+    ],
+    "fryer": [
+      {
+        "id": "air_fryer",
+        "path": "/World/RoomEpisode/Fryer",
+        "min": [
+          -0.12399999797344208,
+          -0.09300000220537186,
+          0.004000000189989805
+        ],
+        "max": [
+          0.12399999797344208,
+          0.21158018052577973,
+          0.257999986410141
+        ]
+      },
+      {
+        "id": "paper_plate_task2",
+        "path": "/World/RoomEpisode/FryerPlate",
+        "min": [
+          0.18484255618705187,
+          -0.04979042157777275,
+          0.003000000026077032
+        ],
+        "max": [
+          0.44482334845715316,
+          0.21019037069232854,
+          0.02199999988079071
+        ]
+      },
+      {
+        "id": "cake_plain_yellow",
+        "path": "/World/RoomEpisode/CakeYellow",
+        "min": [
+          0.23292489248185932,
+          0.01983079194433534,
+          0.0030000000000000027
+        ],
+        "max": [
+          0.3125055669010782,
+          0.09941146636355425,
+          0.06200000035762787
+        ]
+      },
+      {
+        "id": "cake_frosted_white",
+        "path": "/World/RoomEpisode/CakeWhite",
+        "min": [
+          0.30554928750605753,
+          0.09641678631695202,
+          0.0030000000000000027
+        ],
+        "max": [
+          0.38513645034594796,
+          0.17852628327307157,
+          0.06200000035762787
+        ]
+      }
+    ],
+    "microwave": [
+      {
+        "id": "microwave",
+        "path": "/World/Assets/DiningTableMicrowave",
+        "min": [
+          -0.30019874368141686,
+          -0.435750000178814,
+          0.0
+        ],
+        "max": [
+          0.30025391467875817,
+          0.032739986185944724,
+          0.2974330702587764
+        ]
+      }
+    ]
+  },
+  "source_hashes": {
+    "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/room_demo_v6/room.usda": "46c00c6a38bb41076abd259bf57de03eb3d9e8954114c83dfacb415688be7c1a",
+    "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/room_demo_v6/composition.json": "3815d8dcc17f286d8c033d91699f1493f108949fe1c5fddf51bfd0e70e9b7f6a",
+    "/home/lingjun/robot_agent_arena/layout_task_activation_v1/task_scene_registration_v1/room_preview_plan_seed42.json": "341a521c272751c6e5763439eda7c316b1f9d7fcb1180f2034a6a7fe6e081e48"
+  },
+  "method": "all_visible_mesh_vertices_in_approved_standard_frame"
+}

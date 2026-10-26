@@ -1,0 +1,80 @@
+{
+  "revision": "fridge_food_boxes_v1",
+  "instance_scale": 1,
+  "variants": {
+    "leftover_box": {
+      "asset": "foodbox.usda",
+      "root": "/Foodbox2Hull",
+      "source": "evaluation/tasks/refrigerator_take/resources/l1_boxes/foodbox2_v1/foodbox2_hull.usda",
+      "source_sha256": "5b45c85b058f9f1f4b8b13552c3e92e4ad7b31e9ec9de3bb8e9f87d7bc5b527e",
+      "source_instance_scale": [
+        0.887,
+        1.0,
+        1.0
+      ],
+      "bounds_m": [
+        [
+          -0.11769602783024312,
+          -0.06705000251531601,
+          0.0
+        ],
+        [
+          0.11769602783024312,
+          0.06705000251531601,
+          0.054099999368190765
+        ]
+      ],
+      "size_m": [
+        0.23539205566048624,
+        0.13410000503063202,
+        0.054099999368190765
+      ],
+      "mass_kg": 0.30000001192092896,
+      "native_physics_unchanged": true,
+      "geometry_matches_fridge_instance": true,
+      "physical_reset_revalidated": false
+    },
+    "salad_box": {
+      "asset": "saladbox.usda",
+      "root": "/SaladboxTex",
+      "source": "evaluation/tasks/refrigerator_take/resources/l1_boxes/saladbox_v1/saladbox_shortrim.usda",
+      "source_sha256": "54ddec2b13865d4b11e7cbd073385ca06c0ffd919b9d7bdb5d713a9460cc0256",
+      "source_instance_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bounds_m": [
+        [
+          -0.09623180233538786,
+          -0.06504987265749662,
+          0.0
+        ],
+        [
+          0.09623180233538786,
+          0.06504987265749662,
+          0.053232120312874276
+        ]
+      ],
+      "size_m": [
+        0.19246360467077572,
+        0.13009974531499324,
+        0.053232120312874276
+      ],
+      "mass_kg": 0.2800000011920929,
+      "native_physics_unchanged": true,
+      "geometry_matches_fridge_instance": true,
+      "physical_reset_revalidated": false
+    }
+  },
+  "files": {
+    "foodbox.usda": "b2d028a9a268c700e3446246cfa6a2d5b5538decffec4a59a48192f5055bcbc7",
+    "saladbox.usda": "b63e2154e79b2d180bf3fa7feccd2760908cda7113bb33f2c794254b36589b99",
+    "salad_box/textures/side_b.jpg": "b85a6cda30ebf679a72742f2cb5511bfe2110973fee056f8546916912a6850f3",
+    "salad_box/textures/end_a.jpg": "2942c641b8280f3a425cc693458e17677e575da9be4241afcb769916a4d7a9f9",
+    "salad_box/textures/side_a.jpg": "0715081da39b0f7cc9bd16c294d9cfa0e50edae4526e2acb28369c0ae5f206b8",
+    "salad_box/textures/top.jpg": "45bb01bca73ddbd86f26dd939739d2461fcca08346a85004db9881f5374f4f30",
+    "salad_box/textures/bottom.jpg": "984f42b418d6dfc66b1b414c0704062cf4d832f4e0caa878299511bf2463d13a",
+    "salad_box/textures/end_b.jpg": "b7a85459651c42f7e93eb60e11eb5cdca3565a3458e73e62463b2ef267669fb3"
+  }
+}
