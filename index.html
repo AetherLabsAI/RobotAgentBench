@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RobotAgentBench</title>
+<meta name="description" content="RobotAgentBench (RAB): a benchmark for evaluating open-world robot autonomy — task discovery, context reasoning, manipulation, failure recovery and robustness — in realistic household environments.">
+<meta property="og:title" content="RobotAgentBench: Towards Open-world Robot Autonomy">
+<meta property="og:description" content="50 household layouts · 90 atomic actions · 18 short-horizon & 8 long-horizon tasks · 4 open-ended scenarios. Evaluating VLA/WAM policies and robot agents.">
+<meta property="og:image" content="assets/fig/fig1_overview.webp">
+<link rel="icon" href="assets/img/rab-mark-pixel.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="task-preview.css">
+<link rel="stylesheet" href="branding.css?v=3">
+</head>
+<body>
+
+<!-- ============================== NAV ============================== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="./" class="nav-brand project-home" aria-label="RobotAgentBench — project home">
+      <img src="assets/img/rab-wordmark-pixel-light.svg" alt="Robot Agent Bench" class="project-nav-logo" width="775" height="80">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#demo">Demo</a>
+      <a href="#paper">Overview</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#task-preview" data-task-preview-link hidden>Task previews</a>
+      <a href="#environment">Real-to-sim</a>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#findings">Findings</a>
+      <a href="#citation">Citation</a>
+    </div>
+    <div class="nav-cta">
+      <!-- TODO: replace with the real arXiv / PDF link -->
+      <a class="btn btn-sm btn-ghost-dark" href="#" data-todo="paper">Paper</a>
+      <!-- TODO: replace with the real GitHub link -->
+      <a class="btn btn-sm btn-grad" href="#" data-todo="code">Code</a>
+      <a class="btn btn-sm btn-ghost-dark comm-btn" href="#community"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 19.5c.6-3.3 3-5.2 6-5.2s5.4 1.9 6 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 4.9a3.2 3.2 0 0 1 0 6.2M18 14.6c1.6.7 2.7 2.4 3 4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="comm-label">Join community</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================== HERO / DEMO ============================== -->
+<header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <video class="hero-bg-video" src="assets/video/bg_mosaic.mp4" poster="assets/video/bg_mosaic.jpg" muted loop playsinline autoplay preload="auto"></video>
+    <div class="hero-bg-veil"></div>
+    <div class="hero-bg-pixels"></div>
+  </div>
+
+  <div class="hero-inner">
+    <h1 class="hero-title">
+      <img src="assets/img/rab-wordmark-pixel-light.svg" alt="Robot Agent Bench" class="hero-logo" width="775" height="80">
+    </h1>
+    <p class="hero-sub">Towards <span class="grad-text">Open-world Robot Autonomy</span></p>
+
+    <div class="hero-actions">
+      <!-- TODO: fill in real links. "Paper" will point to the arXiv page. -->
+      <a class="btn btn-light" href="#" data-todo="paper"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M14 2v6h6M9 13h7M9 17h7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Paper</a>
+      <a class="btn btn-ghost-dark" href="#" data-todo="code"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z" fill="currentColor"/></svg>Code</a>
+      <a class="btn btn-ghost-dark" href="https://huggingface.co/AetherLabs-AI/InternVLA-A1.5-RAB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M1.4446 11.5059c0 1.1021.1673 2.1585.4847 3.1563-.0378-.0028-.0691-.0058-.1058-.0058-.4209 0-.8015.16-1.0704.4512-.3454.3737-.4984.8335-.4316 1.293a1.576 1.576 0 0 0 .2148.5978c-.2319.1864-.4018.4456-.4844.7578-.0646.2448-.131.7543.2149 1.2794a1.4552 1.4552 0 0 0-.0625.1055c-.208.3923-.2207.8372-.0371 1.25.2783.6258.9696 1.1175 2.3126 1.6467.8356.3292 1.5988.5411 1.6056.543 1.1046.2847 2.104.4277 2.969.4277 1.4173 0 2.4754-.3849 3.1525-1.1446 1.538.2651 2.791.1403 3.592.006.6773.7555 1.7332 1.1387 3.1467 1.1387.8649 0 1.8643-.143 2.969-.4278.0068-.0019.77-.2138 1.6056-.543 1.343-.5292 2.0343-1.0208 2.3126-1.6466.1836-.4129.171-.8577-.037-1.25a1.4685 1.4685 0 0 0-.0626-.1056c.346-.525.2795-1.0346.2149-1.2793-.0826-.3122-.2525-.5714-.4844-.7579.11-.1816.1831-.3788.2148-.5977.0669-.4595-.0862-.9193-.4316-1.293-.2688-.2913-.6495-.4513-1.0704-.4513-.0209 0-.0376.0008-.0588.0018.3162-.9966.4846-2.0518.4846-3.1523 0-5.807-4.7362-10.5144-10.5789-10.5144-5.8426 0-10.5788 4.7073-10.5788 10.5144Zm10.5788-9.4831c5.2727 0 9.5476 4.246 9.5476 9.483a9.4201 9.4201 0 0 1-.2696 2.2365c-.0039-.0047-.0079-.011-.0117-.0156-.274-.3255-.6679-.5059-1.1075-.5059-.352 0-.714.1155-1.0763.3438-.2403.1517-.5058.422-.7793.7598-.2534-.3492-.608-.5832-1.0137-.6465a1.5174 1.5174 0 0 0-.2344-.0176c-.9263 0-1.4828.7993-1.6935 1.5177-.1046.2426-.6065 1.3482-1.3614 2.0978-1.1681 1.1601-1.4458 2.3534-.8396 3.6382-.843.1029-1.5836.0927-2.365-.006.5906-1.212.3626-2.4388-.8426-3.6322-.755-.7496-1.2568-1.8552-1.3614-2.0978-.2107-.7184-.7673-1.5177-1.6935-1.5177-.078 0-.1568.0054-.2344.0176-.4057.0633-.7604.2973-1.0137.6465-.2735-.3379-.539-.6081-.7794-.7598-.3622-.2283-.7243-.3438-1.0762-.3438-.4266 0-.8094.171-1.0821.4786a9.4208 9.4208 0 0 1-.2598-2.1936c0-5.237 4.2749-9.483 9.5475-9.483zM8.6443 7.0036c-.4838.0043-.9503.2667-1.1934.7227-.3536.6633-.1006 1.4873.5645 1.84.351.1862.4883-.5261.836-.6485.3107-.1095.841.399 1.0078.086.3536-.6634.1025-1.4874-.5625-1.84a1.3659 1.3659 0 0 0-.6524-.1602Zm6.8403 0c-.2199-.002-.4426.05-.6504.1602-.665.3526-.9181 1.1766-.5645 1.84.1669.313.6971-.1955 1.0079-.086.3476.1224.4867.8347.838.6485.6649-.3527.916-1.1767.5624-1.84-.243-.456-.7096-.7184-1.1934-.7227Zm-9.7565 1.418a.8768.8768 0 0 0-.877.877c0 .4846.3925.877.877.877a.8768.8768 0 0 0 .877-.877.8768.8768 0 0 0-.877-.877zm12.6434 0c-.4845 0-.879.3925-.879.877 0 .4846.3945.877.879.877a.8768.8768 0 0 0 .877-.877.8768.8768 0 0 0-.877-.877zM8.7927 11.459c-.179-.003-.2793.1107-.2793.416 0 .8097.3874 2.125 1.4279 2.924.207-.7123 1.3453-1.2832 1.5079-1.2012.2315.1167.2191.4417.6074.7266.3884-.285.374-.6098.6056-.7266.1627-.082 1.3009.4889 1.5079 1.2012 1.0404-.799 1.4278-2.1144 1.4278-2.924 0-1.2212-1.583.6402-3.5413.6485-1.4686-.0061-2.7266-1.0558-3.2639-1.0645zM4.312 14.4768c.5792.365 1.6964 2.2751 2.1056 3.0177.1371.2488.371.3536.582.3536.4188 0 .7465-.4138.0391-.9395-1.0636-.791-.6914-2.0846-.1836-2.1642a.4302.4302 0 0 1 .0664-.004c.4616 0 .666.7892.666.7892s.5959 1.4898 1.6213 2.508c.942.9356 1.062 1.703.4961 2.6661-.0164-.004-.0159.0236-.1484.2149-.1853.2673-.4322.4688-.7188.6152-.5062.2269-1.1397.2696-1.7833.2696-1.037 0-2.1017-.1824-2.6975-.336-.0293-.0075-3.6505-.9567-3.1916-1.8224.0771-.1454.2033-.2031.3633-.2031.6463 0 1.823.9551 2.3283.9551.113 0 .196-.0865.2285-.2031.2249-.8045-3.2787-1.0522-2.9846-2.1642.0519-.1967.193-.2757.3907-.2754.854 0 2.7704 1.4923 3.172 1.4923.0307 0 .0525-.0085.0645-.0274.2012-.3227.1096-.5865-1.3087-1.4395-1.4182-.8533-2.4315-1.329-1.8653-1.9416.0651-.0707.1574-.1015.2695-.1015.8611.0002 2.8948 1.84 2.8948 1.84s.5487.5683.8809.5683c.0762 0 .1416-.0315.1855-.1054.2355-.3946-2.1858-2.2183-2.3224-2.971-.0926-.51.0641-.7676.3555-.7676-.0006.008.1701-.0285.4942.1759zm16.2257.5918c-.1366.7526-2.5579 2.5764-2.3224 2.9709.044.074.1092.1055.1855.1055.3321 0 .881-.5684.881-.5684s2.0336-1.8397 2.8947-1.84c.1121 0 .2044.0308.2695.1016.5662.6125-.447 1.0882-1.8653 1.9415-1.4183.853-1.51 1.1168-1.3087 1.4396.012.0188.0337.0273.0644.0273.4016 0 2.3181-1.4923 3.1721-1.4923.1977-.0002.3388.0787.3907.2754.294 1.112-3.2095 1.3597-2.9846 2.1642.0325.1166.1156.2032.2285.2032.5054 0 1.682-.9552 2.3283-.9552.16 0 .2862.0577.3633.2032.459.8656-3.1623 1.8149-3.1916 1.8224-.5958.1535-1.6605.336-2.6975.336-.6351 0-1.261-.0409-1.7638-.2599-.2949-.1472-.5488-.3516-.7383-.625-.0411-.0682-.1026-.1476-.1426-.205-.5726-.9679-.455-1.7371.4903-2.676 1.0254-1.0182 1.6212-2.508 1.6212-2.508s.2044-.7891.666-.7891a.4318.4318 0 0 1 .0665.0039c.5078.0796.88 1.3732-.1836 2.1642-.7074.5257-.3797.9395.039.9395.211 0 .445-.1047.5821-.3535.4092-.7426 1.5264-2.6527 2.1056-3.0178.5588-.3524.99-.1816.8497.5918z" fill="currentColor"/></svg>Model</a>
+      <a class="btn btn-ghost-dark" href="#" data-todo="dataset"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Dataset</a>
+      <a class="btn btn-ghost-dark" href="#leaderboard"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Leaderboard</a>
+    </div>
+
+    <!-- ===== DEMO VIDEO =====
+         To swap the demo: replace assets/video/demo.mp4 (and demo_poster.jpg),
+         or change the src / poster attributes below. A YouTube embed also works:
+         replace the <video> with an <iframe class="demo-video" ...>. -->
+    <div class="demo-wrap" id="demo">
+      <div class="demo-frame">
+        <video class="demo-video" id="demoVideo" src="assets/video/demo.mp4?v=3" poster="assets/video/demo_poster.jpg?v=4" preload="metadata" playsinline controls></video>
+        <div class="demo-tools">
+          <button class="demo-tool" id="demoSound" type="button" hidden><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 9.5a4 4 0 0 1 0 5M18.5 7a7.5 7.5 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Sound on</button>
+          <button class="demo-tool" id="demoRestart" type="button" aria-label="Play from the beginning" title="Play from the beginning"><svg viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 3.5v4.5h4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Replay</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ============================== PAPER / ABSTRACT ============================== -->
+<section class="section paper" id="paper">
+  <div class="wrap">
+    <div class="authors">
+      <p class="author-list">
+        <span>Lingjun Mao<sup>1,2,†,‡</sup></span>
+        <span>Jinglin Cao<sup>1,2,†</sup></span>
+        <span>Lukun He<sup>1,2,†</sup></span>
+        <span>Wenpeng Xu<sup>1,2</sup></span>
+        <span>Yuchen Yan<sup>1,2</sup></span>
+        <span>Hengyu Jin<sup>1</sup></span>
+        <span>Zijun Zhang<sup>1</sup></span>
+        <span>Jinzhou Tang<sup>1,2</sup></span>
+        <span>Songyao Jin<sup>1,2</sup></span>
+        <span>Ziche Liu<sup>2</sup></span>
+        <span>Yifei Shao<sup>1</sup></span>
+        <span>Junbo Huang<sup>1</sup></span>
+        <span>Fang Nan<sup>1,2</sup></span>
+        <span>Ruobing Han<sup>1,2</sup></span>
+        <span>Ziqiao Xi<sup>1</sup></span>
+        <span>Ziming Xu<sup>1</sup></span>
+        <span>Shuang Liang<sup>1,2</sup></span>
+        <span>Sibo Zhu<sup>1,2</sup></span>
+        <span>Wenyi Wu<sup>1,2</sup></span>
+        <span>Xinyue Wang<sup>1,2</sup></span>
+        <span>Yiming Huang<sup>1,2</sup></span>
+        <span>Xinkai Zou<sup>1,2</sup></span>
+        <span>Gao Zhu<sup>3</sup></span>
+        <span>Kun Zhou<sup>1,*,‡</sup></span>
+        <span>Biwei Huang<sup>1</sup></span>
+      </p>
+      <div class="affils institution-affiliations" aria-label="Author affiliations">
+        <span class="affil institution-affil institution-aether" aria-label="Affiliation 1: Aether AI">
+          <sup>1</sup><img src="assets/img/aetherai-wordmark-color.svg" alt="Aether AI" class="institution-logo institution-logo-aether" width="2200" height="200" loading="lazy">
+        </span>
+        <span class="affil institution-affil institution-ucsd" aria-label="Affiliation 2: University of California San Diego">
+          <sup>2</sup><img src="assets/img/uc-san-diego-blue-gold.svg" alt="UC San Diego" class="institution-logo institution-logo-ucsd" width="1204" height="229" loading="lazy">
+        </span>
+        <span class="affil institution-affil institution-ucd" aria-label="Affiliation 3: University of California Davis">
+          <sup>3</sup><img src="assets/img/uc-davis-blue.svg" alt="UC Davis" class="institution-logo institution-logo-ucd" width="248" height="43" loading="lazy">
+        </span>
+      </div>
+      <p class="notes"><sup>†</sup>Equal contribution &nbsp;·&nbsp; <sup>‡</sup>Co-project leaders &nbsp;·&nbsp; <sup>*</sup>Corresponding author</p>
+    </div>
+
+    <div class="abstract">
+      <div class="abstract-head">
+        <div class="eyebrow"><i class="px"></i>Abstract</div>
+        <h2 class="h2">From robot manipulation to <span class="grad-text">robot autonomy</span>.</h2>
+      </div>
+      <p>Recent advances in vision-language-action (VLA) and world-action models (WAMs) have significantly improved robotic manipulation, yet deploying robots in the open world demands a higher level of autonomy beyond executing predefined tasks. Robot agents offer a promising paradigm for this transition, integrating task discovery, contextual reasoning, physical execution, and adaptive recovery into a closed interaction loop. However, existing benchmarks largely evaluate isolated capabilities, failing to capture the complexity of open-world robot autonomy. We introduce RobotAgentBench (RAB), a comprehensive benchmark for evaluating robot agents in realistic, open-world household environments. Through an agent-assisted, human-in-the-loop real-to-sim pipeline, RAB constructs 50 diverse household layouts with interactive objects and physically grounded tasks, encompassing 90 atomic tasks, 18 short-horizon tasks, 8 long-horizon tasks, and 4 open-ended scenarios. RAB provides a multi-level evaluation of robot agent capabilities: (1) task-level assessments systematically examine five complementary dimensions—task discovery, context reasoning, manipulation, failure recovery, and robustness; (2) scenario-level evaluation assesses how agents integrate these capabilities to autonomously fulfill high-level user needs. Furthermore, RAB enables systematic comparisons of standalone VLA/WAM models and diverse robot agent architectures under a unified planning–execution–verification framework. Extensive experiments reveal substantial gaps between manipulation and autonomy, demonstrate the advantages of agentic architectures and recursive self-improvement, and highlight the remaining challenges toward open-world robot autonomy.</p>
+    </div>
+
+    <figure class="fig-card main-fig" id="overview">
+      <img src="assets/fig/fig1_overview_1600.webp?v=2" data-full="assets/fig/fig1_overview.webp?v=2" width="1600" height="947" alt="Overview of RobotAgentBench: environments, tasks and evaluation" loading="lazy" data-zoom>
+      <figcaption><b>Figure 1.</b> Overview of RobotAgentBench.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================== CAPABILITIES ============================== -->
+<section class="section" id="capabilities">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow"><i class="px"></i>01 — Multi-level evaluation</div>
+      <h2 class="h2">What does a robot agent need to <span class="grad-text">act autonomously in the real world</span>?</h2>
+      <p class="lead lead-wide">“Prepare the home for guests” sounds simple—but where should a robot begin? It must identify what needs to be cleaned, select appropriate food based on user preferences, coordinate multiple activities, and recover when manipulation attempts fail. Such challenges are intrinsic to everyday physical environments. RobotAgentBench evaluates these demands across five complementary dimensions: task discovery, context reasoning, manipulation, failure recovery, and robustness. Beyond assessing individual capabilities through dedicated tasks, we introduce four open-ended scenarios that require agents to integrate these capabilities and coordinate multiple tasks to autonomously fulfill high-level user needs.</p>
+    </div>
+
+    <div class="lvl-block" id="lvlTask">
+      <div class="lvl-head">
+        <div class="lvl-title"><span class="lvl-tag">Level 1</span><h3>Task-level evaluation</h3></div>
+        <p>We design five complementary evaluation settings to examine how robots determine what to do, execute physical actions, and adapt to unexpected outcomes. Each setting comprises a suite of dedicated tasks.</p>
+      </div>
+      <div class="capx" id="capx">
+        <div class="capx-list" role="tablist">
+          <button class="cap-item is-active" role="tab" data-i="0" style="--c:var(--c-mani)">
+            <span class="cap-n">01</span>
+            <span class="cap-txt"><b>Manipulation</b><em>Translate explicit instructions into correct physical actions.</em><span class="cap-desc">18 short-horizon and 8 long-horizon tasks with explicit instructions, across rigid, deformable and granular objects.</span></span>
+            <span class="cap-prog"><i></i></span>
+          </button>
+          <button class="cap-item" role="tab" data-i="1" style="--c:var(--c-disc)">
+            <span class="cap-n">02</span>
+            <span class="cap-txt"><b>Task Discovery</b><em>Actively observe the environment to identify tasks required by the situation.</em><span class="cap-desc">No task list: from scenario context alone, the robot explores the home and identifies what needs to be done.</span></span>
+            <span class="cap-prog"><i></i></span>
+          </button>
+          <button class="cap-item" role="tab" data-i="2" style="--c:var(--c-reas)">
+            <span class="cap-n">03</span>
+            <span class="cap-txt"><b>Context Reasoning</b><em>Determine how to complete tasks based on context and user needs.</em><span class="cap-desc">Drink, snack, waste and sofa-object selection from implicit requirements such as preferences or sorting rules.</span></span>
+            <span class="cap-prog"><i></i></span>
+          </button>
+          <button class="cap-item" role="tab" data-i="3" style="--c:var(--c-reco)">
+            <span class="cap-n">04</span>
+            <span class="cap-txt"><b>Failure Recovery</b><em>Recognize manipulation failures and autonomously recover to complete the task.</em><span class="cap-desc">Starting from missed grasps or knocked-over objects, the robot must detect the failure and resume the task.</span></span>
+            <span class="cap-prog"><i></i></span>
+          </button>
+          <button class="cap-item" role="tab" data-i="4" style="--c:var(--c-robu)">
+            <span class="cap-n">05</span>
+            <span class="cap-txt"><b>Robustness</b><em>Adapt to unexpected changes and disturbances in the environment.</em><span class="cap-desc">Human interventions and lighting changes during execution — the goal stays the same.</span></span>
+            <span class="cap-prog"><i></i></span>
+          </button>
+        </div>
+        <div class="capx-stage">
+          <video class="cap-vid is-active" data-cap-src="assets/video/cap_manipulation.mp4" poster="assets/video/cap_manipulation.jpg" muted playsinline preload="none"></video>
+          <video class="cap-vid" data-cap-src="assets/video/cap_discovery.mp4" poster="assets/video/cap_discovery.jpg" muted playsinline preload="none"></video>
+          <video class="cap-vid" data-cap-src="assets/video/cap_reasoning.mp4" poster="assets/video/cap_reasoning.jpg" muted playsinline preload="none"></video>
+          <video class="cap-vid" data-cap-src="assets/video/cap_recovery.mp4" poster="assets/video/cap_recovery.jpg" muted playsinline preload="none"></video>
+          <video class="cap-vid" data-cap-src="assets/video/cap_robustness.mp4" poster="assets/video/cap_robustness.jpg" muted playsinline preload="none"></video>
+          <span class="capx-tag" id="capxTag">Capability test 01 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lvl-block" id="lvlScen">
+      <div class="lvl-head">
+        <div class="lvl-title"><span class="lvl-tag">Level 2</span><h3>Scenario-level evaluation</h3></div>
+        <p>Unlike task-level evaluation, robots do not receive explicit task lists. Instead, they must autonomously explore the environment, identify relevant tasks, interpret user needs, and plan their execution.</p>
+      </div>
+      <div class="capx-stage scen-stage">
+        <video id="scenVideo" data-scen-src="assets/video/scenario_jack.mp4" poster="assets/video/scenario_jack.jpg" muted playsinline controls preload="none"></video>
+      </div>
+      <div class="scen-cards" id="scenCards"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== REAL-TO-SIM ============================== -->
+<!-- ============================== TASK PREVIEWS ============================== -->
+<section class="section" id="task-preview" hidden>
+  <div class="wrap">
+    <div class="tp-heading">
+      <div><span class="tp-eyebrow">Task-Level Evaluation</span>
+        <h2 class="h2">Household tasks, <span class="grad-text">in motion.</span></h2>
+        <p class="lead">From preparing food to putting things away, explore everyday interactions across varied household settings.</p>
+      </div>
+      <div class="tp-controls" aria-label="Task preview controls">
+        <button class="tp-icon" type="button" data-tp-scroll="-1" aria-label="Scroll to previous tasks">←</button>
+        <button class="tp-icon" type="button" data-tp-scroll="1" aria-label="Scroll to next tasks">→</button>
+        <button class="tp-pause" type="button" data-tp-pause aria-pressed="false">Ⅱ Pause scrolling</button>
+      </div>
+    </div>
+    <div class="tp-strips"></div>
+    <div class="tp-footer"><span><span data-tp-count></span> · Hover to pause. Click to watch.</span><button class="tp-browse" type="button" data-tp-browse>Browse task videos ↗</button></div>
+  </div>
+</section>
+
+<section class="section soft" id="environment">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow"><i class="px"></i>02 — Real-to-sim</div>
+      <h2 class="h2">An agent-assisted, <span class="grad-text" style="white-space:nowrap">human-in-the-loop</span> real-to-sim pipeline.</h2>
+      <p class="lead lead-wide">To enable realistic and scalable evaluation, we develop an agent-assisted, human-in-the-loop real-to-sim pipeline that starts from a physical room in a real home, reconstructs it in simulation, expands the reconstructed scene into diverse interactive configurations, and collects demonstrations for training and evaluation.</p>
+    </div>
+    <figure class="fig-card">
+      <img src="assets/fig/fig2_pipeline_1600.webp?v=2" data-full="assets/fig/fig2_pipeline.webp?v=2" width="1600" height="919" alt="Real-to-sim pipeline and training data statistics" loading="lazy" data-zoom>
+      <figcaption><b>Figure 2.</b> Real-to-sim pipeline and training data statistics for RobotAgentBench.</figcaption>
+    </figure>
+    <div class="r2s-videos">
+      <figure class="fig-card r2s-video">
+        <video data-src="assets/video/r2s_layouts.mp4" data-early poster="assets/video/r2s_layouts.jpg" muted loop playsinline preload="none" aria-label="Fifty household layouts generated by the real-to-sim pipeline"></video>
+        <figcaption><b>50 household layouts.</b> One real home expands into diverse room layouts with different decor, walls, floors and furniture.</figcaption>
+      </figure>
+      <figure class="fig-card r2s-video">
+        <video data-src="assets/video/r2s_variations.mp4" data-early poster="assets/video/r2s_variations.jpg" muted loop playsinline preload="none" aria-label="The same tasks under different object appearance, scene layout and lighting"></video>
+        <figcaption><b>Scene variations.</b> For the same task, RAB includes different scene perturbations, including object appearance, scene layout and lighting.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== LEADERBOARD ============================== -->
+<section class="section" id="leaderboard">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow"><i class="px"></i>03 — Leaderboard</div>
+      <h2 class="h2">How far are we from <span class="grad-text">open-world autonomy</span>?</h2>
+      <p class="lead lead-wide">We conduct systematic experiments at both the task and scenario levels to evaluate standalone VLA/WAM-based policies and complete robot agents. Building on the unified robot agent framework we developed, we compare different harness designs and examine their effects on task performance.</p>
+    </div>
+
+    <div class="fw">
+      <div class="fw-pev">
+        <div class="fw-role"><span class="pev-k">P</span><div><b>Planner</b><p>Interprets environmental context and user requirements, decomposes tasks, and adapts plans based on execution feedback.</p></div></div>
+        <div class="fw-role"><span class="pev-k">E</span><div><b>Executor</b><p>Translates instructions into physical actions through learned policy models (e.g., VLA and WAM) or code-based control.</p></div></div>
+        <div class="fw-role"><span class="pev-k">V</span><div><b>Verifier</b><p>Monitors execution outcomes, identifies failures, and guides corrective actions.</p></div></div>
+      </div>
+      <div class="fw-legend"><span class="fw-legend-t">Each agent is denoted by its Planner / Executor / Verifier configuration</span><span><i class="k k-C">C</i>code-based control</span><span><i class="k k-L">L</i>learned VLA/WAM policy</span><span><i class="k k-H">H</i>hybrid code-based and learned execution</span><span><i class="k k-0">–</i>absent component</span></div>
+      <div class="fw-archs">
+        <div class="arch2">
+          <div class="arch-code"><i class="k k-0">–</i><span class="slash">/</span><i class="k k-L">L</i><span class="slash">/</span><i class="k k-C">C</i></div>
+          <h5>VLA/WAM Policy + Code Verifier</h5>
+          <p>A VLA/WAM policy generates actions, while a coding-agent verifier monitors execution, selects action prefixes, and applies local corrections before querying the policy again.</p>
+        </div>
+        <div class="arch2">
+          <div class="arch-code"><i class="k k-C">C</i><span class="slash">/</span><i class="k k-L">L</i><span class="slash">/</span><i class="k k-0">–</i></div>
+          <h5>Code Planner + VLA/WAM Policy</h5>
+          <p>A coding-agent planner decomposes tasks into subtask instructions for a VLA/WAM policy and revises them based on execution feedback.</p>
+        </div>
+        <div class="arch2">
+          <div class="arch-code"><i class="k k-C">C</i><span class="slash">/</span><i class="k k-C">C</i><span class="slash">/</span><i class="k k-C">C</i></div>
+          <h5>Fully Code-based</h5>
+          <p>A coding agent plans, executes, and verifies tasks by composing predefined control functions (e.g., <code>move_eef_to()</code>) and checking execution outcomes.</p>
+        </div>
+        <div class="arch2">
+          <div class="arch-code"><i class="k k-C">C</i><span class="slash">/</span><i class="k k-H">H</i><span class="slash">/</span><i class="k k-C">C</i></div>
+          <h5>Hybrid Code/VLA/WAM Policy</h5>
+          <p>A coding agent plans and verifies execution, dynamically combining code-based control and VLA/WAM policies as callable tools based on task requirements and feedback.</p>
+        </div>
+        <div class="arch2">
+          <div class="arch-code"><i class="k k-C">C</i><span class="slash">/</span><i class="k k-C">C</i><span class="slash">/</span><i class="k k-C">C</i><span class="arch-rsi">+RSI</span></div>
+          <h5>Code-based + RSI</h5>
+          <p>The fully code-based agent iteratively improves its control tools and accumulates experience from execution feedback, retaining these improvements across attempts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb">
+      <div class="lb-bar">
+        <div class="seg seg-sm" id="lbFilter">
+          <button class="is-active" data-f="all">All</button>
+          <button data-f="agent">Robot agents</button>
+          <button data-f="VLA">VLA</button>
+          <button data-f="WAM">WAM</button>
+        </div>
+      </div>
+
+      <div class="lb-scroll">
+        <table class="lb-table" id="lbTable"></table>
+      </div>
+    </div>
+    <div class="lb-footer">
+      <div class="lb-models"><span><b>Coding agents</b> Codex (GPT-6 Astra) · Claude Code (Opus 5.5) · Antigravity CLI (Gemini 4 Argon)</span><span><b>Learned policy in agents</b> InternVLA-A1.5</span><span><b>RSI</b> results from the 10th self-improvement round</span></div>
+      <p class="lb-note" id="lbNote"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FINDINGS ============================== -->
+<section class="section soft" id="findings">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow"><i class="px"></i>04 — Analysis</div>
+      <h2 class="h2">What we found.</h2>
+    </div>
+
+    <div class="finding">
+      <div class="finding-text">
+        <span class="finding-n">01</span>
+        <h3>Policies stall; agents get stuck.</h3>
+        <p>Standalone VLA/WAM policies rarely explore in response to context. They spend most of their time idle or making unproductive movements, with stagnation above 84%. Robot agents identify tasks more actively, but frequent execution errors leave them retrying a single subtask until the time limit.</p>
+      </div>
+      <figure class="fig-card"><img src="assets/fig/fig3_openended_case_1600.webp?v=2" data-full="assets/fig/fig3_openended_case.webp?v=2" width="1600" height="1011" alt="Open-ended scenario case studies: InternVLA-A1.5 vs Codex" loading="lazy" data-zoom><figcaption><b>Figure 3.</b> InternVLA-A1.5 (left) fails to initiate any task, while Codex (right) repeatedly attempts a single subtask until reaching the per-task time limit.</figcaption></figure>
+    </div>
+
+    <div class="finding">
+      <div class="finding-text">
+        <span class="finding-n">02</span>
+        <h3>Who plans, and who executes, both matter.</h3>
+        <p>Pairing four policy executors with three coding-agent planners, Antigravity CLI yields the largest gains as a planner, while InternVLA-A1.5 is the best executor. Its stronger robustness and failure recovery, together with more reliable following of revised instructions, make it well suited to this role.</p>
+      </div>
+      <div class="fig-stack">
+        <figure class="fig-card"><img src="assets/fig/fig4a_task.webp" alt="Task-level planner-executor combinations" loading="lazy" data-zoom><figcaption><b>Figure 4a.</b> Task-level performance across planner–executor combinations.</figcaption></figure>
+        <figure class="fig-card"><img src="assets/fig/fig4b_scenario.webp" alt="Scenario-level planner-executor combinations" loading="lazy" data-zoom><figcaption><b>Figure 4b.</b> Scenario-level performance across planner–executor combinations.</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-text">
+        <span class="finding-n">03</span>
+        <h3>Concise instructions are easier to follow.</h3>
+        <p>Antigravity CLI writes shorter instructions, switches them less often, and uses fewer execution-specific details and simpler vocabulary. Codex often specifies detailed procedures, even which hand to use, and learned executors struggle to interpret them.</p>
+      </div>
+      <figure class="fig-card"><img src="assets/fig/fig5_instruction_style.webp" alt="Planner instruction characteristics" loading="lazy" data-zoom><figcaption><b>Figure 5.</b> Planner instruction characteristics across three coding agents (10 sampled open-ended episodes each).</figcaption></figure>
+    </div>
+
+    <div class="finding">
+      <div class="finding-text">
+        <span class="finding-n">04</span>
+        <h3>Recursive self-improvement keeps paying off.</h3>
+        <p>Over ten consecutive episodes, all three code-based agents improve at both levels as they refine reusable control functions. For example, they learn to decompose an infeasible single-shot reach into smaller steps through feasible intermediate poses.</p>
+      </div>
+      <figure class="fig-card"><img src="assets/fig/fig6_rsi.webp" alt="Performance over RSI iterations" loading="lazy" data-zoom><figcaption><b>Figure 6.</b> Task-level and scenario-level performance of three coding agents over successive RSI iterations.</figcaption></figure>
+    </div>
+
+    <div class="finding">
+      <div class="finding-text">
+        <span class="finding-n">05</span>
+        <h3>From simulation to the real home.</h3>
+        <p>On matched subsets evaluated with the AgiBot G1, real-world scores are generally lower because physical interaction is harder and scenes are more cluttered. However, the relative ranking of models and agents is preserved.</p>
+      </div>
+      <figure class="fig-card"><img src="assets/fig/fig7_real_world_1600.webp?v=2" data-full="assets/fig/fig7_real_world.webp?v=2" width="1600" height="478" alt="Real-world evaluation examples with the AgiBot G1" loading="lazy" data-zoom><figcaption><b>Figure 7.</b> Real-world evaluation examples with the AgiBot G1: a robustness task under human perturbation and an open-ended scenario.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CITATION ============================== -->
+<section class="section" id="citation">
+  <div class="wrap narrow">
+    <div class="sec-head center">
+      <div class="eyebrow"><i class="px"></i>Citation</div>
+      <h2 class="h2">BibTeX</h2>
+    </div>
+    <div class="bib">
+      <button class="bib-copy" id="bibCopy">Copy</button>
+<pre id="bibText">@article{mao2026robotagentbench,
+  title   = {RobotAgentBench: Towards Open-world Robot Autonomy},
+  author  = {Mao, Lingjun and Cao, Jinglin and He, Lukun and Xu, Wenpeng and
+             Yan, Yuchen and Jin, Hengyu and Zhang, Zijun and Tang, Jinzhou and
+             Jin, Songyao and Liu, Ziche and Shao, Yifei and Huang, Junbo and
+             Nan, Fang and Han, Ruobing and Xi, Ziqiao and Xu, Ziming and
+             Liang, Shuang and Zhu, Sibo and Wu, Wenyi and Wang, Xinyue and
+             Huang, Yiming and Zou, Xinkai and Zhu, Gao and Zhou, Kun and
+             Huang, Biwei},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</pre>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <a href="./" class="project-footer-home" aria-label="RobotAgentBench — project home"><img src="assets/img/rab-wordmark-pixel-light.svg" alt="Robot Agent Bench" class="foot-logo" width="775" height="80" loading="lazy"></a>
+      <p>A benchmark for open-world robot autonomy.</p>
+    </div>
+    <div class="foot-org institution-footer" aria-label="Research institutions">
+      <span class="institution-footer-mark"><img src="assets/img/aetherai-wordmark-color.svg" alt="Aether AI" class="foot-aether" width="2200" height="200" loading="lazy"></span>
+      <span class="institution-footer-mark"><img src="assets/img/uc-san-diego-white.svg" alt="UC San Diego" class="foot-ucsd-logo" width="289" height="55" loading="lazy"></span>
+      <span class="institution-footer-mark"><img src="assets/img/uc-davis-white.svg" alt="UC Davis" class="foot-ucd-logo" width="248" height="43" loading="lazy"></span>
+    </div>
+    <div class="foot-social" id="community" aria-labelledby="communityTitle">
+      <div class="foot-social-text">
+        <h3 class="foot-social-label" id="communityTitle">Join the community</h3>
+        <p>Scan the QR code with WeChat to join the RobotAgentBench group, or find us on Feishu and Discord.</p>
+        <div class="foot-social-links">
+          <span class="social-btn social-static"><svg viewBox="0 0 24 24"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z" fill="currentColor"/></svg>WeChat · scan the code</span>
+          <!-- TODO: Feishu (Lark) group link -->
+          <a class="social-btn" href="#" data-todo="feishu"><svg viewBox="0 0 48 48"><g fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M17 29c4 0 8-2.066 11-5.593C36 14 41.424 16.817 44 18c-5.5 3-3.5 11.623-11 18c-4.618 3.926-9.506 5.014-14 5c-6.477-.02-12.138-3.236-15-5.594V17"/><path fill="currentColor" d="M5.648 15.867a2 2 0 1 0-3.296 2.266zM36.002 35.73a2 2 0 0 0-2.004-3.462zM2.352 18.133c2.892 4.206 8.447 10.011 14.535 14.09c3.047 2.044 6.33 3.723 9.562 4.51c3.246.789 6.596.71 9.553-1.002l-2.004-3.462c-1.793 1.038-4.005 1.209-6.603.577c-2.612-.636-5.454-2.05-8.282-3.945c-5.662-3.795-10.856-9.24-13.465-13.034z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M33.595 17c-.755-2.297-2.74-7.06-6-10h-16C15.217 10.676 23 16 27 24"/></g></svg>Feishu</a>
+          <!-- TODO: Discord invite link -->
+          <a class="social-btn" href="#" data-todo="discord"><svg viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" fill="currentColor"/></svg>Discord</a>
+        </div>
+      </div>
+      <!-- WeChat group QR: group codes expire after 7 days; replace assets/img/wechat-qr.png and bump ?v= -->
+      <img class="foot-qr" src="assets/img/wechat-qr.png?v=2" alt="WeChat group QR code for the RobotAgentBench discussion group" width="640" height="900">
+    </div>
+    <p class="foot-copy">© 2026 Aether AI. <!-- TODO: contact email --></p>
+  </div>
+</footer>
+
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <div class="lightbox-inner" id="lightboxInner"></div>
+</div>
+
+<script src="app.js?v=7"></script>
+<script src="assets/task-previews.js?v=2"></script>
+<script src="task-preview.js?v=2"></script>
+</body>
+</html>

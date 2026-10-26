@@ -1,0 +1,48 @@
+/* Project wordmark and author affiliations. */
+.project-home{flex-shrink:0;display:flex;align-items:center;padding:10px 0;border-radius:4px}
+.project-nav-logo{display:block;width:226px;height:auto;max-width:none}
+.project-home:hover{opacity:.88}
+.project-home:focus-visible,.project-footer-home:focus-visible,.institution-affil:focus-visible,.institution-footer-mark:focus-visible{outline:2px solid #B89BFF;outline-offset:7px;border-radius:3px}
+.hero-title{max-width:min(800px,92vw)}
+.hero-logo{filter:drop-shadow(0 2px 18px rgba(87,45,147,.17));height:auto}
+.institution-affiliations{gap:8px 34px;margin:22px auto 16px}
+.institution-affil{position:relative;justify-content:center;min-height:104px;padding:32px 36px;gap:14px}
+.institution-affil sup{position:absolute;top:12px;left:3px;color:var(--p500)}
+.institution-logo{height:auto;max-width:none;object-fit:contain}
+.institution-logo-aether{width:210px}
+.institution-logo-ucsd{width:190px}
+.project-footer-home{display:inline-block;max-width:100%}
+.project-footer-home .foot-logo{width:270px;height:auto}
+.institution-footer{gap:28px;align-items:center}
+.institution-footer-mark{display:flex;align-items:center;justify-content:center;min-height:82px;padding:24px 12px}
+.institution-footer .foot-aether{width:155px;height:auto}
+.foot-ucsd-logo{width:145px;height:auto}
+@media(min-width:1101px) and (max-width:1250px){
+  .project-nav-logo{width:184px}
+  .nav-inner{gap:10px;padding:0 18px}
+  .nav-links a{padding:8px 6px;font-size:13px}
+}
+@media(max-width:640px){
+  .project-nav-logo{width:210px}
+  .institution-affiliations{gap:0 8px;margin-top:16px}
+  .institution-affil{min-height:94px;padding:29px 30px}
+  .institution-affil sup{top:12px;left:0}
+  .institution-logo-aether{width:186px}
+  .institution-logo-ucsd{width:173px}
+  .project-footer-home .foot-logo{width:250px}
+  .institution-footer{flex-wrap:wrap;gap:0 20px;max-width:100%}
+  .institution-footer-mark{padding:24px 0}
+  .institution-footer .foot-aether{width:142px}
+  .foot-ucsd-logo{width:133px}
+}
+@media(max-width:360px){
+  .project-nav-logo{width:198px}
+  .institution-footer{flex-wrap:wrap;gap:0}
+  .institution-footer-mark{justify-content:flex-start;padding:24px 12px 24px 0}
+}
+.institution-logo-ucd{width:136px}
+.foot-ucd-logo{width:118px;height:auto}
+@media(max-width:640px){
+  .institution-logo-ucd{width:124px}
+  .foot-ucd-logo{width:104px}
+}
