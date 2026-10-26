@@ -4,6 +4,7 @@ import os, re, sys
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 class H(SimpleHTTPRequestHandler):
+    timeout = 30   # drop a client that stops reading (e.g. a closed tab or a broken tunnel) instead of blocking forever
     def send_head(self):
         rng = self.headers.get('Range')
         path = self.translate_path(self.path)
@@ -36,4 +37,8 @@ class H(SimpleHTTPRequestHandler):
         self.send_header('Accept-Ranges', 'bytes'); super().end_headers()
 
 port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
-ThreadingHTTPServer(('127.0.0.1', port), H).serve_forever()
+class Server(ThreadingHTTPServer):
+    daemon_threads = True
+    request_queue_size = 128   # a page opens many media requests at once
+
+Server(('127.0.0.1', port), H).serve_forever()

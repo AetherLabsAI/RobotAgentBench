@@ -74,7 +74,7 @@
          replace the <video> with an <iframe class="demo-video" ...>. -->
     <div class="demo-wrap" id="demo">
       <div class="demo-frame">
-        <video class="demo-video" id="demoVideo" src="assets/video/demo.mp4?v=3" poster="assets/video/demo_poster.jpg?v=4" preload="metadata" playsinline controls></video>
+        <video class="demo-video" id="demoVideo" src="assets/video/demo.mp4?v=4" poster="assets/video/demo_poster.jpg?v=4" preload="metadata" playsinline controls></video>
         <div class="demo-tools">
           <button class="demo-tool" id="demoSound" type="button" hidden><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 9.5a4 4 0 0 1 0 5M18.5 7a7.5 7.5 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Sound on</button>
           <button class="demo-tool" id="demoRestart" type="button" aria-label="Play from the beginning" title="Play from the beginning"><svg viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 3.5v4.5h4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Replay</button>
@@ -190,11 +190,11 @@
           </button>
         </div>
         <div class="capx-stage">
-          <video class="cap-vid is-active" data-cap-src="assets/video/cap_manipulation.mp4" poster="assets/video/cap_manipulation.jpg" muted playsinline preload="none"></video>
-          <video class="cap-vid" data-cap-src="assets/video/cap_discovery.mp4" poster="assets/video/cap_discovery.jpg" muted playsinline preload="none"></video>
-          <video class="cap-vid" data-cap-src="assets/video/cap_reasoning.mp4" poster="assets/video/cap_reasoning.jpg" muted playsinline preload="none"></video>
-          <video class="cap-vid" data-cap-src="assets/video/cap_recovery.mp4" poster="assets/video/cap_recovery.jpg" muted playsinline preload="none"></video>
-          <video class="cap-vid" data-cap-src="assets/video/cap_robustness.mp4" poster="assets/video/cap_robustness.jpg" muted playsinline preload="none"></video>
+          <video class="cap-vid is-active" data-cap-src="assets/video/cap_manipulation.mp4?v=2" poster="assets/video/cap_manipulation.jpg?v=2" muted playsinline preload="none"></video>
+          <video class="cap-vid" data-cap-src="assets/video/cap_discovery.mp4?v=2" poster="assets/video/cap_discovery.jpg?v=2" muted playsinline preload="none"></video>
+          <video class="cap-vid" data-cap-src="assets/video/cap_reasoning.mp4?v=2" poster="assets/video/cap_reasoning.jpg?v=2" muted playsinline preload="none"></video>
+          <video class="cap-vid" data-cap-src="assets/video/cap_recovery.mp4?v=2" poster="assets/video/cap_recovery.jpg?v=2" muted playsinline preload="none"></video>
+          <video class="cap-vid" data-cap-src="assets/video/cap_robustness.mp4?v=2" poster="assets/video/cap_robustness.jpg?v=2" muted playsinline preload="none"></video>
           <span class="capx-tag" id="capxTag">Capability test 01 / 05</span>
         </div>
       </div>
@@ -206,7 +206,7 @@
         <p>Unlike task-level evaluation, robots do not receive explicit task lists. Instead, they must autonomously explore the environment, identify relevant tasks, interpret user needs, and plan their execution.</p>
       </div>
       <div class="capx-stage scen-stage">
-        <video id="scenVideo" data-scen-src="assets/video/scenario_jack.mp4" poster="assets/video/scenario_jack.jpg" muted playsinline controls preload="none"></video>
+        <video id="scenVideo" data-scen-src="assets/video/scenario_jack.mp4?v=2" poster="assets/video/scenario_jack.jpg?v=2" muted playsinline controls preload="none"></video>
       </div>
       <div class="scen-cards" id="scenCards"></div>
     </div>
@@ -447,6 +447,6 @@
 
 <script src="app.js?v=7"></script>
 <script src="assets/task-previews.js?v=2"></script>
-<script src="task-preview.js?v=2"></script>
+<script src="task-preview.js?v=3"></script>
 </body>
 </html>

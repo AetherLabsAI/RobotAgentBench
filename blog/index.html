@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#efe7d9">
+  <meta name="description" content="RobotAgentBench (RAB): a comprehensive benchmark for evaluating robot agents in realistic, open-world household environments.">
+  <title>RobotAgentBench: How Far Are Robots from Open-World Autonomy? | Aether AI Research</title>
+  <meta property="og:title" content="RobotAgentBench: How Far Are Robots from Open-World Autonomy?">
+  <meta property="og:description" content="From robot manipulation to open-world autonomy: evaluating how robots discover tasks, reason about context, act in realistic homes, and recover from failures.">
+  <meta property="og:image" content="../assets/fig/fig1_overview_1600.webp">
+  <link rel="icon" href="../assets/img/rab-mark-pixel.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <a class="skip-link" href="#article">Skip to article</a>
+
+  <header class="topbar">
+    <a class="brand" href="https://aetherlabs.ai/" aria-label="Aether AI home"><img src="../assets/img/aetherai-wordmark-black.svg" alt="Aether AI" width="2153" height="200"></a>
+    <nav aria-label="Aether AI navigation">
+      <a href="https://aetherlabs.ai/index.html">About</a>
+      <a class="active" href="https://aetherlabs.ai/blog.html">Blog</a>
+      <a href="https://aetherlabs.ai/news.html">News</a>
+      <a href="https://aetherlabs.ai/careers.html">Careers</a>
+      <a href="https://aetherlabs.ai/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <header class="article-head">
+      <div class="breadcrumb"><a href="https://aetherlabs.ai/blog.html">Blog</a><span aria-hidden="true">/</span><span>Robot Autonomy</span></div>
+      <h1>RobotAgentBench: How Far Are Robots from Open-World Autonomy?</h1>
+      <p class="lede">From robot manipulation to open-world autonomy: evaluating how robots discover tasks, reason about context, act in realistic homes, and recover from failures.</p>
+      <div class="article-meta">
+        <div><span class="meta-label">Published</span><span>2026 · 10 · 26</span></div>
+        <div><span class="meta-label">Reading</span><span>~ 8 min</span></div>
+        <div><span class="meta-label">Topics</span><span>Embodied Agents · Benchmarks</span></div>
+      </div>
+    </header>
+
+    <div class="article-shell">
+      <aside class="article-toc">
+        <nav aria-label="In this post">
+          <p class="toc-title">In this post</p>
+          <a href="#abstract"><span>Abstract</span></a>
+          <a href="#demo-video"><span>Demo video</span></a>
+          <a href="#paper-links"><span>Paper &amp; links</span></a>
+          <a href="#capabilities"><span class="toc-number">01</span><span>Multi-level evaluation</span></a>
+          <a href="#environment"><span class="toc-number">02</span><span>Real-to-sim</span></a>
+          <a href="#leaderboard"><span class="toc-number">03</span><span>Leaderboard</span></a>
+          <a href="#findings"><span class="toc-number">04</span><span>Analysis</span></a>
+          <a href="#citation"><span>Citation</span></a>
+        </nav>
+      </aside>
+
+      <article class="article" id="article">
+        <section id="abstract" aria-label="Abstract">
+          <p class="opening">Recent advances in vision-language-action (VLA) and world-action models (WAMs) have significantly improved robotic manipulation, yet deploying robots in the open world demands a higher level of autonomy beyond executing predefined tasks. Robot agents offer a promising paradigm for this transition, integrating task discovery, contextual reasoning, physical execution, and adaptive recovery into a closed interaction loop. However, existing benchmarks largely evaluate isolated capabilities, failing to capture the complexity of open-world robot autonomy.</p>
+          <p>We introduce <strong>RobotAgentBench (RAB)</strong>, a comprehensive benchmark for evaluating robot agents in realistic, open-world household environments. Through an agent-assisted, human-in-the-loop real-to-sim pipeline, RAB constructs <strong>50 diverse household layouts</strong> with interactive objects and physically grounded tasks, encompassing <strong>90 atomic tasks</strong>, <strong>18 short-horizon tasks</strong>, <strong>8 long-horizon tasks</strong>, and <strong>4 open-ended scenarios</strong>.</p>
+          <p>RAB provides a multi-level evaluation of robot agent capabilities: (1) task-level assessments systematically examine five complementary dimensions—task discovery, context reasoning, manipulation, failure recovery, and robustness; (2) scenario-level evaluation assesses how agents integrate these capabilities to autonomously fulfill high-level user needs. Furthermore, RAB enables systematic comparisons of standalone VLA/WAM models and diverse robot agent architectures under a unified planning–execution–verification framework.</p>
+          <p>Extensive experiments reveal substantial gaps between manipulation and autonomy, demonstrate the advantages of agentic architectures and recursive self-improvement, and highlight the remaining challenges toward open-world robot autonomy.</p>
+
+          <figure class="figure case-study-video" id="demo-video">
+            <video controls playsinline preload="metadata" width="1920" height="1080" poster="../assets/video/demo_poster.jpg?v=4" src="../assets/video/demo.mp4?v=4">
+              <a href="../assets/video/demo.mp4">Open the MP4 file.</a>
+            </video>
+            <figcaption><span class="figure-label">Demo video</span>Overview of RobotAgentBench, a benchmark for evaluating robot agents in realistic, open-world household environments.</figcaption>
+          </figure>
+
+          <section class="paper-card" id="paper-links" aria-labelledby="paper-links-title">
+            <h2 class="card-label" id="paper-links-title">Paper · Code · Model · Website</h2>
+            <p class="paper-title">RobotAgentBench: Towards Open-world Robot Autonomy</p>
+            <dl>
+              <!-- TODO: add the arXiv link once it is live -->
+              <div><dt>Paper</dt><dd class="forthcoming">arXiv link coming soon</dd></div>
+              <div><dt>Code</dt><dd><a href="https://github.com/AetherLabsAI/RobotAgentBench" target="_blank" rel="noopener noreferrer">github.com/AetherLabsAI/RobotAgentBench <span aria-hidden="true">↗</span></a></dd></div>
+              <div><dt>Model</dt><dd><a href="https://huggingface.co/AetherLabs-AI/InternVLA-A1.5-RAB" target="_blank" rel="noopener noreferrer">huggingface.co/AetherLabs-AI/InternVLA-A1.5-RAB <span aria-hidden="true">↗</span></a></dd></div>
+              <div><dt>Website</dt><dd><a href="https://aetherlabsai.github.io/RobotAgentBench/" target="_blank" rel="noopener noreferrer">aetherlabsai.github.io/RobotAgentBench/ <span aria-hidden="true">↗</span></a></dd></div>
+            </dl>
+          </section>
+        </section>
+
+        <section class="article-section" id="capabilities" aria-labelledby="capabilities-title">
+          <h2 id="capabilities-title"><span class="section-number">01 — Multi-level evaluation</span>What does a robot agent need to act autonomously in the real world?</h2>
+          <p>“Prepare the home for guests” sounds simple—but where should a robot begin? It must identify what needs to be cleaned, select appropriate food based on user preferences, coordinate multiple activities, and recover when manipulation attempts fail. Such challenges are intrinsic to everyday physical environments.</p>
+          <p>RobotAgentBench evaluates these demands across five complementary dimensions: task discovery, context reasoning, manipulation, failure recovery, and robustness. Beyond assessing individual capabilities through dedicated tasks, we introduce four open-ended scenarios that require agents to integrate these capabilities and coordinate multiple tasks to autonomously fulfill high-level user needs.</p>
+
+          <figure class="figure" id="figure-overview">
+            <a class="figure-image" href="../assets/fig/fig1_overview.webp?v=2" aria-label="Open Figure 1 at full size"><img src="../assets/fig/fig1_overview_1600.webp?v=2" alt="Overview of RobotAgentBench: environments, tasks and evaluation" width="1600" height="947" loading="lazy"></a>
+            <figcaption><span class="figure-label">Figure 1</span>Overview of RobotAgentBench.</figcaption>
+          </figure>
+
+          <h3 id="task-level"><span class="stage-label">Level 1</span>Task-level evaluation</h3>
+          <p>We design five complementary evaluation settings to examine how robots determine what to do, execute physical actions, and adapt to unexpected outcomes. Each setting comprises a suite of dedicated tasks.</p>
+          <div class="capx" id="capx">
+            <div class="capx-stage">
+              <video class="cap-vid is-active" data-cap-src="../assets/video/cap_manipulation.mp4?v=2" poster="../assets/video/cap_manipulation.jpg?v=2" muted playsinline preload="none" aria-label="Manipulation test"></video>
+              <video class="cap-vid" data-cap-src="../assets/video/cap_discovery.mp4?v=2" poster="../assets/video/cap_discovery.jpg?v=2" muted playsinline preload="none" aria-label="Task Discovery test"></video>
+              <video class="cap-vid" data-cap-src="../assets/video/cap_reasoning.mp4?v=2" poster="../assets/video/cap_reasoning.jpg?v=2" muted playsinline preload="none" aria-label="Context Reasoning test"></video>
+              <video class="cap-vid" data-cap-src="../assets/video/cap_recovery.mp4?v=2" poster="../assets/video/cap_recovery.jpg?v=2" muted playsinline preload="none" aria-label="Failure Recovery test"></video>
+              <video class="cap-vid" data-cap-src="../assets/video/cap_robustness.mp4?v=2" poster="../assets/video/cap_robustness.jpg?v=2" muted playsinline preload="none" aria-label="Robustness test"></video>
+              <span class="capx-tag" id="capxTag">Capability test 01 / 05</span>
+            </div>
+            <div class="capx-list" role="tablist" aria-label="Five capability tests">
+              <button class="cap-item is-active" type="button" role="tab" aria-selected="true" data-i="0" style="--c:var(--c-mani)">
+                <span class="cap-n">01</span>
+                <span class="cap-txt"><b>Manipulation</b><em>Translate explicit instructions into correct physical actions.</em><span class="cap-desc">18 short-horizon and 8 long-horizon tasks with explicit instructions, across rigid, deformable and granular objects.</span></span>
+                <span class="cap-prog"><i></i></span>
+              </button>
+              <button class="cap-item" type="button" role="tab" aria-selected="false" data-i="1" style="--c:var(--c-disc)">
+                <span class="cap-n">02</span>
+                <span class="cap-txt"><b>Task Discovery</b><em>Actively observe the environment to identify tasks required by the situation.</em><span class="cap-desc">No task list: from scenario context alone, the robot explores the home and identifies what needs to be done.</span></span>
+                <span class="cap-prog"><i></i></span>
+              </button>
+              <button class="cap-item" type="button" role="tab" aria-selected="false" data-i="2" style="--c:var(--c-reas)">
+                <span class="cap-n">03</span>
+                <span class="cap-txt"><b>Context Reasoning</b><em>Determine how to complete tasks based on context and user needs.</em><span class="cap-desc">Drink, snack, waste and sofa-object selection from implicit requirements such as preferences or sorting rules.</span></span>
+                <span class="cap-prog"><i></i></span>
+              </button>
+              <button class="cap-item" type="button" role="tab" aria-selected="false" data-i="3" style="--c:var(--c-reco)">
+                <span class="cap-n">04</span>
+                <span class="cap-txt"><b>Failure Recovery</b><em>Recognize manipulation failures and autonomously recover to complete the task.</em><span class="cap-desc">Starting from missed grasps or knocked-over objects, the robot must detect the failure and resume the task.</span></span>
+                <span class="cap-prog"><i></i></span>
+              </button>
+              <button class="cap-item" type="button" role="tab" aria-selected="false" data-i="4" style="--c:var(--c-robu)">
+                <span class="cap-n">05</span>
+                <span class="cap-txt"><b>Robustness</b><em>Adapt to unexpected changes and disturbances in the environment.</em><span class="cap-desc">Human interventions and lighting changes during execution — the goal stays the same.</span></span>
+                <span class="cap-prog"><i></i></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="tp-block" id="task-preview" data-base="../" hidden>
+            <div class="tp-heading">
+              <p class="tp-title"><span class="tp-eyebrow">Task-Level Evaluation</span>Household tasks, in motion.</p>
+              <div class="tp-controls" aria-label="Task preview controls">
+                <button class="tp-icon" type="button" data-tp-scroll="-1" aria-label="Scroll to previous tasks">←</button>
+                <button class="tp-icon" type="button" data-tp-scroll="1" aria-label="Scroll to next tasks">→</button>
+                <button class="tp-pause" type="button" data-tp-pause aria-pressed="false">Ⅱ Pause scrolling</button>
+              </div>
+            </div>
+            <div class="tp-strips"></div>
+            <div class="tp-footer"><span><span data-tp-count></span> · Hover to pause. Click to watch.</span><button class="tp-browse" type="button" data-tp-browse>Browse task videos ↗</button></div>
+          </div>
+
+          <h3 id="scenario-level"><span class="stage-label">Level 2</span>Scenario-level evaluation</h3>
+          <p>Unlike task-level evaluation, robots do not receive explicit task lists. Instead, they must autonomously explore the environment, identify relevant tasks, interpret user needs, and plan their execution.</p>
+          <div class="scen-stage">
+            <video id="scenVideo" data-scen-src="../assets/video/scenario_jack.mp4?v=2" poster="../assets/video/scenario_jack.jpg?v=2" muted playsinline controls preload="none" aria-label="An open-ended scenario run"></video>
+          </div>
+          <ul class="scen-cards">
+            <li class="scen-card"><span class="scen-card-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.6"/><path d="M16.5 14.5c2.6.2 4.4 2 5 5"/></svg></span><b>Host guests</b></span><q>Alex is coming over shortly. Please get some refreshments ready and make the place ready for his visit.</q></li>
+            <li class="scen-card"><span class="scen-card-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 3v8a3 3 0 0 0 6 0V3M7 3v18M17 3c-2 0-3 2.5-3 6s1 4 3 4v8"/></svg></span><b>Prepare dinner</b></span><q>Ryan is joining us for dinner. He’s been working out a lot lately. Please get everything ready for him.</q></li>
+            <li class="scen-card"><span class="scen-card-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></span><b>Prepare to leave</b></span><q>Emma is going out to work away from home today, and it’s raining. Could you help her get ready?</q></li>
+            <li class="scen-card"><span class="scen-card-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3 9.5 12M6 12h8l2 9H4z"/><path d="M8 16v5M12 16v5"/></svg></span><b>Tidy the room</b></span><q>I’m about to start a video call from the sofa. Could you tidy up the room first?</q></li>
+          </ul>
+
+        </section>
+
+        <section class="article-section" id="environment" aria-labelledby="environment-title">
+          <h2 id="environment-title"><span class="section-number">02 — Real-to-sim</span>An agent-assisted, human-in-the-loop real-to-sim pipeline.</h2>
+          <p>To enable realistic and scalable evaluation, we develop an agent-assisted, human-in-the-loop real-to-sim pipeline that starts from a physical room in a real home, reconstructs it in simulation, expands the reconstructed scene into diverse interactive configurations, and collects demonstrations for training and evaluation.</p>
+
+          <figure class="figure" id="figure-pipeline">
+            <a class="figure-image" href="../assets/fig/fig2_pipeline.webp?v=2" aria-label="Open Figure 2 at full size"><img src="../assets/fig/fig2_pipeline_1600.webp?v=2" alt="Real-to-sim pipeline and training data statistics" width="1600" height="919" loading="lazy"></a>
+            <figcaption><span class="figure-label">Figure 2</span>Real-to-sim pipeline and training data statistics for RobotAgentBench.</figcaption>
+          </figure>
+
+          <div class="video-pair">
+            <figure>
+              <video src="../assets/video/r2s_layouts.mp4" poster="../assets/video/r2s_layouts.jpg" muted loop playsinline autoplay preload="metadata" width="1440" height="600" aria-label="Fifty household layouts generated by the real-to-sim pipeline"></video>
+              <figcaption><span class="figure-label">50 household layouts.</span>One real home expands into diverse room layouts with different decor, walls, floors and furniture.</figcaption>
+            </figure>
+            <figure>
+              <video src="../assets/video/r2s_variations.mp4" poster="../assets/video/r2s_variations.jpg" muted loop playsinline autoplay preload="metadata" width="1280" height="720" aria-label="The same tasks under different object appearance, scene layout and lighting"></video>
+              <figcaption><span class="figure-label">Scene variations.</span>For the same task, RAB includes different object appearances, scene layouts and lighting conditions.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="article-section" id="leaderboard" aria-labelledby="leaderboard-title">
+          <h2 id="leaderboard-title"><span class="section-number">03 — Leaderboard</span>How far are we from open-world autonomy?</h2>
+          <p>We conduct systematic experiments at both the task and scenario levels to evaluate standalone VLA/WAM-based policies and complete robot agents. Building on the unified robot agent framework we developed, we compare different harness designs and examine their effects on task performance.</p>
+          <ul class="term-list">
+            <li><span class="term">Planner<small>P</small></span><span class="def">Interprets environmental context and user requirements, decomposes tasks, and adapts plans based on execution feedback.</span></li>
+            <li><span class="term">Executor<small>E</small></span><span class="def">Translates instructions into physical actions through learned policy models (e.g., VLA and WAM) or code-based control.</span></li>
+            <li><span class="term">Verifier<small>V</small></span><span class="def">Monitors execution outcomes, identifies failures, and guides corrective actions.</span></li>
+          </ul>
+          <p>Each agent is denoted by its Planner / Executor / Verifier configuration: <code>C</code> code-based control, <code>L</code> learned VLA/WAM policy, <code>H</code> hybrid code-based and learned execution, <code>–</code> absent component.</p>
+          <ul class="term-list">
+            <li><span class="term">VLA/WAM Policy + Code Verifier<small>– / L / C</small></span><span class="def">A VLA/WAM policy generates actions, while a coding-agent verifier monitors execution, selects action prefixes, and applies local corrections before querying the policy again.</span></li>
+            <li><span class="term">Code Planner + VLA/WAM Policy<small>C / L / –</small></span><span class="def">A coding-agent planner decomposes tasks into subtask instructions for a VLA/WAM policy and revises them based on execution feedback.</span></li>
+            <li><span class="term">Fully Code-based<small>C / C / C</small></span><span class="def">A coding agent plans, executes, and verifies tasks by composing predefined control functions (e.g., <code>move_eef_to()</code>) and checking execution outcomes.</span></li>
+            <li><span class="term">Hybrid Code/VLA/WAM Policy<small>C / H / C</small></span><span class="def">A coding agent plans and verifies execution, dynamically combining code-based control and VLA/WAM policies as callable tools based on task requirements and feedback.</span></li>
+            <li><span class="term">Code-based + RSI<small>C / C / C + RSI</small></span><span class="def">The fully code-based agent iteratively improves its control tools and accumulates experience from execution feedback, retaining these improvements across attempts.</span></li>
+          </ul>
+
+          <figure class="table-figure" aria-labelledby="main-caption">
+            <figcaption id="main-caption"><span class="figure-label">Table 1</span>Task-level and scenario-level results.</figcaption>
+            <div class="table-scroll">
+              <table class="results-table">
+                <thead>
+                  <tr><th rowspan="2" scope="col">Model / agent</th><th colspan="6" scope="colgroup">Task level</th><th scope="col">Scenario level</th></tr>
+                  <tr><th scope="col">Manipulation</th><th scope="col">Discovery</th><th scope="col">Reasoning</th><th scope="col">Recovery</th><th scope="col">Robustness</th><th scope="col">Average</th><th scope="col">Open-Ended</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="group-row"><th colspan="8" scope="colgroup">VLA</th></tr>
+                  <tr><th scope="row">π<sub>0.5</sub></th><td>13.1</td><td>1.2</td><td>16.7</td><td>20.3</td><td>8.1</td><td class="col-avg">11.9</td><td>1.1</td></tr>
+                  <tr><th scope="row">Xiaomi Robotics-1</th><td>18.1</td><td>0.5</td><td>15.8</td><td>5.8</td><td>21.6</td><td class="col-avg">12.4</td><td>0.4</td></tr>
+                  <tr><th scope="row">InternVLA-A1.5</th><td>11.3</td><td>0.7</td><td>10.8</td><td>23.2</td><td>44.2</td><td class="col-avg">18.0</td><td>1.0</td></tr>
+                  <tr><th scope="row">MolmoAct2</th><td>4.3</td><td>1.7</td><td>5.0</td><td>2.7</td><td>2.4</td><td class="col-avg">3.2</td><td>1.9</td></tr>
+                  <tr><th scope="row">LingBot-VLA2</th><td>6.5</td><td>0.3</td><td>1.7</td><td>6.6</td><td>10.2</td><td class="col-avg">5.1</td><td>0.5</td></tr>
+                  <tr><th scope="row">HY-VLA</th><td>10.6</td><td>1.0</td><td>15.0</td><td>3.3</td><td>7.6</td><td class="col-avg">7.5</td><td>0.8</td></tr>
+                  <tr><th scope="row">Galaxea G0.5</th><td>11.0</td><td>1.5</td><td>25.0</td><td>9.3</td><td>8.1</td><td class="col-avg">11.0</td><td>1.3</td></tr>
+                  <tr><th scope="row">X-VLA</th><td>9.9</td><td>0.4</td><td>5.0</td><td>6.8</td><td>7.6</td><td class="col-avg">5.9</td><td>0.3</td></tr>
+                  <tr class="group-row"><th colspan="8" scope="colgroup">WAM</th></tr>
+                  <tr><th scope="row">τ<sub>0</sub> <small>low-level</small></th><td>7.7</td><td>0.6</td><td>1.7</td><td>3.5</td><td>7.8</td><td class="col-avg">4.3</td><td>0.5</td></tr>
+                  <tr><th scope="row">OpenWAM-Alpha</th><td>13.4</td><td>1.2</td><td>15.0</td><td>4.6</td><td>8.6</td><td class="col-avg">8.6</td><td>2.0</td></tr>
+                  <tr><th scope="row">LingBot-VA</th><td>5.0</td><td>1.5</td><td>3.3</td><td>5.4</td><td>4.2</td><td class="col-avg">3.9</td><td>0.4</td></tr>
+                  <tr class="group-row"><th colspan="8" scope="colgroup">Robot agents</th></tr>
+                  <tr><th scope="row">Codex <small>C/C/C</small></th><td>32.4</td><td>35.2</td><td>38.3</td><td>22.0</td><td>27.1</td><td class="col-avg">31.0</td><td>8.4</td></tr>
+                  <tr><th scope="row">Claude Code <small>C/C/C</small></th><td>20.6</td><td>24.5</td><td>60.0</td><td>44.2</td><td>17.1</td><td class="col-avg">33.3</td><td>9.2</td></tr>
+                  <tr><th scope="row">Antigravity CLI <small>C/C/C</small></th><td>29.2</td><td>36.5</td><td>80.0</td><td>27.8</td><td>25.0</td><td class="col-avg">39.7</td><td>9.8</td></tr>
+                  <tr><th scope="row">Codex + InternVLA-A1.5 <small>–/L/C</small></th><td>18.9</td><td>4.3</td><td>23.3</td><td>24.6</td><td>45.4</td><td class="col-avg">23.3</td><td>3.7</td></tr>
+                  <tr><th scope="row">Codex + InternVLA-A1.5 <small>C/L/–</small></th><td>16.5</td><td>4.0</td><td>40.0</td><td>26.8</td><td>44.8</td><td class="col-avg">26.4</td><td>9.1</td></tr>
+                  <tr class="best-row"><th scope="row">Codex + InternVLA-A1.5 <small>C/H/C</small></th><td>42.5</td><td>37.2</td><td>73.3</td><td>38.6</td><td>50.8</td><td class="col-avg">48.5</td><td>15.4</td></tr>
+                  <tr><th scope="row">Codex <small>C/C/C + RSI</small></th><td>36.8</td><td>33.3</td><td>63.3</td><td>31.4</td><td>46.5</td><td class="col-avg">42.3</td><td>10.8</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">Average is the mean of the five task-level scores. Coding agents: Codex (GPT-6 Astra) · Claude Code (Opus 5.5) · Antigravity CLI (Gemini 4 Argon). Learned policy in agents: InternVLA-A1.5. RSI results from the 10th self-improvement round.</p>
+          </figure>
+
+          <figure class="table-figure" aria-labelledby="open-caption">
+            <figcaption id="open-caption"><span class="figure-label">Table 2</span>Open-ended scenarios.</figcaption>
+            <div class="table-scroll">
+              <table class="results-table">
+                <thead>
+                  <tr><th rowspan="2" scope="col">Model / agent</th><th colspan="4" scope="colgroup">Scenario progress</th><th colspan="4" scope="colgroup">Behavioral metrics</th></tr>
+                  <tr><th scope="col">Guests</th><th scope="col">Dinner</th><th scope="col">Leaving</th><th scope="col">Tidying</th><th scope="col">Coverage<small>↑</small></th><th scope="col">Progress<small>↑</small></th><th scope="col">Recovery<small>↑</small></th><th scope="col">Stagnation<small>↓</small></th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">InternVLA-A1.5 <small>VLA</small></th><td>0.3</td><td>1.8</td><td>1.2</td><td>0.7</td><td>2.3</td><td>4.5</td><td>0.6</td><td>88.3</td></tr>
+                  <tr><th scope="row">OpenWAM-Alpha <small>WAM</small></th><td>0.9</td><td>3.4</td><td>2.1</td><td>1.6</td><td>3.1</td><td>2.7</td><td>0.2</td><td>84.6</td></tr>
+                  <tr><th scope="row">Codex <small>C/C/C</small></th><td>11.2</td><td>3.6</td><td>1.4</td><td>17.4</td><td>13.4</td><td>15.2</td><td>15.4</td><td>33.7</td></tr>
+                  <tr><th scope="row">Claude Code <small>C/C/C</small></th><td>6.4</td><td>12.8</td><td>8.1</td><td>9.5</td><td>12.8</td><td>16.2</td><td>18.8</td><td>18.7</td></tr>
+                  <tr><th scope="row">Antigravity CLI <small>C/C/C</small></th><td>6.0</td><td>13.8</td><td>13.4</td><td>6.0</td><td>15.8</td><td>17.0</td><td>37.5</td><td>18.4</td></tr>
+                  <tr><th scope="row">Codex <small>C/C/C + RSI</small></th><td>13.1</td><td>6.4</td><td>3.0</td><td>20.7</td><td>20.3</td><td>19.6</td><td>38.9</td><td>12.3</td></tr>
+                  <tr class="best-row"><th scope="row">Codex + InternVLA-A1.5 <small>C/H/C</small></th><td>15.8</td><td>14.3</td><td>13.9</td><td>17.6</td><td>15.2</td><td>25.1</td><td>30.7</td><td>12.1</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note"><strong>Coverage</strong>: fraction of scenario tasks identified and initiated · <strong>Progress</strong>: mean normalized progress on initiated tasks · <strong>Recovery</strong>: fraction of execution failures recovered · <strong>Stagnation</strong>: fraction of time spent in repetitive or no-progress states.</p>
+          </figure>
+        </section>
+
+        <section class="article-section" id="findings" aria-labelledby="findings-title">
+          <h2 id="findings-title"><span class="section-number">04 — Analysis</span>What we found.</h2>
+
+          <h3 id="finding-1"><span class="finding-number">01</span>Policies stall; agents get stuck.</h3>
+          <p>Standalone VLA/WAM policies rarely explore in response to context. They spend most of their time idle or making unproductive movements, with stagnation above 84%. Robot agents identify tasks more actively, but frequent execution errors leave them retrying a single subtask until the time limit.</p>
+          <figure class="figure">
+            <a class="figure-image" href="../assets/fig/fig3_openended_case.webp?v=2" aria-label="Open Figure 3 at full size"><img src="../assets/fig/fig3_openended_case_1600.webp?v=2" alt="Open-ended scenario case studies: InternVLA-A1.5 versus Codex" width="1600" height="1011" loading="lazy"></a>
+            <figcaption><span class="figure-label">Figure 3</span>InternVLA-A1.5 (left) fails to initiate any task, while Codex (right) repeatedly attempts a single subtask until reaching the per-task time limit.</figcaption>
+          </figure>
+
+          <h3 id="finding-2"><span class="finding-number">02</span>Who plans, and who executes, both matter.</h3>
+          <p>Pairing four policy executors with three coding-agent planners, Antigravity CLI yields the largest gains as a planner, while InternVLA-A1.5 is the best executor. Its stronger robustness and failure recovery, together with more reliable following of revised instructions, make it well suited to this role.</p>
+          <figure class="figure">
+            <a class="figure-image" href="../assets/fig/fig4a_task.webp" aria-label="Open Figure 4a at full size"><img src="../assets/fig/fig4a_task.webp" alt="Task-level performance across planner and executor combinations" width="2600" height="541" loading="lazy"></a>
+            <figcaption><span class="figure-label">Figure 4a</span>Task-level performance across planner–executor combinations.</figcaption>
+          </figure>
+          <figure class="figure">
+            <a class="figure-image" href="../assets/fig/fig4b_scenario.webp" aria-label="Open Figure 4b at full size"><img src="../assets/fig/fig4b_scenario.webp" alt="Scenario-level performance across planner and executor combinations" width="2600" height="541" loading="lazy"></a>
+            <figcaption><span class="figure-label">Figure 4b</span>Scenario-level performance across planner–executor combinations.</figcaption>
+          </figure>
+
+          <h3 id="finding-3"><span class="finding-number">03</span>Concise instructions are easier to follow.</h3>
+          <p>Antigravity CLI writes shorter instructions, switches them less often, and uses fewer execution-specific details and simpler vocabulary. Codex often specifies detailed procedures, even which hand to use, and learned executors struggle to interpret them.</p>
+          <figure class="figure">
+            <a class="figure-image" href="../assets/fig/fig5_instruction_style.webp?v=2" aria-label="Open Figure 5 at full size"><img src="../assets/fig/fig5_instruction_style.webp?v=2" alt="Instruction length, switching frequency, specificity and vocabulary richness for three coding-agent planners" width="2800" height="685" loading="lazy"></a>
+            <figcaption><span class="figure-label">Figure 5</span>Planner instruction characteristics across three coding agents (10 sampled open-ended episodes each).</figcaption>
+          </figure>
+
+          <h3 id="finding-4"><span class="finding-number">04</span>Recursive self-improvement keeps paying off.</h3>
+          <p>Over ten consecutive episodes, all three code-based agents improve at both levels as they refine reusable control functions. For example, they learn to decompose an infeasible single-shot reach into smaller steps through feasible intermediate poses.</p>
+          <figure class="figure">
+            <a class="figure-image" href="../assets/fig/fig6_rsi.webp" aria-label="Open Figure 6 at full size"><img src="../assets/fig/fig6_rsi.webp" alt="Task-level and scenario-level performance of three coding agents over ten RSI iterations" width="2800" height="740" loading="lazy"></a>
+            <figcaption><span class="figure-label">Figure 6</span>Task-level and scenario-level performance of three coding agents over successive RSI iterations.</figcaption>
+          </figure>
+
+          <h3 id="finding-5"><span class="finding-number">05</span>From simulation to the real home.</h3>
+          <p>On matched subsets evaluated with the AgiBot G1, real-world scores are generally lower because physical interaction is harder and scenes are more cluttered. However, the relative ranking of models and agents is preserved.</p>
+          <figure class="figure">
+            <a class="figure-image" href="../assets/fig/fig7_real_world.webp?v=2" aria-label="Open Figure 7 at full size"><img src="../assets/fig/fig7_real_world_1600.webp?v=2" alt="Real-world evaluation examples with the AgiBot G1" width="1600" height="478" loading="lazy"></a>
+            <figcaption><span class="figure-label">Figure 7</span>Real-world evaluation examples with the AgiBot G1: a robustness task under human perturbation and an open-ended scenario.</figcaption>
+          </figure>
+
+          <figure class="table-figure" aria-labelledby="real-caption">
+            <figcaption id="real-caption"><span class="figure-label">Table 3</span>Sim vs. real.</figcaption>
+            <div class="table-scroll">
+              <table class="results-table results-table-dense">
+                <thead>
+                  <tr><th rowspan="2" scope="col">Model / agent</th><th rowspan="2" scope="col">Environment</th><th colspan="6" scope="colgroup">Task level</th><th scope="col">Scenario level</th></tr>
+                  <tr><th scope="col">Manipulation</th><th scope="col">Discovery</th><th scope="col">Reasoning</th><th scope="col">Recovery</th><th scope="col">Robustness</th><th scope="col">Average</th><th scope="col">Open-Ended</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row" rowspan="2">InternVLA-A1.5 <small>VLA</small></th><td>Sim</td><td>11.8</td><td>1.2</td><td>12.5</td><td>20.8</td><td>42.7</td><td class="col-avg">17.8</td><td>1.4</td></tr>
+                  <tr><td>Real</td><td class="down">10.7</td><td>1.7</td><td class="down">10.0</td><td class="down">15.0</td><td class="down">30.0</td><td class="col-avg down">13.5</td><td class="down">1.0</td></tr>
+                  <tr><th scope="row" rowspan="2">OpenWAM-Alpha <small>WAM</small></th><td>Sim</td><td>14.5</td><td>0.8</td><td>12.5</td><td>5.5</td><td>9.2</td><td class="col-avg">8.5</td><td>2.4</td></tr>
+                  <tr><td>Real</td><td class="down">10.0</td><td class="down">0.0</td><td>15.0</td><td class="down">5.3</td><td>10.5</td><td class="col-avg down">8.2</td><td class="down">0.0</td></tr>
+                  <tr><th scope="row" rowspan="2">Codex <small>C/C/C</small></th><td>Sim</td><td>35.8</td><td>38.4</td><td>45.8</td><td>24.1</td><td>26.8</td><td class="col-avg">34.2</td><td>8.7</td></tr>
+                  <tr><td>Real</td><td class="down">33.0</td><td class="down">33.3</td><td class="down">44.2</td><td>25.0</td><td class="down">24.0</td><td class="col-avg down">31.9</td><td class="down">6.0</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">Matched evaluation subsets in simulation and in the physical home (AgiBot G1), with equal numbers of training demonstrations. Absolute scores drop in the real world, but rankings are preserved.</p>
+          </figure>
+        </section>
+
+        <section class="article-section" id="citation" aria-labelledby="citation-title">
+          <h2 id="citation-title"><span class="section-number">Citation</span>BibTeX</h2>
+          <pre class="bibtex">@article{mao2026robotagentbench,
+  title   = {RobotAgentBench: Towards Open-world Robot Autonomy},
+  author  = {Mao, Lingjun and Cao, Jinglin and He, Lukun and Xu, Wenpeng and
+             Yan, Yuchen and Jin, Hengyu and Zhang, Zijun and Tang, Jinzhou and
+             Jin, Songyao and Liu, Ziche and Shao, Yifei and Huang, Junbo and
+             Nan, Fang and Han, Ruobing and Xi, Ziqiao and Xu, Ziming and
+             Liang, Shuang and Zhu, Sibo and Wu, Wenyi and Wang, Xinyue and
+             Huang, Yiming and Zou, Xinkai and Zhu, Gao and Zhou, Kun and
+             Huang, Biwei},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</pre>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="https://aetherlabs.ai/" aria-label="Aether AI home"><img src="../assets/img/aetherai-wordmark-black.svg" alt="Aether AI" width="2153" height="200" loading="lazy"></a>
+    <p>© 2026 Aether AI</p>
+    <a href="https://aetherlabs.ai/blog.html">All articles <span aria-hidden="true">↗</span></a>
+  </footer>
+
+  <script src="../assets/task-previews.js?v=2"></script>
+  <script src="../task-preview.js?v=3"></script>
+  <script src="showcase.js?v=1"></script>
+</body>
+</html>

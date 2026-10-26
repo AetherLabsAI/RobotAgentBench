@@ -4,7 +4,7 @@ Static site for **RobotAgentBench: Towards Open-world Robot Autonomy** (no build
 
 Preview locally (the script supports HTTP range requests, so videos can be seeked):
 
-    python3 serve.py 8000   # then open http://localhost:8000
+    python3 serve.py 8000   # then open http://localhost:8000 (blog: http://localhost:8000/blog/)
 
 ## Layout
 - `index.html` — page structure and copy
@@ -14,6 +14,7 @@ Preview locally (the script supports HTTP range requests, so videos can be seeke
 - `assets/fig/` — paper figures (`*_1600.webp` are the on-page copies; the full-size file opens on click)
 - `assets/video/` — demo, looping clips, task previews (`task-previews/thumbs/` are the small card clips)
 - `assets/img/` — project and institution logos, WeChat group QR code
+- `blog/` — the RobotAgentBench blog post (`blog/index.html`, `blog.css`, `showcase.js`); it reuses the site's `assets/`, `task-preview.js` and `assets/task-previews.js`
 
 ## Updating
 - Leaderboard: edit the `T1`, `T2`, `T3` arrays in `app.js`; ranks, medals and highlights are computed.

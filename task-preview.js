@@ -11,6 +11,8 @@
   document.querySelectorAll('[data-task-preview-link]').forEach(a => { a.hidden = false; });
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const saveData = navigator.connection?.saveData;
+  // Pages in a subfolder (the blog) set data-base="../" so the manifest's site-relative paths still resolve.
+  const base = section.dataset.base || '', url = u => !u || /^([a-z]+:|\/)/i.test(u) ? u : base + u;
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const duration = n => `${Math.floor(n / 60)}:${String(Math.round(n % 60)).padStart(2, '0')}`;
   const strips = section.querySelector('.tp-strips');
@@ -44,7 +46,7 @@
         const button = document.createElement('button'); button.type = 'button'; button.className = 'tp-card';
         button.setAttribute('aria-label', `Watch ${t.title}`);
         if (copy) { button.tabIndex = -1; button.setAttribute('aria-hidden', 'true'); }
-        button.innerHTML = `<span class="tp-media"><img src="${esc(t.poster)}" alt="" loading="lazy"><video data-src="${esc(t.thumb || t.src)}" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><span class="tp-play" aria-hidden="true">▶</span></span><span class="tp-card-info"><span class="tp-card-meta"><span class="tp-card-id">Task-Level Evaluation</span><span>${duration(t.duration)}</span></span><span class="tp-card-title">${esc(t.title)}</span></span>`;
+        button.innerHTML = `<span class="tp-media"><img src="${esc(url(t.poster))}" alt="" loading="lazy"><video data-src="${esc(url(t.thumb || t.src))}" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><span class="tp-play" aria-hidden="true">▶</span></span><span class="tp-card-info"><span class="tp-card-meta"><span class="tp-card-id">Task-Level Evaluation</span><span>${duration(t.duration)}</span></span><span class="tp-card-title">${esc(t.title)}</span></span>`;
         const video = button.querySelector('video'); video.muted = true;
         // Cards play a small 8 s clip (thumb, cut from the same point); the dialog plays the full video.
         if (!t.thumb) video.addEventListener('loadedmetadata', () => { video.currentTime = Math.min(t.duration * .16, 12); });
@@ -106,7 +108,7 @@
     dialog.querySelector('[data-prev]').disabled = index === 0;
     dialog.querySelector('[data-next]').disabled = index === tasks.length - 1;
     picker.value = index;
-    player.pause(); player.src = t.src; player.poster = t.poster; player.load();
+    player.pause(); player.src = url(t.src); player.poster = url(t.poster); player.load();
     if (!dialog.open) dialog.showModal();
     dialogOpen = true; syncVideos(); player.play().catch(() => {});
   }
