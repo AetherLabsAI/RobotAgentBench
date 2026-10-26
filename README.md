@@ -52,9 +52,11 @@ See the [benchmark guide](docs/BENCHMARK.md) for the task list and scoring disti
 
 ### 1. Install the evaluation core
 
-Use **Python 3.11 or newer**. From a checkout of this repository:
+Use **Python 3.11 or newer** and check out the evaluation code's `main` branch:
 
 ```sh
+git clone --branch main https://github.com/AetherLabsAI/RobotAgentBench.git
+cd RobotAgentBench
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install .

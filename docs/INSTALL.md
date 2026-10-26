@@ -2,9 +2,12 @@
 
 ## Core package
 
-Use Python 3.11 or newer in a separate environment. For example, on a POSIX shell:
+Use Python 3.11 or newer in a separate environment. The evaluation code is on
+the `main` branch. For example, on a POSIX shell:
 
 ```sh
+git clone --branch main https://github.com/AetherLabsAI/RobotAgentBench.git
+cd RobotAgentBench
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install .
