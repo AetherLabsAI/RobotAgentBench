@@ -74,9 +74,11 @@ python -m robotagentbench catalog openend --format json
 
 ### 3. Install assets and configure a task workspace
 
-Place the matching asset archive set in `downloads`, then run:
+Download the matching [asset release](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets)
+and configure a local workspace:
 
 ```sh
+robotagentbench assets fetch resources/assets-0.1.0.json --cache downloads
 robotagentbench assets install resources/assets-0.1.0.json --cache downloads --destination Assets
 robotagentbench assets configure resources/assets-0.1.0.json --destination Assets --runtime Runtime --profile room
 ```

@@ -5,6 +5,9 @@ initial-state arrays and the layout/collision data needed by the task backends.
 Task code is included in the Python package; Isaac Sim and its SDK are installed
 separately.
 
+Asset repository: [DylanHel/RobotAgentBench-assets](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets).
+The manifest shipped with the code pins the exact dataset revision and file hashes.
+
 ## Install
 
 Place all archives from the matching asset release in `downloads`. From the
@@ -60,4 +63,6 @@ robotagentbench assets verify resources/assets-0.1.0.json --destination Assets
 Code and assets must use matching release versions. Keep the selected manifest
 with evaluation results so that the same source and resource versions can be
 identified later. Asset and third-party terms are separate from the code
-license; see [third-party notices](THIRD_PARTY.md).
+license. Team-authored resources use CC BY 4.0, while third-party resources
+retain their own terms. The manifest includes a license archive so the notices
+accompany automatic downloads and installation; see [third-party notices](THIRD_PARTY.md).

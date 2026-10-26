@@ -1,7 +1,11 @@
 {
   "schema": "robotagentbench.asset_release.v2",
   "version": "0.1.0",
-  "hosting": null,
+  "hosting": {
+    "provider": "huggingface",
+    "repository": "DylanHel/RobotAgentBench-assets",
+    "revision": "0d4d68d45464c8fb3a6d0df6537e50dc423698e6"
+  },
   "archives": {
     "assets-0.1.0-000.tar.gz": {
       "bytes": 778653490,
@@ -12078,6 +12082,36 @@
         "resource-index-v6.json": {
           "bytes": 1778210,
           "sha256": "bb521b512613d2d5648266b347b22f375cfac1fe235a0f53bc8dc3a16830af46"
+        }
+      }
+    },
+    "assets-0.1.0-licenses.tar.gz": {
+      "bytes": 11152,
+      "sha256": "6aa6a3aa85e54ad5c31008805845b9fd852c1d445f934881b471d04ec133ed37",
+      "members": {
+        "LICENSE.md": {
+          "bytes": 1033,
+          "sha256": "7d98212b9bb90750d6e2e14c1c8e717035794927e8080f0faf662d7604bf608f"
+        },
+        "LICENSES/AGIBOT-GenieSim-CC-BY-NC-SA-4.0.txt": {
+          "bytes": 20850,
+          "sha256": "e66c269d4819aaab34b49ef5220c4ddab6756f21bb5180761a4eb8561f2b7bbd"
+        },
+        "LICENSES/CC-BY-4.0.txt": {
+          "bytes": 18657,
+          "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+        },
+        "LICENSES/CC0-1.0.txt": {
+          "bytes": 7048,
+          "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+        },
+        "LICENSES/SHAPELY-BSD-3-Clause.txt": {
+          "bytes": 1583,
+          "sha256": "4a207eac9bf257ed286e1c6f0fce253d1abfdb134fc61ec855e37f5692a3f754"
+        },
+        "NOTICE.md": {
+          "bytes": 1704,
+          "sha256": "03c4bb6d9160ed76234e2198e779b8e3f9c9f46b9c6afbbb839bb37ec9721adf"
         }
       }
     }

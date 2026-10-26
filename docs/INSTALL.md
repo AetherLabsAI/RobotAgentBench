@@ -55,11 +55,12 @@ caches or output directories for setup checks.
 
 ## Install assets and configure a workspace
 
-Task source is included with the package. Place the matching asset archive set
-in `downloads`, install it, then assemble a local workspace:
+Task source is included with the package. Fetch the matching asset release,
+install it, then assemble a local workspace:
 
 ```sh
 robotagentbench backends --profile room --verify
+robotagentbench assets fetch resources/assets-0.1.0.json --cache downloads
 robotagentbench assets install resources/assets-0.1.0.json --cache downloads --destination Assets
 robotagentbench assets configure resources/assets-0.1.0.json --destination Assets --runtime Runtime --profile room
 ```

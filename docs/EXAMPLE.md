@@ -6,17 +6,18 @@ Docker, NVIDIA Container Toolkit and an Isaac Sim-compatible NVIDIA GPU.
 
 ## 1. Install code and assets
 
-Place the matching asset archives in `downloads`. From the repository root:
+From the repository root:
 
 ```sh
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install .
+robotagentbench assets fetch resources/assets-0.1.0.json --cache downloads
 robotagentbench assets install resources/assets-0.1.0.json --cache downloads --destination Assets
 robotagentbench assets configure resources/assets-0.1.0.json --destination Assets --runtime Runtime --profile room
 ```
 
-These installation commands work offline.
+For offline setup, place all release archives in `downloads` and skip `fetch`.
 
 ## 2. Build the native environment
 

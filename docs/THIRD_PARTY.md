@@ -37,12 +37,19 @@ retains its own attribution, license, and access requirements. The presence of
 an asset identifier or loading interface in this repository does not grant
 redistribution rights to the referenced asset.
 
-Team-authored room, task-object and demonstration resources are maintained
-separately from this code package. Their asset/data distribution terms are not
-automatically the code's Apache-2.0 license. Embedded third-party materials keep
-their original terms. The AgiBot robot model is a third-party resource; its
-exact asset license and acquisition terms must accompany a separately supplied
-robot package, rather than being inferred from the robot brand.
+Team-authored rooms, task objects, initialization records, question banks and
+standard answers in the [asset release](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets)
+use [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This is separate
+from the evaluation code's Apache-2.0 license. Embedded third-party materials
+and their adaptations keep their original terms.
+
+The AgiBot G1 / GenieSim robot resources retain the upstream
+[GenieSimAssets CC BY-NC-SA 4.0 terms](https://huggingface.co/datasets/agibot-world/GenieSimAssets/blob/a0813aad7c16165daffbe6c2737754e0344809ee/LICENSE),
+including their attribution, non-commercial and share-alike requirements.
+The asset release includes the original license text, resource attribution and
+integration-change notice. These resources are not relicensed under CC BY 4.0
+or Apache-2.0. Refer to `LICENSE.md`, `NOTICE.md` and `LICENSES/` in the asset
+repository; its license archive is downloaded by the asset installer.
 
 The source distribution includes the repository's rendered documentation
 images and short overview video. These previews are not simulator geometry,
