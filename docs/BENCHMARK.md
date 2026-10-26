@@ -2,9 +2,13 @@
 
 [← Back to RobotAgentBench](../README.md)
 
-RobotAgentBench studies household assistance at three levels: explicit manipulation, diagnostic capabilities, and open-ended scenarios.
+RobotAgentBench evaluates five task-level capabilities—Manipulation, Task Discovery, Context Reasoning, Failure Recovery, and Robustness—and four open-ended household scenarios.
 
-## Manipulation: 18 short tasks
+## Manipulation
+
+Manipulation covers **18 short tasks** and **8 long tasks**, from individual household manipulations to composite activities with multiple subgoals.
+
+### Short tasks
 
 All 18 short tasks contribute to the Manipulation score. Each has its own physical process-score definition and completion conditions.
 
@@ -24,7 +28,7 @@ All 18 short tasks contribute to the Manipulation score. Each has its own physic
 
 Names describe benchmark tasks, not necessarily one-to-one software identifiers. Some registered identifiers are internal components or variants and are not additional short tasks.
 
-## Long tasks: 8 composite activities
+### Long tasks
 
 Long tasks combine several subgoals in a continuous physical scene. They are evaluated separately and **do not contribute to the Manipulation score**.
 

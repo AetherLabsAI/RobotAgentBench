@@ -36,15 +36,14 @@ This repository contains the task backends, initialization and randomization, sc
 
 | Evaluation | Scope | What it measures |
 | :-- | :-- | :-- |
-| **Manipulation** | 18 short tasks | Executing explicit household manipulation instructions |
-| **Long tasks** | 8 composite tasks | Coordinating several subgoals in one continuous scene |
+| **Manipulation** | 18 short tasks and 8 long tasks | Executing explicit household instructions, from individual manipulations to activities with multiple subgoals |
 | **Task Discovery** | Scenario-conditioned exploration | Identifying and touching task-relevant objects |
 | **Context Reasoning** | Drink, snack, waste, and sofa-object selection | Choosing the correct object from context |
 | **Failure Recovery** | Predefined failed-action states | Recognizing a failed state and adapting subsequent actions |
 | **Robustness** | Object movement and lighting disturbances | Continuing the objective as execution conditions change |
 | **OpenEnd** | Dinner, guests, leaving, and tidying | Inferring, planning, and executing tasks from a high-level request |
 
-The **18 short tasks** contribute to the Manipulation score. The **8 long tasks** are evaluated separately and do not contribute to that score.
+Manipulation includes both short and long tasks. The reported Manipulation score uses the **18 short tasks**; the **8 long tasks** are evaluated separately.
 
 See the [benchmark guide](docs/BENCHMARK.md) for the task list and scoring distinctions.
 
