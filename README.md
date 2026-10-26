@@ -2,13 +2,14 @@
 
 <h1><img src="docs/images/robotagentbench-banner.png" alt="RobotAgentBench — Towards Open-world Robot Autonomy" width="100%"></h1>
 
-A multi-level benchmark for robot agents in realistic household environments.
+A benchmark for household robot agents, from individual manipulation tasks to open-ended assistance.
 
-[Website](https://aetherlabsai.github.io/RobotAgentBench/) · [Watch the video](docs/media/overview.mp4) · [Benchmark](docs/BENCHMARK.md) · [Quick start](#quick-start) · [Installation](docs/INSTALL.md) · [Runtime](docs/RUNTIME.md)
+[Website](https://aetherlabsai.github.io/RobotAgentBench/) · [Assets on Hugging Face](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets) · [Quick start](#quick-start) · [Benchmark](docs/BENCHMARK.md) · [Documentation](#documentation)
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square)](docs/INSTALL.md)
 [![Isaac Sim](https://img.shields.io/badge/Native_profile-Isaac_Sim_5.1-76B900?style=flat-square)](docs/INSTALL.md#native-environment)
 [![License: Apache 2.0](https://img.shields.io/badge/Code-Apache_2.0-0F766E?style=flat-square)](LICENSE)
+[![Assets](https://img.shields.io/badge/Hugging_Face-Assets-FFD21E?style=flat-square)](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets)
 
 </div>
 
@@ -21,12 +22,11 @@ A multi-level benchmark for robot agents in realistic household environments.
 
 ## Overview
 
-**RobotAgentBench** evaluates household robot agents in simulation, from explicit manipulation instructions to high-level requests that require discovering and coordinating multiple tasks. The benchmark uses the **AgiBot G1** embodiment, egocentric camera observations, and physically grounded process scores.
+**RobotAgentBench** is a simulation benchmark for household robot agents. Using the **AgiBot G1** embodiment, agents observe the home, identify what needs to be done, plan their actions, and execute them through a shared observation/action interface.
 
-- **Everyday manipulation.** Prepare coffee, use appliances, organize belongings, handle tablecloths, and move objects between household locations.
-- **Beyond task completion.** Probe task discovery, context reasoning, failure recovery, and robustness to execution-time disturbances.
-- **Open-ended assistance.** Combine household memory with scene observations to decide what to do, in what order, and how to preserve earlier results.
-- **Execution-grounded evaluation.** Task owners award process credit from measured simulation evidence—not from a plan, a tool call, or an agent's claim of success.
+The benchmark spans everyday manipulation, task discovery, context reasoning, failure recovery, robustness, and open-ended scenarios. Task-specific process scores measure verified physical progress, including partial completion.
+
+This repository contains the task backends, initialization and randomization, scoring, and evaluation runtime. Versioned simulation assets are available separately on [Hugging Face](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets).
 
 <p align="center">
   <a href="docs/images/robotagentbench-overview.png"><img src="docs/images/robotagentbench-overview.png" alt="RobotAgentBench overview: task-level capabilities and scenario-level household assistance" width="100%"></a>
@@ -44,13 +44,13 @@ A multi-level benchmark for robot agents in realistic household environments.
 | **Robustness** | Object movement and lighting disturbances | Continuing the objective as execution conditions change |
 | **OpenEnd** | Dinner, guests, leaving, and tidying | Inferring, planning, and executing tasks from a high-level request |
 
-The 18 short tasks contribute to the **Manipulation score**. The eight long tasks are evaluated separately. These benchmark counts are not the number of identifiers in the software catalog: catalogs also include variants and reusable scenario components.
+The **18 short tasks** contribute to the Manipulation score. The **8 long tasks** are evaluated separately and do not contribute to that score.
 
 See the [benchmark guide](docs/BENCHMARK.md) for the task list and scoring distinctions.
 
 ## Quick start
 
-### 1. Install the evaluation core
+### 1. Install the code
 
 Use **Python 3.11 or newer** and check out the evaluation code's `main` branch:
 
@@ -61,23 +61,14 @@ python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install .
 python -m robotagentbench --help
+robotagentbench catalog standalone
 ```
 
-The core package has no third-party Python runtime dependencies. You can inspect the catalogs without Isaac Sim, a GPU, assets, or model credentials.
+The core package and catalog inspection do not require Isaac Sim, a GPU, or model credentials. Native simulation uses a separate environment described below.
 
-### 2. Explore the catalogs
+### 2. Download assets
 
-```sh
-python -m robotagentbench catalog standalone
-python -m robotagentbench catalog openend --format json
-```
-
-`standalone` lists task and variant identifiers. `openend` lists reusable scenario component types—not the four scenario episodes or their scoring denominators.
-
-### 3. Install assets and configure a task workspace
-
-Download the matching [asset release](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets)
-and configure a local workspace:
+The [asset release](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets) is approximately **4.55 GB**, split into **18 archives**, including the license archive. It contains scene and robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers.
 
 ```sh
 robotagentbench assets fetch resources/assets-0.1.0.json --cache downloads
@@ -85,52 +76,51 @@ robotagentbench assets install resources/assets-0.1.0.json --cache downloads --d
 robotagentbench assets configure resources/assets-0.1.0.json --destination Assets --runtime Runtime --profile room
 ```
 
-Follow the [coffee example](docs/EXAMPLE.md) to build the native environment,
-prepare an episode and connect an agent through the observation/action protocol.
+The manifest pins an immutable asset revision and verifies file hashes. The commands create fresh `Assets` and `Runtime` directories; existing installations are not overwritten. For offline setup, place all archive parts in `downloads` and skip `fetch`. See the [asset guide](docs/ASSETS.md) for details.
 
-The repository includes task initialization, randomization, physical-state readers,
-process scoring, and native execution code. The [bundled backends](docs/BACKENDS.md)
-cover room tasks, coffee disturbances, failure recovery, and tablecloth tasks.
-Download the version-matched [asset release](docs/ASSETS.md) separately and install
-Isaac Sim in a compatible native environment.
+Standard answers are evaluator data and are not included in agent observations.
 
-## Native evaluation
+### 3. Prepare and run an example
 
-The agent interacts through synchronized observations and validated action chunks. The task owner retains responsibility for initialization, process scoring, progress timeouts, and termination.
+Native execution requires **Linux x86_64**, **Docker**, **NVIDIA Container Toolkit**, and an **Isaac Sim-compatible NVIDIA GPU**. Build the pinned native environment, then prepare the coffee task:
 
-| Interface | Configuration |
-| :-- | :-- |
-| Embodiment | AgiBot G1 |
-| Visual observations | One head camera and two wrist cameras |
-| Image resolution | Head: 1280 × 800; each wrist: 848 × 480 |
-| Control | 20 Hz; task-selected physical substeps |
-| Action representation | 20 joint targets in physical units and two mobile-base velocity commands |
-| Evaluation feedback | Task-specific process scores and terminal outcomes |
+```sh
+docker build -f docker/Dockerfile -t robotagentbench:native .
+python -m robotagentbench.namespace --runtime Runtime --image robotagentbench:native --plan
+python -m robotagentbench.namespace --runtime Runtime --image robotagentbench:native --prepare --name coffee_01
+```
 
-These image sizes describe the generic room profile. Specialized owners retain
-their original profiles; see [specialized owners](docs/SPECIALIZED.md).
+Review the [NVIDIA license setup](docs/EXAMPLE.md#4-start-the-task). If you accept the applicable terms, start the task worker:
 
-Native execution runs in a dedicated worker with reviewed source and asset bindings. Specialized recovery, atomic-coffee, and cloth owners require their corresponding integrations; they do not silently fall back to an unrelated backend. See [native control and lifecycle](docs/RUNTIME.md).
+```sh
+export OMNI_KIT_ACCEPT_EULA=YES
+mkdir -p gpu-locks
+python -m robotagentbench.namespace --runtime Runtime --image robotagentbench:native \
+  --run --name coffee_01 --gpu 0 --lock-root gpu-locks
+```
 
-Results contain task-specific process scores, completion status, and a termination
-reason. Setup or runtime errors are reported separately from scored episodes.
+The worker exposes a JSONL observation/action interface for an agent or recorded action source. Starting the worker does not run a policy automatically. Follow the [coffee walkthrough](docs/EXAMPLE.md) for interaction examples and the [runtime guide](docs/RUNTIME.md) for agent integration. Use the same GPU-lock directory for all jobs on a host.
+
+## Evaluation interface
+
+Agents receive synchronized camera observations and robot-state feedback, and submit physical action chunks. The standard room profile uses one head camera and two wrist cameras with a 20 Hz control interface. Each task handles its own process scores, completion conditions, and termination.
+
+Results include process scores, completion status, and a termination reason. Setup and runtime errors are reported separately from scored episodes. Camera, physics, and execution settings for specialized tasks are described in the [task backend guides](docs/BACKENDS.md).
 
 ## Documentation
 
 | Guide | Start here to… |
 | :-- | :-- |
 | [Benchmark](docs/BENCHMARK.md) | Understand task families, scenarios, and evaluation scope |
-| [Installation](docs/INSTALL.md) | Set up the core and review native prerequisites |
+| [Installation](docs/INSTALL.md) | Install the evaluator and native dependencies |
 | [Coffee example](docs/EXAMPLE.md) | Install assets, prepare an episode, and connect to the task worker |
-| [Backend source](docs/BACKENDS.md) | Locate the included task implementations and runtime profiles |
+| [Task backends](docs/BACKENDS.md) | Locate task implementations and execution profiles |
 | [Assets](docs/ASSETS.md) | Download, install, and verify a versioned asset release |
 | [CLI reference](docs/CLI.md) | Inspect catalogs, verify resources, and invoke configured native operators |
-| [Tablecloth tasks](docs/CLOTH.md) | Prepare and run the original native cloth owner |
-| [Specialized owners](docs/SPECIALIZED.md) | Configure recovery and coffee-disturbance native interpreters |
-| [Dependencies](docs/DEPENDENCIES.md) | Configure source, asset, interpreter, and native-library bindings |
-| [Task resources](docs/RESOURCES.md) | Identify per-task asset and dependency requirements |
+| [Tablecloth tasks](docs/CLOTH.md) | Configure the separate cloth environment |
+| [Recovery and coffee variants](docs/SPECIALIZED.md) | Configure specialized execution environments |
 | [Runtime](docs/RUNTIME.md) | Integrate workers, observations, actions, scoring, and shutdown |
-| [Third-party notices](docs/THIRD_PARTY.md) | Review software, dataset, and asset distribution boundaries |
+| [Licenses and notices](docs/THIRD_PARTY.md) | Read asset and dependency licensing terms |
 
 ## Repository structure
 
@@ -147,7 +137,7 @@ tests/              CPU contract and lifecycle tests
 
 ## Contributing
 
-For reproducible bug reports, include the task identifier, package revision, runtime profile, and a minimal error log. Remove credentials, private target bindings, and other sensitive configuration before sharing. Use [GitHub Issues](https://github.com/AetherLabsAI/RobotAgentBench/issues) for reports and questions.
+For questions and bug reports, use [GitHub Issues](https://github.com/AetherLabsAI/RobotAgentBench/issues). Include the task identifier, code revision, execution profile, and a minimal reproduction. Do not include credentials or sensitive configuration.
 
 Run the CPU tests from the repository root:
 
@@ -157,4 +147,6 @@ python -m unittest discover -s tests
 
 ## License
 
-Original evaluation code is licensed under [Apache-2.0](LICENSE). Simulator software, native libraries, datasets, model weights, and scene, robot, and object assets retain their own terms. See [third-party notices](docs/THIRD_PARTY.md).
+- **Evaluation code:** [Apache-2.0](LICENSE).
+- **Team-authored assets and task data:** [CC BY 4.0](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets/blob/main/LICENSE.md).
+- **Third-party materials:** retain their original terms, including CC BY-NC-SA 4.0 for the AgiBot GenieSim robot resources. See [third-party notices](docs/THIRD_PARTY.md) and the [asset notices](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets/blob/main/NOTICE.md).
