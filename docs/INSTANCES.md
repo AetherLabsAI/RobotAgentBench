@@ -59,6 +59,14 @@ changing any scene state, task target, scoring rule, or physical parameter.
 The other 1,430 state files are byte-identical to 0.2.0; the 1,350 non-OpenEnd
 records remain byte-identical to 0.1.0. Older releases remain available.
 
+## Current configuration bank (0.2.2)
+
+Version 0.2.2 includes the original scene-composition recipes for all 30
+long-task tray-stocking configurations and all 30 shelf-lighting configurations.
+It preserves every sampled physical state, seed, public context, and scoring
+target from 0.2.1; the other 1,410 configuration records are byte-identical.
+No room geometry or texture assets are added to the configuration download.
+
 ## What is stored
 
 The configuration bank contains small state records: the selected shared
@@ -77,7 +85,7 @@ runtime files are not additional downloads.
 
 Follow [Installation](INSTALL.md), then configure a fresh task workspace:
 
-Use configuration bank **0.2.1** with shared assets **0.1.3**, which include the
+Use configuration bank **0.2.2** with shared assets **0.1.3**, which include the
 OpenEnd room layout and current scene-preparation dependencies. The bank's
 original base-asset provenance remains 0.1.0; the current asset release preserves
 those resources and adds the shared layouts, path bindings, and dependencies.
@@ -93,12 +101,12 @@ do not replace those owners with the ordinary room worker.
 
 ## 2. Download the configuration bank
 
-The bank is approximately **233 MB** across six archives; the shared simulation
+The bank is approximately **234 MB** across six archives; the shared simulation
 assets are installed separately and are not duplicated in this download.
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.1.json \
+  --manifest resources/saved-instances-0.2.2.json \
   --cache downloads/configurations --destination /absolute/path/to/SavedConfigurations
 ```
 
