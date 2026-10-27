@@ -65,6 +65,13 @@ class NativeDriver:
         before = self.session.clock.current_time
         if abs(dt-1/self.session.clock.hz) > 1e-12:
             raise ValueError('Driver timestep differs from the selected workspace clock')
+        # Same trusted task-owned actor hook as the raw-action driver. It may
+        # command its declared disturbance, but may not advance the clock.
+        hook = getattr(self.session, 'before_physics', None)
+        if hook is not None:
+            hook(dt)
+            if self.session.clock.current_time != before:
+                raise RuntimeError('Environment actor hook must not step physics')
         report = self.simulate_fetch(dt)
         if abs(self.session.clock.current_time-before-dt) > 1e-6:
             raise RuntimeError('simulate/fetch must advance the shared clock exactly once')

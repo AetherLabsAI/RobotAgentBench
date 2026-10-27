@@ -28,7 +28,7 @@ class NativeControlTests(unittest.TestCase):
                 self.assertFalse(session.faulted)
                 self.assertEqual(session.control_index, 0)
 
-    def test_20_hz_boundaries_and_distinct_actor_hook_behavior(self):
+    def test_20_hz_boundaries_and_original_actor_hook_order(self):
         for module, driver in BRANCHES:
             for hz in (60, 240):
                 with self.subTest(branch=module.__name__, hz=hz):
@@ -40,8 +40,37 @@ class NativeControlTests(unittest.TestCase):
                     steps = [row for row in session.trace if row[0] == 'simulate']
                     hooks = [row for row in session.trace if row[0] == 'before']
                     self.assertEqual(len(steps), hz // 10)
-                    self.assertEqual(len(hooks), len(steps) if driver is ActionDriver else 0)
+                    self.assertEqual(len(hooks), len(steps))
+                    lifecycle = [row[0] for row in session.trace
+                                 if row[0] in ('before', 'simulate', 'after')]
+                    self.assertEqual(lifecycle, ['before', 'simulate', 'after'] * len(steps))
                     self.assertNotIn('opaque_task_result', reply['observation'])
+
+    def test_actor_hook_cannot_advance_clock_or_be_replayed(self):
+        for module, driver in BRANCHES:
+            with self.subTest(branch=module.__name__):
+                host, session = make_host(module.SessionHost, driver)
+                def invalid_hook(dt):
+                    session.clock.current_time += dt
+                session.before_physics = invalid_hook
+                with self.assertRaisesRegex(RuntimeError, 'must not step physics'):
+                    host.execute(request())
+                self.assertTrue(host.faulted)
+                self.assertFalse(any(row[0] in ('simulate', 'after', 'finish') for row in session.trace))
+                trace = deepcopy(session.trace)
+                with self.assertRaises(RuntimeError):
+                    host.execute(request())
+                self.assertEqual(trace, session.trace)
+
+    def test_sessions_without_actor_hook_keep_original_step_count(self):
+        for module, driver in BRANCHES:
+            with self.subTest(branch=module.__name__):
+                host, session = make_host(module.SessionHost, driver)
+                session.before_physics = None
+                reply = host.execute(request())
+                self.assertEqual(reply['actions_executed'], 1)
+                self.assertEqual(len([row for row in session.trace if row[0] == 'simulate']), 3)
+                self.assertFalse(any(row[0] == 'before' for row in session.trace))
 
     def test_terminal_session_stops_chunk_without_reinterpreting_result(self):
         for module, driver in BRANCHES:
