@@ -96,6 +96,26 @@ class LocalInstallationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             configure(manifest,self.assets,self.base/'Other','room')
 
+    def test_original_room_templates_are_available_in_mounted_source_families(self):
+        prefix='libraries/original_absolute/home/lingjun/robot_agent_arena/'
+        files={
+            'openend/tasks/all_objects_integration/room_all_dynamic_v2/room.usda':b'prototype',
+            'openend/tasks/all_objects_integration/room_with_existing_drawer_v1/room.usda':b'sublayer',
+            'layout_task_activation_v1/task_scene_registration_v1/other_layouts_v4/layout04/room.usda':b'base',
+        }
+        data={prefix+path:raw for path,raw in files.items()}
+        data[prefix+'unrelated/not_mounted.usda']=b'library only'
+        result=configure(self.manifest(data),self.assets,self.base/'Runtime','room')
+        root=Path(result['source_root'])
+        for path,raw in files.items():
+            self.assertEqual((root/path).read_bytes(),raw)
+            self.assertEqual((self.base/'Runtime'/prefix/path).read_bytes(),raw)
+        self.assertFalse((root/'unrelated/not_mounted.usda').exists())
+        meta=json.loads((self.base/'Runtime/runtime.json').read_text())
+        self.assertEqual(meta['parameter_overrides'],{})
+        for path,raw in files.items():
+            self.assertEqual(meta['source_files'][path],hashlib.sha256(raw).hexdigest())
+
     def test_unknown_profile_rejected(self):
         manifest=self.manifest({'file':b'x'})
         with self.assertRaises(ValueError):

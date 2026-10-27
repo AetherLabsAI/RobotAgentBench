@@ -83,9 +83,23 @@ class GuidedWorkflowTests(unittest.TestCase):
         self.configure()
         _, value = flow.checked(self.dest/'run.json')
         self.assertEqual(value['worker']['public_input_binding'], str(binding))
+        expected=self.source/'short_tasks/agent_probe_v1/cap_v1/native_tools/openend_control_adapter_v1/model_runs/one'
+        self.assertEqual(Path(value['worker']['output']),expected)
         public.write_text('{}')
         with self.assertRaises(ValueError):
             flow.checked(self.dest/'run.json')
+
+    def test_openend_rejects_short_task_output_namespace(self):
+        launch=self.fixture['launch']
+        launch.write_text(json.dumps(dict(schema='openend.coding_room.launch.v1',task_name='openend')))
+        self.row['launch_sha256']=flow.sha(launch)
+        self.selected.write_text(json.dumps(self.row))
+        self.configure()
+        path,value=flow.checked(self.dest/'run.json')
+        value['worker']['output']=str(self.source/'short_tasks/agent_probe_v1/cap_v1/model_runs/one')
+        path.write_text(json.dumps(value))
+        with self.assertRaisesRegex(ValueError,'task-owned workspace'):
+            flow.checked(path)
 
     def test_worker_has_same_path_runtime_selection_mounts_and_no_tty(self):
         self.configure()

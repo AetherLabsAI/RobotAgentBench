@@ -122,6 +122,16 @@ def configure(manifest, assets, destination, profile):
             part = _canonical_source(location[len('libraries/current_assets/'):])
             target = source_relative + '/' + part
             priority = 15
+        elif profile == 'room' and location.startswith(
+                'libraries/original_absolute/home/lingjun/robot_agent_arena/'):
+            part = location[len('libraries/original_absolute/home/lingjun/robot_agent_arena/'):]
+            # These two approved scene families are mounted from the local
+            # source tree by namespace.command(). Retain their original bytes
+            # there as well as in the content-addressed library; otherwise the
+            # more-specific mount hides the library's room and sublayer files.
+            if part.startswith(('layout_task_activation_v1/',
+                                'openend/tasks/all_objects_integration/')):
+                target = source_relative + '/' + part
         if target is None:
             continue
         record = index['objects'][digest]

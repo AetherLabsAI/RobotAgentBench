@@ -120,6 +120,14 @@ def selection(path):
     return path, row, base, source, metadata
 
 
+def output_root(source, launch):
+    """Honor the original owner's output boundary, without changing admission."""
+    cap = source/'short_tasks/agent_probe_v1/cap_v1'
+    if launch.get('schema') == 'openend.coding_room.launch.v1' and launch.get('task_name') == 'openend':
+        return cap/'native_tools/openend_control_adapter_v1/model_runs'
+    return cap/'model_runs'
+
+
 def configure(args):
     selected, row, base, source, metadata = selection(args.selection)
     name = deployment.name(args.name)
@@ -131,7 +139,7 @@ def configure(args):
     dest = args.destination.resolve()
     if dest.exists() or not dest.parent.is_dir() or dest.is_relative_to(base) or base.is_relative_to(dest):
         raise ValueError('Use a fresh configuration directory outside Runtime, with an existing parent')
-    output = source/'short_tasks/agent_probe_v1/cap_v1/model_runs'/name
+    output = output_root(source, read(row['launch']))/name
     if output.exists() or (base/'native_deployments'/name).exists():
         raise ValueError('This run identity is already prepared or consumed; choose a new name')
     model = None
@@ -228,7 +236,7 @@ def checked(path):
     if (str(base) != worker['runtime'] or row['launch'] != worker['launch']
             or row.get('public_input_binding') != worker['public_input_binding']):
         raise ValueError('Worker differs from its saved selection')
-    if not Path(worker['output']).is_relative_to(source/'short_tasks/agent_probe_v1/cap_v1/model_runs'):
+    if Path(worker['output']) != output_root(source, read(row['launch']))/deployment.name(worker['name']):
         raise ValueError('Native output must remain in its task-owned workspace')
     return path, value
 

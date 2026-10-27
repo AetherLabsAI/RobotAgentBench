@@ -19,7 +19,7 @@ after preparing the Linux worker. The CLI and credentials stay on that client.
 - An Isaac Sim-compatible NVIDIA GPU. InternVLA additionally needs a separate
   GPU with **more than 20,000 MiB free**, CUDA 12.8 build tools for its attention
   dependencies, and Conda for the separate model environment.
-- Free disk for the 4.55 GB asset download, extracted assets, native Docker
+- Free disk for the 4.57 GB asset download, extracted assets, native Docker
   image and per-run caches. InternVLA adds approximately 10 GB of model files
   and its Python environment. Download sizes are not total installed sizes.
 
@@ -56,10 +56,10 @@ following this guide again.
 ## 2. Install shared assets and the saved configurations
 
 ```bash
-"$RAB_PY" -m robotagentbench assets fetch resources/assets-0.1.0.json --cache downloads
-"$RAB_PY" -m robotagentbench assets install resources/assets-0.1.0.json \
+"$RAB_PY" -m robotagentbench assets fetch resources/assets-0.1.1.json --cache downloads
+"$RAB_PY" -m robotagentbench assets install resources/assets-0.1.1.json \
   --cache downloads --destination Assets
-"$RAB_PY" -m robotagentbench assets configure resources/assets-0.1.0.json \
+"$RAB_PY" -m robotagentbench assets configure resources/assets-0.1.1.json \
   --destination Assets --runtime Runtime --profile room
 
 "$RAB_PY" -m robotagentbench.simulation.saved_instance_release.download \
