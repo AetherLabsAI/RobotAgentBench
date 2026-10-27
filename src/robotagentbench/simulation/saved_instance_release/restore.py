@@ -739,6 +739,10 @@ def restore(release,runtime,task,episode,output,*,python_executable=None,owner_c
         from .context_assets import restore_trash_entries
         manifest,checks['context_asset_aliases']=restore_trash_entries(
             manifest,source=source,runtime=base,metadata=prepared['metadata'])
+    if request.get('task_name')=='stock_wooden_tray_interference':
+        from .relocation_sources import restore_geometry_sources
+        manifest,checks['relocation_geometry_sources']=restore_geometry_sources(
+            manifest,source=source,runtime=base,metadata=prepared['metadata'])
     manifest['source_hashes']=dict(composed['source_hashes']);manifest['source_hashes'][str(scene)]=_sha(scene)
     manifest['source_hashes'].update(extra_hashes)
     manifest['source_hashes'][str(restored)]=_sha(restored)
