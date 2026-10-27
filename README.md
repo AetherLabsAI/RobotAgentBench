@@ -14,10 +14,9 @@ A benchmark for household robot agents, from individual manipulation tasks to op
 </div>
 
 <!-- overview-video:start -->
-<p align="center">
-  <a href="docs/media/overview.mp4"><img src="docs/images/robotagentbench-demo-poster.png" alt="Watch the RobotAgentBench demo" width="100%"></a><br>
-  <strong><a href="docs/media/overview.mp4">▶ Watch RobotAgentBench in action</a></strong>
-</p>
+
+https://github.com/user-attachments/assets/d8359d38-8793-4285-adf8-187603ba3736
+
 <!-- overview-video:end -->
 
 ## Overview
