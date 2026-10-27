@@ -85,7 +85,11 @@ def restore(args):
     if selected['mode'] in ('cloth', 'specialized'):
         raise ValueError('Use the dedicated cloth/specialized owner, not this room example')
     image = image_id(args.image, args.docker_host)
+    from .relocation import runtime_for_restore
+    base, aliases = runtime_for_restore(base, args.task, out, sdk_site=deployment.SDK_ALIAS)
     cmd = container_prefix(base, image, args.docker_host)
+    for row in aliases:
+        mount(cmd, row['source'], row['target'])
     mount(cmd, release.parent)
     mount(cmd, out.parent, readonly=False)
     cmd += [image, PYTHON, '-B', '-m',
@@ -109,8 +113,8 @@ def selection(path):
         raise ValueError('Saved selection Runtime/source/launch identity changed')
     if read(launch).get('schema') not in ('openend.short_task.launch.v1', 'openend.coding_room.launch.v1'):
         raise ValueError('This example requires the original room/short-task owner')
-    if row.get('readonly_resource_aliases'):
-        raise ValueError('This selected variant needs its dedicated resource namespace')
+    from .relocation import aliases
+    aliases(base, row['task_id'], row.get('readonly_resource_aliases', []))
     # The generic restoration receipt has a TOP-LEVEL public_input_binding.
     binding = row.get('public_input_binding')
     if binding:
@@ -277,6 +281,10 @@ def worker_command(path, value):
     w = value['worker']
     cmd = container_prefix(Path(w['runtime']), w['image'], w['docker_host'],
                            name=w['name'], gpu=w['gpu'], locks=w['lock_root'])
+    from .relocation import aliases
+    row = read(w['selection'])
+    for binding in aliases(w['runtime'], row['task_id'], row.get('readonly_resource_aliases', [])):
+        mount(cmd, binding['source'], binding['target'])
     mount(cmd, path.parent)
     selected_parent = Path(w['selection']).parent
     if not selected_parent.is_relative_to(Path(w['runtime'])) and not selected_parent.is_relative_to(path.parent):
