@@ -8,16 +8,24 @@ def configuration(path):
     value=json.loads(Path(path).read_text())
     required={'schema','codex_executable','model','effort','max_model_responses','transport',
         'prepare_argv','worker_argv','output','expected_cli_version'}
+    mode=value.get('worker_mode','coding')
+    if mode=='raw22':required|={'worker_mode','native_receipt'}
+    elif mode=='coding':
+        if 'worker_mode'in value:required.add('worker_mode')
+    else:raise ValueError('Choose explicit coding or raw22 worker mode')
     if set(value)!=required or value['schema']!='robotagentbench.codex_example.v1':raise ValueError('Explicit trusted operator configuration required')
     for name in ('worker_argv','prepare_argv'):
         if not isinstance(value[name],list)or any(not isinstance(x,str)or not x or '\0'in x for x in value[name]):raise ValueError('Use argv lists, not shell commands')
-    if not value['worker_argv']:raise ValueError('An original coding worker command is required')
+    if not value['worker_argv']:raise ValueError('An original worker command is required')
     if value['transport']is not None:raise ValueError('This exact server profile uses only its original default transport')
     if type(value['max_model_responses'])is not int or value['max_model_responses']<1:raise ValueError('Explicit model-response budget required')
     for name in ('codex_executable','model','effort','expected_cli_version'):
         if not isinstance(value[name],str)or not value[name].strip():raise ValueError('Explicit CLI/model recipe required')
     out=Path(value['output'])
     if not out.is_absolute()or out.resolve()!=out or out==Path(out.anchor)or out==Path.home():raise ValueError('Canonical fresh episode output required')
+    if mode=='raw22':
+        from .raw_operator import validate_settings
+        validate_settings(value)
     return value
 
 def save(path,value):
@@ -25,6 +33,9 @@ def save(path,value):
     temporary.write_text(json.dumps(value,indent=2,allow_nan=False)+'\n');temporary.replace(path)
 
 def run(value):
+    if value.get('worker_mode','coding')=='raw22':
+        from .raw_operator import run as run_raw
+        return run_raw(value)
     from .app_server import AppServer
     from .bridge import RobotBridge,tool_specs,text_item
     from .protocol import Worker
@@ -112,6 +123,7 @@ def main(argv=None):
     value=configuration(args.config)
     if not args.execute:
         print(json.dumps(dict(mode='describe',model=value['model'],effort=value['effort'],
+            worker_mode=value.get('worker_mode','coding'),
             max_model_responses=value['max_model_responses'],worker_argv=value['worker_argv'],
             prepare_argv=value['prepare_argv'],model_started=False,native_started=False),indent=2));return 0
     return run(value)

@@ -45,7 +45,14 @@ def configuration(path,task):
         root=Path(value['output_root'])
         if not root.is_absolute()or not root.is_dir()or root.resolve()!=root:raise ValueError('Canonical existing output root required')
     row=value['tasks'][task]
-    if set(row)!={'worker_argv','native_report','public_prompt'}:raise ValueError('Trusted worker argv/report/public prompt required')
+    fields={'worker_argv','native_report','public_prompt'}
+    if set(row) not in (fields, fields|{'native_receipt'}):raise ValueError('Trusted worker argv/report/public prompt required')
+    if 'native_receipt' in row:
+        from robotagentbench.model_examples.native_receipts import FILES
+        receipt=row['native_receipt']
+        if (not isinstance(receipt,dict) or set(receipt)!={'family','task_id'}
+                or receipt['family'] not in FILES or receipt['task_id']!=task):
+            raise ValueError('Explicit matching original-owner receipt family/task required')
     argv=row['worker_argv']
     if not isinstance(argv,list)or not argv or any(not isinstance(x,str)or not x or '\0'in x for x in argv):
         raise ValueError('Configure the actual installed worker/supervisor argv first; no invented worker entry')
@@ -55,6 +62,23 @@ def configuration(path,task):
         from .http import endpoint
         endpoint(value['model_endpoint']);pins={}
     return value,row,pins
+
+
+def native_cleanup(row,report_path,worker_close,episode_id):
+    """Preserve ordinary-owner behavior; verify dedicated original receipts."""
+    if 'native_receipt' not in row:
+        from robotagentbench.simulation.shutdown import shutdown_succeeded
+        native=read(report_path)
+        return (shutdown_succeeded(native) and worker_close.get('closed_ack') is True
+                and worker_close.get('exit_code')==0),native.get('task_result')
+    from robotagentbench.model_examples.native_receipts import collect,verify
+    binding=row['native_receipt'];bundle=collect(binding['family'],Path(report_path).parent)
+    accepted=verify(binding['family'],binding['task_id'],episode_id,bundle,
+        closed_ack=worker_close.get('closed_ack'),worker_exit_code=worker_close.get('exit_code'))
+    files=bundle['files']
+    native=files.get('native_report.json',files.get('formal_owner_report.json',{}))
+    result=next((native[k] for k in ('task_result','closed_result','result','final_result') if k in native),None)
+    return accepted,result
 
 
 class RPC:
@@ -101,7 +125,6 @@ class RPC:
 def run(config_path,task,output):
     from types import SimpleNamespace
     from robotagentbench.simulation.gpu import acquire_gpu
-    from robotagentbench.simulation.shutdown import shutdown_succeeded
     value,row,pins=configuration(config_path,task)
     output=Path(output)
     if not output.is_absolute()or output.resolve()!=output or output.exists()or not output.parent.is_dir():
@@ -176,10 +199,10 @@ def run(config_path,task,output):
             explicit_prompt=row['public_prompt'],
             on_event=lambda name,index,data:write(f'{name}_{index:04d}.json',data)))
         result['worker_close']=worker.close();worker=None
-        native=read(report_path)
-        result['native_cleanup_verified']=shutdown_succeeded(native)and result['worker_close'].get('closed_ack')is True and result['worker_close'].get('exit_code')==0
+        accepted,native_result=native_cleanup(row,report_path,result['worker_close'],ready['observation']['episode_id'])
+        result['native_cleanup_verified']=accepted
         result.update(status='completed'if result['native_cleanup_verified']else'invalid_native_cleanup',
-            native_result=native.get('task_result'),full_model_behavior_parity_claim=False)
+            native_result=native_result,full_model_behavior_parity_claim=False)
     except BaseException as exc:
         result.update(status='error',error=type(exc).__name__)
         raise
