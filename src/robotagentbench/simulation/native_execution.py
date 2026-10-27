@@ -182,7 +182,8 @@ def execute_native(admitted, *, options, backend, lease, completion):
             if i%60 == 59:
                 report['settled_steps'] = i+1
                 checkpoint()
-        report['initial_acceptance'] = session.accept_initial()
+        from .initial_diagnostics import accept_initial_with_diagnostics
+        report['initial_acceptance'] = accept_initial_with_diagnostics(session, out, report)
         report['startup_phase'] = 'native_initial_accepted'
         checkpoint()
         if is_openend:
