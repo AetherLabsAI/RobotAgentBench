@@ -5,7 +5,12 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from .restore import describe,select,_write_saved_json_sidecars,_sha
+from .restore import describe,select,_write_saved_json_sidecars,_sha,_restore_scene
+
+try:
+    from pxr import Usd,UsdGeom,UsdPhysics
+except ImportError:
+    Usd=None
 
 
 class CompactRestoreContract(unittest.TestCase):
@@ -57,6 +62,29 @@ class CompactRestoreContract(unittest.TestCase):
             self.assertEqual(actual['launch'],str(root/'new_first.json'))
             self.assertEqual(actual['launch_sha256'],_sha(root/'new_first.json'))
             self.assertEqual(actual['code_sources'],{'/original/owner.py':'c'*64})
+
+
+@unittest.skipIf(Usd is None,'Requires the native SDK USD modules; no simulator is started')
+class RestoreStageMetadata(unittest.TestCase):
+    def test_delta_layer_keeps_original_units_axes_time_and_physics(self):
+        with TemporaryDirectory()as directory:
+            root=Path(directory);source=root/'source.usda';out=root/'restored.usda'
+            original=Usd.Stage.CreateNew(str(source))
+            original.SetDefaultPrim(UsdGeom.Xform.Define(original,'/World').GetPrim())
+            for key,value in dict(upAxis='Z',metersPerUnit=1.,timeCodesPerSecond=60.,framesPerSecond=30.).items():
+                original.SetMetadata(key,value)
+            cube=UsdGeom.Cube.Define(original,'/World/Cube').GetPrim()
+            UsdPhysics.MassAPI.Apply(cube).CreateMassAttr(2.5)
+            original.GetRootLayer().Save();before=source.read_bytes()
+            checks=_restore_scene(source,{'objects':[]},{'objects':[]},out)
+            restored=Usd.Stage.Open(str(out))
+            self.assertEqual(UsdGeom.GetStageUpAxis(restored),'Z')
+            self.assertEqual(UsdGeom.GetStageMetersPerUnit(restored),1.)
+            self.assertEqual(restored.GetDefaultPrim().GetPath(),original.GetDefaultPrim().GetPath())
+            for key,value in checks['stage_metadata'].items():
+                self.assertEqual(restored.GetMetadata(key),value)
+            self.assertEqual(restored.GetPrimAtPath('/World/Cube').GetAttribute('physics:mass').Get(),2.5)
+            self.assertEqual(source.read_bytes(),before)
 
 
 if __name__=='__main__':unittest.main()

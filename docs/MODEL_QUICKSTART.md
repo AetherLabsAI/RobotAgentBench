@@ -7,9 +7,13 @@ client**. You do not need to install Isaac Sim or locate its Python libraries
 on the host. The walkthroughs select `prepare_coffee`, episode 1, from the saved
 configuration bank; they do not resample it.
 
+To keep an existing Codex login on another computer, use the
+[remote-client instructions](../src/robotagentbench/model_examples/codex/NATIVE_SETUP.md#remote-linux-worker--container-deployment)
+after preparing the Linux worker. The CLI and credentials stay on that client.
+
 ## Requirements
 
-- Linux x86_64, Python 3.11+, Git, Docker Engine and NVIDIA Container Toolkit.
+- Linux x86_64, Python 3.11+ with `venv` support, Git, Docker Engine and NVIDIA Container Toolkit.
 - Docker access as a **non-root user**. These examples use
   `unix:///var/run/docker.sock`; do not run the model client with `sudo`.
 - An Isaac Sim-compatible NVIDIA GPU. InternVLA additionally needs a separate
@@ -22,6 +26,12 @@ configuration bank; they do not resample it.
 Run commands on that Linux machine, in one Bash session. Set GPU indices only
 to available devices. All jobs on the host must use the **same GPU-lock
 directory**; the native worker and InternVLA model retain their occupancy checks.
+
+On Debian/Ubuntu, install the matching Python venv package first (for example,
+`python3-venv` for the distribution's default Python). If `python3 -m venv`
+reports that `ensurepip` is missing, stop and install that prerequisite or use
+a separately installed Python with venv support; do not continue with a partial
+environment.
 
 ## 1. Install the evaluator
 
@@ -110,6 +120,11 @@ Use a new `--name` and `--destination` for another model run; it may reuse the
 same saved `selection.json`. Configuration prepares one private native cache
 set per run. A dispatched run is never retried automatically, including after
 a lost acknowledgment. Do not delete its intent or reuse its identity.
+
+With fresh native caches, the first rendered observation can take several
+minutes while graphics shaders compile. Keep the original run active rather
+than starting a second copy; model inference begins only after the worker
+returns its admitted observation.
 
 For InternVLA, inspect `report.json` and `native/native_report.json`. For Codex,
 inspect `operator_result.json`, `observations/codex_report.json` and

@@ -183,6 +183,29 @@ class GuidedWorkflowTests(unittest.TestCase):
         self.assertIn('--group-add',cmd)
         self.assertNotIn('--privileged',cmd)
 
+    def test_remote_codex_preparation_keeps_cli_on_client(self):
+        from robotagentbench.model_examples.codex.server_profile import deployment_payloads
+        metadata = json.loads((self.base/'runtime.json').read_text())
+        metadata.update(coding_policy_image=POLICY, resources={})
+        for relative, data in deployment_payloads(POLICY).items():
+            item = self.source/relative
+            item.parent.mkdir(parents=True, exist_ok=True)
+            item.write_bytes(data)
+            metadata['source_files'][relative] = flow.sha(item)
+        (self.base/'runtime.json').write_text(json.dumps(metadata))
+        args = self.args('codex')
+        args.codex_executable = Path('/client-only/bin/codex')
+        args.codex_client_version = 'codex-cli fixture'
+        with patch('robotagentbench.model_examples.codex.sandbox_build.inspect_image', return_value=POLICY), \
+                patch('robotagentbench.model_examples.codex.namespace.docker_socket_group', return_value=77), \
+                patch.object(flow.shutil, 'which', return_value=sys.executable), \
+                patch.object(flow.subprocess, 'check_output') as cli:
+            self.configure(args)
+        cli.assert_not_called()
+        operator = json.loads((self.dest/'operator.json').read_text())
+        self.assertEqual(operator['codex_executable'], '/client-only/bin/codex')
+        self.assertEqual(operator['expected_cli_version'], 'codex-cli fixture')
+
     def test_restoration_container_is_cpu_only_and_uses_selected_episode(self):
         bank = self.root/'Bank'
         bank.mkdir()

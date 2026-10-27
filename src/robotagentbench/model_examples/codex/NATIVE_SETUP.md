@@ -145,6 +145,25 @@ requires a new output/intent; never reuse a finished or uncertain episode.
 If simulation is remote, keep the client and its Codex login local. Configure
 the local client with an explicit trusted worker command:
 
+With the new Docker walkthrough, perform staging and restoration on Linux as
+usual. When preparing its `docker_workflow configure --agent codex` command,
+provide `--codex-executable` with the **client computer's** absolute CLI path,
+and add `--codex-client-version` with that client's exact `codex --version`
+output. This skips executing the CLI on the worker host; the real client still
+checks its binary version at run time. It does not copy credentials or log in
+on Linux.
+
+Use the resulting remote `model-configs/.../run.json` in the trusted SSH worker
+command, replacing the worker command placeholder below with:
+
+```text
+env OMNI_KIT_ACCEPT_EULA=YES /absolute/remote/.venv/bin/python -B -m robotagentbench.model_examples.docker_workflow worker /absolute/remote/model-configs/episode_01/run.json
+```
+
+Set the EULA variable only after accepting the NVIDIA terms. The local client
+output and configuration paths below are separate from the remote native output.
+Do not execute `docker_workflow run` on the server for this remote-client setup.
+
 ```sh
 python -m robotagentbench.model_examples.codex.client_config \
   --codex-executable /absolute/local/path/to/codex \

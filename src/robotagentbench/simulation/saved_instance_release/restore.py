@@ -391,7 +391,17 @@ def _ops(stage,path,attributes,*,joint=False):
 
 def _restore_scene(scene,state,composed,out):
     from pxr import Gf,Usd,UsdGeom
+    original=Usd.Stage.Open(str(scene))
+    if original is None:raise ValueError('Original composed scene cannot be opened')
     stage=Usd.Stage.CreateNew(str(out));stage.GetRootLayer().subLayerPaths=[str(scene)]
+    # USD stage metadata is root-owned, not inherited from sublayers. Copy
+    # the original owner's units/axes/time metadata, never choose new values.
+    metadata={key:original.GetMetadata(key) for key in
+              ('upAxis','metersPerUnit','timeCodesPerSecond','framesPerSecond')}
+    for key,value in metadata.items():
+        if value is not None:stage.SetMetadata(key,value)
+    if original.GetDefaultPrim():
+        stage.SetDefaultPrim(stage.GetPrimAtPath(original.GetDefaultPrim().GetPath()))
     old={row['path']:row for row in composed.get('objects',[])}
     saved_paths={row['path']for row in state['objects']}
     for path in old:
@@ -446,7 +456,8 @@ def _restore_scene(scene,state,composed,out):
             error=max(abs(actual[i][j]-row['world_matrix_row_major_4x4'][i*4+j])for i in range(4)for j in range(4))
             if error>1e-7:raise ValueError('Restored saved world transform differs')
             errors.append(error)
-    return dict(objects=len(state['objects']),maximum_world_matrix_error=max(errors,default=0.),saved_world_precision_preserved=True)
+    return dict(objects=len(state['objects']),maximum_world_matrix_error=max(errors,default=0.),
+                saved_world_precision_preserved=True,stage_metadata=metadata)
 
 
 def _context_layers(prepared,state,base_scene,work):

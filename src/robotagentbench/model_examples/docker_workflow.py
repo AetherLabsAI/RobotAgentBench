@@ -154,8 +154,18 @@ def configure(args):
         policy = selected_image(source, metadata['source_files'])
         if metadata.get('coding_policy_image') != policy or inspect_image(policy, args.docker_host) != policy:
             raise ValueError('Stage the coding Runtime with your local sandbox build first')
-        cli = args.codex_executable.resolve(strict=True)
-        version = subprocess.check_output([str(cli), '--version'], text=True).strip()
+        supplied_version = getattr(args, 'codex_client_version', None)
+        if supplied_version:
+            # Remote-worker preparation: the CLI and credentials stay on the
+            # client host. That client still verifies its actual binary before
+            # starting an episode; this value is not an authentication check.
+            cli = args.codex_executable
+            if not cli.is_absolute() or '..' in cli.parts or not supplied_version.startswith('codex-cli '):
+                raise ValueError('Require the absolute client CLI path and its actual codex --version output')
+            version = supplied_version.strip()
+        else:
+            cli = args.codex_executable.resolve(strict=True)
+            version = subprocess.check_output([str(cli), '--version'], text=True).strip()
         docker = shutil.which('docker')
         if not docker:
             raise ValueError('Docker CLI must be available on the native Linux host')
@@ -288,6 +298,7 @@ def main(argv=None):
     setup.add_argument('--model-python', type=Path)
     setup.add_argument('--model-dir', type=Path)
     setup.add_argument('--codex-executable', type=Path)
+    setup.add_argument('--codex-client-version', help='Remote client only: actual codex --version output; keep CLI/login on client host')
     setup.add_argument('--max-calls', type=int, default=100)
     for p in (restore_p, setup):
         p.add_argument('--image', default='robotagentbench:native')
