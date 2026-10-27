@@ -9,7 +9,7 @@ import unittest
 from unittest.mock import Mock, patch
 
 from robotagentbench.simulation.initial_diagnostics import (
-    NAME, TARGET, accept_initial_with_diagnostics,
+    NAME, TARGET, SETTLING_SAMPLES, MealTraySettlingCache, accept_initial_with_diagnostics,
 )
 
 
@@ -39,6 +39,7 @@ class InitialFailureDiagnosticsTests(unittest.TestCase):
         contacts = SimpleNamespace(active=self.active, pairs=self.forbidden[0], ingest=self.forbidden[1])
         self.port = SimpleNamespace(history=self.history, contacts=contacts,
             geometry=SimpleNamespace(target=TARGET, body=TARGET+'/Asset/Object',
+                                     initial_pose=((-1.46, 5.53, .92), (1., 0., 0., 0.)),
                                      floors=['/World/Background/Shell/Floor']),
             config=SimpleNamespace(initial_history_s=.25), robot='/World/Robot',
             after_physics=self.forbidden[2], reduce_contacts=self.forbidden[3],
@@ -128,6 +129,86 @@ class InitialFailureDiagnosticsTests(unittest.TestCase):
         self.reject(report)
         self.assertEqual(report['initial_failure_diagnostic']['error_type'], 'ValueError')
         self.assertFalse((self.output/NAME).exists())
+
+    def test_entire_settling_copies_first_and_last_rows_before_history_rolls(self):
+        settling = MealTraySettlingCache(self.session)
+        self.history.clear()
+        for i in range(SETTLING_SAMPLES):
+            row = dict(time_s=(i+2)/60, physics_dt_s=1/60,
+                pose=Pose((-1.46+i*.001, 5.53, .92 if i<30 else 0.), (1., 0., 0., 0.)),
+                held=False, robot_contact=(i==20), on_floor=(i>=30),
+                supports=frozenset(['/World/Kitchen/Worktop' if i<30 else '/World/Floor']))
+            self.history.append(row)
+            settling.capture()
+        self.assertEqual(len(self.history), 62)
+        self.history[-1]['supports'] = frozenset(['/ChangedAfterCapture'])
+        with self.assertRaises(RuntimeError) as caught:
+            accept_initial_with_diagnostics(self.session, self.output, {}, settling=settling)
+        self.assertIs(caught.exception, self.error)
+        record = json.loads((self.output/NAME).read_text())['settling']
+        self.assertEqual(record['status'], 'complete')
+        self.assertEqual(record['recorded_sample_count'], 240)
+        self.assertEqual(record['rows'][0]['time_s'], 2/60)
+        self.assertEqual(record['rows'][-1]['time_s'], 241/60)
+        self.assertEqual(record['rows'][0]['pose']['position_m'], [-1.46, 5.53, .92])
+        self.assertEqual(record['rows'][-1]['pose']['position_m'], [-1.46+239*.001, 5.53, 0.])
+        self.assertTrue(record['rows'][20]['robot_contact'])
+        self.assertTrue(record['rows'][30]['on_floor'])
+        self.assertEqual(record['rows'][-1]['supports'], ['/World/Floor'])
+        self.assertEqual(record['initial_pose']['position_m'], [-1.46, 5.53, .92])
+        self.assertFalse(record['first_startup_physics_step_observed'])
+        for method in self.forbidden:
+            method.assert_not_called()
+
+    def test_success_never_persists_collected_settling_trace(self):
+        settling = MealTraySettlingCache(self.session)
+        settling.capture()
+        receipt = {'accepted': True}
+        self.session.accept_initial = Mock(return_value=receipt)
+        with patch.object(settling, 'evidence', side_effect=AssertionError('Failure only')) as evidence:
+            result = accept_initial_with_diagnostics(self.session, self.output, {}, settling=settling)
+        self.assertIs(result, receipt)
+        evidence.assert_not_called()
+        self.assertEqual(list(self.output.iterdir()), [])
+
+    def test_settling_capture_failure_does_not_mask_original_rejection(self):
+        settling = MealTraySettlingCache(self.session)
+        self.history[-1]['pose'] = Pose((float('nan'), 0, 0), (1., 0., 0., 0.))
+        settling.capture()  # Does not propagate malformed optional diagnostic data.
+        self.history[-1]['pose'] = Pose((-1.46, 5.53, .92), (1., 0., 0., 0.))
+        settling.capture()  # Disabled; never silently resume an incomplete trace.
+        with self.assertRaises(RuntimeError) as caught:
+            accept_initial_with_diagnostics(self.session, self.output, {}, settling=settling)
+        self.assertIs(caught.exception, self.error)
+        record = json.loads((self.output/NAME).read_text())['settling']
+        self.assertEqual(record['status'], 'unavailable')
+        self.assertEqual(record['error_type'], 'ValueError')
+        self.assertEqual(record['rows'], [])
+
+    def test_settling_constructor_and_serialization_errors_do_not_escape(self):
+        self.port.geometry.initial_pose = None
+        settling = MealTraySettlingCache(self.session)
+        self.assertEqual(settling.status, 'unavailable')
+        settling.capture()
+        report = {}
+        with patch.object(settling, 'evidence', side_effect=KeyboardInterrupt('optional trace')):
+            with self.assertRaises(RuntimeError) as caught:
+                accept_initial_with_diagnostics(self.session, self.output, report, settling=settling)
+        self.assertIs(caught.exception, self.error)
+        self.assertEqual(report['initial_failure_diagnostic']['error_type'], 'KeyboardInterrupt')
+        self.assertFalse((self.output/NAME).exists())
+
+    def test_settling_ignores_other_tasks_and_rejects_duplicate_cache_rows(self):
+        other = MealTraySettlingCache(SimpleNamespace(ports={'other': object()}))
+        other.capture()
+        self.assertEqual(other.evidence()['status'], 'not_applicable')
+        settling = MealTraySettlingCache(self.session)
+        settling.capture()
+        settling.capture()
+        self.assertEqual(settling.evidence()['status'], 'unavailable')
+        self.assertEqual(len(settling.rows), 1)
+        for method in self.forbidden:
+            method.assert_not_called()
 
 
 if __name__ == '__main__':

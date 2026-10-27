@@ -12,6 +12,7 @@ TARGET = '/World/RoomEpisode/MealTray'
 NAME = 'initial_failure_diagnostic.json'
 MAX_PAIRS = 128
 MAX_SAMPLES = 16
+SETTLING_SAMPLES = 240
 
 
 def _number(value):
@@ -43,6 +44,70 @@ def _row(row):
                 **flags, supports=sorted(_paths(row['supports'])),
                 pose=dict(position_m=_vector(pose['position_m'], 3),
                           quaternion_wxyz=_vector(pose['quaternion_wxyz'], 4)))
+
+
+class MealTraySettlingCache:
+    """Bounded copies of rows already produced by the unchanged settling loop.
+
+    No file is written here. Collection errors disable this diagnostic only;
+    neither a diagnostic exception nor malformed cached data may affect native
+    execution. The first unobserved startup step is deliberately not invented.
+    """
+
+    def __init__(self, session):
+        self.status = 'not_applicable'
+        self.rows = []
+        self.initial_pose = None
+        self.error_type = None
+        self.port = None
+        try:
+            ports = vars(session).get('ports')
+            if not isinstance(ports, dict) or 'meal_tray' not in ports:
+                return
+            port = vars(ports['meal_tray'])
+            geometry = vars(port['geometry'])
+            if geometry.get('target') != TARGET:
+                return
+            position, quaternion = geometry['initial_pose']
+            self.initial_pose = dict(position_m=_vector(position, 3),
+                                     quaternion_wxyz=_vector(quaternion, 4))
+            self.port = port
+            self.status = 'collecting'
+        except BaseException as error:
+            self.status = 'unavailable'
+            self.error_type = type(error).__name__
+
+    def capture(self):
+        """Call once after the original after_physics; do not query the scene."""
+        if self.status != 'collecting':
+            return
+        try:
+            if len(self.rows) >= SETTLING_SAMPLES:
+                raise ValueError('Unexpected additional settling sample')
+            history = self.port['history']
+            if not isinstance(history, deque) or not history:
+                raise ValueError('Existing settling history cache required')
+            row = _row(history[-1])
+            if abs(row['physics_dt_s'] - 1/60) > 1e-10:
+                raise ValueError('Original 60 Hz settling cache required')
+            if self.rows and abs(row['time_s'] - self.rows[-1]['time_s'] - 1/60) > 1e-6:
+                raise ValueError('Nonconsecutive original settling cache')
+            self.rows.append(row)
+        except BaseException as error:
+            self.status = 'unavailable'
+            self.error_type = type(error).__name__
+
+    def evidence(self):
+        status = self.status
+        if status == 'collecting':
+            status = 'complete' if len(self.rows) == SETTLING_SAMPLES else 'partial'
+        return dict(status=status, cache_only=True, native_state_modified=False,
+                    expected_sample_count=SETTLING_SAMPLES,
+                    recorded_sample_count=len(self.rows),
+                    initial_pose=self.initial_pose,
+                    initial_pose_source='existing_geometry_cache_before_physics_attach',
+                    first_startup_physics_step_observed=False,
+                    error_type=self.error_type, rows=self.rows)
 
 
 def meal_tray_cache(session):
@@ -96,7 +161,7 @@ def meal_tray_cache(session):
                 latest_target_pair_count=relevant, contact_pairs_truncated=relevant > MAX_PAIRS)
 
 
-def accept_initial_with_diagnostics(session, output, report):
+def accept_initial_with_diagnostics(session, output, report, *, settling=None):
     """Preserve the original return/exception; diagnostics cannot mask either."""
     try:
         return session.accept_initial()
@@ -106,6 +171,8 @@ def accept_initial_with_diagnostics(session, output, report):
             if evidence is None:
                 report['initial_failure_diagnostic'] = dict(status='not_applicable')
             else:
+                if settling is not None:
+                    evidence['settling'] = settling.evidence()
                 # Serialize before creating the fresh output, so malformed
                 # cached data cannot leave a misleading successful sidecar.
                 raw = json.dumps(evidence, indent=2, allow_nan=False) + '\n'

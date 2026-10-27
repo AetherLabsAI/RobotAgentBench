@@ -177,16 +177,19 @@ def execute_native(admitted, *, options, backend, lease, completion):
                 robot.get_dof_velocities(),robot.get_root_velocities()))
         clock = NativeSceneClock(stage,sim,lambda:current_time,snapshot)
         session.initialize(clock,view)
+        from .initial_diagnostics import MealTraySettlingCache, accept_initial_with_diagnostics
+        settling_cache = MealTraySettlingCache(session)
         report['status'] = 'settling'
         checkpoint()
         for i in range(240):
             robot.set_dof_position_targets(targets,indices)
             session.after_physics(advance(1/60))
+            settling_cache.capture()
             if i%60 == 59:
                 report['settled_steps'] = i+1
                 checkpoint()
-        from .initial_diagnostics import accept_initial_with_diagnostics
-        report['initial_acceptance'] = accept_initial_with_diagnostics(session, out, report)
+        report['initial_acceptance'] = accept_initial_with_diagnostics(
+            session, out, report, settling=settling_cache)
         report['startup_phase'] = 'native_initial_accepted'
         checkpoint()
         if is_openend:
