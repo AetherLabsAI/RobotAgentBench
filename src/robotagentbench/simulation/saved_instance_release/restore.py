@@ -362,6 +362,16 @@ def _portable_state(state,source,runtime,metadata,mode):
     return rebound
 
 
+def _refresh_launch_hashes(launch,scene):
+    for key in('scene','manifest','request','ready_pose'):
+        if key+'_sha256'in launch:
+            # Some original short-task launches pin the manifest's scene
+            # without duplicating its path as a launch schema field.
+            path=launch.get(key,scene if key=='scene'else None)
+            if path is None:raise ValueError('Missing launch input for '+key+'_sha256')
+            launch[key+'_sha256']=_sha(path)
+
+
 def _typed(kind,value):
     from pxr import Gf,Vt
     vectors={'double3':Gf.Vec3d,'float3':Gf.Vec3f,'half3':Gf.Vec3h}
@@ -656,8 +666,7 @@ def restore(release,runtime,task,episode,output,*,python_executable=None,owner_c
     # selected original owner carried them, keep their semantics but bind the
     # newly derived scene, never a stale server episode path.
     if 'scene'in launch:launch['scene']=str(restored)
-    for key in('scene','manifest','request','ready_pose'):
-        if key+'_sha256'in launch:launch[key+'_sha256']=_sha(launch[key])
+    _refresh_launch_hashes(launch,restored)
     # Rebind immutable code identities to the installed profile, not to an old
     # server directory or a generated source snapshot.
     if launch['schema']=='openend.coding_room.launch.v1':

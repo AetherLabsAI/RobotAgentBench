@@ -5,7 +5,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from .restore import describe,select,_write_saved_json_sidecars,_sha,_restore_scene,_portable_state
+from .restore import describe,select,_write_saved_json_sidecars,_sha,_restore_scene,_portable_state,_refresh_launch_hashes
 
 try:
     from pxr import Usd,UsdGeom,UsdPhysics
@@ -85,6 +85,21 @@ class CompactRestoreContract(unittest.TestCase):
                     other=_portable_state(state,source,runtime,metadata,mode)
                     self.assertEqual(other['scene_recipe']['layout']['scene'],str(installed))
                     self.assertEqual(other['scene_recipe']['plan'],recipe['plan'])
+
+    def test_scene_hash_without_duplicated_scene_path_keeps_original_launch_shape(self):
+        with TemporaryDirectory()as directory:
+            scene=Path(directory)/'restored.usda';scene.write_bytes(b'original restored scene')
+            request=Path(directory)/'request.json';request.write_bytes(b'original request')
+            launch={'task_name':'stock_wooden_tray_lighting','scene_sha256':'a'*64,
+                    'request':str(request),'request_sha256':'b'*64}
+            keys=set(launch);_refresh_launch_hashes(launch,scene)
+            self.assertEqual(set(launch),keys)
+            self.assertEqual(launch['scene_sha256'],_sha(scene))
+            self.assertEqual(launch['request_sha256'],_sha(request))
+            self.assertNotIn('scene',launch)
+            explicit={'scene':str(scene),'scene_sha256':'c'*64}
+            _refresh_launch_hashes(explicit,Path(directory)/'unused.usda')
+            self.assertEqual(explicit['scene_sha256'],_sha(scene))
 
 
 @unittest.skipIf(Usd is None,'Requires the native SDK USD modules; no simulator is started')
