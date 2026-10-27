@@ -510,10 +510,21 @@ def cloth(*, assets, manifest, cloth_runtime, geometry_root, output,
         owner_root=str(source / 'owner'), geometry_python_root=str(geometry),
         formal_root=str(HERE / 'cloth'), public_root=str(public), sdk_site=str(sdk_candidates[0]))
     templates = {}
+    source_manifests = {}
     for task, files in roles['tasks'].items():
         mapped = {key: str(source / value.lstrip('/')) for key, value in files.items()}
         if set(mapped) != config.FILES or any(path not in pins for path in mapped.values()):
             raise ValueError('Every original cloth input role needs its installed release pin')
+        from .cloth import source_data
+        original_manifest = mapped['source_manifest']
+        if original_manifest not in source_manifests:
+            derived = source_data.extend_manifest(read(original_manifest), roots['original_root'], pins,
+                upstream_sha256=pins[original_manifest])
+            destination = generated / ('source_acquisition_' + pins[original_manifest] + '.json')
+            save(destination, derived)
+            pins[str(destination)] = sha(destination)
+            source_manifests[original_manifest] = str(destination)
+        mapped['source_manifest'] = source_manifests[original_manifest]
         templates[task] = dict(directories=roots, files=mapped, hashes=pins)
     inputs = [str(base), str(public), str(geometry), str(out),
               *env['dependencies']['roots'].values()]

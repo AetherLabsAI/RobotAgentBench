@@ -285,7 +285,7 @@ class Delivery(unittest.TestCase):
     def test_cloth_roles_rebind_only_to_fresh_runtime_and_geometry(self):
         from robotagentbench.backends import sources
         from robotagentbench.simulation.dependencies import RuntimeDependencies
-        from robotagentbench.simulation.cloth import launcher
+        from robotagentbench.simulation.cloth import launcher, source_data
         with tempfile.TemporaryDirectory() as temp, ExitStack() as stack:
             root = Path(temp).resolve()
             assets = root / 'Assets'; assets.mkdir()
@@ -301,11 +301,17 @@ class Delivery(unittest.TestCase):
             roles['geometry_pins'] = {'shapely.so': delivery.sha(wheel)}
             expected = {}
             for files in roles['tasks'].values():
-                for name in files.values():
+                for role, name in files.items():
                     member = source / name.lstrip('/')
                     member.parent.mkdir(parents=True, exist_ok=True)
-                    if not member.exists():member.write_text(name)
+                    if not member.exists():
+                        member.write_text(json.dumps({'files': {}}) if role == 'source_manifest' else name)
                     expected[name.lstrip('/')] = delivery.sha(member)
+            for name in source_data.FILES:
+                relative = 'original/' + name
+                member = source / relative; member.parent.mkdir(parents=True, exist_ok=True)
+                member.write_bytes((sources.root('cloth') / relative).read_bytes())
+                expected[relative] = delivery.sha(member)
             (base / 'runtime.json').write_text(json.dumps({'schema': 'robotagentbench.local_installation.v1',
                 'profile': 'cloth', 'runtime': str(base), 'source_root': str(source), 'source_files': expected}))
             actual_read = delivery.read
@@ -332,7 +338,17 @@ class Delivery(unittest.TestCase):
             self.assertEqual(len(result['source_aliases']), 8)
             for task, template in operator['launch_templates'].items():
                 for role, path in template['files'].items():
-                    self.assertEqual(path, str(source / roles['tasks'][task][role].lstrip('/')))
+                    upstream = str(source / roles['tasks'][task][role].lstrip('/'))
+                    if role == 'source_manifest':
+                        self.assertTrue(Path(path).is_relative_to(root / 'Plan/generated'))
+                        self.assertEqual(template['hashes'][upstream], delivery.sha(upstream))
+                        self.assertEqual(delivery.read(upstream), {'files': {}})
+                        derived = delivery.read(path)
+                        self.assertEqual(derived['files'], source_data.FILES)
+                        self.assertEqual(derived['static_dependency_delivery']['upstream_manifest_sha256'],
+                                         delivery.sha(upstream))
+                    else:
+                        self.assertEqual(path, upstream)
                     self.assertEqual(template['hashes'][path], delivery.sha(path))
                 self.assertEqual(template['directories']['geometry_python_root'], str(geometry))
             for alias in result['source_aliases']:

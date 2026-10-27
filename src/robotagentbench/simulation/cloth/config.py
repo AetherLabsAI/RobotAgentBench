@@ -6,6 +6,8 @@ derived collision geometry, prepared state, owner code and Python geometry libs.
 """
 import hashlib
 import json
+from collections import deque
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import re
 
@@ -91,6 +93,38 @@ def _canonical(path,workspace):
     return workspace.input(path)
 
 
+def _verify_pins(pins,workspace):
+    """Read every pinned file afresh, with four bounded I/O readers.
+
+    Admission still runs on the calling thread in input order. Future results
+    are also consumed in that order, including before a later admission error,
+    so the first failing pin and its exception are unchanged. No digest cache,
+    sampled validation, extra simulator/SDK threads, or unbounded work queue.
+    """
+    def check(path,resolved,digest):
+        if sha(resolved)!=digest:
+            raise ValueError('Pinned original input changed: '+path)
+    pending=deque()
+    with ThreadPoolExecutor(max_workers=4,thread_name_prefix='cloth-input-sha') as readers:
+        try:
+            for path,digest in pins.items():
+                try:
+                    if not isinstance(digest,str)or not re.fullmatch('[a-f0-9]{64}',digest):
+                        raise ValueError('Exact SHA256 required')
+                    resolved=_canonical(path,workspace)
+                except BaseException:
+                    # A preceding SHA failure must win over this later path
+                    # or format failure, exactly as in the serial verifier.
+                    while pending:pending.popleft().result()
+                    raise
+                pending.append(readers.submit(check,path,resolved,digest))
+                if len(pending)==4:pending.popleft().result()
+            while pending:pending.popleft().result()
+        finally:
+            for future in pending:future.cancel()
+    # Executor shutdown joins any already-active reads before returning.
+
+
 def _require(pins,path):
     if str(path)not in pins:raise ValueError('Required cloth input is not pinned: '+str(path))
 
@@ -130,9 +164,7 @@ def validate(value,workspace,*,mounted=True):
     if roots['formal_root']!=HERE:raise ValueError('Only the installed trusted cloth entry is allowed')
     pins=owner['hashes']
     if not isinstance(pins,dict)or not pins:raise ValueError('Explicit original hashes required')
-    for path,digest in pins.items():
-        if not isinstance(digest,str)or not re.fullmatch('[a-f0-9]{64}',digest):raise ValueError('Exact SHA256 required')
-        if sha(_canonical(path,workspace))!=digest:raise ValueError('Pinned original input changed: '+path)
+    _verify_pins(pins,workspace)
     for path in owner['files'].values():_require(pins,_canonical(path,workspace))
     files={k:Path(v)for k,v in owner['files'].items()}
     expected={'trial':roots['asset_root']/'reports'/selected['episode']/'trial.json',
@@ -158,6 +190,8 @@ def validate(value,workspace,*,mounted=True):
         if not relative.startswith('code/'):continue
         path=source_target(owner,roots['original_root']/relative);_require(pins,path)
         if pins[str(path)]!=row['sha256']:raise ValueError('Original source manifest differs')
+    from .source_data import require_inputs
+    require_inputs(roots['original_root'],pins,manifest)
     for relative,row in read(files['asset_manifest'])['files'].items():
         _relative(relative)
         path=roots['asset_root']/relative;_require(pins,path)

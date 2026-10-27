@@ -1,0 +1,220 @@
+{
+  "schema": "real2sim.kitchen_task_components.v1",
+  "effective_date": "2026-08-08",
+  "runtime_scene_basename": "scene_room.usda",
+  "appearance_entrypoint": "real2sim/production/appearance.py",
+  "tableware_entrypoint": "real2sim/production/kitchen_tableware_randomization.py",
+  "groups": {
+    "coffee_bean": {
+      "label": "coffee bean",
+      "contract": "real2sim/production/kitchen_check_success.py"
+    },
+    "air_fryer": {
+      "label": "air fryer",
+      "contract": "real2sim/production/air_fryer_task_contract.py"
+    },
+    "microwave_fridge": {
+      "label": "microwave + fridge",
+      "contract": "real2sim/production/dining_task_contract.py"
+    },
+    "serve_meal": {
+      "label": "serve meal",
+      "contract": "real2sim/production/dining_task_contract.py"
+    }
+  },
+  "components": {
+    "1.1": {
+      "group": "coffee_bean",
+      "real_data_reference_ids": ["75"],
+      "action_family": "pour_into_grinder",
+      "pipeline": "task75_pour",
+      "checker": "real2sim/production/kitchen_check_success.py:check_task75_pour",
+      "metrics_schema": "real2sim.pour_beans.v1",
+      "accepted_pipeline_ready": true,
+      "canonical_appliance_prim": "/World/Task75/Grinder",
+      "target_prim": "/World/Task75/CoffeeBag"
+    },
+    "2.1": {
+      "group": "air_fryer",
+      "real_data_reference_ids": ["65"],
+      "action_family": "load_close_start",
+      "payload_type": "no_sugar_bread",
+      "pipeline": "air_fryer_load_close_start",
+      "checker": "real2sim/production/air_fryer_check_success.py:check_task",
+      "metrics_schema": "real2sim.air_fryer_metrics.v1",
+      "accepted_pipeline_ready": false
+    },
+    "2.2": {
+      "group": "air_fryer",
+      "real_data_reference_ids": ["63"],
+      "action_family": "load_close_start",
+      "payload_type": "sugar_bread",
+      "pipeline": "air_fryer_load_close_start",
+      "checker": "real2sim/production/air_fryer_check_success.py:check_task",
+      "metrics_schema": "real2sim.air_fryer_metrics.v1",
+      "accepted_pipeline_ready": false
+    },
+    "2.3": {
+      "group": "air_fryer",
+      "real_data_reference_ids": ["66"],
+      "action_family": "drawer_remove",
+      "payload_type": "sugar_bread",
+      "pipeline": "air_fryer_drawer_remove",
+      "checker": "real2sim/production/air_fryer_check_success.py:check_task",
+      "metrics_schema": "real2sim.air_fryer_metrics.v1",
+      "accepted_pipeline_ready": false,
+      "blocker": "obsolete DiningTableAirFryer v19 fixture removed; replacement drawer asset and trajectory calibration required"
+    },
+    "2.4": {
+      "group": "air_fryer",
+      "real_data_reference_ids": ["67"],
+      "action_family": "drawer_remove",
+      "payload_type": "no_sugar_bread",
+      "pipeline": "air_fryer_drawer_remove",
+      "checker": "real2sim/production/air_fryer_check_success.py:check_task",
+      "metrics_schema": "real2sim.air_fryer_metrics.v1",
+      "accepted_pipeline_ready": false,
+      "blocker": "obsolete DiningTableAirFryer v19 fixture removed; replacement drawer asset and trajectory calibration required"
+    },
+    "9.1": {
+      "group": "microwave_fridge",
+      "real_data_reference_ids": ["95"],
+      "action_family": "take_from_refrigerator",
+      "payload_type": "beef_box",
+      "pipeline": "refrigerator_take",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": false
+    },
+    "9.2": {
+      "group": "microwave_fridge",
+      "real_data_reference_ids": ["94"],
+      "action_family": "put_into_microwave",
+      "payload_type": "beef_box",
+      "pipeline": "microwave_put_handoff",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": true
+    },
+    "9.3": {
+      "group": "microwave_fridge",
+      "real_data_reference_ids": ["96"],
+      "action_family": "take_from_refrigerator",
+      "payload_type": "meal_box",
+      "pipeline": "refrigerator_take",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": false
+    },
+    "9.4": {
+      "group": "microwave_fridge",
+      "real_data_reference_ids": ["93"],
+      "action_family": "put_into_microwave",
+      "payload_type": "meal_box",
+      "pipeline": "microwave_put_handoff",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": true
+    },
+    "9.5": {
+      "group": "microwave_fridge",
+      "real_data_reference_ids": ["97"],
+      "action_family": "take_from_refrigerator",
+      "payload_type": "salad_box",
+      "pipeline": "refrigerator_take",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": false
+    },
+    "10.1": {
+      "group": "microwave_fridge",
+      "real_data_reference_ids": ["106"],
+      "action_family": "take_from_microwave",
+      "payload_type": "beef_box",
+      "pipeline": "task106_take",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": true
+    },
+    "10.2": {
+      "group": "serve_meal",
+      "real_data_reference_ids": [],
+      "action_family": "serve_to_dining_table",
+      "payload_type": "beef_box",
+      "pipeline": "task108_serve",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": false
+    },
+    "10.3": {
+      "group": "serve_meal",
+      "real_data_reference_ids": ["108", "112"],
+      "action_family": "serve_to_coffee_table",
+      "payload_type": "beef_box",
+      "pipeline": "task108_serve",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": true
+    },
+    "10.4": {
+      "group": "microwave_fridge",
+      "real_data_reference_ids": ["106"],
+      "action_family": "take_from_microwave",
+      "payload_type": "meal_box",
+      "pipeline": "task106_take",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": true
+    },
+    "10.5": {
+      "group": "serve_meal",
+      "real_data_reference_ids": [],
+      "action_family": "serve_to_dining_table",
+      "payload_type": "meal_box",
+      "pipeline": "task108_serve",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": false
+    },
+    "10.6": {
+      "group": "serve_meal",
+      "real_data_reference_ids": ["108"],
+      "action_family": "serve_to_coffee_table",
+      "payload_type": "meal_box",
+      "pipeline": "task108_serve",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": true
+    },
+    "10.7": {
+      "group": "microwave_fridge",
+      "real_data_reference_ids": ["106"],
+      "action_family": "take_from_microwave",
+      "payload_type": "salad_box",
+      "pipeline": "task106_take",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": false
+    },
+    "10.8": {
+      "group": "serve_meal",
+      "real_data_reference_ids": [],
+      "action_family": "serve_to_dining_table",
+      "payload_type": "salad_box",
+      "pipeline": "task108_serve",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": false
+    },
+    "10.9": {
+      "group": "serve_meal",
+      "real_data_reference_ids": ["108"],
+      "action_family": "serve_to_coffee_table",
+      "payload_type": "salad_box",
+      "pipeline": "task108_serve",
+      "checker": "real2sim/production/dining_check_success.py:check_task",
+      "metrics_schema": "real2sim.dining_metrics.v1",
+      "accepted_pipeline_ready": true
+    }
+  }
+}
