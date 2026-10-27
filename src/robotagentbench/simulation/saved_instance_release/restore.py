@@ -628,6 +628,41 @@ def _native_instruction_copy(state,mode,registry):
     return plan.get('task_name')==name and public['instruction']==plan.get('instruction')
 
 
+def _discovery_case(state,mode,profiles):
+    """Retain the original family's closed directory and saved object catalogue."""
+    launch=state.get('launch_options',{})
+    if mode!='room'or launch.get('task_name')!='task_discovery':return None
+    task=state.get('task_id','');prefix='task_discovery--'
+    family=task[len(prefix):]if task.startswith(prefix)else ''
+    if (launch.get('schema')!='openend.coding_room.launch.v1'or family not in profiles.FAMILIES
+            or launch.get('prompt_id')!=profiles.PROMPTS[family]):
+        raise ValueError('Saved Discovery family and original public prompt must agree')
+    binding=state.get('saved_initialization',{}).get('variation',{}).get('task_object_bindings')
+    if (not isinstance(binding,dict)or not isinstance(binding.get('targets'),dict)
+            or type(binding.get('unique_target_count'))is not int or binding['unique_target_count']<=0):
+        raise ValueError('Original saved Discovery object catalogue is required')
+    # The original native entry independently checks catalogue(request,
+    # manifest, registration) against this exact sidecar. Do not infer targets
+    # from current scoring state or recompute a replacement catalogue here.
+    return family,deepcopy(binding)
+
+
+def _coding_spawn(state,mode,scene_sha256,base_pose):
+    """Rebind an original spawn receipt, never synthesize admission evidence."""
+    saved=state.get('saved_initialization',{});spawn=saved.get('spawn')
+    if spawn is None:
+        if mode=='long':raise ValueError('Original saved Long Task spawn receipt is required')
+        return None
+    if (not isinstance(spawn,dict)
+            or spawn.get('scene_sha256')!=state.get('provenance',{}).get('source_scene_sha256')
+            or spawn.get('initial_base_xyyaw')!=state['robot']['initial_base_xyyaw']
+            or spawn.get('initial_base_xyyaw')!=base_pose):
+        raise ValueError('Saved spawn receipt differs from its original scene or base pose')
+    result=deepcopy(spawn)
+    result.update(scene_sha256=scene_sha256,initial_base_xyyaw=deepcopy(base_pose))
+    return result
+
+
 def restore(release,runtime,task,episode,output,*,python_executable=None,owner_config=None):
     """CPU preparation only. Return a real original-owner launch and receipt."""
     prepared=describe(release,runtime,task,episode,output,owner_config=owner_config)
@@ -641,9 +676,17 @@ def restore(release,runtime,task,episode,output,*,python_executable=None,owner_c
     os.environ['PYTHONPATH']=os.pathsep.join(dict.fromkeys([str(source),*(p for p in inherited if p)]))
     from robotagentbench.simulation.source_tree import NativeSourceTree
     tree=NativeSourceTree(source,prepared['metadata']['source_files'])
+    discovery=None
+    if prepared['mode']=='room'and state['launch_options'].get('task_name')=='task_discovery':
+        with tree.activated():
+            profiles=tree.import_module('short_tasks.agent_probe_v1.cap_v1.native_tools.openend_control_adapter_v1.task_discovery_v1.four_scenarios_min10_v1.profiles')
+            discovery=_discovery_case(state,prepared['mode'],profiles)
     owner=prepared['owner'];owner.mkdir(parents=True,exist_ok=True)
-    work=owner/('compact_'+task+'_'+str(episode).zfill(2)+'_'+uuid.uuid4().hex[:12]);work.mkdir()
+    work=owner/(discovery[0]if discovery else'compact_'+task+'_'+str(episode).zfill(2)+'_'+uuid.uuid4().hex[:12])
+    if work.exists():raise ValueError('Original owner case already exists; configure a fresh Runtime instead of overwriting it')
+    work.mkdir()
     _json(work/'restore_intent.json',dict(state_sha256=_sha(selected['state_path']),original_seed=state['actual_seed'],native_started=False,model_started=False))
+    if discovery:_json(work/'object_bindings.json',discovery[1])
     native_instruction_copy=False
     with tree.activated():
         scene_module=tree.import_module('short_tasks.scene');recipe=deepcopy(state['scene_recipe'])
@@ -680,6 +723,10 @@ def restore(release,runtime,task,episode,output,*,python_executable=None,owner_c
     if ready.get('targets_rad')!=targets:raise ValueError('Saved ready posture differs from saved robot state')
     _json(work/'request.json',request);_json(work/'ready_pose.json',ready)
     manifest=deepcopy(state['manifest_template']);manifest['scene']=str(restored);manifest['scene_sha256']=_sha(restored)
+    if request.get('task_name')=='select_trash':
+        from .context_assets import restore_trash_entries
+        manifest,checks['context_asset_aliases']=restore_trash_entries(
+            manifest,source=source,runtime=base,metadata=prepared['metadata'])
     manifest['source_hashes']=dict(composed['source_hashes']);manifest['source_hashes'][str(scene)]=_sha(scene)
     manifest['source_hashes'].update(extra_hashes)
     manifest['source_hashes'][str(restored)]=_sha(restored)
@@ -696,9 +743,8 @@ def restore(release,runtime,task,episode,output,*,python_executable=None,owner_c
     if launch['schema']=='openend.coding_room.launch.v1':
         launch['source_hashes']={str(source/relative):pin for relative,pin in prepared['metadata']['source_files'].items()}
         keys=['manifest','request','ready_pose']
-        saved=state.get('saved_initialization',{})
-        if 'spawn'in saved:
-            spawn=deepcopy(saved['spawn']);spawn.update(scene_sha256=manifest['scene_sha256'],initial_base_xyyaw=launch['initial_base_xyyaw'])
+        spawn=_coding_spawn(state,prepared['mode'],manifest['scene_sha256'],launch['initial_base_xyyaw'])
+        if spawn is not None:
             _json(work/'spawn.json',spawn);launch['spawn']=str(work/'spawn.json');keys.append('spawn')
         launch['bindings']={key:_sha(launch[key])for key in keys}
     _json(work/'launch.json',launch)

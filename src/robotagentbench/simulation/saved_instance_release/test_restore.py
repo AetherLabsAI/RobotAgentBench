@@ -7,7 +7,7 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import Mock
 
-from .restore import describe,select,_write_saved_json_sidecars,_sha,_restore_scene,_portable_state,_refresh_launch_hashes,_native_instruction_copy
+from .restore import describe,select,_write_saved_json_sidecars,_sha,_restore_scene,_portable_state,_refresh_launch_hashes,_native_instruction_copy,_discovery_case,_coding_spawn
 
 try:
     from pxr import Usd,UsdGeom,UsdPhysics
@@ -16,6 +16,43 @@ except ImportError:
 
 
 class CompactRestoreContract(unittest.TestCase):
+    def test_discovery_keeps_original_family_prompt_and_saved_binding(self):
+        profiles=SimpleNamespace(FAMILIES=('prepare_dinner','host_guests'),
+                                 PROMPTS={'prepare_dinner':'dinner_emma','host_guests':'visit_alex'})
+        binding=dict(targets={'cup':['/World/Cup']},unique_target_count=1,counting='original')
+        state=dict(task_id='task_discovery--prepare_dinner',launch_options=dict(
+            schema='openend.coding_room.launch.v1',task_name='task_discovery',prompt_id='dinner_emma'),
+            saved_initialization=dict(variation=dict(task_object_bindings=binding)))
+        before=json.loads(json.dumps(state))
+        family,saved=_discovery_case(state,'room',profiles)
+        self.assertEqual(family,'prepare_dinner');self.assertEqual(saved,binding)
+        saved['targets']['cup'].append('/World/Other');self.assertEqual(state,before)
+        self.assertIsNone(_discovery_case(state,'ordinary',profiles))
+        state['launch_options']['prompt_id']='visit_alex'
+        with self.assertRaisesRegex(ValueError,'family'): _discovery_case(state,'room',profiles)
+        state['launch_options']['prompt_id']='dinner_emma';state['task_id']='task_discovery--../prepare_dinner'
+        with self.assertRaisesRegex(ValueError,'family'): _discovery_case(state,'room',profiles)
+        state['task_id']='task_discovery--prepare_dinner';state['saved_initialization']={}
+        with self.assertRaisesRegex(ValueError,'catalogue'): _discovery_case(state,'room',profiles)
+
+    def test_spawn_rebind_preserves_original_evidence_and_rejects_missing_or_mismatch(self):
+        base=[1.,2.,.5];pin='a'*64
+        spawn=dict(original_spawn={'physics_certified':False,'position':[1.,2.,0.],
+                                  'method':'original_collision_envelope'},scene_sha256=pin,initial_base_xyyaw=base)
+        state=dict(saved_initialization=dict(spawn=spawn),provenance=dict(source_scene_sha256=pin),
+                   robot=dict(initial_base_xyyaw=base))
+        before=json.loads(json.dumps(state));rebound=_coding_spawn(state,'long','b'*64,list(base))
+        self.assertEqual(rebound['original_spawn'],spawn['original_spawn'])
+        self.assertFalse(rebound['original_spawn']['physics_certified'])
+        self.assertEqual(rebound['scene_sha256'],'b'*64);self.assertEqual(state,before)
+        rebound['original_spawn']['physics_certified']=True;self.assertEqual(state,before)
+        for field,value in [('scene_sha256','c'*64),('initial_base_xyyaw',[1.,2.,.6])]:
+            altered=json.loads(json.dumps(state));altered['saved_initialization']['spawn'][field]=value
+            with self.assertRaisesRegex(ValueError,'original scene or base'): _coding_spawn(altered,'long','b'*64,base)
+        state['saved_initialization']={}
+        with self.assertRaisesRegex(ValueError,'required'): _coding_spawn(state,'long','b'*64,base)
+        self.assertIsNone(_coding_spawn(state,'room','b'*64,base))
+
     def fixture(self,root):
         runtime=root/'Runtime';runtime.mkdir();source=runtime/'source';source.mkdir()
         (runtime/'runtime.json').write_text(json.dumps(dict(schema='robotagentbench.local_installation.v1',profile='room',

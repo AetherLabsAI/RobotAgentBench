@@ -14,7 +14,7 @@ safely install the independent, checksum-pinned gzip archives:
 
 ```bash
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.2.json \
+  --manifest resources/saved-instances-0.2.3.json \
   --cache .cache/saved-instances --destination /your/SavedConfigurations
 ```
 

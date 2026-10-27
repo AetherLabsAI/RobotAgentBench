@@ -26,6 +26,8 @@ _ROOM_HAND_RESOURCES = (
      'ed9667c4d8a6637f84753b4c7d50a9bf08a26a998e44141bddcde99bf12668e2',
      ('static_short_hand_011/cropped_rig.json',)),
 )
+_ROOM_LONG_ENTRY = 'short_tasks/agent_probe_v1/long_task_eval_setup_v1/revision2/entry.py'
+_ROOM_HOTWAKE = 'layout_task_activation_v1/hotwake_probe_inputs.json'
 
 
 def _index(manifest, assets):
@@ -162,6 +164,29 @@ def configure(manifest, assets, destination, profile):
         copy_file(source, target, digest, priority)
         bindings[location] = str(destination / target)
     if profile == 'room':
+        if _ROOM_LONG_ENTRY in source_manifest['profiles'][profile]['files']:
+            # The original long-task admission compares its sensor settings
+            # against this exact calibration record. Reuse the byte-for-byte
+            # input already bundled with the original composite preparer.
+            from .simulation.composite_instance_bank.source_manifest import MANIFEST, EMBEDDED_DATA
+            rows = [row for row in MANIFEST['sources'] if row['target_relative'] == _ROOM_HOTWAKE]
+            if len(rows) != 1 or rows[0]['bundled_relative'] != 'embedded/hotwake_probe_inputs.json':
+                raise ValueError('One original long-task calibration input required')
+            row = rows[0]
+            raw = EMBEDDED_DATA[row['bundled_relative']]
+            digest = hashlib.sha256(raw).hexdigest()
+            if digest != row['sha256']:
+                raise ValueError('Original long-task calibration input changed')
+            relative = source_relative + '/' + _ROOM_HOTWAKE
+            if relative in file_pins and file_pins[relative] != digest:
+                raise ValueError('Conflicting original long-task calibration input')
+            if relative not in file_pins:
+                target = stage / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                with target.open('xb') as stream:
+                    stream.write(raw)
+                file_pins[relative] = digest
+                priorities[relative] = 100
         if _ROOM_HAND_ROOT + 'adaptive_hand.py' in source_manifest['profiles'][profile]['files']:
             for location, digest, tails in _ROOM_HAND_RESOURCES:
                 if index['locations'].get(location) != digest:

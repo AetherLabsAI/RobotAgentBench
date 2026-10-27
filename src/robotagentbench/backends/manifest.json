@@ -3255,6 +3255,14 @@
           "sha256": "6fca9b122b8bdcdc722803d2c4e92658949551cb928f11adcd57ddf85248983f",
           "bytes": 2268
         },
+        "short_tasks/agent_probe_v1/cap_v1/native_tools/openend_control_adapter_v1/task_discovery_v1/person_context_v4/context.txt": {
+          "sha256": "d5d4f52564612d1b7215a2b9dd6dcfb5a5a4466aae83ff93ca136887538ea5ca",
+          "bytes": 3368
+        },
+        "short_tasks/agent_probe_v1/cap_v1/native_tools/openend_control_adapter_v1/task_discovery_v1/person_context_v4/prompts.json": {
+          "sha256": "d98df2f9fb041c2ab62da3f9cdd85707f1df63e16431a37958fe029e09c2da55",
+          "bytes": 1645
+        },
         "short_tasks/agent_probe_v1/cap_v1/native_tools/openend_control_adapter_v1/task_discovery_v1/policy.py": {
           "sha256": "88534a7c6f5918ae85564523a105f3f547252d2a1141f2c579ad504d71b7ce54",
           "bytes": 7628

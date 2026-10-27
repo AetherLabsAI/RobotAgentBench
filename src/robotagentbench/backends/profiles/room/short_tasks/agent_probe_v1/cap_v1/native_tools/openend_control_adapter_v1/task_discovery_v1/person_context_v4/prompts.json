@@ -1,0 +1,16 @@
+{
+  "schema": "openend.fixed_context.prompts.v4",
+  "context_file": "context.txt",
+  "prompts": [
+    {"id": "dinner_alex", "family": "prepare_dinner", "person": "Alex", "prompt": "Alex will be having dinner here. Please get things ready for him."},
+    {"id": "dinner_emma", "family": "prepare_dinner", "person": "Emma", "prompt": "Emma is coming home for dinner. Could you get things ready for her?"},
+    {"id": "dinner_ryan", "family": "prepare_dinner", "person": "Ryan", "prompt": "Ryan is joining us for dinner. Please get everything ready for him."},
+    {"id": "visit_alex", "family": "host_guests", "person": "Alex", "prompt": "Alex is coming over shortly. Please get some refreshments ready and make the place ready for his visit."},
+    {"id": "visit_emma", "family": "host_guests", "person": "Emma", "prompt": "Emma will be here soon. Could you prepare for her visit?"},
+    {"id": "visit_ryan", "family": "host_guests", "person": "Ryan", "prompt": "Ryan is stopping by after training. Please get the place ready for him."},
+    {"id": "outing_alex_shopping", "family": "prepare_to_leave", "person": "Alex", "prompt": "Alex is heading out to do the shopping. Please help him get ready."},
+    {"id": "outing_emma_work", "family": "prepare_to_leave", "person": "Emma", "prompt": "Emma is going out to work away from home today. Could you help her get ready?"},
+    {"id": "outing_ryan_park", "family": "prepare_to_leave", "person": "Ryan", "prompt": "Ryan is heading out for his walk in the park. Please help him get ready."},
+    {"id": "tidy_room", "family": "tidy_room", "person": null, "prompt": "Please tidy up the room."}
+  ]
+}

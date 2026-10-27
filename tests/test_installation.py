@@ -1,4 +1,5 @@
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -122,6 +123,67 @@ class LocalInstallationTests(unittest.TestCase):
         manifest=self.manifest({'file':b'x'})
         with self.assertRaises(ValueError):
             configure(manifest,self.assets,self.base/'Runtime','unknown')
+
+    def long_profile(self):
+        from robotagentbench.installation import _ROOM_LONG_ENTRY
+        (self.code/_ROOM_LONG_ENTRY).parent.mkdir(parents=True)
+        (self.code/_ROOM_LONG_ENTRY).write_bytes(b'VALUE = 1\n')
+        return dict(profiles={'room':dict(files={_ROOM_LONG_ENTRY:self.pin},compatibility_namespaces=[])})
+
+    def test_long_admission_receives_exact_bundled_calibration(self):
+        from robotagentbench.installation import _ROOM_HOTWAKE
+        from robotagentbench.simulation.composite_instance_bank.source_manifest import EMBEDDED_DATA
+        original=EMBEDDED_DATA['embedded/hotwake_probe_inputs.json']
+        with patch('robotagentbench.installation.sources._manifest',return_value=self.long_profile()):
+            result=configure(self.manifest({}),self.assets,self.base/'Runtime','room')
+        self.assertEqual((Path(result['source_root'])/_ROOM_HOTWAKE).read_bytes(),original)
+        meta=json.loads((self.base/'Runtime/runtime.json').read_text())
+        self.assertEqual(meta['source_files'][_ROOM_HOTWAKE],hashlib.sha256(original).hexdigest())
+        self.assertEqual(meta['parameter_overrides'],{})
+        self.assertFalse(result['native_started'])
+
+    def test_long_calibration_rejects_conflicting_installed_resource(self):
+        from robotagentbench.installation import _ROOM_HOTWAKE
+        with patch('robotagentbench.installation.sources._manifest',return_value=self.long_profile()):
+            with self.assertRaisesRegex(ValueError,'Conflicting original long-task calibration'):
+                configure(self.manifest({'profiles/room/'+_ROOM_HOTWAKE:b'changed sensor'}),
+                          self.assets,self.base/'Runtime','room')
+        self.assertFalse((self.base/'Runtime').exists())
+
+    def test_long_calibration_rejects_changed_embedded_bytes(self):
+        from robotagentbench.simulation.composite_instance_bank.source_manifest import EMBEDDED_DATA
+        with patch('robotagentbench.installation.sources._manifest',return_value=self.long_profile()), \
+             patch.dict(EMBEDDED_DATA,{'embedded/hotwake_probe_inputs.json':b'changed calibration'}):
+            with self.assertRaisesRegex(ValueError,'Original long-task calibration input changed'):
+                configure(self.manifest({}),self.assets,self.base/'Runtime','room')
+        self.assertFalse((self.base/'Runtime').exists())
+
+    def test_discovery_original_inputs_load_from_installed_source_data(self):
+        import robotagentbench
+        package=Path(robotagentbench.__file__).parent
+        original=package/'backends/profiles/room'
+        manifest=json.loads((package/'backends/manifest.json').read_text())
+        prefix='short_tasks/agent_probe_v1/cap_v1/native_tools/openend_control_adapter_v1/task_discovery_v1/'
+        names=[prefix+'inputs.py',prefix+'person_context_v4/context.txt',prefix+'person_context_v4/prompts.json']
+        pins={name:manifest['profiles']['room']['files'][name] for name in names}
+        for name,pin in pins.items():
+            raw=(original/name).read_bytes()
+            self.assertEqual(hashlib.sha256(raw).hexdigest(),pin['sha256'])
+            self.assertEqual(len(raw),pin['bytes'])
+            target=self.code/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
+        source=dict(profiles={'room':dict(files=pins,compatibility_namespaces=[])})
+        with patch('robotagentbench.installation.sources._manifest',return_value=source):
+            result=configure(self.manifest({}),self.assets,self.base/'Runtime','room')
+        root=Path(result['source_root'])
+        spec=importlib.util.spec_from_file_location('_discovery_original_inputs',root/prefix/'inputs.py')
+        inputs=importlib.util.module_from_spec(spec);spec.loader.exec_module(inputs)
+        prompts=json.loads((root/prefix/'person_context_v4/prompts.json').read_text())['prompts']
+        self.assertEqual(len(prompts),10)
+        for prompt in prompts:
+            public=inputs.model_input(prompt['id'])
+            self.assertEqual(public['context'],(original/prefix/'person_context_v4/context.txt').read_text())
+            self.assertEqual(public['prompt'],prompt['prompt']+'\n\n'+inputs.DISCOVERY_SUFFIX)
+            self.assertTrue(inputs.wire_instruction(public).startswith(inputs.PROTECTED_DISCOVERY_DIRECTIVE))
 
     def hand_profile(self):
         from robotagentbench.installation import _ROOM_HAND_ROOT

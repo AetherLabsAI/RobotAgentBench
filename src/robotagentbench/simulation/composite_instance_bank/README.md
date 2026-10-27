@@ -89,9 +89,10 @@ not as a replacement for the separately saved daily context.
 
 The 0.2.1 saved-configuration release corrects only public context from the
 0.2.0 cohort, preserving every physical state and task target. Both earlier
-archives remain unchanged. The current 0.2.2 bank retains these contexts and
-physical states, and adds the original recipes for tray-stocking and
-shelf-lighting preparation. Use the 0.2.2 manifest in the [configuration guide](../../../../docs/INSTANCES.md)
+archives remain unchanged. The current 0.2.3 bank retains these contexts and
+physical states, the original recipes for tray-stocking and shelf-lighting
+preparation, and the original long-task spawn receipts. Use the 0.2.3 manifest
+in the [configuration guide](../../../../docs/INSTANCES.md)
 to download the saved states instead of generating them again.
 
 ## Saved instances and read-only loading
