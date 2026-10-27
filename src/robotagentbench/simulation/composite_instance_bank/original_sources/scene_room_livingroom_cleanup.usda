@@ -1,0 +1,13 @@
+#usda 1.0
+(
+    defaultPrim = ""
+    doc = "Livingroom-cleanup task scene: the receipt-validated scene_room_baseline.usda plus the public coffee-table drawer slide layer (livingroom_drawer_slide.usda, user-approved 2026-09-15). No prim opinions of its own."
+    metersPerUnit = 1
+    subLayers = [
+        @./livingroom_drawer_slide.usda@,
+        @./scene_room_baseline.usda@
+    ]
+    timeCodesPerSecond = 60
+    upAxis = "Z"
+)
+

@@ -38,7 +38,7 @@ an asset identifier or loading interface in this repository does not grant
 redistribution rights to the referenced asset.
 
 Team-authored rooms, task objects, initialization records, question banks and
-standard answers in the [asset release](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets)
+standard answers in the [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets)
 use [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This is separate
 from the evaluation code's Apache-2.0 license. Embedded third-party materials
 and their adaptations keep their original terms.

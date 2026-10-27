@@ -33,6 +33,7 @@ class SessionHost:
         self.cached = None
         self.seen_ids = set()
         first = self.observe()
+        self.contract['observation_fields'] = list(first)
         if first['instruction'] != session.plan['instruction']:
             raise ValueError('Driver instruction differs from the resolved Short Task')
         if max(abs(x) for field in ('linear_velocity_world_m_s', 'angular_velocity_world_rad_s')

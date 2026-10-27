@@ -98,7 +98,8 @@ def execute(operator,launch,output):
     from .binding import binding
     workspace=workspace_for(operator);path=workspace.input(launch);value=config.read(path)
     expected=launch_for(operator,value['task_name'])
-    if value!=expected:raise ValueError('Prepared launch differs from the trusted fixed template')
+    if {k:v for k,v in value.items() if k!='variation'}!=expected:
+        raise ValueError('Prepared launch differs from the trusted original template')
     config.validate(value,workspace,mounted=True)
     environment=NativeEnvironment.from_config(RuntimeDependencies.from_config(operator['native']['dependencies']),operator['native']['profile'])
     root=Path(value['owner']['directories']['original_root'])
@@ -115,9 +116,20 @@ def main(argv=None):
     mode=parser.add_mutually_exclusive_group()
     mode.add_argument('--verify',action='store_true')
     mode.add_argument('--prepare',type=Path,metavar='FRESH_LAUNCH')
+    mode.add_argument('--prepare-variants',type=Path,metavar='FRESH_INSTANCE_BANK')
     mode.add_argument('--execute',type=Path,metavar='PREPARED_LAUNCH')
     parser.add_argument('--output',type=Path)
+    parser.add_argument('--seed',type=int)
+    parser.add_argument('--count',type=int)
     args=parser.parse_args(argv);operator=read_operator(args.operator)
+    if args.prepare_variants:
+        if args.seed is None or args.count is None or args.output is not None:
+            raise ValueError('Explicit --seed and --count required for CPU instance preparation')
+        from .variation_prepare import prepare_bank
+        print(json.dumps(prepare_bank(operator,args.task,args.prepare_variants,seed=args.seed,count=args.count),indent=2))
+        return 0
+    if args.seed is not None or args.count is not None:
+        raise ValueError('Seeds are preparation-only; a saved launch is never resampled')
     if args.execute:
         if args.output is None:raise ValueError('Explicit fresh output required')
         if config.read(args.execute).get('task_name')!=args.task:raise ValueError('Launch/task differs')

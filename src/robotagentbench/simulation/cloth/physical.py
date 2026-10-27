@@ -32,6 +32,14 @@ def main():
     import numpy as np
     selected=admission.selection(value['task_name']);files=owner_config['files']
     with np.load(files['initial'],allow_pickle=False)as archive:prepared={k:archive[k]for k in archive.files}
+    cloth_reset=None
+    if 'variation' in value:
+        from .randomization import load_variation
+        from .variation_native import NativeReset
+        record,initial=load_variation(value['variation'],workspace)
+        baseline=prepared
+        with np.load(initial,allow_pickle=False) as archive:prepared={k:archive[k] for k in archive.files}
+        cloth_reset=NativeReset(record=record,baseline=baseline,prepared=prepared,output=out)
     with np.load(files['reference_action'],allow_pickle=False)as archive:
         names=list(map(str,archive['joint_names']));first=archive['joint_target'][0].copy()
     protocol=admission.read(files['protocol'])
@@ -57,6 +65,9 @@ def main():
         isolated_camera_regression=True,sdk_site=roots['sdk_site'],session_handler=external_stream)
     entry=admission.native_directory(owner_config)/selected['entry']
     adapted=extend_source(entry.read_bytes(),entry.name,observations=False)
+    if cloth_reset is not None:
+        from .variation_native import extend_initialization
+        adapted=extend_initialization(adapted)
     generated=out/'explicit_original_owner_source.py';generated.write_text(adapted)
     (out/'source_invocation.json').write_text(json.dumps(dict(argv=argv,entry_sha256=admission.sha(entry),
         extended_sha256=admission.sha(generated),original_source_edited=False,
@@ -64,7 +75,8 @@ def main():
         diagnostic_replay_intercepted_before_loop=True),indent=2)+'\n')
     sys.argv=argv
     try:
-        exec(compile(adapted,str(generated),'exec'),dict(__name__='__main__',__file__=str(entry),NATIVE_OWNER=owner))
+        exec(compile(adapted,str(generated),'exec'),dict(__name__='__main__',__file__=str(entry),NATIVE_OWNER=owner,
+                                                      CLOTH_RESET=cloth_reset))
     except BaseException as exc:
         owner.report.update(status='error',error=repr(exc),evaluation_valid=False,score=None);owner.save()
         raise

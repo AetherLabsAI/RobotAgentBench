@@ -5,6 +5,7 @@ import math
 import struct
 
 from . import mobile_base, robot_profiles as rp
+from .observation_extras import public_extras
 
 ORDER = list(rp.get(rp.MOBILE22).order) + list(mobile_base.NAMES)
 MAX_TOOL_STEPS = 600  # Existing GPT trial bound, not a task time limit.
@@ -75,4 +76,4 @@ def public_observation(row):
         raise ValueError('Require coherent 640x480 or head 1280x800 / wrist 848x480 PNG cameras')
     return dict(episode_id=row['episode_id'], step=row['step'], time_s=row['time_s'],
                 instruction=row['instruction'], joints=dict(joints), base_state=base,
-                image_step=row['step'], images=images)
+                image_step=row['step'], images=images, **public_extras(row))

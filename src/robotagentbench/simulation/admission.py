@@ -35,6 +35,7 @@ class AdmittedLaunch:
     plan: dict
     owner_kind: str
     input_hashes: tuple[tuple[Path, str], ...]
+    context: str = ''
 
     def verify_inputs(self):
         for path, digest in self.input_hashes:
@@ -43,7 +44,7 @@ class AdmittedLaunch:
                 raise ValueError('Admitted native input changed before startup')
 
 
-def admit_prepared_launch(launch_path, output, *, backend, workspace):
+def admit_prepared_launch(launch_path, output, *, backend, workspace, public_input_binding=None):
     """Validate before any GPU query, output creation, or simulator imports.
 
     The workspace replaces deployment-directory allowlists only. Registry
@@ -58,6 +59,11 @@ def admit_prepared_launch(launch_path, output, *, backend, workspace):
     schema = launch.get('schema')
     if schema not in ('openend.short_task.launch.v1', 'openend.coding_room.launch.v1'):
         raise ValueError('Unsupported prepared native launch schema')
+    public = None
+    public_pins = ()
+    if public_input_binding is not None:
+        from .public_input import load
+        public, public_pins = load(public_input_binding, path, workspace=workspace)
     input_paths = [path]
     for key in ('request', 'manifest'):
         input_paths.append(workspace.input(launch[key]))
@@ -67,7 +73,7 @@ def admit_prepared_launch(launch_path, output, *, backend, workspace):
         input_paths.append(workspace.input(launch['spawn']))
     original_manifest = read(launch['manifest'])
     input_paths.append(workspace.input(original_manifest['scene']))
-    pins = tuple((item, hashlib.sha256(item.read_bytes()).hexdigest()) for item in dict.fromkeys(input_paths))
+    pins = tuple((item, hashlib.sha256(item.read_bytes()).hexdigest()) for item in dict.fromkeys(input_paths)) + public_pins
     if schema == 'openend.coding_room.launch.v1':
         if 'ready_pose' not in launch:
             raise ValueError('The original room owner requires its prepared ready pose')
@@ -106,7 +112,19 @@ def admit_prepared_launch(launch_path, output, *, backend, workspace):
             verify_manifest(manifest)
             owner_kind = 'standalone'
     workspace.input(manifest['scene'])
+    # Only the trusted original owner may select public text. Never forward the
+    # request, scene manifest, target bindings, or arbitrary plan dictionaries.
+    from robotagentbench.interfaces.observation_extras import public_context
+    if public is not None:
+        if owner_kind != 'room':
+            raise ValueError('Saved public text binding requires the room owner public-instruction boundary')
+        plan = deepcopy(plan)
+        plan['instruction'] = public['instruction']
+        context = public_context(public['context'])
+    else:
+        context = public_context(backend.public_context(deepcopy(launch), deepcopy(plan))
+                                 if backend.public_context is not None else '')
     admitted = AdmittedLaunch(path, out, deepcopy(launch), deepcopy(request), deepcopy(manifest),
-                              deepcopy(plan), owner_kind, pins)
+                              deepcopy(plan), owner_kind, pins, context)
     admitted.verify_inputs()
     return admitted

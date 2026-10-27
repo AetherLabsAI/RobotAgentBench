@@ -14,6 +14,11 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     commands = parser.add_subparsers(dest="command", required=True)
+    instances = commands.add_parser('instances', help='Inspect or select a saved task instance without randomizing or running it')
+    instances.add_argument('operation', choices=('list', 'verify', 'select'))
+    instances.add_argument('plan', help='Installed, hash-pinned saved-instance source plan')
+    instances.add_argument('--task', help='Task identifier from instances list')
+    instances.add_argument('--episode', type=int, help='Saved episode ordinal 1–30; select only')
     catalog = commands.add_parser("catalog", help="List registered task or component identifiers")
     catalog.add_argument("name", choices=CATALOG_NAMES)
     catalog.add_argument("--format", choices=("text", "json"), default="text")
@@ -75,6 +80,23 @@ def _check_dependencies(config):
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
+    if args.command == 'instances':
+        from .simulation import saved_instances
+        if args.operation == 'list' and (args.task is not None or args.episode is not None):
+            parser.error('instances list does not accept --task/--episode')
+        if args.operation == 'verify' and args.episode is not None:
+            parser.error('instances verify checks a task bank; --episode is select-only')
+        if args.operation == 'select' and (args.task is None or args.episode is None):
+            parser.error('instances select requires --task and --episode')
+        try:
+            result = (saved_instances.list_tasks(args.plan) if args.operation == 'list' else
+                      saved_instances.verify(args.plan, args.task) if args.operation == 'verify' else
+                      saved_instances.select(args.plan, args.task, args.episode))
+        except (OSError, ValueError, KeyError, TypeError):
+            print(f'{parser.prog}: saved-instance identity or artifact verification failed; no task was started', file=sys.stderr)
+            return 2
+        print(json.dumps(result, indent=2, allow_nan=False))
+        return 0
     if args.command == 'backends':
         from .backends import describe, root, verify
         if (args.verify or args.root) and args.profile is None:

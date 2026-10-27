@@ -5,7 +5,7 @@ initial-state arrays and the layout/collision data needed by the task backends.
 Task code is included in the Python package; Isaac Sim and its SDK are installed
 separately.
 
-Asset repository: [DylanHel/RobotAgentBench-assets](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets).
+Asset repository: [AetherLabs-AI/RobotAgentBench-assets](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets).
 The manifest shipped with the code pins the exact dataset revision and file hashes.
 
 ## Install
@@ -66,3 +66,19 @@ identified later. Asset and third-party terms are separate from the code
 license. Team-authored resources use CC BY 4.0, while third-party resources
 retain their own terms. The manifest includes a license archive so the notices
 accompany automatic downloads and installation; see [third-party notices](THIRD_PARTY.md).
+
+## Saved episode configurations
+
+The [saved-instance bank](INSTANCES.md) is a separate, versioned download. It
+adds 30 pre-generated configurations per task/scenario and reuses identical
+objects from the base asset store. Install it with the matching
+`resources/saved-instances-0.1.0.json` manifest rather than concatenating archive
+parts. Materialize the episode you want in a fresh workspace; starting an
+evaluation does not sample another scene.
+
+The release bank is not the exact set of instances used for the paper's
+reported evaluation. Keep its version and selected episode numbers with your
+results. The model checkpoint is also separate from simulation assets: download
+our fine-tuned policy from
+[AetherLabs-AI/InternVLA-A1.5-RAB](https://huggingface.co/AetherLabs-AI/InternVLA-A1.5-RAB)
+and follow the [InternVLA example](../src/robotagentbench/model_examples/internvla/README.md).

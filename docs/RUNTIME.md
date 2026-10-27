@@ -118,10 +118,52 @@ or recompute task scores. `runtime.room_session` adapts an accepted room while
 preserving its native terminal outcome. Abandonment and execution errors are
 not converted to valid zero-score evaluations.
 
-Observation reads must not advance physics. Only the public camera and robot
-state fields pass through the observation filter. Request UUIDs prevent action
+Observation reads must not advance physics. Only the allowlisted public camera,
+robot state, context, and explored-map fields pass through the observation filter. Request UUIDs prevent action
 replay; a failed or uncertain native write faults the host rather than being
 automatically retried.
+
+## Model-visible observations
+
+The generic native worker returns the same information on its raw-action and
+code-tool paths. The initial `ready.contract.observation_fields` lists the
+fields available in that episode:
+
+| Field | Content |
+| --- | --- |
+| `instruction` | Original task/scenario instruction, without evaluator target bindings |
+| `context` | Complete original public household memory or selection context; empty for tasks without supplied context |
+| `images` | Synchronized base64 PNG images named `head`, `left`, and `right` |
+| `joints` | Named, measured native joint state in the original physical units |
+| `base_state` | Measured world position, quaternion, unwrapped yaw, linear and angular velocity |
+| `navigation` | Explored-map PNG and metric metadata, using the original `openend.native_map_only.v1` packet |
+| `episode_id`, `step`, `time_s`, `image_step` | Episode and control-frame identity |
+
+The map is extracted from the admitted scene's static geometry at the original
+0.04 m resolution. It is progressively revealed using the measured robot state,
+original head-camera geometry, camera field of view and static occlusion. A small
+region around the base is initialized as known. Unknown cells remain grey;
+known free floor, static obstacles, clearance margins, measured base pose and
+the executed trajectory are drawn with the original renderer. This is not RGB
+SLAM. It supplies no route, `goto` action, target pose, or task annotation.
+Generated `/World/RoomEpisode` objects and the robot are excluded from static
+scene extraction, matching the original map-assisted evaluation. Internal full
+grids and geometry files remain evaluator-side under `navigation/private_geometry`;
+only the explored PNG and its allowlisted metadata are returned to the model.
+
+OpenEnd and Task Discovery context comes from their original versioned public
+input readers. Context Reasoning uses only its original public question text;
+answer keys, object bindings, manifests and process scores are not observations.
+The original instruction remains unchanged, including context already embedded
+in that instruction. `context` also exposes the complete supplied text separately.
+
+The lightweight code-tool robot-state read includes context but intentionally
+does not render cameras or update the map; request a full observation for images
+and the map. A map provider is episode-local, and repeated reads of one control
+frame do not advance physics or append duplicate trajectory points. Map PNGs are
+recorded alongside the episode. Specialized recovery, atomic-coffee and native
+cloth owners keep their distinct original protocols; they do not fall through
+to this generic worker or acquire synthetic observations from another scene.
 
 ## Shutdown boundary
 

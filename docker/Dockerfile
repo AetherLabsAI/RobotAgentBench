@@ -21,5 +21,10 @@ RUN /usr/local/bin/python3.11 -m pip install --no-cache-dir \
 COPY pyproject.toml README.md LICENSE /opt/robotagentbench/package/
 COPY src /opt/robotagentbench/package/src
 RUN /usr/local/bin/python3.11 -m pip install --no-cache-dir --no-deps /opt/robotagentbench/package
+# Seal the original SDK core hashes outside the two per-episode writable
+# overlays. This CPU-only build step imports no simulator or device library.
+RUN /usr/local/bin/python3.11 -B -m robotagentbench.simulation.native_deployment image-baseline \
+    --sdk-site /opt/robotagentbench/native \
+    --destination /opt/robotagentbench/native-baseline.json
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONNOUSERSITE=1
 WORKDIR /tmp

@@ -32,7 +32,7 @@ class NativeRunOptions:
             raise ValueError('Use the coding smoke client for coding-policy verification')
 
 
-def run_native_worker(launch_path, output, *, options, backend, workspace):
+def run_native_worker(launch_path, output, *, options, backend, workspace, public_input_binding=None):
     """Admit, execute, shut down, and exit this dedicated process.
 
     This is not a library call for an interactive Python session: native stdout
@@ -44,7 +44,8 @@ def run_native_worker(launch_path, output, *, options, backend, workspace):
         raise TypeError('Explicit native run options are required')
     if options.coding_policy and backend.wrap_coding_host is None:
         raise ValueError('Original code-tool sandbox and broker are not bound')
-    admitted = admit_prepared_launch(launch_path, output, backend=backend, workspace=workspace)
+    extra = {} if public_input_binding is None else {'public_input_binding': public_input_binding}
+    admitted = admit_prepared_launch(launch_path, output, backend=backend, workspace=workspace, **extra)
     if admitted.owner_kind in ('failure_recovery', 'atomic_coffee'):
         # The original fresh-interpreter handoff must not fall through to the
         # generic CPU owner or substitute its physics/scorer imports.

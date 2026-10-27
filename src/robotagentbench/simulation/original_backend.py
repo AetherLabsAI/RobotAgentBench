@@ -25,7 +25,7 @@ ATOMIC_COFFEE_TASKS = frozenset((
 
 def run_original_worker(launch_path, output, *, options, sources, workspace,
                         enable_coding=False, specialized_owner=None, paths=None,
-                        native_cloth_owner=None):
+                        native_cloth_owner=None, public_input_binding=None):
     """Route frozen owners before importing the generic original environment.
 
     All bindings are supplied by trusted operator code, never by the launch or
@@ -52,6 +52,8 @@ def run_original_worker(launch_path, output, *, options, sources, workspace,
             'openend.short_task.launch.v1', 'openend.coding_room.launch.v1',
             'robotagentbench.native_cloth.launch.v1'):
         raise ValueError('Explicit prepared native launch required')
+    if public_input_binding is not None and launch['schema'] != 'openend.coding_room.launch.v1':
+        raise ValueError('Saved public text binding is supported only by the original room owner')
     if (launch['schema'] == 'robotagentbench.native_cloth.launch.v1'
             and launch.get('task_name') not in CLOTH_TASKS):
         raise ValueError('Native cloth launch cannot select another task family')
@@ -95,7 +97,8 @@ def run_original_worker(launch_path, output, *, options, sources, workspace,
         specialized_owner(family, path, out, **kwargs)
         raise RuntimeError('Task-specific interpreter handoff returned unexpectedly')
     with bind_original_backend(sources, enable_coding=enable_coding, paths=paths) as backend:
-        return run_native_worker(path, out, options=options, backend=backend, workspace=workspace)
+        extra = {} if public_input_binding is None else {'public_input_binding': public_input_binding}
+        return run_native_worker(path, out, options=options, backend=backend, workspace=workspace, **extra)
 
 
 class _ConfiguredRegistry:
@@ -223,6 +226,23 @@ class _OriginalTasks:
             return DiscoveryControlSession(session)
         return session
 
+    def public_context(self, launch, plan):
+        """Read the same original public texts used in model-assisted trials."""
+        self.sources.verify()
+        name = plan.get('task_name')
+        if name in ('openend', 'task_discovery'):
+            module = (ROOM_OWNER.rsplit('.', 1)[0] +
+                ('.task_discovery_v1.inputs' if name == 'task_discovery' else '.frozen_context.bundle'))
+            public = self.sources.import_module(module).model_input(launch['prompt_id'])
+            if set(public) != {'context', 'prompt'} or not all(isinstance(v, str) for v in public.values()):
+                raise ValueError('Original public scenario text is malformed')
+            return public['context']
+        if name in ('select_drink', 'select_snack', 'select_sofa'):
+            return plan['public_question']['context']
+        if name == 'select_trash':
+            return plan['selection']['public']['context']
+        return ''  # Explicit-instruction tasks have no invented household memory.
+
     def load_native_bindings(self):
         self.sources.verify()
         self.verify_paths(self.task_name, 'native')
@@ -270,6 +290,7 @@ def bind_original_backend(sources, *, enable_coding=False, paths=None):
             load_native_bindings=owner.load_native_bindings,
             admit_room=owner.admit_room, build_room=owner.build_room,
             accept_room=owner.accept_room,
+            public_context=owner.public_context,
             wrap_coding_host=owner.wrap_coding_host if enable_coding else None,
             # Specialized frozen interpreters need their own separately verified
             # source environment; never inherit this generic source binding.

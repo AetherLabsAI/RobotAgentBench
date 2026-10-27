@@ -28,12 +28,13 @@ class TaskBackend:
     accept_room: Callable | None = None
     wrap_coding_host: Callable | None = None
     exec_special_owner: Callable | None = None
+    public_context: Callable | None = None
 
     def __post_init__(self):
         for name in ('verify_scene_sources', 'build_short_session', 'load_native_bindings'):
             if not callable(getattr(self, name)):
                 raise ValueError('A trusted callable is required: ' + name)
-        for name in ('admit_room', 'build_room', 'accept_room', 'wrap_coding_host', 'exec_special_owner'):
+        for name in ('admit_room', 'build_room', 'accept_room', 'wrap_coding_host', 'exec_special_owner', 'public_context'):
             value = getattr(self, name)
             if value is not None and not callable(value):
                 raise ValueError('A trusted callable is required: ' + name)

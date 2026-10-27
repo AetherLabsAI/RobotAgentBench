@@ -9,11 +9,12 @@ from copy import deepcopy
 
 from robotagentbench.interfaces import robot_profiles as rp
 from robotagentbench.interfaces.action_contract import CAMERAS, public_base
+from robotagentbench.interfaces.observation_extras import public_context, public_navigation
 
 
 class NativeDriver:
     def __init__(self, session, adapter, mobile_controller, *, measured_joints,
-                 apply_native_targets, simulate_fetch, capture_png):
+                 apply_native_targets, simulate_fetch, capture_png, context='', navigation=None):
         if adapter.profile.id != rp.MOBILE22:
             raise ValueError('The native owner must explicitly initialize the 22D adapter')
         if mobile_controller.previous != {'base_forward_m_s': 0., 'base_yaw_rate_rad_s': 0.}:
@@ -23,6 +24,10 @@ class NativeDriver:
         self.apply_targets = apply_native_targets
         self.simulate_fetch = simulate_fetch
         self.capture_png = capture_png
+        self.context = public_context(context)
+        if navigation is not None and not callable(navigation):
+            raise ValueError('A trusted read-only map provider is required')
+        self.navigation = navigation
         self.limits = {n: list(adapter.limits[n]) for n in rp.get(rp.MOBILE22).order}
 
     def validate_targets(self, targets):
@@ -37,11 +42,14 @@ class NativeDriver:
         joints = {name: float(value) for name, value in self.read_joints().items()}
         base = self.base_state()
         images = self.capture_png()  # {head,left,right: base64 PNG}; render-only.
-        if self.session.clock.current_time != now or self.session.control_index != step:
-            raise RuntimeError('Camera capture changed the physics/control clock')
-        return dict(episode_id=self.session.episode_id, step=step, time_s=float(now),
+        row = dict(episode_id=self.session.episode_id, step=step, time_s=float(now),
                     instruction=self.session.plan['instruction'], joints=joints, base_state=base,
-                    image_step=step, images={name: images[name] for name in CAMERAS})
+                    image_step=step, images={name: images[name] for name in CAMERAS}, context=self.context)
+        if self.navigation is not None:
+            row['navigation'] = public_navigation(self.navigation(deepcopy(row)), step)
+        if self.session.clock.current_time != now or self.session.control_index != step:
+            raise RuntimeError('Observation capture changed the physics/control clock')
+        return row
 
     def apply_action(self, targets, velocity):
         native = self.adapter.expand(targets)

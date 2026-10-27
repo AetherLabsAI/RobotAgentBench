@@ -13,13 +13,23 @@ GENERIC='/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_g
 CURRENT='/workspace/lukun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source'
 
 
-def command(workspace,image,mode,*,name=None,gpu=None,locks=None,sdk_site='/opt/robotagentbench/native',env=None):
+def command(workspace,image,mode,*,name=None,gpu=None,locks=None,sdk_site='/opt/robotagentbench/native',env=None,
+            native_deployment=False):
     env=os.environ if env is None else env
-    if mode not in ('plan','prepare','run')or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.:/@-]*',image):
+    if mode not in ('plan','prepare','prepare-native','run')or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.:/@-]*',image):
         raise ValueError('Explicit container image and example mode required')
     if mode!='plan'and(not name or not re.fullmatch('[A-Za-z0-9_-]{1,80}',name)):
         raise ValueError('Simple episode name required')
     base,source,config=runtime(workspace)
+    deployment=None
+    if mode=='prepare-native':
+        from .simulation.native_deployment import image_id
+        image_id(image)
+        if(base/'native_deployments'/name).exists():raise ValueError('Native deployment already exists; choose a fresh episode name')
+    if native_deployment:
+        if mode!='run':raise ValueError('Prepared native overlays apply only to native execution')
+        from .simulation.native_deployment import validate
+        deployment=validate(base,name,image=image,sdk_site=sdk_site)
     mounts={}
     def mount(actual,target,readonly=True):
         actual=Path(actual)
@@ -65,17 +75,35 @@ def command(workspace,image,mode,*,name=None,gpu=None,locks=None,sdk_site='/opt/
         mount(Path(locks).resolve(strict=True),'/locks',False)
         args+=['--gpus','all','--env','NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics',
                '--env','OMNI_KIT_ACCEPT_EULA='+accepted]
+        if deployment is not None:
+            from .model_examples.native_graphics import TARGET
+            for actual,target in deployment['mounts']:mount(actual,target,False)
+            mount(deployment['icd'],TARGET)
+            args+=['--runtime','nvidia','--env','VK_DRIVER_FILES='+TARGET]
     else:
         args+=['--runtime','runc','--env','NVIDIA_VISIBLE_DEVICES=void','--env','CUDA_VISIBLE_DEVICES=']
     for target,(actual,readonly)in sorted(mounts.items(),key=lambda row:len(Path(row[0]).parts)):
         value='type=bind,src='+str(actual)+',dst='+target+(',readonly'if readonly else'')
         args+=['--mount',value]
-    args += [image,'/usr/local/bin/python3.11','-B','-m','robotagentbench.example',
-             '--runtime','/job','--'+mode]
+    if mode=='prepare-native'or deployment is not None:
+        args += [image,'/usr/local/bin/python3.11','-B','-m','robotagentbench.simulation.native_deployment',
+                 'prepare'if mode=='prepare-native'else'run','--runtime','/job','--image-id',image]
+        if deployment is not None:args+=['--deployment-sha256',deployment['sha256']]
+    else:
+        args += [image,'/usr/local/bin/python3.11','-B','-m','robotagentbench.example',
+                 '--runtime','/job','--'+mode]
     if name:args+=['--name',name]
     if mode!='plan':args+=['--sdk-site',sdk_site]
     if mode=='run':args+=['--gpu',str(gpu),'--lock-root','/locks']
     return args
+
+
+def resolve_image(image):
+    """Read local Docker metadata only; never pull an image or query a GPU."""
+    from .simulation.native_deployment import image_id
+    result=subprocess.run(['docker','image','inspect','--format','{{.Id}}',image],
+                          capture_output=True,text=True,check=True)
+    return image_id(result.stdout.strip())
 
 
 def main(argv=None):
@@ -83,15 +111,16 @@ def main(argv=None):
     parser.add_argument('--runtime',type=Path,required=True)
     parser.add_argument('--image',required=True)
     mode=parser.add_mutually_exclusive_group(required=True)
-    for flag in('plan','prepare','run'):mode.add_argument('--'+flag,action='store_true')
+    for flag in('plan','prepare','prepare-native','run'):mode.add_argument('--'+flag,action='store_true',dest=flag.replace('-','_'))
     parser.add_argument('--name');parser.add_argument('--gpu',type=int)
     parser.add_argument('--lock-root',type=Path)
     parser.add_argument('--sdk-site',default='/opt/robotagentbench/native')
     parser.add_argument('--print-command',action='store_true')
     args=parser.parse_args(argv)
-    selected=next(flag for flag in('plan','prepare','run')if getattr(args,flag))
-    cmd=command(args.runtime,args.image,selected,name=args.name,gpu=args.gpu,
-                locks=args.lock_root,sdk_site=args.sdk_site)
+    selected=next(flag for flag in('plan','prepare','prepare-native','run')if getattr(args,flag.replace('-','_')))
+    image=resolve_image(args.image)if selected in('prepare-native','run')else args.image
+    cmd=command(args.runtime,image,selected,name=args.name,gpu=args.gpu,
+                locks=args.lock_root,sdk_site=args.sdk_site,native_deployment=selected=='run')
     if args.print_command:
         print(json.dumps(cmd,indent=2));return 0
     # Preserve live JSONL stdin/stdout, including Docker's -i handoff. There is

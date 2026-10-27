@@ -13,7 +13,13 @@ def admit(path,output,*,task_name,options,workspace):
     if value['task_name']!=task_name:raise ValueError('Exact cloth task required')
     if any(getattr(options,name)for name in('smoke','coding_policy','collision_guard_audit','allow_shared_gpu','allow_idle_utilization')):
         raise ValueError('Formal source owner requires exclusive raw robot22; no diagnostic fallback')
-    hashes=value['owner']['hashes']
+    hashes=dict(value['owner']['hashes'])
+    if 'variation' in value:
+        from . import randomization
+        record,initial=randomization.load_variation(value['variation'],workspace)
+        hashes.update(record['source_hashes'])
+        hashes.update({str(initial):value['variation']['initial_sha256'],
+                       value['variation']['record']:value['variation']['record_sha256']})
     pins=tuple((Path(p),h)for p,h in hashes.items())+((path,config.sha(path)),)
     plan=dict(task_name=task_name,execution_mode='native_cloth_scored.v1',available=True,scoring_available=True)
     return AdmittedLaunch(path,output,value,{'task_name':task_name},{'source_hashes':hashes},plan,'native_cloth',pins)

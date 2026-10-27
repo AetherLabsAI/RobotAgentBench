@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "hosting": {
     "provider": "huggingface",
-    "repository": "DylanHel/RobotAgentBench-assets",
-    "revision": "0d4d68d45464c8fb3a6d0df6537e50dc423698e6"
+    "repository": "AetherLabs-AI/RobotAgentBench-assets",
+    "revision": "b7a4066638df5713bcf36311aace932aa92f54bc"
   },
   "archives": {
     "assets-0.1.0-000.tar.gz": {

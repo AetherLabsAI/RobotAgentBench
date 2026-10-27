@@ -52,6 +52,8 @@ def execute_native(admitted, *, options, backend, lease, completion):
             sync_loads=True, limit_cpu_threads=8, extra_args=[
                 '--/log/file='+str(out/'kit.log'), '--/app/userConfigPath='+str(out/'kit_user.json'),
                 '--/app/tokens/cache='+str(out/'cache'), '--/app/tokens/data='+str(out/'data')]))
+        report['startup_phase'] = 'simulation_app_started'
+        checkpoint()
         import numpy as np
         import carb
         import omni.usd
@@ -105,6 +107,10 @@ def execute_native(admitted, *, options, backend, lease, completion):
             session = build_session(request, stage, manifest, out/'scoring', episode_id=episode, sensor=launch['sensor'])
         if not hasattr(session, 'ports'):
             raise RuntimeError('Short task is unavailable: '+str(session.result()))
+        # Read only this admitted layout, before physical execution. This is
+        # static geometry extraction, not a new physics world or an action.
+        from robotagentbench.runtime.navigation import from_stage
+        navigation = from_stage(stage, spawn=launch['initial_base_xyyaw'], output=out/'navigation')
         mobile = Controller(stage)
         robot_parameter_alignment = bindings.robot_alignment
         report['robot_parameter_alignment'] = robot_parameter_alignment.apply(stage)
@@ -177,6 +183,8 @@ def execute_native(admitted, *, options, backend, lease, completion):
                 report['settled_steps'] = i+1
                 checkpoint()
         report['initial_acceptance'] = session.accept_initial()
+        report['startup_phase'] = 'native_initial_accepted'
+        checkpoint()
         if is_openend:
             session = backend.accept_room(session, episode_id=episode,
                 instruction=plan['instruction'])
@@ -184,6 +192,8 @@ def execute_native(admitted, *, options, backend, lease, completion):
         mobile.bind()
         report['robot_base_initialization']['native_after_settle'] = mobile.observe()
         collision_guard.bind(robot,names)
+        report['startup_phase'] = 'control_guard_bound'
+        checkpoint()
         for name,path in CAMERAS.items():
             if not stage.GetPrimAtPath(path):
                 raise ValueError('Original robot camera missing: '+name)
@@ -195,6 +205,8 @@ def execute_native(admitted, *, options, backend, lease, completion):
             stamp = rep.AnnotatorRegistry.get_annotator('ReferenceTime')
             annotators[name].append(stamp)
             rgb.attach([product]); stamp.attach([product])
+        report['startup_phase'] = 'camera_products_attached'
+        checkpoint()
 
         previous_ref = None
         capture_index = 0
@@ -205,6 +217,9 @@ def execute_native(admitted, *, options, backend, lease, completion):
             previous = settings.get('/app/player/playSimulations')
             settings.set('/app/player/playSimulations',False)
             try:
+                if capture_index == 0:
+                    report['startup_phase'] = 'first_render_start'
+                    checkpoint()
                 for attempt in range(60 if previous_ref is None else 1):
                     rep.orchestrator.step(rt_subframes=1,pause_timeline=False,delta_time=0.,wait_for_render=True)
                     if previous_ref is None and attempt < 3:
@@ -228,6 +243,9 @@ def execute_native(admitted, *, options, backend, lease, completion):
                     (out/f'{capture_index:04d}_{name}.png').write_bytes(data)
                     images[name] = base64.b64encode(data).decode()
                 capture_index += 1
+                if capture_index == 1:
+                    report['startup_phase'] = 'first_camera_images_written'
+                    checkpoint()
                 return images
             finally:
                 settings.set('/app/player/playSimulations',previous)
@@ -238,13 +256,20 @@ def execute_native(admitted, *, options, backend, lease, completion):
             # write an unfiltered target, and do not freeze unrelated channels.
         driver = NativeDriver(session,adapter,mobile,
             measured_joints=lambda:dict(zip(names,map(float,robot.get_dof_positions()[0]))),
-            apply_native_targets=apply,simulate_fetch=advance,capture_png=capture)
+            apply_native_targets=apply,simulate_fetch=advance,capture_png=capture,
+            context=admitted.context,navigation=navigation)
+        report['startup_phase'] = 'first_host_observation'
+        checkpoint()
         host = SessionHost(session,driver)
+        report['startup_phase'] = 'host_observation_ready'
+        checkpoint()
         if args.coding_policy:
             if args.smoke:
                 raise ValueError('Use the coding smoke client for coding-policy verification')
             CodingHost = backend.wrap_coding_host
             host = CodingHost(host,dict(zip(names,map(float,targets[0]))),out)
+            from robotagentbench.runtime.observation_host import ObservationHost
+            host = ObservationHost(host, context=admitted.context, navigation=navigation)
         report['status'] = 'ready'
         checkpoint()
         if args.smoke:

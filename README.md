@@ -4,12 +4,12 @@
 
 A benchmark for household robot agents, from individual manipulation tasks to open-ended assistance.
 
-[Website](https://aetherlabsai.github.io/RobotAgentBench/) · [Assets on Hugging Face](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets) · [Quick start](#quick-start) · [Benchmark](docs/BENCHMARK.md) · [Documentation](#documentation)
+[Website](https://aetherlabsai.github.io/RobotAgentBench/) · [Simulation assets](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) · [InternVLA model](https://huggingface.co/AetherLabs-AI/InternVLA-A1.5-RAB) · [Quick start](#quick-start) · [Documentation](#documentation)
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square)](docs/INSTALL.md)
 [![Isaac Sim](https://img.shields.io/badge/Native_profile-Isaac_Sim_5.1-76B900?style=flat-square)](docs/INSTALL.md#native-environment)
 [![License: Apache 2.0](https://img.shields.io/badge/Code-Apache_2.0-0F766E?style=flat-square)](LICENSE)
-[![Assets](https://img.shields.io/badge/Hugging_Face-Assets-FFD21E?style=flat-square)](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets)
+[![Assets](https://img.shields.io/badge/Hugging_Face-Assets-FFD21E?style=flat-square)](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets)
 
 </div>
 
@@ -26,7 +26,7 @@ A benchmark for household robot agents, from individual manipulation tasks to op
 
 The benchmark spans everyday manipulation, task discovery, context reasoning, failure recovery, robustness, and open-ended scenarios. Task-specific process scores measure verified physical progress, including partial completion.
 
-This repository contains the task backends, initialization and randomization, scoring, and evaluation runtime. Versioned simulation assets are available separately on [Hugging Face](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets).
+This repository contains the task backends, initialization and randomization, scoring, and evaluation runtime. Versioned simulation assets are available separately on [Hugging Face](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets).
 
 <p align="center">
   <a href="docs/images/robotagentbench-overview.png"><img src="docs/images/robotagentbench-overview.png" alt="RobotAgentBench overview: task-level capabilities and scenario-level household assistance" width="100%"></a>
@@ -67,7 +67,7 @@ The core package and catalog inspection do not require Isaac Sim, a GPU, or mode
 
 ### 2. Download assets
 
-The [asset release](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets) is approximately **4.55 GB**, split into **18 archives**, including the license archive. It contains scene and robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers.
+The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) is approximately **4.55 GB**, split into **18 archives**, including the license archive. It contains scene and robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers.
 
 ```sh
 robotagentbench assets fetch resources/assets-0.1.0.json --cache downloads
@@ -86,8 +86,11 @@ Native execution requires **Linux x86_64**, **Docker**, **NVIDIA Container Toolk
 ```sh
 docker build -f docker/Dockerfile -t robotagentbench:native .
 python -m robotagentbench.namespace --runtime Runtime --image robotagentbench:native --plan
+python -m robotagentbench.namespace --runtime Runtime --image robotagentbench:native --prepare-native --name coffee_01
 python -m robotagentbench.namespace --runtime Runtime --image robotagentbench:native --prepare --name coffee_01
 ```
+
+`--prepare-native` creates this episode's private Kit/MDL caches and NVIDIA ICD configuration inside a CPU-only container. No host SDK installation is needed. Use the same image for preparation and execution; a changed image or an existing deployment is rejected.
 
 Review the [NVIDIA license setup](docs/EXAMPLE.md#4-start-the-task). If you accept the applicable terms, start the task worker:
 
@@ -100,9 +103,55 @@ python -m robotagentbench.namespace --runtime Runtime --image robotagentbench:na
 
 The worker exposes a JSONL observation/action interface for an agent or recorded action source. Starting the worker does not run a policy automatically. Follow the [coffee walkthrough](docs/EXAMPLE.md) for interaction examples and the [runtime guide](docs/RUNTIME.md) for agent integration. Use the same GPU-lock directory for all jobs on a host.
 
+### 4. Choose a saved initial configuration
+
+The saved-instance release provides **30 pre-generated initial configurations
+per task or scenario**: 540 for the 18 short tasks, 240 for the 8 long tasks,
+570 across the four additional evaluation dimensions, and 120 for the four
+OpenEnd scenarios (**1,470 in total**). Choose an episode from 1–30 and reuse
+its saved initial state; running a model does not resample it.
+
+The download stores initial-state data, not a complete room copy per episode.
+Positions, orientations, robot initialization and task parameters reuse the
+shared assets; cloth tasks also retain their required cloth-state arrays.
+The configuration download is approximately **232 MB**, split into six archives,
+and is separate from the shared simulation assets.
+
+These are **release configurations for reproducible evaluation**, not the
+exact evaluation instances used for the paper's reported results. Episode
+numbers identify saved configurations, not a promise that the original sampler
+accepted seeds 1–30. The release records each configuration's actual seed.
+
+See [saved configurations](docs/INSTANCES.md) for download, selection, and
+read-only execution setup.
+
+### 5. Connect a model or Robo Agent
+
+Two optional clients reuse the project's server evaluation code:
+
+- [InternVLA-A1.5](src/robotagentbench/model_examples/internvla/README.md): download our fine-tuned model from [AetherLabs-AI/InternVLA-A1.5-RAB](https://huggingface.co/AetherLabs-AI/InternVLA-A1.5-RAB), then use the matching G1 statistics and action projection.
+- [Codex Robo Agent](src/robotagentbench/model_examples/codex/README.md): the original App Server runner, robot tools, and isolated code-policy sandbox.
+
+For example, after creating the corresponding configuration:
+
+```sh
+# InternVLA: the configured model environment and native worker use separate GPUs.
+python -m robotagentbench.model_examples internvla run \
+  --config internvla-run.json --task short01 --output /absolute/path/to/fresh/run
+
+# Codex: uses your own Codex login and can consume model usage.
+python -m robotagentbench.model_examples.codex /absolute/path/to/operator.json --execute
+```
+
+Follow the two linked guides for installation and the full configuration commands.
+The model examples require a separately installed native SDK/environment, or an
+explicit container namespace; the coffee worker command above does not load a
+model or create these configurations. Neither client bundles credentials or
+changes task scoring.
+
 ## Evaluation interface
 
-Agents receive synchronized camera observations and robot-state feedback, and submit physical action chunks. The standard room profile uses one head camera and two wrist cameras with a 20 Hz control interface. Each task handles its own process scores, completion conditions, and termination.
+Agents receive synchronized camera observations, measured robot-state feedback, task-provided context, and an explored navigation map through the generic native worker. The map shows known static geometry, robot pose, and the executed path—not task targets or planned routes. Agents submit physical action chunks; the standard room profile uses one head camera and two wrist cameras with a 20 Hz control interface. Each task handles its own process scores, completion conditions, and termination. See the [observation contract](docs/RUNTIME.md#model-visible-observations) for field names and execution-profile scope.
 
 Results include process scores, completion status, and a termination reason. Setup and runtime errors are reported separately from scored episodes. Camera, physics, and execution settings for specialized tasks are described in the [task backend guides](docs/BACKENDS.md).
 
@@ -115,6 +164,9 @@ Results include process scores, completion status, and a termination reason. Set
 | [Coffee example](docs/EXAMPLE.md) | Install assets, prepare an episode, and connect to the task worker |
 | [Task backends](docs/BACKENDS.md) | Locate task implementations and execution profiles |
 | [Assets](docs/ASSETS.md) | Download, install, and verify a versioned asset release |
+| [Saved configurations](docs/INSTANCES.md) | Select one of 30 saved initial configurations without resampling |
+| [InternVLA example](src/robotagentbench/model_examples/internvla/README.md) | Download the fine-tuned model and run a VLA policy |
+| [Codex example](src/robotagentbench/model_examples/codex/README.md) | Configure and run a code-based Robo Agent |
 | [CLI reference](docs/CLI.md) | Inspect catalogs, verify resources, and invoke configured native operators |
 | [Tablecloth tasks](docs/CLOTH.md) | Configure the separate cloth environment |
 | [Recovery and coffee variants](docs/SPECIALIZED.md) | Configure specialized execution environments |
@@ -147,5 +199,5 @@ python -m unittest discover -s tests
 ## License
 
 - **Evaluation code:** [Apache-2.0](LICENSE).
-- **Team-authored assets and task data:** [CC BY 4.0](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets/blob/main/LICENSE.md).
-- **Third-party materials:** retain their original terms, including CC BY-NC-SA 4.0 for the AgiBot GenieSim robot resources. See [third-party notices](docs/THIRD_PARTY.md) and the [asset notices](https://huggingface.co/datasets/DylanHel/RobotAgentBench-assets/blob/main/NOTICE.md).
+- **Team-authored assets and task data:** [CC BY 4.0](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets/blob/main/LICENSE.md).
+- **Third-party materials:** retain their original terms, including CC BY-NC-SA 4.0 for the AgiBot GenieSim robot resources. See [third-party notices](docs/THIRD_PARTY.md) and the [asset notices](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets/blob/main/NOTICE.md).

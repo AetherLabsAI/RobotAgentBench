@@ -5,6 +5,7 @@ import math
 import struct
 
 from . import mobile_base, robot_profiles as rp
+from .observation_extras import public_extras
 
 ORDER = list(rp.get(rp.MOBILE22).order) + list(mobile_base.NAMES)
 MAX_TOOL_STEPS = 600  # Existing GPT trial bound, not a task time limit.
@@ -56,7 +57,8 @@ def public_robot(row):
         raise ValueError('Need finite named native34 state, without unit conversion')
     base = public_base(row.get('base_state', {}))
     return dict(episode_id=row['episode_id'], step=row['step'], time_s=row['time_s'],
-                instruction=row['instruction'], joints=dict(joints), base_state=base)
+                instruction=row['instruction'], joints=dict(joints), base_state=base,
+                **public_extras(row, include_navigation=False))
 
 
 def public_observation(row):

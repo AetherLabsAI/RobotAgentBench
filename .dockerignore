@@ -13,5 +13,8 @@ outputs
 .env
 .env.*
 private
+**/private
+.private
+**/.private
 *.key
 *.pem

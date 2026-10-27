@@ -17,7 +17,8 @@ DIRS=frozenset(('asset_root','original_root','collision_geometry_root','prepared
     'owner_root','formal_root','public_root','geometry_python_root','sdk_site'))
 FILES=frozenset(('initial','setting','policy','protocol','trial','source_manifest',
     'asset_manifest','geometry_receipt','geometry','reference_action','reference_state'))
-FORMAL_FILES=('__init__.py','config.py','binding.py','launcher.py','supervisor.py','physical.py','bootstrap.py')
+FORMAL_FILES=('__init__.py','config.py','binding.py','launcher.py','supervisor.py','physical.py','bootstrap.py',
+    'randomization.py','variation_prepare.py','variation_native.py')
 OWNER_FILES=('source_hooks.py','source_owner.py','source_controls.py','source_rpc.py',
     'source_visual_client.py','control_session.py','approved_rules.py','composition.py',
     'facts_reader.py','native_reader.py','native_geometry.py','mesh.py','folding.py',
@@ -110,7 +111,8 @@ def source_target(owner,path):
 
 
 def validate(value,workspace,*,mounted=True):
-    if (not isinstance(value,dict)or set(value)!={'schema','task_name','execution_mode','owner'}
+    if (not isinstance(value,dict)or set(value)not in ({'schema','task_name','execution_mode','owner'},
+                                                     {'schema','task_name','execution_mode','owner','variation'})
         or value['schema']!=OUTER or value['task_name']not in TASKS
         or value['execution_mode']!='native_cloth_scored.v1'):
         raise ValueError('Exact scored cloth envelope required')
@@ -182,6 +184,20 @@ def validate(value,workspace,*,mounted=True):
                 if p.is_relative_to(source):
                     view=target/p.relative_to(source)
                     if not view.is_symlink()or view.resolve()!=Path(alias['target']).resolve():raise ValueError('Original compatibility alias retargeted')
+    if 'variation' in value:
+        from . import randomization
+        record,state=randomization.load_variation(value['variation'],workspace)
+        if record['task_name']!=value['task_name'] or record['baseline_sha256']!=pins[str(files['initial'])]:
+            raise ValueError('Variation belongs to a different task or frozen initial state')
+        # This boundary also runs under the isolated, SDK-free supervisor.
+        # Exact array/rigid-reset checks remain mandatory in NativeReset before
+        # SimulationApp is imported, using the pinned native NumPy environment.
+        randomization.verify_scene_choices(record)
+        production=roots['asset_root']/'code/agent_bench/real2sim/production'
+        if record['layout']['catalog']!=str(production/'house_layouts.json'):
+            raise ValueError('Use the original asset-owned layout catalog')
+        if record['appearance']['source']!=str(roots['original_root']/'code/agent_bench/real2sim/production/livingroom_environment_randomization.py'):
+            raise ValueError('Use the pinned original room colour definitions')
     return value
 
 
