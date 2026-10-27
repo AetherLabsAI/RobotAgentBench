@@ -5,7 +5,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from .restore import describe,select,_write_saved_json_sidecars,_sha,_restore_scene
+from .restore import describe,select,_write_saved_json_sidecars,_sha,_restore_scene,_portable_state
 
 try:
     from pxr import Usd,UsdGeom,UsdPhysics
@@ -62,6 +62,29 @@ class CompactRestoreContract(unittest.TestCase):
             self.assertEqual(actual['launch'],str(root/'new_first.json'))
             self.assertEqual(actual['launch_sha256'],_sha(root/'new_first.json'))
             self.assertEqual(actual['code_sources'],{'/original/owner.py':'c'*64})
+
+    def test_long_recipe_keeps_seeded_logical_identity_while_other_paths_rebind(self):
+        with TemporaryDirectory()as directory:
+            runtime=Path(directory).resolve();source=runtime/'source';source.mkdir()
+            logical='/mnt/original/layouts/ID_04.usdc'
+            relative='libraries/original_absolute'+logical
+            installed=runtime/relative;installed.parent.mkdir(parents=True);installed.write_bytes(b'original layout')
+            metadata={'profile':'room','resources':{relative:{'sha256':_sha(installed)}}}
+            recipe={'layout':{'id':4,'scene':logical},'plan':{'seed':1,'poses':[[.1,.2,.3]]}}
+            state={'scene_recipe':recipe,'manifest_template':{'source_layout':logical},'actual_seed':1}
+            original=json.loads(json.dumps(state))
+            rebound=_portable_state(state,source,runtime,metadata,'long')
+            self.assertEqual(rebound['scene_recipe'],original['scene_recipe'])
+            self.assertEqual(rebound['manifest_template']['source_layout'],str(installed))
+            self.assertEqual(rebound['actual_seed'],1)
+            self.assertEqual(state,original)
+            rebound['scene_recipe']['plan']['poses'][0][0]=9
+            self.assertEqual(state,original)
+            for mode in('ordinary','task','room','context'):
+                with self.subTest(mode=mode):
+                    other=_portable_state(state,source,runtime,metadata,mode)
+                    self.assertEqual(other['scene_recipe']['layout']['scene'],str(installed))
+                    self.assertEqual(other['scene_recipe']['plan'],recipe['plan'])
 
 
 @unittest.skipIf(Usd is None,'Requires the native SDK USD modules; no simulator is started')

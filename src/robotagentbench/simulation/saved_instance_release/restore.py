@@ -351,6 +351,17 @@ def _portable(value,source,runtime,metadata):
     return value
 
 
+def _portable_state(state,source,runtime,metadata,mode):
+    rebound=_portable(state,source,runtime,metadata)
+    if mode=='long':
+        # The original Long owner compares this complete recipe with its
+        # deterministic seeded recipe, including logical layout identities.
+        # The verified Runtime namespace supplies those read-only identities;
+        # only execution-side paths outside the recipe are relocated here.
+        rebound['scene_recipe']=deepcopy(state['scene_recipe'])
+    return rebound
+
+
 def _typed(kind,value):
     from pxr import Gf,Vt
     vectors={'double3':Gf.Vec3d,'float3':Gf.Vec3f,'half3':Gf.Vec3h}
@@ -591,7 +602,7 @@ def restore(release,runtime,task,episode,output,*,python_executable=None,owner_c
     prepared=describe(release,runtime,task,episode,output,owner_config=owner_config)
     if prepared['mode']in('cloth','specialized'):return _dedicated(prepared)
     selected=prepared['selected'];state=deepcopy(selected['state']);source=prepared['source'];base=prepared['runtime']
-    state=_portable(state,source,base,prepared['metadata'])
+    state=_portable_state(state,source,base,prepared['metadata'],prepared['mode'])
     # Original compose() starts a fresh Python builder. Its import namespace
     # must follow the same explicit source/USD/PhysX/SDK order as this CPU
     # process; changing sys.path alone does not reach that child interpreter.
