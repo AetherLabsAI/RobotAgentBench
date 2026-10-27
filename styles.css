@@ -691,8 +691,15 @@ a.social-btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255
 .social-btn:focus-visible{outline:2px solid #B89BFF;outline-offset:2px}
 .social-static{cursor:default}
 .social-btn svg{width:18px;height:18px;flex-shrink:0}
-.foot-qr{width:168px;height:auto;flex-shrink:0;border-radius:12px;background:#fff;padding:6px}
-@media (max-width:640px){.foot-social{flex-direction:column;align-items:flex-start;padding:20px}.foot-qr{width:200px;align-self:center}}
+.foot-qrs{display:flex;gap:16px;flex-shrink:0}
+.qr-card{margin:0;display:flex;flex-direction:column;align-items:center;gap:10px;width:136px;text-decoration:none;color:#E6DCF6}
+.qr-card img{display:block;width:100%;height:auto;aspect-ratio:1;border-radius:12px;background:#fff;padding:5px;box-sizing:border-box;transition:transform .2s,box-shadow .2s}
+a.qr-card:hover img{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.35)}
+a.qr-card:focus-visible{outline:none} a.qr-card:focus-visible img{outline:2px solid #B89BFF;outline-offset:3px}
+.qr-card figcaption,.qr-cap{display:inline-flex;align-items:center;gap:6px;font:600 13px/1 var(--f-body)}
+.qr-card svg{width:15px;height:15px;flex-shrink:0}
+@media (max-width:900px){.foot-social{flex-direction:column;align-items:flex-start}.foot-qrs{width:100%;justify-content:flex-start}}
+@media (max-width:640px){.foot-social{padding:20px}.foot-qrs{gap:10px;justify-content:space-between}.qr-card{width:calc((100% - 20px)/3)}.qr-card img{border-radius:9px;padding:4px}}
 /* muted only because the browser blocked autoplay with sound: make the sound button stand out */
 .demo-tool.demo-tool-cta{opacity:1;background:var(--grad);border-color:transparent;box-shadow:0 6px 22px -6px rgba(182,60,239,.9);animation:demoCta 1.8s ease-in-out infinite}
 @keyframes demoCta{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
