@@ -4336,6 +4336,10 @@
           "bytes": 4044
         },
         "short_tasks/tasks/wipe_table/component_sources.json": {
+          "sha256": "4ed980457b806282cc9c27889a472dbb79a711078224f76071c7a5782e5cab36",
+          "bytes": 2764
+        },
+        "short_tasks/tasks/wipe_table/component_sources.original.json": {
           "sha256": "87d54d610d33f7c4d04e4469f2009de065c0f3fef754e29911e6f731f4bdd4c8",
           "bytes": 2764
         },

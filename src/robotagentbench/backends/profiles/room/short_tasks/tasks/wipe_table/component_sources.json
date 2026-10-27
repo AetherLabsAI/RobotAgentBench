@@ -25,7 +25,7 @@
     "short_tasks/tasks/wipe_table/prepare.py": "75b3cfaa6b1627ea2d729c960ad31802906c3e4ffd96c753e647440487bf2991",
     "short_tasks/tasks/wipe_table/generation.py": "c7602c7fe6eae134318f1ea4a34e1ea881a2f0bd458b075b29253ddbf8f1f573",
     "short_tasks/tasks/wipe_table/request.json": "b839aafba7fe70c9b3fe3d9aaedbe1da75164c19ccea7a3021c5f33698b0e6a5",
-    "short_tasks/scene_sources.json": "83517821abb47f69971b1081b00c93faa62b8e9166e61f581e607bddde8eaa3a"
+    "short_tasks/scene_sources.json": "4399e895628e7d0ba34fdeb8ed24b31c28017e1273bda3c0a28e049a54086965"
   },
   "rule_version": "openend.short_task.wipe_table.v1"
 }
