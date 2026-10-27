@@ -115,9 +115,16 @@ def require_resource(deps, key, expected, *, kind=None):
 
 
 def external_profile(operator, family, deps):
-    """Read the exact existing assembly; never rewrite, reduce or repin it."""
+    """Verify the fixed camera-only derivative and retain its original anchor."""
+    from . import camera_release
     supplied, anchor = operator['families'][family], identities()[family]
-    path = require_resource(deps, supplied['manifest'], anchor['manifest_sha256'])
+    camera = camera_release.profile(family)
+    if camera['base_assembly_sha256'] != anchor['manifest_sha256']:
+        raise ValueError('Camera release does not derive from the original owner anchor')
+    original = require_resource(deps, supplied['manifest'] + '_upstream', anchor['manifest_sha256'])
+    path = require_resource(deps, supplied['manifest'], camera['derived_assembly_sha256'])
+    if camera_release.derive_assembly(original, family) != Path(path).read_bytes():
+        raise ValueError('Selected assembly is not the exact reviewed camera-only derivative')
     manifest = read(path)
     if (manifest.get('schema') != anchor['manifest_schema']
             or manifest.get('owner') != anchor['manifest_owner']):

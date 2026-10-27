@@ -243,7 +243,7 @@ def specialized(*, assets, manifest, runtimes, bank, output, native_config,
     The saved-instance owner restores its original attachments next to them,
     replaces all input pins, and applies the normal owner gates afterwards.
     """
-    from .specialized import config
+    from .specialized import config, camera_release
     if family not in config.MODULES or type(gpu) is not int or gpu < 0:
         raise ValueError('Exact dedicated family and exclusive GPU required')
     approved = template()
@@ -330,7 +330,14 @@ def specialized(*, assets, manifest, runtimes, bank, output, native_config,
         source = resolved[f][1]
         binding_pin = approved['resources'][record['bindings']]['sha256']
         bindings = read(content(binding_pin))
-        assembly = read(content(approved['resources'][record['manifest']]['sha256']))
+        original_pin = approved['resources'][record['manifest']]['sha256']
+        original = content(original_pin)
+        derived = out / (f + '-camera-assembly.json')
+        with derived.open('xb') as stream:
+            stream.write(camera_release.derive_assembly(original, f))
+        resource(record['manifest'] + '_upstream', original, original_pin, 'asset')
+        resource(record['manifest'], derived, sha(derived), 'asset')
+        assembly = read(derived)
         # This path equality is required by the original source verifier.
         for row in assembly['profiles'][f]['files']:
             path = source / row['original'].lstrip('/')

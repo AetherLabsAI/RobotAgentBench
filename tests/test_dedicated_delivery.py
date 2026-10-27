@@ -13,6 +13,7 @@ from types import SimpleNamespace
 from robotagentbench.simulation import dedicated_delivery as delivery
 from robotagentbench.simulation.cloth import config as cloth_config
 from robotagentbench.simulation.specialized import config
+from robotagentbench.simulation.specialized import camera_release
 
 
 class Delivery(unittest.TestCase):
@@ -100,6 +101,10 @@ class Delivery(unittest.TestCase):
             lock_root=lock, output=root / 'Plan', episode=17)
 
     def patches(self, stack, approved, index):
+        # Tiny fake assemblies test delivery orchestration; production fixed
+        # camera provenance and derivation are covered separately.
+        stack.enter_context(patch.object(camera_release, 'derive_assembly',
+                                        side_effect=lambda path, family: Path(path).read_bytes()))
         stack.enter_context(patch.object(delivery, 'template', return_value=approved))
         stack.enter_context(patch.object(delivery.resources, 'read_manifest', return_value={}))
         stack.enter_context(patch.object(delivery.installation, '_index', return_value=index))

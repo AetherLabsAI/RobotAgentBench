@@ -17,6 +17,8 @@ from uuid import uuid4
 from ..common import HERE, owned, digest, verify_sources, write_json
 from .. import visual_diagnostics_id as visual_diagnostics
 
+CAMERA_RESOLUTIONS = dict(head=(1280, 800), left=(848, 480), right=(848, 480))
+
 
 def stage_issues(stage):
     from pxr import UsdPhysics
@@ -104,7 +106,8 @@ def main():
     annotators, products = [], []
     diagnostic_annotator = None
     report['visual_diagnostics'] = dict(observation_only=True, visual_acceptance=False,
-        original_camera_and_renderer_unchanged=True, captures={})
+        camera_pose_and_lens_unchanged=True, camera_resolutions=CAMERA_RESOLUTIONS,
+        renderer_unchanged=True, captures={})
 
     def save():
         report['wall_s'] = time.monotonic()-started
@@ -198,13 +201,13 @@ def main():
             self_collisions_enabled=root.GetAttribute('physxArticulation:enabledSelfCollisions').Get(),
             finger_pad_material_policy=policies['material'])
         # Preserve a real settled image even if admission rejects the initial
-        # state. The existing camera/render settings and physics remain intact.
+        # state. Camera poses/lens settings and physics remain intact.
         def capture_settled():
             nonlocal diagnostic_annotator
             camera_paths = dict(head='/World/Robot/head_link2/Head_Camera',
                 left='/World/Robot/gripper_l_base_link/Left_Camera', right='/World/Robot/gripper_r_base_link/Right_Camera')
             for name, path in camera_paths.items():
-                product = rep.create.render_product(path, (640, 480))
+                product = rep.create.render_product(path, CAMERA_RESOLUTIONS[name])
                 products.append(product)
                 ann = rep.AnnotatorRegistry.get_annotator('rgb')
                 ann.attach([product]);annotators.append((name,ann))
@@ -219,12 +222,14 @@ def main():
                     rep.orchestrator.step(rt_subframes=1,pause_timeline=False,delta_time=0.,wait_for_render=True)
                 for name,ann in annotators:
                     pixels=np.asarray(ann.get_data())
-                    if pixels.shape!=(480,640,4) or pixels.dtype!=np.uint8:
+                    width, height = CAMERA_RESOLUTIONS[name]
+                    if pixels.shape!=(height,width,4) or pixels.dtype!=np.uint8:
                         raise RuntimeError('Invalid source camera image')
                     Image.fromarray(pixels[:,:,:3]).save(out/(name+'_settled.png'))
                 measured = dict(zip(robot.dof_names, map(float, robot.get_joint_positions())))
                 diagnostic = dict(inventory=visual_diagnostics.inventory(stage, measured),
-                    renderer_instances=visual_diagnostics.instance_summary(diagnostic_annotator.get_data()))
+                    renderer_instances=visual_diagnostics.instance_summary(
+                        diagnostic_annotator.get_data(), expected_shape=(800,1280)))
                 write_json(out/'visual_settled.json', diagnostic)
                 report['visual_diagnostics']['captures']['settled'] = dict(
                     inventory=str(out/'visual_settled.json'),

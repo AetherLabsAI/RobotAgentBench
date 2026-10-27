@@ -18,6 +18,10 @@ the G1 adapter used by `internvla run`.
 | Public text | Current worker instruction, bound to `public:<task_id>` |
 | Extra observations | Map/context packets remain available but are not separately encoded by this adapter |
 
+The same native camera dimensions apply to every task family, including
+Robustness, Failure Recovery and tablecloth tasks. Full frames go directly to
+the model's existing 224×224 resize/pad transform, with no extra crop or resize.
+
 The original action projection retains joint/base clipping, inclusive
 0.001 m/s and 0.005 rad/s deadbands, straight/turn exclusivity, braking and
 acceleration limits. Projected rows are committed only after acknowledgment.

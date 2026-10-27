@@ -41,6 +41,7 @@ def run(*, stage, world, robot, mobile, lifecycle, init, plan, fridge,
         stamp = rep.AnnotatorRegistry.get_annotator('ReferenceTime')
         stamp.attach([product])
         stamps.append(stamp)
+    camera_resolutions = dict(head=(1280,800), left=(848,480), right=(848,480))
     capture_index = 0
     previous_ref = None
     bodies = mobile.simulation_view.create_rigid_body_view([
@@ -76,8 +77,9 @@ def run(*, stage, world, robot, mobile, lifecycle, init, plan, fridge,
             images = {}
             for name, ann in annotators:
                 pixels = np.asarray(ann.get_data())
-                if pixels.shape != (480,640,4) or pixels.dtype != np.uint8:
-                    raise RuntimeError('Original 640x480 source camera frame missing')
+                width, height = camera_resolutions[name]
+                if pixels.shape != (height,width,4) or pixels.dtype != np.uint8:
+                    raise RuntimeError('Standard native source camera frame missing')
                 buffer = io.BytesIO()
                 Image.fromarray(pixels[:,:,:3]).save(buffer, format='PNG')
                 data = buffer.getvalue()

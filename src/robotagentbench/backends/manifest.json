@@ -5423,7 +5423,7 @@
           "bytes": 8412
         },
         "coffee/public_integration_v1/component_sources.json": {
-          "sha256": "ebb675dd10b51baa8b8763689795bb79442ea36623f31f6e49b7152806f4076b",
+          "sha256": "ff73e5d79e6cbbcda2d00ae8c4cd59279860f53657188a72e9627af87e04dc59",
           "bytes": 67364
         },
         "coffee/public_integration_v1/contact_award.py": {
@@ -5431,8 +5431,8 @@
           "bytes": 5669
         },
         "coffee/public_integration_v1/contract.py": {
-          "sha256": "691f0dc1c24a93b62aeb4a8de7fc7e243eab2b7c63f5ca3184955aac655db5b4",
-          "bytes": 6004
+          "sha256": "f399b498b422749b61fa96dabe2c58eeb5d1778ebbae9128fa22592df6d94afd",
+          "bytes": 5930
         },
         "coffee/public_integration_v1/deployment.py": {
           "sha256": "edc04a228df4fedc2f5d0d24f5c937438eea7b4fa9a1551cf9adbe62ca821d44",
@@ -5447,8 +5447,8 @@
           "bytes": 9313
         },
         "coffee/public_integration_v1/native_worker.py": {
-          "sha256": "c434a8d847009a1b402ceb62ebe48f27a0c4c319dcdd170e13064dde2cb0dcdf",
-          "bytes": 11988
+          "sha256": "d52d214fc3efe0ab3278bc3ac50633cebc58209625f235d06b236338c14e0626",
+          "bytes": 12228
         },
         "coffee/public_integration_v1/prepare_worker.py": {
           "sha256": "4640197650492982c60d63d9de6862c49dcabe203d195432d7b93b4993059952",
@@ -9027,11 +9027,11 @@
           "bytes": 1865
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/atomic_owner_v2.py": {
-          "sha256": "f7de38b14aa0f0e0bd24c5ec2291d62ae3cc90d48096ee291f2f1148ce22f8ec",
-          "bytes": 17999
+          "sha256": "2d49bdebdcca00b0167e92fe29a57d1dca85ed0a6e7f3531b82c7fb27d0700df",
+          "bytes": 18266
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/component_sources.json": {
-          "sha256": "def3add5d908c40455aed7ab876f8cdfcf5e70c43cdd0f7682ad1c5ea03df0bb",
+          "sha256": "f4f9b66c2de4fe4989e4312fda2e794b9d2c3c52d6963130d262432ad5f71568",
           "bytes": 22072
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/frozen_sofa_session.py": {
@@ -9463,20 +9463,20 @@
           "bytes": 4277
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/public_component_sources.json": {
-          "sha256": "def3add5d908c40455aed7ab876f8cdfcf5e70c43cdd0f7682ad1c5ea03df0bb",
+          "sha256": "f4f9b66c2de4fe4989e4312fda2e794b9d2c3c52d6963130d262432ad5f71568",
           "bytes": 22072
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/public_contract.py": {
-          "sha256": "319e1547887db3206b294c2599a2c1d7fea35f80f309f94fcedb6e75846a6a5b",
-          "bytes": 6011
+          "sha256": "cf6716b65e8f98ca784e81106c7d0d52d6aef7f4771de5751c40ab382666b440",
+          "bytes": 5937
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/public_contract_tests.py": {
           "sha256": "47d4a43c8679a0dd68308f8bf05304204e51e69da700ff7c81fe1a07dddb3edb",
           "bytes": 10487
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/public_control.py": {
-          "sha256": "ad266c08f77587dad43fcb1a315cc9d438982b45a7e79b1edd65bfa80dd63276",
-          "bytes": 7051
+          "sha256": "30a177e9a19215c9427dd544adc6aba73c8ea9ad9a3bb805a3d5b2b4a8cfa78b",
+          "bytes": 7192
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/public_driver.py": {
           "sha256": "a04cb3d033509da3ec2766a3799473651c141356a86071d8883e590b66679ec0",
@@ -9559,8 +9559,8 @@
           "bytes": 2649
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/shelf_continuous_v2/owner.py": {
-          "sha256": "bffc9c9b654931dd04187a3f796712568db962811ef5b558a988b348801aecc2",
-          "bytes": 18289
+          "sha256": "026a2403fde01501dcc93ce0525e77397cf93bc3583b65b93c9642130bbb6584",
+          "bytes": 18556
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/shelf_continuous_v2/packing.py": {
           "sha256": "85ee63634be4bf303a17bbdf9deb0f7c911f2e87add9fd76f23bdb6fa4f058ca",

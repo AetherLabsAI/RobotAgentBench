@@ -17,6 +17,7 @@ from . import adapter
 CAMERAS = dict(head='/World/Robot/head_link2/Head_Camera',
     left='/World/Robot/gripper_l_base_link/Left_Camera',
     right='/World/Robot/gripper_r_base_link/Right_Camera')
+CAMERA_RESOLUTIONS = dict(head=(1280,800), left=(848,480), right=(848,480))
 
 
 def main():
@@ -62,7 +63,8 @@ def main():
         score_policy='original_atomic_process', maximum=plan['score_policy']['maximum'],
         gpu=dict(uuid=gpu[0].strip(), memory_mib=int(gpu[1]), utilization_percent=int(gpu[2]),
                  shared=args.allow_shared_gpu, existing_processes=apps),
-        full_actions_validated=False, model_run=False, cleanup_errors=[])
+        full_actions_validated=False, model_run=False, cleanup_errors=[],
+        camera_resolutions=CAMERA_RESOLUTIONS, camera_pose_and_lens_unchanged=True)
     app = world = session = host = physics = None
     products, annotators = [], {}
 
@@ -147,7 +149,7 @@ def main():
         session.accept_initial(metadata)
         mobile.bind()
         for name,path in CAMERAS.items():
-            product = rep.create.render_product(path,(640,480))
+            product = rep.create.render_product(path,CAMERA_RESOLUTIONS[name])
             products.append(product)
             annotator = rep.AnnotatorRegistry.get_annotator('rgb')
             annotator.attach([product])
@@ -165,7 +167,8 @@ def main():
                 result = {}
                 for name,annotator in annotators.items():
                     pixels = np.asarray(annotator.get_data())
-                    if pixels.shape!=(480,640,4) or pixels.dtype!=np.uint8:
+                    width,height = CAMERA_RESOLUTIONS[name]
+                    if pixels.shape!=(height,width,4) or pixels.dtype!=np.uint8:
                         raise RuntimeError('Invalid native camera buffer')
                     stream = io.BytesIO()
                     Image.fromarray(pixels[:,:,:3]).save(stream,format='PNG')

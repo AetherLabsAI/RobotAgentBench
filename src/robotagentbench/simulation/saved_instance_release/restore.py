@@ -171,9 +171,10 @@ def _rebind_saved_json(value,paths,hashes):
     return result
 
 
-def _write_saved_json_sidecars(sidecars,paths,hashes):
+def _write_saved_json_sidecars(sidecars,paths,hashes,*,source_rebinder=None):
     """Resolve generated file hashes without rejecting harmless path cycles."""
     data={old:_read(row['source'])for old,row in sidecars.items()}
+    if source_rebinder is not None:data={old:source_rebinder(value)for old,value in data.items()}
     previous=dict(hashes)
     for _ in range(len(data)+2):
         values={old:_rebind_saved_json(value,paths,previous)for old,value in data.items()}
@@ -193,6 +194,15 @@ def _write_saved_json_sidecars(sidecars,paths,hashes):
 def _specialized_saved(prepared,operator,family,task,original_launch,destination):
     """Restore exact small owner-authored layers and JSON, without sampling."""
     from pxr import Sdf
+    from robotagentbench.simulation.specialized import camera_release,config
+    # This is a fixed code-only release migration, not source repinning from
+    # arbitrary installed files. Verify the entire derived source chain first.
+    config.verify_sources(operator,family)
+    camera_changes=[]
+    def camera_inputs(value):
+        result,evidence=camera_release.rebind_saved_source_pins(value,family)
+        camera_changes.extend(evidence)
+        return result
     selected=prepared['selected'];state=selected['state']
     layers=[a for a in selected['attachments']if a.get('role')in('scene_root','scene_layer')]
     roots=[a for a in layers if a.get('role')=='scene_root']
@@ -227,17 +237,17 @@ def _specialized_saved(prepared,operator,family,task,original_launch,destination
         if a.get('role')=='owner_json'and isinstance(a.get('original_path'),str)
         and a['original_path']!=original_initial}
     for index,old in enumerate(sidecars):paths[old]=str(work/('owner_'+str(index)+'.json'))
-    files.extend(_write_saved_json_sidecars(sidecars,paths,hashes))
-    initial=_rebind_saved_json(initial,paths,hashes)
+    files.extend(_write_saved_json_sidecars(sidecars,paths,hashes,source_rebinder=camera_inputs))
+    initial=_rebind_saved_json(camera_inputs(initial),paths,hashes)
     initial.update(scene=str(root),scene_sha256=_sha(root))
     _json(work/'initial.json',initial);hashes[original_initial]=_sha(work/'initial.json');files.append(work/'initial.json')
     request=state['task_parameters'];_json(work/'request.json',request);files.append(work/'request.json')
-    manifest=_rebind_saved_json(state['manifest_template'],paths,hashes)
+    manifest=_rebind_saved_json(camera_inputs(state['manifest_template']),paths,hashes)
     manifest.update(scene=str(root),scene_sha256=_sha(root))
     initial_key='initial_file'if family=='atomic_coffee'else'initial'
     manifest.update({initial_key:str(work/'initial.json'),'initial_sha256':_sha(work/'initial.json')})
     _json(work/'manifest.json',manifest);files.append(work/'manifest.json')
-    launch=deepcopy(state['launch_options'])
+    launch=camera_inputs(state['launch_options'])
     launch.update(request=str(work/'request.json'),manifest=str(work/'manifest.json'),scene=str(root))
     for name in('ready_pose','sensors','spawn'):
         original=state.get('saved_initialization',{}).get(name)
@@ -247,7 +257,9 @@ def _specialized_saved(prepared,operator,family,task,original_launch,destination
     for name in('request','manifest','scene'):
         if name+'_sha256'in launch:launch[name+'_sha256']=_sha(launch[name])
     _json(work/'launch.json',launch)
-    return _seal_specialized(operator,family,task,work/'launch.json',files,destination)
+    result=_seal_specialized(operator,family,task,work/'launch.json',files,destination)
+    result['camera_release']=dict(camera_release.provenance(family),saved_source_pin_changes=camera_changes)
+    return result
 
 
 def _dedicated(prepared):

@@ -14,19 +14,17 @@ from .config import read, sha, validate_control_schema
 
 
 STANDARD_CAMERA_PROFILE = 'native_head1280x800_wrist848x480'
-ATOMIC_CAMERA_PROFILE = 'native_three640x480'
 CAMERA_SHAPES = {
     STANDARD_CAMERA_PROFILE: (('head',(800,1280,3)),('left',(480,848,3)),('right',(480,848,3))),
-    ATOMIC_CAMERA_PROFILE: (('head',(480,640,3)),('left',(480,640,3)),('right',(480,640,3))),
 }
 
 
 def camera_profile(native_receipt=None, *, task_id=None):
-    """Select the original owner profile from trusted operator configuration.
+    """Validate the trusted owner and require the unified full-frame profile.
 
     Never infer a profile from image dimensions or model/worker-supplied fields.
-    Atomic Recovery owners use 640x480; room Recovery and cloth retain the
-    ordinary head/wrist profile. This only validates input, not resizes it.
+    Every task family uses the same native head/wrist dimensions. This only
+    validates input; it neither resizes frames nor changes camera parameters.
     """
     if native_receipt is None:
         return STANDARD_CAMERA_PROFILE
@@ -38,10 +36,9 @@ def camera_profile(native_receipt=None, *, task_id=None):
         raise ValueError('Exact trusted native receipt family/task binding required for cameras')
     family,task=native_receipt['family'],native_receipt['task_id']
     if family=='atomic_coffee' and task in ATOMIC:
-        return ATOMIC_CAMERA_PROFILE
+        return STANDARD_CAMERA_PROFILE
     if family=='failure_recovery' and task in RECOVERY:
-        return (ATOMIC_CAMERA_PROFILE if task in ('failure_recovery_shelf_drink',
-                'failure_recovery_coffee_bag') else STANDARD_CAMERA_PROFILE)
+        return STANDARD_CAMERA_PROFILE
     if family=='cloth' and task in CLOTH:
         return STANDARD_CAMERA_PROFILE
     if family=='room' and task not in ATOMIC|CLOTH|RECOVERY.keys():

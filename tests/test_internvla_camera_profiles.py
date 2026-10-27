@@ -59,11 +59,9 @@ class CameraProfiles(unittest.TestCase):
         self.assertEqual(policy.camera_profile(),policy.STANDARD_CAMERA_PROFILE)
         self.assertEqual(policy.camera_profile(binding('room','prepare_dinner')),policy.STANDARD_CAMERA_PROFILE)
         for task in ATOMIC:
-            self.assertEqual(policy.camera_profile(binding('atomic_coffee',task)),policy.ATOMIC_CAMERA_PROFILE)
+            self.assertEqual(policy.camera_profile(binding('atomic_coffee',task)),policy.STANDARD_CAMERA_PROFILE)
         for task in RECOVERY:
-            expected=(policy.ATOMIC_CAMERA_PROFILE if task in
-                ('failure_recovery_shelf_drink','failure_recovery_coffee_bag') else policy.STANDARD_CAMERA_PROFILE)
-            self.assertEqual(policy.camera_profile(binding('failure_recovery',task)),expected)
+            self.assertEqual(policy.camera_profile(binding('failure_recovery',task)),policy.STANDARD_CAMERA_PROFILE)
         for task in CLOTH:
             self.assertEqual(policy.camera_profile(binding('cloth',task)),policy.STANDARD_CAMERA_PROFILE)
 
@@ -130,7 +128,7 @@ class CameraProfiles(unittest.TestCase):
         with self.assertRaises(BeforeTransform):tested.infer(req)
         return captured[0]
 
-    def test_both_full_frame_profiles_reach_same_transform_without_crop_or_resize(self):
+    def test_full_native_frames_reach_transform_without_extra_crop_or_resize(self):
         for profile,shapes in policy.CAMERA_SHAPES.items():
             sample=self.probe(profile,request(shapes))
             for camera,(height,width,_) in shapes:
@@ -141,16 +139,19 @@ class CameraProfiles(unittest.TestCase):
             self.assertEqual(sample['observation.state'].value.shape,(23,))
             self.assertEqual(sample['action'].value.shape,(50,22))
 
-    def test_wrong_or_mixed_dimensions_do_not_select_a_different_profile(self):
+    def test_640_or_mixed_dimensions_rejected_even_for_dedicated_owners(self):
         standard=policy.CAMERA_SHAPES[policy.STANDARD_CAMERA_PROFILE]
-        atomic=policy.CAMERA_SHAPES[policy.ATOMIC_CAMERA_PROFILE]
-        for profile,shapes in ((policy.STANDARD_CAMERA_PROFILE,atomic),
-                (policy.ATOMIC_CAMERA_PROFILE,standard),
-                (policy.STANDARD_CAMERA_PROFILE,standard[:2]+atomic[2:]),
-                (policy.ATOMIC_CAMERA_PROFILE,atomic[:2]+standard[2:])):
-            req=request(shapes);req['camera_profile']=profile;req['observation']['camera_profile']=profile
-            with self.subTest(profile=profile,shapes=shapes),self.assertRaisesRegex(ValueError,'requires'):
-                self.probe(profile,req)
+        legacy=tuple((name,(480,640,3)) for name in ('head','left','right'))
+        receipts=[None,binding('room','prepare_dinner')]
+        receipts += [binding(family,task) for family,tasks in
+            (('atomic_coffee',ATOMIC),('failure_recovery',RECOVERY),('cloth',CLOTH)) for task in tasks]
+        for receipt in receipts:
+            profile=policy.camera_profile(receipt)
+            for shapes in (legacy,standard[:2]+legacy[2:],legacy[:1]+standard[1:]):
+                req=request(shapes)
+                req['camera_profile']=req['observation']['camera_profile']='native_three640x480'
+                with self.subTest(receipt=receipt,shapes=shapes),self.assertRaisesRegex(ValueError,'requires'):
+                    self.probe(profile,req)
 
     def test_original_resize224_is_only_resize_and_decode_is_unchanged(self):
         tree=ast.parse(Path(policy.__file__).read_text())

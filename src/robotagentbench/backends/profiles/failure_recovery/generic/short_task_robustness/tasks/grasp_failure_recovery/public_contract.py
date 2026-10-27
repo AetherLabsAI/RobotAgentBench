@@ -9,9 +9,8 @@ from . import public_base as mobile_base, public_profiles as rp
 ORDER = list(rp.get(rp.MOBILE22).order) + list(mobile_base.NAMES)
 MAX_TOOL_STEPS = 600  # Existing GPT trial bound, not a task time limit.
 CAMERAS = ('head', 'left', 'right')
-# Two coherent raw-camera profiles; the public protocol remains task-agnostic.
-CAMERA_SIZE_PROFILES = (((640,480), (640,480), (640,480)),
-                        ((1280,800), (848,480), (848,480)))
+# Standard native render products; no transport resizing or legacy profile.
+CAMERA_SIZE_PROFILES = (((1280,800), (848,480), (848,480)),)
 BASE_FIELDS = dict(position_world_m=3, orientation_world_xyzw=4,
                    linear_velocity_world_m_s=3, angular_velocity_world_rad_s=3)
 
@@ -72,7 +71,7 @@ def public_observation(row):
         image_sizes.append(struct.unpack('>II', raw[16:24]))
         images[camera] = value
     if tuple(image_sizes) not in CAMERA_SIZE_PROFILES:
-        raise ValueError('Require coherent 640x480 or head 1280x800 / wrist 848x480 PNG cameras')
+        raise ValueError('Require native head 1280x800 / wrist 848x480 PNG cameras')
     return dict(episode_id=row['episode_id'], step=row['step'], time_s=row['time_s'],
                 instruction=row['instruction'], joints=dict(joints), base_state=base,
                 image_step=row['step'], images=images)

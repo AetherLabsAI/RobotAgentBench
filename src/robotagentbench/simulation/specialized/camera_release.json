@@ -1,0 +1,131 @@
+{
+  "schema": "robotagentbench.native_camera_release.v1",
+  "id": "standard_head_wrist_v1",
+  "resolutions": {
+    "head": [
+      1280,
+      800
+    ],
+    "left": [
+      848,
+      480
+    ],
+    "right": [
+      848,
+      480
+    ]
+  },
+  "profiles": {
+    "atomic_coffee": {
+      "base_assembly_sha256": "3d0c7ed98c14ff149913df139b4f9655a6e3dfbaa018c1ca151ddbc303591595",
+      "derived_assembly_sha256": "b4fdbd6ba890caf308c6009d8c8913e8868cd4b03aacc0649571f32e70125ad1",
+      "files": {
+        "/mnt/agent-bench-data/lingjun/coffee_machine_push_interference/public_integration_v1/component_sources.json": {
+          "relative": "coffee/public_integration_v1/component_sources.json",
+          "before": {
+            "sha256": "ebb675dd10b51baa8b8763689795bb79442ea36623f31f6e49b7152806f4076b",
+            "bytes": 67364
+          },
+          "after": {
+            "sha256": "ff73e5d79e6cbbcda2d00ae8c4cd59279860f53657188a72e9627af87e04dc59",
+            "bytes": 67364
+          }
+        },
+        "/mnt/agent-bench-data/lingjun/coffee_machine_push_interference/public_integration_v1/contract.py": {
+          "relative": "coffee/public_integration_v1/contract.py",
+          "before": {
+            "sha256": "691f0dc1c24a93b62aeb4a8de7fc7e243eab2b7c63f5ca3184955aac655db5b4",
+            "bytes": 6004
+          },
+          "after": {
+            "sha256": "f399b498b422749b61fa96dabe2c58eeb5d1778ebbae9128fa22592df6d94afd",
+            "bytes": 5930
+          }
+        },
+        "/mnt/agent-bench-data/lingjun/coffee_machine_push_interference/public_integration_v1/native_worker.py": {
+          "relative": "coffee/public_integration_v1/native_worker.py",
+          "before": {
+            "sha256": "c434a8d847009a1b402ceb62ebe48f27a0c4c319dcdd170e13064dde2cb0dcdf",
+            "bytes": 11988
+          },
+          "after": {
+            "sha256": "d52d214fc3efe0ab3278bc3ac50633cebc58209625f235d06b236338c14e0626",
+            "bytes": 12228
+          }
+        }
+      }
+    },
+    "failure_recovery": {
+      "base_assembly_sha256": "7e35dfbaecb80af748aee82eec9baa5c210adf971f68c5926a2e9c571c0d4441",
+      "derived_assembly_sha256": "c00f5cbfbdb2c0caf207d096fb976443c99e2eca33adbf36c57507d165c9ad70",
+      "files": {
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/atomic_owner_v2.py": {
+          "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/atomic_owner_v2.py",
+          "before": {
+            "sha256": "f7de38b14aa0f0e0bd24c5ec2291d62ae3cc90d48096ee291f2f1148ce22f8ec",
+            "bytes": 17999
+          },
+          "after": {
+            "sha256": "2d49bdebdcca00b0167e92fe29a57d1dca85ed0a6e7f3531b82c7fb27d0700df",
+            "bytes": 18266
+          }
+        },
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/component_sources.json": {
+          "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/component_sources.json",
+          "before": {
+            "sha256": "def3add5d908c40455aed7ab876f8cdfcf5e70c43cdd0f7682ad1c5ea03df0bb",
+            "bytes": 22072
+          },
+          "after": {
+            "sha256": "f4f9b66c2de4fe4989e4312fda2e794b9d2c3c52d6963130d262432ad5f71568",
+            "bytes": 22072
+          }
+        },
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/public_component_sources.json": {
+          "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/public_component_sources.json",
+          "before": {
+            "sha256": "def3add5d908c40455aed7ab876f8cdfcf5e70c43cdd0f7682ad1c5ea03df0bb",
+            "bytes": 22072
+          },
+          "after": {
+            "sha256": "f4f9b66c2de4fe4989e4312fda2e794b9d2c3c52d6963130d262432ad5f71568",
+            "bytes": 22072
+          }
+        },
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/public_contract.py": {
+          "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/public_contract.py",
+          "before": {
+            "sha256": "319e1547887db3206b294c2599a2c1d7fea35f80f309f94fcedb6e75846a6a5b",
+            "bytes": 6011
+          },
+          "after": {
+            "sha256": "cf6716b65e8f98ca784e81106c7d0d52d6aef7f4771de5751c40ab382666b440",
+            "bytes": 5937
+          }
+        },
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/public_control.py": {
+          "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/public_control.py",
+          "before": {
+            "sha256": "ad266c08f77587dad43fcb1a315cc9d438982b45a7e79b1edd65bfa80dd63276",
+            "bytes": 7051
+          },
+          "after": {
+            "sha256": "30a177e9a19215c9427dd544adc6aba73c8ea9ad9a3bb805a3d5b2b4a8cfa78b",
+            "bytes": 7192
+          }
+        },
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/shelf_continuous_v2/owner.py": {
+          "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/shelf_continuous_v2/owner.py",
+          "before": {
+            "sha256": "bffc9c9b654931dd04187a3f796712568db962811ef5b558a988b348801aecc2",
+            "bytes": 18289
+          },
+          "after": {
+            "sha256": "026a2403fde01501dcc93ce0525e77397cf93bc3583b65b93c9642130bbb6584",
+            "bytes": 18556
+          }
+        }
+      }
+    }
+  }
+}
