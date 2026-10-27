@@ -105,6 +105,7 @@ class Delivery(unittest.TestCase):
         # camera provenance and derivation are covered separately.
         stack.enter_context(patch.object(camera_release, 'derive_assembly',
                                         side_effect=lambda path, family: Path(path).read_bytes()))
+        stack.enter_context(patch.object(camera_release, 'profile', return_value={'files': {}}))
         stack.enter_context(patch.object(delivery, 'template', return_value=approved))
         stack.enter_context(patch.object(delivery.resources, 'read_manifest', return_value={}))
         stack.enter_context(patch.object(delivery.installation, '_index', return_value=index))
@@ -150,6 +151,49 @@ class Delivery(unittest.TestCase):
             p = Path(kwargs['runtimes']['atomic_coffee']) / 'sources/atomic_coffee/__rab_delivery_test__/atomic_coffee/source.py'
             p.write_text('not the reviewed bytes')
             with self.assertRaisesRegex(ValueError, 'Configured source member changed'):
+                delivery.specialized(**kwargs)
+            selected.assert_not_called()
+
+    def test_camera_source_upgrade_needs_original_assembly_not_old_code_bytes(self):
+        with tempfile.TemporaryDirectory() as temp, ExitStack() as stack:
+            approved, index, kwargs = self.fixture(Path(temp).resolve())
+            self.patches(stack, approved, index)
+            family = 'atomic_coffee'
+            original = '/__rab_delivery_test__/atomic_coffee/source.py'
+            source = Path(kwargs['runtimes'][family]) / 'sources' / family / original.lstrip('/')
+            after = {'sha256': delivery.sha(source), 'bytes': source.stat().st_size}
+            before = {'sha256': hashlib.sha256(b'old absent code').hexdigest(), 'bytes': 15}
+            approved['resources'][family + '_source'] = dict(kind='source', sha256=before['sha256'])
+            camera_release.profile.side_effect = lambda f: {'files': {original: dict(before=before, after=after)} if f == family else {}}
+            result = delivery.specialized(**kwargs)
+            operator = delivery.read(result['operator'])
+            resources = operator['dependencies']['resources']
+            self.assertEqual(resources[family + '_source']['sha256'], after['sha256'])
+            self.assertEqual(resources[family + '_manifest_upstream']['sha256'],
+                             approved['resources'][family + '_manifest']['sha256'])
+            self.assertNotIn(before['sha256'], index['objects'])
+
+    def test_camera_upgrade_rejects_unknown_predecessor_and_wrong_new_bytes(self):
+        for wrong_predecessor in (True, False):
+            with self.subTest(wrong_predecessor=wrong_predecessor), tempfile.TemporaryDirectory() as temp, ExitStack() as stack:
+                approved, index, kwargs = self.fixture(Path(temp).resolve())
+                selected = self.patches(stack, approved, index)
+                family = 'atomic_coffee'
+                original = '/__rab_delivery_test__/atomic_coffee/source.py'
+                approved['resources'][family + '_source'] = dict(kind='source', sha256='a' * 64)
+                change = dict(before={'sha256': ('b' if wrong_predecessor else 'a') * 64, 'bytes': 15},
+                              after={'sha256': 'c' * 64, 'bytes': 15})
+                camera_release.profile.side_effect = lambda f: {'files': {original: change} if f == family else {}}
+                with self.assertRaisesRegex(ValueError, 'reviewed predecessor|fixed release'):
+                    delivery.specialized(**kwargs)
+                selected.assert_not_called()
+
+    def test_camera_upgrade_does_not_bypass_missing_unrelated_resource(self):
+        with tempfile.TemporaryDirectory() as temp, ExitStack() as stack:
+            approved, index, kwargs = self.fixture(Path(temp).resolve())
+            selected = self.patches(stack, approved, index)
+            approved['resources']['unrelated_source'] = dict(kind='source', sha256='d' * 64)
+            with self.assertRaisesRegex(ValueError, 'Reviewed content is absent'):
                 delivery.specialized(**kwargs)
             selected.assert_not_called()
 

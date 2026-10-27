@@ -311,10 +311,35 @@ def specialized(*, assets, manifest, runtimes, bank, output, native_config,
         dependencies['resources'][key] = dict(root=root, path=path.name,
                                               sha256=digest, kind=kind)
 
+    # Camera upgrades retain the old assembly, not duplicate copies of old
+    # executable source. Resolve only the policy's exact before/after roles
+    # before populating resources; all other old pins must still be present.
+    camera_sources = {}
+    for f, record in approved['families'].items():
+        bindings = read(content(approved['resources'][record['bindings']]['sha256']))
+        for original, change in camera_release.profile(f)['files'].items():
+            key = bindings['source_resources'].get(original)
+            row = approved['resources'].get(key, {})
+            if row.get('kind') != 'source' or row.get('sha256') != change['before']['sha256']:
+                raise ValueError('Camera source resource is not the reviewed predecessor')
+            path = resolved[f][1] / original.lstrip('/')
+            after = change['after']
+            if (canonical(path) != path or sha(path) != after['sha256']
+                    or path.stat().st_size != after['bytes']):
+                raise ValueError('Installed camera source differs from the fixed release')
+            value = (path, after['sha256'])
+            if key in camera_sources and camera_sources[key] != value:
+                raise ValueError('Camera source resource has conflicting family bindings')
+            camera_sources[key] = value
+
     # SDK files are supplied by the verified separate SDK, not downloaded assets.
     sdk_roots = [Path(environments['dependencies']['roots'][r['root']]) / r['path']
                  for r in environments['profile']['metadata_paths']]
     for key, row in approved['resources'].items():
+        if key in camera_sources:
+            path, digest = camera_sources[key]
+            resource(key, path, digest, 'source')
+            continue
         digest = row['sha256']
         if 'sdk_relative' in row:
             matches = [root / row['sdk_relative'] for root in sdk_roots
