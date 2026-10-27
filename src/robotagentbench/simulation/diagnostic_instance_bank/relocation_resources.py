@@ -1,8 +1,8 @@
 """Original resource aliases for reserve-first shelf instance preparation.
 
 The logical paths are compatibility names inside the isolated namespace, not
-host installation paths. All bytes already belong to assets-0.1.0; no assets
-are embedded, copied or changed by this module.
+host installation paths. The pinned original bytes are installed separately;
+no assets are embedded, copied or changed by this module.
 """
 import hashlib
 import json
@@ -48,14 +48,29 @@ def original_resource_aliases(runtime):
     if metadata.get('schema') != 'robotagentbench.local_installation.v1':
         raise ValueError('A configured local Runtime is required')
     original = Path(metadata['runtime'])
+    if not original.is_absolute() or '..' in original.parts:
+        raise ValueError('Canonical recorded Runtime path required')
     bindings = []
     for tail, expected in ALIASES:
         target = LOGICAL_ROOT + tail
         relative = RUNTIME_PREFIX + target.lstrip('/')
         recorded = Path(metadata['resources'][relative])
-        if recorded.relative_to(original).as_posix() != relative:
+        # installation.configure retains the original library copy and also
+        # installs these two scene families in the room source tree, because
+        # namespace.command mounts that tree over their old logical parents.
+        # Accept only those exact two layouts, never an arbitrary metadata
+        # redirection, and verify the same original content pin below.
+        allowed = {Path(relative)}
+        if metadata.get('profile') == 'room' and metadata.get('source_root'):
+            source_relative = Path(metadata['source_root']).relative_to(original)
+            if (source_relative == Path('.') or '..' in source_relative.parts
+                    or (root/source_relative).resolve(strict=True) != root/source_relative):
+                raise ValueError('Canonical installed source root required')
+            allowed.add(source_relative/tail)
+        recorded_relative = recorded.relative_to(original)
+        if '..' in recorded_relative.parts or recorded_relative not in allowed:
             raise ValueError('Original Runtime resource mapping changed: ' + relative)
-        source = root/relative
+        source = root/recorded_relative
         if source.resolve(strict=True) != source or not source.is_file():
             raise ValueError('Canonical installed resource file required: ' + relative)
         with source.open('rb') as stream:
