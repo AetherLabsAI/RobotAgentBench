@@ -17,7 +17,7 @@ from robotagentbench import installation, resources
 from .saved_instance_release.restore import select
 
 HERE = Path(__file__).resolve().parent
-TEMPLATE_SHA = '77e81cd8d24c29063d877862b3c0b26917b61234d8067252572655be02e5659a'
+TEMPLATE_SHA = '621ce20160da44f03135ab4f6c5d3a410d3e0378924d60286276eca6dbc6041d'
 CLOTH_TEMPLATE_SHA = '21097722991dcf616e257da3aaf8fb6aba9815baf70510c1dfd8b313630922b6'
 LEGACY_GENERIC = '/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source'
 RECOVERY_HOSTS = frozenset(('VM-0-8-ubuntu', 'VM-0-10-ubuntu', 'VM-0-13-ubuntu',

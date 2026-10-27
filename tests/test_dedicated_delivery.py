@@ -17,6 +17,22 @@ from robotagentbench.simulation.specialized import camera_release
 
 
 class Delivery(unittest.TestCase):
+    def test_recovery_vendor_modules_match_original_upstream_and_are_explicit_inputs(self):
+        from robotagentbench.backends import sources
+        value=delivery.template()
+        base='/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/vendor_producer/'
+        relative='evaluation/tasks/coffee_machine/vendor_producer'
+        provenance=delivery.read(sources.root('room')/relative/'MANIFEST.json')['files']
+        required=value['families']['failure_recovery']['tasks']['failure_recovery_coffee_bag']['extra']
+        for name in ('machine_contract.py','coffee_logic.py'):
+            original=sources.root('atomic_coffee')/'frozen'/relative/name
+            digest=delivery.sha(original)
+            self.assertEqual(digest,provenance[name]['sha256'])
+            self.assertEqual(value['aliases'][base+name],digest)
+            key='source_recovery_vendor_'+Path(name).stem
+            self.assertEqual(value['resources'][key],dict(kind='source',sha256=digest))
+            self.assertIn(key,required)
+
     def test_reviewed_templates_and_original_roles_are_packaged(self):
         value = delivery.template()
         self.assertEqual(value['schema'], 'robotagentbench.dedicated_delivery_template.v1')

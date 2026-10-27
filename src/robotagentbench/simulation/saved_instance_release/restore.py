@@ -191,6 +191,24 @@ def _write_saved_json_sidecars(sidecars,paths,hashes,*,source_rebinder=None):
     return files
 
 
+def _specialized_sidecar_paths(sidecars,original_initial,work,*,family,task):
+    """Keep the shelf owner's implicit sibling file without changing its code.
+
+    The original recovery runtime reads ``initial.parent/source_snapshot.json``
+    rather than a JSON path field. It must be an indexed attachment of that
+    exact saved initial, not an arbitrary snapshot from a different episode.
+    All other owner JSON remains explicitly rebound as before.
+    """
+    paths={old:str(work/('owner_'+str(index)+'.json'))
+           for index,old in enumerate(sidecars)}
+    if family=='failure_recovery' and task=='failure_recovery_shelf_drink':
+        sibling=str(PurePosixPath(original_initial).parent/'source_snapshot.json')
+        if sibling not in sidecars:
+            raise ValueError('Saved shelf recovery is missing its indexed source_snapshot.json sibling')
+        paths[sibling]=str(work/'source_snapshot.json')
+    return paths
+
+
 def _specialized_saved(prepared,operator,family,task,original_launch,destination):
     """Restore exact small owner-authored layers and JSON, without sampling."""
     from pxr import Sdf
@@ -236,7 +254,7 @@ def _specialized_saved(prepared,operator,family,task,original_launch,destination
     sidecars={a['original_path']:a for a in selected['attachments']
         if a.get('role')=='owner_json'and isinstance(a.get('original_path'),str)
         and a['original_path']!=original_initial}
-    for index,old in enumerate(sidecars):paths[old]=str(work/('owner_'+str(index)+'.json'))
+    paths.update(_specialized_sidecar_paths(sidecars,original_initial,work,family=family,task=task))
     files.extend(_write_saved_json_sidecars(sidecars,paths,hashes,source_rebinder=camera_inputs))
     initial=_rebind_saved_json(camera_inputs(initial),paths,hashes)
     initial.update(scene=str(root),scene_sha256=_sha(root))

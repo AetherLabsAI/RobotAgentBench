@@ -398,7 +398,9 @@
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/resources/source_episodes/1-3/button_two_press_seed5121_v2/episode.json": "10fdd0ed7ac548eb5dee6eeb52b49c4739b1a4b2b94da8f520426039efb35461",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/resources/source_episodes/1-3/button_two_press_seed5121_v2/public_binding.json": "115534fba10f129302b1726a3ab4b58c5d3d1f85d077514677d56de20bb64503",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/vendor_producer/MANIFEST.json": "7cb30320d223e83731cbfbb4b63941e37b32d4a7527ab79acc797d3fbec88cef",
+    "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/vendor_producer/coffee_logic.py": "d047e50a6743962adac764945b2651186abad81de7807d53450bf43a28f49bb2",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/vendor_producer/cup_variants.json": "64fc9ffffe073039eb5ff95952e0a1cc44604b57eea30fa2f9f607d13b00ea02",
+    "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/vendor_producer/machine_contract.py": "7aa591c27cbb42dd990fa7dfe3c6a94e1f834348512cadf068f37d9867be181a",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/refrigerator_take/resources/l1_boxes/foodbox2_v1/foodbox2_hull.usda": "5b45c85b058f9f1f4b8b13552c3e92e4ad7b31e9ec9de3bb8e9f87d7bc5b527e",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/refrigerator_take/resources/l1_boxes/saladbox_v1/saladbox_shortrim.usda": "54ddec2b13865d4b11e7cbd073385ca06c0ffd919b9d7bdb5d713a9460cc0256",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/refrigerator_take/resources/l1_boxes/saladbox_v1/textures/bottom.jpg": "984f42b418d6dfc66b1b414c0704062cf4d832f4e0caa878299511bf2463d13a",
@@ -2944,7 +2946,9 @@
             "asset_9d500b6d749e5d854b395f46",
             "asset_9e1678aab890c0b14bad14a8",
             "asset_b64bdc30e4624657312cdf5e",
-            "asset_dd8b9da1120f3e364e4df2cd"
+            "asset_dd8b9da1120f3e364e4df2cd",
+            "source_recovery_vendor_machine_contract",
+            "source_recovery_vendor_coffee_logic"
           ],
           "launch": "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/execution/release_migration_v21/coffee_bag_03/launch.json",
           "output_parent": "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/execution/public_operator_v24_outputs/failure_recovery_coffee_bag"
@@ -11688,8 +11692,15 @@
     "source_fffa54071ac9f8b516074417": {
       "kind": "source",
       "sha256": "a7c17fccbd196ade83a365e2abfe35a66f51e2c8de5ac7cc728f059d6f89fe5c"
+    },
+    "source_recovery_vendor_coffee_logic": {
+      "kind": "source",
+      "sha256": "d047e50a6743962adac764945b2651186abad81de7807d53450bf43a28f49bb2"
+    },
+    "source_recovery_vendor_machine_contract": {
+      "kind": "source",
+      "sha256": "7aa591c27cbb42dd990fa7dfe3c6a94e1f834348512cadf068f37d9867be181a"
     }
   },
   "schema": "robotagentbench.dedicated_delivery_template.v1"
 }
-
