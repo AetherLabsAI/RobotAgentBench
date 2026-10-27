@@ -142,6 +142,16 @@ def output_root(source, launch):
     return cap/'model_runs'
 
 
+def native_output(source, launch, output, agent):
+    if agent == 'codex':
+        from .codex.worker import long_launch, long_output_root, validate_output
+        if long_launch(launch):
+            native = long_output_root(source)/('model_'+output.name+'_native')
+            validate_output(source, launch, native)
+            return native
+    return output/'native'
+
+
 def configure(args):
     selected, row, base, source, metadata = selection(args.selection)
     name = deployment.name(args.name)
@@ -153,8 +163,10 @@ def configure(args):
     dest = args.destination.resolve()
     if dest.exists() or not dest.parent.is_dir() or dest.is_relative_to(base) or base.is_relative_to(dest):
         raise ValueError('Use a fresh configuration directory outside Runtime, with an existing parent')
-    output = output_root(source, read(row['launch']))/name
-    if output.exists() or (base/'native_deployments'/name).exists():
+    launch = read(row['launch'])
+    output = output_root(source, launch)/name
+    native_out = native_output(source, launch, output, args.agent)
+    if output.exists() or native_out.exists() or (base/'native_deployments'/name).exists():
         raise ValueError('This run identity is already prepared or consumed; choose a new name')
     model = None
     if args.agent == 'internvla':
@@ -196,6 +208,8 @@ def configure(args):
     image = image_id(args.image, args.docker_host)
     dest.mkdir()
     output.parent.mkdir(parents=True, exist_ok=True)
+    if native_out.parent != output:
+        native_out.parent.mkdir(parents=True, exist_ok=True)
     # Existing image-owned cache preparation: CPU-only, no host SDK required.
     prepare = namespace.command(base, image, 'prepare-native', name=name)
     prepare[1:1] = ['--host', endpoint(args.docker_host)]
@@ -216,7 +230,7 @@ def configure(args):
     else:
         from .codex.worker import CODING_PREFIX
         native = dict(schema='robotagentbench.codex_worker.v1', runtime=str(base),
-            sdk_site=deployment.SDK_ALIAS, launch=row['launch'], output=str(output/'native'),
+            sdk_site=deployment.SDK_ALIAS, launch=row['launch'], output=str(native_out),
             lock_root='/locks', gpu=args.gpu, coding_files=[n for n in metadata['source_files'] if n.startswith(CODING_PREFIX)],
             policy_image=policy, docker_host=args.docker_host, input_roots=[str(source)])
         if worker['public_input_binding']:
@@ -252,6 +266,10 @@ def checked(path):
         raise ValueError('Worker differs from its saved selection')
     if Path(worker['output']) != output_root(source, read(row['launch']))/deployment.name(worker['name']):
         raise ValueError('Native output must remain in its task-owned workspace')
+    if worker['agent'] == 'codex':
+        expected = native_output(source, read(row['launch']), Path(worker['output']), 'codex')
+        if Path(read(path.parent/'native.json')['output']) != expected:
+            raise ValueError('Coding native output differs from its original sandbox scope')
     return path, value
 
 
@@ -277,7 +295,9 @@ def worker_command(path, value):
 
 def worker(path):
     path, value = checked(path)
-    if Path(value['worker']['output'], 'native').exists():
+    w = value['worker']
+    _, source, _ = runtime(w['runtime'])
+    if native_output(source, read(w['launch']), Path(w['output']), w['agent']).exists():
         raise ValueError('Native run already exists; never redispatch')
     cmd = worker_command(path, value)
     write(path.parent/'dispatch.json', dict(config_sha256=sha(path),

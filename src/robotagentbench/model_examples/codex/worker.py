@@ -3,10 +3,29 @@
 Run inside the operator's already configured native namespace. No simulator,
 Docker, or model starts when importing or describing this entry.
 """
-import argparse,ast,hashlib,json,os,runpy,sys
+import argparse,ast,hashlib,json,os,re,runpy,sys
 from pathlib import Path
 
 CODING_PREFIX='short_tasks/agent_probe_v1/cap_v1/native_tools/'
+
+def long_output_root(root):
+    # Existing batch_storage.permits / sandbox_launcher scope, not a new
+    # sandbox exception. The original broker still validates policy_workspace.
+    return root/'short_tasks/agent_probe_v1/long_task_eval_setup_v1/evening_progress/trajectory_followup/native_validation'
+
+def long_launch(launch):
+    return (launch.get('schema')=='openend.coding_room.launch.v1'
+            and launch.get('task_name') in {'long_task_'+str(i)for i in range(15,23)})
+
+def validate_output(root,launch,output):
+    if output.resolve()!=output:raise ValueError('Canonical native output required')
+    cap=root/'short_tasks/agent_probe_v1/cap_v1'
+    if output!=cap and output.is_relative_to(cap):return
+    allowed=long_output_root(root)
+    if (long_launch(launch) and allowed.resolve()==allowed and output.parent==allowed
+            and re.fullmatch(r'[a-zA-Z0-9_-]{8,100}',output.name)):
+        return
+    raise ValueError('Native output must use the original cap_v1 or selected long-task sandbox scope')
 
 def selected_image(root,pins):
     relative=CODING_PREFIX+'sandbox_launcher.py';raw=(root/relative).read_bytes()
@@ -83,9 +102,7 @@ def main(argv=None):
         fcl_namespace='short_tasks/agent_probe_v1/collision_guard/vendor/fcl')
     output=Path(value['output']).resolve();launch=Path(value['launch']).resolve(strict=True)
     if output.exists():raise ValueError('Native output already exists; never redispatch')
-    sandbox_root=root/'short_tasks/agent_probe_v1/cap_v1'
-    if not output.is_relative_to(sandbox_root)or output==sandbox_root:
-        raise ValueError('Original coding sandbox/output must remain below its cap_v1 owner')
+    validate_output(root,json.loads(launch.read_text()),output)
     output.parent.mkdir(parents=True,exist_ok=True)
     inputs=value.get('input_roots',[str(root)])
     if not isinstance(inputs,list)or not inputs or len(inputs)!=len(set(inputs)):

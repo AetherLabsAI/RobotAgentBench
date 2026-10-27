@@ -143,6 +143,34 @@ class GuidedWorkflowTests(unittest.TestCase):
                          task_name='long_task_15')),
                          self.source/'short_tasks/agent_probe_v1/cap_v1/model_runs')
 
+    def test_long_codex_uses_original_policy_workspace_allowlist(self):
+        from robotagentbench.model_examples.codex.worker import validate_output, long_output_root
+        for number in range(15, 23):
+            launch = dict(schema='openend.coding_room.launch.v1', task_name=f'long_task_{number}')
+            output = flow.output_root(self.source, launch)/'one'
+            actual = flow.native_output(self.source, launch, output, 'codex')
+            self.assertEqual(actual, long_output_root(self.source)/'model_one_native')
+            validate_output(self.source, launch, actual)
+            self.assertEqual(flow.native_output(self.source, launch, output, 'internvla'), output/'native')
+            for wrong in (output/'native', actual/'native', actual.parent/'short',
+                          actual.parent/('x'*101), actual.parent/'has.dot_name'):
+                with self.subTest(task=number, wrong=wrong), self.assertRaises(ValueError):
+                    validate_output(self.source, launch, wrong)
+            with self.assertRaises(ValueError):
+                validate_output(self.source, {'schema':'openend.short_task.launch.v1',
+                    'task_name':f'long_task_{number}'}, actual)
+
+    def test_long_output_rejects_symlink_escape(self):
+        from robotagentbench.model_examples.codex.worker import validate_output, long_output_root
+        allowed = long_output_root(self.source)
+        allowed.parent.mkdir(parents=True)
+        other = self.root/'other'
+        other.mkdir()
+        allowed.symlink_to(other, target_is_directory=True)
+        with self.assertRaises(ValueError):
+            validate_output(self.source, dict(schema='openend.coding_room.launch.v1', task_name='long_task_15'),
+                            allowed/'model_one_native')
+
     def test_worker_has_same_path_runtime_selection_mounts_and_no_tty(self):
         self.configure()
         path, value = flow.checked(self.dest/'run.json')
@@ -249,6 +277,10 @@ class GuidedWorkflowTests(unittest.TestCase):
             item.write_bytes(data)
             metadata['source_files'][relative] = flow.sha(item)
         (self.base/'runtime.json').write_text(json.dumps(metadata))
+        launch = self.fixture['launch']
+        launch.write_text(json.dumps(dict(schema='openend.coding_room.launch.v1', task_name='long_task_15')))
+        self.row['launch_sha256'] = flow.sha(launch)
+        self.selected.write_text(json.dumps(self.row))
         args = self.args('codex')
         args.codex_executable = Path('/client-only/bin/codex')
         args.codex_client_version = 'codex-cli fixture'
@@ -261,6 +293,18 @@ class GuidedWorkflowTests(unittest.TestCase):
         operator = json.loads((self.dest/'operator.json').read_text())
         self.assertEqual(operator['codex_executable'], '/client-only/bin/codex')
         self.assertEqual(operator['expected_cli_version'], 'codex-cli fixture')
+        path, prepared = flow.checked(self.dest/'run.json')
+        native = flow.read(self.dest/'native.json')
+        expected = flow.native_output(self.source, flow.read(launch), Path(prepared['worker']['output']), 'codex')
+        self.assertEqual(native['output'], str(expected))
+        self.assertFalse(Path(prepared['worker']['output']).exists())
+        self.assertTrue(expected.parent.is_dir())
+        native['output'] = str(Path(prepared['worker']['output'])/'native')
+        (self.dest/'native.json').write_text(json.dumps(native))
+        prepared['files_sha256']['native.json'] = flow.sha(self.dest/'native.json')
+        path.write_text(json.dumps(prepared))
+        with self.assertRaisesRegex(ValueError, 'original sandbox scope'):
+            flow.checked(path)
 
     def test_restoration_container_is_cpu_only_and_uses_selected_episode(self):
         bank = self.root/'Bank'
