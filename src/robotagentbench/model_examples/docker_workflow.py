@@ -123,8 +123,22 @@ def selection(path):
 def output_root(source, launch):
     """Honor the original owner's output boundary, without changing admission."""
     cap = source/'short_tasks/agent_probe_v1/cap_v1'
-    if launch.get('schema') == 'openend.coding_room.launch.v1' and launch.get('task_name') == 'openend':
-        return cap/'native_tools/openend_control_adapter_v1/model_runs'
+    if launch.get('schema') == 'openend.coding_room.launch.v1':
+        task = launch.get('task_name')
+        owner = cap/'native_tools/openend_control_adapter_v1'
+        if task == 'openend':
+            return owner/'model_runs'
+        if task == 'task_discovery':
+            discovery = owner/'task_discovery_v1'
+            four_scenarios = discovery/'four_scenarios_min10_v1'
+            # Match the original Discovery dispatch: the four-scenario owner
+            # requires its output below this narrower directory, not merely
+            # somewhere in the enclosing OpenEnd or Discovery workspace.
+            if Path(launch.get('manifest', '')).parent.parent == four_scenarios/'generated_rooms':
+                return four_scenarios/'model_runs'
+            return discovery/'model_runs'
+        if task in {'long_task_'+str(i) for i in range(15, 23)}:
+            return source/'short_tasks/agent_probe_v1/long_task_eval_setup_v1/model_runs'
     return cap/'model_runs'
 
 

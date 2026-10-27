@@ -101,6 +101,48 @@ class GuidedWorkflowTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'task-owned workspace'):
             flow.checked(path)
 
+    def test_discovery_output_matches_its_original_owner_dispatch(self):
+        owner = self.source/'short_tasks/agent_probe_v1/cap_v1/native_tools/openend_control_adapter_v1'
+        discovery = owner/'task_discovery_v1'
+        launch = dict(schema='openend.coding_room.launch.v1', task_name='task_discovery',
+                      manifest=str(discovery/'fixture/manifest.json'))
+        self.assertEqual(flow.output_root(self.source, launch), discovery/'model_runs')
+        for scenario in ('host_guests', 'prepare_dinner', 'prepare_to_leave', 'tidy_room'):
+            with self.subTest(scenario=scenario):
+                launch['manifest'] = str(discovery/'four_scenarios_min10_v1/generated_rooms'/scenario/'manifest.json')
+                self.assertEqual(flow.output_root(self.source, launch),
+                                 discovery/'four_scenarios_min10_v1/model_runs')
+
+    def test_discovery_configuration_and_recheck_retain_narrow_output_root(self):
+        owner = self.source/'short_tasks/agent_probe_v1/cap_v1/native_tools/openend_control_adapter_v1'
+        discovery = owner/'task_discovery_v1/four_scenarios_min10_v1'
+        launch = self.fixture['launch']
+        launch.write_text(json.dumps(dict(schema='openend.coding_room.launch.v1',
+            task_name='task_discovery', manifest=str(discovery/'generated_rooms/host_guests/manifest.json'))))
+        self.row['launch_sha256'] = flow.sha(launch)
+        self.selected.write_text(json.dumps(self.row))
+        self.configure()
+        path, value = flow.checked(self.dest/'run.json')
+        self.assertEqual(Path(value['worker']['output']), discovery/'model_runs/one')
+        for wrong in (owner/'model_runs/one', owner/'task_discovery_v1/model_runs/one',
+                      self.source/'short_tasks/agent_probe_v1/cap_v1/model_runs/one'):
+            with self.subTest(output=wrong):
+                value['worker']['output'] = str(wrong)
+                path.write_text(json.dumps(value))
+                with self.assertRaisesRegex(ValueError, 'task-owned workspace'):
+                    flow.checked(path)
+
+    def test_long_task_outputs_remain_in_the_original_long_owner_workspace(self):
+        expected = self.source/'short_tasks/agent_probe_v1/long_task_eval_setup_v1/model_runs'
+        for number in range(15, 23):
+            with self.subTest(task=number):
+                launch = dict(schema='openend.coding_room.launch.v1', task_name=f'long_task_{number}')
+                self.assertEqual(flow.output_root(self.source, launch), expected)
+        # A name alone cannot move an ordinary short-task run into another owner.
+        self.assertEqual(flow.output_root(self.source, dict(schema='openend.short_task.launch.v1',
+                         task_name='long_task_15')),
+                         self.source/'short_tasks/agent_probe_v1/cap_v1/model_runs')
+
     def test_worker_has_same_path_runtime_selection_mounts_and_no_tty(self):
         self.configure()
         path, value = flow.checked(self.dest/'run.json')
