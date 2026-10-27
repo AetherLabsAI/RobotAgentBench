@@ -15,16 +15,59 @@ scorer, controller, physics, or safety checks.
   model, provider, transport or API-key fallback.
 - Prepare a saved room/short-task launch and a shared GPU-lock directory.
   Dedicated cloth and specialized owners are not replaced by this room example.
-- Provision the original isolated policy-sandbox image
-  `sha256:4ccf7e950d48f9b5477292bbc123b676fdbad039c6d51573d969008d8ffd5dc6`.
-  Keep its original notices and source materials. [image_recipe.py](image_recipe.py)
-  exports the original Dockerfile and dependency lock; a rebuild is not assumed
-  to have the historical image ID. A different image is rejected, not silently
-  substituted.
+- Build the code-execution sandbox from the Dockerfile below.
+  This is separate from the native simulator environment and model credentials.
 
 The native worker runs on Linux. The agent client can run on that machine or
 connect from a separate computer using a trusted SSH JSONL command. Credentials
 remain on the agent computer, not in the policy sandbox or asset release.
+
+## Build the code-execution sandbox once
+
+The sandbox contains Python and numerical/kinematics dependencies, **not Codex
+weights or Isaac Sim**. Its [Dockerfile](sandbox/Dockerfile) and
+[dependency lock](sandbox/requirements.lock) are included in both the source
+repository and Python package. On the native worker's **Linux amd64** Docker
+host, as a non-root user with Docker access:
+
+```sh
+# Export to a new directory (or use the sandbox/ directory in this repository).
+python -m robotagentbench.model_examples.codex.sandbox_build --export sandbox-build
+docker --host unix:///var/run/docker.sock build --platform linux/amd64 \
+  -t robotagentbench-policy:local sandbox-build
+
+# Inspect this local build; no container or model starts.
+python -m robotagentbench.model_examples.codex.sandbox_build \
+  --image robotagentbench-policy:local --docker-host unix:///var/run/docker.sock
+```
+
+Build time needs access to the pinned Python base and Python package index.
+Execution has no network. Use the same Docker socket for staging and running.
+You may choose your own tag. Staging resolves it to an immutable **local** image
+ID, so moving the tag later cannot silently change an existing evaluation.
+The image is checked for Linux amd64, the build/lock labels, and no declared
+volumes or build hooks. These checks validate a trusted operator's build, not
+the safety of an arbitrary untrusted image. The published dependency versions
+and sandbox restrictions are preserved; no shared image or running container
+is modified.
+
+For a short connection check, choose a fresh absolute output directory under
+an existing parent:
+
+```sh
+python -m robotagentbench.model_examples.codex.sandbox_smoke \
+  --image robotagentbench-policy:local --docker-host unix:///var/run/docker.sock \
+  --output /absolute/path/to/sandbox-check-001
+```
+
+This starts the real isolated Python-tool transport, checks the installed
+dependency versions, initializes both robot controllers, executes a small
+Python command, reads FK, and removes its own container. It uses explicitly
+synthetic robot state: **no Codex call, Isaac startup, physical action or score**.
+The execution code is included in the packaged backend (`native_tools/sandbox.py`
+and `sandbox_boot.py`); the unchanged robot helpers are supplied by
+[server_profile.py](server_profile.py). They are mounted into the restricted
+workspace by the worker rather than baked into a machine-specific image.
 
 ## 1. Stage the coding source profile
 
@@ -33,11 +76,15 @@ Create a new independent Runtime with the included server coding tools:
 ```sh
 python -m robotagentbench.model_examples.codex.stage_runtime \
   --runtime /absolute/path/to/Runtime \
-  --destination /absolute/path/to/codex-workspace --stage
+  --destination /absolute/path/to/codex-workspace \
+  --policy-image robotagentbench-policy:local \
+  --docker-host unix:///var/run/docker.sock --stage
 ```
 
 Use `codex-workspace/Runtime` below. Staging binds the exact included robot-tool
-resources without changing the provider Runtime or task scoring/physics. The
+resources and your resolved local image ID without changing the provider Runtime
+or task scoring/physics. Only the launcher image binding changes; its non-root,
+network-off, read-only and resource-limit arguments remain unchanged. The
 destination must be new. It does not generate a scene, start Isaac, or call a
 model. See [saved configurations](../../../../docs/INSTANCES.md) to select an
 already generated initial state.
@@ -68,7 +115,9 @@ saved room instance with separately supplied public context, also pass its
 `--public-input-binding` and all of its `--input-root` directories. The worker
 checks that this public text belongs to the unchanged selected launch.
 
-Configuration writes `worker.json` and `operator.json` but starts nothing.
+Configuration checks the staged image on that Docker endpoint and writes
+`worker.json` and `operator.json` but starts no container or model. Execution
+uses the recorded immutable ID without pulling or falling back to another image.
 The native output must be a fresh directory under the Runtime's `cap_v1`
 owner; the agent output must also be new. Native outputs stay in that location
 because the original isolated sandbox uses host-daemon file binds there.

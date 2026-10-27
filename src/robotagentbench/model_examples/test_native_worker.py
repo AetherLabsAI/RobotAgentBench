@@ -83,12 +83,20 @@ class PreparedWorkerTests(unittest.TestCase):
 
     def test_coding_public_input_is_validated_without_loading_sdk(self):
         from .codex import worker
+        from .codex.server_profile import deployment_payloads
+        image='sha256:'+'a'*64
+        files=deployment_payloads(image)
+        for name,data in files.items():
+            target=self.root/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
+        runtime_path=self.base/'runtime.json';runtime=json.loads(runtime_path.read_text())
+        runtime.update(coding_policy_image=image,source_files={name:hashlib.sha256(data).hexdigest()for name,data in files.items()})
+        runtime_path.write_text(json.dumps(runtime))
         binding=self.public_binding()
         value=dict(schema='robotagentbench.codex_worker.v1',runtime=str(self.base),sdk_site=str(self.base/'absent-sdk'),
             launch=str(self.launch),output=str(self.output),lock_root=str(self.lock),gpu=0,coding_files=['unused.py'],
-            policy_image=worker.POLICY_IMAGE,docker_host='unix:///run/docker.sock',public_input_binding=str(binding))
+            policy_image=image,docker_host='unix:///run/docker.sock',public_input_binding=str(binding))
         path=self.base/'worker.json';path.write_text(json.dumps(value))
-        with patch.object(worker,'selected_image',return_value=worker.POLICY_IMAGE),contextlib.redirect_stdout(io.StringIO()):
+        with contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(worker.main([str(path)]),0)
             changed=json.loads(binding.read_text());changed['launch_sha256']='0'*64
             binding.write_text(json.dumps(changed))

@@ -130,7 +130,7 @@ read-only execution setup.
 Two optional clients reuse the project's server evaluation code:
 
 - [InternVLA-A1.5](src/robotagentbench/model_examples/internvla/README.md): download our fine-tuned model from [AetherLabs-AI/InternVLA-A1.5-RAB](https://huggingface.co/AetherLabs-AI/InternVLA-A1.5-RAB), then use the matching G1 statistics and action projection.
-- [Codex Robo Agent](src/robotagentbench/model_examples/codex/README.md): the original App Server runner, robot tools, and isolated code-policy sandbox.
+- [Codex Robo Agent](src/robotagentbench/model_examples/codex/README.md): the App Server runner and robot tools, with a Dockerfile and locked dependencies for a locally built code-execution sandbox. No server-specific image ID is required.
 
 For example, after creating the corresponding configuration:
 

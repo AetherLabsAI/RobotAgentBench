@@ -31,3 +31,4 @@ namespaces = false
 "robotagentbench.simulation.specialized" = ["identities.json"]
 "robotagentbench.backends" = ["manifest.json", "native-files.json", "profiles/**/*"]
 "robotagentbench" = ["example_data/*.json"]
+"robotagentbench.model_examples.codex" = ["sandbox/Dockerfile", "sandbox/requirements.lock"]

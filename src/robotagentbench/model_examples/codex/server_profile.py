@@ -28,6 +28,22 @@ def payloads():
         result[PREFIX+relative]=raw
     return result
 
+def deployment_payloads(image):
+    """Bind a trusted operator's local build without modifying original sources.
+
+    Only the launcher's image literal changes. All isolation flags, robot tools,
+    task/scoring sources and original provenance stay intact.
+    """
+    from .sandbox_build import image_id
+    image_id(image)
+    data=payloads()
+    path=PREFIX+'sandbox_launcher.py'
+    original=data[path]
+    declaration=b"IMAGE = 'sha256:4ccf7e950d48f9b5477292bbc123b676fdbad039c6d51573d969008d8ffd5dc6'"
+    if original.count(declaration)!=1:raise ValueError('Original image declaration differs')
+    data[path]=original.replace(declaration,('IMAGE = '+repr(image)).encode())
+    return data
+
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--export',type=Path)
     a=p.parse_args(argv);data=payloads()

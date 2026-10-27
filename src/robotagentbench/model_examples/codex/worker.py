@@ -6,8 +6,6 @@ Docker, or model starts when importing or describing this entry.
 import argparse,ast,hashlib,json,os,runpy,sys
 from pathlib import Path
 
-POLICY_IMAGE='sha256:fa7785fb56f0d87ef35f4eb786a56c4d246e30e413f65fa3e7edd3d82c3dfea6'
-SERVER_POLICY_IMAGE='sha256:4ccf7e950d48f9b5477292bbc123b676fdbad039c6d51573d969008d8ffd5dc6'
 CODING_PREFIX='short_tasks/agent_probe_v1/cap_v1/native_tools/'
 
 def selected_image(root,pins):
@@ -16,7 +14,9 @@ def selected_image(root,pins):
     assignments=[n for n in ast.parse(raw).body if isinstance(n,ast.Assign)and any(isinstance(t,ast.Name)and t.id=='IMAGE'for t in n.targets)]
     if len(assignments)!=1:raise ValueError('Original policy image declaration must be explicit')
     image=ast.literal_eval(assignments[0].value)
-    if image not in (POLICY_IMAGE,SERVER_POLICY_IMAGE):raise ValueError('Unreviewed policy-image recipe')
+    from .server_profile import deployment_payloads
+    expected=deployment_payloads(image)[relative]
+    if raw!=expected:raise ValueError('Sandbox launcher differs beyond the operator-selected image ID')
     return image
 
 def main(argv=None):
@@ -29,11 +29,11 @@ def main(argv=None):
     _,root,config=runtime(value['runtime'])
     image=selected_image(root,config['source_files'])
     if value['policy_image']!=image:raise ValueError('Configured image differs from selected original launcher; no fallback')
-    from .server_profile import FILES
-    if image==SERVER_POLICY_IMAGE:
-        for relative,expected in FILES.items():
-            if config['source_files'].get(CODING_PREFIX+relative)!=expected:
-                raise ValueError('Original server coding starter/launcher closure is not bound: '+relative)
+    from .server_profile import deployment_payloads
+    if config.get('coding_policy_image')!=image:raise ValueError('Stage the user-built sandbox with stage_runtime first')
+    for relative,raw in deployment_payloads(image).items():
+        if config['source_files'].get(relative)!=hashlib.sha256(raw).hexdigest():
+            raise ValueError('Coding starter/launcher closure is not bound: '+relative)
     if not isinstance(value['docker_host'],str)or not value['docker_host'].startswith('unix://'):
         raise ValueError('Explicit local operator Docker endpoint required')
     if type(value['gpu'])is not int or value['gpu']<0:raise ValueError('Explicit exclusive GPU required')
@@ -49,6 +49,8 @@ def main(argv=None):
     if not a.execute:
         print(json.dumps(dict(entry='original coding worker',execute=False,policy_image=image,
             native_started=False,requires='original source pins, resources, namespace, SDK and exclusive GPU')));return 0
+    from .sandbox_build import inspect_image
+    if inspect_image(image,value['docker_host'])!=image:raise ValueError('Selected local image differs')
     from robotagentbench.example import runtime,sdk_paths,verify_native_profile,bind_collision_library
     site,usd,physx=sdk_paths(value['sdk_site'])
     marker='ROBOTAGENTBENCH_CODEX_NATIVE_HANDOFF'

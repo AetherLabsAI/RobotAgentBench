@@ -80,6 +80,21 @@ directory. The [coffee example](EXAMPLE.md) walks through the container setup,
 scene preparation and interactive worker. See [the runtime guide](RUNTIME.md)
 for the worker interface.
 
+## Optional model clients
+
+Choose the [InternVLA guide](../src/robotagentbench/model_examples/internvla/README.md)
+for the fine-tuned G1 policy, or the
+[Codex guide](../src/robotagentbench/model_examples/codex/README.md) for a
+code-based agent. Both connect to a separately prepared native worker.
+
+The Codex guide includes execution code, a Dockerfile and locked Python
+dependencies. Build the code-execution sandbox on the Linux Docker host used
+by the worker, then select your local image when staging the Runtime. Its
+resolved ID is recorded for that deployment; no server-specific ID is required.
+This sandbox is **not** the Isaac Sim image or a model, and receives no model
+credentials, network access, Docker socket or GPU. A lightweight sandbox smoke
+check is provided; it does not call a model or start the simulator.
+
 ## Troubleshooting
 
 | Symptom | Check |

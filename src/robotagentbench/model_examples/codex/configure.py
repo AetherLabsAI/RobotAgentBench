@@ -1,7 +1,7 @@
 """Write explicit operator/worker JSON from a configured Runtime; no execution."""
-import argparse,json,sys
+import argparse,hashlib,json,sys
 from pathlib import Path
-from .worker import CODING_PREFIX,SERVER_POLICY_IMAGE,selected_image
+from .worker import CODING_PREFIX,selected_image
 
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
@@ -17,11 +17,13 @@ def main(argv=None):
     from robotagentbench.example import runtime
     base,root,value=runtime(a.runtime)
     image=selected_image(root,value['source_files'])
-    if image!=SERVER_POLICY_IMAGE:
-        raise ValueError('This Runtime selects the older sandbox recipe, not the reviewed Codex server recipe; stage the separately audited server coding source view first')
-    from .server_profile import FILES
-    for relative,expected in FILES.items():
-        if value['source_files'].get(CODING_PREFIX+relative)!=expected:
+    if value.get('coding_policy_image')!=image:
+        raise ValueError('Stage this Runtime with the user-built sandbox image first')
+    from .sandbox_build import inspect_image
+    if inspect_image(image,a.docker_host)!=image:raise ValueError('Staged local sandbox image differs')
+    from .server_profile import deployment_payloads
+    for relative,raw in deployment_payloads(image).items():
+        if value['source_files'].get(relative)!=hashlib.sha256(raw).hexdigest():
             raise ValueError('Reviewed server starter/launcher source is not bound: '+relative)
     coding=[name for name in value['source_files']if name.startswith(CODING_PREFIX)]
     if not coding:raise ValueError('No original reviewed coding sources in Runtime')
