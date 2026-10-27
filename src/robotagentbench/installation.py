@@ -10,6 +10,24 @@ from . import resources
 from .backends import sources
 
 
+# The room backend retains the original task-local import name, while these
+# unchanged resources were released under the robustness/specialized names.
+# Bind only this reviewed closure; do not rename code or synthesize a rig.
+_ROOM_HAND_ROOT = 'short_tasks/tasks/stock_wooden_tray_interference/'
+_ROOM_HAND_ORIGINAL = 'short_task_robustness/tasks/stock_wooden_tray_interference/'
+_ROOM_HAND_RESOURCES = (
+    ('profiles/room/' + _ROOM_HAND_ORIGINAL + 'assets/derived/left_hand_side_entry_012.json',
+     'd53986cb794bf7ab36980ea6e6ce0627638e45c57bac281b677be4de8fae6f31',
+     ('assets/derived/left_hand_side_entry_012.json',)),
+    ('profiles/room/' + _ROOM_HAND_ORIGINAL + 'assets/model/new_diff.png',
+     'f7a67f1c8f72294dc54ddea96253522dabdee99838746d6fb695eeef46120b63',
+     ('assets/model/new_diff.png',)),
+    ('specialized/asset_00865a85a1b6275f0f75769f',
+     'ed9667c4d8a6637f84753b4c7d50a9bf08a26a998e44141bddcde99bf12668e2',
+     ('static_short_hand_011/cropped_rig.json',)),
+)
+
+
 def _index(manifest, assets):
     name=resources._relative(manifest.get('index','resource-index.json'))
     records = [a['members'][name] for a in manifest['archives'].values()
@@ -144,6 +162,21 @@ def configure(manifest, assets, destination, profile):
         copy_file(source, target, digest, priority)
         bindings[location] = str(destination / target)
     if profile == 'room':
+        if _ROOM_HAND_ROOT + 'adaptive_hand.py' in source_manifest['profiles'][profile]['files']:
+            for location, digest, tails in _ROOM_HAND_RESOURCES:
+                if index['locations'].get(location) != digest:
+                    raise ValueError('Original shelf-interference resource binding changed: ' + location)
+                record = index['objects'][digest]
+                source = assets / record['path']
+                if digest not in checked:
+                    resources._verify_file(source, record)
+                    checked.add(digest)
+                for tail in tails:
+                    for root in (_ROOM_HAND_ROOT, _ROOM_HAND_ORIGINAL):
+                        relative = source_relative + '/' + root + tail
+                        if relative in file_pins and file_pins[relative] != digest:
+                            raise ValueError('Conflicting original shelf-interference resource: ' + relative)
+                        copy_file(source, relative, digest, 20)
         # Original shelf helpers derive sibling import locations from __file__.
         # Assemble their exact code/native payloads into the already read-only
         # legacy tree, rather than mounting a new directory over its assets.

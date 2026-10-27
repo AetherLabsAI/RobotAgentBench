@@ -123,6 +123,65 @@ class LocalInstallationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             configure(manifest,self.assets,self.base/'Runtime','unknown')
 
+    def hand_profile(self):
+        from robotagentbench.installation import _ROOM_HAND_ROOT
+        module = _ROOM_HAND_ROOT + 'adaptive_hand.py'
+        (self.code/module).parent.mkdir(parents=True)
+        (self.code/module).write_bytes(b'VALUE = 1\n')
+        return dict(profiles={'room':dict(files={module:self.pin},compatibility_namespaces=[])})
+
+    def hand_resources(self):
+        from robotagentbench.installation import _ROOM_HAND_ORIGINAL
+        files = {
+            'profiles/room/'+_ROOM_HAND_ORIGINAL+'assets/derived/left_hand_side_entry_012.json':
+                b'{"texture":"../model/new_diff.png"}',
+            'profiles/room/'+_ROOM_HAND_ORIGINAL+'assets/model/new_diff.png':b'original png',
+            'specialized/asset_00865a85a1b6275f0f75769f':b'{"frames":[],"rest_bones":{}}',
+        }
+        tails = ('assets/derived/left_hand_side_entry_012.json','assets/model/new_diff.png',
+                 'static_short_hand_011/cropped_rig.json')
+        aliases = tuple((location,hashlib.sha256(raw).hexdigest(),(tail,))
+                        for (location,raw),tail in zip(files.items(),tails))
+        return files, aliases
+
+    def test_shelf_interference_runtime_restores_exact_existing_asset_closure(self):
+        from robotagentbench.installation import _ROOM_HAND_ROOT, _ROOM_HAND_ORIGINAL
+        files, aliases = self.hand_resources()
+        with patch('robotagentbench.installation.sources._manifest',return_value=self.hand_profile()), \
+             patch('robotagentbench.installation._ROOM_HAND_RESOURCES',aliases):
+            result=configure(self.manifest(files),self.assets,self.base/'Runtime','room')
+        root=Path(result['source_root'])
+        meta=json.loads((self.base/'Runtime/runtime.json').read_text())
+        for location,digest,tails in aliases:
+            for prefix in (_ROOM_HAND_ROOT,_ROOM_HAND_ORIGINAL):
+                path=prefix+tails[0]
+                self.assertEqual((root/path).read_bytes(),files[location])
+                self.assertEqual(meta['source_files'][path],digest)
+        hand=root/_ROOM_HAND_ROOT/'assets/derived/left_hand_side_entry_012.json'
+        texture=json.loads(hand.read_text())['texture']
+        self.assertTrue((hand.parent/texture).is_file())
+        self.assertEqual(meta['parameter_overrides'],{})
+        self.assertFalse(result['native_started'])
+
+    def test_shelf_interference_alias_requires_original_pins(self):
+        files, aliases = self.hand_resources()
+        files[aliases[0][0]]=b'changed mesh'
+        with patch('robotagentbench.installation.sources._manifest',return_value=self.hand_profile()), \
+             patch('robotagentbench.installation._ROOM_HAND_RESOURCES',aliases):
+            with self.assertRaisesRegex(ValueError,'Original shelf-interference resource binding changed'):
+                configure(self.manifest(files),self.assets,self.base/'Runtime','room')
+        self.assertFalse((self.base/'Runtime').exists())
+
+    def test_shelf_interference_alias_rejects_conflicting_task_local_asset(self):
+        from robotagentbench.installation import _ROOM_HAND_ROOT
+        files, aliases = self.hand_resources()
+        files['profiles/room/'+_ROOM_HAND_ROOT+aliases[0][2][0]]=b'other version'
+        with patch('robotagentbench.installation.sources._manifest',return_value=self.hand_profile()), \
+             patch('robotagentbench.installation._ROOM_HAND_RESOURCES',aliases):
+            with self.assertRaisesRegex(ValueError,'Conflicting original shelf-interference resource'):
+                configure(self.manifest(files),self.assets,self.base/'Runtime','room')
+        self.assertFalse((self.base/'Runtime').exists())
+
     def test_shelf_helpers_preserve_original_sibling_imports_and_assets(self):
         helper='vendor/shelf_generation/tools/family3/collision_scene.py'
         (self.code/helper).parent.mkdir(parents=True)
