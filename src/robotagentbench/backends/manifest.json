@@ -5246,6 +5246,14 @@
         "short_tasks/tasks/sofa_to_drawer/prepare_scene.py": {
           "sha256": "79f075dbfb5fd67390e0f0b95416c8b4e6ab81362be12c98bb986ee612a8e9ec",
           "bytes": 6724
+        },
+        "short_tasks/tasks/sofa_to_drawer/prepare_initial.py": {
+          "sha256": "7b91601fc4b6af33b76660b5b3947249f3ffa7aa3388714ddaa47926299b8c9c",
+          "bytes": 9457
+        },
+        "short_tasks/tasks/sofa_to_drawer/initial_station.py": {
+          "sha256": "0c9c465e34d8f1f3ecf444645d5f6d13d8e7fced09682a4eb9b96b717400bdfe",
+          "bytes": 5468
         }
       },
       "compatibility_namespaces": [],
