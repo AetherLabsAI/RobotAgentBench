@@ -622,7 +622,7 @@ def _native_instruction_copy(state,mode,registry):
             or not public['instruction']or launch.get('task_name')!=request.get('task_name')):
         return False
     name=request.get('task_name')
-    if name in(registry.CONTEXT_TASKS|registry.FAILURE_RECOVERY_TASKS|registry.ATOMIC_COFFEE_TASKS):
+    if any(name in group for group in(registry.CONTEXT_TASKS,registry.FAILURE_RECOVERY_TASKS,registry.ATOMIC_COFFEE_TASKS)):
         return False
     plan=registry.resolve(deepcopy(request))
     return plan.get('task_name')==name and public['instruction']==plan.get('instruction')

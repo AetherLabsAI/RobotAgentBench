@@ -108,8 +108,8 @@ class CompactRestoreContract(unittest.TestCase):
         state=dict(launch_options=dict(schema='openend.short_task.launch.v1',task_name=task),
                    task_parameters=dict(task_name=task,seed=7),
                    public_input=dict(instruction=instruction,context=''))
-        registry=SimpleNamespace(CONTEXT_TASKS={'select_drink'},FAILURE_RECOVERY_TASKS={'recover_cup'},
-                                 ATOMIC_COFFEE_TASKS={'coffee_moved'},
+        registry=SimpleNamespace(CONTEXT_TASKS={'select_drink':'selection.owner'},FAILURE_RECOVERY_TASKS=frozenset({'recover_cup'}),
+                                 ATOMIC_COFFEE_TASKS=frozenset({'coffee_moved'}),
                                  resolve=Mock(return_value=dict(task_name=task,instruction=instruction)))
         return state,registry
 
