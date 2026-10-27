@@ -151,7 +151,7 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: 14px; line-height
 .cite { font: .8em var(--mono); color: var(--accent); text-decoration: none; vertical-align: .15em; }
 
 /* citation */
-.bibtex { max-width: 860px; margin: 18px 0 0; padding: 18px 20px; overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; background: rgb(255 255 255 / 35%); font: 13px/1.6 var(--mono); color: var(--ink); white-space: pre; }
+.bibtex { max-width: 860px; margin: 18px 0 0; padding: 18px 20px; overflow-x: auto; white-space: pre-wrap; overflow-wrap: anywhere; border: 1px solid var(--rule); border-radius: 8px; background: rgb(255 255 255 / 35%); font: 13px/1.6 var(--mono); color: var(--ink); }
 
 /* footer */
 .site-footer { border-top: 1px solid var(--rule); min-height: 120px; display: flex; flex-wrap: wrap; gap: 20px 30px; align-items: center; padding-block: 30px; color: var(--muted); font-size: 14px; }

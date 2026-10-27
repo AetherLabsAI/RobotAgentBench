@@ -391,7 +391,7 @@ td.key .bar{background:var(--p400)}
 
 /* ============================================================ CITATION */
 .bib{position:relative;background:var(--ink);border-radius:var(--r-lg);padding:28px 28px 26px;box-shadow:var(--shadow)}
-.bib pre{margin:0;color:#E4DAF4;font:13.5px/1.7 var(--f-mono);overflow-x:auto;white-space:pre}
+.bib pre{margin:0;color:#E4DAF4;font:13.5px/1.7 var(--f-mono);overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere;padding-right:64px}
 .bib-copy{position:absolute;top:14px;right:14px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font:600 12.5px/1 var(--f-body);padding:9px 14px;border-radius:999px;cursor:pointer}
 .bib-copy:hover{background:rgba(255,255,255,.14)}
 
