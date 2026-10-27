@@ -54,7 +54,8 @@ def command(workspace,image,mode,*,name=None,gpu=None,locks=None,sdk_site='/opt/
         if legacy.is_dir():
             mount(legacy,'/mnt/agent-bench-data/lingjun')
             break
-    for relative in ('layout_task_activation_v1','openend/tasks/all_objects_integration'):
+    for relative in ('layout_task_activation_v1','openend/tasks/all_objects_integration',
+                     'openend/tasks/cloth_clear'):
         if(source/relative).is_dir():mount(source/relative,'/home/lingjun/robot_agent_arena/'+relative)
     # Room preparation includes the complete pinned background layer family.
     # Mount the family as a unit so its relative USD sublayers stay together.

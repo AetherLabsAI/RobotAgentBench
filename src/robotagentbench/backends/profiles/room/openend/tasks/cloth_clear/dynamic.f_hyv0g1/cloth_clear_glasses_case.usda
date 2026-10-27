@@ -1,0 +1,17 @@
+#usda 1.0
+(
+    defaultPrim = "Asset"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def "Asset" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+    prepend references = @/home/lingjun/robot_agent_arena/api-protocol/all_assets/cloth_clear_glasses_case/asset.usda@
+)
+{
+    bool physics:kinematicEnabled = 0
+    float physics:mass = 0.1
+    bool physics:rigidBodyEnabled = 1
+}
+

@@ -45,6 +45,8 @@ class LocalInstallationTests(unittest.TestCase):
         self.assertFalse(result['native_started'])
         configuration=json.loads((self.base/'Runtime/runtime.json').read_text())
         self.assertEqual(configuration['parameter_overrides'],{})
+        self.assertEqual(configuration['library_files'], {
+            'libraries/frozen_assets/asset.bin': hashlib.sha256(b'123').hexdigest()})
         with self.assertRaises(ValueError):
             configure(manifest,self.assets,self.base/'Runtime','room')
 

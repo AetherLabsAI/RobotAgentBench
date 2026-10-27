@@ -1,0 +1,19 @@
+{
+  "FR_LOCK_LEFT": "0",
+  "FRIDGE_DOOR_MASS": "15",
+  "FRIDGE_DAMP": "0.3",
+  "FRIDGE_LATCH_FRICTION": "0.6",
+  "FRIDGE_ANG_DAMP": "0.0",
+  "FR_LATCH_DEG": "2",
+  "FR_SPEED_TRIG": "15",
+  "FR_AUTO_SPEED": "55",
+  "FR_AUTO_STOP": "89",
+  "FR_AUTO_DAMP": "3000",
+  "FR_AUTO_FORCE": "100000",
+  "FR_FREE_FRIC": "0.001",
+  "FR_FREE_DAMP": "0.002",
+  "FR_OPEN_HOLD_FRIC": "0.06",
+  "FR_OPEN_HOLD_DAMP": "0.02",
+  "FR_KEEP_COL": "col_handle",
+  "FR_CORR": "1"
+}

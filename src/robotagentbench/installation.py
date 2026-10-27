@@ -161,6 +161,8 @@ def configure(manifest, assets, destination, profile):
                  source_root=str(destination / source_relative),
                  source_files={path[len(source_relative)+1:]:digest for path,digest in file_pins.items()
                                if path.startswith(source_relative + '/')},
+                 library_files={path:digest for path,digest in file_pins.items()
+                                if path.startswith('libraries/')},
                  resources=bindings, compatibility_namespaces=logical,
                  container_only_compatibility_paths=True,
                  native_environment='Configure the separate Isaac Sim interpreter and libraries.',

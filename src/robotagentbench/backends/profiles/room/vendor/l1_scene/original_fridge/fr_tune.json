@@ -1,0 +1,12 @@
+{
+  "speed_trig": 8.0,
+  "latch_grip": 3.0,
+  "out_only": 1.0,
+  "open_hold_fric": 0.06,
+  "open_hold_damp": 0.02,
+  "hold_inner_col": 0.0,
+  "open_keepcol": 1.0,
+  "auto_damp": 3000.0,
+  "auto_force": 100000.0,
+  "simple_latch": 1.0
+}

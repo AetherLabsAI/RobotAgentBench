@@ -433,7 +433,48 @@ def _ops(stage,path,attributes,*,joint=False):
         else:attribute.Set(_typed(record['type'],record['value']))
 
 
-def _restore_scene(scene,state,composed,out):
+def _restore_saved_background(stage,row,state,source_hashes):
+    """Copy a saved sofa distractor from its pinned original prototype.
+
+    These props were added after the original scene recipe was composed.
+    Reuse the recorded prototype and pose; do not rerun the background sampler.
+    """
+    from pxr import Sdf,Usd,UsdPhysics
+    contract=state.get('manifest_template',{}).get('sofa_background',{})
+    if (contract.get('version')!='sofa_background.v1'
+            or row.get('id') not in contract.get('assets',[])
+            or row.get('role')!='background' or row.get('task_role')!='background'
+            or row.get('scoring_target') is not False or row.get('required_by')!=[]
+            or row.get('task_id') is not None or row.get('source')!='sofa'
+            or row.get('path')!='/World/RoomEpisode/SofaBackground_'+row['id']):
+        return None
+    scene=row.get('prototype_scene');path=row.get('prototype_path')
+    if not isinstance(scene,str) or not isinstance(path,str) or not source_hashes:
+        raise ValueError('Saved background requires its pinned original prototype')
+    prototype=Usd.Stage.OpenMasked(scene,Usd.StagePopulationMask([path]))
+    if prototype is None or not prototype.GetPrimAtPath(path):
+        raise ValueError('Saved background prototype is absent: '+str(path))
+    pins=set(source_hashes.values());used={}
+    for layer in prototype.GetUsedLayers():
+        if not layer.realPath:continue
+        digest=_sha(layer.realPath)
+        if digest not in pins:
+            raise ValueError('Background prototype layer is not pinned by this Runtime: '+layer.realPath)
+        used[layer.realPath]=digest
+    if not used:raise ValueError('Saved background has no pinned source layers')
+    destination=stage.GetRootLayer()
+    Sdf.CreatePrimInLayer(destination,row['path'])
+    if not Sdf.CopySpec(prototype.Flatten(),path,destination,row['path']):
+        raise ValueError('Saved background prototype copy failed')
+    prim=stage.GetPrimAtPath(row['path'])
+    bodies=[p for p in Usd.PrimRange(prim) if p.HasAPI(UsdPhysics.RigidBodyAPI)
+            and p.GetAttribute('physics:rigidBodyEnabled').Get() is not False]
+    if len(bodies)!=1 or bodies[0].GetAttribute('physics:kinematicEnabled').Get() is True:
+        raise ValueError('Saved background is not the original single dynamic body')
+    return used
+
+
+def _restore_scene(scene,state,composed,out,*,source_hashes=None):
     from pxr import Gf,Usd,UsdGeom
     original=Usd.Stage.Open(str(scene))
     if original is None:raise ValueError('Original composed scene cannot be opened')
@@ -453,8 +494,14 @@ def _restore_scene(scene,state,composed,out):
             stage.OverridePrim(path).SetActive(False)
     # A task-local strong layer references the already composed original asset
     # subtree when its wrapper differs; shared layers are never modified.
+    background_sources={};background_count=0
     for row in state['objects']:
         path=row['path'];prim=stage.GetPrimAtPath(path)
+        if not prim:
+            copied=_restore_saved_background(stage,row,state,source_hashes)
+            if copied is not None:
+                background_sources.update(copied);background_count+=1
+                prim=stage.GetPrimAtPath(path)
         if not prim:
             matches=[r for r in old.values()if r.get('id')==row['id']and r.get('task_id')==row.get('task_id')]
             if len(matches)!=1:matches=[r for r in old.values()if r.get('id')==row['id']]
@@ -501,7 +548,8 @@ def _restore_scene(scene,state,composed,out):
             if error>1e-7:raise ValueError('Restored saved world transform differs')
             errors.append(error)
     return dict(objects=len(state['objects']),maximum_world_matrix_error=max(errors,default=0.),
-                saved_world_precision_preserved=True,stage_metadata=metadata)
+                saved_world_precision_preserved=True,stage_metadata=metadata,
+                restored_background_objects=background_count,background_source_hashes=background_sources)
 
 
 def _context_layers(prepared,state,base_scene,work):
@@ -576,7 +624,12 @@ def restore(release,runtime,task,episode,output,*,python_executable=None,owner_c
     scene=Path(composed['scene']);restored=work/'restored.usda'
     extra_hashes={}
     if prepared['mode']=='context':scene,extra_hashes=_context_layers(prepared,state,scene,work)
-    checks=_restore_scene(scene,state,composed,restored)
+    # Background prototypes can compose pinned shared-room library layers as
+    # well as source-root assets. Their installation pins are retained too.
+    prototype_pins={**prepared['metadata']['source_files'],
+                    **prepared['metadata'].get('library_files',{})}
+    checks=_restore_scene(scene,state,composed,restored,source_hashes=prototype_pins)
+    extra_hashes.update(checks['background_source_hashes'])
     request=state['task_parameters'];ready=deepcopy(state['ready_pose'])
     targets=state['robot']['targets_rad']
     if ready.get('targets_rad')!=targets:raise ValueError('Saved ready posture differs from saved robot state')

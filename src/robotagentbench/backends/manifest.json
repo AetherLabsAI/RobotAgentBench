@@ -3,6 +3,98 @@
   "profiles": {
     "room": {
       "files": {
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_bear.usda": {
+          "sha256": "c8b4fefcc2a0cade08e0ffa34142d897917ca97ae45a3a46f32f1cd419db09d1",
+          "bytes": 384
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_berry_can.usda": {
+          "sha256": "8b82fea4de2d417107c0a850383aaeb460e2f1cc7b807ef94276d670b4c1ad31",
+          "bytes": 390
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_block.usda": {
+          "sha256": "b6450840099f6a547a021c1dad684d34a0025d5eb82d6d9ac4ceacf640a0f034",
+          "bytes": 386
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_car.usda": {
+          "sha256": "747fedefd7705504deda801733c12739b215145b43a4fd076126768669dcc70e",
+          "bytes": 384
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_cat.usda": {
+          "sha256": "f2cf6c425cc7eca37319e7871c419d421d065af5950a09dddda85e549955d893",
+          "bytes": 383
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_citrus_can.usda": {
+          "sha256": "f594e750a8b5aff81972cf55a99a390229cc0415cce5a6614652a18107c0cc23",
+          "bytes": 391
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_duck.usda": {
+          "sha256": "d68ddec8ffee5ef2ae11b3f7325c238ec1be52b7d79209a4c087098b5ff8d1a8",
+          "bytes": 385
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_eraser.usda": {
+          "sha256": "1f778a63b5c8c138a2bbe1f998c5378293d8bc6c4a586b15f0029f87317de9d5",
+          "bytes": 386
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_glasses_case.usda": {
+          "sha256": "92a848be223402cfa80b3ce4e2504393aa213342911b6238c7aaed5774b384fa",
+          "bytes": 392
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_house.usda": {
+          "sha256": "6465ed02e409bb8fc37bb2dc311c39ea2050fd38df57c007299459ebed19c8d3",
+          "bytes": 386
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_juice_bottle.usda": {
+          "sha256": "e2d1c347675649b851ddce2aabb85cf22700e69971d5de4b36904fdfe22aded5",
+          "bytes": 393
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_memo_pad.usda": {
+          "sha256": "659657cbbe22203d1167dbef639b638e002955f04300db2d3650efbf3369d915",
+          "bytes": 388
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_penguin.usda": {
+          "sha256": "14626ec130a1bbd1a7ce73bf3418d29db3f71d50c8c6fc3b6b5e42b31dfd0335",
+          "bytes": 387
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_pouch.usda": {
+          "sha256": "cc58c68794d64a772dbdc79dc1d12266a85f0294c826f4252cddb8e5cdc616ff",
+          "bytes": 385
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_rabbit.usda": {
+          "sha256": "273b8226196eed07a9ef8040f792c85e798284b22f540a57707fa0061c38a4dc",
+          "bytes": 386
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_robot.usda": {
+          "sha256": "4e1d9281a7f8aa07991190440500002f1b28b4dcf5e6ebb3ee910e30303e0cf8",
+          "bytes": 386
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_small_bottle.usda": {
+          "sha256": "c37529a5c7e55643a196ac6485c715649903d0ff5b0d05da65c72eb41e4ad5da",
+          "bytes": 393
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_tape_measure.usda": {
+          "sha256": "f4af2e9e6d2990939860e5d2945f323e86434ccbb07223e3134cb985e02be34d",
+          "bytes": 392
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_train.usda": {
+          "sha256": "0a6c429ea04102054bd453414f5863d3a460332668af6809934f1638ca9a9500",
+          "bytes": 386
+        },
+        "openend/tasks/cloth_clear/dynamic.f_hyv0g1/cloth_clear_water_bottle.usda": {
+          "sha256": "a3eaae08d72ebb0393bc54c2fae0724026e30b8fa333646f872e57e3a8538912",
+          "bytes": 393
+        },
+        "vendor/l1_scene/original_fridge/fridge_only.py": {
+          "sha256": "6f07cdd0fcc3741756f56be4d6fe5cb225db8a72cb376ccd0951a8a971e22aee",
+          "bytes": 32311
+        },
+        "vendor/l1_scene/original_fridge/environment.json": {
+          "sha256": "778435c4e1162be9260510527309d0ce2831d0b7ac848eeec76a8e3711a0c257",
+          "bytes": 457
+        },
+        "vendor/l1_scene/original_fridge/fr_tune.json": {
+          "sha256": "c5112d3a84ffdae3ed0855f9e0da01c3670a1072bdd1186feb10307962f1a48d",
+          "bytes": 236
+        },
         "all_assets/air_fryer/behaviors/rail_release145.py": {
           "sha256": "f8395b7677c52f01fd53d838619b5e9a66161d4ac68fbf9cd4a97ecb85715ff5",
           "bytes": 3049

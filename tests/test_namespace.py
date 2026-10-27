@@ -63,5 +63,13 @@ class ExampleNamespaceTests(unittest.TestCase):
         mounts=[cmd[i+1]for i,v in enumerate(cmd)if v=='--mount']
         self.assertIn('type=bind,src='+str(self.source/'assets')+',dst=/home/lingjun/robot_agent_arena/api-protocol/assets,readonly',mounts)
 
+    def test_original_cloth_clear_overlays_are_readonly_and_task_scoped(self):
+        relative = 'openend/tasks/cloth_clear'
+        (self.source/relative).mkdir(parents=True)
+        cmd = command(self.base, 'image', 'plan')
+        mounts = [cmd[i+1] for i,v in enumerate(cmd) if v == '--mount']
+        self.assertIn('type=bind,src='+str(self.source/relative)+
+                      ',dst=/home/lingjun/robot_agent_arena/'+relative+',readonly', mounts)
+
 
 if __name__=='__main__':unittest.main()

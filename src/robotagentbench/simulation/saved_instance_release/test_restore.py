@@ -66,6 +66,49 @@ class CompactRestoreContract(unittest.TestCase):
 
 @unittest.skipIf(Usd is None,'Requires the native SDK USD modules; no simulator is started')
 class RestoreStageMetadata(unittest.TestCase):
+    def background_fixture(self,root):
+        prototype=root/'prototype.usda'
+        source=Usd.Stage.CreateNew(str(prototype))
+        UsdGeom.Xform.Define(source,'/World')
+        prim=UsdGeom.Cube.Define(source,'/World/Notebook').GetPrim()
+        UsdPhysics.RigidBodyAPI.Apply(prim).CreateRigidBodyEnabledAttr(True)
+        UsdPhysics.MassAPI.Apply(prim).CreateMassAttr(.12)
+        source.GetRootLayer().Save()
+        scene=root/'scene.usda';base=Usd.Stage.CreateNew(str(scene))
+        UsdGeom.Xform.Define(base,'/World')
+        UsdGeom.Xform.Define(base,'/World/RoomEpisode');base.GetRootLayer().Save()
+        row=dict(id='notebook_green',path='/World/RoomEpisode/SofaBackground_notebook_green',
+                 source='sofa',role='background',task_role='background',task_id=None,
+                 required_by=[],scoring_target=False,prototype_scene=str(prototype),
+                 prototype_path='/World/Notebook',transform_frame='world',
+                 world_matrix_row_major_4x4=[1,0,0,0,0,1,0,0,0,0,1,0,.2,.3,.4,1])
+        state=dict(task_id='hang_cap',objects=[row],manifest_template={
+            'sofa_background':dict(version='sofa_background.v1',assets=['notebook_green'])})
+        return scene,prototype,state
+
+    def test_saved_background_reuses_pinned_prototype_and_exact_pose(self):
+        with TemporaryDirectory()as directory:
+            root=Path(directory);scene,prototype,state=self.background_fixture(root)
+            before=prototype.read_bytes();out=root/'restored.usda'
+            checks=_restore_scene(scene,state,{'objects':[]},out,source_hashes={'prototype.usda':_sha(prototype)})
+            restored=Usd.Stage.Open(str(out));row=state['objects'][0]
+            prim=restored.GetPrimAtPath(row['path'])
+            self.assertTrue(prim.HasAPI(UsdPhysics.RigidBodyAPI))
+            self.assertAlmostEqual(prim.GetAttribute('physics:mass').Get(),.12)
+            self.assertEqual(checks['restored_background_objects'],1)
+            self.assertEqual(checks['maximum_world_matrix_error'],0)
+            self.assertEqual(checks['background_source_hashes'],{str(prototype):_sha(prototype)})
+            self.assertEqual(prototype.read_bytes(),before)
+
+    def test_unpinned_background_and_target_substitution_are_rejected(self):
+        with TemporaryDirectory()as directory:
+            root=Path(directory);scene,prototype,state=self.background_fixture(root)
+            with self.assertRaisesRegex(ValueError,'not pinned'):
+                _restore_scene(scene,state,{'objects':[]},root/'bad.usda',source_hashes={'prototype.usda':'a'*64})
+            state['objects'][0]['scoring_target']=True
+            with self.assertRaisesRegex(ValueError,'Missing original composed subtree'):
+                _restore_scene(scene,state,{'objects':[]},root/'target.usda',source_hashes={'prototype.usda':_sha(prototype)})
+
     def test_delta_layer_keeps_original_units_axes_time_and_physics(self):
         with TemporaryDirectory()as directory:
             root=Path(directory);source=root/'source.usda';out=root/'restored.usda'
