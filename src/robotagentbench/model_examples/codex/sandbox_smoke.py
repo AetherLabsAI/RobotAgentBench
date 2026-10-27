@@ -9,12 +9,34 @@ import importlib.util
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import sys
 from uuid import uuid4
 
 from .sandbox_build import ROOT, inspect_image
 from .server_profile import PREFIX, deployment_payloads
+
+
+def _inspect_confirms_removed(probe, container):
+    """Accept only an exact missing-ID response from this container inspect.
+
+    Docker CLI versions vary the capitalization/prefix of the same error.
+    Other daemon/permission/transport errors do not establish absence.
+    """
+    if (not isinstance(container,str) or re.fullmatch(r'[0-9a-f]{64}',container) is None
+            or type(probe.returncode) is not int or probe.returncode == 0
+            or not isinstance(probe.stdout,str) or not isinstance(probe.stderr,str)):
+        return False
+    if probe.stdout.strip():
+        try:
+            if json.loads(probe.stdout) != []:
+                return False
+        except ValueError:
+            return False
+    message=re.fullmatch(r'(?i:(?:error(?::| response from daemon:)\s*)?'
+                         r'no such (?:object|container):)\s*(\S+)',probe.stderr.strip())
+    return message is not None and message.group(1)==container
 
 
 def check(image, docker_host, output):
@@ -89,7 +111,7 @@ def check(image, docker_host, output):
     if container:
         probe = subprocess.run(['docker', '--host', docker_host, 'container', 'inspect', container],
                                capture_output=True, text=True, timeout=30)
-        if probe.returncode == 0 or 'No such' not in probe.stderr:
+        if not _inspect_confirms_removed(probe,container):
             raise RuntimeError('Owned sandbox cleanup not confirmed')
     result['owned_container_removed'] = True
     (output / 'result.json').write_text(json.dumps(result, indent=2) + '\n')

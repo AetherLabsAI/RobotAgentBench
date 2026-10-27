@@ -45,6 +45,9 @@ def execute_native(admitted, *, options, backend, lease, completion):
             report['collision_guard'] = collision_guard.summary()
         (out / 'native_report.json').write_text(json.dumps(report, indent=2, default=str) + '\n')
     try:
+        scoring_out = (backend.scoring_output(plan['task_name'], out)
+                       if backend.scoring_output is not None else out/'scoring')
+        report['scoring_output'] = str(scoring_out)
         checkpoint()
         from isaacsim import SimulationApp
         app = SimulationApp(dict(headless=True, renderer='RaytracedLighting', multi_gpu=False,
@@ -101,10 +104,10 @@ def execute_native(admitted, *, options, backend, lease, completion):
         anchor.CreateLocalRot0Attr(Gf.Quatf(base.ExtractRotationQuat()))
         episode = str(uuid4())
         if is_openend:
-            session = backend.build_room(request, stage, manifest, out/'scoring',
+            session = backend.build_room(request, stage, manifest, scoring_out,
                 episode_id=episode, sensor=launch['sensor'], evaluation_mode=plan['task_name'])
         else:
-            session = build_session(request, stage, manifest, out/'scoring', episode_id=episode, sensor=launch['sensor'])
+            session = build_session(request, stage, manifest, scoring_out, episode_id=episode, sensor=launch['sensor'])
         if not hasattr(session, 'ports'):
             raise RuntimeError('Short task is unavailable: '+str(session.result()))
         # Read only this admitted layout, before physical execution. This is

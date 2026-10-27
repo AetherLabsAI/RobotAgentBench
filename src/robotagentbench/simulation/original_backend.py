@@ -178,6 +178,10 @@ class _OriginalTasks:
             self.paths.verify_common()
         return self.scene.verify_scene_sources()
 
+    def scoring_output(self, task_name, native_output):
+        from .task_output import scoring_output
+        return scoring_output(self.sources, task_name, native_output)
+
     def build_short_session(self, task_name, request, *args, **kwargs):
         if task_name not in self.registry.TASK_NAMES or request.get('task_name') != task_name:
             raise ValueError('Task factory identity differs from the admitted request')
@@ -291,6 +295,7 @@ def bind_original_backend(sources, *, enable_coding=False, paths=None):
             admit_room=owner.admit_room, build_room=owner.build_room,
             accept_room=owner.accept_room,
             public_context=owner.public_context,
+            scoring_output=owner.scoring_output,
             wrap_coding_host=owner.wrap_coding_host if enable_coding else None,
             # Specialized frozen interpreters need their own separately verified
             # source environment; never inherit this generic source binding.
