@@ -25,6 +25,9 @@ _ROOM_HAND_RESOURCES = (
     ('specialized/asset_00865a85a1b6275f0f75769f',
      'ed9667c4d8a6637f84753b4c7d50a9bf08a26a998e44141bddcde99bf12668e2',
      ('static_short_hand_011/cropped_rig.json',)),
+    ('specialized/asset_3206da7aeb769f0401e9f74e',
+     'b4b40f2129eda21059ff121bd180818b769344fd06e31484d9625202ca727f5a',
+     ('source_product_ranges.json',)),
 )
 _ROOM_LONG_ENTRY = 'short_tasks/agent_probe_v1/long_task_eval_setup_v1/revision2/entry.py'
 _ROOM_HOTWAKE = 'layout_task_activation_v1/hotwake_probe_inputs.json'

@@ -199,9 +199,10 @@ class LocalInstallationTests(unittest.TestCase):
                 b'{"texture":"../model/new_diff.png"}',
             'profiles/room/'+_ROOM_HAND_ORIGINAL+'assets/model/new_diff.png':b'original png',
             'specialized/asset_00865a85a1b6275f0f75769f':b'{"frames":[],"rest_bones":{}}',
+            'specialized/asset_3206da7aeb769f0401e9f74e':b'{"policy":"fixture","products":{}}',
         }
         tails = ('assets/derived/left_hand_side_entry_012.json','assets/model/new_diff.png',
-                 'static_short_hand_011/cropped_rig.json')
+                 'static_short_hand_011/cropped_rig.json','source_product_ranges.json')
         aliases = tuple((location,hashlib.sha256(raw).hexdigest(),(tail,))
                         for (location,raw),tail in zip(files.items(),tails))
         return files, aliases
@@ -224,6 +225,27 @@ class LocalInstallationTests(unittest.TestCase):
         self.assertTrue((hand.parent/texture).is_file())
         self.assertEqual(meta['parameter_overrides'],{})
         self.assertFalse(result['native_started'])
+
+    def test_shelf_product_range_alias_uses_existing_original_resource_pin(self):
+        from robotagentbench.installation import _ROOM_HAND_RESOURCES, _ROOM_HAND_ORIGINAL
+        from robotagentbench.simulation import dedicated_delivery
+        rows=[row for row in _ROOM_HAND_RESOURCES if row[2]==('source_product_ranges.json',)]
+        self.assertEqual(len(rows),1)
+        location,digest,_=rows[0]
+        self.assertEqual(location,'specialized/asset_3206da7aeb769f0401e9f74e')
+        original=('/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/'
+                  'deployment_generic_20261010/source/'+_ROOM_HAND_ORIGINAL+'source_product_ranges.json')
+        self.assertEqual(digest,dedicated_delivery.template()['aliases'][original])
+
+    def test_shelf_product_range_alias_rejects_another_sampling_range(self):
+        files,aliases=self.hand_resources()
+        location=next(row[0] for row in aliases if row[2]==('source_product_ranges.json',))
+        files[location]=b'{"policy":"different range","products":{}}'
+        with patch('robotagentbench.installation.sources._manifest',return_value=self.hand_profile()), \
+             patch('robotagentbench.installation._ROOM_HAND_RESOURCES',aliases):
+            with self.assertRaisesRegex(ValueError,'Original shelf-interference resource binding changed'):
+                configure(self.manifest(files),self.assets,self.base/'Runtime','room')
+        self.assertFalse((self.base/'Runtime').exists())
 
     def test_shelf_interference_alias_requires_original_pins(self):
         files, aliases = self.hand_resources()
