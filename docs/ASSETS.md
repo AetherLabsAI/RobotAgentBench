@@ -72,7 +72,7 @@ accompany automatic downloads and installation; see [third-party notices](THIRD_
 The [saved-instance bank](INSTANCES.md) is a separate, versioned download. It
 adds 30 pre-generated configurations per task/scenario and reuses identical
 objects from the base asset store. Install it with the matching
-`resources/saved-instances-0.2.0.json` manifest rather than concatenating archive
+`resources/saved-instances-0.2.1.json` manifest rather than concatenating archive
 parts. Materialize the episode you want in a fresh workspace; starting an
 evaluation does not sample another scene.
 

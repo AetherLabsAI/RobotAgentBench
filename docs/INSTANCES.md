@@ -25,31 +25,39 @@ episode numbers with new results.
 Episode numbers 1–30 identify saved configurations. Each also records the
 generator's `actual_seed`; accepted seeds need not be consecutive.
 
-## OpenEnd daily situations (0.2.0)
+## OpenEnd daily situations (0.2.1)
 
-All four OpenEnd scenarios have **30 configurations each**: six contextual
-situations, each paired with five spatial initial states. The agent receives
-the household memory, a high-level request, and **Today's situation**. The
-scene's objects and registered task targets match that situation.
+All four OpenEnd scenarios have **30 configurations each**: six context/scene
+variants, each paired with five spatial initial states. The agent receives
+the household memory, a high-level request, and **Today's situation**. Public
+context contains non-visual background information, not an inventory of the
+current scene or a description of its cleanliness.
 
 | Scenario | Examples of current circumstances |
 | --- | --- |
-| Preparing dinner | A different person comes home; a dinner plan is cancelled; the usual coffee is skipped tonight; a spill needs cleaning |
-| Hosting guests | A visitor changes; two guests want different refreshments; a guest arrives after training; a spill remains on the table |
+| Preparing dinner | A different person comes home; a dinner plan is cancelled; the usual coffee is skipped tonight |
+| Hosting guests | A visitor changes; two guests want different refreshments; a guest arrives after training |
 | Preparing to leave | Rain during an outdoor trip; dry weather; an updated forecast; rain only after the person returns |
-| Tidying the room | Used cans; discarded wrapping and a used cup; mixed waste; a spill that also needs wiping |
+| Tidying the room | The household wants the shared living area ready for use again; current objects and cleanliness must be observed |
+
+Stains, empty containers, used packaging, and whether a surface is already clean
+are not stated in the daily context. The agent must inspect camera observations
+and apply the household's general storage and cleaning rules. Matched variants
+with and without a stain use identical public text; all six tidying variants
+also share the same public request and context.
 
 Rain during an outdoor trip adds the existing umbrella-packing task. A cancelled
 rain forecast or rain after returning home does not. Weather is contextual
 information, not a simulated rain effect. Existing task scoring and physical
 parameters are unchanged; the task composition determines the available points.
 
-Within each scenario, episodes 1–6 cover the six situations; the same order
+Within each scenario, episodes 1–6 cover the six variants; the same order
 repeats in 7–12, 13–18, 19–24, and 25–30 with different spatial seeds. These
-are six situations per scenario, not thirty distinct stories. Version 0.2.0
-replaces only the 120 OpenEnd configurations; the other 1,350 state files are
-byte-identical to 0.1.0. The older manifest remains available for reproducing
-earlier results.
+are not thirty distinct stories: some variants differ only in observable scene
+state. Version 0.2.1 corrects the public context in 40 OpenEnd records without
+changing any scene state, task target, scoring rule, or physical parameter.
+The other 1,430 state files are byte-identical to 0.2.0; the 1,350 non-OpenEnd
+records remain byte-identical to 0.1.0. Older releases remain available.
 
 ## What is stored
 
@@ -85,7 +93,7 @@ assets are installed separately and are not duplicated in this download.
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.0.json \
+  --manifest resources/saved-instances-0.2.1.json \
   --cache downloads/configurations --destination /absolute/path/to/SavedConfigurations
 ```
 
@@ -95,7 +103,7 @@ destination and rejects unexpected members or unsafe paths. For offline
 installation, supply the archives at their manifest-relative cache paths and
 add `--offline`.
 
-When upgrading from 0.1.0, use a new destination directory; do not overlay an
+When upgrading from an earlier release, use a new destination directory; do not overlay an
 existing configuration bank. Keep the earlier bank if it is used by a saved run.
 
 ## 3. Restore a selected initial state

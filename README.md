@@ -110,12 +110,14 @@ per task or scenario**: 540 for the 18 short tasks, 240 for the 8 long tasks,
 OpenEnd scenarios (**1,470 in total**). Choose an episode from 1–30 and reuse
 its saved initial state; running a model does not resample it.
 
-Configuration release **0.2.0** adds a **Today's situation** section to all
-120 OpenEnd configurations. Each scenario combines six situations with five
-spatial initial states per situation: weather and trip timing, changed plans,
-guest preferences, dinner choices, and actual spills or used packaging. The
-context, scene inventory, and task targets are saved together. The other
-1,350 configurations are unchanged from 0.1.0.
+Configuration release **0.2.1** includes a **Today's situation** section in all
+120 OpenEnd configurations. Each scenario combines six context/scene variants
+with five spatial initial states each. Context supplies weather, trip timing,
+changed plans, and personal preferences. Stains, waste, object locations, and
+cleanliness must be discovered from camera observations; variants that differ
+only in visible state share the same public text. All scene states and task
+targets are unchanged from 0.2.0, and the other 1,350 configurations remain
+unchanged from 0.1.0.
 
 The download stores initial-state data, not a complete room copy per episode.
 Positions, orientations, robot initialization and task parameters reuse the

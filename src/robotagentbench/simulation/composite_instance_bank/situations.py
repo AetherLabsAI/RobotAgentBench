@@ -9,6 +9,7 @@ PROFILE = "daily_situations_v1"
 SCENARIOS = ("prepare_dinner", "host_guests", "prepare_to_leave", "tidy_room")
 
 # Long-term memory stays verbatim. Current facts are a separate public section.
+# Current visible object/cleanliness states are observation evidence, not text.
 PRIORITY = (
     "The household memory describes usual arrangements. Today's confirmed "
     "plans and exceptions take priority over earlier plans or usual preferences."
@@ -26,7 +27,7 @@ VARIANTS = {
              today="Ryan is coming home for dinner and has asked for his usual dinner combination.",
              why="Combine Ryan's reference to Alex's meal with his freshly made coffee preference."),
         dict(id="emma_spill", person="Emma", meal="leftover_box", wipe=True,
-             today="Emma will be home for her usual dinner. A drink spilled on the coffee table earlier; the stain has not been cleaned.",
+             today="Emma will be home for dinner after work. She wants her usual evening meal.",
              why="Prepare Emma's dinner and clean the actual stain before the table is used."),
         dict(id="dinner_plan_changed", person="Emma", meal="leftover_box",
              today="The earlier dinner plan was for Alex. That plan is cancelled: Emma is coming home instead and wants her usual evening meal.",
@@ -52,7 +53,7 @@ VARIANTS = {
              today="Alex and Emma are both coming over. Each would like their own usual refreshments.",
              why="Combine both remembered pairings: four products on the shared wooden tray."),
         dict(id="ryan_visit_spill", people=("Ryan",), wipe=True,
-             today="Ryan is coming straight from training. A drink spilled on the coffee table earlier, and the stain is still there.",
+             today="Ryan is stopping by straight after training and wants his usual post-training refreshments.",
              why="Prepare Ryan's refreshments and clean the actual stain in the serving area."),
     ),
     "prepare_to_leave": (
@@ -76,22 +77,22 @@ VARIANTS = {
              why="Relate the rain forecast to the trip's time window; rain after the return does not create a packing task."),
     ),
     "tidy_room": (
-        dict(id="usual_tidy", today="The shared living area needs its usual tidy-up. There was no spill on the coffee table.",
+        dict(id="usual_tidy", today="The shared living area should be ready for the household to use again.",
              why="Return belongings and dispose of actual used packaging; do not invent a wiping task."),
         dict(id="spill_cleanup", wipe=True,
-             today="The shared living area needs tidying after a drink was spilled on the coffee table. The stain is still present.",
+             today="The shared living area should be ready for the household to use again.",
              why="Combine routine tidying with brush cleaning and return."),
         dict(id="used_cans", waste=("can", "can"),
-             today="The drinks in the cans left on the coffee table have been finished. There was no spill.",
+             today="The shared living area should be ready for the household to use again.",
              why="Dispose of the actual empty cans in the recycling bin, not the ordinary bin."),
         dict(id="paper_and_cup", waste=("paper", "cup"),
-             today="The paper on the coffee table is discarded wrapping, not a note to keep. The paper cup has been used and is no longer needed. There was no spill.",
+             today="The shared living area should be ready for the household to use again.",
              why="Use the objects' current use status and the household waste rules."),
         dict(id="mixed_waste", waste=("can", "cup"),
-             today="Both drinks left on the coffee table have been finished. The empty can and used paper cup can be cleared away. The tabletop has no stain.",
+             today="The shared living area should be ready for the household to use again.",
              why="Send two used containers to their different bins; no wiping is required."),
         dict(id="mixed_waste_spill", waste=("can", "cup"), wipe=True,
-             today="Both drinks left on the coffee table have been finished. A spill beside the empty can and used paper cup has left a stain.",
+             today="The shared living area should be ready for the household to use again.",
              why="Sort both waste items and clean the actual stain, preserving earlier placements."),
     ),
 }
@@ -104,10 +105,11 @@ REFRESHMENTS = {
 
 
 def build(scenario, seed, baseline):
-    """Six authored situations x five original spatial seeds per scenario.
+    """Six context/scene variants x five original spatial seeds per scenario.
 
     The seed still goes unchanged to the original physical scene generator.
     No pose, lighting, dynamics, scoring, or admission threshold is overridden.
+    Variants that differ only in visible scene state share the same public text.
     """
     if scenario not in SCENARIOS or type(seed) is not int or not 1 <= seed <= 30:
         raise ValueError("Known OpenEnd scenario and an integer seed in 1..30 required")

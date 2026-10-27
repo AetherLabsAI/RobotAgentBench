@@ -53,18 +53,26 @@ The worker selects the matching public text **and** scene requirements before
 composition. Existing saved configurations and the original profile are not
 rewritten. Long tasks are unaffected.
 
-Each scenario has six authored situations, each used with five of the original
-seeds 1–30. These are **six semantic situations**, not thirty different stories.
+Each scenario has six context/scene variants, each used with five of the original
+seeds 1–30. These are not thirty different stories; some variants differ only
+in observable scene state and use identical public text.
 The unchanged household memory is followed by a separate **Today's situation**
 section. The complete context and high-level request are visible to the policy;
 target bindings, the operator rationale, and the scene request are not included.
 
-| Scenario | Situational variation |
+| Scenario | Context / scene variation |
 | --- | --- |
 | Dinner | Emma's leftovers; Alex's usual meal; Ryan's meal plus coffee; a table spill; a cancelled dinner plan; skipping Ryan's usual coffee tonight |
 | Guests | Alex's, Emma's, or Ryan's preferences; a changed visitor; two visitors with different preferences; a spill before the visit |
 | Leaving | Rain during a library trip, shopping trip, or park walk; dry weather; an outdated rain forecast; rain only after returning home |
 | Tidying | Ordinary tidying; a spill; used cans; discarded paper and a used cup; mixed waste; mixed waste plus a spill |
+
+Stains, used packaging, empty containers, and cleanliness in this table are
+**scene variation**, not facts disclosed in `Today's situation`. The agent
+must discover them through camera observations. Dinner/guest variants that
+differ only in stain presence share the same public text; all six tidying
+variants likewise use one neutral request and context. General conditional
+household rules remain available, without identifying the current scene state.
 
 Weather is supplied as contextual information, not a new simulated rain effect.
 Rain during an outdoor trip selects the existing `umbrella_transfer` task:
@@ -79,9 +87,9 @@ New preparations write `public_input_binding.json`, pinned to the actual
 case using only the native legacy `prompt_id`: it is retained for admission,
 not as a replacement for the separately saved daily context.
 
-The 0.2.0 saved-configuration release contains this cohort, generated through
-the original scene composer and admission logic. The 0.1.0 archive is retained
-unchanged. Use the 0.2.0 manifest in the [configuration guide](../../../../docs/INSTANCES.md)
+The 0.2.1 saved-configuration release corrects only public context from the
+0.2.0 cohort, preserving every physical state and task target. Both earlier
+archives remain unchanged. Use the 0.2.1 manifest in the [configuration guide](../../../../docs/INSTANCES.md)
 to download the saved states instead of generating them again.
 
 ## Saved instances and read-only loading

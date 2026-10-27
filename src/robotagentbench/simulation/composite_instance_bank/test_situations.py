@@ -56,6 +56,19 @@ class SituationTests(unittest.TestCase):
                 self.assertIn("rain", row["public_input"]["context"])
                 self.assertFalse(umbrella)
 
+    def test_visible_state_is_not_disclosed_in_daily_context(self):
+        # General household rules may mention cleaning conditionally. Today's
+        # facts must not identify current objects, waste, or stain presence.
+        for variants in VARIANTS.values():
+            for variant in variants:
+                self.assertNotRegex(variant['today'].lower(),
+                    r'\b(stains?|spills?|spilled|cans?|cups?|paper|wrapping|empty|finished|tabletop)\b')
+        self.assertEqual(len({v['today'] for v in VARIANTS['tidy_room']}), 1)
+        self.assertEqual(select(config(), 'prepare_dinner', 1)['public_input'],
+                         select(config(), 'prepare_dinner', 4)['public_input'])
+        self.assertEqual(select(config(), 'host_guests', 3)['public_input'],
+                         select(config(), 'host_guests', 6)['public_input'])
+
     def test_preferences_updates_and_prerequisites(self):
         # Revised visitor gets only the confirmed person's products.
         guest = select(config(), "host_guests", 4)
