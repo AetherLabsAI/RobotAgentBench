@@ -298,6 +298,11 @@ def specialized(*, assets, manifest, runtimes, bank, output, native_config,
     def content(digest):
         path = by_hash.get(digest)
         if path is None:
+            from .saved_instance_release.exact_source import reconstruct
+            path = reconstruct(index, assets, out, digest)
+            if path is not None:
+                by_hash[digest] = path
+        if path is None:
             raise ValueError('Reviewed content is absent from installed assets/sources')
         if digest not in checked:
             if canonical(path) != path or sha(path) != digest:

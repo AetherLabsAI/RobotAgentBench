@@ -204,6 +204,38 @@ class Delivery(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, 'absent|conflicts'):
                     delivery.specialized(**kwargs)
 
+    def test_nested_source_exact_byte_patch_is_required_and_readonly(self):
+        import base64
+        import gzip
+        from robotagentbench.simulation.saved_instance_release import room_recovery_closure, exact_source
+        with tempfile.TemporaryDirectory() as temp, ExitStack() as stack:
+            root = Path(temp).resolve()
+            approved, index, kwargs = self.fixture(root)
+            self.patches(stack, approved, index); kwargs['family'] = 'failure_recovery'
+            original = b'original scene bytes'; digest = hashlib.sha256(original).hexdigest()
+            def put(data):
+                pin = hashlib.sha256(data).hexdigest(); relative = 'objects/' + pin[:2] + '/' + pin
+                path = kwargs['assets'] / relative; path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(data)
+                index['objects'][pin] = dict(path=relative, bytes=len(data), sha256=pin)
+                return pin
+            base = put(b'original scene')
+            patch_pin = put(gzip.compress(json.dumps(dict(schema=exact_source.PATCH_SCHEMA,
+                base_sha256=base,target_sha256=digest,target_bytes=len(original),
+                operations=[['copy',0,14],['literal',base64.b64encode(b' bytes').decode()]])).encode(),mtime=0))
+            index['source_reconstruction'] = {digest: dict(schema=exact_source.RECIPE_SCHEMA,
+                base_sha256=base,patch_sha256=patch_pin,target_bytes=len(original))}
+            target='/__rab_delivery_test__/saved-source/composed.usda'
+            stack.enter_context(patch.object(room_recovery_closure,'source_requirements',return_value={target:digest}))
+            result = delivery.specialized(**kwargs)
+            row, = [r for r in result['mounts'] if r['target']==target]
+            self.assertTrue(row['read_only']); self.assertEqual(Path(row['source']).read_bytes(), original)
+            self.assertTrue(Path(row['source']).is_relative_to(kwargs['output'] / 'exact_source_inputs'))
+            self.assertNotIn(digest, index['objects'])
+            operator=delivery.read(result['operator'])
+            for task in operator['families']['failure_recovery']['tasks'].values():
+                self.assertIn('saved_room_source_'+digest,task['required_resources'])
+
     def test_camera_source_upgrade_needs_original_assembly_not_old_code_bytes(self):
         with tempfile.TemporaryDirectory() as temp, ExitStack() as stack:
             approved, index, kwargs = self.fixture(Path(temp).resolve())
