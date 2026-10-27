@@ -200,3 +200,26 @@ python -m unittest discover -s tests
 - **Evaluation code:** [Apache-2.0](LICENSE).
 - **Team-authored assets and task data:** [CC BY 4.0](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets/blob/main/LICENSE.md).
 - **Third-party materials:** retain their original terms, including CC BY-NC-SA 4.0 for the AgiBot GenieSim robot resources. See [third-party notices](docs/THIRD_PARTY.md) and the [asset notices](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets/blob/main/NOTICE.md).
+
+## Join the community
+
+Scan a code to join the RobotAgentBench group on WeChat, Slack or Discord, or open an invite link directly.
+
+[**Join Slack**](https://join.slack.com/t/robot-hmv5305/shared_invite/zt-4ee4vo9ip-7AwiBh1QDUKleoiIt87BnA) · [**Join Discord**](https://discord.gg/hgNmXUFMU)
+
+<table>
+  <tr>
+    <td align="center" width="240">
+      <a href="https://aetherlabsai.github.io/RobotAgentBench/assets/img/wechat-qr-sq.png?v=1"><img src="https://aetherlabsai.github.io/RobotAgentBench/assets/img/wechat-qr-sq.png?v=1" alt="WeChat group QR code" width="200" height="200"></a><br>
+      <strong>WeChat</strong>
+    </td>
+    <td align="center" width="240">
+      <a href="https://join.slack.com/t/robot-hmv5305/shared_invite/zt-4ee4vo9ip-7AwiBh1QDUKleoiIt87BnA"><img src="https://aetherlabsai.github.io/RobotAgentBench/assets/img/slack-qr.png?v=2" alt="Slack invite QR code" width="200" height="200"></a><br>
+      <strong>Slack</strong>
+    </td>
+    <td align="center" width="240">
+      <a href="https://discord.gg/hgNmXUFMU"><img src="https://aetherlabsai.github.io/RobotAgentBench/assets/img/discord-qr.png?v=1" alt="Discord invite QR code" width="200" height="200"></a><br>
+      <strong>Discord</strong>
+    </td>
+  </tr>
+</table>
