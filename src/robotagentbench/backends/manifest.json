@@ -3,6 +3,10 @@
   "profiles": {
     "room": {
       "files": {
+        "all_assets/air_fryer/behaviors/rail_release145.py": {
+          "sha256": "f8395b7677c52f01fd53d838619b5e9a66161d4ac68fbf9cd4a97ecb85715ff5",
+          "bytes": 3049
+        },
         "api-protocol/all_assets/snack_shelf/manifest.json": {
           "sha256": "be6ab5a12853fdaa3695b839615f6a194bd73ac8655d4cc11a7ce9590ae43675",
           "bytes": 7534
@@ -4286,6 +4290,10 @@
     },
     "atomic_coffee": {
       "files": {
+        "generic/all_assets/air_fryer/behaviors/rail_release145.py": {
+          "sha256": "f8395b7677c52f01fd53d838619b5e9a66161d4ac68fbf9cd4a97ecb85715ff5",
+          "bytes": 3049
+        },
         "button/__init__.py": {
           "sha256": "a8e06a01ae1f9870b7fbb82566f9c63bc0c1db881e591e7ed5eb7fcc726057c9",
           "bytes": 84
@@ -6582,6 +6590,10 @@
     },
     "failure_recovery": {
       "files": {
+        "generic/all_assets/air_fryer/behaviors/rail_release145.py": {
+          "sha256": "f8395b7677c52f01fd53d838619b5e9a66161d4ac68fbf9cd4a97ecb85715ff5",
+          "bytes": 3049
+        },
         "button/clear_position.py": {
           "sha256": "8e4679851b5e16ba7abc67f86a7aafc09b4b5a97cf9951cb90aa0c4f5c92b472",
           "bytes": 3528
