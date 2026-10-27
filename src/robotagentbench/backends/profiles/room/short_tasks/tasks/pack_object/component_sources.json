@@ -57,7 +57,7 @@
     "openend/tasks/scene_requirements/planner_v2.py": "87b2a302926da4e655d9e86f7199bce195a854d3d7bf93067e3f5ecb8b2eb057",
     "openend/tasks/scene_requirements/runtime_ports.py": "06eeda388312d8972e9ce225a9698aabe8b71bb49f37c8befd266e0e357c1eba",
     "openend/tasks/scene_requirements/source_geometry.py": "5b11bed3bc684606fe74bc585567c7b94e5b413c94d7fb1ca8e18b3c9feeba95",
-    "openend/tasks/scene_requirements/task_choices.py": "8e199a9ad2e87e6c9e1e17d390e0939e2d24d4d443a13f66a612a27d81119856",
+    "openend/tasks/scene_requirements/task_choices.py": "47c40d250c62daa71d34e26ffbe15f1e7ff25bf9a3e9b849d3c1180d685b3d69",
     "openend/tasks/wallet_transfer/components.py": "708ececde1fa8de13ef50a27bbb60a2e9d32384773a74642bc9416e0f4bf0bd8",
     "openend/tasks/wallet_transfer/composite.py": "aa6f86c7edb2e24eb30391e241fe1bfe1c5046192720d3442fdccd7770820a8a",
     "openend/tasks/wallet_transfer/contacts.py": "2cee6e9eab4364d539758fb13260b43d613f356b0c8949dcad05d17ffa2f1ec3",

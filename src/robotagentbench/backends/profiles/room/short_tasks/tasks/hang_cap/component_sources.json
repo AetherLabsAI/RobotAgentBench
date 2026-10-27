@@ -47,7 +47,7 @@
     "openend/tasks/scene_requirements/planner_v2.py": "87b2a302926da4e655d9e86f7199bce195a854d3d7bf93067e3f5ecb8b2eb057",
     "openend/tasks/scene_requirements/runtime_ports.py": "06eeda388312d8972e9ce225a9698aabe8b71bb49f37c8befd266e0e357c1eba",
     "openend/tasks/scene_requirements/source_geometry.py": "5b11bed3bc684606fe74bc585567c7b94e5b413c94d7fb1ca8e18b3c9feeba95",
-    "openend/tasks/scene_requirements/task_choices.py": "8e199a9ad2e87e6c9e1e17d390e0939e2d24d4d443a13f66a612a27d81119856",
+    "openend/tasks/scene_requirements/task_choices.py": "47c40d250c62daa71d34e26ffbe15f1e7ff25bf9a3e9b849d3c1180d685b3d69",
     "short_tasks/tasks/interaction_progress_v1/__init__.py": "e227495daccffb435cd7c8edaf8fee2fb5d3788b533f587f28b751d7c7a9535f",
     "short_tasks/tasks/interaction_progress_v1/scoring.py": "f31090a61d27adbc1d90efefacfec0fb00046621fc1cea90ebe7e004ecc9b29d",
     "short_tasks/tasks/interaction_progress_v1/policy.py": "d6adb74ab7db6760480155eb6aaefd7f6b5de85501599a063bda72621265e237",

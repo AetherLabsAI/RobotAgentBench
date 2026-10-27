@@ -69,9 +69,9 @@ The core package and catalog inspection do not require Isaac Sim, a GPU, or mode
 The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.1** is approximately **4.57 GB**, split into **20 archives**, including the license archive. It contains scene and robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use this asset version with configuration bank **0.2.1**, including its shared OpenEnd room layout.
 
 ```sh
-robotagentbench assets fetch resources/assets-0.1.1.json --cache downloads
-robotagentbench assets install resources/assets-0.1.1.json --cache downloads --destination Assets
-robotagentbench assets configure resources/assets-0.1.1.json --destination Assets --runtime Runtime --profile room
+robotagentbench assets fetch resources/assets-0.1.2.json --cache downloads
+robotagentbench assets install resources/assets-0.1.2.json --cache downloads --destination Assets
+robotagentbench assets configure resources/assets-0.1.2.json --destination Assets --runtime Runtime --profile room
 ```
 
 The manifest pins an immutable asset revision and verifies file hashes. The commands create fresh `Assets` and `Runtime` directories; existing installations are not overwritten. For offline setup, place all archive parts in `downloads` and skip `fetch`. See the [asset guide](docs/ASSETS.md) for details.

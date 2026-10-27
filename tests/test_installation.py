@@ -123,6 +123,24 @@ class LocalInstallationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             configure(manifest,self.assets,self.base/'Runtime','unknown')
 
+    def test_shelf_helpers_preserve_original_sibling_imports_and_assets(self):
+        helper='vendor/shelf_generation/tools/family3/collision_scene.py'
+        (self.code/helper).parent.mkdir(parents=True)
+        (self.code/helper).write_bytes(b'VALUE = 1\n')
+        source=dict(profiles={'room':dict(files={helper:self.pin},compatibility_namespaces=[])})
+        native='vendor/shelf_generation/work/family3_repair/collision/python_deps/fcl/native.so'
+        prefix='libraries/original_absolute/mnt/agent-bench-data/lingjun/ziche/'
+        manifest=self.manifest({'profiles/room/'+native:b'native test',prefix+'runtime/scene.usda':b'original scene'})
+        with patch('robotagentbench.installation.sources._manifest',return_value=source):
+            configure(manifest,self.assets,self.base/'Runtime','room')
+        data=self.base/'Runtime';metadata=json.loads((data/'runtime.json').read_text())
+        for relative,raw in ((helper,b'VALUE = 1\n'),(native,b'native test')):
+            alias=prefix+relative.removeprefix('vendor/shelf_generation/')
+            self.assertEqual((data/alias).read_bytes(),raw)
+            self.assertEqual(metadata['library_files'][alias],hashlib.sha256(raw).hexdigest())
+        self.assertEqual((data/prefix/'runtime/scene.usda').read_bytes(),b'original scene')
+        self.assertEqual(metadata['parameter_overrides'],{})
+
     def test_conflicting_same_priority_aliases_rejected(self):
         manifest=self.manifest({'profiles/room/resources/file':b'a',
                                 'profiles/room/api-protocol/resources/file':b'b'})

@@ -144,6 +144,14 @@ def configure(manifest, assets, destination, profile):
         copy_file(source, target, digest, priority)
         bindings[location] = str(destination / target)
     if profile == 'room':
+        # Original shelf helpers derive sibling import locations from __file__.
+        # Assemble their exact code/native payloads into the already read-only
+        # legacy tree, rather than mounting a new directory over its assets.
+        prefix=source_relative+'/vendor/shelf_generation/'
+        for path,digest in list(file_pins.items()):
+            if path.startswith(prefix):
+                alias='libraries/original_absolute/mnt/agent-bench-data/lingjun/ziche/'+path[len(prefix):]
+                copy_file(stage/path,alias,digest,100)
         # Preserve the original preparation API's task-local aliases. These
         # point only within this newly created runtime, never outside it.
         for name in ('resources', 'all_assets'):

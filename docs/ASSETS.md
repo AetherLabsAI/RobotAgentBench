@@ -8,13 +8,16 @@ separately.
 Asset repository: [AetherLabs-AI/RobotAgentBench-assets](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets).
 The manifest shipped with the code pins the exact dataset revision and file hashes.
 
-Use asset release **0.1.1** with saved configuration bank **0.2.1**. It includes
-the shared OpenEnd room layout, drawer-reference layer, and resource bindings.
-The original 0.1.0 archive parts are unchanged; the additional download is
-approximately **27.5 MB**. If upgrading, update the evaluator first and reuse
+Use asset release **0.1.2** with saved configuration bank **0.2.1**. It includes
+the shared room layouts, complete refrigerator interiors, and original shelf
+scene-preparation dependencies. The two supplements added since 0.1.1 total
+approximately **7.3 MB**; all earlier archives remain unchanged.
+If upgrading, update the evaluator first and reuse
 your `downloads` cache, but install into new asset and runtime
-directories (for example, `Assets-0.1.1` and `Runtime-0.1.1`) and use those paths
+directories (for example, `Assets-0.1.2` and `Runtime-0.1.2`) and use those paths
 in subsequent commands. Do not overwrite an existing runtime.
+Shelf helper sources and third-party notices are included in the evaluator;
+see [dependency details](SHELF_DEPENDENCIES.md).
 
 ## Install
 
@@ -22,7 +25,7 @@ Place all archives from the matching asset release in `downloads`. From the
 code repository root, run:
 
 ```sh
-robotagentbench assets install resources/assets-0.1.1.json \
+robotagentbench assets install resources/assets-0.1.2.json \
   --cache downloads --destination Assets
 ```
 
@@ -43,7 +46,7 @@ reproduction. Answer files are evaluator resources, not agent observations.
 For a manifest with a configured Hugging Face dataset and immutable revision:
 
 ```sh
-robotagentbench assets fetch resources/assets-0.1.1.json --cache downloads
+robotagentbench assets fetch resources/assets-0.1.2.json --cache downloads
 ```
 
 The downloader verifies archive size and SHA-256 and reuses valid cached files.
@@ -52,7 +55,7 @@ An interrupted download is retained as `.partial` for inspection.
 ## Configure a task workspace
 
 ```sh
-robotagentbench assets configure resources/assets-0.1.1.json \
+robotagentbench assets configure resources/assets-0.1.2.json \
   --destination Assets --runtime Runtime --profile room
 ```
 
@@ -65,7 +68,7 @@ namespace; they do not require access to the original server.
 ## Verify an installation
 
 ```sh
-robotagentbench assets verify resources/assets-0.1.1.json --destination Assets
+robotagentbench assets verify resources/assets-0.1.2.json --destination Assets
 ```
 
 Use the asset manifest shipped with your code checkout. Code, asset, and

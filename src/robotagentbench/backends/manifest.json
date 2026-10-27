@@ -3680,8 +3680,8 @@
           "bytes": 1689
         },
         "short_tasks/tasks/hang_cap/component_sources.json": {
-          "sha256": "e3a4a62dcd0a18dff19762a8729136372ccf6bcd3f0ea9150b51edef7bfb4a32",
-          "bytes": 10183
+          "bytes": 10183,
+          "sha256": "7ef0bd25d748da41ccdad2b3c6dfd75abbc70123d35d66612a6b50f8a815229c"
         },
         "short_tasks/tasks/hang_cap/prepare_initial.py": {
           "sha256": "61cccc7c2837172ec2be9a6c1613bb44739e1ccc8542d88e9cd01b43b4b093fc",
@@ -3844,8 +3844,8 @@
           "bytes": 21371
         },
         "short_tasks/tasks/pack_object/component_sources.json": {
-          "sha256": "fdf6ecb9eb5f6a7838801737f3d2ec156c477db2a855bf7f13bdb23f522a3bef",
-          "bytes": 12101
+          "bytes": 12101,
+          "sha256": "6b9f6d968be164dd3d910ed005555e6567776cb938c81d68f0312f0f4a0f40c6"
         },
         "short_tasks/tasks/pack_object/initial_station.py": {
           "sha256": "1495422adac012911aba7cf1ca4ad58058a567e7fcb3c189cc7b1fbc73e48835",
@@ -3948,8 +3948,8 @@
           "bytes": 10313
         },
         "short_tasks/tasks/retrieve_from_drawer/component_sources.json": {
-          "sha256": "b388de339d9830535e8ec694725ec4cf0a5436837a014f11fe32e04f3bcefa76",
-          "bytes": 11498
+          "bytes": 11498,
+          "sha256": "3258d92f5bdb793f015a2c218302312f281e20ede17eaed32c6aa98b9814cc26"
         },
         "short_tasks/tasks/retrieve_from_drawer/initial_state.py": {
           "sha256": "98d0d680a6eba0231541ac7878096bc2cd38772ea434d6ccbfa6bed1fcebea3d",
@@ -4008,8 +4008,8 @@
           "bytes": 2126
         },
         "short_tasks/tasks/sofa_to_coffee_table/component_sources.json": {
-          "sha256": "12409df2a3cd1fa16af089a53d9d8a652767bcdcde644b1e3e6c363a1d26ec27",
-          "bytes": 13544
+          "bytes": 13544,
+          "sha256": "89e53a830db69b32b1b3bb8af2b711f7fd8f48a9aec63377992593f885fc0509"
         },
         "short_tasks/tasks/sofa_to_coffee_table/definition.json": {
           "sha256": "b899d01459c877c8253bbb647a6de0125aaab6057fac2de2571a3cb631094c8d",
@@ -4068,8 +4068,8 @@
           "bytes": 4388
         },
         "short_tasks/tasks/sofa_to_drawer/component_sources.json": {
-          "sha256": "75a249ff98613b98f6f5904d02f8119db1ce0ff1114c825782a7098da07a3f92",
-          "bytes": 13538
+          "bytes": 13538,
+          "sha256": "9a445c4c4800789e72ece471f270df888f2aa628c0e97bae4922e8cb8a6e9903"
         },
         "short_tasks/tasks/sofa_to_drawer/native_geometry.py": {
           "sha256": "b4f397f81b5432d1b40eb49f58ed233aede9208260de5250a94c25289da4973f",
@@ -4308,8 +4308,8 @@
           "bytes": 2570
         },
         "short_tasks/tasks/table_to_storage_basket/component_sources.json": {
-          "sha256": "efd0c941fbe7906c2d232b169d3420ae8f287ff3b91cac79faec72008c956a6f",
-          "bytes": 11024
+          "bytes": 11024,
+          "sha256": "100062bb80b3bb61a12e04c728570cf16a499e524c9ba564254998d4278af7b1"
         },
         "short_tasks/tasks/table_to_storage_basket/initial_station.py": {
           "sha256": "0c9c465e34d8f1f3ecf444645d5f6d13d8e7fced09682a4eb9b96b717400bdfe",
@@ -4378,6 +4378,846 @@
         "tools/install_l1_base.py": {
           "sha256": "18454c2c653ed3760120890c9f14366857f912a205968da01b2ef9d525cefd27",
           "bytes": 6730
+        },
+        "vendor/shelf_generation/code/family3_repair/real2sim/teleop/scene_collision_profile.py": {
+          "sha256": "4ec0edf5932552305c2e9ab9fe91cb74ee9c319c185ace313b0af2360330728b",
+          "bytes": 14544
+        },
+        "vendor/shelf_generation/tools/family3/collision_initial_layout.py": {
+          "sha256": "7e2de6b734ca6c86c4315ccd7de9cebffa054576f23de644b5d51d16876062f1",
+          "bytes": 12381
+        },
+        "vendor/shelf_generation/tools/family3/collision_scene.py": {
+          "sha256": "9f1360ed3b3282e5f90c78fed1fb4206225b4e8f8f99cc2e6f3ec0ebf165565a",
+          "bytes": 35121
+        },
+        "vendor/shelf_generation/tools/family3/omni_randomization.py": {
+          "sha256": "de4db989e3b7b6703e386fc9f3b0d962f8099ac580d2179597aba8f6dfa1749e",
+          "bytes": 42891
+        },
+        "vendor/shelf_generation/tools/family3/omni_robot_support.py": {
+          "sha256": "e12021edec74b45e028538c8584f5db2a2d8c59d4a31fc36690dc7ca1d76b1c8",
+          "bytes": 2746
+        },
+        "vendor/shelf_generation/tools/family3/validate_robot_initial_randomization.py": {
+          "sha256": "be952fff899561a58ebc3c696ef7cdfe354556191cabb6acdda593f8ba7dd660",
+          "bytes": 27865
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/fcl/__init__.py": {
+          "sha256": "a4c883ce5446fcd7e02fd73f162823cd24349b6804900ff66798372a6b159c34",
+          "bytes": 1762
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/fcl/collision_data.py": {
+          "sha256": "88580bb441d2846a81629be690f5fbc746d508ddd87724fa118d86601a9d5794",
+          "bytes": 3977
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/fcl/fcl.cpp": {
+          "sha256": "1fcc84dcabe0835388be29b4916151d8fdd0c440dcce2109590070c08bca9e86",
+          "bytes": 2445840
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/fcl/fcl.pyx": {
+          "sha256": "72f7bdd4234e1c1b2cfd24c79b21f88a2ab62ce8729157d805ed4362c58ce928",
+          "bytes": 31154
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/fcl/fcl_defs.pxd": {
+          "sha256": "47e2deb27dac1d578619ff4d47fac411ae2ca06eef8393578206356d53068433",
+          "bytes": 16182
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/fcl/octomap_defs.pxd": {
+          "sha256": "7f27d1251f76da9f10d24b648d6bf5d434edbbc21c06f140f310fc8a3edf1cca",
+          "bytes": 828
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/fcl/std_defs.pxd": {
+          "sha256": "4775638d44c06724b72a6bbaaf8cf85fcebae6e724975f0691597677277c49be",
+          "bytes": 266
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/fcl/version.py": {
+          "sha256": "505cd62e951b8e25da44e4a5605614185f59bcb553438d6496f05e8f0696fc32",
+          "bytes": 25
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/python_fcl-0.7.0.11.dist-info/INSTALLER": {
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+          "bytes": 4
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/python_fcl-0.7.0.11.dist-info/METADATA": {
+          "sha256": "d4411855c56fcdc39c50ad40ea93766fccf214866c5087c3a72228bbdf725a84",
+          "bytes": 16209
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/python_fcl-0.7.0.11.dist-info/RECORD": {
+          "sha256": "301814265a14b6e50ddc297ccbb8f3b8d555faf68b72bf3bb5048e3e39d97744",
+          "bytes": 1853
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/python_fcl-0.7.0.11.dist-info/REQUESTED": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/python_fcl-0.7.0.11.dist-info/WHEEL": {
+          "sha256": "08cb62e2d3caaaf2a84e901acb7d64c9bbead1f633e2233a45ffc33d395c3e82",
+          "bytes": 152
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/python_fcl-0.7.0.11.dist-info/licenses/LICENSE": {
+          "sha256": "54396e87dee4d29282d9664ef011d07f152609c51de51c95cf8cd53454dd752e",
+          "bytes": 1512
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/python_fcl-0.7.0.11.dist-info/top_level.txt": {
+          "sha256": "36beda781b6f4597933cd0e1f1d0556b871674ea644bf34e820bf34b6a0b9c8b",
+          "bytes": 4
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree-1.4.1.dist-info/INSTALLER": {
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+          "bytes": 4
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree-1.4.1.dist-info/METADATA": {
+          "sha256": "bdca97d6c73966af4a00c7b285720bc39a988f7b611eb84bc3cd14e5bfd98228",
+          "bytes": 2148
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree-1.4.1.dist-info/RECORD": {
+          "sha256": "36880c05c2441ba94914fd5ff3dd62a407ba2c0ce5c5889bdc819f5a9272f499",
+          "bytes": 4387
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree-1.4.1.dist-info/REQUESTED": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree-1.4.1.dist-info/WHEEL": {
+          "sha256": "063ae5a5e10df6c4f1626aa0d9683c694f40b23cba48a336543b182f01c84120",
+          "bytes": 146
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree-1.4.1.dist-info/licenses/LICENSE.txt": {
+          "sha256": "2e3e6e756da9258484bdd0e81dcd57c9094a58ca23c37c79b14cc23eeb6b7b21",
+          "bytes": 1115
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree-1.4.1.dist-info/top_level.txt": {
+          "sha256": "4f5f67b4b01e841ded6794bdaab2e07e217593d37580fe7a3ffd7e4ec05aef6e",
+          "bytes": 6
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/__init__.py": {
+          "sha256": "f6bd13e0ca9605dfebb3e513a0119f3369b964e2f6658c1ad33aeeef11d7acb3",
+          "bytes": 216
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/core.py": {
+          "sha256": "7511b7950e2a0ab0e57a8a783e3a4fa608b3835d797e67b35dde8170813944d0",
+          "bytes": 27118
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/exceptions.py": {
+          "sha256": "acda5be597cbe5197979139486c16d731d691c029590c8da56f09094354dbbe8",
+          "bytes": 132
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/finder.py": {
+          "sha256": "33a682c8f04f7bfe7d9815ecd3f81b2033ae55b0e5ddc51972b8ba963e244bf2",
+          "bytes": 5583
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/Ball.h": {
+          "sha256": "e0835debfcabfa8cf76e190d2d43ef52a1cdbf5178b8cb2fa38c792d28c1c0bf",
+          "bytes": 3223
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/LineSegment.h": {
+          "sha256": "5e3bacf1b361fa543fef9eba0400f3b11fbf595e2c34a28028bb72f39e221f5a",
+          "bytes": 4194
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/MVRTree.h": {
+          "sha256": "4a117d72b3a3de14d3561914a0afe203e0025d352067fcb60c19f89b0a323d97",
+          "bytes": 2859
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/MovingPoint.h": {
+          "sha256": "0ff2ca300b9306ffbce6582e7c4711f723b1ca4901834c99c62044c9f500648b",
+          "bytes": 3299
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/MovingRegion.h": {
+          "sha256": "1c20612c8c6aa5354b5cbebe3268dedad81508267f4dc2031f8d3c2c06bce58b",
+          "bytes": 6884
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/Point.h": {
+          "sha256": "f1790b0d07e7b9e1a854c95339f551cbd22a62beb6567ec164dc4528204e9c40",
+          "bytes": 3141
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/RTree.h": {
+          "sha256": "22ee0fdda2f302969072ca6d2e25050c7e8f5de0d1689970738d7b189f50ca2f",
+          "bytes": 3330
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/Region.h": {
+          "sha256": "5ab475d58717e527bd7682f13efae4f8c86472e3bb02329ac1fbf3371b8db0ac",
+          "bytes": 4057
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/SpatialIndex.h": {
+          "sha256": "cf5a8107d6fcbbcee85f1b7dc1905a550727184a70613989faaacf18abaf83bd",
+          "bytes": 9127
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/TPRTree.h": {
+          "sha256": "5eddea09d4083fab351c4cfe7b85e74ed51aabf3a51caf02a1533161ff51b91f",
+          "bytes": 2840
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/TimePoint.h": {
+          "sha256": "5e4804c3badd5c430ae54b21013a1b387d7f3f1f0aa6549658d605df8c47a453",
+          "bytes": 4003
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/TimeRegion.h": {
+          "sha256": "7d58ffc50edd8600dbab259f520fbff689c9bf7e0b51050e2e51f30109f2f2bf",
+          "bytes": 4796
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/Version.h": {
+          "sha256": "fc5f374751eb3e1ddd7c5ee1632b07aa07b15c63a9eaad6c5557f6ab56665bd7",
+          "bytes": 1984
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/BoundsQuery.h": {
+          "sha256": "9a868bbb7846fe483cbbc5a17c3948b1131167343fc6c65870c6a59401c51a89",
+          "bytes": 2035
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/CountVisitor.h": {
+          "sha256": "f7156a0f4dbda1decd43024ca974c7cbacd0a137a6002d2b2bd341177338a318",
+          "bytes": 1969
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/CustomStorage.h": {
+          "sha256": "34ddde72c30a3ec5554de081b84765275aa8031b416dcd40242f079be8e5a25d",
+          "bytes": 3654
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/DataStream.h": {
+          "sha256": "a618fe419d35bd40d94d095cb5c40c8e68492940dbff608c0a0ce498a1cc217f",
+          "bytes": 2226
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/Error.h": {
+          "sha256": "f41170da254294287b742ca15769d1191a1a412f06462262b0082fdb25b6be97",
+          "bytes": 2089
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/IdVisitor.h": {
+          "sha256": "6a796a87facfc3cb1fa6c407f43793580efc1a417a55f314baa80a591e3b1d89",
+          "bytes": 2110
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/Index.h": {
+          "sha256": "95b3d798baa4ac0f7586f78eae3f28851d648ff26edcbcd9a6b8b408b4f67bd0",
+          "bytes": 3261
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/LeafQuery.h": {
+          "sha256": "0ffd4ddfd24deef080de502a2679be7a926a8546a7bf00fbdef8ca68137c641e",
+          "bytes": 2852
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/ObjVisitor.h": {
+          "sha256": "8f9d58148f20c44f84d5de9f88f7653e1e289cc748da8dc5747d2990b8eca810",
+          "bytes": 2092
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/Utility.h": {
+          "sha256": "f5cf01c6113e6be70cc8ccf998c0d910a8d0c9c9feb8a89c0352cbd20af6afac",
+          "bytes": 1942
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/sidx_api.h": {
+          "sha256": "08cb581524f4a040aa381c7cf8d697ad3d81698afc1edd5117fb8ec8eb0cfdea",
+          "bytes": 16305
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/sidx_config.h": {
+          "sha256": "98f5b11d0f76ea3f14a07506f25f1f801f725abc9d59375b81f6d552a4aeb289",
+          "bytes": 2892
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/sidx_export.h": {
+          "sha256": "bd9375244dde3b2814473d0a62886420c2d01ef0461c6724fbd2837cd28f3ec0",
+          "bytes": 1978
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/capi/sidx_impl.h": {
+          "sha256": "063ebb572bc01f423ff08ce032f8829bceed5f14b8e78620e3b05a04b60e68e1",
+          "bytes": 1949
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/tools/PointerPool.h": {
+          "sha256": "680a7cf8d8f8a1103ca1c39e97e5581a1dfb43157c71dd1f3e7cb6d39531c27e",
+          "bytes": 2416
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/tools/PoolPointer.h": {
+          "sha256": "ae987908fa9368608fda8eb4725b764b23ae5427ba795eef20e0a189a8ccbbf0",
+          "bytes": 3141
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/tools/Tools.h": {
+          "sha256": "dd227f8a1a3ca1fc4c3e0f75faa90daf7b86dcc1b52122d583c03806cf7cf98b",
+          "bytes": 13551
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/include/spatialindex/tools/rand48.h": {
+          "sha256": "8c3267dce9c28eaa8e9b2092c497306690ee0082ded2015ac536856d8ccbee58",
+          "bytes": 2969
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/index.py": {
+          "sha256": "07d430583ad162f993bd69254d5526de24026fc71e85a846bc01fdce6bda1f92",
+          "bytes": 94369
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/rtree/py.typed": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely-2.1.2.dist-info/INSTALLER": {
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+          "bytes": 4
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely-2.1.2.dist-info/METADATA": {
+          "sha256": "0dc2e9aed9d57f314be60e8855a0caec53865cbd4c96752b8ac4fff571d1a2da",
+          "bytes": 6816
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely-2.1.2.dist-info/RECORD": {
+          "sha256": "8828d5b7bd610a1de60f8aaad45a4c3572ba13fd133fda3ac4878b54eacb4284",
+          "bytes": 20280
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely-2.1.2.dist-info/REQUESTED": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely-2.1.2.dist-info/WHEEL": {
+          "sha256": "fc216f202603999940607b7c2fb667de7f8118b8fc76464b40fa76d8f8b2e491",
+          "bytes": 151
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely-2.1.2.dist-info/licenses/LICENSE.txt": {
+          "sha256": "4a207eac9bf257ed286e1c6f0fce253d1abfdb134fc61ec855e37f5692a3f754",
+          "bytes": 1583
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely-2.1.2.dist-info/licenses/LICENSE_GEOS": {
+          "sha256": "138b2c2f9450073d7c116abe397ca4382625671c752b7a9a5f320b33fc3f3f2a",
+          "bytes": 26786
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely-2.1.2.dist-info/top_level.txt": {
+          "sha256": "7f173950828a95da4a3f7971d9dbcce51de159e2b0966556ebe9df8a4af7894d",
+          "bytes": 8
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/__init__.py": {
+          "sha256": "ec46944357e1207798213bf98e715cf862906ec317082494f9823f2370fd70e3",
+          "bytes": 1031
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/_coverage.py": {
+          "sha256": "ca208be59b4c28c0c7570e84947911f02fc2da7d03b51a6c82c189861bae70be",
+          "bytes": 5732
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/_enum.py": {
+          "sha256": "ca39c449cce225924b68cd0fd6b6063de90dffe99677ae3eae67b93ec68a7879",
+          "bytes": 704
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/_geometry.py": {
+          "sha256": "5d9c6f98b07f8e0d251e83221e028577f2cd4a28f89eb27f41834aa6afa16e84",
+          "bytes": 29155
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/_geos.pxd": {
+          "sha256": "18f56eaa97b560869055b3112686488828f17667b4709020ff3e03a5c13bbc37",
+          "bytes": 3209
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/_pygeos_api.pxd": {
+          "sha256": "12ae19688d2e7e319703f4c69291d2e6c38e693d62b38c375da438b30abd287f",
+          "bytes": 2090
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/_ragged_array.py": {
+          "sha256": "f9e68c01526d66fdcfd1dcc675c670c7ca8912de3d105992dfce150149530101",
+          "bytes": 17445
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/_version.py": {
+          "sha256": "f3cc49f6c0bfcc0439409bc86b59d5d48bea3cb72c12d82e8f3fe4a2f5e8931d",
+          "bytes": 497
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/affinity.py": {
+          "sha256": "ee1593f65fcc884923f551022ae91d014cff3584a8877bc8ea1bcd57d03a3d8a",
+          "bytes": 8255
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/algorithms/__init__.py": {
+          "sha256": "647222bee439c391895c1ee1c0ba74cdc91dfdbdb6ea4ebcc230614f493d032a",
+          "bytes": 41
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/algorithms/_oriented_envelope.py": {
+          "sha256": "697a317a01d740acc44aaa3c294d2a5f2bd82e1f002c98d6946b7418e452f2f4",
+          "bytes": 1933
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/algorithms/cga.py": {
+          "sha256": "28d5ef19a213e49c47da4ffac272c192735d44e4f77280f67d822ea7e60fefa2",
+          "bytes": 1757
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/algorithms/polylabel.py": {
+          "sha256": "83357995c6f3665be5ff050d0964056bbf26de13f2b990ae04c940ff81ee6964",
+          "bytes": 1344
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/conftest.py": {
+          "sha256": "07eb05abad5d6bae644d77d180c7fe5a33dc659fe9baddbb5c075ba9f2b47c6a",
+          "bytes": 1947
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/constructive.py": {
+          "sha256": "9c814d4fb0f6e5e3a2a9a8381a7a3ff1e97c9556995ee25c5f437913e1afd173",
+          "bytes": 56189
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/coordinates.py": {
+          "sha256": "b6f11e24833518c9f06193442a1fb79b9d5c1e025a6d961a0124a10e113cfb13",
+          "bytes": 12575
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/coords.py": {
+          "sha256": "21bba876608d89b91973cfd7a5af1eec71714f85bea02318e1fb6f253b831979",
+          "bytes": 3032
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/creation.py": {
+          "sha256": "c2da7a51288863ac29e09a7deb1b32d9a7bb6bd2a02bd4b99c56f43db644b36d",
+          "bytes": 30987
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/decorators.py": {
+          "sha256": "13056b4756f9e0d8cd33c2d15b4c5f6ae78bb078add4b4029c9231371927f1c9",
+          "bytes": 5694
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/errors.py": {
+          "sha256": "30d5a32b7dfd8dfa59e7d526559815b17dadc990b0de744265ad23ff323cce5c",
+          "bytes": 2398
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geometry/__init__.py": {
+          "sha256": "f98ad1c4a67e1df4f7c951b89250f9104bdd1477f058d00aea8be3bae361865a",
+          "bytes": 763
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geometry/base.py": {
+          "sha256": "7b0d96b827cf97e88eac9b2bdf83659ba84e99d00e971829fa71c8cc14376122",
+          "bytes": 40375
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geometry/collection.py": {
+          "sha256": "c448eae40adb0397be7b7c7aa5b73a5c343b632881892fb925b9decad0c43374",
+          "bytes": 1736
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geometry/geo.py": {
+          "sha256": "537722bc18969aba33000a63862aa95d804f8b76128f0ac026acec3050a23d37",
+          "bytes": 4366
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geometry/linestring.py": {
+          "sha256": "606ff10e909e1ab8b342a10e6ca8fc0f853ac95c9fbeafd86e1f2f64819f4172",
+          "bytes": 7599
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geometry/multilinestring.py": {
+          "sha256": "b5129ce9cacbea65adad4a743d121d29926989bc1538a905f74e362b5ae3125e",
+          "bytes": 2942
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geometry/multipoint.py": {
+          "sha256": "746c8a1b130ebaf20cd4301bcf107d5f75d28c3bd8a5250db58914805635a7f8",
+          "bytes": 3222
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geometry/multipolygon.py": {
+          "sha256": "05390e5692bccc4e8feb813378abf736601ccbafa897e562091d239cf8426d8e",
+          "bytes": 3955
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geometry/point.py": {
+          "sha256": "a4807c55cffa37b54d9e76e0baa8c7c0e03db92e3d05b484d94c0e302e7c5db1",
+          "bytes": 4731
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geometry/polygon.py": {
+          "sha256": "2d5347b806e9d6879079473a2390b8ef4095f4f83a3a3b37fa324920233c51c8",
+          "bytes": 11082
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/geos.py": {
+          "sha256": "0803d94b0237b2ed64b68406e22aad59f0c62d94c82fb620678d7a2ed96aa024",
+          "bytes": 520
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/io.py": {
+          "sha256": "01def5ceed0bc1cb720fb45ab55730645b2f390fd537e6cbca42403813abf631",
+          "bytes": 15108
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/linear.py": {
+          "sha256": "afb83b3a2aebd774f1a69391b46a08ed11812a811f739a5fc08b103d810b9fb1",
+          "bytes": 8675
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/measurement.py": {
+          "sha256": "289e4559bf3b0ee685f2a4d1fa327befe63c1b31f8cf84d9e162516d2747995a",
+          "bytes": 10622
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/ops.py": {
+          "sha256": "3b7a787dec9b5a8b956f1c7f39f3ada6100f3faa9947ad57cd1cbe20bec8c5c4",
+          "bytes": 25679
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/plotting.py": {
+          "sha256": "d9fb8b9d9763c34364943ef555b123272471a0569a283bfa1715f217e897257b",
+          "bytes": 6322
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/predicates.py": {
+          "sha256": "7214ab3ea82b6a11fcfb5c95927a28e0bfd4b1fa1858d5c8f5f74ab16f9d6688",
+          "bytes": 39673
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/prepared.py": {
+          "sha256": "43deda7f1121baa5cccb1760360c73b28323a58aa23331d7c27d4717c59b9ae9",
+          "bytes": 2351
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/set_operations.py": {
+          "sha256": "1d72ddf8aefbda450ddfdfb1ebf10acad3374d68659c562cf6a488cb9c7f97af",
+          "bytes": 27437
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/speedups.py": {
+          "sha256": "bf358006d3f5fb7cc1757e1b619c736f0c4b52012c5a33d3280806637886b5a8",
+          "bytes": 1038
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/strtree.py": {
+          "sha256": "22a4beacf62ef1b54f579d076dfd46688b4b38f287d7bd912f765ed59f6e3d22",
+          "bytes": 20649
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/testing.py": {
+          "sha256": "08ddb302739b1675ac041c71abeb8c9260d398a53446dd1d6f407cc90dea0257",
+          "bytes": 6472
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/__init__.py": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/common.py": {
+          "sha256": "8438b2c6479e72158a341eb7d40e23611660d6b36ea68be2d422e9fc62be8941",
+          "bytes": 10151
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/__init__.py": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_collection.py": {
+          "sha256": "02b7a69a4074f2857d9c80e35549071672e50c8f7b33aba3e5d271516e75668f",
+          "bytes": 2669
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_coords.py": {
+          "sha256": "1185330a8cbb115ede28504e72af243542abaa72fe9712d2ef797ca9b6e5718c",
+          "bytes": 3990
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_decimal.py": {
+          "sha256": "0251cde6dde0cefbd0e70f6208832f26c2226c2e2c744de97f2416a5c05723d7",
+          "bytes": 2846
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_emptiness.py": {
+          "sha256": "1483c7b1958b811a1e84aa6fa1ecc0b2a8e3cc99e8b0bef2d3c6be01b1e56c0e",
+          "bytes": 2362
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_equality.py": {
+          "sha256": "aa17bd0d0a4d02a4663b66c06fcb10bd5d13b932381645ce4df78e1d056c120d",
+          "bytes": 9436
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_format.py": {
+          "sha256": "1ae35793378e164196163681846d322061f38972bee3eefb02098d3333c41845",
+          "bytes": 4518
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_geometry_base.py": {
+          "sha256": "d8f88ee157cbdc041140255bda3460a3e1f8620e6927627cc9aa74db7adcc91e",
+          "bytes": 10726
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_hash.py": {
+          "sha256": "12d43269152d4d420bf008828f2bd50b8291250fc4deeaabfb85a7fe8696f807",
+          "bytes": 673
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_linestring.py": {
+          "sha256": "a2f289f4bc5c3864bfb404abb2de6299d6202d2f46c3cc9d625cd32d3aa24ede",
+          "bytes": 7043
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_multi.py": {
+          "sha256": "65ac5cd4c9634e4a71f36c92465b1444c7181fea60d5898f87d026fe4d88e7da",
+          "bytes": 297
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_multilinestring.py": {
+          "sha256": "55de6861387450fde36f9b89b549ce523105be24dd81d4471392cecb3d4f563c",
+          "bytes": 2834
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_multipoint.py": {
+          "sha256": "2c2b3b6a6c828612707d60a4a22a4a4e57ad4ab2ef9bfb763cc33c8bd4f7982a",
+          "bytes": 3047
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_multipolygon.py": {
+          "sha256": "9c2ed1d8658df36348348a0593fe1f956b302859c7337dae84612f9f8bcb6bb8",
+          "bytes": 4907
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_point.py": {
+          "sha256": "d7c5a7d743311ff62f5317576c22c773b2f60c44b11815b15314e3949e6d87ce",
+          "bytes": 5332
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/geometry/test_polygon.py": {
+          "sha256": "463c247a3c9c4ff3a2bb07b7b26a0c60564e08863e8e4f0c11820aac56227ee4",
+          "bytes": 15303
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/__init__.py": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/conftest.py": {
+          "sha256": "16f436c7e43664f304990257c17d2f29a28c58b9bd3a717b9cddd4b12122f9b0",
+          "bytes": 334
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_affinity.py": {
+          "sha256": "7002ab7436202dfc8cebcc7583b7bf45a678487106e9f0bffe435ab42e260782",
+          "bytes": 12483
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_box.py": {
+          "sha256": "75650518aabf22dc50370eb5dc83ea90026ed2f01b08a0d289736d5df694ef22",
+          "bytes": 599
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_buffer.py": {
+          "sha256": "04536523e745edfd396a82d494c678ec7862d50f8ed1af0a9f73a97b5efa1312",
+          "bytes": 6596
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_cga.py": {
+          "sha256": "82313dff85ea244317dd0bca8ad0d6f4e28cbea1e4bd3d112ecba434da31b5f4",
+          "bytes": 1509
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_clip_by_rect.py": {
+          "sha256": "43d6e01e51711a7646fb2aadb69bf4aa75966c287c90d58bee24aa3c9653007d",
+          "bytes": 4156
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_create_inconsistent_dimensionality.py": {
+          "sha256": "5abf2b460eb4e77b956a8e1d3df3b6ecc78ce3472030679801ee454d56a8cf95",
+          "bytes": 10672
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_delaunay.py": {
+          "sha256": "4ee6e33736d3c628fd37d543457f4fa3fdcca71cada27902a00131ab9695691b",
+          "bytes": 838
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_empty_polygons.py": {
+          "sha256": "a4d8e5d04556ba985e9384cf1c7ab274fab5d09a889900b4cbdeb77ab2f92bb1",
+          "bytes": 683
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_equality.py": {
+          "sha256": "1e5bce44c7eb11d9ae3c88bcf0ddbb99176a99e1a5b92edae5cbfb543a4dff60",
+          "bytes": 747
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_geointerface.py": {
+          "sha256": "740b2e39949a553663597aae2e50b46c0eccb9f43cf91afaec9ec559009f8f8a",
+          "bytes": 3648
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_invalid_geometries.py": {
+          "sha256": "e8275ab3567602ee990ea8ceecb3514d4d34db2ddf2c7bcf4c5b459c198ce876",
+          "bytes": 891
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_linear_referencing.py": {
+          "sha256": "0811d4d525ce1e8afb58a1b0c35666a1280ba9ad10b2e85f54f2b6d5a88dbf46",
+          "bytes": 2914
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_linemerge.py": {
+          "sha256": "ea3ca825b8f564ebd16ea156e8273b6d2f46ec31c290a37eb3101488032896c4",
+          "bytes": 1329
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_locale.py": {
+          "sha256": "45b1fa758e38a83a2765646e624a9d97cea492ee5cf46d593c7dfd56e993f3c6",
+          "bytes": 1434
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_make_valid.py": {
+          "sha256": "a9956f278f8de934ab273f8bc4bd15f0737f73fb37098b620b345f6caff1971b",
+          "bytes": 479
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_mapping.py": {
+          "sha256": "096ab7cb9512ebd3ceb7c77fab53c584c272e40639e1f025e2e303b1b3101f8b",
+          "bytes": 395
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_minimum_clearance.py": {
+          "sha256": "b979c1a8c8ac533e73828640b2eadf8b3b0f1aeb60af6bbadf2e81aa6a80f464",
+          "bytes": 694
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_ndarrays.py": {
+          "sha256": "e7fb07796389e3daede35a4b9798f8d486d61430dc496d24005aad0b8e632a45",
+          "bytes": 1244
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_nearest.py": {
+          "sha256": "7971df1d003493571460d727f56bcbf52a67c210a315bd8278dd8d00c1d0d0cd",
+          "bytes": 476
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_operations.py": {
+          "sha256": "45885fabe396348e7346eabe44db83687b760e69fcc97eb02b5c987a325a4c06",
+          "bytes": 4307
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_operators.py": {
+          "sha256": "6968c68073a62e6e89c76d41891f403c116890be21c4eac2d48458f181e8d105",
+          "bytes": 1948
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_orient.py": {
+          "sha256": "8b683621ecf809ebb5211267cc0d38852e8530ea3ad865be8fde7acddef13aa6",
+          "bytes": 3515
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_parallel_offset.py": {
+          "sha256": "1918896b8f30dbecfb3570d5823ca1e703d30adfe541983997f6f56c4c436785",
+          "bytes": 2332
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_persist.py": {
+          "sha256": "e2852e23de770dc447651bc90016a7c37f222e126bfcac804cbe76b753eddc18",
+          "bytes": 1710
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_pickle.py": {
+          "sha256": "904649fc746b26fa6547d4ef2fde1984d8859f7bae8ac7d0160af1efd4bf8b88",
+          "bytes": 2368
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_polygonize.py": {
+          "sha256": "4137b716e264dfdeee26c7a55b3c37183b4f3d8a3f9fc41bd74166abe90efcfe",
+          "bytes": 1388
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_polylabel.py": {
+          "sha256": "29df6ea15b38d6eaac32d704660fb48bdc30c00b55a007ab051ec86d42b7388d",
+          "bytes": 3143
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_predicates.py": {
+          "sha256": "acaf6bb954fab6a5ac4c4476d6d24a332d7ef6273af178062810464537935158",
+          "bytes": 2958
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_prepared.py": {
+          "sha256": "2262c11275e4d192592deea3707b7184d241809acaf46bb043303d06d71dbf1f",
+          "bytes": 2476
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_products_z.py": {
+          "sha256": "0ab37de73fbcb25dc9efa619134e44e6d62f30bae11834e9fd18af6db95bab98",
+          "bytes": 388
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_shape.py": {
+          "sha256": "31cbfad36ecdac0f636087db09b72003debc1e31d697909fe2d7fc72ae2a196a",
+          "bytes": 1809
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_shared_paths.py": {
+          "sha256": "299d4533ab363b7d79be8230d5738496ec0c9dfce1c8b77dd725e7a4d9a7b7b6",
+          "bytes": 1434
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_singularity.py": {
+          "sha256": "188fbfebbddcd7c48802ad544194f764e9df7926e1044b86018802bb33e5761a",
+          "bytes": 381
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_snap.py": {
+          "sha256": "7c25806a778e427e6bc6667249d88d23b2c3c2d65aa9f60e2c6b1ea0961157a4",
+          "bytes": 763
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_split.py": {
+          "sha256": "ed2c14b9acfcf9592e287280bc2a5c25e02811b41a08c8f93fbdc09a70348c75",
+          "bytes": 11331
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_substring.py": {
+          "sha256": "d528a6313695737e2e93ce329554ab889371e13d808746b179bcfd2056c565a5",
+          "bytes": 21162
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_svg.py": {
+          "sha256": "c485e190be38c353c9977b2ec6f0e35ca77d9cf3bb963918313cf7aa80fb0c6d",
+          "bytes": 8253
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_transform.py": {
+          "sha256": "b39196b2ef44796fff0f44074f82fd8afaf597281e892c5134b1321a099d92c9",
+          "bytes": 2705
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_union.py": {
+          "sha256": "309a772ecb9fab530f3a5e7d846b50ab7c3e1f653756698333184bfd9f5cf197",
+          "bytes": 2094
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_validation.py": {
+          "sha256": "2f7decda98da83d47f1e80dafa6506d6810e65c2bea5ec619d01d7e31959bba2",
+          "bytes": 238
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_vectorized.py": {
+          "sha256": "1074c8e0a625dd1025cccd8ef41b997d12efda4c739eeb49b4658cb9b25897c8",
+          "bytes": 3723
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_voronoi_diagram.py": {
+          "sha256": "cf764af15934364302b4b1b9d2f3d2bd0b9c0406931f0dc61fdb24d65d9bf2a1",
+          "bytes": 4080
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_wkb.py": {
+          "sha256": "9e90a3358aedbc5bf69e1c2d01c8808f6b5eee97f5a5bd60f1132b2b19c1af63",
+          "bytes": 5558
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/test_wkt.py": {
+          "sha256": "8f401b408d904a4b4b8e649b067ed98a0bf05ad37f12c36ac682aaed400a4115",
+          "bytes": 1600
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/legacy/threading_test.py": {
+          "sha256": "956c810cec32b0c6a83e8939c46bc336fec2527e6390474352eddb20b518ab30",
+          "bytes": 1004
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_constructive.py": {
+          "sha256": "d1f2a262b7c6d4edcb6720e4913a0b67377fe845ac868195a96e1db0a5d19554",
+          "bytes": 46079
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_coordinates.py": {
+          "sha256": "ed3f6f7994ba5023affdb919bf29921b309bea52da2ccd3174b5f2f6a50c590c",
+          "bytes": 13294
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_coverage.py": {
+          "sha256": "fc0ee5b8fc3287644f1c52298dde2b6e8f58d30539541789ea6287396c94847a",
+          "bytes": 9578
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_creation.py": {
+          "sha256": "8acf823723b015cafb5c8eef0abd1b650317fa4c65cb1fd547eafbbb4ee63ada",
+          "bytes": 22345
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_creation_indices.py": {
+          "sha256": "442e00c9f6497dfcb82800c33e644a653b9f686b2ec2bad2857e9d7310f06100",
+          "bytes": 18597
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_decorators.py": {
+          "sha256": "f2296fc9c051f82cea97c3b3fa631d2a2e34c856aa2724e5dae1d2e5e06fea62",
+          "bytes": 3699
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_geometry.py": {
+          "sha256": "167598facf5375b83a278094aa6faf7c04e56d445c80df5120aceffe1db642bc",
+          "bytes": 23821
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_io.py": {
+          "sha256": "463f9f5e1a320092501fdd6267800cfee95bb4ae056219031eed192270d889a1",
+          "bytes": 50062
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_linear.py": {
+          "sha256": "1290329dc46bbc86fdd55d4e4f514ce8cafcfc26a886446368ec008a2fefe2fc",
+          "bytes": 7726
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_measurement.py": {
+          "sha256": "78622de41a1a34e7ba4a748df5633c53aa170b75873a9a838c9dc195575abd4a",
+          "bytes": 9948
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_misc.py": {
+          "sha256": "51c71ca684af35ff44db3241aec202c64239ff364115d9ad7729f907ea96ac5b",
+          "bytes": 5394
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_plotting.py": {
+          "sha256": "a67aba0917c704a652cf5435bcb023225961b7efb26660d79e04d740ebbc27cf",
+          "bytes": 4043
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_predicates.py": {
+          "sha256": "ac87fb40003c6b8b03ea9a84484c32e1a65d7742c1d5b3d6ed78678dc47fa73a",
+          "bytes": 13714
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_ragged_array.py": {
+          "sha256": "68913b3eca0fea05a0861dfd7a7d5b392cfd61edd8f3c87f5c4e69b6c23f7bd3",
+          "bytes": 21067
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_set_operations.py": {
+          "sha256": "c7f7b4ff00f62325c5e621619f8f7d7d34d0c3dadba41c754dea13e15ea2a529",
+          "bytes": 17702
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_strtree.py": {
+          "sha256": "d38f6091ecb00b3a5575742816ffa7a0386332942df349737361980de5c77d15",
+          "bytes": 73511
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/tests/test_testing.py": {
+          "sha256": "7ce5858e8dccc87080fec1158d06a767efc536c42d9bb360f216605906ad33c0",
+          "bytes": 2846
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/validation.py": {
+          "sha256": "022bd86d8fbea62d9e57d855a1344078ec2d4baf66e12dfdc3ec25ddb45c3e84",
+          "bytes": 1471
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/vectorized/__init__.py": {
+          "sha256": "e050c7c3ef8ab08f183e8b2f68476d991d78058a1de020b03ea7f00e6a5f8ad5",
+          "bytes": 2812
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/wkb.py": {
+          "sha256": "35efe44fd667127ee169403aef8794b966bb0f3b5fbb9e478231dd2859fed69e",
+          "bytes": 1937
+        },
+        "vendor/shelf_generation/work/family3_repair/collision/python_deps/shapely/wkt.py": {
+          "sha256": "0262744aff843140ca60a5b15aa65b3ffcea8248f5391401703fb44e71f0cf20",
+          "bytes": 1733
+        },
+        "vendor/shelf_generation/work/shelf_training_visible360_20260916/legacy_import_policy.py": {
+          "sha256": "3b84e22bf9db4324133ea4d7fb0f3ccd8619b323275b2d28d2fa4dae193f4ac2",
+          "bytes": 876
+        },
+        "vendor/shelf_generation/work/shelf_training_visible360_20260916/random_shelf_scene.py": {
+          "sha256": "688f4bcc17a2b6ff9467349ccffdcf3fc47b683bf0280171e797f82d66526a58",
+          "bytes": 9763
+        },
+        "vendor/shelf_generation/work/shelf_training_visible360_20260916/snack_diversity.py": {
+          "sha256": "93b9e67ad02fca411e17b876b363dedc09740afbbd28fb52edfb221d69060533",
+          "bytes": 2960
+        },
+        "short_tasks/tasks/hang_cap/component_sources.original.json": {
+          "bytes": 10183,
+          "sha256": "e3a4a62dcd0a18dff19762a8729136372ccf6bcd3f0ea9150b51edef7bfb4a32"
+        },
+        "short_tasks/tasks/pack_object/component_sources.original.json": {
+          "bytes": 12101,
+          "sha256": "fdf6ecb9eb5f6a7838801737f3d2ec156c477db2a855bf7f13bdb23f522a3bef"
+        },
+        "short_tasks/tasks/retrieve_from_drawer/component_sources.original.json": {
+          "bytes": 11498,
+          "sha256": "b388de339d9830535e8ec694725ec4cf0a5436837a014f11fe32e04f3bcefa76"
+        },
+        "short_tasks/tasks/sofa_to_coffee_table/component_sources.original.json": {
+          "bytes": 13544,
+          "sha256": "12409df2a3cd1fa16af089a53d9d8a652767bcdcde644b1e3e6c363a1d26ec27"
+        },
+        "short_tasks/tasks/sofa_to_drawer/component_sources.original.json": {
+          "bytes": 13538,
+          "sha256": "75a249ff98613b98f6f5904d02f8119db1ce0ff1114c825782a7098da07a3f92"
+        },
+        "short_tasks/tasks/table_to_storage_basket/component_sources.original.json": {
+          "bytes": 11024,
+          "sha256": "efd0c941fbe7906c2d232b169d3420ae8f287ff3b91cac79faec72008c956a6f"
         }
       },
       "compatibility_namespaces": [],
