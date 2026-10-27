@@ -607,6 +607,27 @@ def _context_layers(prepared,state,base_scene,work):
     return Path(paths[roots[0]['original_path']]),{str(path):_sha(path)for path in files}
 
 
+def _native_instruction_copy(state,mode,registry):
+    """Recognize the diagnostic bank's exact copy of a native public instruction.
+
+    The ordinary owner resolves its instruction from request.json; it does not
+    consume a separate context file. Never replace that source or accept extra
+    contextual information through this copy-only path.
+    """
+    public=state.get('public_input');launch=state.get('launch_options',{})
+    request=state.get('task_parameters',{})
+    if (mode not in('ordinary','task')or launch.get('schema')!='openend.short_task.launch.v1'
+            or not isinstance(public,dict)or set(public)!={'instruction','context'}
+            or public['context']!=''or not isinstance(public['instruction'],str)
+            or not public['instruction']or launch.get('task_name')!=request.get('task_name')):
+        return False
+    name=request.get('task_name')
+    if name in(registry.CONTEXT_TASKS|registry.FAILURE_RECOVERY_TASKS|registry.ATOMIC_COFFEE_TASKS):
+        return False
+    plan=registry.resolve(deepcopy(request))
+    return plan.get('task_name')==name and public['instruction']==plan.get('instruction')
+
+
 def restore(release,runtime,task,episode,output,*,python_executable=None,owner_config=None):
     """CPU preparation only. Return a real original-owner launch and receipt."""
     prepared=describe(release,runtime,task,episode,output,owner_config=owner_config)
@@ -623,8 +644,11 @@ def restore(release,runtime,task,episode,output,*,python_executable=None,owner_c
     owner=prepared['owner'];owner.mkdir(parents=True,exist_ok=True)
     work=owner/('compact_'+task+'_'+str(episode).zfill(2)+'_'+uuid.uuid4().hex[:12]);work.mkdir()
     _json(work/'restore_intent.json',dict(state_sha256=_sha(selected['state_path']),original_seed=state['actual_seed'],native_started=False,model_started=False))
+    native_instruction_copy=False
     with tree.activated():
         scene_module=tree.import_module('short_tasks.scene');recipe=deepcopy(state['scene_recipe'])
+        if state.get('public_input')is not None and prepared['mode']in('ordinary','task'):
+            native_instruction_copy=_native_instruction_copy(state,prepared['mode'],tree.import_module('short_tasks.registry'))
         if prepared['mode']=='ordinary'or(prepared['mode']=='context'and not recipe.get('task_scene_policy')):
             composed=scene_module.LocalFriendProvider(python_executable=python_executable).compose(recipe,work/'composed')
         else:
@@ -688,6 +712,11 @@ def restore(release,runtime,task,episode,output,*,python_executable=None,owner_c
         elif prepared['mode']=='context':
             # The original registered selection owner obtains its question
             # from the unchanged request/question bank, not a new launch key.
+            _json(work/'public_input.json',state['public_input'])
+        elif native_instruction_copy:
+            # Preserve the recorded copy, but do not bind or inject it: the
+            # original ordinary owner still reads request.json and resolves
+            # the same instruction, with no separate contextual input.
             _json(work/'public_input.json',state['public_input'])
         else:raise ValueError('Separate public context requires its original room or selection owner')
     extra=[]

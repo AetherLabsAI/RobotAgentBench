@@ -3,9 +3,11 @@ import hashlib
 import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from types import SimpleNamespace
 import unittest
+from unittest.mock import Mock
 
-from .restore import describe,select,_write_saved_json_sidecars,_sha,_restore_scene,_portable_state,_refresh_launch_hashes
+from .restore import describe,select,_write_saved_json_sidecars,_sha,_restore_scene,_portable_state,_refresh_launch_hashes,_native_instruction_copy
 
 try:
     from pxr import Usd,UsdGeom,UsdPhysics
@@ -100,6 +102,52 @@ class CompactRestoreContract(unittest.TestCase):
             explicit={'scene':str(scene),'scene_sha256':'c'*64}
             _refresh_launch_hashes(explicit,Path(directory)/'unused.usda')
             self.assertEqual(explicit['scene_sha256'],_sha(scene))
+
+    def public_instruction_fixture(self):
+        task='stock_wooden_tray_lighting';instruction='Pick up the designated shelf products: Sprite.'
+        state=dict(launch_options=dict(schema='openend.short_task.launch.v1',task_name=task),
+                   task_parameters=dict(task_name=task,seed=7),
+                   public_input=dict(instruction=instruction,context=''))
+        registry=SimpleNamespace(CONTEXT_TASKS={'select_drink'},FAILURE_RECOVERY_TASKS={'recover_cup'},
+                                 ATOMIC_COFFEE_TASKS={'coffee_moved'},
+                                 resolve=Mock(return_value=dict(task_name=task,instruction=instruction)))
+        return state,registry
+
+    def test_empty_native_context_copy_keeps_original_request_and_public_text(self):
+        for mode in('ordinary','task'):
+            with self.subTest(mode=mode):
+                state,registry=self.public_instruction_fixture();original=json.loads(json.dumps(state))
+                self.assertTrue(_native_instruction_copy(state,mode,registry))
+                registry.resolve.assert_called_once_with(original['task_parameters'])
+                self.assertIsNot(registry.resolve.call_args.args[0],state['task_parameters'])
+                self.assertEqual(state,original)
+
+    def test_native_copy_rejects_extra_context_and_unmatched_instruction(self):
+        for context in('A different user need.',' ',None,{}):
+            state,registry=self.public_instruction_fixture();state['public_input']['context']=context
+            self.assertFalse(_native_instruction_copy(state,'task',registry))
+            registry.resolve.assert_not_called()
+        for instruction in('A new request.','Pick up the designated shelf products: Sprite. ',None,''):
+            state,registry=self.public_instruction_fixture();state['public_input']['instruction']=instruction
+            self.assertFalse(_native_instruction_copy(state,'task',registry))
+        state,registry=self.public_instruction_fixture();state['public_input']['answer']='private target'
+        self.assertFalse(_native_instruction_copy(state,'task',registry))
+        registry.resolve.assert_not_called()
+
+    def test_native_copy_cannot_bypass_other_owner_context_binding(self):
+        for mode in('context','room','long','specialized','cloth'):
+            state,registry=self.public_instruction_fixture()
+            self.assertFalse(_native_instruction_copy(state,mode,registry))
+            registry.resolve.assert_not_called()
+        for task in('select_drink','recover_cup','coffee_moved'):
+            state,registry=self.public_instruction_fixture()
+            state['task_parameters']['task_name']=task;state['launch_options']['task_name']=task
+            self.assertFalse(_native_instruction_copy(state,'task',registry))
+            registry.resolve.assert_not_called()
+        state,registry=self.public_instruction_fixture();state['launch_options']['schema']='openend.coding_room.launch.v1'
+        self.assertFalse(_native_instruction_copy(state,'task',registry));registry.resolve.assert_not_called()
+        state,registry=self.public_instruction_fixture();state['task_parameters']['task_name']='other_task'
+        self.assertFalse(_native_instruction_copy(state,'task',registry));registry.resolve.assert_not_called()
 
 
 @unittest.skipIf(Usd is None,'Requires the native SDK USD modules; no simulator is started')
