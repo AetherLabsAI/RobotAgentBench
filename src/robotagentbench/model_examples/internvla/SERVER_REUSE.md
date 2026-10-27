@@ -1,52 +1,65 @@
-# Server source and packaging delta
+# InternVLA model interface
 
-This example extracts the original G1 policy-serving recipe. A release connection check subsequently performed one actual inference, executed 50 actions through the native worker, and closed the model and native processes normally. It is a short connection check, not a full task rollout or a success-rate measurement.
+Start with the [installation and run guide](README.md). This reference describes
+the G1 adapter used by `internvla run`.
 
-## Sources inspected in full
+## Inputs and actions
 
-| Original role | SHA256 |
+| Interface | Contract |
 | --- | --- |
-| Actual Discovery G1 serve_intern.py | a2e030601ee9531de6780a3a5220eb482ff523507acb440246590f56b9a5b3ea |
-| Original shared ActionAdapter | 6939b1be0848261afb03829f4c29de57d7ff58d6b3f3d3b69ca7493a5202ad45 |
-| Shared model/worker launcher and JSONL RPC | 83e734db2973b97e9399c97661a488af0441565b8e94390927116b0a305d4980 |
-| Discovery rollout loop | 17b0a70eb6d05de9c29e8d0400ec5424ae61f68eaecee87b82a3c031f686dffe |
-| Discovery public-prompt binding/control | c23ca2ba892a55b3901f4803be01c1c64ee7ebfddc870020ac768ac4fe168c96 |
-| Original G1 training control schema | 256c212eb078ce43c218960859d1d3cd75cc7ce60b377e78a93f1a704624f03c |
+| State | 20 command-joint channels, world-frame XY and continuous yaw; float32 |
+| Images | Head 1280×800 and two wrists 848×480, RGB; resize/pad to 224 |
+| State transform | Mean/std normalization and padding to 32 channels |
+| Inference | Action-only BF16, seed 42, policy reset for each chunk |
+| Prediction | 1×50×32; first 22 channels unnormalized once as `value * (std + 1e-6) + mean` |
+| Commands | 20 absolute joint targets, forward velocity in m/s, yaw rate in rad/s |
+| Joint units | Torso lift in metres; angular joints and continuous outer grippers in radians |
+| Execution | Original 20 Hz worker and action projection; no delta integration or gripper 0–1 conversion |
+| Public text | Current worker instruction, bound to `public:<task_id>` |
+| Extra observations | Map/context packets remain available but are not separately encoded by this adapter |
 
-The historical Discovery receipt recorded 72 actual model calls and 3,600 acknowledged action rows; native evaluation was valid, score0, original no-progress timeout. This is real policy-serving evidence, not the later third-person trajectory rendering. It does not establish performance for new tasks/models.
+The original action projection retains joint/base clipping, inclusive
+0.001 m/s and 0.005 rad/s deadbands, straight/turn exclusivity, braking and
+acceleration limits. Projected rows are committed only after acknowledgment.
+Raw predictions, applied commands and projection events are recorded separately.
 
-The Discovery model directory contained one rewritten public prompt row (SHA24a423e72f4ce53d9427a5ad84d7511231ac422fe3dfa2848bb8511dc7831f8a), not the old126-entry training table (SHA7e4a6bc3921da50b0549ed45a419a851587b15cd7de3bd4a75cb80fd3f898130). Thus retaining a public routing label and the exact current public instruction does not require training task indices or ground truth.
+## Prompt selection
 
-Private exact source snapshots are retained in this source-review checkout with non-package `.py.private` suffixes. They include historical deployment paths and are not installation inputs. Public code has no dependency on those paths.
+By default `public_prompt` is `null`, so the current worker instruction is used.
+Context already present in that instruction remains part of the model prompt.
+An explicit override is available for reproducing a matching older experiment.
+Do not reuse fixed historical object/colour prompts for randomized instances.
+Ground-truth answers and private task bindings are not model inputs.
 
-## Behavior retained and explicit deltas
+## Advanced deployments
 
-| Area | Retained | Packaging change / limitation |
-| --- | --- | --- |
-| State | named command-joint20 + worldXY + unwrapped yaw, float32 | Paths are operator parameters; native34 is allowlisted before inference |
-| Images | head1280×800, wrists848×480; RGB CHW /255; original resize/pad224 | Smaller-camera profiles rejected by tested model path |
-| Transform | original state Normalize default mean_std; chat tokenize_state; padded32 | VLM root parameterized; no new language_memory field |
-| Model | optimized action-only; cuda BF16; seed42; reset/full predict_action_chunk | Separate installed model Python replaces server-specific Docker image/kernel mounts |
-| Decode | shape1×50×32; NumPy first22 ×(std+1e-6)+mean | stats path/key parameterized; no manual SHA input |
-| Prompt | public allowlist lookup and exact assertion | public:<taskID> routing label replaces Discovery-specific key; optional explicit public historical prompt override |
-| Context/map | fields retained in public observation, original model ignores separate extras | No new context/map-conditioned claim; prompt revision required to newly consume them |
-| Projection | complete original ActionAdapter bytes, raw/applied/events, pending/commit | none; earlier strict candidate is separate and not the baseline |
-| Worker calls | full chunk once, UUID/episode/step binding, acknowledge executed rows, no auto retry | configure generates the project's native_worker argv for installed ordinary room/short raw22 saved launches; dedicated families remain unsupported by that entry |
-| GPU lifecycle | reuse project UUID lease for model, worker retains original own lease | no old shared-GPU override; operator uses common existing lock root; external supervisor still required |
-| Close | original close/closed and process exit | explicit native shutdown report required; uncertainty does not count as cleanup success |
-| Endpoint | optional original infer/actions payload | external endpoint checkpoint/lease cannot be verified locally; no standard upstream HTTP or full parity claim |
+For a pre-existing model service, set `model_endpoint` to its protected
+`http(s)://.../infer` endpoint. It must implement this adapter's `infer/actions`
+protocol with matching public-prompt, episode and step bindings. This is not
+an upstream standard API. External checkpoint identity and GPU lifecycle are
+the operator's responsibility; the client does not stop an external service.
 
-The old Short14 matrix replaced model input with fixed training prompts. Some encode a specific target/color. These cannot silently stand for newer randomized tasks. Default current-worker-public prompt corresponds to the actual Discovery public-binding method; choose a historical public prompt only when deliberately reproducing the matching old task.
+`server-template` provides an empty worker-argv template for dedicated-worker
+integration, not a runnable deployment. Retain the task's required bindings,
+read-only inputs, GPU lease, admission and watchdog.
 
-## CPU evidence
+Native cleanup requires the original delayed `closed` acknowledgment, process
+exit 0 and a `shutdown_succeeded` report. Uncertain actions are not resent;
+the independent supervisor handles a hung owner. Cleanup is separate from
+task success.
 
-Two source-parity tests and one synthetic transport seam passed without importing Torch:
+## Source compatibility
 
-1. Byte SHA of both original and packaged projection equals6939b1…. The same synthetic50×22 rows cover gripper clipping, mixed base channels, deadband, acceleration and braking. Applied rows, reason events, pending rows and commit0/17/50 state are exactly equal. Invalid nonfinite final rows reject without pending state.
-2. AST comparison of `mapping`, `state`, `sample`, `rgb`, `batch`, `actions` and `transform` assignments matches the original source. Canonicalization is limited to class self bindings and the explicit VLM path parameter. This preserves original default-mode normalization and NumPy epsilon arithmetic rather than merely asserting equivalent dimensions.
+The action projection is unchanged from the server adapter:
+SHA256 `6939b1be0848261afb03829f4c29de57d7ff58d6b3f3d3b69ca7493a5202ad45`.
+Preprocessing, decoding and public-prompt routing retain the server recipe.
+Deployment paths are supplied through configuration.
 
-These CPU checks do not execute Torch transforms, image interpolation, weights or numerical model inference. They complement the short real-model connection check; they do not establish equivalence for a different checkpoint or environment.
+CPU configuration checks do not load a model or simulator:
 
-The additional transport seam uses fake owner/model objects, not a checkpoint: one50-row chunk with tiny mixed base outputs is projected by the original adapter to zero base commands, sent once, acknowledged at step50 and committed. It checks public task routing, public context preservation and metadata allowlisting; it is not a native simulation or real model result.
+```sh
+python -m unittest robotagentbench.model_examples.internvla.test_configure
+```
 
-Two additional CPU configuration tests use synthetic files and the real pure `native_worker.configuration` / `example.sdk_paths` helpers. They verify generated argv/report placeholders, automatic model-file hashes, fresh save/reload and source-workspace output rejection, without SDK imports, Torch or task sampling.
+Source-parity tests additionally require original review snapshots. Those
+snapshots are not runtime dependencies or part of the public package.

@@ -1,4 +1,8 @@
-# InternVLA-A1.5: G1 fine-tuned model example
+# Archived strict-interface reference
+
+This document describes the older experimental `serve`/`bridge` interface,
+not the release startup workflow. Use [README.md](README.md) and its
+`configure`/`run` commands for the supported server-derived example.
 
 This is an optional model client, not another simulator or evaluator. It connects an already admitted RobotAgentBench JSONL worker to a local InternVLA-A1.5 policy service. No model or GPU is loaded by imports, `template`, `verify`, or the CPU tests. The example has **not** been run with a real model as part of its release checks.
 
