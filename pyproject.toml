@@ -29,6 +29,7 @@ namespaces = false
 [tool.setuptools.package-data]
 "robotagentbench.tasks" = ["catalogs.json"]
 "robotagentbench.simulation.specialized" = ["identities.json"]
+"robotagentbench.simulation" = ["dedicated_delivery_template.json", "dedicated_cloth_template.json"]
 "robotagentbench.backends" = ["manifest.json", "native-files.json", "profiles/**/*"]
 "robotagentbench" = ["example_data/*.json"]
 "robotagentbench.model_examples.codex" = ["sandbox/Dockerfile", "sandbox/requirements.lock"]
