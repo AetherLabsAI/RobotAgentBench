@@ -15,7 +15,7 @@ A benchmark for household robot agents, from individual manipulation tasks to op
 
 <!-- overview-video:start -->
 
-https://github.com/user-attachments/assets/d8359d38-8793-4285-adf8-187603ba3736
+https://github.com/user-attachments/assets/239951bc-17bf-44e7-9f6e-93b6046cde6e
 
 <!-- overview-video:end -->
 
