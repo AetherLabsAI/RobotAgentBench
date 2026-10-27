@@ -13,6 +13,42 @@ from .codec import contract
 from .config import read, sha, validate_control_schema
 
 
+STANDARD_CAMERA_PROFILE = 'native_head1280x800_wrist848x480'
+ATOMIC_CAMERA_PROFILE = 'native_three640x480'
+CAMERA_SHAPES = {
+    STANDARD_CAMERA_PROFILE: (('head',(800,1280,3)),('left',(480,848,3)),('right',(480,848,3))),
+    ATOMIC_CAMERA_PROFILE: (('head',(480,640,3)),('left',(480,640,3)),('right',(480,640,3))),
+}
+
+
+def camera_profile(native_receipt=None, *, task_id=None):
+    """Select the original owner profile from trusted operator configuration.
+
+    Never infer a profile from image dimensions or model/worker-supplied fields.
+    Atomic Recovery owners use 640x480; room Recovery and cloth retain the
+    ordinary head/wrist profile. This only validates input, not resizes it.
+    """
+    if native_receipt is None:
+        return STANDARD_CAMERA_PROFILE
+    from robotagentbench.model_examples.native_receipts import ATOMIC, CLOTH, RECOVERY
+    if (not isinstance(native_receipt,dict) or set(native_receipt)!={'family','task_id'}
+            or not isinstance(native_receipt['family'],str)
+            or not isinstance(native_receipt['task_id'],str) or not native_receipt['task_id']
+            or (task_id is not None and native_receipt['task_id']!=task_id)):
+        raise ValueError('Exact trusted native receipt family/task binding required for cameras')
+    family,task=native_receipt['family'],native_receipt['task_id']
+    if family=='atomic_coffee' and task in ATOMIC:
+        return ATOMIC_CAMERA_PROFILE
+    if family=='failure_recovery' and task in RECOVERY:
+        return (ATOMIC_CAMERA_PROFILE if task in ('failure_recovery_shelf_drink',
+                'failure_recovery_coffee_bag') else STANDARD_CAMERA_PROFILE)
+    if family=='cloth' and task in CLOTH:
+        return STANDARD_CAMERA_PROFILE
+    if family=='room' and task not in ATOMIC|CLOTH|RECOVERY.keys():
+        return STANDARD_CAMERA_PROFILE
+    raise ValueError('No audited native camera profile for the configured owner/task')
+
+
 def model_config(value):
     """Local path parameters and original codec checks; no manual SHA entry."""
     if set(value) != {'python','checkpoint','stats','stats_key','control_schema','vlm'}:
@@ -41,11 +77,14 @@ def model_config(value):
 
 class TestedPolicy:
     """Same transforms, BF16 model, seed42, NumPy unnormalization and prompt lookup."""
-    def __init__(self,config,prompts):
+    def __init__(self,config,prompts,*,native_receipt=None):
+        self.camera_profile=camera_profile(native_receipt)
         config,self.pins=model_config(config)
         self.prompts=dict(prompts)
         if not self.prompts or any(not isinstance(k,str)or not isinstance(v,str)for k,v in self.prompts.items()):
             raise ValueError('Explicit public task-ID/instruction allowlist required')
+        if native_receipt is not None and set(self.prompts)!={'public:'+native_receipt['task_id']}:
+            raise ValueError('Native camera owner must match the public task prompt binding')
         import numpy as np
         import torch
         from lerobot.configs.policies import PreTrainedConfig
@@ -81,9 +120,10 @@ class TestedPolicy:
         state=np.asarray([obs['joints'][k]for k in self.order[:20]]+obs['base_state']['position_world_m'][:2]+[obs['base_state']['yaw_world_unwrapped_rad']],dtype=np.float32)
         if state.shape!=(23,)or not np.isfinite(state).all():raise ValueError('Original finite state23 required')
         sample={'observation.state':torch.from_numpy(state),'action':torch.zeros(50,22),'task':prompt}
-        for k,shape in [('head',(800,1280,3)),('left',(480,848,3)),('right',(480,848,3))]:
+        for k,shape in CAMERA_SHAPES[self.camera_profile]:
             rgb=np.asarray(Image.open(io.BytesIO(base64.b64decode(obs['images'][k]))).convert('RGB')).copy()
-            if rgb.shape!=shape:raise ValueError('Tested recipe requires full native head1280x800/wrist848x480 images')
+            if rgb.shape!=shape:
+                raise ValueError(f'Original {self.camera_profile} camera {k} requires {shape}, received {rgb.shape}')
             sample['observation.images.'+k]=torch.from_numpy(rgb).permute(2,0,1).float()/255
         sample=self.transform(sample)
         batch={k:(v.unsqueeze(0).to(device='cuda',dtype=torch.bfloat16 if v.dtype.is_floating_point else v.dtype)if isinstance(v,torch.Tensor)else[v])for k,v in sample.items()}
@@ -96,14 +136,15 @@ class TestedPolicy:
             inference_s=time.monotonic()-start,prompt=prompt,training_task_index=req['training_task_index'])
 
 
-def serve_stdio(model,prompts):
+def serve_stdio(model,prompts,*,native_receipt=None):
     """Original infer/actions/close protocol, without the server-specific Docker launcher."""
     import sys
     wire=sys.stdout;sys.stdout=sys.stderr
-    policy=TestedPolicy(model,prompts)
+    policy=TestedPolicy(model,prompts,native_receipt=native_receipt)
     def emit(value):wire.write(json.dumps(value,allow_nan=False)+'\n');wire.flush()
     emit(dict(op='ready',model='internvla_a15',action_shape=[50,22],loading_seconds=policy.loading_seconds,
         backend='native_optimized_action_only',decoding='G1_omnipicker_mean_std_eps1e-6_once',
+        camera_profile=policy.camera_profile,
         images='uniform_full_native_frame_head_left_right_then_native_resize224_pad',sources=policy.pins))
     for line in sys.stdin:
         request=json.loads(line)

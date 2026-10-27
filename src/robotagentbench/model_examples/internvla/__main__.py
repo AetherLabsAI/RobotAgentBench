@@ -50,9 +50,12 @@ def main(argv=None):
         from .config import read
         from .server_policy import serve_stdio
         value=read(args.service_config)
-        if set(value)!={'model','prompts'}:raise ValueError('Exact model service configuration required')
+        if set(value) not in ({'model','prompts'},{'model','prompts','native_receipt'}):
+            raise ValueError('Exact model service configuration required')
+        from .server_policy import camera_profile
+        camera_profile(value.get('native_receipt'))
         os.environ['HF_HUB_OFFLINE']='1';os.environ['TRANSFORMERS_OFFLINE']='1'
-        serve_stdio(value['model'],value['prompts']);return 0
+        serve_stdio(value['model'],value['prompts'],native_receipt=value.get('native_receipt'));return 0
     if args.command=='template':print(json.dumps(config.template(),indent=2));return 0
     if args.command=='verify':
         value=config.load(args.config)

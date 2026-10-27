@@ -13,7 +13,7 @@ import sys
 import threading
 
 from .config import read
-from .server_policy import model_config
+from .server_policy import camera_profile,model_config
 from .server_transport import prompt_binding,rollout
 
 SCHEMA='robotagentbench.internvla.tested_operator.v1'
@@ -53,6 +53,7 @@ def configuration(path,task):
         if (not isinstance(receipt,dict) or set(receipt)!={'family','task_id'}
                 or receipt['family'] not in FILES or receipt['task_id']!=task):
             raise ValueError('Explicit matching original-owner receipt family/task required')
+    camera_profile(row.get('native_receipt'),task_id=task)
     argv=row['worker_argv']
     if not isinstance(argv,list)or not argv or any(not isinstance(x,str)or not x or '\0'in x for x in argv):
         raise ValueError('Configure the actual installed worker/supervisor argv first; no invented worker entry')
@@ -62,6 +63,15 @@ def configuration(path,task):
         from .http import endpoint
         endpoint(value['model_endpoint']);pins={}
     return value,row,pins
+
+
+def model_service(model,prompts,task,row):
+    """Pass only the trusted native owner binding, never observed dimensions."""
+    camera_profile(row.get('native_receipt'),task_id=task)
+    service=dict(model=model,prompts=prompts)
+    if 'native_receipt' in row:
+        service['native_receipt']=dict(row['native_receipt'])
+    return service
 
 
 def native_cleanup(row,report_path,worker_close,episode_id):
@@ -126,6 +136,7 @@ def run(config_path,task,output):
     from types import SimpleNamespace
     from robotagentbench.simulation.gpu import acquire_gpu
     value,row,pins=configuration(config_path,task)
+    expected_camera_profile=camera_profile(row.get('native_receipt'),task_id=task)
     output=Path(output)
     if not output.is_absolute()or output.resolve()!=output or output.exists()or not output.parent.is_dir():
         raise ValueError('Fresh canonical operator output required; run identity is never reused')
@@ -144,6 +155,7 @@ def run(config_path,task,output):
     report_path=Path(expand(row['native_report']))
     if not report_path.is_absolute()or not report_path.is_relative_to(output):raise ValueError('Native report must belong to this fresh output')
     write('intent.json',dict(task=task,worker_argv=command,model_artifacts=pins,
+        camera_profile=expected_camera_profile,
         projection_source_sha256='6939b1be0848261afb03829f4c29de57d7ff58d6b3f3d3b69ca7493a5202ad45',
         no_retry=True,model_or_native_acceptance_claimed=False))
     lease=worker=model=None;logs=[];result=dict(status='starting',native_cleanup_verified=False)
@@ -172,7 +184,7 @@ def run(config_path,task,output):
         write('public_prompt_binding.json',dict(task_id=task,public_key=key,instruction=prompt,
             source='worker_public_instruction'if row['public_prompt']is None else'explicit_operator_public_prompt',
             training_task_table_used=False,ground_truth_used=False))
-        service=output/'model_service.json';write(service.name,dict(model=value['model'],prompts={key:prompt}))
+        service=output/'model_service.json';write(service.name,model_service(value['model'],{key:prompt},task,row))
         # No hand-written FD plumbing: this operator connects the two original
         # JSONL processes and preserves full model chunk execution.
         if value['model_endpoint']is None:
@@ -185,6 +197,8 @@ def run(config_path,task,output):
             log=(output/'model.stderr.log').open('x');logs.append(log);model=RPC(model_command,log,env=env)
             model_ready=model.read()
             if model_ready.get('op')!='ready'or model_ready.get('action_shape')!=[50,22]:raise ValueError('Original G1 model handshake differs')
+            if model_ready.get('camera_profile')!=expected_camera_profile:
+                raise ValueError('Model camera profile differs from trusted native owner binding')
             write('model_ready.json',model_ready)
         else:
             from .http import Client
