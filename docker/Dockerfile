@@ -16,8 +16,13 @@ COPY docker/requirements-native.txt /opt/robotagentbench/requirements-native.txt
 # the image. /opt/robotagentbench/native is the user-facing installation path.
 RUN /usr/local/bin/python3.11 -m pip install --no-cache-dir \
     --target /workspace/lukun/arena_software/isaac51-py311/lib/python3.11/site-packages \
-    --extra-index-url https://pypi.nvidia.com -r /opt/robotagentbench/requirements-native.txt \
+    --extra-index-url https://pypi.nvidia.com \
+    --extra-index-url https://download.pytorch.org/whl/cu128 \
+    -r /opt/robotagentbench/requirements-native.txt \
     && ln -s /workspace/lukun/arena_software/isaac51-py311/lib/python3.11/site-packages /opt/robotagentbench/native
+# Metadata-only check: no simulator import, GPU access, or physical setting change.
+RUN PYTHONPATH=/opt/robotagentbench/native /usr/local/bin/python3.11 -B -c \
+    "from importlib.metadata import version; assert [version(p) for p in ('torch', 'torchvision', 'torchaudio')] == ['2.7.0+cu128', '0.22.0+cu128', '2.7.0+cu128']"
 COPY pyproject.toml README.md LICENSE /opt/robotagentbench/package/
 COPY src /opt/robotagentbench/package/src
 RUN /usr/local/bin/python3.11 -m pip install --no-cache-dir --no-deps /opt/robotagentbench/package

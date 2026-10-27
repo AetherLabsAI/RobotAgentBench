@@ -1,4 +1,9 @@
 isaacsim[all,extscache]==5.1.0.0
+# Match the original native GPU-tensor runtime, including Blackwell support.
+# The default PyPI 2.7.0 wheels instead select the CUDA 12.6 build.
+torch==2.7.0+cu128
+torchvision==0.22.0+cu128
+torchaudio==2.7.0+cu128
 numpy==1.26.0
 scipy==1.15.3
 Pillow==11.3.0
