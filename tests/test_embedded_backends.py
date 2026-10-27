@@ -38,6 +38,19 @@ class EmbeddedBackendTests(unittest.TestCase):
         added = set(sys.modules)-before
         self.assertFalse(any(name.split('.')[0] in {'pxr','omni','isaacsim','torch'} for name in added))
 
+    def test_short_task_relative_runtime_dependencies_ship(self):
+        # A hook can import a generator helper only during native preparation.
+        # Validate that dependency closure without starting a simulator.
+        for source in (root('room') / 'short_tasks/tasks').rglob('*.py'):
+            for node in ast.walk(ast.parse(source.read_text())):
+                if isinstance(node, ast.ImportFrom) and node.level and node.module:
+                    base = source.parent
+                    for _ in range(node.level - 1):
+                        base = base.parent
+                    target = base.joinpath(*node.module.split('.'))
+                    self.assertTrue(target.with_suffix('.py').is_file() or
+                                    (target / '__init__.py').is_file(), (source, node.module))
+
     def test_unknown_profile_rejected(self):
         with self.assertRaises(ValueError):
             root('../room')

@@ -5242,6 +5242,10 @@
         "short_tasks/tasks/fridge_to_heated_box/scene.py": {
           "sha256": "9571e8b0610e29e19b6e296728d321a8c59c5cf41088bab5b53e7b0911c77f2e",
           "bytes": 847
+        },
+        "short_tasks/tasks/sofa_to_drawer/prepare_scene.py": {
+          "sha256": "79f075dbfb5fd67390e0f0b95416c8b4e6ab81362be12c98bb986ee612a8e9ec",
+          "bytes": 6724
         }
       },
       "compatibility_namespaces": [],
