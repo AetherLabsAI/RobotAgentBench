@@ -1,5 +1,9 @@
 {
   "aliases": {
+    "/mnt/agent-bench-data/lingjun/releases/living50-candidate-20260919/assets/12d4b23aaf5bc43f8ead_0090_CoffeeTable_D.png": "ab888baf2b3f7f3d3eacf6467f0ef8aaa549da0b053ec9ac477fe8063084f6e5",
+    "/mnt/agent-bench-data/lingjun/releases/living50-candidate-20260919/assets/69a8ecb219ac682c1706_0089_CoffeeTable_R.png": "200ad49947f7825085576620c73a6548d058ad4a94adff2cfcbce863ad35cc8b",
+    "/mnt/agent-bench-data/lingjun/releases/living50-candidate-20260919/assets/78cc9ef7e31cd757f235_0087_CoffeeTable_N.png": "789a5a34de5d4499e11c1bf2a186b2c498f86f6dc373347cfa8fd29d55a6179a",
+    "/mnt/agent-bench-data/lingjun/releases/living50-candidate-20260919/assets/ccc694333d30e5e86cdf_0088_CoffeeTable_M.png": "a873e99254d12e44b39443e971f44020e9ee685c4886ed79dc35c48086b9d43f",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/assets/house_scene_l1/assets_living_room/black_box/Aligned.usd": "872b66c22a3cb57e14360b7d3707ea7fa4384bda7aca265ab1f002ed96bad0ad",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/assets/house_scene_l1/assets_living_room/black_box/box_glb.usdz": "65fdb2e9452672e86d836ffbb9c14739738a2a6da7a0aa89dcb4578b0344441b",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/assets/house_scene_l1/assets_living_room/coffee_table/Aligned.usd": "c1ae4e4add52e6f20078e5e2a5f20c2e7f6ab7f2d85b3d4853addadeaa93571c",

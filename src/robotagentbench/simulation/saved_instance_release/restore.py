@@ -231,7 +231,14 @@ def _specialized_saved(prepared,operator,family,task,original_launch,destination
         raise ValueError('Saved specialized layers require original composition identities')
     work=original_launch.parent/('compact_saved_'+uuid.uuid4().hex[:12]);work.mkdir()
     paths={a['original_path']:str(work/('scene_'+str(i)+'.usda'))for i,a in enumerate(layers)}
-    hashes={};files=[]
+    from .original_scene_patch import restore_generated_layers,TASKS as room_recovery_tasks
+    generated_paths,hashes,files=restore_generated_layers(state,attachments=selected['attachments'],
+        runtime=prepared['runtime'],metadata=prepared['metadata'],work=work)
+    if set(paths)&set(generated_paths):raise ValueError('A saved layer has both an attachment and a generated patch')
+    paths.update(generated_paths)
+    if family=='failure_recovery'and task in room_recovery_tasks:
+        missing=set(initial.get('source_layers',{}))-set(paths)
+        if missing:raise ValueError('Saved room recovery is missing its exact original generated-layer closure')
     for attachment in layers:
         target=Path(paths[attachment['original_path']]);layer=Sdf.Layer.CreateNew(str(target))
         original=Sdf.Layer.FindOrOpen(attachment['source'])
