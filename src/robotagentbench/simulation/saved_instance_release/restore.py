@@ -372,6 +372,50 @@ def _typed(kind,value):
     raise ValueError('Unsupported saved initial-state attribute type: '+kind)
 
 
+def _rebind_generated_stain(state,composed):
+    """Relocate the identical seeded stain, never replace its scoring layout."""
+    saved=state.get('manifest_template',{}).get('wipe_table',{})
+    record=saved.get('randomization')
+    if record is None:return state
+    current=composed.get('wipe_table',{})
+    other=current.get('randomization',{})
+    if record.get('version')!='openend.wipe_stain.randomization.v1':
+        raise ValueError('Unknown saved stain generator')
+    transient={'layout_file','randomization_file','randomization_sha256','randomization'}
+    if ({k:v for k,v in saved.items()if k not in transient}!=
+            {k:v for k,v in current.items()if k not in transient}):
+        raise ValueError('Recomposed stain geometry or scoring layout differs')
+    if ({k:v for k,v in record.items()if k not in ('files','source_hashes')}!=
+            {k:v for k,v in other.items()if k not in ('files','source_hashes')}):
+        raise ValueError('Recomposed stain seed or appearance differs')
+    def sources(value):
+        rows=value.get('source_hashes',{})
+        result={PurePosixPath(p).name:h for p,h in rows.items()}
+        if len(result)!=len(rows)or not result:raise ValueError('Ambiguous stain source identities')
+        return result
+    if sources(record)!=sources(other):raise ValueError('Stain generator sources changed')
+    def members(group):
+        parent=PurePosixPath(group['layout_file']).parent
+        return {PurePosixPath(p).relative_to(parent).as_posix():(p,h)
+                for p,h in group['randomization']['files'].items()}
+    before,after=members(saved),members(current)
+    required={'asset.usda','asset_layout.json','textures/stain.png'}
+    if set(before)!=required or set(after)!=required:
+        raise ValueError('Incomplete saved stain output closure')
+    paths={}
+    for relative,(old,pin)in before.items():
+        new,newpin=after[relative]
+        if pin!=newpin or _sha(new)!=pin:raise ValueError('Recomposed stain contents differ')
+        paths[old]=new
+    if (_sha(current['randomization_file'])!=current['randomization_sha256'] or
+            _read(current['randomization_file'])!=other):
+        raise ValueError('Recomposed stain provenance differs')
+    paths[saved['randomization_file']]=current['randomization_file']
+    result=_rebind_saved_json(state,paths,{})
+    result['manifest_template']['wipe_table']=deepcopy(current)
+    return result
+
+
 def _ops(stage,path,attributes,*,joint=False):
     from pxr import Sdf
     prim=stage.GetPrimAtPath(path)
@@ -528,6 +572,7 @@ def restore(release,runtime,task,episode,output,*,python_executable=None,owner_c
             if result.returncode:raise RuntimeError('Original saved-recipe composer rejected input: '+result.stderr[-2500:])
             composed=_read(compose_work/'composition.json')
         scene_module.verify_manifest(composed)
+    state=_rebind_generated_stain(state,composed)
     scene=Path(composed['scene']);restored=work/'restored.usda'
     extra_hashes={}
     if prepared['mode']=='context':scene,extra_hashes=_context_layers(prepared,state,scene,work)

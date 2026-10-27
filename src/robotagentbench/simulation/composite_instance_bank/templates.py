@@ -10,8 +10,27 @@ def templates():
     return deepcopy(_TEMPLATES)
 
 
-def configuration(*, root, source_root, sdk_site, node):
+def configuration(*, root, source_root, sdk_site, node, context_profile=None):
     """Describe explicit installation inputs without writing or sampling."""
-    return dict(root=str(root), source_root=str(source_root), sdk_site=str(sdk_site),
-                node=str(node), templates=templates())
+    result = dict(root=str(root), source_root=str(source_root), sdk_site=str(sdk_site),
+                  node=str(node), templates=templates())
+    if context_profile is not None:
+        from .situations import PROFILE
+        if context_profile != PROFILE:
+            raise ValueError('Unknown OpenEnd context profile')
+        result['context_profile'] = context_profile
+    return result
+
+
+def select(config, task, seed):
+    """Explicit opt-in; archived banks retain their original text and requests."""
+    result = deepcopy(config['templates'][task])
+    profile = config.get('context_profile')
+    if profile is not None:
+        from .situations import PROFILE, SCENARIOS, build
+        if profile != PROFILE:
+            raise ValueError('Unknown OpenEnd context profile')
+        if task in SCENARIOS:
+            result = build(task, seed, result)
+    return result
 

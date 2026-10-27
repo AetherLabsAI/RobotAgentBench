@@ -63,7 +63,7 @@ following this guide again.
   --destination Assets --runtime Runtime --profile room
 
 "$RAB_PY" -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.1.0.json \
+  --manifest resources/saved-instances-0.2.0.json \
   --cache downloads/configurations --destination "$RAB_ROOT/SavedConfigurations"
 mkdir -p "$RAB_ROOT/Restored" "$RAB_ROOT/model-configs"
 

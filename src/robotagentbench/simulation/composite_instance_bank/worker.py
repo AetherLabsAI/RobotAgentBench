@@ -1,6 +1,5 @@
 """Task-owned CPU preparation using original unchanged composite preparers."""
 import argparse
-from copy import deepcopy
 import hashlib
 import importlib
 import json
@@ -9,6 +8,8 @@ from pathlib import Path
 import subprocess
 import sys
 import traceback
+
+from robotagentbench.simulation.composite_instance_bank.templates import select
 
 HERE = Path(__file__).resolve().parent
 OWNER = {'owner': 'RobotAgentBench-composite-instance-bank-v31'}
@@ -35,6 +36,7 @@ def guard(event, args):
 
 
 def prepare_one(config, task, seed, attempt=1):
+    template = select(config, task, seed)
     root = Path(config['root'])
     if json.loads((root/'OWNER.json').read_text()) != OWNER:
         raise ValueError('Wrong task directory owner')
@@ -57,7 +59,6 @@ def prepare_one(config, task, seed, attempt=1):
     row = dict(task_name=task, seed=seed, attempt=attempt, launch=None, hash=None,
                status='preparing', native_physics_validated=False, model_calls=0)
     try:
-        template = deepcopy(config['templates'][task])
         if task == 'long_task_15':
             request = template['request']; request['seed'] = seed
             out = source/LONG/'generated_rooms'/case_name
@@ -88,6 +89,14 @@ def prepare_one(config, task, seed, attempt=1):
                 raise RuntimeError('Original OpenEnd composer rejected; see compose.log')
             module.finalize(out, template['prompt_id'])
             launch = out/'launch.json'
+            # The legacy prompt_id remains valid for native admission. The
+            # public binding is authoritative for this newly authored cohort.
+            save(out/'public_input_binding.json', dict(
+                schema='robotagentbench.public_input_binding.v1',
+                source=str(out/'public_input.json'), sha256=sha(out/'public_input.json'),
+                launch_sha256=sha(launch)))
+            if 'context_variant' in template:
+                save(out/'context_variant.json', template['context_variant'])
             result = {'status': 'prepared_cpu_admitted'}
         payload = json.loads(launch.read_text())
         manifest = Path(payload['manifest'])
@@ -103,7 +112,8 @@ def prepare_one(config, task, seed, attempt=1):
         for name in ('request', 'ready_pose', 'spawn'):
             if name in payload:
                 inputs[name] = Path(payload[name])
-        for name in ('input.json', 'public_input.json', 'spawn.json', 'long_request.json'):
+        for name in ('input.json', 'public_input.json', 'public_input_binding.json',
+                     'context_variant.json', 'spawn.json', 'long_request.json'):
             if (out/name).is_file():
                 inputs[name] = out/name
         files = {key: {'path': str(path), 'sha256': sha(path)} for key, path in inputs.items()}

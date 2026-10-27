@@ -45,6 +45,45 @@ dictionary as the explicit `config.json` inside the owned bank directory.
 
 Generate requested seeds directly. Do not silently replace a rejected seed, widen a range, change an original gate, or relabel an existing scene as a new sample. The reviewed bank uses actual seeds 1–30, the existing long-task layout-4 templates and OpenEnd layout-43 templates, with original seeded object/station placement. Distinct initial configurations do not imply distinct room layouts.
 
+## Daily situations for OpenEnd
+
+To prepare a **new** context-rich cohort, pass
+`context_profile="daily_situations_v1"` to `templates.configuration(...)`.
+The worker selects the matching public text **and** scene requirements before
+composition. Existing saved configurations and the original profile are not
+rewritten. Long tasks are unaffected.
+
+Each scenario has six authored situations, each used with five of the original
+seeds 1–30. These are **six semantic situations**, not thirty different stories.
+The unchanged household memory is followed by a separate **Today's situation**
+section. The complete context and high-level request are visible to the policy;
+target bindings, the operator rationale, and the scene request are not included.
+
+| Scenario | Situational variation |
+| --- | --- |
+| Dinner | Emma's leftovers; Alex's usual meal; Ryan's meal plus coffee; a table spill; a cancelled dinner plan; skipping Ryan's usual coffee tonight |
+| Guests | Alex's, Emma's, or Ryan's preferences; a changed visitor; two visitors with different preferences; a spill before the visit |
+| Leaving | Rain during a library trip, shopping trip, or park walk; dry weather; an outdated rain forecast; rain only after returning home |
+| Tidying | Ordinary tidying; a spill; used cans; discarded paper and a used cup; mixed waste; mixed waste plus a spill |
+
+Weather is supplied as contextual information, not a new simulated rain effect.
+Rain during an outdoor trip selects the existing `umbrella_transfer` task:
+the folded umbrella starts on the sofa and is packed into the open bag. Its
+existing process maximum is 9, plus the existing 1-point target contact credit.
+The current forecast and the trip's time window matter: merely mentioning rain
+does not always require an umbrella. No new scoring rule is introduced.
+
+New preparations write `public_input_binding.json`, pinned to the actual
+`launch.json` and saved `public_input.json`. Pass it through the existing
+`--public-input-binding` model-client option. Do **not** launch a context-rich
+case using only the native legacy `prompt_id`: it is retained for admission,
+not as a replacement for the separately saved daily context.
+
+The 0.2.0 saved-configuration release contains this cohort, generated through
+the original scene composer and admission logic. The 0.1.0 archive is retained
+unchanged. Use the 0.2.0 manifest in the [configuration guide](../../../../docs/INSTANCES.md)
+to download the saved states instead of generating them again.
+
 ## Saved instances and read-only loading
 
 Each successful instance has a real USD scene, original ready/spawn state, request, manifest, native launch, and hash-bound `instance.json`. The native launch remains the output of the original preparer/admitter. Server-only authoring requests and target bindings are not policy inputs.
