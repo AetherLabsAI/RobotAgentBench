@@ -201,6 +201,27 @@ python -m unittest discover -s tests
 - **Team-authored assets and task data:** [CC BY 4.0](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets/blob/main/LICENSE.md).
 - **Third-party materials:** retain their original terms, including CC BY-NC-SA 4.0 for the AgiBot GenieSim robot resources. See [third-party notices](docs/THIRD_PARTY.md) and the [asset notices](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets/blob/main/NOTICE.md).
 
+## Citation
+
+If you use RobotAgentBench in your research, please cite:
+
+```bibtex
+@misc{mao2026robotagentbenchopenworldrobotautonomy,
+  title={RobotAgentBench: Towards Open-world Robot Autonomy},
+  author={Lingjun Mao and Jinglin Cao and Lukun He and Wenpeng Xu and
+          Yuchen Yan and Hengyu Jin and Zijun Zhang and Jinzhou Tang and
+          Songyao Jin and Ziche Liu and Yifei Shao and Junbo Huang and
+          Fang Nan and Ruobing Han and Ziqiao Xi and Ziming Xu and
+          Shuang Liang and Sibo Zhu and Wenyi Wu and Xinyue Wang and
+          Yiming Huang and Xinkai Zou and Gao Zhu and Kun Zhou and Biwei Huang},
+  year={2026},
+  eprint={2610.34649},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2610.34649},
+}
+```
+
 ## Join the community
 
 Scan a code to join the RobotAgentBench group on WeChat, Slack or Discord, or open an invite link directly.
