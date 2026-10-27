@@ -16,6 +16,7 @@ LEGACY_GENERIC = '/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/dep
 ROOTS = ('/home/lingjun/robot_agent_arena',
          '/mnt/agent-bench-data/lingjun/releases/living50-candidate-20260919',
          '/workspace/lukun/arena_software/isaac51-py311/lib/python3.11/site-packages/isaacsim')
+PIN_FIELDS = ('source_layers', 'code_sources', 'source_hashes')
 
 
 def _path(value):
@@ -87,10 +88,12 @@ def source_requirements(selected):
             for item in value:
                 visit(item)
         elif isinstance(value, dict):
-            if 'source_hashes' in value:
-                pins = value['source_hashes']
+            for field in PIN_FIELDS:
+                if field not in value:
+                    continue
+                pins = value[field]
                 if not isinstance(pins, dict):
-                    raise ValueError('Original scene source_hashes must be a mapping')
+                    raise ValueError('Original scene ' + field + ' must be a mapping')
                 for path, digest in pins.items():
                     _path(path)
                     if not isinstance(digest, str) or not re.fullmatch('[0-9a-f]{64}', digest):
@@ -108,7 +111,7 @@ def source_requirements(selected):
 
 
 def verify_original_launch(initial, *, source_root):
-    """Run the unchanged original verify_manifest in a clean CPU subprocess.
+    """Run original initial-source and manifest verifiers in a CPU subprocess.
 
     The caller already verified this source root via the dedicated source
     contract. No SDK, stage, physics, scoring or model is initialized here.
@@ -116,6 +119,11 @@ def verify_original_launch(initial, *, source_root):
     original = initial.get('original_launch')
     if not isinstance(original, dict):
         raise ValueError('Saved room recovery requires its embedded original launch')
+    initial_sources = {}
+    for field in ('source_layers', 'code_sources'):
+        if not isinstance(initial.get(field), dict):
+            raise ValueError('Saved room recovery requires its original ' + field)
+        initial_sources[field] = initial[field]
     paths = {}
     for name in ('manifest', 'request', 'preparation_receipt', 'ready_pose', 'scene', 'sensors', 'spawn'):
         value = original.get(name)
@@ -131,14 +139,22 @@ def verify_original_launch(initial, *, source_root):
             raise ValueError('Embedded original launch dependency changed: ' + name)
         paths[name] = str(path)
     source = Path(source_root).absolute()
-    if source.resolve(strict=True) != source or not (source / 'short_tasks/scene.py').is_file():
+    original_common = source / 'short_task_robustness/tasks/grasp_failure_recovery/common.py'
+    if (source.resolve(strict=True) != source or not (source / 'short_tasks/scene.py').is_file()
+            or not original_common.is_file()):
         raise ValueError('Verified original room source root required')
     # Fixed import/program; only JSON and file paths cross the process boundary.
     program = ('import json,sys;from pathlib import Path;'
                'sys.path.insert(0,sys.argv[1]);'
+               'from short_task_robustness.tasks.grasp_failure_recovery.common import verify_sources;'
+               'initial=json.load(sys.stdin);'
+               'verify_sources(initial["source_layers"]);verify_sources(initial["code_sources"]);'
                'from short_tasks.scene import verify_manifest;'
                'verify_manifest(json.loads(Path(sys.argv[2]).read_text()))')
     subprocess.run([sys.executable, '-B', '-c', program, str(source), paths['manifest']],
+                   input=json.dumps(initial_sources, allow_nan=False),
                    check=True, capture_output=True, text=True)
     return dict(original_manifest=paths['manifest'], source_hashes_verified=True,
+                initial_source_layers_verified=True, initial_code_sources_verified=True,
+                initial_source_pins=sum(len(pins) for pins in initial_sources.values()),
                 launch_dependencies_verified=len(paths), native_started=False)

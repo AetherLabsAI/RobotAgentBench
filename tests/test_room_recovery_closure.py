@@ -59,6 +59,26 @@ class RoomRecoveryClosure(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'Conflicting'):
                 closure.source_requirements(selected)
 
+    def test_initial_code_sources_and_layers_are_not_lost_behind_manifest_pins(self):
+        with tempfile.TemporaryDirectory() as temp:
+            selected, asset, generated, _ = self.fixture(Path(temp).resolve())
+            placement = closure.LEGACY_GENERIC + '/openend/tasks/scene_requirements/generated_rooms/original/placement.json'
+            initial = selected['state']['saved_initialization']['initial']
+            initial.update(source_layers={generated: 'b' * 64}, code_sources={placement: 'c' * 64})
+            self.assertEqual(closure.source_requirements(selected), {asset: 'a' * 64, placement: 'c' * 64})
+            initial['code_sources'][asset] = 'd' * 64
+            with self.assertRaisesRegex(ValueError, 'Conflicting'):
+                closure.source_requirements(selected)
+
+    def test_all_native_pin_maps_reject_invalid_types_paths_and_hashes(self):
+        with tempfile.TemporaryDirectory() as temp:
+            selected, asset, _, _ = self.fixture(Path(temp).resolve())
+            for field in closure.PIN_FIELDS:
+                for value in ([], {'/etc/passwd': 'a' * 64}, {asset: 'not-a-pin'}):
+                    changed = deepcopy(selected); changed['state']['nested'] = {field: value}
+                    with self.assertRaises(ValueError):
+                        closure.source_requirements(changed)
+
     def test_unknown_namespace_and_invalid_hash_are_rejected(self):
         with tempfile.TemporaryDirectory() as temp:
             selected, asset, _, _ = self.fixture(Path(temp).resolve())
@@ -86,15 +106,28 @@ class RoomRecoveryClosure(unittest.TestCase):
                 ' assert not any(x in sys.modules for x in ("isaacsim","omni","pxr"))\n'
                 ' for path,pin in manifest["source_hashes"].items():\n'
                 '  assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==pin,"original source changed"\n')
+            recovery = source / 'short_task_robustness/tasks/grasp_failure_recovery'
+            recovery.mkdir(parents=True)
+            (recovery / 'common.py').write_text(
+                'import hashlib\nfrom pathlib import Path\n'
+                'def verify_sources(pins):\n'
+                ' for path,pin in pins.items():\n'
+                '  assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==pin,"initial source changed"\n')
             asset = root / 'asset'; asset.write_bytes(b'original asset')
             manifest = root / 'manifest.json'; manifest.write_text(json.dumps({'source_hashes': {str(asset): digest(asset)}}))
             request = root / 'request.json'; request.write_text('{}')
             scene = root / 'scene.usda'; scene.write_text('#usda 1.0')
-            initial = {'original_launch': {'manifest': str(manifest), 'request': str(request),
+            placement = root / 'placement.json'; placement.write_text('{"original":true}')
+            initial = {'source_layers': {str(scene): digest(scene)},
+                       'code_sources': {str(placement): digest(placement)},
+                       'original_launch': {'manifest': str(manifest), 'request': str(request),
                                           'scene': str(scene), 'scene_sha256': digest(scene)}}
             before = deepcopy(initial)
             result = closure.verify_original_launch(initial, source_root=source)
             self.assertTrue(result['source_hashes_verified']); self.assertFalse(result['native_started'])
+            self.assertTrue(result['initial_source_layers_verified'])
+            self.assertTrue(result['initial_code_sources_verified'])
+            self.assertEqual(result['initial_source_pins'], 2)
             self.assertEqual(initial, before)
             self.assertFalse((package / '__pycache__').exists())
             # Current native room owners keep scene in initial/manifest, not
@@ -104,6 +137,10 @@ class RoomRecoveryClosure(unittest.TestCase):
             del without_scene['original_launch']['scene_sha256']
             without_scene['original_launch']['preparation_receipt'] = str(request)
             self.assertTrue(closure.verify_original_launch(without_scene, source_root=source)['source_hashes_verified'])
+            placement.write_text('changed but still unrelated to manifest.source_hashes')
+            with self.assertRaises(subprocess.CalledProcessError):
+                closure.verify_original_launch(initial, source_root=source)
+            placement.write_text('{"original":true}')
             asset.write_bytes(b'tampered')
             with self.assertRaises(subprocess.CalledProcessError):
                 closure.verify_original_launch(initial, source_root=source)
@@ -118,7 +155,8 @@ class RoomRecoveryClosure(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     closure.verify_original_launch({}, source_root=root)
                 path = root / 'input'; path.write_text('{}')
-                initial = {'original_launch': dict(manifest=str(path), request=str(path), scene=str(path),
+                initial = {'source_layers': {}, 'code_sources': {},
+                           'original_launch': dict(manifest=str(path), request=str(path), scene=str(path),
                                                     scene_sha256='0' * 64)}
                 with self.assertRaisesRegex(ValueError, 'changed'):
                     closure.verify_original_launch(initial, source_root=root)
