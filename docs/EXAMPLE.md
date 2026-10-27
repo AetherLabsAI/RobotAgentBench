@@ -12,9 +12,9 @@ From the repository root:
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install .
-robotagentbench assets fetch resources/assets-0.1.2.json --cache downloads
-robotagentbench assets install resources/assets-0.1.2.json --cache downloads --destination Assets
-robotagentbench assets configure resources/assets-0.1.2.json --destination Assets --runtime Runtime --profile room
+robotagentbench assets fetch resources/assets-0.1.3.json --cache downloads
+robotagentbench assets install resources/assets-0.1.3.json --cache downloads --destination Assets
+robotagentbench assets configure resources/assets-0.1.3.json --destination Assets --runtime Runtime --profile room
 ```
 
 For offline setup, place all release archives in `downloads` and skip `fetch`.

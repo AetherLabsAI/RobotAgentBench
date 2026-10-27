@@ -77,14 +77,15 @@ runtime files are not additional downloads.
 
 Follow [Installation](INSTALL.md), then configure a fresh task workspace:
 
-Configuration bank **0.2.1** uses shared assets **0.1.1**, which include the
-OpenEnd room layout. The bank's original base-asset provenance remains 0.1.0;
-0.1.1 preserves those resources and adds the shared layout and path bindings.
+Use configuration bank **0.2.1** with shared assets **0.1.3**, which include the
+OpenEnd room layout and current scene-preparation dependencies. The bank's
+original base-asset provenance remains 0.1.0; the current asset release preserves
+those resources and adds the shared layouts, path bindings, and dependencies.
 
 ```sh
-robotagentbench assets fetch resources/assets-0.1.2.json --cache downloads
-robotagentbench assets install resources/assets-0.1.2.json --cache downloads --destination Assets
-robotagentbench assets configure resources/assets-0.1.2.json --destination Assets --runtime Runtime --profile room
+robotagentbench assets fetch resources/assets-0.1.3.json --cache downloads
+robotagentbench assets install resources/assets-0.1.3.json --cache downloads --destination Assets
+robotagentbench assets configure resources/assets-0.1.3.json --destination Assets --runtime Runtime --profile room
 ```
 
 Use the task's matching profile for dedicated cloth or specialized owners;
