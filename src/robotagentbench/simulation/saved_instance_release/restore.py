@@ -282,8 +282,14 @@ def _specialized_saved(prepared,operator,family,task,original_launch,destination
     for name in('request','manifest','scene'):
         if name+'_sha256'in launch:launch[name+'_sha256']=_sha(launch[name])
     _json(work/'launch.json',launch)
+    original_launch_closure=None
+    if family=='failure_recovery'and task in room_recovery_tasks:
+        from .room_recovery_closure import verify_original_launch,LEGACY_GENERIC
+        source=config.dependencies(operator).directory(operator['families'][family]['source_root'])
+        original_launch_closure=verify_original_launch(initial,source_root=source/LEGACY_GENERIC.lstrip('/'))
     result=_seal_specialized(operator,family,task,work/'launch.json',files,destination)
     result['camera_release']=dict(camera_release.provenance(family),saved_source_pin_changes=camera_changes)
+    if original_launch_closure is not None:result['original_launch_closure']=original_launch_closure
     return result
 
 

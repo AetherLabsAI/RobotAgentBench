@@ -389,8 +389,25 @@ def specialized(*, assets, manifest, runtimes, bank, output, native_config,
             key = 'saved_bootstrap_' + task
             # Logical path resolves only inside the declared fresh container.
             resource(key, Path(row['launch']), sha(launch), 'asset')
+            saved_required = []
+            if f == family == 'failure_recovery':
+                from .saved_instance_release.room_recovery_closure import source_requirements
+                for target, digest in source_requirements(selected).items():
+                    path = content(digest)
+                    existing = mounts.get(target)
+                    if existing is not None:
+                        # An existing exact alias wins; differing bytes or a
+                        # writable historical source can never be substituted.
+                        path = canonical(existing['source'])
+                        if not existing['read_only'] or not path.is_file() or sha(path) != digest:
+                            raise ValueError('Conflicting saved owner source alias')
+                    else:
+                        mount(path, target)
+                    source_key = 'saved_room_source_' + digest
+                    resource(source_key, path, digest, 'asset')
+                    saved_required.append(source_key)
             tasks[task] = dict(launch=key, inputs=[key],
-                              required_resources=record['required'] + row['extra'],
+                              required_resources=list(dict.fromkeys(record['required'] + row['extra'] + saved_required)),
                               output_parent=row['output_parent'])
             generated.append(dict(task=task, source=str(directory),
                                   target=str(Path(row['launch']).parent), read_only=False))
@@ -413,6 +430,12 @@ def specialized(*, assets, manifest, runtimes, bank, output, native_config,
     generated_targets = [Path(r['target']) for r in generated]
     for target, digest in approved['aliases'].items():
         if any(Path(target).is_relative_to(p) for p in generated_targets):
+            continue
+        existing = mounts.get(target)
+        if existing is not None:
+            path = canonical(existing['source'])
+            if not existing['read_only'] or not path.is_file() or sha(path) != digest:
+                raise ValueError('Reviewed alias conflicts with saved owner source')
             continue
         mount(content(digest), target)
     environment = merge_environment(dependencies, environments)

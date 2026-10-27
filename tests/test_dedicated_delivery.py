@@ -170,6 +170,40 @@ class Delivery(unittest.TestCase):
                 delivery.specialized(**kwargs)
             selected.assert_not_called()
 
+    def test_nested_room_sources_are_exact_readonly_and_required(self):
+        from robotagentbench.simulation.saved_instance_release import room_recovery_closure
+        with tempfile.TemporaryDirectory() as temp, ExitStack() as stack:
+            root = Path(temp).resolve()
+            approved, index, kwargs = self.fixture(root)
+            self.patches(stack, approved, index); kwargs['family'] = 'failure_recovery'
+            content = kwargs['assets'] / 'original-room.usdc'; content.write_bytes(b'original scene')
+            digest = delivery.sha(content); index['objects'][digest] = {'path': content.name}
+            target = '/__rab_delivery_test__/saved-source/room.usdc'
+            stack.enter_context(patch.object(room_recovery_closure, 'source_requirements', return_value={target: digest}))
+            result = delivery.specialized(**kwargs)
+            row, = [r for r in result['mounts'] if r['target'] == target]
+            self.assertTrue(row['read_only']); self.assertEqual(delivery.sha(row['source']), digest)
+            operator = delivery.read(result['operator']); key = 'saved_room_source_' + digest
+            for task in operator['families']['failure_recovery']['tasks'].values():
+                self.assertIn(key, task['required_resources'])
+            self.assertEqual(operator['dependencies']['resources'][key]['sha256'], digest)
+
+    def test_nested_room_source_missing_or_conflicting_alias_fails_before_native(self):
+        from robotagentbench.simulation.saved_instance_release import room_recovery_closure
+        for conflict in (False, True):
+            with self.subTest(conflict=conflict), tempfile.TemporaryDirectory() as temp, ExitStack() as stack:
+                root = Path(temp).resolve()
+                approved, index, kwargs = self.fixture(root)
+                self.patches(stack, approved, index); kwargs['family'] = 'failure_recovery'
+                target = '/__rab_delivery_test__/saved-source/room.usdc'; digest = 'c' * 64
+                if conflict:
+                    content = kwargs['assets'] / 'original-room.usdc'; content.write_bytes(b'original scene')
+                    digest = delivery.sha(content); index['objects'][digest] = {'path': content.name}
+                    approved['aliases'][target] = 'd' * 64
+                stack.enter_context(patch.object(room_recovery_closure, 'source_requirements', return_value={target: digest}))
+                with self.assertRaisesRegex(ValueError, 'absent|conflicts'):
+                    delivery.specialized(**kwargs)
+
     def test_camera_source_upgrade_needs_original_assembly_not_old_code_bytes(self):
         with tempfile.TemporaryDirectory() as temp, ExitStack() as stack:
             approved, index, kwargs = self.fixture(Path(temp).resolve())
