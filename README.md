@@ -131,22 +131,28 @@ Two optional clients reuse the project's server evaluation code:
 - [InternVLA-A1.5](src/robotagentbench/model_examples/internvla/README.md): download our fine-tuned model from [AetherLabs-AI/InternVLA-A1.5-RAB](https://huggingface.co/AetherLabs-AI/InternVLA-A1.5-RAB), then use the matching G1 statistics and action projection.
 - [Codex Robo Agent](src/robotagentbench/model_examples/codex/README.md): the App Server runner and robot tools, with a Dockerfile and locked dependencies for a locally built code-execution sandbox. No server-specific image ID is required.
 
-For example, after creating the corresponding configuration:
+Start with [shared model setup](docs/MODEL_QUICKSTART.md), then follow either
+client's complete **restore → configure → run** walkthrough. Both reuse the
+Docker native image; no host Isaac SDK paths or hand-written worker JSON are
+needed. The examples select `prepare_coffee`, saved episode 1.
+
+After following the configuration step in the selected guide:
 
 ```sh
-# InternVLA: the configured model environment and native worker use separate GPUs.
-python -m robotagentbench.model_examples internvla run \
-  --config internvla-run.json --task short01 --output /absolute/path/to/fresh/run
+# InternVLA: separate native/model GPUs; RAB_ROOT and RAB_PY come from shared setup.
+"$RAB_PY" -m robotagentbench.model_examples.docker_workflow run \
+  "$RAB_ROOT/model-configs/internvla-coffee01/run.json" --execute
 
 # Codex: uses your own Codex login and can consume model usage.
-python -m robotagentbench.model_examples.codex /absolute/path/to/operator.json --execute
+"$RAB_PY" -m robotagentbench.model_examples.docker_workflow run \
+  "$RAB_ROOT/model-configs/codex-coffee01/run.json" --execute
 ```
 
-Follow the two linked guides for installation and the full configuration commands.
-The model examples require a separately installed native SDK/environment, or an
-explicit container namespace; the coffee worker command above does not load a
-model or create these configurations. Neither client bundles credentials or
-changes task scoring.
+Omit `--execute` to inspect without starting either model or simulator. The
+generic coffee worker in step 3 is not a model run; the client walkthroughs
+prepare their own fresh native caches and run configurations. Dedicated cloth
+and specialized task owners keep their separate interfaces. Neither client
+bundles credentials or changes task scoring.
 
 ## Evaluation interface
 
@@ -164,6 +170,7 @@ Results include process scores, completion status, and a termination reason. Set
 | [Task backends](docs/BACKENDS.md) | Locate task implementations and execution profiles |
 | [Assets](docs/ASSETS.md) | Download, install, and verify a versioned asset release |
 | [Saved configurations](docs/INSTANCES.md) | Select one of 30 saved initial configurations without resampling |
+| [Shared model setup](docs/MODEL_QUICKSTART.md) | Prepare Docker, assets and saved inputs for either model client |
 | [InternVLA example](src/robotagentbench/model_examples/internvla/README.md) | Download the fine-tuned model and run a VLA policy |
 | [Codex example](src/robotagentbench/model_examples/codex/README.md) | Configure and run a code-based Robo Agent |
 | [CLI reference](docs/CLI.md) | Inspect catalogs, verify resources, and invoke configured native operators |

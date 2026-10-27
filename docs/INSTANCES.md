@@ -71,7 +71,21 @@ add `--offline`.
 
 ## 3. Restore a selected initial state
 
-For example, in the matching native Python/SDK environment:
+For the model walkthroughs, use the [shared Docker setup](MODEL_QUICKSTART.md)
+and let the image supply the native SDK:
+
+```bash
+"$RAB_PY" -m robotagentbench.model_examples.docker_workflow restore \
+  --runtime "$RAB_ROOT/Runtime" --image robotagentbench:native \
+  --release "$RAB_ROOT/SavedConfigurations/release.json" \
+  --task prepare_coffee --episode 1 --output "$RAB_ROOT/Restored/coffee01"
+```
+
+For Codex, stage the coding Runtime first and use that Runtime here, as shown
+in its walkthrough. Restoration is CPU-only and does not start physics.
+
+Advanced operators with an existing matching native Python/SDK environment
+can instead invoke the original restorer directly:
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.restore \
@@ -104,6 +118,12 @@ Use the Runtime and prepared launch from `selection.json` with the task's
 original worker. Where provided, forward the selection's read-only input roots
 and hash-bound public instruction/context. Operator metadata, task manifests,
 answer bindings and private evaluator state are not policy observations.
+
+For the ordinary restored room/short-task format, `runtime`, `source_root`,
+`launch` and `public_input_binding` are **top-level fields** in `selection.json`.
+There is no `operator.public_input_binding` nesting in this format. The model
+walkthrough helper reads those fields and supplies the trusted source root and
+public-text binding automatically; do not substitute a target/answer file.
 
 - [InternVLA-A1.5 example](../src/robotagentbench/model_examples/internvla/README.md)
 - [Codex Robo Agent example](../src/robotagentbench/model_examples/codex/README.md)

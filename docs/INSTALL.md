@@ -82,10 +82,16 @@ for the worker interface.
 
 ## Optional model clients
 
+For a complete same-host Docker workflow, begin with
+[shared model setup](MODEL_QUICKSTART.md). Its `docker_workflow` helper restores
+a selected initial state and generates the native/agent configurations using
+the image-owned SDK, without requiring a host Isaac installation.
+
 Choose the [InternVLA guide](../src/robotagentbench/model_examples/internvla/README.md)
 for the fine-tuned G1 policy, or the
 [Codex guide](../src/robotagentbench/model_examples/codex/README.md) for a
-code-based agent. Both connect to a separately prepared native worker.
+code-based agent. Both guides include saved-instance restoration, configuration,
+an inspect-only command, execution and result locations.
 
 The Codex guide includes execution code, a Dockerfile and locked Python
 dependencies. Build the code-execution sandbox on the Linux Docker host used
