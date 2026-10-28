@@ -195,6 +195,52 @@
       "source_binding_release": {
         "id": "manifest_source_furniture_v1",
         "scope": "Exact manifest-declared source objects are separated from furniture identity; raw supports, physical checks and scoring are unchanged."
+      },
+      "resource_aliases": {
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/tasks/sofa_to_coffee_table/component_sources.json": {
+          "packaged": "failure_recovery/generic/short_tasks/tasks/sofa_to_coffee_table/component_sources.json",
+          "before": {
+            "sha256": "12409df2a3cd1fa16af089a53d9d8a652767bcdcde644b1e3e6c363a1d26ec27",
+            "bytes": 13544
+          },
+          "after": {
+            "sha256": "6047c05d07a783170049d2d0d3903a2c83f9787d8ef1bd7ccfb68c5949508c3c",
+            "bytes": 13544
+          },
+          "pin_field": "source_files",
+          "source_fields": {
+            "openend/tasks/all_objects_integration/geometry.py": {
+              "before": "70d28af02733a12b8dba55752b354d308612213d88ef1b5fb0e6df919eb0e826",
+              "after": "a07bb94e1e8af221b70e9110eff9aeeecc869e3fee984d61a7002ec83af610e5"
+            },
+            "short_tasks/tasks/sofa_to_drawer/native_geometry.py": {
+              "before": "b4f397f81b5432d1b40eb49f58ed233aede9208260de5250a94c25289da4973f",
+              "after": "5261c23790ad182a55c6cc25e031cf1efebee0e060b9f3ed2b0a304d25f2453d"
+            }
+          }
+        },
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/tasks/clear_table_trash/component_sources.json": {
+          "packaged": "failure_recovery/generic/short_tasks/tasks/clear_table_trash/component_sources.json",
+          "before": {
+            "sha256": "ef660004c2da602432140abe6d597eeb10dcc4c79a746b998b5f0ecb9f771b4a",
+            "bytes": 9067
+          },
+          "after": {
+            "sha256": "44d2996cf73552df6f2715b05fbff19cc5321d7a1572678bf39a2266d1021c1f",
+            "bytes": 9067
+          },
+          "pin_field": "sources",
+          "source_fields": {
+            "openend/tasks/all_objects_integration/geometry.py": {
+              "before": "70d28af02733a12b8dba55752b354d308612213d88ef1b5fb0e6df919eb0e826",
+              "after": "a07bb94e1e8af221b70e9110eff9aeeecc869e3fee984d61a7002ec83af610e5"
+            },
+            "openend/tasks/trash_transfer/geometry.py": {
+              "before": "a3daa1faafc7c2fd27b3ccca9f4fdd4aa4b118cfe9e36173352966322d196cfb",
+              "after": "c4f5984eb8aca5e89212b28443488d2743a3aa7f61333f03e98b347e22314723"
+            }
+          }
+        }
       }
     }
   }

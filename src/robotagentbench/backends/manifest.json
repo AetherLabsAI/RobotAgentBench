@@ -10141,6 +10141,14 @@
         "generic/short_tasks/tools/prepare_scene.py": {
           "sha256": "012ef054fefb897a6cb477a403abe522d00c903dd4cce0fd6d08352fc759d7c1",
           "bytes": 20922
+        },
+        "generic/short_tasks/tasks/sofa_to_coffee_table/component_sources.json": {
+          "sha256": "6047c05d07a783170049d2d0d3903a2c83f9787d8ef1bd7ccfb68c5949508c3c",
+          "bytes": 13544
+        },
+        "generic/short_tasks/tasks/clear_table_trash/component_sources.json": {
+          "sha256": "44d2996cf73552df6f2715b05fbff19cc5321d7a1572678bf39a2266d1021c1f",
+          "bytes": 9067
         }
       },
       "compatibility_namespaces": [

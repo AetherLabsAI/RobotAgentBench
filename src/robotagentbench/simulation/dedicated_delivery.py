@@ -65,6 +65,8 @@ def source_alias_pin(target, digest, family):
     from .specialized import camera_release
     change = camera_release.profile(family)['files'].get(target)
     if change is None:
+        change = camera_release.profile(family).get('resource_aliases', {}).get(target)
+    if change is None:
         return digest
     if digest != change['before']['sha256']:
         raise ValueError('Source alias is not the exact reviewed release predecessor')
@@ -348,6 +350,27 @@ def specialized(*, assets, manifest, runtimes, bank, output, native_config,
                 raise ValueError('Camera source resource has conflicting family bindings')
             camera_sources[key] = value
 
+    # Two base-task component records are metadata outside the retained
+    # executable assembly. Preserve their original downloaded bytes, and use
+    # only the exact reviewed packaged metadata delta for this selected family.
+    record_resources = {}
+    for target, change in camera_release.profile(family).get('resource_aliases', {}).items():
+        original = content(change['before']['sha256'])
+        packaged = HERE.parent / 'backends/profiles' / change['packaged']
+        before, after = change['before'], change['after']
+        if (original.stat().st_size != before['bytes'] or canonical(packaged) != packaged
+                or sha(packaged) != after['sha256'] or packaged.stat().st_size != after['bytes']):
+            raise ValueError('Base-task component metadata differs from its exact fixed release')
+        expected = read(original)
+        for relative, pins in change['source_fields'].items():
+            if expected[change['pin_field']].get(relative) != pins['before']:
+                raise ValueError('Base-task component source field is not the reviewed predecessor')
+            expected[change['pin_field']][relative] = pins['after']
+        if expected != read(packaged):
+            raise ValueError('Unreviewed base-task component metadata change')
+        record_resources[before['sha256']] = (packaged, after['sha256'])
+        by_hash[after['sha256']] = packaged
+
     # SDK files are supplied by the verified separate SDK, not downloaded assets.
     sdk_roots = [Path(environments['dependencies']['roots'][r['root']]) / r['path']
                  for r in environments['profile']['metadata_paths']]
@@ -357,6 +380,10 @@ def specialized(*, assets, manifest, runtimes, bank, output, native_config,
             resource(key, path, digest, 'source')
             continue
         digest = row['sha256']
+        if digest in record_resources:
+            path, replacement = record_resources[digest]
+            resource(key, path, replacement, row['kind'])
+            continue
         if 'sdk_relative' in row:
             matches = [root / row['sdk_relative'] for root in sdk_roots
                        if (root / row['sdk_relative']).is_file()
