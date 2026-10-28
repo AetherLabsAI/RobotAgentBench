@@ -31,6 +31,35 @@ _ROOM_HAND_RESOURCES = (
 )
 _ROOM_LONG_ENTRY = 'short_tasks/agent_probe_v1/long_task_eval_setup_v1/revision2/entry.py'
 _ROOM_HOTWAKE = 'layout_task_activation_v1/hotwake_probe_inputs.json'
+ORIGINAL_LAYOUT_LIBRARY = ('libraries/original_absolute/mnt/agent-bench-data/lingjun/releases/'
+                           'living50-candidate-20260919/layouts/')
+
+
+def original_library_alias(location):
+    """Map previously published library names to their original namespace.
+
+    Only names change. The indexed object, its bytes and all USD properties
+    remain unchanged. Canonical original_absolute locations need no alias.
+    """
+    prefixes=(('libraries/legacy_data/','libraries/original_absolute/'),
+              ('libraries/recovery_original_layouts/',ORIGINAL_LAYOUT_LIBRARY))
+    for prefix,target in prefixes:
+        if location.startswith(prefix):
+            relative=resources._relative(location[len(prefix):])
+            return target+relative
+    return None
+
+
+def _original_library_aliases(locations):
+    """Preflight the whole merge before creating a Runtime staging tree."""
+    selected=dict(locations);aliases={}
+    for location,digest in locations.items():
+        target=original_library_alias(location)
+        if target is None:continue
+        if target in selected and selected[target]!=digest:
+            raise ValueError('Conflicting immutable original namespace resource: '+target)
+        selected[target]=digest;aliases[location]=target
+    return aliases
 
 
 def _index(manifest, assets):
@@ -92,6 +121,7 @@ def configure(manifest, assets, destination, profile):
     if shutil.disk_usage(destination.parent).free < 512 * 1024**2:
         raise ValueError('Insufficient runtime reserve')
     index = _index(manifest, assets)
+    library_aliases=_original_library_aliases(index['locations'])if profile=='room'else{}
     sources.verify(profile)
     stage = Path(tempfile.mkdtemp(prefix=destination.name + '.partial-', dir=destination.parent))
     source_relative = ('short_tasks/agent_probe_v1/deployment_release/source'
@@ -165,6 +195,12 @@ def configure(manifest, assets, destination, profile):
         if location.startswith('libraries/') and target != location:
             copy_file(source, location, digest, 10)
         copy_file(source, target, digest, priority)
+        alias=library_aliases.get(location)
+        if alias is not None:
+            # Assemble one original tree, rather than mounting two partial
+            # libraries at the same target and hiding layouts or textures.
+            # copy_file preserves exact pins and refuses a differing peer.
+            copy_file(source,alias,digest,10)
         bindings[location] = str(destination / target)
     if profile == 'room':
         if _ROOM_LONG_ENTRY in source_manifest['profiles'][profile]['files']:

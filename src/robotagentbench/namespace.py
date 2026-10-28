@@ -49,6 +49,18 @@ def command(workspace,image,mode,*,name=None,gpu=None,locks=None,sdk_site='/opt/
             for target in targets:mount(libraries/library,target)
     # The asset index retains original absolute identities *below* the local
     # library directory. Expose those identities only inside this container.
+    # configure() assembles legacy_data and recovery_original_layouts into
+    # the same pinned original_absolute tree. Reject an older partial Runtime
+    # with a hidden library instead of silently mounting only one half.
+    from .installation import original_library_alias
+    pins=config.get('library_files',{})
+    for relative,pin in pins.items():
+        alias=original_library_alias(relative)
+        if alias is None or not alias.startswith('libraries/original_absolute/mnt/agent-bench-data/lingjun/'):
+            continue
+        target=base/alias
+        if (pins.get(alias)!=pin or not target.is_file()or target.resolve()!=target):
+            raise ValueError('Reconfigure this Runtime to assemble the exact original layout/library namespace')
     for library in ('original_absolute', 'legacy_data'):
         legacy=libraries/library/'mnt/agent-bench-data/lingjun'
         if legacy.is_dir():

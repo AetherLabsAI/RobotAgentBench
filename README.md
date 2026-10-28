@@ -66,12 +66,12 @@ The core package and catalog inspection do not require Isaac Sim, a GPU, or mode
 
 ### 2. Download assets
 
-The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.4** is approximately **6.66 GB**, split into **30 archives**, including the license archive. It contains shared room and robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.4**. Existing verified downloads are reused; the 7 new shared-resource parts total **2.08 GB**.
+The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.5** is approximately **7.04 GB**, split into **31 archives**, including the license archive. It contains all **50 original room layouts** and their shared runtime dependencies, robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.4**. All 30 earlier archives are reused unchanged; the new layout supplement is approximately **385 MB**. Update the evaluator and install into fresh asset and runtime directories when upgrading.
 
 ```sh
-robotagentbench assets fetch resources/assets-0.1.4.json --cache downloads
-robotagentbench assets install resources/assets-0.1.4.json --cache downloads --destination Assets
-robotagentbench assets configure resources/assets-0.1.4.json --destination Assets --runtime Runtime --profile room
+robotagentbench assets fetch resources/assets-0.1.5.json --cache downloads
+robotagentbench assets install resources/assets-0.1.5.json --cache downloads --destination Assets
+robotagentbench assets configure resources/assets-0.1.5.json --destination Assets --runtime Runtime --profile room
 ```
 
 The manifest pins an immutable asset revision and verifies file hashes. The commands create fresh `Assets` and `Runtime` directories; existing installations are not overwritten. For offline setup, place all archive parts in `downloads` and skip `fetch`. See the [asset guide](docs/ASSETS.md) for details.
