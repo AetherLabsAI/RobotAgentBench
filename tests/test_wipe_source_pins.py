@@ -8,7 +8,7 @@ from robotagentbench.backends import sources
 
 
 class WipeSourcePinsTests(unittest.TestCase):
-    def test_sofa_and_storage_tasks_only_rebase_approved_catalogue_pin(self):
+    def test_sofa_and_storage_tasks_only_rebase_approved_source_pins(self):
         root=sources.root('room');name='openend/tasks/scene_requirements/task_choices.py'
         for task in ('hang_cap','pack_object','retrieve_from_drawer','sofa_to_coffee_table','sofa_to_drawer','table_to_storage_basket'):
             folder=root/'short_tasks/tasks'/task
@@ -17,6 +17,9 @@ class WipeSourcePinsTests(unittest.TestCase):
             key=next(k for k in ('sources','files_sha256','source_files')if k in old)
             expected=deepcopy(old)
             expected[key][name]=hashlib.sha256((root/name).read_bytes()).hexdigest()
+            geometry='openend/tasks/all_objects_integration/geometry.py'
+            if geometry in expected[key]:
+                expected[key][geometry]=hashlib.sha256((root/geometry).read_bytes()).hexdigest()
             self.assertEqual(current,expected)
 
     def test_only_scene_inventory_dependency_changes(self):

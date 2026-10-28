@@ -16,7 +16,7 @@
     "evaluation/tasks/tidy_sofa/specs.py": "d8aa0abced08a87e92bc73f9fb629d5a0a3ef0fe6ea3f550e92d37f7ce645870",
     "openend/tasks/all_objects_integration/cap_initial.py": "36cb9dd8488bf6876d684b4780193767a0cd2051d0a9f8481e97dce7c309a1d2",
     "openend/tasks/all_objects_integration/contacts.py": "a7c17fccbd196ade83a365e2abfe35a66f51e2c8de5ac7cc728f059d6f89fe5c",
-    "openend/tasks/all_objects_integration/geometry.py": "70d28af02733a12b8dba55752b354d308612213d88ef1b5fb0e6df919eb0e826",
+    "openend/tasks/all_objects_integration/geometry.py": "73ab96b4cea13705f478d02c111138e50c9f1f3ba7714efb106525671314e9b4",
     "openend/tasks/all_objects_integration/ports.py": "1bdd9e7d2772b2c65b243f7365d28f9a2a3d954267a5cf3bdb2661354c9f0303",
     "openend/tasks/all_objects_integration/selective_read.py": "bac8daa64a4988b85f34d99e7196fc50de211c242478f26401dea4d383992451",
     "openend/tasks/all_objects_integration/touch_wake.py": "ced5a9632b68ff3fab871cfae5d03c4da9afe23ee0378e6b767d97172ca01d61",

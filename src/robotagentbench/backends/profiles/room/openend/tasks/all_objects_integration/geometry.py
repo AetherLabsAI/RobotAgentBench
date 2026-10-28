@@ -36,6 +36,22 @@ def shape_points(stage,root):
 
 def under(path,root):return path==root or path.startswith(root+'/')
 
+def _source_object_roots(manifest,target,mode):
+    """Exact declared background objects are supports, not furniture identities.
+
+    This affects only cap source binding. The original measured support set is
+    never modified and continues unchanged into initial and process scoring.
+    """
+    if mode!='hang':return frozenset()
+    targets=[o for o in manifest['objects'] if o['path']==target]
+    if len(targets)!=1:raise ValueError('Exact scene-owned cap target required')
+    source=targets[0].get('source')
+    if source!='sofa':return frozenset()
+    return frozenset(o['path'] for o in manifest['objects']
+        if o['path']!=target and o.get('role')=='background'
+        and o.get('task_role')=='background' and o.get('scoring_target') is False
+        and o.get('source')==source)
+
 class Geometry:
     def __init__(self,stage,manifest,asset,mode,target_path=None):
         from pxr import Usd,UsdGeom,UsdPhysics
@@ -47,6 +63,7 @@ class Geometry:
               and not (asset=='book_red' and o.get('task_role')=='cloth_clear_target')]
         if len(rows)!=1:raise ValueError('Exact scene-owned object required '+asset)
         self.target=rows[0]['path'];self.source=None;self.source_top=None
+        self._source_object_roots=_source_object_roots(manifest,self.target,mode)
         self.destination,self.cabinet=DESTINATIONS[mode]
         self.top=None;self.exclusions=[];self.extra_bodies={}
         bodies=[p for p in Usd.PrimRange(stage.GetPrimAtPath(self.target)) if p.HasAPI(UsdPhysics.RigidBodyAPI) and p.GetAttribute('physics:rigidBodyEnabled').Get() is not False]
@@ -134,6 +151,7 @@ class Geometry:
             if under(support,'/World/Assets/SeatOverlay'):result.add('/World/Assets/Sofa');continue
             p=self.stage.GetPrimAtPath(support)
             if not p:raise ValueError('Unknown measured support '+support)
+            if any(under(support,root) for root in self._source_object_roots):continue
             while p.GetParent() and str(p.GetParent().GetPath()) not in ('/World','/World/Assets','/World/RoomEpisode'):
                 p=p.GetParent()
             result.add(str(p.GetPath()))
