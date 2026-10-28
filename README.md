@@ -66,7 +66,7 @@ The core package and catalog inspection do not require Isaac Sim, a GPU, or mode
 
 ### 2. Download assets
 
-The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.7** is approximately **7.04 GB**, split into **33 archives**, including the license archive. It contains all **50 original room layouts** and their shared runtime dependencies, robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.12**. All 32 earlier archives are reused unchanged; the new shared scene-reconstruction supplement is approximately **516 KB**. Update the evaluator and install into fresh asset and runtime directories when upgrading.
+The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.7** is approximately **7.04 GB**, split into **33 archives**, including the license archive. It contains all **50 original room layouts** and their shared runtime dependencies, robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.13**. All 32 earlier archives are reused unchanged; the new shared scene-reconstruction supplement is approximately **516 KB**. Update the evaluator and install into fresh asset and runtime directories when upgrading.
 
 ```sh
 robotagentbench assets fetch resources/assets-0.1.7.json --cache downloads
@@ -110,7 +110,7 @@ per task or scenario**: 540 for the 18 short tasks, 240 for the 8 long tasks,
 OpenEnd scenarios (**1,470 in total**). Choose an episode from 1–30 and reuse
 its saved initial state; running a model does not resample it.
 
-Configuration release **0.2.12** includes a **Today's situation** section in all
+Configuration release **0.2.13** includes a **Today's situation** section in all
 120 OpenEnd configurations. Each scenario combines six context/scene variants
 with five spatial initial states each. Context supplies weather, trip timing,
 changed plans, and personal preferences. Stains, waste, object locations, and
@@ -146,7 +146,13 @@ Version 0.2.12 adds four original-rule, native-admitted replacements: tidying
 episode 2, coffee-machine disturbance episode 5, Task Discovery dinner episode 26,
 and Task Discovery leaving episode 17. The other 1,466 states, including all
 previous replacements, are byte-identical to 0.2.11; shared assets remain at
-0.1.7. See the [current release details](docs/INSTANCES.md#current-configuration-bank-0212).
+0.1.7. See the [0.2.12 release details](docs/INSTANCES.md#configuration-bank-0212).
+
+Version 0.2.13 adds two original-rule, native-admitted replacements:
+coffee-machine disturbance episode 4 and button-lighting episode 21. The other
+1,468 states are byte-identical to 0.2.12. Public contexts, task definitions,
+scoring rules, physical parameters, and shared assets 0.1.7 are unchanged. See
+the [current release details](docs/INSTANCES.md#current-configuration-bank-0213).
 
 Room bases are stored once in the shared asset release;
 saved configurations contain compact lossless patches rather than complete
