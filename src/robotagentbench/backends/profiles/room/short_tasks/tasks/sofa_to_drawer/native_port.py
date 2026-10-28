@@ -29,6 +29,7 @@ class CombinationPort(ObjectPort):
         if not stage.GetSessionLayer().anonymous:raise ValueError('Anonymous session required')
         with Usd.EditContext(stage,stage.GetSessionLayer()):
             bodies=[stage.GetPrimAtPath(g.body)]+[p for p in Usd.PrimRange(stage.GetPrimAtPath(ROBOT)) if p.HasAPI(UsdPhysics.RigidBodyAPI)]
+            bodies += [stage.GetPrimAtPath(path) for path in g._source_support_bodies.values()]
             for p in bodies:
                 a=p.GetAttribute('physxContactReport:threshold')
                 if a and a.HasAuthoredValueOpinion() and a.Get()!=0:raise ValueError('Conflicting contact instrumentation')
@@ -38,7 +39,7 @@ class CombinationPort(ObjectPort):
             if not p:raise RuntimeError('Unknown contact actor')
             return bool(not p.HasAPI(UsdPhysics.RigidBodyAPI) or self.interface.is_sleeping(sid,actor))
         self.contacts=Contacts(PhysicsSchemaTools.intToSdfPath,sleeping,
-            (ContactEventType.CONTACT_FOUND,ContactEventType.CONTACT_PERSIST,ContactEventType.CONTACT_LOST),(g.target,ROBOT))
+            (ContactEventType.CONTACT_FOUND,ContactEventType.CONTACT_PERSIST,ContactEventType.CONTACT_LOST),(g.target,ROBOT,*g._source_support_bodies))
         self.output=Path(output);self.output.mkdir(exist_ok=False);self.trace=(self.output/'facts.jsonl').open('x')
         self.history=deque(maxlen=math.ceil(self.config.initial_history_s*240)+2)
         self.latest=None;self.pending=[];self.composite=None;self.score=None;self.index=-1;self.closed=False;self.binding=None
@@ -46,7 +47,18 @@ class CombinationPort(ObjectPort):
         (self.output/'geometry.json').write_text(json.dumps(dict(target=g.target,body=g.body,destination=g.destination,
             mode=self.mode,asset=self.asset,instance_id=instance_id,detector=asdict(self.config),
             native_full_trajectory_verified=False,scene_pose_writes=0,physics_parameters_changed=False,
-            collider_parts=len(g.parts),cube_parts=sorted(g.cube_parts),initial_pose=g.initial_pose),indent=2)+'\n')
+            collider_parts=len(g.parts),cube_parts=sorted(g.cube_parts),initial_pose=g.initial_pose,
+            additional_source_report_bodies=sorted(g._source_support_bodies.values()),
+            source_identity_policy='measured_directed_support_chain.v1'),indent=2)+'\n')
+
+    def reduce_contacts(self):
+        # The original target supports and reward inputs are returned unchanged.
+        result=super().reduce_contacts()
+        from .native_geometry import _measured_source_edges
+        g=self.geometry
+        g._source_support_edges=_measured_source_edges(tuple(self.contacts.pairs()),
+            target=g.target,intermediates=tuple(g._source_support_bodies))
+        return result
 
     @classmethod
     def validate_parameters(cls, parameters):

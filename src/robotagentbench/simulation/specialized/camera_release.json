@@ -79,7 +79,7 @@
     },
     "failure_recovery": {
       "base_assembly_sha256": "7e35dfbaecb80af748aee82eec9baa5c210adf971f68c5926a2e9c571c0d4441",
-      "derived_assembly_sha256": "35dd566cc8d0cfcf003caabf011169de88266c86158be8afff6f688200f2cfca",
+      "derived_assembly_sha256": "1f91633671ed093ff3e3661b4effea3008d084d3e92782944d996a025c9d8410",
       "files": {
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/openend/tasks/all_objects_integration/geometry.py": {
           "relative": "generic/openend/tasks/all_objects_integration/geometry.py",
@@ -165,8 +165,8 @@
             "bytes": 13885
           },
           "after": {
-            "sha256": "5261c23790ad182a55c6cc25e031cf1efebee0e060b9f3ed2b0a304d25f2453d",
-            "bytes": 15521
+            "sha256": "f79bcb14478aa3d0413d5c3a735d5045f74a2774a2504f09e36946d12a8d9211",
+            "bytes": 22757
           }
         },
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/openend/tasks/trash_transfer/geometry.py": {
@@ -201,6 +201,17 @@
             "sha256": "b1eaec415df42fe110e3040ba9a4818acc24ea8b4b842052d2b77e423eee84eb",
             "bytes": 38371
           }
+        },
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/tasks/sofa_to_drawer/native_port.py": {
+          "relative": "generic/short_tasks/tasks/sofa_to_drawer/native_port.py",
+          "before": {
+            "sha256": "d1cdbd6fed9bcdcf3c7338e8661217b9c475609e8208e48c255bc220d7cc040a",
+            "bytes": 5147
+          },
+          "after": {
+            "sha256": "0ff226e0b60f06f0224d4fbbae4767c253b57a2d647759f0d688a7f61d189742",
+            "bytes": 5849
+          }
         }
       },
       "source_binding_release": {
@@ -215,7 +226,7 @@
             "bytes": 13544
           },
           "after": {
-            "sha256": "320a35d64b8bc6a956f8bb2c23b3ff48846215a6a7859a6771d16ca07b5b34ef",
+            "sha256": "08cfa174affc89b1e08b79622f52a097f9609ea4db1a618959d23bdae8c8d729",
             "bytes": 13771
           },
           "pin_field": "source_files",
@@ -226,7 +237,7 @@
             },
             "short_tasks/tasks/sofa_to_drawer/native_geometry.py": {
               "before": "b4f397f81b5432d1b40eb49f58ed233aede9208260de5250a94c25289da4973f",
-              "after": "5261c23790ad182a55c6cc25e031cf1efebee0e060b9f3ed2b0a304d25f2453d"
+              "after": "f79bcb14478aa3d0413d5c3a735d5045f74a2774a2504f09e36946d12a8d9211"
             },
             "openend/tasks/all_objects_integration/workspace_physics.py": {
               "before": null,
@@ -235,6 +246,10 @@
             "openend/sector.py": {
               "before": null,
               "after": "cf7a56e72e284a1f9e9c2d2fadbd915edfcd92cde4ab630ca3e0f427f03ecaa7"
+            },
+            "short_tasks/tasks/sofa_to_drawer/native_port.py": {
+              "before": "d1cdbd6fed9bcdcf3c7338e8661217b9c475609e8208e48c255bc220d7cc040a",
+              "after": "0ff226e0b60f06f0224d4fbbae4767c253b57a2d647759f0d688a7f61d189742"
             }
           }
         },

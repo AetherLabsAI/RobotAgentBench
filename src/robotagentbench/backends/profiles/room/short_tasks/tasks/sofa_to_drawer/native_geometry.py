@@ -1,5 +1,6 @@
 """Task-local geometry for explicit drawer/table combinations; read-only."""
 from types import SimpleNamespace
+import math
 import numpy as np
 from evaluation.tasks.shelf_pick.geometry import rotation
 from openend.tasks.remote_transfer.native_geometry import hull, top_surface
@@ -62,6 +63,151 @@ def _source_object_roots(manifest,target,mode):
         and isinstance(o.get('instance_id'),str) and o['instance_id'].strip()}
     return frozenset(background|workspace|selected)
 
+def _support_node_for(path, watched):
+    matches = [root for root in watched if under(path, root)]
+    if len(matches) > 1:
+        raise ValueError('Ambiguous measured support identity')
+    return matches[0] if matches else path
+
+
+def _measured_source_edges(pairs, *, target, intermediates):
+    """Same physical tests as Contacts and reduce_pairs; no geometry guessing."""
+    watched = frozenset((target, *intermediates))
+    edges = {root: set() for root in watched}
+    for paths, samples in pairs:
+        if len(paths) != 2:
+            raise ValueError('Two measured collider paths required')
+        for i in (0, 1):
+            subject = _support_node_for(paths[i], watched)
+            if subject not in watched:
+                continue
+            other = _support_node_for(paths[1-i], watched)
+            sign = 1 if i == 0 else -1
+            for normal, point, impulse in samples:
+                if len(normal) != 3 or len(point) != 3 or len(impulse) != 3:
+                    raise ValueError('Original three-component contact sample required')
+                if not all(math.isfinite(v) for v in (*normal, *point, *impulse)):
+                    raise ValueError('Nonfinite physical contact')
+                # Original Contacts: sum(impulse**2)>1e-18.
+                # Original reduce_pairs: sign*normal_z>.5.
+                if sum(v*v for v in impulse) > 1e-18 and sign*normal[2] > .5:
+                    edges[subject].add(other)
+    return {root: frozenset(neighbors) for root, neighbors in edges.items()}
+
+
+def _resolve_measured_source(supports, *, target, intermediates, edges, _source_furniture_owner):
+    """All measured branches must terminate at one real furniture identity.
+
+    `_source_furniture_owner` must inspect the contacted scene prim, not manifest.source.
+    It returns None for a foreign/unbound object. No missing branch is ignored.
+    """
+    allowed = frozenset(intermediates)
+    watched = frozenset((target, *allowed))
+    supports = frozenset(supports)
+    if not supports:
+        raise ValueError('Missing measured initial support')
+    if edges is None and any(_support_node_for(p, watched) in allowed for p in supports):
+        raise ValueError('Missing measured support graph')
+    visited = {}
+
+    def visit(path, stack):
+        node = _support_node_for(path, watched)
+        if node in stack:
+            raise ValueError('Cyclic measured support chain')
+        if node in visited:
+            return visited[node]
+        if node in allowed:
+            neighbors = edges.get(node, frozenset())
+            if not neighbors:
+                raise ValueError('Unobserved movable intermediate support')
+            owners = frozenset(owner for child in neighbors for owner in visit(child, (*stack, node)))
+        else:
+            owner = _source_furniture_owner(node)
+            if not isinstance(owner, str) or not owner.startswith('/World/Assets/'):
+                raise ValueError('Unknown or foreign measured furniture endpoint')
+            owners = frozenset((owner,))
+        if len(owners) != 1:
+            raise ValueError('Ambiguous measured source furniture')
+        visited[node] = owners
+        return owners
+
+    owners = frozenset(owner for support in supports for owner in visit(support, (target,)))
+    if len(owners) != 1:
+        raise ValueError('Ambiguous measured source furniture')
+    return next(iter(owners))
+
+
+def _source_background_bodies(stage, manifest, target):
+    """Declared movable backgrounds are sensors, never inferred furniture owners."""
+    from pxr import Usd, UsdPhysics
+    targets = [o for o in manifest['objects'] if o['path'] == target]
+    if len(targets) != 1:
+        raise ValueError('Exact scene-owned target required')
+    source = targets[0].get('source')
+    if not isinstance(source, str) or not source:
+        return {}
+    result = {}
+    for row in manifest['objects']:
+        if (row['path'] == target or row.get('role') != 'background'
+                or row.get('task_role') != 'background' or row.get('scoring_target') is not False
+                or row.get('source') != source):
+            continue
+        root = stage.GetPrimAtPath(row['path'])
+        if not root:
+            raise ValueError('Missing declared background prim')
+        bodies = [p for p in Usd.PrimRange(root) if p.HasAPI(UsdPhysics.RigidBodyAPI)
+                  and p.GetAttribute('physics:rigidBodyEnabled').Get() is not False]
+        if not bodies:
+            continue
+        if len(bodies) != 1 or bodies[0].GetAttribute('physics:kinematicEnabled').Get() is True:
+            # Do not instrument unrelated compound/kinematic backgrounds. If
+            # needed as an intermediate, missing graph evidence fails closed.
+            continue
+        result[row['path']] = str(bodies[0].GetPath())
+    return result
+
+
+def _known_source_furniture_roots(stage):
+    """Use the existing scene family's explicit furniture declarations, not source labels."""
+    from evaluation.tasks.tidy_sofa.specs import SPECS
+    paths = set()
+    for spec in SPECS.values():
+        for path in (*spec.furniture, spec.support, spec.destination):
+            if path.startswith('/World/Assets/'):
+                root = '/World/Assets/' + path[len('/World/Assets/'):].split('/')[0]
+                if root == '/World/Assets/SeatOverlay':
+                    root = '/World/Assets/Sofa'
+                if stage.GetPrimAtPath(root):
+                    paths.add(root)
+    return frozenset(paths)
+
+
+def _source_furniture_owner(stage, path, floors, allowed_roots):
+    """Existing ancestor convention, restricted to measured scene furniture.
+
+    No object position, source label or nearest-neighbor/AABB search is used.
+    """
+    from pxr import Usd, UsdPhysics
+    if any(under(path, floor) for floor in floors):
+        return None
+    if under(path, '/World/Assets/SeatOverlay'):
+        path = '/World/Assets/Sofa'
+    prim = stage.GetPrimAtPath(path)
+    if not prim:
+        return None
+    while prim.GetParent() and str(prim.GetParent().GetPath()) != '/World/Assets':
+        prim = prim.GetParent()
+    if not prim.GetParent() or str(prim.GetParent().GetPath()) != '/World/Assets':
+        return None
+    if str(prim.GetPath()) not in allowed_roots:
+        return None
+    if not any(p.HasAPI(UsdPhysics.CollisionAPI)
+               and p.GetAttribute('physics:collisionEnabled').Get() is not False
+               for p in Usd.PrimRange(prim)):
+        return None
+    return str(prim.GetPath())
+
+
 class Geometry:
     def __init__(self,stage,manifest,asset,mode,target_path=None):
         from pxr import Usd,UsdGeom,UsdPhysics
@@ -74,6 +220,9 @@ class Geometry:
         if len(rows)!=1:raise ValueError('Exact scene-owned object required '+asset)
         self.target=rows[0]['path'];self.source=None;self.source_top=None
         self._source_object_roots=_source_object_roots(manifest,self.target,mode)
+        self._source_support_bodies=_source_background_bodies(stage,manifest,self.target)
+        self._source_support_edges=None
+        self._source_furniture_roots=_known_source_furniture_roots(stage) if self._source_support_bodies else frozenset()
         self.destination,self.cabinet=(('/World/Assets/CoffeeTable','/World/Assets/CoffeeTable')
             if mode=='surface' else DESTINATIONS[mode])
         self.top=None;self.exclusions=[];self.extra_bodies={}
@@ -159,6 +308,11 @@ class Geometry:
             self.extra_bodies[self.destination]=self.destination
 
     def source_furniture(self,supports):
+        intermediates=getattr(self,'_source_support_bodies',{})
+        if any(any(under(path,root) for root in intermediates) for path in supports):
+            return _resolve_measured_source(supports,target=self.target,intermediates=tuple(intermediates),
+                edges=getattr(self,'_source_support_edges',None),
+                _source_furniture_owner=lambda path:_source_furniture_owner(self.stage,path,self.floors,self._source_furniture_roots))
         # Resolve actual contacts to their owning scene furniture, not a source whitelist.
         from pxr import UsdPhysics
         result=set()
