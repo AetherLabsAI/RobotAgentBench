@@ -10,10 +10,7 @@ recursive-include src/robotagentbench/backends/profiles *.py *.json *.js *.cjs *
 include src/robotagentbench/backends/manifest.json
 include src/robotagentbench/backends/native-files.json
 include src/robotagentbench/example_data/sensor.json
-include resources/assets-0.1.0.json
-include resources/saved-instances-0.1.0.json
-include resources/saved-instances-0.2.0.json
-include resources/saved-instances-0.2.1.json
+recursive-include resources *.json
 include .dockerignore
 recursive-include docker Dockerfile *.txt
 recursive-include tests *.py

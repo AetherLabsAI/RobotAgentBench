@@ -56,14 +56,14 @@ following this guide again.
 ## 2. Install shared assets and the saved configurations
 
 ```bash
-"$RAB_PY" -m robotagentbench assets fetch resources/assets-0.1.5.json --cache downloads
-"$RAB_PY" -m robotagentbench assets install resources/assets-0.1.5.json \
+"$RAB_PY" -m robotagentbench assets fetch resources/assets-0.1.6.json --cache downloads
+"$RAB_PY" -m robotagentbench assets install resources/assets-0.1.6.json \
   --cache downloads --destination Assets
-"$RAB_PY" -m robotagentbench assets configure resources/assets-0.1.5.json \
+"$RAB_PY" -m robotagentbench assets configure resources/assets-0.1.6.json \
   --destination Assets --runtime Runtime --profile room
 
 "$RAB_PY" -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.5.json \
+  --manifest resources/saved-instances-0.2.6.json \
   --cache downloads/configurations --destination "$RAB_ROOT/SavedConfigurations"
 mkdir -p "$RAB_ROOT/Restored" "$RAB_ROOT/model-configs"
 

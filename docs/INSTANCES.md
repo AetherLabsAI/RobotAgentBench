@@ -76,14 +76,16 @@ running a saved configuration does not resample the robot's starting position.
 All physical states, seeds, public contexts, and scoring targets are unchanged
 from 0.2.2, and the other 1,290 configuration records are byte-identical.
 
-## Current configuration bank (0.2.5)
+## Current configuration bank (0.2.6)
 
-Version 0.2.5 updates two saved initial states using original-rule seeded
-replacements that passed native initial admission: episode 2 of `host_guests`
-and `task_discovery--tidy_room`. Both retain their original public requests
-and context. The other 1,468 states, task definitions, scoring rules, and
-physical parameters are unchanged. It includes the initialization dependencies
-from 0.2.4; earlier versions remain available.
+Version 0.2.6 replaces three saved initial states using original-rule seeded
+candidates that passed native initial admission: `coffee_button_lighting_interference`
+episode 4 (seed 41), `coffee_bag_then_machine_interference` episode 5 (seed 51),
+and `failure_recovery_sofa` episode 2 (seed 58). Public requests and contexts,
+task definitions, scoring rules, and physical parameters are unchanged.
+The other 1,467 state records are byte-identical to 0.2.5, including its
+`host_guests` and `task_discovery--tidy_room` episode-2 replacements. Earlier
+versions remain available.
 Room bases are stored once in the shared asset release;
 saved configurations contain compact lossless patches rather than complete
 room copies.
@@ -107,15 +109,15 @@ runtime files are not additional downloads.
 
 Follow [Installation](INSTALL.md), then configure a fresh task workspace:
 
-Use configuration bank **0.2.5** with shared assets **0.1.5**, which include the
+Use configuration bank **0.2.6** with shared assets **0.1.6**, which include the
 complete library of 50 original room layouts and scene-preparation dependencies. The bank's
 original base-asset provenance remains 0.1.0; the current asset release preserves
 those resources and adds the shared layouts, path bindings, and dependencies.
 
 ```sh
-robotagentbench assets fetch resources/assets-0.1.5.json --cache downloads
-robotagentbench assets install resources/assets-0.1.5.json --cache downloads --destination Assets
-robotagentbench assets configure resources/assets-0.1.5.json --destination Assets --runtime Runtime --profile room
+robotagentbench assets fetch resources/assets-0.1.6.json --cache downloads
+robotagentbench assets install resources/assets-0.1.6.json --cache downloads --destination Assets
+robotagentbench assets configure resources/assets-0.1.6.json --destination Assets --runtime Runtime --profile room
 ```
 
 Use the task's matching profile for dedicated cloth or specialized owners;
@@ -123,12 +125,12 @@ do not replace those owners with the ordinary room worker.
 
 ## 2. Download the configuration bank
 
-The bank is approximately **245 MB** across six archives; the shared simulation
+The bank is approximately **250 MB** across seven archives; the shared simulation
 assets are installed separately and are not duplicated in this download.
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.5.json \
+  --manifest resources/saved-instances-0.2.6.json \
   --cache downloads/configurations --destination /absolute/path/to/SavedConfigurations
 ```
 
