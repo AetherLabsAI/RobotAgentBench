@@ -2,7 +2,7 @@
 from types import SimpleNamespace
 import numpy as np
 from evaluation.tasks.shelf_pick.geometry import rotation
-from openend.tasks.all_objects_integration.geometry import Geometry, _source_object_roots
+from openend.tasks.all_objects_integration.geometry import Geometry, _source_object_roots, _source_workspace_furniture
 from openend.tasks.scene_requirements.source_geometry import floor_paths
 from .shapes import shape_points
 from .registration import resolve_object
@@ -16,6 +16,7 @@ class TrashGeometry(Geometry):
         self.stage = stage; self.mode = 'trash'
         self.target = obj['path']; self.destination = parameters['destination_path']
         self._source_object_roots = _source_object_roots(manifest, self.target, 'trash')
+        self._source_workspace_furniture = _source_workspace_furniture(stage, manifest, self.target)
         self.cabinet = self.destination; self.source = None; self.source_top = None
         self.top = None; self.exclusions = []; self.extra_bodies = {}
         if UsdGeom.GetStageUpAxis(stage) != 'Z' or UsdGeom.GetStageMetersPerUnit(stage) != 1:

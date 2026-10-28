@@ -17,7 +17,7 @@
     "evaluation/tasks/tidy_sofa/specs.py": "d8aa0abced08a87e92bc73f9fb629d5a0a3ef0fe6ea3f550e92d37f7ce645870",
     "openend/tasks/all_objects_integration/cap_initial.py": "36cb9dd8488bf6876d684b4780193767a0cd2051d0a9f8481e97dce7c309a1d2",
     "openend/tasks/all_objects_integration/contacts.py": "a7c17fccbd196ade83a365e2abfe35a66f51e2c8de5ac7cc728f059d6f89fe5c",
-    "openend/tasks/all_objects_integration/geometry.py": "a07bb94e1e8af221b70e9110eff9aeeecc869e3fee984d61a7002ec83af610e5",
+    "openend/tasks/all_objects_integration/geometry.py": "0feabacc8f6c698085c77f8abec4ba418efe8bf1c6bfb8da72f88ee6f7a0fc7b",
     "openend/tasks/all_objects_integration/ports.py": "1bdd9e7d2772b2c65b243f7365d28f9a2a3d954267a5cf3bdb2661354c9f0303",
     "openend/tasks/all_objects_integration/selective_read.py": "bac8daa64a4988b85f34d99e7196fc50de211c242478f26401dea4d383992451",
     "openend/tasks/all_objects_integration/touch_wake.py": "ced5a9632b68ff3fab871cfae5d03c4da9afe23ee0378e6b767d97172ca01d61",
@@ -97,7 +97,9 @@
     "short_tasks/tasks/navigation_progress_v1/episode.py": "a75a76f3cf10ace71e03e0c24ed3f85e967306398bfe7d94a298eaac9f6432f4",
     "arena_api/robot_drive_defaults.py": "1adb35f0f422d4dc6b0a9be43d786a46ef8d91dd9b3e38bc72e4161615733fe6",
     "short_tasks/agent_probe_v1/robot_parameter_alignment.py": "224a176df609253478264de51e5506bfe8fce8733d16c75c50d96e08824b697c",
-    "short_tasks/agent_probe_v1/native_owner.py": "c4f8c6f812fde94c29234e7b859863cb5190aa19455d1cd9d19e16f4c11281f1"
+    "short_tasks/agent_probe_v1/native_owner.py": "c4f8c6f812fde94c29234e7b859863cb5190aa19455d1cd9d19e16f4c11281f1",
+    "openend/tasks/all_objects_integration/workspace_physics.py": "ff2af60b8e95272532dc4bf842e6261e3ea23b864fa2e4342f6281dc35a6fed1",
+    "openend/sector.py": "cf7a56e72e284a1f9e9c2d2fadbd915edfcd92cde4ab630ca3e0f427f03ecaa7"
   },
   "source_edits": 0,
   "verification_scope": "Existing pickup, drawer rules, current table region, measured holding and task-owned destination adapters; no native-action claim.",

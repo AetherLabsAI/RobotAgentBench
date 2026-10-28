@@ -79,7 +79,7 @@
     },
     "failure_recovery": {
       "base_assembly_sha256": "7e35dfbaecb80af748aee82eec9baa5c210adf971f68c5926a2e9c571c0d4441",
-      "derived_assembly_sha256": "49f94fba9c9a39d544b013a287da6598bf4daf2d186eee3f553c04ca28546f45",
+      "derived_assembly_sha256": "35dd566cc8d0cfcf003caabf011169de88266c86158be8afff6f688200f2cfca",
       "files": {
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/openend/tasks/all_objects_integration/geometry.py": {
           "relative": "generic/openend/tasks/all_objects_integration/geometry.py",
@@ -88,8 +88,8 @@
             "bytes": 13370
           },
           "after": {
-            "sha256": "a07bb94e1e8af221b70e9110eff9aeeecc869e3fee984d61a7002ec83af610e5",
-            "bytes": 15006
+            "sha256": "0feabacc8f6c698085c77f8abec4ba418efe8bf1c6bfb8da72f88ee6f7a0fc7b",
+            "bytes": 16318
           }
         },
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/atomic_owner_v2.py": {
@@ -176,8 +176,8 @@
             "bytes": 4019
           },
           "after": {
-            "sha256": "c4f5984eb8aca5e89212b28443488d2743a3aa7f61333f03e98b347e22314723",
-            "bytes": 4130
+            "sha256": "0a5f5515c1f9db051e32de5230ac0f7a05fcf45ed9e5591cdb44f9fe6a231885",
+            "bytes": 4260
           }
         },
         "/workspace/lukun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/isaac_evidence.py": {
@@ -215,18 +215,26 @@
             "bytes": 13544
           },
           "after": {
-            "sha256": "6047c05d07a783170049d2d0d3903a2c83f9787d8ef1bd7ccfb68c5949508c3c",
-            "bytes": 13544
+            "sha256": "320a35d64b8bc6a956f8bb2c23b3ff48846215a6a7859a6771d16ca07b5b34ef",
+            "bytes": 13771
           },
           "pin_field": "source_files",
           "source_fields": {
             "openend/tasks/all_objects_integration/geometry.py": {
               "before": "70d28af02733a12b8dba55752b354d308612213d88ef1b5fb0e6df919eb0e826",
-              "after": "a07bb94e1e8af221b70e9110eff9aeeecc869e3fee984d61a7002ec83af610e5"
+              "after": "0feabacc8f6c698085c77f8abec4ba418efe8bf1c6bfb8da72f88ee6f7a0fc7b"
             },
             "short_tasks/tasks/sofa_to_drawer/native_geometry.py": {
               "before": "b4f397f81b5432d1b40eb49f58ed233aede9208260de5250a94c25289da4973f",
               "after": "5261c23790ad182a55c6cc25e031cf1efebee0e060b9f3ed2b0a304d25f2453d"
+            },
+            "openend/tasks/all_objects_integration/workspace_physics.py": {
+              "before": null,
+              "after": "ff2af60b8e95272532dc4bf842e6261e3ea23b864fa2e4342f6281dc35a6fed1"
+            },
+            "openend/sector.py": {
+              "before": null,
+              "after": "cf7a56e72e284a1f9e9c2d2fadbd915edfcd92cde4ab630ca3e0f427f03ecaa7"
             }
           }
         },
@@ -237,18 +245,34 @@
             "bytes": 9067
           },
           "after": {
-            "sha256": "44d2996cf73552df6f2715b05fbff19cc5321d7a1572678bf39a2266d1021c1f",
-            "bytes": 9067
+            "sha256": "ffe17803b9da02fbc481e6955633043bd1b25a53ce874c34ebfea65643a2059d",
+            "bytes": 9550
           },
           "pin_field": "sources",
           "source_fields": {
             "openend/tasks/all_objects_integration/geometry.py": {
               "before": "70d28af02733a12b8dba55752b354d308612213d88ef1b5fb0e6df919eb0e826",
-              "after": "a07bb94e1e8af221b70e9110eff9aeeecc869e3fee984d61a7002ec83af610e5"
+              "after": "0feabacc8f6c698085c77f8abec4ba418efe8bf1c6bfb8da72f88ee6f7a0fc7b"
             },
             "openend/tasks/trash_transfer/geometry.py": {
               "before": "a3daa1faafc7c2fd27b3ccca9f4fdd4aa4b118cfe9e36173352966322d196cfb",
-              "after": "c4f5984eb8aca5e89212b28443488d2743a3aa7f61333f03e98b347e22314723"
+              "after": "0a5f5515c1f9db051e32de5230ac0f7a05fcf45ed9e5591cdb44f9fe6a231885"
+            },
+            "openend/tasks/coffee_table_workspaces/binding.py": {
+              "before": null,
+              "after": "e2081393a7a51a02675ef21729cc8ea7d3d147ceb97c4d5e87d8544ec7b0ee2f"
+            },
+            "openend/tasks/coffee_table_workspaces/local_regions.json": {
+              "before": null,
+              "after": "7a97a9a728d9ad3223344b27d04452c1721c969b96343f367dcf3d3bb99ccbb7"
+            },
+            "openend/tasks/all_objects_integration/workspace_physics.py": {
+              "before": null,
+              "after": "ff2af60b8e95272532dc4bf842e6261e3ea23b864fa2e4342f6281dc35a6fed1"
+            },
+            "openend/sector.py": {
+              "before": null,
+              "after": "cf7a56e72e284a1f9e9c2d2fadbd915edfcd92cde4ab630ca3e0f427f03ecaa7"
             }
           }
         }

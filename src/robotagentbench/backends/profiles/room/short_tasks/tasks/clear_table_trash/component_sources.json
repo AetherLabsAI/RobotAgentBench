@@ -18,7 +18,7 @@
     "evaluation/tasks/trash_disposal/bin_geometry.py": "1cf868c8e60ab37263ca0c00f7e18420d6128c3a7b673fa45bcf084706be2937",
     "evaluation/tasks/trash_disposal/definitions.py": "0791ffdab4ff1f82121bfad7e6d798b228a7fc96b09b28de97cb733dc782e94b",
     "openend/tasks/all_objects_integration/contacts.py": "a7c17fccbd196ade83a365e2abfe35a66f51e2c8de5ac7cc728f059d6f89fe5c",
-    "openend/tasks/all_objects_integration/geometry.py": "a07bb94e1e8af221b70e9110eff9aeeecc869e3fee984d61a7002ec83af610e5",
+    "openend/tasks/all_objects_integration/geometry.py": "0feabacc8f6c698085c77f8abec4ba418efe8bf1c6bfb8da72f88ee6f7a0fc7b",
     "openend/tasks/all_objects_integration/ports.py": "1bdd9e7d2772b2c65b243f7365d28f9a2a3d954267a5cf3bdb2661354c9f0303",
     "openend/tasks/all_objects_integration/selective_read.py": "bac8daa64a4988b85f34d99e7196fc50de211c242478f26401dea4d383992451",
     "openend/tasks/all_objects_integration/touch_wake.py": "ced5a9632b68ff3fab871cfae5d03c4da9afe23ee0378e6b767d97172ca01d61",
@@ -38,7 +38,7 @@
     "openend/tasks/remote_transfer/native_geometry.py": "48e2d6eb42104150e6b4ed8a5e41954d9c9165d89fb7ca7757a3ded40a56789e",
     "openend/tasks/remote_transfer/selection.py": "fd888193106171be9676b097b2781e32f8ffea7ad3dbe1e853c76c4fe35f461f",
     "openend/tasks/scene_requirements/source_geometry.py": "5b11bed3bc684606fe74bc585567c7b94e5b413c94d7fb1ca8e18b3c9feeba95",
-    "openend/tasks/trash_transfer/geometry.py": "c4f5984eb8aca5e89212b28443488d2743a3aa7f61333f03e98b347e22314723",
+    "openend/tasks/trash_transfer/geometry.py": "0a5f5515c1f9db051e32de5230ac0f7a05fcf45ed9e5591cdb44f9fe6a231885",
     "openend/tasks/trash_transfer/port.py": "1ad1689c6640577286d0f82e2823d8ee9f1bd720c79894ab4d184741cb43e999",
     "openend/tasks/trash_transfer/registration.py": "2b539f1156c7b15c11cc8d20dafb45cfd84ecb529d37498b71bf92e806b92070",
     "openend/tasks/trash_transfer/scene_semantics.py": "4965aab0c807b110a207791547e059e8e2c3193a0cb8b1aad33d68dbe7e0e3cc",
@@ -63,7 +63,11 @@
     "short_tasks/tasks/navigation_progress_v1/rules.py": "cf8ea721b9095808bffe4aef3fe39cff33e5c5d113dc6d810306524c1a9c7d7d",
     "arena_api/robot_drive_defaults.py": "1adb35f0f422d4dc6b0a9be43d786a46ef8d91dd9b3e38bc72e4161615733fe6",
     "short_tasks/agent_probe_v1/robot_parameter_alignment.py": "224a176df609253478264de51e5506bfe8fce8733d16c75c50d96e08824b697c",
-    "short_tasks/agent_probe_v1/native_owner.py": "c4f8c6f812fde94c29234e7b859863cb5190aa19455d1cd9d19e16f4c11281f1"
+    "short_tasks/agent_probe_v1/native_owner.py": "c4f8c6f812fde94c29234e7b859863cb5190aa19455d1cd9d19e16f4c11281f1",
+    "openend/tasks/coffee_table_workspaces/binding.py": "e2081393a7a51a02675ef21729cc8ea7d3d147ceb97c4d5e87d8544ec7b0ee2f",
+    "openend/tasks/coffee_table_workspaces/local_regions.json": "7a97a9a728d9ad3223344b27d04452c1721c969b96343f367dcf3d3bb99ccbb7",
+    "openend/tasks/all_objects_integration/workspace_physics.py": "ff2af60b8e95272532dc4bf842e6261e3ea23b864fa2e4342f6281dc35a6fed1",
+    "openend/sector.py": "cf7a56e72e284a1f9e9c2d2fadbd915edfcd92cde4ab630ca3e0f427f03ecaa7"
   },
   "coverage": "approved scoring, native readout, geometric predicates, holding/configuration, measured initial acceptance and shared evidence lifecycle; no tests",
   "interaction_progress": {

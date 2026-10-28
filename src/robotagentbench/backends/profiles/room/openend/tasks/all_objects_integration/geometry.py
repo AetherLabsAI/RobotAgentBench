@@ -62,6 +62,22 @@ def _source_object_roots(manifest,target,mode):
         and isinstance(o.get('instance_id'),str) and o['instance_id'].strip()}
     return frozenset(background|workspace|selected)
 
+def _source_workspace_furniture(stage,manifest,target):
+    """Bind only declared fixed workspace anchors using the original resolver."""
+    targets=[o for o in manifest['objects'] if o['path']==target]
+    if len(targets)!=1:raise ValueError('Exact scene-owned target required')
+    if targets[0].get('source')!='coffee_table.objects':return {}
+    regions={'tablecloth_dirty':'table_cloth','japanese_tray':'table_wooden_tray'}
+    anchors=[o for o in manifest['objects'] if o['path']!=target
+        and o.get('role')=='workspace_support' and o.get('id') in regions]
+    if not anchors:return {}
+    from openend.tasks.coffee_table_workspaces.binding import bind,TABLE
+    bound={workspace.id:workspace.path for workspace in bind(stage,manifest)}
+    if any(bound.get(regions[o['id']])!=TABLE for o in anchors):
+        raise ValueError('Unbound fixed source workspace anchor')
+    return {o['path']:TABLE for o in anchors}
+
+
 class Geometry:
     def __init__(self,stage,manifest,asset,mode,target_path=None):
         from pxr import Usd,UsdGeom,UsdPhysics
@@ -74,6 +90,7 @@ class Geometry:
         if len(rows)!=1:raise ValueError('Exact scene-owned object required '+asset)
         self.target=rows[0]['path'];self.source=None;self.source_top=None
         self._source_object_roots=_source_object_roots(manifest,self.target,mode)
+        self._source_workspace_furniture=_source_workspace_furniture(stage,manifest,self.target)
         self.destination,self.cabinet=DESTINATIONS[mode]
         self.top=None;self.exclusions=[];self.extra_bodies={}
         bodies=[p for p in Usd.PrimRange(stage.GetPrimAtPath(self.target)) if p.HasAPI(UsdPhysics.RigidBodyAPI) and p.GetAttribute('physics:rigidBodyEnabled').Get() is not False]
@@ -161,6 +178,10 @@ class Geometry:
             if under(support,'/World/Assets/SeatOverlay'):result.add('/World/Assets/Sofa');continue
             p=self.stage.GetPrimAtPath(support)
             if not p:raise ValueError('Unknown measured support '+support)
+            owners={owner for root,owner in getattr(self,'_source_workspace_furniture',{}).items() if under(support,root)}
+            if owners:
+                if len(owners)!=1:raise ValueError('Ambiguous fixed source workspace owner')
+                result.update(owners);continue
             if any(under(support,root) for root in self._source_object_roots):continue
             while p.GetParent() and str(p.GetParent().GetPath()) not in ('/World','/World/Assets','/World/RoomEpisode'):
                 p=p.GetParent()
