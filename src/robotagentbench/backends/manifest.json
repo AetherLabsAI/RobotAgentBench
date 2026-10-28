@@ -2600,8 +2600,8 @@
           "bytes": 76
         },
         "openend/tasks/trash_transfer/geometry.py": {
-          "sha256": "a3daa1faafc7c2fd27b3ccca9f4fdd4aa4b118cfe9e36173352966322d196cfb",
-          "bytes": 4019
+          "sha256": "c4f5984eb8aca5e89212b28443488d2743a3aa7f61333f03e98b347e22314723",
+          "bytes": 4130
         },
         "openend/tasks/trash_transfer/paper_variant_usd.py": {
           "sha256": "a462880e4c411580b60b07411e00fe619ef057f56f93bd4189306bd93e0dc79e",
@@ -3580,7 +3580,7 @@
           "bytes": 5509
         },
         "short_tasks/tasks/clear_table_trash/component_sources.json": {
-          "sha256": "7c2e3eec16750c875f0f0f462af8054aa35145774ede6d117c97a93c146a42a0",
+          "sha256": "44d2996cf73552df6f2715b05fbff19cc5321d7a1572678bf39a2266d1021c1f",
           "bytes": 9067
         },
         "short_tasks/tasks/clear_table_trash/initial_station.py": {
@@ -8891,8 +8891,8 @@
           "bytes": 7760
         },
         "generic/openend/tasks/trash_transfer/geometry.py": {
-          "sha256": "a3daa1faafc7c2fd27b3ccca9f4fdd4aa4b118cfe9e36173352966322d196cfb",
-          "bytes": 4019
+          "sha256": "c4f5984eb8aca5e89212b28443488d2743a3aa7f61333f03e98b347e22314723",
+          "bytes": 4130
         },
         "generic/openend/tasks/trash_transfer/port.py": {
           "sha256": "1ad1689c6640577286d0f82e2823d8ee9f1bd720c79894ab4d184741cb43e999",

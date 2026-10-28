@@ -57,7 +57,7 @@
     },
     "failure_recovery": {
       "base_assembly_sha256": "7e35dfbaecb80af748aee82eec9baa5c210adf971f68c5926a2e9c571c0d4441",
-      "derived_assembly_sha256": "1c83eb702c20477cc8cc6618ea788dadd34cc9a7eb768c8c139167c3bcd7a062",
+      "derived_assembly_sha256": "000be4535ca733f6abc072f9e229fd890ff55d8de8db4a36ce17c32999c560a2",
       "files": {
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/openend/tasks/all_objects_integration/geometry.py": {
           "relative": "generic/openend/tasks/all_objects_integration/geometry.py",
@@ -145,6 +145,17 @@
           "after": {
             "sha256": "5261c23790ad182a55c6cc25e031cf1efebee0e060b9f3ed2b0a304d25f2453d",
             "bytes": 15521
+          }
+        },
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/openend/tasks/trash_transfer/geometry.py": {
+          "relative": "generic/openend/tasks/trash_transfer/geometry.py",
+          "before": {
+            "sha256": "a3daa1faafc7c2fd27b3ccca9f4fdd4aa4b118cfe9e36173352966322d196cfb",
+            "bytes": 4019
+          },
+          "after": {
+            "sha256": "c4f5984eb8aca5e89212b28443488d2743a3aa7f61333f03e98b347e22314723",
+            "bytes": 4130
           }
         }
       },

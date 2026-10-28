@@ -38,7 +38,7 @@
     "openend/tasks/remote_transfer/native_geometry.py": "48e2d6eb42104150e6b4ed8a5e41954d9c9165d89fb7ca7757a3ded40a56789e",
     "openend/tasks/remote_transfer/selection.py": "fd888193106171be9676b097b2781e32f8ffea7ad3dbe1e853c76c4fe35f461f",
     "openend/tasks/scene_requirements/source_geometry.py": "5b11bed3bc684606fe74bc585567c7b94e5b413c94d7fb1ca8e18b3c9feeba95",
-    "openend/tasks/trash_transfer/geometry.py": "a3daa1faafc7c2fd27b3ccca9f4fdd4aa4b118cfe9e36173352966322d196cfb",
+    "openend/tasks/trash_transfer/geometry.py": "c4f5984eb8aca5e89212b28443488d2743a3aa7f61333f03e98b347e22314723",
     "openend/tasks/trash_transfer/port.py": "1ad1689c6640577286d0f82e2823d8ee9f1bd720c79894ab4d184741cb43e999",
     "openend/tasks/trash_transfer/registration.py": "2b539f1156c7b15c11cc8d20dafb45cfd84ecb529d37498b71bf92e806b92070",
     "openend/tasks/trash_transfer/scene_semantics.py": "4965aab0c807b110a207791547e059e8e2c3193a0cb8b1aad33d68dbe7e0e3cc",
