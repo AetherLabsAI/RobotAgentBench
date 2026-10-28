@@ -66,7 +66,7 @@ The core package and catalog inspection do not require Isaac Sim, a GPU, or mode
 
 ### 2. Download assets
 
-The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.5** is approximately **7.04 GB**, split into **31 archives**, including the license archive. It contains all **50 original room layouts** and their shared runtime dependencies, robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.4**. All 30 earlier archives are reused unchanged; the new layout supplement is approximately **385 MB**. Update the evaluator and install into fresh asset and runtime directories when upgrading.
+The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.5** is approximately **7.04 GB**, split into **31 archives**, including the license archive. It contains all **50 original room layouts** and their shared runtime dependencies, robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.5**. All 30 earlier archives are reused unchanged; the new layout supplement is approximately **385 MB**. Update the evaluator and install into fresh asset and runtime directories when upgrading.
 
 ```sh
 robotagentbench assets fetch resources/assets-0.1.5.json --cache downloads
@@ -110,17 +110,19 @@ per task or scenario**: 540 for the 18 short tasks, 240 for the 8 long tasks,
 OpenEnd scenarios (**1,470 in total**). Choose an episode from 1–30 and reuse
 its saved initial state; running a model does not resample it.
 
-Configuration release **0.2.4** includes a **Today's situation** section in all
+Configuration release **0.2.5** includes a **Today's situation** section in all
 120 OpenEnd configurations. Each scenario combines six context/scene variants
 with five spatial initial states each. Context supplies weather, trip timing,
 changed plans, and personal preferences. Stains, waste, object locations, and
 cleanliness must be discovered from camera observations; variants that differ
 only in visible state share the same public text. The bank includes task-owned
 initialization attachments, original scene-composition recipes and spawn
-receipts, and lossless room-reconstruction records. Version 0.2.4 completes initialization dependencies for 120 records and
-updates five saved initial states. Public contexts, task definitions,
-scoring rules, and physical parameters are unchanged. Earlier versions
-remain available. Room bases are stored once in the shared asset release;
+receipts, and lossless room-reconstruction records. Version 0.2.5 updates two
+saved initial states using original-rule seeded replacements that passed native
+initial admission. The other 1,468 states, public contexts, task definitions,
+scoring rules, and physical parameters are unchanged. It includes the
+initialization dependencies from 0.2.4; earlier versions remain available.
+Room bases are stored once in the shared asset release;
 saved configurations contain compact lossless patches rather than complete
 room copies.
 
