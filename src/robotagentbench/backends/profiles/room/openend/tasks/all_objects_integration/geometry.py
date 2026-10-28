@@ -37,20 +37,30 @@ def shape_points(stage,root):
 def under(path,root):return path==root or path.startswith(root+'/')
 
 def _source_object_roots(manifest,target,mode):
-    """Exact declared background objects are supports, not furniture identities.
+    """Separate declared support objects from furniture identity candidates.
 
-    This affects only cap source binding. The original measured support set is
-    never modified and continues unchanged into initial and process scoring.
+    Raw measured supports remain unchanged in initial checks and scoring.
+    A genuine remaining furniture contact is still required by the resolver.
     """
-    if mode!='hang':return frozenset()
     targets=[o for o in manifest['objects'] if o['path']==target]
-    if len(targets)!=1:raise ValueError('Exact scene-owned cap target required')
+    if len(targets)!=1:raise ValueError('Exact scene-owned target required')
     source=targets[0].get('source')
-    if source!='sofa':return frozenset()
-    return frozenset(o['path'] for o in manifest['objects']
+    if not isinstance(source,str) or not source:return frozenset()
+    background={o['path'] for o in manifest['objects']
         if o['path']!=target and o.get('role')=='background'
         and o.get('task_role')=='background' and o.get('scoring_target') is False
-        and o.get('source')==source)
+        and o.get('source')==source}
+    # Original build_living/build_shelf declare these fixed CoffeeTable-relative
+    # anchors as workspace_support, not additional furniture or task targets.
+    workspace={o['path'] for o in manifest['objects']
+        if source=='coffee_table.objects' and o['path']!=target
+        and o.get('role')=='workspace_support'
+        and o.get('id') in ('tablecloth_dirty','japanese_tray')}
+    selected={o['path'] for o in manifest['objects']
+        if o['path']!=target and o.get('source')==source
+        and isinstance(o.get('task_id'),str) and o['task_id'].strip()
+        and isinstance(o.get('instance_id'),str) and o['instance_id'].strip()}
+    return frozenset(background|workspace|selected)
 
 class Geometry:
     def __init__(self,stage,manifest,asset,mode,target_path=None):

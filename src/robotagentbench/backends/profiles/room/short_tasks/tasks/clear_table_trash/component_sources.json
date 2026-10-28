@@ -18,7 +18,7 @@
     "evaluation/tasks/trash_disposal/bin_geometry.py": "1cf868c8e60ab37263ca0c00f7e18420d6128c3a7b673fa45bcf084706be2937",
     "evaluation/tasks/trash_disposal/definitions.py": "0791ffdab4ff1f82121bfad7e6d798b228a7fc96b09b28de97cb733dc782e94b",
     "openend/tasks/all_objects_integration/contacts.py": "a7c17fccbd196ade83a365e2abfe35a66f51e2c8de5ac7cc728f059d6f89fe5c",
-    "openend/tasks/all_objects_integration/geometry.py": "73ab96b4cea13705f478d02c111138e50c9f1f3ba7714efb106525671314e9b4",
+    "openend/tasks/all_objects_integration/geometry.py": "a07bb94e1e8af221b70e9110eff9aeeecc869e3fee984d61a7002ec83af610e5",
     "openend/tasks/all_objects_integration/ports.py": "1bdd9e7d2772b2c65b243f7365d28f9a2a3d954267a5cf3bdb2661354c9f0303",
     "openend/tasks/all_objects_integration/selective_read.py": "bac8daa64a4988b85f34d99e7196fc50de211c242478f26401dea4d383992451",
     "openend/tasks/all_objects_integration/touch_wake.py": "ced5a9632b68ff3fab871cfae5d03c4da9afe23ee0378e6b767d97172ca01d61",

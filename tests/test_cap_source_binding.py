@@ -10,8 +10,8 @@ from unittest.mock import patch
 from robotagentbench.backends import root
 
 
-def geometry_methods():
-    path = root('room') / 'openend/tasks/all_objects_integration/geometry.py'
+def geometry_methods(relative='openend/tasks/all_objects_integration/geometry.py'):
+    path = root('room') / relative
     tree = ast.parse(path.read_text(), filename=str(path))
     functions = [n for n in tree.body if isinstance(n, ast.FunctionDef)
                  and n.name in ('under', '_source_object_roots')]
@@ -116,7 +116,7 @@ class CapSourceBindingTests(unittest.TestCase):
         select = self.api['_source_object_roots']
         self.assertEqual(select(manifest, TARGET, 'hang'), frozenset({object_root}))
         for mode in ('bag', 'surface', 'drawer', 'trash'):
-            self.assertEqual(select(manifest, TARGET, mode), frozenset())
+            self.assertEqual(select(manifest, TARGET, mode), frozenset({object_root}))
         for field, value in (('role', 'target'), ('task_role', 'target'),
                              ('scoring_target', True), ('source', 'table')):
             altered = deepcopy(manifest)
