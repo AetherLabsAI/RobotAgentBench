@@ -76,7 +76,16 @@ running a saved configuration does not resample the robot's starting position.
 All physical states, seeds, public contexts, and scoring targets are unchanged
 from 0.2.2, and the other 1,290 configuration records are byte-identical.
 
-## Current configuration bank (0.2.6)
+## Current configuration bank (0.2.7)
+
+Version 0.2.7 replaces `coffee_bag_interference` episode 6 (seed 51)
+and `coffee_bag_then_machine_interference` episode 6 (seed 66). Both
+passed their original native initial admission. The other 1,468 state
+records are byte-identical to 0.2.6. Public contexts, task definitions,
+scoring rules, and physical parameters are unchanged. Shared assets
+remain at version 0.1.6; earlier releases remain available.
+
+## Configuration bank 0.2.6
 
 Version 0.2.6 replaces three saved initial states using original-rule seeded
 candidates that passed native initial admission: `coffee_button_lighting_interference`
@@ -109,7 +118,7 @@ runtime files are not additional downloads.
 
 Follow [Installation](INSTALL.md), then configure a fresh task workspace:
 
-Use configuration bank **0.2.6** with shared assets **0.1.6**, which include the
+Use configuration bank **0.2.7** with shared assets **0.1.6**, which include the
 complete library of 50 original room layouts and scene-preparation dependencies. The bank's
 original base-asset provenance remains 0.1.0; the current asset release preserves
 those resources and adds the shared layouts, path bindings, and dependencies.
@@ -130,7 +139,7 @@ assets are installed separately and are not duplicated in this download.
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.6.json \
+  --manifest resources/saved-instances-0.2.7.json \
   --cache downloads/configurations --destination /absolute/path/to/SavedConfigurations
 ```
 
