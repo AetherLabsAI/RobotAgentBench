@@ -76,7 +76,38 @@ running a saved configuration does not resample the robot's starting position.
 All physical states, seeds, public contexts, and scoring targets are unchanged
 from 0.2.2, and the other 1,290 configuration records are byte-identical.
 
-## Current configuration bank (0.2.13)
+## Current configuration bank (0.2.14)
+
+Version 0.2.14 replaces fourteen saved initial states using original-rule seeded
+candidates that passed their original native initial admission: ten coffee-
+interference configurations and four OpenEnd episode configurations (three leaving
+episodes and one tidying episode).
+
+| Task identifier | Episode | Actual seed |
+| --- | ---: | ---: |
+| `coffee_bag_interference` | 21 | 171 |
+| `coffee_button_lighting_interference` | 25 | 221 |
+| `coffee_button_lighting_interference` | 28 | 231 |
+| `coffee_machine_push_interference` | 10 | 241 |
+| `coffee_machine_push_interference` | 12 | 251 |
+| `coffee_machine_push_interference` | 13 | 261 |
+| `coffee_machine_push_interference` | 14 | 271 |
+| `coffee_machine_push_interference` | 23 | 281 |
+| `coffee_machine_push_interference` | 28 | 291 |
+| `coffee_machine_push_interference` | 30 | 311 |
+| `prepare_to_leave` | 3 | 351 |
+| `prepare_to_leave` | 17 | 371 |
+| `prepare_to_leave` | 22 | 391 |
+| `tidy_room` | 26 | 181 |
+
+The bank remains at 49 groups of 30 configurations (1,470 total). The other
+1,456 state records are byte-identical to 0.2.13. Public contexts, task
+definitions, scoring rules, physical parameters, and shared assets 0.1.7 are
+unchanged. The manifest references six new 0.2.14 archives and one unchanged
+archive from an earlier release; do not rename or concatenate them.
+Historical releases remain available.
+
+## Configuration bank 0.2.13
 
 Version 0.2.13 replaces two saved initial states using original-rule seeded
 candidates that passed their original native initial admission:
@@ -229,7 +260,7 @@ runtime files are not additional downloads.
 
 Follow [Installation](INSTALL.md), then configure a fresh task workspace:
 
-Use configuration bank **0.2.13** with shared assets **0.1.7**, which include the
+Use configuration bank **0.2.14** with shared assets **0.1.7**, which include the
 complete library of 50 original room layouts and scene-preparation dependencies. The bank's
 original base-asset provenance remains 0.1.0; the current asset release preserves
 those resources and adds the shared layouts, path bindings, and dependencies.
@@ -250,7 +281,7 @@ assets are installed separately and are not duplicated in this download.
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.13.json \
+  --manifest resources/saved-instances-0.2.14.json \
   --cache downloads/configurations --destination /absolute/path/to/SavedConfigurations
 ```
 
