@@ -76,7 +76,31 @@ running a saved configuration does not resample the robot's starting position.
 All physical states, seeds, public contexts, and scoring targets are unchanged
 from 0.2.2, and the other 1,290 configuration records are byte-identical.
 
-## Current configuration bank (0.2.8)
+## Current configuration bank (0.2.9)
+
+Version 0.2.9 replaces nine saved initial states using original-rule seeded
+candidates that passed their original native initial admission:
+
+| Task identifier | Episode | Actual seed |
+| --- | ---: | ---: |
+| `long_task_17` | 26 | 31 |
+| `long_task_19` | 21 | 31 |
+| `long_task_21` | 19 | 31 |
+| `long_task_22` | 25 | 31 |
+| `prepare_dinner` | 3 | 51 |
+| `clear_table_trash` | 23 | 32 |
+| `microwave_heat_take` | 14 | 41 |
+| `microwave_heat_take` | 17 | 51 |
+| `microwave_heat_take` | 28 | 61 |
+
+The bank remains at 49 groups of 30 configurations (1,470 total). The other
+1,461 state records are byte-identical to 0.2.8. Public contexts, task definitions,
+scoring rules, and physical parameters are unchanged. Shared assets remain at
+0.1.7. The download reuses four unchanged 0.2.8 archive parts and provides three
+new 0.2.9 parts; use the complete manifest rather than renaming or concatenating
+parts. Historical releases remain available.
+
+## Configuration bank 0.2.8
 
 Version 0.2.8 replaces `coffee_bag_then_machine_interference` episode 7 (seed 71),
 `coffee_button_lighting_interference` episode 8 (seed 51), and
@@ -128,7 +152,7 @@ runtime files are not additional downloads.
 
 Follow [Installation](INSTALL.md), then configure a fresh task workspace:
 
-Use configuration bank **0.2.8** with shared assets **0.1.7**, which include the
+Use configuration bank **0.2.9** with shared assets **0.1.7**, which include the
 complete library of 50 original room layouts and scene-preparation dependencies. The bank's
 original base-asset provenance remains 0.1.0; the current asset release preserves
 those resources and adds the shared layouts, path bindings, and dependencies.
@@ -149,7 +173,7 @@ assets are installed separately and are not duplicated in this download.
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.8.json \
+  --manifest resources/saved-instances-0.2.9.json \
   --cache downloads/configurations --destination /absolute/path/to/SavedConfigurations
 ```
 
