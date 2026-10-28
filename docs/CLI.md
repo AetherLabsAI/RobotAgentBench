@@ -42,10 +42,10 @@ robotagentbench backends --profile cloth --root
 ## Asset releases
 
 ```sh
-robotagentbench assets fetch resources/assets-0.1.3.json --cache downloads
-robotagentbench assets install resources/assets-0.1.3.json --cache downloads --destination Assets
-robotagentbench assets configure resources/assets-0.1.3.json --destination Assets --runtime Runtime --profile room
-robotagentbench assets verify resources/assets-0.1.3.json --destination Assets
+robotagentbench assets fetch resources/assets-0.1.4.json --cache downloads
+robotagentbench assets install resources/assets-0.1.4.json --cache downloads --destination Assets
+robotagentbench assets configure resources/assets-0.1.4.json --destination Assets --runtime Runtime --profile room
+robotagentbench assets verify resources/assets-0.1.4.json --destination Assets
 ```
 
 See [assets](ASSETS.md) for offline installation and version checks.

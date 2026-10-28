@@ -8,14 +8,15 @@ separately.
 Asset repository: [AetherLabs-AI/RobotAgentBench-assets](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets).
 The manifest shipped with the code pins the exact dataset revision and file hashes.
 
-Use asset release **0.1.3** with saved configuration bank **0.2.3**. Its
-**23 archives** total approximately **4.58 GB**, including shared room layouts,
-complete refrigerator interiors, original shelf dependencies, and waste-scene
-preparation metadata. The supplement added since 0.1.2 is approximately
-**438 KB**; all 22 earlier archives remain unchanged.
+Use asset release **0.1.4** with saved configuration bank **0.2.4**. Its
+**30 archives** total approximately **6.66 GB**, including shared room layouts,
+complete refrigerator interiors, original shelf dependencies, and task-owned
+initialization resources. The 7 new shared-resource parts total **2.08 GB**;
+all 23 earlier archives remain unchanged. Shared room bases and compact
+lossless patches avoid a complete room download for every configuration.
 If upgrading, update the evaluator first and reuse
 your `downloads` cache, but install into new asset and runtime
-directories (for example, `Assets-0.1.3` and `Runtime-0.1.3`) and use those paths
+directories (for example, `Assets-0.1.4` and `Runtime-0.1.4`) and use those paths
 in subsequent commands. Do not overwrite an existing runtime.
 Shelf helper sources and third-party notices are included in the evaluator;
 see [dependency details](SHELF_DEPENDENCIES.md).
@@ -26,7 +27,7 @@ Place all archives from the matching asset release in `downloads`. From the
 code repository root, run:
 
 ```sh
-robotagentbench assets install resources/assets-0.1.3.json \
+robotagentbench assets install resources/assets-0.1.4.json \
   --cache downloads --destination Assets
 ```
 
@@ -47,7 +48,7 @@ reproduction. Answer files are evaluator resources, not agent observations.
 For a manifest with a configured Hugging Face dataset and immutable revision:
 
 ```sh
-robotagentbench assets fetch resources/assets-0.1.3.json --cache downloads
+robotagentbench assets fetch resources/assets-0.1.4.json --cache downloads
 ```
 
 The downloader verifies archive size and SHA-256 and reuses valid cached files.
@@ -56,7 +57,7 @@ An interrupted download is retained as `.partial` for inspection.
 ## Configure a task workspace
 
 ```sh
-robotagentbench assets configure resources/assets-0.1.3.json \
+robotagentbench assets configure resources/assets-0.1.4.json \
   --destination Assets --runtime Runtime --profile room
 ```
 
@@ -69,7 +70,7 @@ namespace; they do not require access to the original server.
 ## Verify an installation
 
 ```sh
-robotagentbench assets verify resources/assets-0.1.3.json --destination Assets
+robotagentbench assets verify resources/assets-0.1.4.json --destination Assets
 ```
 
 Use the asset manifest shipped with your code checkout. Code, asset, and
@@ -85,7 +86,7 @@ accompany automatic downloads and installation; see [third-party notices](THIRD_
 The [saved-instance bank](INSTANCES.md) is a separate, versioned download. It
 adds 30 pre-generated configurations per task/scenario and reuses identical
 objects from the base asset store. Install it with the matching
-`resources/saved-instances-0.2.3.json` manifest rather than concatenating archive
+`resources/saved-instances-0.2.4.json` manifest rather than concatenating archive
 parts. Materialize the episode you want in a fresh workspace; starting an
 evaluation does not sample another scene.
 

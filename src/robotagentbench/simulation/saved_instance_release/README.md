@@ -2,8 +2,9 @@
 
 The configuration release stores selected task parameters, asset choices,
 object transforms, robot base/joint state, and existing placement recipes. It
-references the shared asset release and bundled task source instead of shipping
-a full room USD for every episode. Cloth states include their recorded small
+references shared room bases and bundled task source, with compact lossless
+scene patches where required, instead of shipping a full room USD for every
+episode. Cloth states include their recorded small
 NPZ initial-state arrays. These pregenerated configurations are separate from
 the evaluation instances used in the paper.
 
@@ -14,7 +15,7 @@ safely install the independent, checksum-pinned gzip archives:
 
 ```bash
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.3.json \
+  --manifest resources/saved-instances-0.2.4.json \
   --cache .cache/saved-instances --destination /your/SavedConfigurations
 ```
 

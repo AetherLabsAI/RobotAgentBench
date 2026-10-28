@@ -66,12 +66,12 @@ The core package and catalog inspection do not require Isaac Sim, a GPU, or mode
 
 ### 2. Download assets
 
-The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.3** is approximately **4.58 GB**, split into **23 archives**, including the license archive. It contains scene and robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use this asset version with configuration bank **0.2.3**, including its shared OpenEnd room layout.
+The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.4** is approximately **6.66 GB**, split into **30 archives**, including the license archive. It contains shared room and robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.4**. Existing verified downloads are reused; the 7 new shared-resource parts total **2.08 GB**.
 
 ```sh
-robotagentbench assets fetch resources/assets-0.1.3.json --cache downloads
-robotagentbench assets install resources/assets-0.1.3.json --cache downloads --destination Assets
-robotagentbench assets configure resources/assets-0.1.3.json --destination Assets --runtime Runtime --profile room
+robotagentbench assets fetch resources/assets-0.1.4.json --cache downloads
+robotagentbench assets install resources/assets-0.1.4.json --cache downloads --destination Assets
+robotagentbench assets configure resources/assets-0.1.4.json --destination Assets --runtime Runtime --profile room
 ```
 
 The manifest pins an immutable asset revision and verifies file hashes. The commands create fresh `Assets` and `Runtime` directories; existing installations are not overwritten. For offline setup, place all archive parts in `downloads` and skip `fetch`. See the [asset guide](docs/ASSETS.md) for details.
@@ -110,21 +110,24 @@ per task or scenario**: 540 for the 18 short tasks, 240 for the 8 long tasks,
 OpenEnd scenarios (**1,470 in total**). Choose an episode from 1–30 and reuse
 its saved initial state; running a model does not resample it.
 
-Configuration release **0.2.3** includes a **Today's situation** section in all
+Configuration release **0.2.4** includes a **Today's situation** section in all
 120 OpenEnd configurations. Each scenario combines six context/scene variants
 with five spatial initial states each. Context supplies weather, trip timing,
 changed plans, and personal preferences. Stains, waste, object locations, and
 cleanliness must be discovered from camera observations; variants that differ
-only in visible state share the same public text. The bank includes original
-scene-composition recipes and spawn receipts used by the task owners. Version
-0.2.3 adds the saved spawn receipts for six long-task groups; physical states,
-public contexts, seeds, and task targets are unchanged from 0.2.2. The other
-1,290 configuration records are byte-identical.
+only in visible state share the same public text. The bank includes task-owned
+initialization attachments, original scene-composition recipes and spawn
+receipts, and lossless room-reconstruction records. Version 0.2.4 completes initialization dependencies for 120 records and
+updates five saved initial states. Public contexts, task definitions,
+scoring rules, and physical parameters are unchanged. Earlier versions
+remain available. Room bases are stored once in the shared asset release;
+saved configurations contain compact lossless patches rather than complete
+room copies.
 
 The download stores initial-state data, not a complete room copy per episode.
 Positions, orientations, robot initialization and task parameters reuse the
 shared assets; cloth tasks also retain their required cloth-state arrays.
-The configuration download is approximately **234 MB**, split into six archives,
+The configuration download is approximately **245 MB**, split into six archives,
 and is separate from the shared simulation assets.
 
 These are **release configurations for reproducible evaluation**, not the

@@ -67,7 +67,7 @@ It preserves every sampled physical state, seed, public context, and scoring
 target from 0.2.1; the other 1,410 configuration records are byte-identical.
 No room geometry or texture assets are added to the configuration download.
 
-## Current configuration bank (0.2.3)
+## Original spawn receipts (0.2.3)
 
 Version 0.2.3 includes the original spawn receipts for all 30 configurations
 of `long_task_16`, `long_task_17`, `long_task_19`, `long_task_20`, `long_task_21`,
@@ -76,12 +76,22 @@ running a saved configuration does not resample the robot's starting position.
 All physical states, seeds, public contexts, and scoring targets are unchanged
 from 0.2.2, and the other 1,290 configuration records are byte-identical.
 
+## Current configuration bank (0.2.4)
+
+Version 0.2.4 completes initialization dependencies for 120 records and
+updates five saved initial states. Public contexts, task definitions,
+scoring rules, and physical parameters are unchanged. Earlier versions
+remain available. Room bases are stored once in the shared asset release;
+saved configurations contain compact lossless patches rather than complete
+room copies.
+
 ## What is stored
 
 The configuration bank contains small state records: the selected shared
 layout and asset identifiers, task parameters, object transforms, robot base
-pose and joint initialization, and any task-owned initial-state attachments.
-Cloth tasks retain their required material-state arrays. Public scenario text
+pose and joint initialization, task-owned initial-state attachments, and
+compact lossless scene patches. Cloth tasks retain their required material-state
+arrays. Public scenario text
 is stored separately from evaluator bindings.
 
 It does **not** distribute a complete room/mesh/texture copy per configuration.
@@ -94,15 +104,15 @@ runtime files are not additional downloads.
 
 Follow [Installation](INSTALL.md), then configure a fresh task workspace:
 
-Use configuration bank **0.2.3** with shared assets **0.1.3**, which include the
+Use configuration bank **0.2.4** with shared assets **0.1.4**, which include the
 OpenEnd room layout and current scene-preparation dependencies. The bank's
 original base-asset provenance remains 0.1.0; the current asset release preserves
 those resources and adds the shared layouts, path bindings, and dependencies.
 
 ```sh
-robotagentbench assets fetch resources/assets-0.1.3.json --cache downloads
-robotagentbench assets install resources/assets-0.1.3.json --cache downloads --destination Assets
-robotagentbench assets configure resources/assets-0.1.3.json --destination Assets --runtime Runtime --profile room
+robotagentbench assets fetch resources/assets-0.1.4.json --cache downloads
+robotagentbench assets install resources/assets-0.1.4.json --cache downloads --destination Assets
+robotagentbench assets configure resources/assets-0.1.4.json --destination Assets --runtime Runtime --profile room
 ```
 
 Use the task's matching profile for dedicated cloth or specialized owners;
@@ -110,12 +120,12 @@ do not replace those owners with the ordinary room worker.
 
 ## 2. Download the configuration bank
 
-The bank is approximately **234 MB** across six archives; the shared simulation
+The bank is approximately **245 MB** across six archives; the shared simulation
 assets are installed separately and are not duplicated in this download.
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.3.json \
+  --manifest resources/saved-instances-0.2.4.json \
   --cache downloads/configurations --destination /absolute/path/to/SavedConfigurations
 ```
 
