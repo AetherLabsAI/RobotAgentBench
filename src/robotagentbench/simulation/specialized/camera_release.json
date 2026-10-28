@@ -18,18 +18,18 @@
   "profiles": {
     "atomic_coffee": {
       "base_assembly_sha256": "3d0c7ed98c14ff149913df139b4f9655a6e3dfbaa018c1ca151ddbc303591595",
-      "derived_assembly_sha256": "b4fdbd6ba890caf308c6009d8c8913e8868cd4b03aacc0649571f32e70125ad1",
+      "derived_assembly_sha256": "1e0e86d627757945605745c00af1c0f0480d0498d788cc585051d227c30e2b04",
       "files": {
         "/mnt/agent-bench-data/lingjun/coffee_machine_push_interference/public_integration_v1/component_sources.json": {
-          "relative": "coffee/public_integration_v1/component_sources.json",
-          "before": {
-            "sha256": "ebb675dd10b51baa8b8763689795bb79442ea36623f31f6e49b7152806f4076b",
-            "bytes": 67364
-          },
           "after": {
-            "sha256": "ff73e5d79e6cbbcda2d00ae8c4cd59279860f53657188a72e9627af87e04dc59",
-            "bytes": 67364
-          }
+            "bytes": 67364,
+            "sha256": "fba7882aadf286cd70c20dcc9aa29c23e23268f2b1081360deef8ac1430b6e2f"
+          },
+          "before": {
+            "bytes": 67364,
+            "sha256": "ebb675dd10b51baa8b8763689795bb79442ea36623f31f6e49b7152806f4076b"
+          },
+          "relative": "coffee/public_integration_v1/component_sources.json"
         },
         "/mnt/agent-bench-data/lingjun/coffee_machine_push_interference/public_integration_v1/contract.py": {
           "relative": "coffee/public_integration_v1/contract.py",
@@ -52,12 +52,34 @@
             "sha256": "d52d214fc3efe0ab3278bc3ac50633cebc58209625f235d06b236338c14e0626",
             "bytes": 12228
           }
+        },
+        "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/isaac_evidence.py": {
+          "after": {
+            "bytes": 38371,
+            "sha256": "b1eaec415df42fe110e3040ba9a4818acc24ea8b4b842052d2b77e423eee84eb"
+          },
+          "before": {
+            "bytes": 38232,
+            "sha256": "62eb0ba1c373374033eb28c10258dbca7c98d0c3ad6657c7489d53d2e993b111"
+          },
+          "relative": "frozen/evaluation/tasks/coffee_machine/isaac_evidence.py"
+        },
+        "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/coffee_button_lighting_interference/component_sources.json": {
+          "after": {
+            "bytes": 3587,
+            "sha256": "6b7b641203a639822dd130b1b08858f713a134280ae34b8a794932590d295ae7"
+          },
+          "before": {
+            "bytes": 3587,
+            "sha256": "978de50153b9578f650a02bd988b7d5464d4789a9f702f17ebb64b510a90a8cb"
+          },
+          "relative": "button/component_sources.json"
         }
       }
     },
     "failure_recovery": {
       "base_assembly_sha256": "7e35dfbaecb80af748aee82eec9baa5c210adf971f68c5926a2e9c571c0d4441",
-      "derived_assembly_sha256": "000be4535ca733f6abc072f9e229fd890ff55d8de8db4a36ce17c32999c560a2",
+      "derived_assembly_sha256": "6be14b1e0a31921bfd54c8a54093bf8a66a9a4b68f082b6c31237a2c38a8c89e",
       "files": {
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/openend/tasks/all_objects_integration/geometry.py": {
           "relative": "generic/openend/tasks/all_objects_integration/geometry.py",
@@ -82,26 +104,26 @@
           }
         },
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/component_sources.json": {
-          "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/component_sources.json",
-          "before": {
-            "sha256": "def3add5d908c40455aed7ab876f8cdfcf5e70c43cdd0f7682ad1c5ea03df0bb",
-            "bytes": 22072
-          },
           "after": {
-            "sha256": "f4f9b66c2de4fe4989e4312fda2e794b9d2c3c52d6963130d262432ad5f71568",
-            "bytes": 22072
-          }
+            "bytes": 22072,
+            "sha256": "8ec84ff7dd7749ce718310398f86b187b874dd9ae18d92c87e7ebcce6bf20d0e"
+          },
+          "before": {
+            "bytes": 22072,
+            "sha256": "def3add5d908c40455aed7ab876f8cdfcf5e70c43cdd0f7682ad1c5ea03df0bb"
+          },
+          "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/component_sources.json"
         },
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/public_component_sources.json": {
-          "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/public_component_sources.json",
-          "before": {
-            "sha256": "def3add5d908c40455aed7ab876f8cdfcf5e70c43cdd0f7682ad1c5ea03df0bb",
-            "bytes": 22072
-          },
           "after": {
-            "sha256": "f4f9b66c2de4fe4989e4312fda2e794b9d2c3c52d6963130d262432ad5f71568",
-            "bytes": 22072
-          }
+            "bytes": 22072,
+            "sha256": "8ec84ff7dd7749ce718310398f86b187b874dd9ae18d92c87e7ebcce6bf20d0e"
+          },
+          "before": {
+            "bytes": 22072,
+            "sha256": "def3add5d908c40455aed7ab876f8cdfcf5e70c43cdd0f7682ad1c5ea03df0bb"
+          },
+          "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/public_component_sources.json"
         },
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/public_contract.py": {
           "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/public_contract.py",
@@ -157,6 +179,17 @@
             "sha256": "c4f5984eb8aca5e89212b28443488d2743a3aa7f61333f03e98b347e22314723",
             "bytes": 4130
           }
+        },
+        "/workspace/lukun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/isaac_evidence.py": {
+          "after": {
+            "bytes": 38371,
+            "sha256": "b1eaec415df42fe110e3040ba9a4818acc24ea8b4b842052d2b77e423eee84eb"
+          },
+          "before": {
+            "bytes": 38232,
+            "sha256": "62eb0ba1c373374033eb28c10258dbca7c98d0c3ad6657c7489d53d2e993b111"
+          },
+          "relative": "current_frozen/evaluation/tasks/coffee_machine/isaac_evidence.py"
         }
       },
       "source_binding_release": {

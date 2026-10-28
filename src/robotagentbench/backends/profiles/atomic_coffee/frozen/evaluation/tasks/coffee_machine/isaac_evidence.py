@@ -453,6 +453,8 @@ class CoffeeReader:
             self.views[path] = view
         self.beans = Bodies(self.bean_paths) if self.bean_paths else None
         if self.beans is not None:
+            from omni.physx import get_physx_interface
+            get_physx_interface().update_transformations(False, True, False, False)
             cache = UsdGeom.XformCache()
             authored = np.asarray([list(cache.GetLocalToWorldTransform(self.stage.GetPrimAtPath(p)).ExtractTranslation()) for p in self.bean_paths])
             if np.abs(self.beans.positions() - authored).max() > 1e-3:

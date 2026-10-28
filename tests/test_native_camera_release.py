@@ -30,7 +30,7 @@ class NativeCameraRelease(unittest.TestCase):
         policy = release.policy()
         self.assertEqual(policy['resolutions'], {k: list(v) for k, v in SIZES.items()})
         self.assertEqual({f: len(r['files']) for f, r in policy['profiles'].items()},
-                         dict(atomic_coffee=3, failure_recovery=9))
+                         dict(atomic_coffee=5, failure_recovery=10))
         manifest = sources._manifest()
         for family, selected in policy['profiles'].items():
             self.assertEqual(selected['base_assembly_sha256'], config.identities()[family]['manifest_sha256'])
@@ -63,7 +63,7 @@ class NativeCameraRelease(unittest.TestCase):
                          selected['source_binding_release'])
         self.assertNotIn('source_binding_release', release.provenance('atomic_coffee'))
         self.assertEqual(release.profile('atomic_coffee')['derived_assembly_sha256'],
-                         'b4fdbd6ba890caf308c6009d8c8913e8868cd4b03aacc0649571f32e70125ad1')
+                         '1e0e86d627757945605745c00af1c0f0480d0498d788cc585051d227c30e2b04')
         room = ROOT / 'room'
         for relative in ('openend/tasks/all_objects_integration/geometry.py',
                          'short_tasks/tasks/sofa_to_drawer/native_geometry.py'):

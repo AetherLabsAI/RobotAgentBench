@@ -11,7 +11,7 @@ import hashlib
 import json
 from pathlib import Path
 
-POLICY_SHA = '4b8f4c57043fd0641e2800ff872a622e3f1011d7200daac46cac54cea2a4b217'
+POLICY_SHA = '65ba8b1972d8c2e8c08f50a263fd5f8865afd2c384c2cb8dd66f870a57ab934a'
 
 
 def policy():

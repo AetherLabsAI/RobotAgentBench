@@ -5291,7 +5291,7 @@
           "bytes": 3528
         },
         "button/component_sources.json": {
-          "sha256": "978de50153b9578f650a02bd988b7d5464d4789a9f702f17ebb64b510a90a8cb",
+          "sha256": "6b7b641203a639822dd130b1b08858f713a134280ae34b8a794932590d295ae7",
           "bytes": 3587
         },
         "button/cycle.py": {
@@ -5423,7 +5423,7 @@
           "bytes": 8412
         },
         "coffee/public_integration_v1/component_sources.json": {
-          "sha256": "ff73e5d79e6cbbcda2d00ae8c4cd59279860f53657188a72e9627af87e04dc59",
+          "sha256": "fba7882aadf286cd70c20dcc9aa29c23e23268f2b1081360deef8ac1430b6e2f",
           "bytes": 67364
         },
         "coffee/public_integration_v1/contact_award.py": {
@@ -5835,8 +5835,8 @@
           "bytes": 11083
         },
         "frozen/evaluation/tasks/coffee_machine/isaac_evidence.py": {
-          "sha256": "62eb0ba1c373374033eb28c10258dbca7c98d0c3ad6657c7489d53d2e993b111",
-          "bytes": 38232
+          "sha256": "b1eaec415df42fe110e3040ba9a4818acc24ea8b4b842052d2b77e423eee84eb",
+          "bytes": 38371
         },
         "frozen/evaluation/tasks/coffee_machine/openended_composite_v1/__init__.py": {
           "sha256": "14dcbb6d95bf220905f8d68b76f997f9b0a1795e87473a2f5b76b318b7eb18ce",
@@ -7695,8 +7695,8 @@
           "bytes": 4303
         },
         "current_frozen/evaluation/tasks/coffee_machine/isaac_evidence.py": {
-          "sha256": "62eb0ba1c373374033eb28c10258dbca7c98d0c3ad6657c7489d53d2e993b111",
-          "bytes": 38232
+          "sha256": "b1eaec415df42fe110e3040ba9a4818acc24ea8b4b842052d2b77e423eee84eb",
+          "bytes": 38371
         },
         "current_frozen/evaluation/tasks/coffee_machine/process_rules.py": {
           "sha256": "e0abb8ef213b7dd35755637ede7e066f5dc919e24adfe19adf018ab6a4261fdc",
@@ -9031,7 +9031,7 @@
           "bytes": 18266
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/component_sources.json": {
-          "sha256": "f4f9b66c2de4fe4989e4312fda2e794b9d2c3c52d6963130d262432ad5f71568",
+          "sha256": "8ec84ff7dd7749ce718310398f86b187b874dd9ae18d92c87e7ebcce6bf20d0e",
           "bytes": 22072
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/frozen_sofa_session.py": {
@@ -9463,7 +9463,7 @@
           "bytes": 4277
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/public_component_sources.json": {
-          "sha256": "f4f9b66c2de4fe4989e4312fda2e794b9d2c3c52d6963130d262432ad5f71568",
+          "sha256": "8ec84ff7dd7749ce718310398f86b187b874dd9ae18d92c87e7ebcce6bf20d0e",
           "bytes": 22072
         },
         "generic/short_task_robustness/tasks/grasp_failure_recovery/public_contract.py": {

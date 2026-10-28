@@ -28,7 +28,7 @@
     "/mnt/agent-bench-data/lingjun/short_task_robustness/tasks/coffee_button_lighting_interference/verify_preview.py": "54aef6020dcb064104b8006396adab27eac7f08d8c0faa017c3891463af5da30",
     "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/stock_wooden_tray_interference/release_collision.py": "e5af0d5942e6d77a9d8fec61925f6f45a13441c8bc8af218d5fb7e630bcedb94",
     "/mnt/agent-bench-data/lingjun/coffee_machine_push_interference/preflight_atomic.py": "783a0d8039ceadfb7745a0c7ca5bf1a158cce1544192fc1ce119659f806e15fd",
-    "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/isaac_evidence.py": "62eb0ba1c373374033eb28c10258dbca7c98d0c3ad6657c7489d53d2e993b111",
+    "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/isaac_evidence.py": "b1eaec415df42fe110e3040ba9a4818acc24ea8b4b842052d2b77e423eee84eb",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/artifacts/visual_cpu_20261004/before/facts.py": "0f0d4136c04ec69de90b85d96a26e4a104757000d43976c1d6757ad857339fe7",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/artifacts/visual_cpu_20261004/before/process_rules.py": "009cd845f6a233dd9c822649df30a70cbc464c71d5c3810d90d495ffe966d303",
     "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/tools/prune_replay_frames.py": "04b7b8d4fbc885593738cd0b5b0190de884c73264d7a4cee22777b8cd60f7c00",

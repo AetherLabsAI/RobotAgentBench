@@ -45,7 +45,7 @@
     {
       "module": "evaluation.tasks.coffee_machine.isaac_evidence",
       "file": "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/isaac_evidence.py",
-      "sha256": "62eb0ba1c373374033eb28c10258dbca7c98d0c3ad6657c7489d53d2e993b111"
+      "sha256": "b1eaec415df42fe110e3040ba9a4818acc24ea8b4b842052d2b77e423eee84eb"
     },
     {
       "module": "evaluation.tasks.coffee_machine.process_rules",
