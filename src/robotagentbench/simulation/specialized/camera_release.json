@@ -79,7 +79,7 @@
     },
     "failure_recovery": {
       "base_assembly_sha256": "7e35dfbaecb80af748aee82eec9baa5c210adf971f68c5926a2e9c571c0d4441",
-      "derived_assembly_sha256": "6be14b1e0a31921bfd54c8a54093bf8a66a9a4b68f082b6c31237a2c38a8c89e",
+      "derived_assembly_sha256": "49f94fba9c9a39d544b013a287da6598bf4daf2d186eee3f553c04ca28546f45",
       "files": {
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/openend/tasks/all_objects_integration/geometry.py": {
           "relative": "generic/openend/tasks/all_objects_integration/geometry.py",
@@ -190,6 +190,17 @@
             "sha256": "62eb0ba1c373374033eb28c10258dbca7c98d0c3ad6657c7489d53d2e993b111"
           },
           "relative": "current_frozen/evaluation/tasks/coffee_machine/isaac_evidence.py"
+        },
+        "/home/lingjun/robot_agent_arena/api-protocol-st18-20261013-frozen4/evaluation/tasks/coffee_machine/isaac_evidence.py": {
+          "relative": "frozen/evaluation/tasks/coffee_machine/isaac_evidence.py",
+          "before": {
+            "sha256": "62eb0ba1c373374033eb28c10258dbca7c98d0c3ad6657c7489d53d2e993b111",
+            "bytes": 38232
+          },
+          "after": {
+            "sha256": "b1eaec415df42fe110e3040ba9a4818acc24ea8b4b842052d2b77e423eee84eb",
+            "bytes": 38371
+          }
         }
       },
       "source_binding_release": {

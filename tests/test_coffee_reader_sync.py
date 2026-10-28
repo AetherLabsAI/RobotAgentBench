@@ -12,6 +12,7 @@ class CoffeeReaderPublication(unittest.TestCase):
         readers = (
             profiles / 'atomic_coffee/frozen/evaluation/tasks/coffee_machine/isaac_evidence.py',
             profiles / 'failure_recovery/current_frozen/evaluation/tasks/coffee_machine/isaac_evidence.py',
+            profiles / 'failure_recovery/frozen/evaluation/tasks/coffee_machine/isaac_evidence.py',
         )
         for path in readers:
             with self.subTest(reader=path.relative_to(profiles)):

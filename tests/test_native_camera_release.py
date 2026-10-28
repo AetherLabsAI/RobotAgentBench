@@ -30,7 +30,7 @@ class NativeCameraRelease(unittest.TestCase):
         policy = release.policy()
         self.assertEqual(policy['resolutions'], {k: list(v) for k, v in SIZES.items()})
         self.assertEqual({f: len(r['files']) for f, r in policy['profiles'].items()},
-                         dict(atomic_coffee=5, failure_recovery=10))
+                         dict(atomic_coffee=5, failure_recovery=11))
         manifest = sources._manifest()
         for family, selected in policy['profiles'].items():
             self.assertEqual(selected['base_assembly_sha256'], config.identities()[family]['manifest_sha256'])
