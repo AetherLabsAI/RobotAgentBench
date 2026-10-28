@@ -63,9 +63,9 @@ install it, then assemble a local workspace:
 
 ```sh
 robotagentbench backends --profile room --verify
-robotagentbench assets fetch resources/assets-0.1.6.json --cache downloads
-robotagentbench assets install resources/assets-0.1.6.json --cache downloads --destination Assets
-robotagentbench assets configure resources/assets-0.1.6.json --destination Assets --runtime Runtime --profile room
+robotagentbench assets fetch resources/assets-0.1.7.json --cache downloads
+robotagentbench assets install resources/assets-0.1.7.json --cache downloads --destination Assets
+robotagentbench assets configure resources/assets-0.1.7.json --destination Assets --runtime Runtime --profile room
 ```
 
 Use `atomic_coffee`, `failure_recovery`, or `cloth` for the corresponding

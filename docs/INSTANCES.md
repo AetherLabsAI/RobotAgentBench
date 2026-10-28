@@ -76,7 +76,17 @@ running a saved configuration does not resample the robot's starting position.
 All physical states, seeds, public contexts, and scoring targets are unchanged
 from 0.2.2, and the other 1,290 configuration records are byte-identical.
 
-## Current configuration bank (0.2.7)
+## Current configuration bank (0.2.8)
+
+Version 0.2.8 replaces `coffee_bag_then_machine_interference` episode 7 (seed 71),
+`coffee_button_lighting_interference` episode 8 (seed 51), and
+`failure_recovery_sofa` episode 3 (seed 66). Each passed its original
+native initial admission. The other 1,467 state records are byte-identical
+to 0.2.7. Public contexts, task definitions, scoring, and physical parameters
+are unchanged. Shared assets 0.1.7 provide the additional compact lossless
+scene dependency; all earlier asset archives remain unchanged.
+
+## Configuration bank 0.2.7
 
 Version 0.2.7 replaces `coffee_bag_interference` episode 6 (seed 51)
 and `coffee_bag_then_machine_interference` episode 6 (seed 66). Both
@@ -118,15 +128,15 @@ runtime files are not additional downloads.
 
 Follow [Installation](INSTALL.md), then configure a fresh task workspace:
 
-Use configuration bank **0.2.7** with shared assets **0.1.6**, which include the
+Use configuration bank **0.2.8** with shared assets **0.1.7**, which include the
 complete library of 50 original room layouts and scene-preparation dependencies. The bank's
 original base-asset provenance remains 0.1.0; the current asset release preserves
 those resources and adds the shared layouts, path bindings, and dependencies.
 
 ```sh
-robotagentbench assets fetch resources/assets-0.1.6.json --cache downloads
-robotagentbench assets install resources/assets-0.1.6.json --cache downloads --destination Assets
-robotagentbench assets configure resources/assets-0.1.6.json --destination Assets --runtime Runtime --profile room
+robotagentbench assets fetch resources/assets-0.1.7.json --cache downloads
+robotagentbench assets install resources/assets-0.1.7.json --cache downloads --destination Assets
+robotagentbench assets configure resources/assets-0.1.7.json --destination Assets --runtime Runtime --profile room
 ```
 
 Use the task's matching profile for dedicated cloth or specialized owners;
@@ -139,7 +149,7 @@ assets are installed separately and are not duplicated in this download.
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.7.json \
+  --manifest resources/saved-instances-0.2.8.json \
   --cache downloads/configurations --destination /absolute/path/to/SavedConfigurations
 ```
 
