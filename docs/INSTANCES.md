@@ -76,7 +76,30 @@ running a saved configuration does not resample the robot's starting position.
 All physical states, seeds, public contexts, and scoring targets are unchanged
 from 0.2.2, and the other 1,290 configuration records are byte-identical.
 
-## Current configuration bank (0.2.10)
+## Current configuration bank (0.2.11)
+
+Version 0.2.11 replaces eight saved initial states using original-rule seeded
+candidates that passed their original native initial admission:
+
+| Task identifier | Episode | Actual seed |
+| --- | ---: | ---: |
+| `host_guests` | 17 | 31 |
+| `host_guests` | 26 | 41 |
+| `prepare_dinner` | 26 | 61 |
+| `tidy_room` | 17 | 151 |
+| `task_discovery--host_guests` | 17 | 101 |
+| `task_discovery--host_guests` | 26 | 111 |
+| `task_discovery--prepare_to_leave` | 2 | 121 |
+| `task_discovery--tidy_room` | 17 | 31 |
+
+The bank remains at 49 groups of 30 configurations (1,470 total). The other
+1,462 state records, including the nine 0.2.9 and three 0.2.10 replacements,
+are byte-identical to 0.2.10. Public contexts, task definitions, scoring rules,
+physical parameters, and shared assets 0.1.7 are unchanged. The complete manifest
+reuses unchanged archive parts from 0.2.8 and 0.2.10 alongside the new 0.2.11
+parts; do not rename or concatenate them. Historical releases remain available.
+
+## Configuration bank 0.2.10
 
 Version 0.2.10 replaces three saved initial states using original-rule seeded
 candidates that passed their original native initial admission:
@@ -170,7 +193,7 @@ runtime files are not additional downloads.
 
 Follow [Installation](INSTALL.md), then configure a fresh task workspace:
 
-Use configuration bank **0.2.10** with shared assets **0.1.7**, which include the
+Use configuration bank **0.2.11** with shared assets **0.1.7**, which include the
 complete library of 50 original room layouts and scene-preparation dependencies. The bank's
 original base-asset provenance remains 0.1.0; the current asset release preserves
 those resources and adds the shared layouts, path bindings, and dependencies.
@@ -191,7 +214,7 @@ assets are installed separately and are not duplicated in this download.
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.10.json \
+  --manifest resources/saved-instances-0.2.11.json \
   --cache downloads/configurations --destination /absolute/path/to/SavedConfigurations
 ```
 
