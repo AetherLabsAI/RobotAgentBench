@@ -66,7 +66,7 @@ The core package and catalog inspection do not require Isaac Sim, a GPU, or mode
 
 ### 2. Download assets
 
-The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.7** is approximately **7.04 GB**, split into **33 archives**, including the license archive. It contains all **50 original room layouts** and their shared runtime dependencies, robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.15**. All 32 earlier archives are reused unchanged; the new shared scene-reconstruction supplement is approximately **516 KB**. Update the evaluator and install into fresh asset and runtime directories when upgrading.
+The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.7** is approximately **7.04 GB**, split into **33 archives**, including the license archive. It contains all **50 original room layouts** and their shared runtime dependencies, robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.16**. All 32 earlier archives are reused unchanged; the new shared scene-reconstruction supplement is approximately **516 KB**. Update the evaluator and install into fresh asset and runtime directories when upgrading.
 
 ```sh
 robotagentbench assets fetch resources/assets-0.1.7.json --cache downloads
@@ -110,7 +110,7 @@ per task or scenario**: 540 for the 18 short tasks, 240 for the 8 long tasks,
 OpenEnd scenarios (**1,470 in total**). Choose an episode from 1–30 and reuse
 its saved initial state; running a model does not resample it.
 
-Configuration release **0.2.15** includes a **Today's situation** section in all
+Configuration release **0.2.16** includes a **Today's situation** section in all
 120 OpenEnd configurations. Each scenario combines six context/scene variants
 with five spatial initial states each. Context supplies weather, trip timing,
 changed plans, and personal preferences. Stains, waste, object locations, and
@@ -164,7 +164,14 @@ Version 0.2.15 adds three original-rule, native-admitted replacements: combined
 coffee disturbance, coffee-button lighting, and sofa Failure Recovery. The other
 1,467 states and shared assets 0.1.7 are unchanged. Use source commit
 `f86a908d709fb94dcfc970be8c5da93305be9968` or later for nested saved-scene
-dependencies. See the [current release details](docs/INSTANCES.md#current-configuration-bank-0215).
+dependencies. See the [0.2.15 release details](docs/INSTANCES.md#configuration-bank-0215).
+
+Version 0.2.16 adds two original-rule sofa Failure Recovery replacements:
+episode 8 (seed 96) and episode 30 (seed 110). Both initial states passed their
+original native admission and saved-state restoration. The other 1,468 states,
+public contexts, scoring rules, physical parameters, and shared assets 0.1.7 are
+unchanged. Use source commit `f86a908d709fb94dcfc970be8c5da93305be9968`
+or later. See the [current release details](docs/INSTANCES.md#current-configuration-bank-0216).
 
 Room bases are stored once in the shared asset release;
 saved configurations contain compact lossless patches rather than complete
@@ -173,7 +180,7 @@ room copies.
 The download stores initial-state data, not a complete room copy per episode.
 Positions, orientations, robot initialization and task parameters reuse the
 shared assets; cloth tasks also retain their required cloth-state arrays.
-The configuration download is approximately **250 MB**, split into seven archives,
+The configuration download is approximately **259 MB**, split into seven archives,
 and is separate from the shared simulation assets.
 
 These are **release configurations for reproducible evaluation**, not the
