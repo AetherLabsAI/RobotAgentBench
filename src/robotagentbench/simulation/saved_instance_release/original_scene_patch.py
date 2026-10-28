@@ -8,6 +8,7 @@ from pathlib import Path, PurePosixPath
 import hashlib
 import json
 import re
+from . import external_attribute_patch as external_v2
 
 SCHEMA = 'robotagentbench.original_sdf_patch.v1'
 TASKS = frozenset(('failure_recovery_sofa',
@@ -30,6 +31,12 @@ def checked_file(path, digest):
 
 
 def validate_recipe(recipe):
+    if isinstance(recipe, dict) and recipe.get('schema') == external_v2.SCHEMA:
+        external_v2.validate(recipe)
+        legacy = {key: value for key, value in recipe.items() if key in external_v2.LEGACY_FIELDS}
+        legacy['schema'] = SCHEMA
+        validate_recipe(legacy)
+        return
     if not isinstance(recipe, dict) or recipe.get('schema') != SCHEMA:
         raise ValueError('An original Sdf patch recipe is required')
     for key in ('base_sha256', 'delta_sha256', 'original_scene_sha256'):
@@ -46,7 +53,7 @@ def validate_recipe(recipe):
         raise ValueError('Borrowed specs must be explicitly changed specs')
 
 
-def restore_layer(recipe, *, base, delta, output):
+def restore_layer(recipe, *, base, delta, output, runtime=None, metadata=None):
     """Reconstruct one pinned original layer without opening a USD Stage."""
     validate_recipe(recipe)
     base = checked_file(base, recipe['base_sha256'])
@@ -59,6 +66,8 @@ def restore_layer(recipe, *, base, delta, output):
     patch = Sdf.Layer.FindOrOpen(str(delta))
     if original is None or patch is None:
         raise ValueError('Original scene patch layer cannot be opened')
+    external = (external_v2.sources(recipe, runtime=runtime, metadata=metadata, patch=patch)
+                if recipe['schema'] == external_v2.SCHEMA else {})
     work = Sdf.Layer.CreateAnonymous('.usda')
     work.TransferContent(original)
 
@@ -73,14 +82,18 @@ def restore_layer(recipe, *, base, delta, output):
     for path in sorted(recipe['removed_specs'], key=lambda p: (len(Sdf.Path(p).GetPrefixes()), p), reverse=True):
         remove(path)
     for path in sorted(recipe['changed_specs'], key=lambda p: (len(Sdf.Path(p).GetPrefixes()), p)):
-        source_path = recipe['borrowed_specs'].get(path, path)
-        source_layer = original if path in recipe['borrowed_specs'] else patch
+        borrowed = path in recipe['borrowed_specs'] or path in external
+        if path in external:
+            source_layer, source_path = external[path]
+        else:
+            source_path = recipe['borrowed_specs'].get(path, path)
+            source_layer = original if path in recipe['borrowed_specs'] else patch
         source = source_layer.GetObjectAtPath(source_path)
         if source is None or path == '/':
             raise ValueError('Original scene patch names an unavailable spec')
         values = {key: source.GetInfo(key) for key in source.ListInfoKeys()}
         if isinstance(source, Sdf.PrimSpec):
-            if path in recipe['borrowed_specs']:
+            if borrowed:
                 raise ValueError('Only exact geometric properties may be borrowed')
             target = Sdf.CreatePrimInLayer(work, path)
             for key in set(target.ListInfoKeys()) - set(values):
@@ -88,14 +101,14 @@ def restore_layer(recipe, *, base, delta, output):
             for key, value in values.items():
                 target.SetInfo(key, value)
         else:
-            if path in recipe['borrowed_specs'] and not isinstance(source, Sdf.AttributeSpec):
+            if borrowed and not isinstance(source, Sdf.AttributeSpec):
                 raise ValueError('Only exact attribute specs may be borrowed')
             remove(path)
             if not Sdf.CopySpec(source_layer, source_path, work, path):
                 raise ValueError('Original scene spec copy failed')
             # CopySpec can remap namespace-valued fields. Restore the exact
             # source values whose equality was proved by the release exporter.
-            if path in recipe['borrowed_specs']:
+            if borrowed:
                 target = work.GetObjectAtPath(path)
                 for key, value in values.items():
                     target.SetInfo(key, value)
@@ -223,7 +236,8 @@ def restore_generated_layers(state, *, attachments, runtime, metadata, work):
         deltas = [a for a in attachments if a.get('role') == 'generated_scene_patch' and a.get('sha256') == recipe['delta_sha256']]
         if len(deltas) != 1:
             raise ValueError('One exact indexed original Sdf patch attachment is required')
-        output = restore_layer(recipe, base=base, delta=deltas[0]['source'], output=Path(work)/('generated_scene_'+str(index)+'.usdc'))
+        binding = dict(runtime=runtime, metadata=metadata) if recipe['schema'] == external_v2.SCHEMA else {}
+        output = restore_layer(recipe, base=base, delta=deltas[0]['source'], output=Path(work)/('generated_scene_'+str(index)+'.usdc'), **binding)
         paths[logical], hashes[logical] = str(output), sha(output)
         files.append(output)
     return paths, hashes, files
