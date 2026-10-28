@@ -57,8 +57,19 @@
     },
     "failure_recovery": {
       "base_assembly_sha256": "7e35dfbaecb80af748aee82eec9baa5c210adf971f68c5926a2e9c571c0d4441",
-      "derived_assembly_sha256": "c00f5cbfbdb2c0caf207d096fb976443c99e2eca33adbf36c57507d165c9ad70",
+      "derived_assembly_sha256": "1c83eb702c20477cc8cc6618ea788dadd34cc9a7eb768c8c139167c3bcd7a062",
       "files": {
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/openend/tasks/all_objects_integration/geometry.py": {
+          "relative": "generic/openend/tasks/all_objects_integration/geometry.py",
+          "before": {
+            "sha256": "70d28af02733a12b8dba55752b354d308612213d88ef1b5fb0e6df919eb0e826",
+            "bytes": 13370
+          },
+          "after": {
+            "sha256": "a07bb94e1e8af221b70e9110eff9aeeecc869e3fee984d61a7002ec83af610e5",
+            "bytes": 15006
+          }
+        },
         "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/atomic_owner_v2.py": {
           "relative": "generic/short_task_robustness/tasks/grasp_failure_recovery/closeout_v1/atomic_owner_v2.py",
           "before": {
@@ -124,7 +135,22 @@
             "sha256": "026a2403fde01501dcc93ce0525e77397cf93bc3583b65b93c9642130bbb6584",
             "bytes": 18556
           }
+        },
+        "/home/lingjun/robot_agent_arena/short_tasks/agent_probe_v1/deployment_generic_20261010/source/short_tasks/tasks/sofa_to_drawer/native_geometry.py": {
+          "relative": "generic/short_tasks/tasks/sofa_to_drawer/native_geometry.py",
+          "before": {
+            "sha256": "b4f397f81b5432d1b40eb49f58ed233aede9208260de5250a94c25289da4973f",
+            "bytes": 13885
+          },
+          "after": {
+            "sha256": "5261c23790ad182a55c6cc25e031cf1efebee0e060b9f3ed2b0a304d25f2453d",
+            "bytes": 15521
+          }
         }
+      },
+      "source_binding_release": {
+        "id": "manifest_source_furniture_v1",
+        "scope": "Exact manifest-declared source objects are separated from furniture identity; raw supports, physical checks and scoring are unchanged."
       }
     }
   }

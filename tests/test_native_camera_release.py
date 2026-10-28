@@ -26,11 +26,11 @@ def digest(data):
 
 
 class NativeCameraRelease(unittest.TestCase):
-    def test_packaged_policy_only_covers_reviewed_nine_source_members(self):
+    def test_packaged_policy_only_covers_reviewed_source_members(self):
         policy = release.policy()
         self.assertEqual(policy['resolutions'], {k: list(v) for k, v in SIZES.items()})
         self.assertEqual({f: len(r['files']) for f, r in policy['profiles'].items()},
-                         dict(atomic_coffee=3, failure_recovery=6))
+                         dict(atomic_coffee=3, failure_recovery=8))
         manifest = sources._manifest()
         for family, selected in policy['profiles'].items():
             self.assertEqual(selected['base_assembly_sha256'], config.identities()[family]['manifest_sha256'])
@@ -52,9 +52,27 @@ class NativeCameraRelease(unittest.TestCase):
         self.assertEqual(first, (RECOVERY / 'closeout_v1/component_sources.json').read_bytes())
         record = json.loads(first)
         for original, row in release.profile('failure_recovery')['files'].items():
-            if original.endswith('.py'):
+            if '/grasp_failure_recovery/' in original and original.endswith('.py'):
                 self.assertEqual(record['task_sources'][original.split('/grasp_failure_recovery/')[1]],
                                  row['after']['sha256'])
+
+    def test_recovery_furniture_delta_is_explicit_and_other_family_unchanged(self):
+        selected = release.profile('failure_recovery')
+        self.assertEqual(selected['source_binding_release']['id'], 'manifest_source_furniture_v1')
+        self.assertEqual(release.provenance('failure_recovery')['source_binding_release'],
+                         selected['source_binding_release'])
+        self.assertNotIn('source_binding_release', release.provenance('atomic_coffee'))
+        self.assertEqual(release.profile('atomic_coffee')['derived_assembly_sha256'],
+                         'b4fdbd6ba890caf308c6009d8c8913e8868cd4b03aacc0649571f32e70125ad1')
+        room = ROOT / 'room'
+        for relative in ('openend/tasks/all_objects_integration/geometry.py',
+                         'short_tasks/tasks/sofa_to_drawer/native_geometry.py'):
+            self.assertEqual((ROOT / 'failure_recovery/generic' / relative).read_bytes(),
+                             (room / relative).read_bytes())
+        before = deepcopy(selected['source_binding_release'])
+        provenance = release.provenance('failure_recovery')
+        provenance['source_binding_release']['id'] = 'not-a-policy-update'
+        self.assertEqual(selected['source_binding_release'], before)
 
     def test_selected_native_products_and_head_instance_mask_use_standard_dimensions(self):
         workers = [ATOMIC / 'native_worker.py', RECOVERY / 'shelf_continuous_v2/owner.py',
@@ -221,7 +239,8 @@ class NativeCameraRelease(unittest.TestCase):
                 observed.update(launch=json.loads(launch.read_text()), files=list(files))
                 return {'launch': str(launch)}
             with patch.object(config, 'verify_sources') as verify, patch.object(restore, '_seal_specialized', side_effect=seal) as sealer:
-                result = restore._specialized_saved({'selected': selected}, {}, family, 'fixture', root/'bootstrap.json', destination)
+                result = restore._specialized_saved({'selected': selected, 'runtime': root, 'metadata': {}},
+                    {}, family, 'fixture', root/'bootstrap.json', destination)
             verify.assert_called_once_with({}, family)
             sealer.assert_called_once()
             launch = observed['launch']

@@ -60,6 +60,17 @@ def template():
     return read(path)
 
 
+def source_alias_pin(target, digest, family):
+    """Follow only an exact fixed-policy source alias from the old template."""
+    from .specialized import camera_release
+    change = camera_release.profile(family)['files'].get(target)
+    if change is None:
+        return digest
+    if digest != change['before']['sha256']:
+        raise ValueError('Source alias is not the exact reviewed release predecessor')
+    return change['after']['sha256']
+
+
 def runtime(path, profile):
     base = canonical(path)
     record = read(base / 'runtime.json')
@@ -436,6 +447,7 @@ def specialized(*, assets, manifest, runtimes, bank, output, native_config,
     for target, digest in approved['aliases'].items():
         if any(Path(target).is_relative_to(p) for p in generated_targets):
             continue
+        digest = source_alias_pin(target, digest, family)
         existing = mounts.get(target)
         if existing is not None:
             path = canonical(existing['source'])

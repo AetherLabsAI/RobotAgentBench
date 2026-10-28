@@ -1,15 +1,17 @@
-"""Fixed camera-only source delta, derived from two retained owner assemblies.
+"""Fixed reviewed source deltas, derived from two retained owner assemblies.
 
 This is not a hash refresh facility. Only the reviewed file/path/old-hash/new-
 hash pairs below may change. The original assembly remains a required resource.
-No poses, lens parameters, scenes, scoring or physical settings are derived.
+Camera dimensions and Recovery furniture identity bindings are explicit fixed
+release changes. No poses, lens parameters, scenes, scoring or physical settings
+are derived. The original assemblies and every unchanged source remain required.
 """
 from copy import deepcopy
 import hashlib
 import json
 from pathlib import Path
 
-POLICY_SHA = '2d7f3af0efe0d1c577d28331af03e967164ce20dca81d8a6a27129fda69f3679'
+POLICY_SHA = 'f37df9a731091e94d0dbd15b95e6baa4bdb50cc8774c562660548dde9be8099b'
 
 
 def policy():
@@ -26,9 +28,12 @@ def profile(family):
 def provenance(family):
     approved = policy()
     selected = approved['profiles'][family]
-    return dict(id=approved['id'], base_assembly_sha256=selected['base_assembly_sha256'],
+    result = dict(id=approved['id'], base_assembly_sha256=selected['base_assembly_sha256'],
                 resolutions=approved['resolutions'], changed_sources=sorted(selected['files']),
                 native_validation_claimed=False, prior_acceptance_scope='upstream_only')
+    if 'source_binding_release' in selected:
+        result['source_binding_release'] = deepcopy(selected['source_binding_release'])
+    return result
 
 
 def derive_assembly(path, family):
