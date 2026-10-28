@@ -6,6 +6,7 @@ prototype attributes are copied verbatim from a pinned original shared layer.
 """
 from pathlib import Path, PurePosixPath
 import hashlib
+import json
 import re
 
 SCHEMA = 'robotagentbench.original_sdf_patch.v1'
@@ -148,6 +149,51 @@ def restore_layer(recipe, *, base, delta, output):
     return output
 
 
+def _saved_scene_source_matches(logical, digest, source_layers, attachments):
+    """Accept direct sources or one exact saved manifest/localization anchor."""
+    if logical in source_layers:
+        return source_layers[logical] == digest
+    matches = []
+    for anchor, anchor_digest in source_layers.items():
+        parent = PurePosixPath(anchor).parent
+        records = []
+        for name in ('manifest.json', 'localization.json'):
+            indexed = [a for a in attachments if a.get('role') == 'owner_json'
+                       and a.get('original_path') == str(parent / name)]
+            if len(indexed) != 1:
+                records = []
+                break
+            record = indexed[0]
+            path = checked_file(record['source'], record['sha256'])
+            if path.stat().st_size != record['bytes']:
+                raise ValueError('Saved scene source record size differs')
+            value = json.loads(path.read_text())
+            if not isinstance(value, dict):
+                raise ValueError('Saved scene source record is not an object')
+            records.append(value)
+        if not records:
+            continue
+        manifest, localization = records
+        source = manifest.get('source_hashes', {})
+        localized = localization.get('original_layers_sha256', {})
+        if not isinstance(source, dict) or not isinstance(localized, dict):
+            raise ValueError('Saved scene source maps are not objects')
+        if logical not in source and logical not in localized:
+            continue
+        if (manifest.get('schema') != 'openend.generated_room.preview.v1'
+                or manifest.get('scene') != anchor
+                or manifest.get('scene_sha256') != anchor_digest
+                or source.get(logical) != digest
+                or localized.get(logical) != digest
+                or localization.get('physics_parameters_changed') is not False
+                or localization.get('material_parameters_changed') is not False):
+            raise ValueError('Saved nested scene source anchor differs')
+        matches.append(anchor)
+    if len(matches) > 1:
+        raise ValueError('Saved nested scene source anchor is ambiguous')
+    return len(matches) == 1
+
+
 def restore_generated_layers(state, *, attachments, runtime, metadata, work):
     """Resolve shared layers only through installed, hash-pinned Runtime resources."""
     recipes = state.get('generated_scene_patches', [])
@@ -163,7 +209,7 @@ def restore_generated_layers(state, *, attachments, runtime, metadata, work):
     for index, recipe in enumerate(recipes):
         validate_recipe(recipe)
         logical = recipe.get('original_path')
-        if logical in paths or source_layers.get(logical) != recipe['original_scene_sha256']:
+        if logical in paths or not _saved_scene_source_matches(logical, recipe['original_scene_sha256'], source_layers, attachments):
             raise ValueError('Generated scene patch does not match the saved initial source layer')
         resource = recipe.get('base_resource')
         if not isinstance(resource, str) or PurePosixPath(resource).is_absolute() or '..' in PurePosixPath(resource).parts:
