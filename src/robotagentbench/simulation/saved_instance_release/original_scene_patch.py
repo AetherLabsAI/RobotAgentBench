@@ -129,8 +129,18 @@ def restore_layer(recipe, *, base, delta, output):
         ordered_copy(path)
     if set(recipe['root_fields']) != set(patch.pseudoRoot.ListInfoKeys()):
         raise ValueError('Original scene root metadata differs from its patch')
+    # USD 0.24 cannot convert the generic subLayerOffsets vector to Python.
+    # Copy its public typed sequence after creating the matching path entries.
+    if 'subLayers' in recipe['root_fields']:
+        result.subLayerPaths = list(patch.subLayerPaths)
+    if 'subLayerOffsets' in recipe['root_fields']:
+        if len(result.subLayerPaths) != len(patch.subLayerOffsets):
+            raise ValueError('Original sublayer offset/path cardinality differs')
+        for index, offset in enumerate(patch.subLayerOffsets):
+            result.subLayerOffsets[index] = Sdf.LayerOffset(offset.offset, offset.scale)
     for key in recipe['root_fields']:
-        result.pseudoRoot.SetInfo(key, patch.pseudoRoot.GetInfo(key))
+        if key not in ('subLayers', 'subLayerOffsets'):
+            result.pseudoRoot.SetInfo(key, patch.pseudoRoot.GetInfo(key))
     result.Save()
     if output.exists():
         raise ValueError('Scene output appeared during reconstruction')
