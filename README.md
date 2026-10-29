@@ -66,7 +66,7 @@ The core package and catalog inspection do not require Isaac Sim, a GPU, or mode
 
 ### 2. Download assets
 
-The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.7** is approximately **7.04 GB**, split into **33 archives**, including the license archive. It contains all **50 original room layouts** and their shared runtime dependencies, robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.16**. All 32 earlier archives are reused unchanged; the new shared scene-reconstruction supplement is approximately **516 KB**. Update the evaluator and install into fresh asset and runtime directories when upgrading.
+The [asset release](https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets) **0.1.7** is approximately **7.04 GB**, split into **33 archives**, including the license archive. It contains all **50 original room layouts** and their shared runtime dependencies, robot resources, task objects, initialization data, and the full Context Reasoning question banks and standard answers. Use it with configuration bank **0.2.17**. All 32 earlier archives are reused unchanged; the new shared scene-reconstruction supplement is approximately **516 KB**. Update the evaluator and install into fresh asset and runtime directories when upgrading.
 
 ```sh
 robotagentbench assets fetch resources/assets-0.1.7.json --cache downloads
@@ -110,83 +110,29 @@ per task or scenario**: 540 for the 18 short tasks, 240 for the 8 long tasks,
 OpenEnd scenarios (**1,470 in total**). Choose an episode from 1–30 and reuse
 its saved initial state; running a model does not resample it.
 
-Configuration release **0.2.16** includes a **Today's situation** section in all
-120 OpenEnd configurations. Each scenario combines six context/scene variants
-with five spatial initial states each. Context supplies weather, trip timing,
-changed plans, and personal preferences. Stains, waste, object locations, and
-cleanliness must be discovered from camera observations; variants that differ
-only in visible state share the same public text. The bank includes task-owned
-initialization attachments, original scene-composition recipes and spawn
-receipts, and lossless room-reconstruction records. Version 0.2.6 updates three
-saved initial states using original-rule seeded replacements that passed native
-initial admission. The other 1,467 states, public contexts, task definitions,
-scoring rules, and physical parameters are unchanged from 0.2.5. Earlier
-versions and their replacement records remain available.
-Version 0.2.7 adds two further original-rule, native-admitted replacements: coffee-bag disturbance episode 6 and combined coffee disturbance episode 6. The other 1,468 states are byte-identical to 0.2.6; shared assets remain at 0.1.6.
+Configuration bank **0.2.17** includes **Today's situation** in all 120
+OpenEnd configurations. Each scenario combines six context/scene variants with
+five spatial initial states. Context supplies circumstances and preferences;
+stains, waste, object locations, and cleanliness must be discovered from camera
+observations.
 
-Version 0.2.8 adds original-rule, native-admitted replacements for combined coffee disturbance episode 7, button-lighting episode 8, and sofa recovery episode 3. The other 1,467 states are byte-identical to 0.2.7. Shared assets 0.1.7 add only a compact lossless reconstruction dependency; scoring and physical parameters are unchanged.
+This release adds six original-rule replacements whose initial states passed
+their task-owned native admission checks. The other **1,464 states** are
+byte-identical to 0.2.16; public contexts, scoring, physics, shared assets 0.1.7,
+and all 50 room layouts are unchanged. All **1,470 saved initial configurations**
+have passing original initial-admission records; this does not claim task
+completion or model success. Use evaluator commit `e8448f732572cacf330554c3620d6f25341be81f`
+or later. See [configuration details and release history](docs/INSTANCES.md).
 
-Version 0.2.9 adds nine further original-rule replacements, each admitted by its
-original native initial-state checks. The bank still contains 1,470 configurations;
-the other 1,461 states are byte-identical to 0.2.8. Public contexts, task definitions,
-scoring rules, physical parameters, and shared assets 0.1.7 are unchanged. See the
-[0.2.9 release details](docs/INSTANCES.md#configuration-bank-029) for the updated episodes.
-
-Version 0.2.10 adds three original-rule, native-admitted replacements: preparing
-to leave episode 2 and button-lighting episodes 13 and 18. The other 1,467 states
-are byte-identical to 0.2.9; shared assets remain at 0.1.7. See the
-[0.2.10 release details](docs/INSTANCES.md#configuration-bank-0210).
-
-Version 0.2.11 adds eight original-rule, native-admitted replacements across
-OpenEnd and Task Discovery. The other 1,462 states, including the previous nine
-and three replacements, are byte-identical to 0.2.10; shared assets remain at
-0.1.7. See the [0.2.11 release details](docs/INSTANCES.md#configuration-bank-0211).
-
-Version 0.2.12 adds four original-rule, native-admitted replacements: tidying
-episode 2, coffee-machine disturbance episode 5, Task Discovery dinner episode 26,
-and Task Discovery leaving episode 17. The other 1,466 states, including all
-previous replacements, are byte-identical to 0.2.11; shared assets remain at
-0.1.7. See the [0.2.12 release details](docs/INSTANCES.md#configuration-bank-0212).
-
-Version 0.2.13 adds two original-rule, native-admitted replacements:
-coffee-machine disturbance episode 4 and button-lighting episode 21. The other
-1,468 states are byte-identical to 0.2.12. Public contexts, task definitions,
-scoring rules, physical parameters, and shared assets 0.1.7 are unchanged. See
-the [0.2.13 release details](docs/INSTANCES.md#configuration-bank-0213).
-
-Version 0.2.14 adds fourteen original-rule, native-admitted replacements: ten
-coffee-interference configurations and four OpenEnd episode configurations. The other
-1,456 states are byte-identical to 0.2.13; contexts, task definitions, scoring,
-physical parameters, and shared assets 0.1.7 are unchanged. See the
-[0.2.14 release details](docs/INSTANCES.md#configuration-bank-0214).
-
-Version 0.2.15 adds three original-rule, native-admitted replacements: combined
-coffee disturbance, coffee-button lighting, and sofa Failure Recovery. The other
-1,467 states and shared assets 0.1.7 are unchanged. Use source commit
-`f86a908d709fb94dcfc970be8c5da93305be9968` or later for nested saved-scene
-dependencies. See the [0.2.15 release details](docs/INSTANCES.md#configuration-bank-0215).
-
-Version 0.2.16 adds two original-rule sofa Failure Recovery replacements:
-episode 8 (seed 96) and episode 30 (seed 110). Both initial states passed their
-original native admission and saved-state restoration. The other 1,468 states,
-public contexts, scoring rules, physical parameters, and shared assets 0.1.7 are
-unchanged. Use source commit `f86a908d709fb94dcfc970be8c5da93305be9968`
-or later. See the [current release details](docs/INSTANCES.md#current-configuration-bank-0216).
-
-Room bases are stored once in the shared asset release;
-saved configurations contain compact lossless patches rather than complete
-room copies.
-
-The download stores initial-state data, not a complete room copy per episode.
-Positions, orientations, robot initialization and task parameters reuse the
-shared assets; cloth tasks also retain their required cloth-state arrays.
-The configuration download is approximately **259 MB**, split into seven archives,
-and is separate from the shared simulation assets.
+The configuration download is approximately **260 MB** in
+**seven archives**, separate from the shared assets. Room bases are stored
+once; configurations contain compact lossless state records and patches rather
+than complete room copies. Cloth tasks retain their required initial-state arrays.
 
 These are **release configurations for reproducible evaluation**, not the
-exact evaluation instances used for the paper's reported results. Episode
-numbers identify saved configurations, not a promise that the original sampler
-accepted seeds 1–30. The release records each configuration's actual seed.
+exact instances used for the paper's reported results. Episode numbers identify
+saved configurations, not consecutive sampling seeds; the bank records each
+configuration's actual seed.
 
 See [saved configurations](docs/INSTANCES.md) for download, selection, and
 read-only execution setup.

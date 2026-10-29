@@ -63,7 +63,7 @@ following this guide again.
   --destination Assets --runtime Runtime --profile room
 
 "$RAB_PY" -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.16.json \
+  --manifest resources/saved-instances-0.2.17.json \
   --cache downloads/configurations --destination "$RAB_ROOT/SavedConfigurations"
 mkdir -p "$RAB_ROOT/Restored" "$RAB_ROOT/model-configs"
 
@@ -72,6 +72,7 @@ export RAB_LOCKS="$RAB_ROOT/gpu-locks"
 mkdir -p "$RAB_LOCKS"
 ```
 
+Configuration bank **0.2.17** requires evaluator commit `e8448f732572cacf330554c3620d6f25341be81f` or later.
 The bank contains **30 configurations per group, 1,470 total**. These are
 release configurations, not the exact instances used for the paper's scores.
 See [saved configurations](INSTANCES.md) for the task identifiers and profiles.

@@ -8,6 +8,9 @@ episode. Cloth states include their recorded small
 NPZ initial-state arrays. These pregenerated configurations are separate from
 the evaluation instances used in the paper.
 
+Use configuration bank **0.2.17** with evaluator commit
+`e8448f732572cacf330554c3620d6f25341be81f` or later.
+
 ## Download
 
 Install the matching Python package and base assets first, then download and
@@ -15,7 +18,7 @@ safely install the independent, checksum-pinned gzip archives:
 
 ```bash
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.16.json \
+  --manifest resources/saved-instances-0.2.17.json \
   --cache .cache/saved-instances --destination /your/SavedConfigurations
 ```
 

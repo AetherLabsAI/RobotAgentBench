@@ -76,7 +76,36 @@ running a saved configuration does not resample the robot's starting position.
 All physical states, seeds, public contexts, and scoring targets are unchanged
 from 0.2.2, and the other 1,290 configuration records are byte-identical.
 
-## Current configuration bank (0.2.16)
+## Current configuration bank (0.2.17)
+
+Version 0.2.17 replaces six saved initial states using original sampling and
+admission rules. All six replacements passed their task-owned native initial
+admission checks and saved-state restoration/readonly verification.
+
+| Task identifier | Episode | Actual seed |
+| --- | ---: | ---: |
+| `microwave_heat_take` | 11 | 34 |
+| `task_discovery--prepare_dinner` | 17 | 131 |
+| `failure_recovery_sofa` | 6 | 83 |
+| `prepare_coffee` | 27 | 39 |
+| `bake_bread` | 6 | 31 |
+| `carry_meal_tray` | 6 | 31 |
+
+The bank contains 49 groups of 30 configurations (1,470 total). All saved
+initial states have passing original task-owned admission records; initial
+validity is not task completion or model success. The other **1,464 state
+records are byte-identical to 0.2.16**, including its previous sofa replacements.
+Public contexts, task definitions, scoring rules, physical parameters, shared
+assets 0.1.7, and all 50 room layouts are unchanged.
+
+Use evaluator commit `e8448f732572cacf330554c3620d6f25341be81f` or later;
+the saved-scene reader supports lossless external attribute records. The
+approximately **260 MB** download references five new 0.2.17
+archives and two unchanged historical archives. Use the complete manifest;
+do not rename or concatenate archive parts. These release configurations are
+not the exact evaluation instances used for the paper's results.
+
+## Configuration bank 0.2.16
 
 Version 0.2.16 replaces two sofa Failure Recovery initial states using the
 original sampling and admission rules. Both replacements passed original
@@ -302,7 +331,7 @@ runtime files are not additional downloads.
 
 Follow [Installation](INSTALL.md), then configure a fresh task workspace:
 
-Use configuration bank **0.2.16** with shared assets **0.1.7**, which include the
+Use configuration bank **0.2.17** with shared assets **0.1.7**, which include the
 complete library of 50 original room layouts and scene-preparation dependencies. The bank's
 original base-asset provenance remains 0.1.0; the current asset release preserves
 those resources and adds the shared layouts, path bindings, and dependencies.
@@ -318,12 +347,12 @@ do not replace those owners with the ordinary room worker.
 
 ## 2. Download the configuration bank
 
-The bank is approximately **259 MB** across seven archives; the shared simulation
+The bank is approximately **260 MB** across seven archives; the shared simulation
 assets are installed separately and are not duplicated in this download.
 
 ```sh
 python -m robotagentbench.simulation.saved_instance_release.download \
-  --manifest resources/saved-instances-0.2.16.json \
+  --manifest resources/saved-instances-0.2.17.json \
   --cache downloads/configurations --destination /absolute/path/to/SavedConfigurations
 ```
 
