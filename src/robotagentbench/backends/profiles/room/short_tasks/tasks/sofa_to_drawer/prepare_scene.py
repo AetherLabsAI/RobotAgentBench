@@ -19,7 +19,21 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def add_existing_drawer(stage):
+def _copy_slide(source, target, path):
+    """Merges one layer's opinions into another, keeping what the target already holds elsewhere."""
+    from pxr import Sdf
+    if not target.GetPrimAtPath(path):
+        Sdf.CreatePrimInLayer(target, path.GetParentPath())
+        Sdf.CopySpec(source, path, target, path)
+        return
+    spec = source.GetPrimAtPath(path)
+    for child in spec.nameChildren:
+        _copy_slide(source, target, child.path)
+    for prop in spec.properties:
+        Sdf.CopySpec(source, prop.path, target, prop.path)
+
+
+def add_existing_drawer(stage, *, stage_is_open=False):
     from pxr import Usd,UsdGeom,Gf
     from evaluation.tasks.tidy_sofa.initial_state import BASE,SLIDE_LAYER
     from evaluation.tasks.tidy_sofa.specs import COFFEE_TABLE,DRAWER,DRAWER_JOINT,DRAWER_INITIAL_LIP_M
@@ -28,7 +42,15 @@ def add_existing_drawer(stage):
     reference=Usd.Stage.OpenMasked(str(BASE),Usd.StagePopulationMask([COFFEE_TABLE]))
     m=world(reference,COFFEE_TABLE).GetInverse()*world(stage,COFFEE_TABLE)
     layer=stage.GetEditTarget().GetLayer()
-    layer.subLayerPaths=[str(SLIDE_LAYER)]+list(layer.subLayerPaths)
+    if stage_is_open:
+        # A new sublayer would recompose an open stage from its root, and the robot then renders without its meshes.
+        from pxr import Sdf
+        slide=Sdf.Layer.FindOrOpen(str(SLIDE_LAYER))
+        with Sdf.ChangeBlock():
+            for prim in slide.rootPrims:
+                _copy_slide(slide,layer,prim.path)
+    else:
+        layer.subLayerPaths=[str(SLIDE_LAYER)]+list(layer.subLayerPaths)
     joint=stage.GetPrimAtPath(DRAWER_JOINT)
     p=joint.GetAttribute('physics:localPos0').Get();q=joint.GetAttribute('physics:localRot0').Get()
     joint.GetAttribute('physics:localPos0').Set(Gf.Vec3f(*m.Transform(Gf.Vec3d(*p))))

@@ -4016,7 +4016,7 @@
           "bytes": 2126
         },
         "short_tasks/tasks/sofa_to_coffee_table/component_sources.json": {
-          "sha256": "defd2a2b9678157103783d7024d7b909b0553f7053d24d7e075ed196bbcfdda8",
+          "sha256": "a4b4177a38cbeb9d9ce2db25de4c1353d9545c1213eb9f31cc123fcf166cf03e",
           "bytes": 13771
         },
         "short_tasks/tasks/sofa_to_coffee_table/definition.json": {
@@ -4076,7 +4076,7 @@
           "bytes": 4388
         },
         "short_tasks/tasks/sofa_to_drawer/component_sources.json": {
-          "sha256": "2122e8ef96c31af13b7d9e567a232335dd3eb5d716da921291f40665acbce186",
+          "sha256": "37341edead7ab488cf7cf96bac8226eca59b9e159fc9d6f2ac46d27d6cb4acec",
           "bytes": 13765
         },
         "short_tasks/tasks/sofa_to_drawer/native_geometry.py": {
@@ -4092,8 +4092,8 @@
           "bytes": 208
         },
         "short_tasks/tasks/sofa_to_drawer/scene.py": {
-          "sha256": "ff6aff83c25c38028a7dc06b532c4011a27e3f5a834c95be78714061a9a24ff8",
-          "bytes": 796
+          "sha256": "4c243afde13e41ec21ec29713c87ae2e7631442279b1df4223041999161cd149",
+          "bytes": 815
         },
         "short_tasks/tasks/sofa_to_drawer/transfer.py": {
           "sha256": "d3d987d5e2e2db6e51fa65a19fe28628edc1fe5ac1203ca3064ec763c296dc04",
@@ -5252,8 +5252,8 @@
           "bytes": 847
         },
         "short_tasks/tasks/sofa_to_drawer/prepare_scene.py": {
-          "sha256": "79f075dbfb5fd67390e0f0b95416c8b4e6ab81362be12c98bb986ee612a8e9ec",
-          "bytes": 6724
+          "sha256": "39c36b87646f3e514fe02a4617b7b554e11d41fe78ac320602f2c0787f5ed7f7",
+          "bytes": 7649
         },
         "short_tasks/tasks/sofa_to_drawer/prepare_initial.py": {
           "sha256": "7b91601fc4b6af33b76660b5b3947249f3ffa7aa3388714ddaa47926299b8c9c",
