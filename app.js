@@ -234,6 +234,7 @@
     { n: 'Galaxea G0.5', t: 'VLA', s: [11.0, 1.5, 25.0, 9.3, 8.1, 11.0, 1.3] },
     { n: 'X-VLA', t: 'VLA', s: [9.9, 0.4, 5.0, 6.8, 7.6, 5.9, 0.3] },
     // standalone WAM
+    { n: 'Dream-1', sub: 'Zero-shot', t: 'WAM', discoveryFootnote: true, s: [14.3, null, 18.8, 36.9, 26.4, 19.3, 3.0] },
     { n: 'τ0', sub: 'low-level', t: 'WAM', s: [7.7, 0.6, 1.7, 3.5, 7.8, 4.3, 0.5] },
     { n: 'OpenWAM-Alpha', t: 'WAM', s: [13.4, 1.2, 15.0, 4.6, 8.6, 8.6, 2.0] },
     { n: 'LingBot-VA', t: 'WAM', s: [5.0, 1.5, 3.3, 5.4, 4.2, 3.9, 0.4] },
@@ -288,21 +289,28 @@
 
   function renderMain() {
     const rows = T1.filter(passes);
-    const maxes = COLS1.map((_, i) => Math.max(...T1.map(r => r.s[i])));
+    const maxes = COLS1.map((_, i) => Math.max(...T1.map(r => r.s[i]).filter(Number.isFinite)));
     const mAvg = medalsFor(T1, 5), mOE = medalsFor(T1, 6);
-    rows.sort((a, b) => sortDir * (a.s[sortCol] - b.s[sortCol]));
+    rows.sort((a, b) => {
+      if (sortCol === 1 && !!a.discoveryFootnote !== !!b.discoveryFootnote) return a.discoveryFootnote ? 1 : -1;
+      return sortDir * (a.s[sortCol] - b.s[sortCol]);
+    });
     const head = `<thead>
       <tr><th class="grp" colspan="2"></th><th class="grp" colspan="6"><span>Task-level</span></th><th class="grp scen"><span>Scenario-level</span></th></tr>
       <tr><th class="l">#</th><th class="l">Model / Agent</th>${COLS1.map((c, i) => sortHead(c, i)).join('')}</tr></thead>`;
     const body = rows.map((r, ri) => `<tr>
       <td class="l rank">${ri + 1}</td><td class="l">${nameHTML(r)}</td>
       ${r.s.map((v, i) => {
+        if (i === 1 && r.discoveryFootnote) return '<td aria-describedby="dreamDiscoveryNote"><span class="cell">-<sup>*</sup></span></td>';
         const key = i >= 5, top = v === maxes[i];
         const md = i === 5 ? mAvg.get(r) : i === 6 ? mOE.get(r) : 0;
         return `<td class="${key ? 'key' : ''}"><span class="cell${top ? ' top' : ''}">${v.toFixed(1)}${md ? `<i class="medal m${md}" title="#${md} in group"></i>` : ''}<span class="bar" style="width:${Math.max(4, v / maxes[i] * 100)}%"></span></span></td>`;
       }).join('')}</tr>`).join('');
     tbl.innerHTML = head + `<tbody>${body}</tbody>`;
     note.innerHTML = 'Average is the mean of the five task-level scores. <i class="medal m1"></i> <i class="medal m2"></i> <i class="medal m3"></i> mark the top three in Average and Open-Ended, ranked separately for standalone policies and robot agents. Click a column to sort.';
+    if (rows.some(r => r.discoveryFootnote)) {
+      note.insertAdjacentHTML('beforeend', '<br><span id="dreamDiscoveryNote"><sup>*</sup> In this zero-shot evaluation, Dream-1 controls only the arms and grippers. The head, waist and mobile base stay fixed. We omit the Discovery score from this column and include its measured value in the average across all five dimensions. </span>');
+    }
   }
 
   function renderOpen() {
