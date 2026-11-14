@@ -242,6 +242,8 @@
     { n: 'Codex', sub: 'GPT-6 Astra', t: 'agent', a: 'C/C/C', s: [32.4, 35.2, 38.3, 22.0, 27.1, 31.0, 8.4] },
     { n: 'Claude Code', sub: 'Opus 5.5', t: 'agent', a: 'C/C/C', s: [20.6, 24.5, 60.0, 44.2, 17.1, 33.3, 9.2] },
     { n: 'Antigravity CLI', sub: 'Gemini 4 Argon', t: 'agent', a: 'C/C/C', s: [29.2, 36.5, 80.0, 27.8, 25.0, 39.7, 9.8] },
+    { n: 'Claude Code', sub: 'Fable 5.2', t: 'agent', a: 'C/C/C', s: [36.4, 44.4, 60.0, 44.9, 40.0, 45.2, 10.1] },
+    { n: 'Antigravity CLI', sub: 'Gemini 4 Carbon', t: 'agent', a: 'C/C/C', s: [35.36, 32.34, 75.00, 24.91, 61.17, 45.76, 9.3] },
     { n: 'Codex + InternVLA-A1.5', t: 'agent', a: '–/L/C', s: [18.9, 4.3, 23.3, 24.6, 45.4, 23.3, 3.7] },
     { n: 'Codex + InternVLA-A1.5', t: 'agent', a: 'C/L/–', s: [16.5, 4.0, 40.0, 26.8, 44.8, 26.4, 9.1] },
     { n: 'Codex + InternVLA-A1.5', t: 'agent', a: 'C/H/C', s: [42.5, 37.2, 73.3, 38.6, 50.8, 48.5, 15.4] },
